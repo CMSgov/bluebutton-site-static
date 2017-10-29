@@ -1,4 +1,4 @@
-# bbapi-static-splash
+# bluebutton-site-static
 Blue Button API Static Splash Page
 
 This repo will contain a public-facing static website that will serve non-authenticated (public requests).  
