@@ -11,7 +11,7 @@ badge: api
 sections:
   - Overview
   - Getting started
-  - Value & Use Cases
+  - Value and Use Cases
   - Support
 ctas:
   -
@@ -45,7 +45,7 @@ Participants in the Developer Preview can register an application and build inte
 
 ---
 
-## Value & Use Cases
+## Value and Use Cases
 
 The Blue Button API adds new value for beneficiaries, providers, care organizations and health applications, and supports a number of use cases within the areas of Healthcare and Life Sciences.
 
