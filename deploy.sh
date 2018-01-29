@@ -11,4 +11,4 @@ then
   exit 1
 fi
 
-echo "aws s3 sync --delete ./$SITE_DIR/ s3://$S3_BUCKET"
+aws s3 sync --delete ./$SITE_DIR/ s3://$S3_BUCKET
