@@ -4,7 +4,7 @@ title:  "Blue Button API"
 date:   2017-10-30 09:21:12 -0500
 description: A developer-friendly, standards-based API that enables Medicare beneficiaries to connect their claims data to applications, services and research programs they trust.
 landing-page: live
-permalink: bluebutton-api/
+permalink: index/
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
 badge: api
