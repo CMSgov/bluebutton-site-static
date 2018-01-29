@@ -1,0 +1,50 @@
+<a href="#" class="mobile-nav-trigger ds-base ds-u-color--base-inverse ds-u-fill--background-inverse ds-u-sm-display--none ds-u-text-align--center ds-u-padding--2">
+  Menu
+</a>
+
+<div class="mobile-nav-tray ds-base ds-u-fill--white ds-u-sm-display--none">
+  <div class="ds-l-container ds-u-fill--gray-lightest ds-u-padding-y--2 ds-u-display--flex  ds-u-align-items--center">
+    <div class="ds-u-justify-content--start ds-u-display--flex">
+      <a href="/" class="">
+        {% include blue-button-logo.svg %}
+      </a>
+    </div>
+  </div>
+
+
+  <div class="ds-l-container">
+    <nav class="mobile-nav">
+      <ul class="ds-c-list--bare">
+        <li class="ds-u-padding--2">
+          <a href="{{ "/about/" | relative_url }}" >Documentation</a>
+        </li>
+        <li class="ds-u-padding--2">
+          <a href="{{ "/about/" | relative_url }}" >Support</a>
+        </li>
+
+        <li class="ds-u-padding--2">
+          {% include avatar-mini.svg %}
+          <a href="{{ "/about/" | relative_url }}" >Login</a>
+        </li>
+
+        <li class="ds-u-padding--2">
+          {% include login-icon.svg %}
+          <a href="{{ "/about/" | relative_url }}" >Sign up</a>
+        </li>
+      </ul>
+    </nav>
+    {% if page.sections %}
+    <hr>
+    <nav class="mobile-nav">
+      <h5 class="sr-only" id="main-mobile-nav">Main mobile navigation</h5>
+      <ul class="ds-c-list--bare" aria-labelledby="main-mobile-nav">
+        {% for item in page.sections %}
+        <li class="ds-u-padding--2">
+          <a href="#{{ item | slugify }}" class="mobile-nav-trigger-2">{{ item }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
+</div>

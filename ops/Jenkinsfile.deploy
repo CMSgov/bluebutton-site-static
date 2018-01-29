@@ -1,0 +1,75 @@
+#!groovy
+
+pipeline {
+  agent any;
+  parameters {
+    string(name: 'GIT_TAG', defaultValue: '', description: '')
+    choice(name: 'ENV', choices: 'test\nimp\nprod', description: 'One of test, imp or prod')
+    booleanParam(name: 'DEPLOY', defaultValue: false, description: 'Deploy?')
+  }
+  environment {
+    AKAMAI_SSH_PATH                 = "sshacs@cmsstorage.upload.akamai.com:/226850/devportal/"
+  }
+  stages {
+    stage('Clear Workspace') {
+      steps {
+        deleteDir()
+      }
+    }
+    stage('fetch code') {
+      when {
+        allOf { expression { return params.GIT_TAG != ''}; expression { return params.DEPLOY } }
+      }
+      steps {
+        withAwsCli(credentialsId: 'b77f3182-da48-4a09-b023-1fda5d33470a', defaultRegion: 'us-east-1') {
+          sh """
+            aws s3 cp  s3://devportal-releases/developer-portal/developer-portal-${params.GIT_TAG}-${params.ENV}.tar.gz developer-portal.tar.gz
+            mkdir ./_site/
+            tar -xf developer-portal.tar.gz -C ./_site
+          """
+        }
+      }
+    }
+    stage('deploy to env') {
+      when {
+        allOf { expression { return params.GIT_TAG != ''}; expression { return params.DEPLOY } }
+      }
+      steps {
+        script {
+          def ssh_credentials = [:]
+          ssh_credentials.put('test', "bfa82328-b62a-4773-8c55-659801261fde")
+          ssh_credentials.put('imp', "caf6a6d6-1050-4eaa-b619-4b3d57f300f5")
+          ssh_credentials.put('prod', "3a396b8f-54ba-4c32-9d94-a4cbee5efdf9")
+
+          def deployKey = ssh_credentials[params.ENV]
+          def deployFolder = params.ENV
+          def site_folder = '_site'
+
+          echo "Deploying with $deployKey to ${env.AKAMAI_SSH_PATH}${deployFolder}/wwwroot/"
+
+          if (params.ENV == "dev" || params.ENV == "test" || params.ENV == "imp" ) {
+            customExclude       = '--exclude \'robots.txt\''
+          } else if (params.ENV == "prod") {
+            customExclude = ""
+          } else {
+            echo "Cloudbees ENV is ${params.ENV}, expecting: dev, test, imp, or prod"
+            sh 'exit 1'
+          }
+          sshagent(["${deployKey}"]) {
+            sh """
+              ls ${site_folder}
+              rsync --progress --recursive --delete ./${site_folder}/ ${env.AKAMAI_SSH_PATH}${deployFolder}/wwwroot/
+            """
+          }
+        }
+      }
+    }
+    stage('clear cache') {
+      steps {
+        script {
+          build job: 'wds/Clear Cache', parameters: [string(name: 'ENV', value: "${params.ENV}"), string(name: 'APP', value: 'devportal')]
+        }
+      }
+    }
+  }
+}

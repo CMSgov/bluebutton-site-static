@@ -1,0 +1,30 @@
+r6 - 2018-01-17
+================
+
+- Merge pull request #16 from CMS-WDS/release-5
+- adds content copyediting updates, a screenreader header on homepage subnavigation, and omits unnecessary code from svg logo
+- Adds automated production configuration for tealium environment
+
+r5 - 2018-01-17
+================
+
+- Merge pull request #15 from CMS-WDS/release-4
+- fixes flashing skip nav
+- styles dataset pages and adds icons
+- adds framework and styleguide header icon art
+- removes header box gradient fade
+- adds trailing slash to design system page url
+
+r4 - 2018-01-16
+================
+
+- adds skip nav and list label ids for screen readers
+- Merge pull request #14 from CMS-WDS/release-3
+
+r3 - 2018-01-15
+================
+
+- addresses site accessibility, adds live and draft modes to posts, post header backgrounds
+- adds page content in
+- [WNMGWDSDEV-955] Deploy a given tag on jenkins (#8)
+
