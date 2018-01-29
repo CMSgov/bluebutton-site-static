@@ -1,7 +1,7 @@
 
 <header class="ds-base ds-u-fill--gray-lightest ds-u-padding-y--2" id="site-top">
   <div class="ds-l-container ds-u-display--flex ds-u-justify-content--between ds-u-align-items--center">
-    <div class="ds-u-justify-content--start ds-u-display--inline">
+    <div class="ds-u-justify-content--start ds-u-display--flex">
       <nav class="other-main-nav ds-u-font-weight--bold">
         <h5 class="sr-only" id="desktop-nav">Main site navigation</h5>
         <ul aria-labelledby="desktop-nav">
@@ -16,20 +16,20 @@
         <h5 class="sr-only" id="desktop-nav">Main site navigation</h5>
         <ul aria-labelledby="desktop-nav">
           <li>
-            <a href="{{ "/about/" | relative_url }}" >Documentation</a>
+            <a href="{{ "/https://cmsgov.github.io/bluebutton-developer-help/" }}" >Documentation</a>
           </li>
           <li>
-            <a href="{{ "/about/" | relative_url }}" >Support</a>
+            <a href="{{ "https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" }}" >Support</a>
           </li>
 
           <li>
             {% include avatar-mini.svg %}
-            <a href="{{ "/about/" | relative_url }}" >Login</a>
+            <a href="{{ "https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login" }}" >Login</a>
           </li>
 
           <li>
             {% include login-icon.svg %}
-            <a href="{{ "/about/" | relative_url }}" >Sign up</a>
+            <a href="{{ "https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite" }}" >Sign up</a>
           </li>
 
         </ul>

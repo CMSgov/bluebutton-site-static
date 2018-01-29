@@ -37,11 +37,11 @@ The Blue Button API uses the [HL7 FHIR standard](https://www.hl7.org/fhir/) for 
 
 ## Getting started
 
-Documentation for the Blue Button API is available in the Blue Button developer portal.
+Documentation for the Blue Button API is available in the Blue Button developer portal. [View API Documentation](https://cmsgov.github.io/bluebutton-developer-help/)
 
-CMS is inviting developers to provide feedback on the new CMS Blue Button API for the purpose of improved development.
+CMS is inviting developers to provide feedback on the new CMS Blue Button API for the purpose of improved development. [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite)
 
-Participants in the Developer Preview can register an application and build integrations with their software using synthetic claims data.
+Participants in the Developer Preview can register an application and build integrations with their software using synthetic claims data. [Register an application](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login)
 
 ---
 
