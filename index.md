@@ -18,10 +18,10 @@ ctas:
     link: https://cmsgov.github.io/bluebutton-developer-help/
   -
     title: Sign up for the Developer Preview
-    link: https://www.usds.gov
+    link: https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite
   -
     title: Register an application
-    link: https://www.usds.gov
+    link: https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login
 
 ---
 
@@ -70,5 +70,4 @@ The Blue Button API adds new value for beneficiaries, providers, care organizati
 
 ## Support
 
-The Blue Button API Google Group is where developers can ask questions, find answers, leave feedback and share experiences using the Blue Button API. [Visit the Blue Button Google Group.](https://www.google.com)
-
+The Blue Button API Google Group is where developers can ask questions, find answers, leave feedback and share experiences using the Blue Button API. [Visit the Blue Button Google Group.](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api)
