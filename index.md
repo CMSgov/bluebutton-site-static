@@ -70,4 +70,4 @@ The Blue Button API adds new value for beneficiaries, providers, care organizati
 
 ## Support
 
-The Blue Button API Google Group is where developers can ask questions, find answers, leave feedback and share experiences using the Blue Button API. [Visit the Blue Button Google Group.](www.google.com)
+The Blue Button API Google Group is where developers can ask questions, find answers, leave feedback and share experiences using the Blue Button API. [Visit the Blue Button Google Group.](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api)
