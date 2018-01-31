@@ -1,5 +1,5 @@
-# CMS Developer Tools
-A static Jekyll site for listing various CMS tools for developers
+# Blue Button API
+A static Jekyll site for the Blue Button API splash page: [https://bluebutton.cms.gov](https://bluebutton.cms.gov/)
 
 ## Requirements
 It is assumed that the environment already has these installed:
@@ -16,6 +16,7 @@ Jekyll builds the CSS and HTML pages. Run `bundle exec jekyll serve` from the pr
 
 ## Deploy
 From the project root, run `$ ./ops/build_release.sh`. This outputs two links:
+
 1. Takes you to a branch where you can make a release PR
 2. Takes you to a Jenkins job
 
