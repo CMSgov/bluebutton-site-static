@@ -54,7 +54,6 @@ data "template_file" "user_data" {
   template = "${file("${path.module}/templates/user_data")}"
 
   vars {
-    bucket_name   = "${var.bucket_name}.s3-website-us-east-1.amazonaws.com"
     config_bucket = "${var.config_bucket}"
   }
 }
