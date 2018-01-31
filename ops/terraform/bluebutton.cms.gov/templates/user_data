@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+yum install -y nginx
+/usr/local/bin/aws s3 cp s3://${config_bucket}/prod/nginx.conf /etc/nginx/nginx.conf
+RESOLVER=$(cat /etc/resolv.conf | grep "nameserver" | awk '{print $2}')
+sed -i "s/\$RESOLVER/$(echo $RESOLVER | sed 's/\./\\./g')/g" /etc/nginx/nginx.conf
+service nginx restart;
