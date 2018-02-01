@@ -50,11 +50,20 @@ data "template_file" "bucket_policy" {
   }
 }
 
+data "template_file" "nginx_conf" {
+  template = "${file("${path.module}/templates/nginx.conf")}"
+
+  vars {
+    bucket_name = "${var.bucket_name}"
+  }
+}
+
 data "template_file" "user_data" {
   template = "${file("${path.module}/templates/user_data")}"
 
   vars {
-    config_bucket = "${var.config_bucket}"
+    # Replace "$" with "\$" since we're embedding this in user_data
+    nginx_conf = "${replace(data.template_file.nginx_conf.rendered, "$", "\\$")}"
   }
 }
 
