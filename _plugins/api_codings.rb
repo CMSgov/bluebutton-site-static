@@ -83,7 +83,7 @@ module Jekyll
     def initialize(site, codeset)
       @site = site
       @base = site.source
-      @dir = codeset.id
+      @dir = File.join('resources', codeset.id)
       @name = 'index.html'
 
       self.process(@name)
