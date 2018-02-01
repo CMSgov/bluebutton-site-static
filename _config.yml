@@ -42,3 +42,10 @@ exclude:
   - package.json
   - Jenkinsfile
   - ops
+
+# Configure the `_plugins/api_codings.rb` plugin. Note that you can run
+# `bundle exec jekyll serve --verbose` to get debug output from that plugin.
+codebooks:
+  layout: codeset.html
+  xml_files:
+    - _codebooks/codebook-ffs-claims-trimmed.xml

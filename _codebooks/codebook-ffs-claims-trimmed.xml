@@ -1,0 +1,39 @@
+<codes>
+    <code>
+      <name>ACO_ID_NUM</name>
+      <label>Claim Accountable Care Organization (ACO) Identification Number</label>
+      <description><p>The field identifies the Accountable Care Organization (ACO) Identification Number.</p></description>
+      <shortName>ACO_ID_NUM</shortName>
+      <longName>ACO_ID_NUM</longName>
+      <type>CHAR</type>
+      <length>10</length>
+      <source>NCH</source>
+      <valueFormat></valueFormat>
+      <values>
+        <valuegroup>
+          <description>-</description>
+        </valuegroup>
+      </values>
+      <comment><p>-</p></comment>
+    </code>
+    <code>
+      <name>ACTIONCD</name>
+      <label>FI or MAC Claim Action Code</label>
+      <description><p>The type of action requested by the intermediary to be taken on an institutional claim.</p></description>
+      <shortName>ACTIONCD</shortName>
+      <longName>FI_CLM_ACTN_CD</longName>
+      <type>CHAR</type>
+      <length>1</length>
+      <source>NCH</source>
+      <valueFormat></valueFormat>
+      <values>
+        <valuegroup>
+          <description></description>
+          <value value="1" description="Original debit action (always a 1 for all regular bills)"/>
+          <value value="5" description="Force action code 3 (secondary debit adjustment)"/>
+          <value value="8" description="Benefits refused"/>
+        </valuegroup>
+      </values>
+      <comment><p>-</p></comment>
+    </code>
+</codes>
