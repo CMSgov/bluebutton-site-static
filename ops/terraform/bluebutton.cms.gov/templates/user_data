@@ -3,7 +3,15 @@
 set -e
 
 yum install -y nginx
-/usr/local/bin/aws s3 cp s3://${config_bucket}/prod/nginx.conf /etc/nginx/nginx.conf
+
+# Install nginx.conf
+cat > /etc/nginx/nginx.conf << EOM
+${nginx_conf}
+EOM
+
+# Replace |RESOLVER| marker in nginx.conf
 RESOLVER=$(cat /etc/resolv.conf | grep "nameserver" | awk '{print $2}')
-sed -i "s/\$RESOLVER/$(echo $RESOLVER | sed 's/\./\\./g')/g" /etc/nginx/nginx.conf
+sed -i "s/|RESOLVER|/$(echo $RESOLVER | sed 's/\./\\./g')/g" /etc/nginx/nginx.conf
+
+# Restart the service
 service nginx restart;
