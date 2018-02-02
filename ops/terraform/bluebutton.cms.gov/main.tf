@@ -83,7 +83,6 @@ resource "aws_security_group" "lb_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # TODO: remove once TLS is configured
   ingress {
     protocol    = "tcp"
     from_port   = 80
@@ -116,6 +115,17 @@ resource "aws_security_group" "instance_sg" {
     protocol  = "tcp"
     from_port = 80
     to_port   = 80
+
+    security_groups = [
+      "${aws_security_group.lb_sg.id}",
+    ]
+  }
+
+  # health check endpoint
+  ingress {
+    protocol  = "tcp"
+    from_port = 81
+    to_port   = 81
 
     security_groups = [
       "${aws_security_group.lb_sg.id}",
@@ -180,8 +190,8 @@ resource "aws_alb_target_group" "main" {
 
   health_check {
     interval            = 10
-    path                = "/"
-    port                = 80
+    path                = "/_health"
+    port                = 81
     healthy_threshold   = 2
     unhealthy_threshold = 5
   }
@@ -192,20 +202,19 @@ resource "aws_alb_target_group" "main" {
   }
 }
 
-#resource "aws_alb_listener" "main" {
-  #load_balancer_arn = "${aws_alb.main.id}"
-  #port              = "443"
-  #protocol          = "HTTPS"
-  #ssl_policy        = "ELBSecurityPolicy-2015-05"
-  #certificate_arn   = "${var.tls_cert_arn}"
+resource "aws_alb_listener" "https" {
+  load_balancer_arn = "${aws_alb.main.id}"
+  port              = "443"
+  protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = "${var.tls_cert_arn}"
 
-  #default_action {
-    #target_group_arn = "${aws_alb_target_group.main.id}"
-    #type             = "forward"
-  #}
-#}
+  default_action {
+    target_group_arn = "${aws_alb_target_group.main.id}"
+    type             = "forward"
+  }
+}
 
-# TODO: remove once TLS is configured
 resource "aws_alb_listener" "main" {
   load_balancer_arn = "${aws_alb.main.id}"
   port              = "80"
@@ -245,9 +254,9 @@ resource "aws_launch_configuration" "app" {
 resource "aws_autoscaling_group" "main" {
   availability_zones        = ["us-east-1a"]
   name                      = "bb-static-prod-${aws_launch_configuration.app.name}"
-  desired_capacity          = 1
-  max_size                  = 1
-  min_size                  = 1
+  desired_capacity          = "${var.asg_desired}"
+  max_size                  = "${var.asg_max}"
+  min_size                  = "${var.asg_min}"
   min_elb_capacity          = 1
   health_check_grace_period = 300
   health_check_type         = "ELB"
