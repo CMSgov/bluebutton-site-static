@@ -132,6 +132,17 @@ resource "aws_security_group" "instance_sg" {
     ]
   }
 
+  # Ingress from CI
+  ingress {
+    protocol  = "tcp"
+    from_port = 22
+    to_port   = 22
+
+    cidr_blocks = [
+      "${var.ci_cidrs}"
+    ]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
