@@ -73,7 +73,7 @@ pipeline {
       steps {
         withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
           sh """
-            aws s3 sync --delete ./_site-test/ s3://test.bluebutton.cms.gov
+            aws s3 sync --acl public-read --delete ./_site-test/ s3://test.bluebutton.cms.gov
           """
         }
       }
@@ -83,7 +83,7 @@ pipeline {
       steps {
         withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
           sh """
-            aws s3 sync --delete ./_site/ s3://bluebutton.cms.gov
+            aws s3 sync --acl public-read --delete ./_site/ s3://bluebutton.cms.gov
           """
         }
       }
