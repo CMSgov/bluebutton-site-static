@@ -6,7 +6,6 @@
 @import 'variable-overrides';
 @import '@cmsgov/design-system-core/src/index';
 @import '@cmsgov/design-system-layout/src/index';
-//@import '@cmsgov/design-sysem-support/src/settings/'
 
 //
 // Colors
@@ -82,15 +81,6 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
   top: 0;
   width: 100%;
 }
-
-
-
-//id="site-top"
-
-
-
-
-
 
 .main-nav {
 
@@ -219,26 +209,47 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
 // Heroes
 //
 .header-main {
-  background-image: url(img/collaborative-developers.jpg);
+  background-image: url(img/circuit-board-final.png);
   background-size: cover;
   background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
   position: relative;
 
-  h2 {
-    margin-top: 0px;
-  }
+// .alt-ds-display h1  {
+//    font-size: 48px !important;
+// }
 
-  &:before {
-    background: $ocean-teal-gradient;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.8;
-    position: absolute;
+.alt-ds-l-row ds-u-margin-y--7  {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+.alt-ds-l-md-col--8 {
+  max-width: 80%
+}
+
+.alt-ds-u-padding-y--3{
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+
+}
+
+
+
+h2 {
+    margin-top: 0px;
+}
+
+&:before {
+  background: $ocean-teal-gradient;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
   }
 }
 
@@ -360,6 +371,21 @@ article.datasets {
   }
 }
 
+//
+// Content, specifically for styling code blocks
+//
+
+pre {
+  background-color: #F3F6FA;
+  border: solid 1px #DCE6F0;
+  padding: 8px;
+  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: .9rem;
+  line-height: 1.45;
+  color: #567482;
+  overflow: auto;
+  white-space: pre-wrap;
+}
 
 
 //
