@@ -37,8 +37,7 @@ pipeline {
             extensions: [],
             submoduleCfg: [],
             userRemoteConfigs: [[
-            credentialsId: 'd7899589-4ea9-4e33-858f-48786e9c1710',
-            url: 'https://github.com/CMSgov/bluebutton-site-static.git'
+              url: 'https://github.com/CMSgov/bluebutton-site-static.git'
             ]]
         ])
       }
