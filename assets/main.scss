@@ -105,10 +105,6 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
 
     li {
       display: inline-block;
-      //margin-left: 0px;
-      //margin-right: 50px;
-      //text-align: left;
-
       a {
         color: $color-gray-dark;
         text-decoration: none;
@@ -121,6 +117,18 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
 @media only screen and (max-width: 544px) {
   .main-nav {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 545px) and (max-width: 951px ) {
+  .ctas {
+    width: 700px;
+    }
+}
+
+@media only screen and (min-width: 544px) and (max-width: 738px ) {
+  .main-nav {
+    font-size: 14px;
   }
 }
 
@@ -208,6 +216,7 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
 //
 // Heroes
 //
+
 .header-main {
   background-image: url(img/circuit-board-final.png);
   background-size: cover;
@@ -216,11 +225,7 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
 	background-attachment: fixed;
   position: relative;
 
-// .alt-ds-display h1  {
-//    font-size: 48px !important;
-// }
-
-.alt-ds-l-row ds-u-margin-y--7  {
+.alt-ds-l-row-ds-u-margin-y--7  {
   margin-bottom: 0px !important;
   margin-top: 0px !important;
 }
@@ -232,10 +237,7 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
 .alt-ds-u-padding-y--3{
   padding-bottom: 0px !important;
   padding-top: 0px !important;
-
 }
-
-
 
 h2 {
     margin-top: 0px;
@@ -287,6 +289,12 @@ header {
       margin-left: 0px;
       margin-top: 16px;
     }
+    .ds-text--lead  {
+      margin-bottom: 40px;
+    }
+    .ds-c-badge {
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -318,6 +326,26 @@ header {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.1),0 7px 17px 0 rgba(0,0,0,.3);
   }
 
+}
+
+//
+// 508-accessible gradient
+//
+
+.main-header {
+  display: flex;
+}
+
+.solid-container {
+  width: 80%;
+  flex-grow: 2;
+  background-color: #2A5CC9;
+}
+
+.gradient-container {
+  width: 20%;
+  flex-grow: 1;
+  background: linear-gradient(90deg, #2A5CC9 10%, #5EF1E1 90%);
 }
 
 //
@@ -357,19 +385,6 @@ article.api {
   }
 }
 
-article.front-end-frameworks-styleguides {
-  h2 {
-    @include gradient-underline($grape-rose-gradient);
-    display: inline-block;
-  }
-}
-
-article.datasets {
-  h2 {
-    @include gradient-underline($blueberry-lime-gradient);
-    display: inline-block;
-  }
-}
 
 //
 // Content, specifically for styling code blocks
