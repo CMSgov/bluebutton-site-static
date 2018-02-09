@@ -1,84 +1,97 @@
 #!groovy
-def build_site(site_folder, configTarget, file_ending) {
-  sh "bundle exec jekyll build --config _config.yml,${configTarget} -d ./${site_folder}"
-  echo "Zipping and Uploading"
-  withAwsCli(credentialsId: 'b77f3182-da48-4a09-b023-1fda5d33470a', defaultRegion: 'us-east-1') {
-    sh """
-      tar -czf developer-portal-${params.GIT_TAG}-${file_ending}.tar.gz -C ${site_folder} .
-      aws s3 cp developer-portal-${params.GIT_TAG}-${file_ending}.tar.gz s3://devportal-releases/developer-portal/
-      rm developer-portal-${params.GIT_TAG}-${file_ending}.tar.gz
-    """
-  }
-}
+def aws_creds = 'cbj-deploy'
+
 pipeline {
   agent any
+
   parameters {
-    string(name: 'GIT_TAG', defaultValue: '', description: '')
+    string(
+      name: 'GIT_VERSION',
+      defaultValue: '*/master',
+      description: 'The branch, tag or commit to deploy.'
+    )
+    booleanParam(
+      defaultValue: false,
+      description: 'When true, deploy to both TEST and PROD environments.',
+      name: 'DEPLOY_PROD'
+    )
   }
+
   stages {
-    stage('clear') {
+    stage('Clear') {
       steps {
         deleteDir()
       }
     }
-    stage('checkout') {
+
+    stage('Checkout') {
       steps {
         checkout([
-          $class: 'GitSCM',
-          branches: [[name: "${params.GIT_TAG}"]],
-          doGenerateSubmoduleConfigurations: false,
-          extensions: [],
-          submoduleCfg: [],
-          userRemoteConfigs: [[
-            credentialsId: 'd7899589-4ea9-4e33-858f-48786e9c1710',
-            url: 'https://github.cms.gov/CMS-WDS/developer-portal.git'
-          ]]
+            $class: 'GitSCM',
+            branches: [[name: "${params.GIT_VERSION}"]],
+            userRemoteConfigs: [[
+              url: 'https://github.com/CMSgov/bluebutton-site-static.git'
+            ]]
         ])
       }
     }
-    stage('install') {
+
+    stage('Install') {
       steps {
         sh '''
           rbenv local 2.3.0
           gem install  --no-ri --no-rdoc bundler
           bundle install
-        '''
+          '''
       }
     }
+
     stage('Build') {
       steps {
         parallel (
           "build test": {
             script {
               def site_folder = "_site-test"
-              configTarget    = '_config-test.yml'
-              file_ending = "test"
-              build_site(site_folder, configTarget, file_ending)
-            }
-          },
-          "build imp": {
-            script {
-              def site_folder = "_site-imp"
-              configTarget    = '_config-prod.yml'
-              file_ending = "imp"
-              build_site(site_folder, configTarget, file_ending)
+              sh """
+                bundle exec jekyll build --config _config.yml -d ./${site_folder}
+              """
             }
           },
           "build prod": {
             script {
               def site_folder = "_site"
-              configTarget    = '_config-prod.yml'
-              file_ending = "prod"
-              build_site(site_folder, configTarget, file_ending)
+              sh """
+                bundle exec jekyll build --config _config.yml -d ./${site_folder}
+              """
             }
-          },
+          }
         )
       }
     }
+
     stage('Deploy to Test') {
-       steps {
-           build job: 'Deploy', parameters: [string(name: 'GIT_TAG', value: params.GIT_TAG), string(name: 'ENV', value: 'test'), booleanParam(name: 'DEPLOY', value: true)]
-       }
+      steps {
+        withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
+          sh """
+            aws s3 sync --delete ./_site-test/ s3://test.bluebutton.cms.gov
+          """
+        }
+      }
+    }
+
+    stage('Deploy to Prod') {
+      steps {
+        withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
+          sh """
+            aws s3 sync --delete ./_site/ s3://bluebutton.cms.gov
+          """
+        }
+      }
+      when {
+        expression {
+          params.DEPLOY_PROD == true
+        }
+      }
     }
   }
 }
