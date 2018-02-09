@@ -33,9 +33,6 @@ pipeline {
         checkout([
             $class: 'GitSCM',
             branches: [[name: "${params.GIT_VERSION}"]],
-            doGenerateSubmoduleConfigurations: false,
-            extensions: [],
-            submoduleCfg: [],
             userRemoteConfigs: [[
               url: 'https://github.com/CMSgov/bluebutton-site-static.git'
             ]]
