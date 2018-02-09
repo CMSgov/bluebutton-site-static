@@ -1,8 +1,4 @@
 #!groovy
-def build_site(site_folder, file_ending) {
-  sh "bundle exec jekyll build --config _config.yml -d ./${site_folder}"
-}
-
 def aws_creds = 'cbj-deploy'
 
 pipeline {
@@ -56,13 +52,17 @@ pipeline {
           "build test": {
             script {
               def site_folder = "_site-test"
-              build_site(site_folder)
+              sh """
+                bundle exec jekyll build --config _config.yml -d ./${site_folder}
+              """
             }
           },
           "build prod": {
             script {
               def site_folder = "_site"
-              build_site(site_folder)
+              sh """
+                bundle exec jekyll build --config _config.yml -d ./${site_folder}
+              """
             }
           }
         )
