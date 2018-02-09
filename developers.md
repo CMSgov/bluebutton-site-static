@@ -1,6 +1,6 @@
 ---
 layout: developers
-title:  "Blue Button API Developer Documentation"
+title:  "Blue Button API Docs"
 date:   2017-10-30 09:21:12 -0500
 description:
 landing-page: live
@@ -12,13 +12,11 @@ sections:
   - Authorization
   - Core Resources
   - Try the API
+  - Production API Access
   - Meet "Jack"
 ctas:
   -
-    title: Sign up for the Developer Preview
-    link: https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite
-  -
-    title: Register an application
+    title: Register your application
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login
 
 ---
@@ -31,13 +29,13 @@ The CMS Blue Button API:
 
 - Enables a developer to register a Beneficiary-facing application
 - Enables a beneficiary to grant an application access to four years of their Part A, B, and D claims data
-- Uses the HL7 FHIR standard for Beneficiary data and the OAuth 2.0 standard for beneficiary authorization
+- Uses the [HL7 FHIR](https://www.hl7.org/fhir/) standard for Beneficiary data and the [OAuth 2.0](https://oauth.net/2/) standard for beneficiary authorization
 
 ---
 
 ## Authorization
 
-To use the Blue Button OAuth, you need to go through two separate processes. First, you must create a Developer Preview account and register your application to gain the credentials necessary to request access.
+To use the Blue Button OAuth 2, you need to go through two separate processes. First, you must create a Developer Preview account and register your application to gain the credentials necessary to request access.
 
 Next, you must develop your application to correctly make requests and handle the responses from both the user's browser and the Blue Button servers.
 
@@ -65,8 +63,6 @@ Resources:
 - Get all Explanation of Benefit Records for an Individual Beneficiary
 - Get all Patient Records for an Individual Beneficiary
 - Get all Coverage Information for an Individual Beneficiary
-
-If the _format option is omitted, then JSON is returned by default.
 
 As a security measure the date of birth, SSN, and HICN will not be provided by the CMS Blue Button API.
 
@@ -455,6 +451,39 @@ In the API response for Patient 20140000008325 you will find:
 - 25 carrier claims (110 carrier claim lines)
 - 2 inpatient claims (25 inpatient claim lines)
 - 5 Part D events
+
+---
+
+## Production API Access
+
+Once you have successfully integrated with the CMS Blue Button API and are ready to go live, you can request access to the CMS Blue Button Production API through the Developer Portal.
+
+**How long does it take to get my app approved?**
+
+Typically this will take 1-2 weeks and involves a phone call and demo to the CMS Blue Button API team.
+
+**What is the criteria I must meet to be considered for Production API access?**
+
+First, you must register an application in the Blue Button Developer Sandbox and provide some basic information including:
+
+- Your Name
+- Email address
+- Website
+- Organization name
+- Phone number
+
+You also need to agree to the CMS Blue Button API Terms of Use when registering your app.
+
+Next, the following criteria needs to be met and verified by the CMS Blue Button API team:
+
+- You are a US based company
+- You have a working app or website that can be demoed to the CMS Blue Button API team
+- Your app links to a Privacy statement or Terms of Use that explains to Beneficiary's in plain language how you will use their data and how they can cancel their account
+- Your app must serve a Medicare population (obviously)
+
+**What happens after I am approved?**
+
+You will receive an email from the CMS Blue Button API team notifying you of approval.  You will then receive a new Client ID and Secret for your app in production.  You will use the base URL api.cms.bluebutton.gov instead of sandbox.bluebutton.cms.gov.
 
 ---
 
