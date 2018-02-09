@@ -31,11 +31,94 @@ The CMS Blue Button API:
 - Enables a beneficiary to grant an application access to four years of their Part A, B, and D claims data
 - Uses the [HL7 FHIR](https://www.hl7.org/fhir/) standard for Beneficiary data and the [OAuth 2.0](https://oauth.net/2/) standard for beneficiary authorization
 
+Developers can sign up [here]()
+to make use of the API.
+
 ---
 
 ## Authorization
 
-To use the Blue Button OAuth 2, you need to go through two separate processes. First, you must create a Developer Preview account and register your application to gain the credentials necessary to request access.
+**Please note: Blue Button OAuth will be available in production on February 1st.**
+
+To use the Blue Button OAuth 2
+a developer must
+[register their application]().
+A registered application is given
+a client ID and a client secret.
+The secret should only be used
+if it can be kept confidential,
+such as communication
+between your sever and the Blue Button API.
+Otherwise
+the [Client Application Flow]() may be used.
+
+### Web Application Flow
+
+#### Request authorization from user
+
+To allow
+a user to authorize
+your application,
+direct them to Blue Button's `authorize` endpoint.
+Your application's client_id and redirect_uri
+must be included as query parameters
+An optional `state` field
+that your application can use to identify
+the authorization request may also be provided.
+
+```
+http://localhost:8000/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
+    &redirect_uri=http://localhost:8080/testclient/callback
+    &response_type=code
+    &state=8e896a59f0744a8e93bf2f1f13230be5
+```
+
+#### Exchange `code` for `token`
+
+After visiting the authorization page
+a user will be redirected back to
+your application.
+
+For example if your applications oauth2
+callback path is `/testclient/callback`
+BlueButton will redirect with this request.
+
+```
+GET /testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2
+    &state=8e896a59f0744a8e93bf2f1f13230be5
+```
+
+Your application can now
+exchange the code
+provided in the redirected request
+for a full `token`. Send a `POST`
+request to the BlueButton `token`
+endpoint providing the `code`,
+the application's `client_id`,
+`client_secret`,
+and `redirect_uri`.
+Your request
+must also specify the `grant_type`
+which should always be `authorization_code`
+for this flow.
+
+```
+curl -X POST "https://sandbox.bluebutton.com/v1/o/token/" \
+    -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:<client_secret>" \
+    -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2
+	&grant_type=authorization_code
+	&redirect_uri=http://localhost/testclient/callback"
+```
+Response
+```
+{
+    "access_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
+    "expires_in": 16768.523842,
+    "token_type": "Bearer",
+    "scope": "profile patient/Patient.read patient/ExplanationOfBenefit.read patient/Coverage.read"
+    "refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
+}
+```
 
 Next, you must develop your application to correctly make requests and handle the responses from both the user's browser and the Blue Button servers.
 
@@ -43,13 +126,14 @@ Below you will find a sample account you can use to test your Blue Button OAuth 
 
 _Jane Doe Username: User29999 Password: PW29999!_
 
-**Please note: Blue Button OAuth will be available in production on February 1st.**
 
-<pre>HTTP  GET /o/authorize</pre>
+`HTTP  GET /o/authorize/`
 
-<pre>HTTP  POST /o/token  </pre>
+`HTTP  POST /o/token/`
 
 ---
+
+### Client Application Flow
 
 ## Core Resources
 
