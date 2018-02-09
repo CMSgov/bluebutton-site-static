@@ -19,7 +19,7 @@ data "template_file" "bucket_policy" {
 ##
 resource "aws_s3_bucket" "main" {
   bucket = "${var.bucket_name}"
-  acl    = "public-read"
+  acl    = "private"
   policy = "${data.template_file.bucket_policy.rendered}"
 
   website {
