@@ -10,7 +10,6 @@ data "template_file" "bucket_policy" {
 
   vars {
     bucket_name = "${var.bucket_name}"
-    allowed_ips = "${join("\", \"", var.allowed_ips)}"
   }
 }
 
