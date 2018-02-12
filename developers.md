@@ -31,25 +31,150 @@ The CMS Blue Button API:
 - Enables a beneficiary to grant an application access to four years of their Part A, B, and D claims data
 - Uses the [HL7 FHIR](https://www.hl7.org/fhir/) standard for beneficiary data and the [OAuth 2.0](https://oauth.net/2/) standard for beneficiary authorization
 
+Developers can sign up [here]()
+to make use of the API.
+
 ---
 
 ## Authorization
 
-To use the Blue Button OAuth 2, you need to go through two separate processes. First, you must create a Developer Preview account and register your application to gain the credentials necessary to request access.
+**Please note: Blue Button OAuth will be available in production on February 1st.**
 
-Next, you must develop your application to correctly make requests and handle the responses from both the user's browser and the Blue Button servers.
+To use the Blue Button OAuth 2
+a developer must
+[register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/).
+A registered application is given
+a client ID and a client secret.
+The secret should only be used
+if it can be kept confidential,
+such as communication
+between your sever and the Blue Button API.
+Otherwise
+the [Client Application Flow](#client-application-flow) may be used.
+
+### Web Application Flow
+
+To use this flow
+your application should
+be registered with
+`Client Type` set to `confidential`
+and
+`Grant Type` set to `authorization-code`.
+
+#### Request authorization from user
+
+To allow
+a user to authorize
+your application,
+direct them to Blue Button's `authorize` endpoint.
+The request must include
+the `response_type` set to `code`,
+your application's client_id, and your application's redirect_uri.
+An optional `state` field
+that your application can use to identify
+the authorization request is recommended.
+
+```
+https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
+    &redirect_uri=http://localhost:8080/testclient/callback
+    &response_type=code
+    &state=8e896a59f0744a8e93bf2f1f13230be5
+```
+
+#### Exchange `code` for `token`
+
+After visiting the authorization page
+a user will be redirected back to
+the `redirect_uri`
+registered with
+your application.
+
+For example if
+the `redirect_uri`
+is `http://localhost:8080/testclient/callback`
+BlueButton will redirect with this request.
+
+```
+GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2
+    &state=8e896a59f0744a8e93bf2f1f13230be5
+```
+
+Your application can now
+exchange the code
+provided in the redirected request
+for a full `token`. Send a `POST`
+request to the BlueButton `token`
+endpoint providing the `code`,
+the application's `client_id`,
+`client_secret`,
+and `redirect_uri`.
+Your request
+must also specify the `grant_type`
+which should always be `authorization_code`
+for this flow.
+
+```
+curl -X POST "https://sandbox.bluebutton.cms.gov/v1/o/token/" \
+    -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:<client_secret>" \
+    -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2
+	&grant_type=authorization_code
+	&redirect_uri=http://localhost/testclient/callback"
+```
+
+Response
+```
+{
+    "access_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
+    "expires_in": 16768.523842,
+    "token_type": "Bearer",
+    "scope": "profile patient/Patient.read patient/ExplanationOfBenefit.read patient/Coverage.read"
+    "refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
+}
+```
+
+### Client Application Flow
+
+To use this flow
+your application should
+be registered with
+`Client Type` set to `public`
+and
+`Grant Type` set to `implicit`.
+
+#### Request authorization from user
+
+To use the client application flow
+direct the user to
+the Blue Button `authorization` endpoint
+with the `response_type` parameter set to `token`.
+
+```
+https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
+    &redirect_uri=http://localhost:8080/testclient/callback
+    &response_type=token
+    &state=8e896a59f0744a8e93bf2f1f13230be5
+```
+
+If the user authorizes your application
+they will be redirected back to
+the `redirect_uri` of your application.
+The request will include an `access_token`
+in the fragment.
+
+```
+http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX4hL6R
+    &expires_in=35849.875807
+    &token_type=Bearer
+    &scope=profile+patient%2FPatient.read+patient%2FExplanationOfBenefit.read+patient%2FCoverage.read
+    &state=8e896a59f0744a8e93bf2f1f13230be5
+```
 
 Below you will find a sample account you can use to test your Blue Button OAuth implementation. This account mimics a valid MyMedicare.gov account but has reduced functionality. For example, you cannot test “Forgot Password” flow.
 
 _Jane Doe Username: User29999 Password: PW29999!_
 
-**Please note: Blue Button OAuth will be available in production on February 1st.**
-
-<pre>HTTP  GET /o/authorize</pre>
-
-<pre>HTTP  POST /o/token  </pre>
-
 ---
+
 
 ## Core Resources
 
