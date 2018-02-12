@@ -127,7 +127,7 @@ pipeline {
         hipchatSend(
             color: 'GREEN',
             notify: true,
-            message: "SUCCESS: ${env.JOB_NAME} [prod ${params.DEPLOY_PROD}]",
+            message: "SUCCESS: ${env.JOB_NAME} [prod: ${params.DEPLOY_PROD}]",
             room: room,
             sendAs: '',
             server: server,
