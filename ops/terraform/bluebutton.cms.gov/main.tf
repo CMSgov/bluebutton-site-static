@@ -132,6 +132,17 @@ resource "aws_security_group" "instance_sg" {
     ]
   }
 
+  # Ingress from CI
+  ingress {
+    protocol  = "tcp"
+    from_port = 22
+    to_port   = 22
+
+    cidr_blocks = [
+      "${var.ci_cidrs}"
+    ]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -150,7 +161,7 @@ resource "aws_security_group" "instance_sg" {
 ##
 resource "aws_s3_bucket" "main" {
   bucket = "${var.bucket_name}"
-  acl    = "public-read"
+  acl    = "private"
   policy = "${data.template_file.bucket_policy.rendered}"
 
   website {

@@ -6,7 +6,6 @@
 @import 'variable-overrides';
 @import '@cmsgov/design-system-core/src/index';
 @import '@cmsgov/design-system-layout/src/index';
-//@import '@cmsgov/design-sysem-support/src/settings/'
 
 //
 // Colors
@@ -83,15 +82,6 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
   width: 100%;
 }
 
-
-
-//id="site-top"
-
-
-
-
-
-
 .main-nav {
 
   ul {
@@ -115,10 +105,6 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
 
     li {
       display: inline-block;
-      //margin-left: 0px;
-      //margin-right: 50px;
-      //text-align: left;
-
       a {
         color: $color-gray-dark;
         text-decoration: none;
@@ -131,6 +117,18 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
 @media only screen and (max-width: 544px) {
   .main-nav {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 545px) and (max-width: 951px ) {
+  .ctas {
+    width: 700px;
+    }
+}
+
+@media only screen and (min-width: 544px) and (max-width: 738px ) {
+  .main-nav {
+    font-size: 14px;
   }
 }
 
@@ -218,27 +216,42 @@ $blueberry-lime-gradient: linear-gradient(30deg, $blueberry 10%, $lime 90%);
 //
 // Heroes
 //
+
 .header-main {
-  background-image: url(img/collaborative-developers.jpg);
+  background-image: url(img/circuit-board-final.png);
   background-size: cover;
   background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
   position: relative;
 
-  h2 {
-    margin-top: 0px;
-  }
+.alt-ds-l-row-ds-u-margin-y--7  {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
 
-  &:before {
-    background: $ocean-teal-gradient;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.8;
-    position: absolute;
+.alt-ds-l-md-col--8 {
+  max-width: 80%
+}
+
+.alt-ds-u-padding-y--3{
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+&:before {
+  background: $ocean-teal-gradient;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
   }
 }
 
@@ -276,6 +289,12 @@ header {
       margin-left: 0px;
       margin-top: 16px;
     }
+    .ds-text--lead  {
+      margin-bottom: 40px;
+    }
+    .ds-c-badge {
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -308,6 +327,33 @@ header {
   }
 
 }
+
+//
+// 508-accessible gradient
+//
+
+.main-header {
+  display: flex;
+}
+
+.solid-container {
+  width: 80%;
+  flex-grow: 2;
+  background-color: #2A5CC9;
+}
+
+.gradient-container {
+  width: 20%;
+  flex-grow: 1;
+  background: linear-gradient(90deg, #2A5CC9 10%, #5EF1E1 90%);
+}
+
+.ds-u-color--white  {
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+
+
 
 //
 // Pages
@@ -346,20 +392,22 @@ article.api {
   }
 }
 
-article.front-end-frameworks-styleguides {
-  h2 {
-    @include gradient-underline($grape-rose-gradient);
-    display: inline-block;
-  }
-}
 
-article.datasets {
-  h2 {
-    @include gradient-underline($blueberry-lime-gradient);
-    display: inline-block;
-  }
-}
+//
+// Content, specifically for styling code blocks
+//
 
+pre {
+  background-color: #F3F6FA;
+  border: solid 1px #DCE6F0;
+  padding: 8px;
+  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: .9rem;
+  line-height: 1.45;
+  color: #567482;
+  overflow: auto;
+  white-space: pre-wrap;
+}
 
 
 //

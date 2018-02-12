@@ -20,8 +20,6 @@ variable "tls_cert_arn" { }
 
 variable "nat_gw_cdir" { }
 
-variable "config_bucket" { }
-
 variable "bucket_name" { }
 
 variable "asg_min" { }
@@ -29,3 +27,7 @@ variable "asg_min" { }
 variable "asg_max" { }
 
 variable "asg_desired" { }
+
+variable "ci_cidrs" {
+  type = "list"
+}
