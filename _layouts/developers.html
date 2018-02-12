@@ -2,29 +2,36 @@
 layout: default
 ---
 <div class="ds-base">
-  <header class="{{ page.gradient }} ds-u-padding-y--2 ds-u-lg-padding-y--3 ds-u-margin-bottom--2 ds-u-lg-margin-bottom--5">
+  <header class="main-header ds-u-margin-bottom--2 ds-u-lg-margin-bottom--5">
+    <div class="solid-container ds-u-padding-y--2 ds-u-lg-padding-y--5">
+      <div class="ds-l-container">
+        <div class="ds-l-row">
+          <div class="ds-u-color--white ds-l-sm-cold--12 ds-l-xl-col--10 ds-u-margin-left--auto ds-u-padding-x--4">
 
-      <section class="ds-l-container ds-base">
-        <div class="ds-l-row ds-u-margin-y--7">
-          <div class="ds-u-color--base ds-l-col--12 ds-l-md-col--8 ds-u-padding-y--3 ">
-            {% if page.badge %}
-            <span class="ds-c-badge ds-u-text-transform--uppercase">{{ page.badge | escape }}</span>
-            {% endif %}
-            <h1 class="ds-display">{{ page.title | escape }}</h1>
-            <p class="ds-text--lead">
-             {{ page.description | escape }}
-            </p>
-            <div class="ctas">
+              {% if page.badge %}
+              <span class="ds-c-badge ds-u-text-transform--uppercase">{{ page.badge | escape }}</span>
+              {% endif %}
+
+
+              <h1 class="ds-display">{{ page.title | escape }}</h1>
+              <p class="ds-text--lead">
+                {{ page.description | escape }}
+              </p>
+
+              <div class="ctas">
               {% for item in page.ctas limit:2 %}
-              <a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_blank">{{ item.title }} &rarr;</a>
+              <a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self">{{ item.title }} &rarr;</a>
               {% endfor %}
+              </div>
+
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
+      <div class="gradient-container ds-u-padding-y--2 ds-u-lg-padding-y--5 ds-u-display--none ds-u-md-display--block">
+        </div>
+    </div>
   </header>
-</div>
 
 <section class="ds-l-container ds-base">
   <div class="ds-l-row">
@@ -36,6 +43,9 @@ layout: default
           {% for item in page.sections %}
             <li><a href="#{{ item | slugify }}" aria-label="{{ item }} section, current page" class="ds-u-display--block {{ page.subnav-link-gradient }}" aria-label="{{ item }} section, current page">{{ item }}</a></li>
           {% endfor %}
+        </ul>
+        <h5 class="sr-only" id="page-cta-nav">External navigation links</h5>
+        <ul class="ds-c-list ds-c-list--bare ds-u-margin-top--2" aria-labelledby="page-cta-nav">
         </ul>
       </nav>
     </aside>
