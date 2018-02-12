@@ -18,6 +18,27 @@ pipeline {
   }
 
   stages {
+    stage('Notify HipChat') {
+      steps {
+        withCredentials([
+          string(credentialsId: 'hipchat-room', variable: 'room'),
+          string(credentialsId: 'hipchat-server', variable: 'server'),
+          string(credentialsId: 'hipchat-token', variable: 'token')
+        ]) {
+          hipchatSend(
+            color: 'GRAY',
+            notify: true,
+            message: "STARTED: ${env.JOB_NAME} [prod: ${params.DEPLOY_PROD}]",
+            room: room,
+            sendAs: '',
+            server: server,
+            token: token,
+            v2enabled: true
+          )
+        }
+      }
+    }
+
     stage('Clear') {
       steps {
         deleteDir()
@@ -91,6 +112,47 @@ pipeline {
         expression {
           params.DEPLOY_PROD == true
         }
+      }
+    }
+  }
+
+
+  post {
+    success {
+      withCredentials([
+        string(credentialsId: 'hipchat-room', variable: 'room'),
+        string(credentialsId: 'hipchat-server', variable: 'server'),
+        string(credentialsId: 'hipchat-token', variable: 'token')
+      ]) {
+        hipchatSend(
+            color: 'GREEN',
+            notify: true,
+            message: "SUCCESS: ${env.JOB_NAME} [prod ${params.DEPLOY_PROD}]",
+            room: room,
+            sendAs: '',
+            server: server,
+            token: token,
+            v2enabled: true
+        )
+      }
+    }
+
+    failure {
+      withCredentials([
+        string(credentialsId: 'hipchat-room', variable: 'room'),
+        string(credentialsId: 'hipchat-server', variable: 'server'),
+        string(credentialsId: 'hipchat-token', variable: 'token')
+      ]) {
+        hipchatSend(
+          color: 'RED',
+          notify: true,
+          message: "FAILED: ${env.JOB_NAME} [prod: ${params.DEPLOY_PROD}]",
+          room: room,
+          sendAs: '',
+          server: server,
+          token: token,
+          v2enabled: true
+        )
       }
     }
   }
