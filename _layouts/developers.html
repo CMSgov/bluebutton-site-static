@@ -37,12 +37,6 @@ layout: default
             <li><a href="#{{ item | slugify }}" aria-label="{{ item }} section, current page" class="ds-u-display--block {{ page.subnav-link-gradient }}" aria-label="{{ item }} section, current page">{{ item }}</a></li>
           {% endfor %}
         </ul>
-        <h5 class="sr-only" id="page-cta-nav">External navigation links</h5>
-        <ul class="ds-c-list ds-c-list--bare ds-u-margin-top--2" aria-labelledby="page-cta-nav">
-          {% for item in page.ctas %}
-            <li><a href="{{ item.link }}" class="ds-u-display--block {{ page.subnav-link-gradient }}" target="_blank">{{ item.title }} &rarr;</a></li>
-          {% endfor %}
-        </ul>
       </nav>
     </aside>
 

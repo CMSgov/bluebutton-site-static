@@ -27,9 +27,9 @@ The Centers for Medicare and Medicaid Services (CMS) Blue Button API enables Med
 
 The CMS Blue Button API:
 
-- Enables a developer to register a Beneficiary-facing application
+- Enables a developer to register a beneficiary-facing application
 - Enables a beneficiary to grant an application access to four years of their Part A, B, and D claims data
-- Uses the [HL7 FHIR](https://www.hl7.org/fhir/) standard for Beneficiary data and the [OAuth 2.0](https://oauth.net/2/) standard for beneficiary authorization
+- Uses the [HL7 FHIR](https://www.hl7.org/fhir/) standard for beneficiary data and the [OAuth 2.0](https://oauth.net/2/) standard for beneficiary authorization
 
 ---
 
@@ -60,9 +60,9 @@ Base Request URL:
 Resources:
 
 - Get User Profile from an Authorization Token
-- Get all Explanation of Benefit Records for an Individual Beneficiary
-- Get all Patient Records for an Individual Beneficiary
-- Get all Coverage Information for an Individual Beneficiary
+- Get all Explanation of Benefit Records for an Individual beneficiary
+- Get all Patient Records for an Individual beneficiary
+- Get all Coverage Information for an Individual beneficiary
 
 As a security measure the date of birth, SSN, and HICN will not be provided by the CMS Blue Button API.
 
@@ -89,11 +89,11 @@ The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches t
 }
 </pre>
 
-**Get all Explanation of Benefit Records for an individual Beneficiary**
+**Get all Explanation of Benefit Records for an individual beneficiary**
 
 <pre>/v1/protected/bluebutton/fhir/v1/ExplanationOfBenefit/?patient=[fhir_id]</pre>
 
-The above URL returns all of the synthetic Beneficiary's Explanation of Benefit (sometimes referred to as an episode of care) records as an ExplanationOfBenefit FHIR Resource. The bulk of a Beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.
+The above URL returns all of the synthetic beneficiary's Explanation of Benefit (sometimes referred to as an episode of care) records as an ExplanationOfBenefit FHIR Resource. The bulk of a beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=20140000008325"</pre>
 
@@ -241,7 +241,7 @@ A human-readable rendering of the ExplanationOfBenefit
 
 <pre>HTTP GET /v1/fhir/Patient/[fhir_id]</pre>
 
-The above URL returns the synthetic Beneficiary's coverage information as an [ExplanationOfBenefit FHIR Resource.](http://hl7.org/fhir/explanationofbenefit.html)
+The above URL returns the synthetic beneficiary's coverage information as an [ExplanationOfBenefit FHIR Resource.](http://hl7.org/fhir/explanationofbenefit.html)
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?patient=20140000008325"
 </pre>
@@ -414,7 +414,7 @@ To join the Developer Preview, register a sample application and retrieve synthe
 
 **Step 2:** Generate a sample token
 
-To test out the Blue Button API, you must first generate a sample token that represents a Beneficiary granting consent.
+To test out the Blue Button API, you must first generate a sample token that represents a beneficiary granting consent.
 
 You can generate an access token for synthetic Patient 20140000008325 and sample Application TestApp by following these steps:
 
@@ -442,7 +442,7 @@ Or, try this out in Postman:
 2. 	Paste the Request URL: https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/20140000008325
 3. 	Click "Authorization", select type "Bearer Token" and paste your token in the Token field
 4. 	Click "Preview Request" and see a success message "Request headers were successfully updated with authorization data for preview."
-5. 	Click "Send" and see the synthetic Beneficiary's personal health information as a Patient FHIR Resource display under "Body" in Postman.
+5. 	Click "Send" and see the synthetic beneficiary's personal health information as a Patient FHIR Resource display under "Body" in Postman.
 
 **Step 4:** View the API Response
 
@@ -478,7 +478,7 @@ Next, the following criteria needs to be met and verified by the CMS Blue Button
 
 - You are a US based company
 - You have a working app or website that can be demoed to the CMS Blue Button API team
-- Your app links to a Privacy statement or Terms of Use that explains to Beneficiary's in plain language how you will use their data and how they can cancel their account
+- Your app links to a Privacy statement or Terms of Use that explains to a beneficiary in plain language how you will use their data and how they can cancel their account
 - Your app must serve a Medicare population (obviously)
 
 **What happens after I am approved?**
