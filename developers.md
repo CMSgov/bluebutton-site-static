@@ -42,7 +42,7 @@ to make use of the API.
 
 To use the Blue Button OAuth 2
 a developer must
-[register their application]().
+[register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/).
 A registered application is given
 a client ID and a client secret.
 The secret should only be used
@@ -50,9 +50,16 @@ if it can be kept confidential,
 such as communication
 between your sever and the Blue Button API.
 Otherwise
-the [Client Application Flow]() may be used.
+the [Client Application Flow](#client-application-flow) may be used.
 
 ### Web Application Flow
+
+To use this flow
+your application should
+be registered with
+`Client Type` set to `confidential`
+and
+`Grant Type` set to `authorization-code`.
 
 #### Request authorization from user
 
@@ -60,14 +67,15 @@ To allow
 a user to authorize
 your application,
 direct them to Blue Button's `authorize` endpoint.
-Your application's client_id and redirect_uri
-must be included as query parameters
+The request must include
+the `response_type` set to `code`,
+your application's client_id, and your application's redirect_uri.
 An optional `state` field
 that your application can use to identify
-the authorization request may also be provided.
+the authorization request is recommended.
 
 ```
-http://localhost:8000/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
+https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
     &redirect_uri=http://localhost:8080/testclient/callback
     &response_type=code
     &state=8e896a59f0744a8e93bf2f1f13230be5
@@ -77,14 +85,17 @@ http://localhost:8000/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3l
 
 After visiting the authorization page
 a user will be redirected back to
+the `redirect_uri`
+registered with
 your application.
 
-For example if your applications oauth2
-callback path is `/testclient/callback`
+For example if
+the `redirect_uri`
+is `http://localhost:8080/testclient/callback`
 BlueButton will redirect with this request.
 
 ```
-GET /testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2
+GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2
     &state=8e896a59f0744a8e93bf2f1f13230be5
 ```
 
@@ -103,12 +114,13 @@ which should always be `authorization_code`
 for this flow.
 
 ```
-curl -X POST "https://sandbox.bluebutton.com/v1/o/token/" \
+curl -X POST "https://sandbox.bluebutton.cms.gov/v1/o/token/" \
     -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:<client_secret>" \
     -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2
 	&grant_type=authorization_code
 	&redirect_uri=http://localhost/testclient/callback"
 ```
+
 Response
 ```
 {
@@ -120,20 +132,49 @@ Response
 }
 ```
 
-Next, you must develop your application to correctly make requests and handle the responses from both the user's browser and the Blue Button servers.
+### Client Application Flow
+
+To use this flow
+your application should
+be registered with
+`Client Type` set to `public`
+and
+`Grant Type` set to `implicit`.
+
+#### Request authorization from user
+
+To use the client application flow
+direct the user to
+the Blue Button `authorization` endpoint
+with the `response_type` parameter set to `token`.
+
+```
+https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
+    &redirect_uri=http://localhost:8080/testclient/callback
+    &response_type=token
+    &state=8e896a59f0744a8e93bf2f1f13230be5
+```
+
+If the user authorizes your application
+they will be redirected back to
+the `redirect_uri` of your application.
+The request will include an `access_token`
+in the fragment.
+
+```
+http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX4hL6R
+    &expires_in=35849.875807
+    &token_type=Bearer
+    &scope=profile+patient%2FPatient.read+patient%2FExplanationOfBenefit.read+patient%2FCoverage.read
+    &state=8e896a59f0744a8e93bf2f1f13230be5
+```
 
 Below you will find a sample account you can use to test your Blue Button OAuth implementation. This account mimics a valid MyMedicare.gov account but has reduced functionality. For example, you cannot test “Forgot Password” flow.
 
 _Jane Doe Username: User29999 Password: PW29999!_
 
-
-`HTTP  GET /o/authorize/`
-
-`HTTP  POST /o/token/`
-
 ---
 
-### Client Application Flow
 
 ## Core Resources
 
