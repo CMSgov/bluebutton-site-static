@@ -9,9 +9,5 @@ cat > /etc/nginx/nginx.conf << EOM
 ${nginx_conf}
 EOM
 
-# Replace |RESOLVER| marker in nginx.conf
-RESOLVER=$(cat /etc/resolv.conf | grep "nameserver" | awk '{print $2}')
-sed -i "s/|RESOLVER|/$(echo $RESOLVER | sed 's/\./\\./g')/g" /etc/nginx/nginx.conf
-
 # Restart the service
 service nginx restart;
