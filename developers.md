@@ -11,10 +11,15 @@ sections:
   - Overview
   - Authorization
   - Core Resources
+  - FHIR Data Model
+  - Synthetic Data
   - Try the API
   - Production API Access
   - Meet "Jack"
 ctas:
+  -
+    title: Blue Button Home
+    link: /
   -
     title: Register your application
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login
@@ -28,17 +33,35 @@ The Centers for Medicare and Medicaid Services (CMS) Blue Button API enables Med
 The CMS Blue Button API:
 
 - Enables a developer to register a beneficiary-facing application
-- Enables a beneficiary to grant an application access to four years of their Part A, B, and D claims data
+- Enables a beneficiary to grant an app access to four years of their Part A, B, and D claims data
+- Has at least one Part A/B or D claim for over 53M Medicare beneficiaries
 - Uses the [HL7 FHIR](https://www.hl7.org/fhir/) standard for beneficiary data and the [OAuth 2.0](https://oauth.net/2/) standard for beneficiary authorization
 
-Developers can sign up [here]()
-to make use of the API.
+#### What types of Claims are in the Blue Button API?
+The eight types of Medicare insurance claims found in the Blue Button API are:
+
+- Carrier Claims (Doctor visits)
+- DME Claims (Durable Medical Equipment)
+- HHA (Home Health Services)
+- Hospice Claims	(Hospice)
+- Inpatient Claims	(Hospital Care)
+- Outpatient Claims
+- Part D Events
+- SNF Claims
+
+#### How long does it take for a Claim to be made available in the Blue Button API?
+In the Blue Button API backend database, Parts A and B claims data are updated weekly, while Part D event data are updated monthly.  These updates include all claims and adjustments that CMS has received since the last data load. However, it’s important to note that there is often a lag between the date of a service and when a claim is processed.  
+
+CMS recently published an analysis that provides further details on the completeness of Medicare claims at different levels of maturity that can be found [here](https://www.ccwdata.org/web/guest/ccw-medicare-data-white-papers).
+
+This differs from the current MyMedicare Blue Button File which has a shorter lag time from initial encounter to claims adjudication to being available in the Blue Button API.
+
+#### What about Medicare Advantage Plans?
+The Blue Button API does not include encounter claims for beneficiaries enrolled in Medicare Advantage, but does include Part D events for those beneficiaries.
 
 ---
 
 ## Authorization
-
-**Please note: Blue Button OAuth will be available in production on February 1st.**
 
 To use the Blue Button OAuth 2
 a developer must
@@ -48,7 +71,7 @@ a client ID and a client secret.
 The secret should only be used
 if it can be kept confidential,
 such as communication
-between your sever and the Blue Button API.
+between your server and the Blue Button API.
 Otherwise
 the [Client Application Flow](#client-application-flow) may be used.
 
@@ -527,6 +550,26 @@ The above URL returns the synthetic beneficiary's coverage information as an [Ex
   ]
 }
 </pre>
+
+
+## FHIR Data Model
+
+The Blue Button API FHIR Data Model leverages Coding Systems specific to Medicare billing forms and/or the Chronic Conditions Warehouse, Standard FHIR and Industry Coding Systems.
+
+For Example:
+- [National Drug Code Directory](https://www.accessdata.fda.gov/scripts/cder/ndc/)
+- [HL7 v3 Code System ActCode](http://hl7.org/fhir/v3/ActCode/cs.html)
+- [ICD-10](http://hl7.org/fhir/terminologies-systems.html#http://hl7.html)
+
+[View the full list of Blue Button API FHIR Data Model Coding Systems and Identifiers](https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md)
+
+## Synthetic Data
+
+For testing purposes, the CMS Blue Button API originally used a fake data set. This means that each claim—including its dates, codings, dollar amounts—was not based in reality, and that values were not associated with one another. For example, a claim for an annual checkup could have shown a $5,000 amount with a date of January 2020.
+
+In December 2017, the CMS Blue Button API launched a new synthetic data set for developers to test against. This means that each claim returns a realistic value. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be accurate.
+
+Please note that this synthetic data set does not represent a longitudinal patient view. The claims—though representative independently—are shuffled and randomly assigned to patients. To build the synthetic data set, we selected a number of random claims, and shuffling them like a deck of cards among a group of fictitious Patient IDs. This will allow developers to test the Blue Button API system, but could result in a patient with records for contradictory procedures.
 
 ## Try the API
 
