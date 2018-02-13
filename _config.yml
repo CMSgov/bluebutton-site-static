@@ -43,6 +43,8 @@ exclude:
   - Jenkinsfile
   - ops
 
+include: ["_pages"]
+
 # Configure the `_plugins/api_codings.rb` plugin. Note that you can run
 # `bundle exec jekyll serve --verbose` to get debug output from that plugin.
 codebooks:
