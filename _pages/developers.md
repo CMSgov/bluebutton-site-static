@@ -7,6 +7,7 @@ landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
 badge: api
+permalink: "/developers/"
 sections:
   - Overview
   - Authorization
