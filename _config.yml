@@ -13,12 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Blue Button API
+title: CMS Blue Button API
 description: > # this means to ignore newlines until "baseurl:"
-  The Blue Button service provides a developer-friendly, standards-based data API that enables beneficiaries to connect their Medicare claims data to the applications, services, and research programs they trust.
+  The CMS Blue Button API enables beneficiaries to connect their Medicare claims data to the applications, services, and research programs they trust.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-# tealium_env: "dev"
+
+tealium_env: "prod"
 
 # Build settings
 markdown: kramdown
