@@ -372,12 +372,12 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
                                 }  
 
                   ...this is only a subset of the entire output...
-                  
+
 </pre>
 
 **Get all Patient Records for an individual beneficiary**
 
-<pre><code>HTTP GET /protected/bluebutton/fhir/v1/Patient/[fhir_id]</code></pre>
+<pre><code>HTTP GET /v1/fhir/Patient/[fhir_id]</code></pre>
 
 <p>The above URL returns the synthetic Beneficiary's personal health information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html).  This information is mostly contact information, not medical data.</p>
 
@@ -431,7 +431,7 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
 
 **Get all Coverage Information for an Individual Beneficiary**
 
-<pre>HTTP GET /v1/fhir/Patient/[fhir_id]</pre>
+<pre>HTTP GET /v1/fhir/Coverage/[fhir_id]</pre>
 
 The above URL returns the synthetic beneficiary's coverage information as an [ExplanationOfBenefit FHIR Resource.](http://hl7.org/fhir/explanationofbenefit.html)
 
