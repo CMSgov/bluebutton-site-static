@@ -74,7 +74,7 @@ pipeline {
             script {
               def site_folder = "_site-test"
               sh """
-                bundle exec jekyll build --config _config.yml -d ./${site_folder}
+                bundle exec jekyll build --config _config.yml,_config-test.yml -d ./${site_folder}
               """
             }
           },
@@ -82,7 +82,7 @@ pipeline {
             script {
               def site_folder = "_site"
               sh """
-                bundle exec jekyll build --config _config.yml -d ./${site_folder}
+                bundle exec jekyll build --config _config.yml,_config-prod.yml -d ./${site_folder}
               """
             }
           }
