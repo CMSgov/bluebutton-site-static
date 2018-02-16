@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<h1>Variable: {{ page.id | upcase }}</h1>
+<p>{{ page.label }}</p>
+
+<h2>Description</h2>
+<!-- This field is not always present: -->
+{% for paragraph in page.description %}
+<p>{{ paragraph }}</p>
+{% endfor %}
+
+{% if page.value_groups.size > 0 %}
+<h2>Values</h2>
+This variable is coded, and will contain one of the following values.
+
+<!-- This field is not always present: -->
+{% for value_group in page.value_groups %}
+
+<!-- This field is not always present: -->
+{% if value_group['description'] != '' %}
+{% for paragraph in value_group['description'] %}
+<p>{{ paragraph }}</p>
+{% endfor %}
+{% endif %}
+
+<table class="ds-c-table">
+  <caption>Values for Codeset</caption>
+  <thead>
+    <tr>
+      <th scope="col">Value</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for value_entry in value_group['values'] %}
+    <tr>
+      <th scope="row"><code>{{ value_entry['code'] }}</code></th>
+      <td>{{ value_entry['description'] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endfor %}
+
+{% endif %}
+
+<h2>Other Info</h2>
+<p>Some additional information on this variable:</p>
+<ul>
+	<!-- This field is not always present: -->
+	<li><strong>Short Name:</strong> {{ page['short_name'] }}</li>
+	<li><strong>Long Name:</strong> {{ page['long_name'] }}</li>
+	<!-- This field is not always present: -->
+	<li><strong>Type:</strong> {{ page['type'] }}</li>
+	<li><strong>Length:</strong> {{ page['length'] }}</li>
+	<!-- This field is not always present: -->
+	<li><strong>Source:</strong> {{ page['source'] }}</li>
+	<!-- This field is not always present: -->
+	<li><strong>Value Format:</strong> {{ page['value_format'] }}</li>
+</ul>
