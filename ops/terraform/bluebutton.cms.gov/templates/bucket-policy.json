@@ -16,6 +16,22 @@
           "aws:SourceIp": "${nat_gw_cdir}"
         }
       }
+    },
+    {
+      "Sid": "Stmt1516660482311",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::${bucket_name}"
+      ],
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "${nat_gw_cdir}"
+        }
+      }
     }
   ]
 }

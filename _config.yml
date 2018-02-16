@@ -43,9 +43,13 @@ exclude:
   - Jenkinsfile
   - ops
 
+include: ["_pages"]
+
 # Configure the `_plugins/api_codings.rb` plugin. Note that you can run
 # `bundle exec jekyll serve --verbose` to get debug output from that plugin.
 codebooks:
   layout: codeset.html
   xml_files:
+    # Need to get full XML files included here, once CBBI-343 is complete.
+    - _codebooks/codebook-mbsf-abcd-trimmed.xml
     - _codebooks/codebook-ffs-claims-trimmed.xml

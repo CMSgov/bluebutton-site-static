@@ -1,0 +1,46 @@
+<codes>
+  <code>
+    <name>SEX</name>
+    <label>Sex </label>
+    <description><p>This variable indicates the sex of the beneficiary. </p></description>
+    <shortName>SEX </shortName>
+    <longName>SEX_IDENT_CD </longName>
+    <type>CHAR </type>
+    <length>1 </length>
+    <source>CMS Common Medicare Environment (CME) </source>
+    <valueFormat></valueFormat>
+    <values>
+      <valuegroup>
+        <description></description>
+        <value value="0" description="Unknown"/>
+        <value value="1" description="Male"/>
+        <value value="2" description="Female"/>
+      </valuegroup>
+    </values>
+    <comment><p>-</p></comment>
+  </code>
+  <code>
+    <name>RACE</name>
+    <label>Beneficiary Race Code </label>
+    <description><p>The race of the beneficiary. </p></description>
+    <shortName>RACE </shortName>
+    <longName>BENE_RACE_CD </longName>
+    <type>CHAR </type>
+    <length>1 </length>
+    <source>CMS Common Medicare Environment (CME) </source>
+    <valueFormat></valueFormat>
+    <values>
+      <valuegroup>
+        <description></description>
+        <value value="0" description="Unknown"/>
+        <value value="1" description="White"/>
+        <value value="2" description="Black"/>
+        <value value="3" description="Other"/>
+        <value value="4" description="Asian"/>
+        <value value="5" description="Hispanic"/>
+        <value value="6" description="North American Native"/>
+      </valuegroup>
+    </values>
+    <comment><p>-</p></comment>
+  </code>
+</codes>
