@@ -39,8 +39,6 @@ to make use of the API.
 
 ## Authorization
 
-**Please note: Blue Button OAuth will be available in production on February 1st.**
-
 To use the Blue Button OAuth 2
 a developer must
 [register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/).
@@ -217,7 +215,7 @@ The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches t
 
 **Get all Explanation of Benefit Records for an individual beneficiary**
 
-<pre>/v1/protected/bluebutton/fhir/v1/ExplanationOfBenefit/?patient=[fhir_id]</pre>
+<pre>/v1/fhir/ExplanationOfBenefit/?patient=[fhir_id]</pre>
 
 The above URL returns all of the synthetic beneficiary's Explanation of Benefit (sometimes referred to as an episode of care) records as an ExplanationOfBenefit FHIR Resource. The bulk of a beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.
 
@@ -225,149 +223,216 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
 
 <pre>
 {
-  "resourceType": "ExplanationOfBenefit",
-  "id": "EB3500",
-  "text": {
-    "status": "generated",
-    "div": "
-A human-readable rendering of the ExplanationOfBenefit
-"
-  },
-  "identifier": [
-    {
-      "system": "http://www.BenefitsInc.com/fhir/explanationofbenefit",
-      "value": "987654321"
-    }
-  ],
-  "status": "active",
-  "type": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/ex-claimtype",
-        "code": "oral"
-      }
-    ]
-  },
-  "patient": {
-    "reference": "Patient/pat1"
-  },
-  "created": "2014-08-16",
-  "organization": {
-    "reference": "Organization/2"
-  },
-  "claim": {
-    "reference": "Claim/100150"
-  },
-  "claimResponse": {
-    "reference": "ClaimResponse/R3500"
-  },
-  "outcome": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/remittance-outcome",
-        "code": "complete"
-      }
-    ]
-  },
-  "disposition": "Claim settled as per contract.",
-  "careTeam": [
-    {
-      "sequence": 1,
-      "provider": {
-        "reference": "Practitioner/example"
-      }
-    }
-  ],
-  "insurance": {
-    "coverage": {
-      "reference": "Coverage/9876B1"
-    }
-  },
-  "item": [
-    {
-      "sequence": 1,
-      "careTeamLinkId": [
-        1
-      ],
-      "service": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/service-uscls",
-            "code": "1200"
-          }
-        ]
-      },
-      "servicedDate": "2014-08-16",
-      "unitPrice": {
-        "value": 135.57,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
-      },
-      "net": {
-        "value": 135.57,
-        "system": "urn:iso:std:iso:4217",
-        "code": "USD"
-      },
-      "adjudication": [
+    "resourceType": "Bundle",
+    "id": "106bf0ec-d274-43a0-909c-0635c50f354b",
+    "meta": {
+        "lastUpdated": "2018-02-09T10:51:48.914-05:00"
+    },
+    "type": "searchset",
+    "total": 140,
+    "link": [
         {
-          "category": {
-            "coding": [
-              {
-                "code": "eligible"
-              }
-            ]
-          },
-          "amount": {
-            "value": 120.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
-          }
-        },
-        {
-          "category": {
-            "coding": [
-              {
-                "code": "eligpercent"
-              }
-            ]
-          },
-          "value": 0.80
-        },
-        {
-          "category": {
-            "coding": [
-              {
-                "code": "benefit"
-              }
-            ]
-          },
-          "amount": {
-            "value": 96.00,
-            "system": "urn:iso:std:iso:4217",
-            "code": "USD"
-          }
+            "relation": "self",
+            "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?_format=application%2Fjson%2Bfhir&patient=20140000008325"
         }
-      ]
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/carrier-22011027731",
+            "resource": {
+                "resourceType": "ExplanationOfBenefit",
+                "id": "carrier-22011027731",
+                "contained": [
+                    {
+                        "resourceType": "ReferralRequest",
+                        "id": "1",
+                        "status": "completed",
+                        "subject": {
+                            "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
+                        },
+                        "requester": {
+                            "agent": {
+                                "identifier": {
+                                    "system": "http://hl7.org/fhir/sid/us-npi",
+                                    "value": "999999999999"
+                                }
+                            }
+                        },
+                        "recipient": [
+                            {
+                                "identifier": {
+                                    "system": "http://hl7.org/fhir/sid/us-npi",
+                                    "value": "999999999999"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/carr_num.txt",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/carr_num.txt",
+                                    "code": "99999"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/pmtdnlcd.txt",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/pmtdnlcd.txt",
+                                    "code": "1"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/asgmntcd.txt",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/asgmntcd.txt",
+                                    "code": "A"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ccltrnum.txt",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ccltrnum.txt",
+                                    "code": "99999999"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/clm_id.txt",
+                        "value": "22011027731"
+                    },
+                    {
+                        "system": "http://bluebutton.cms.hhs.gov/identifier#claimGroup",
+                        "value": "52241843218"
+                    }
+                ],
+                "status": "active",
+                "type": {
+                    "extension": [
+                        {
+                            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ric_cd.txt",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ric_cd.txt",
+                                        "code": "O"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "coding": [
+                        {
+                            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/clm_type.txt",
+                            "code": "71"
+                        }
+                    ]
+                },
+                "patient": {
+                    "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
+                },
+                "billablePeriod": {
+                    "start": "2015-04-01",
+                    "end": "2015-04-01"
+                },
+                "referral": {
+                    "reference": "#1"
+                },
+                "disposition": "Debit accepted",
+                "careTeam": [
+                    {
+                        "extension": [
+                            {
+                                "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prv_type.txt",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prv_type.txt",
+                                            "code": "1"
+                                        }
+                                    ]
+                                }  
+
+                  ...this is only a subset of the entire output...
+
+</pre>
+
+**Get all Patient Records for an individual beneficiary**
+
+<pre><code>HTTP GET /v1/fhir/Patient/[fhir_id]</code></pre>
+
+<p>The above URL returns the synthetic Beneficiary's personal health information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html).  This information is mostly contact information, not medical data.</p>
+
+<pre><code>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/20140000008325"</code></pre>
+
+<pre><code>{
+"resourceType": "Patient",
+"id": "20140000008325",
+"extension": [
+{
+"url": "http://hl7.org/fhir/StructureDefinition/us-core-race",
+"valueCodeableConcept": {
+  "coding": [
+    {
+      "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/race.txt",
+      "code": "1"
     }
-  ],
-  "totalCost": {
-    "value": 135.57,
-    "system": "urn:iso:std:iso:4217",
-    "code": "USD"
-  },
-  "totalBenefit": {
-    "value": 96.00,
-    "system": "urn:iso:std:iso:4217",
-    "code": "USD"
-  }
+  ]
 }
+}
+],
+"identifier": [
+{
+"system": "http://bluebutton.cms.hhs.gov/identifier#bene_id",
+"value": "20140000008325"
+},
+{
+"system": "http://bluebutton.cms.hhs.gov/identifier#hicnHash",
+"value": "2025fbc612a884853f0c245e686780bf748e5652360ecd7430575491f4e018c5"
+}
+],
+"name": [
+{
+"use": "usual",
+"family": "Doe",
+"given": ["Jane", "X"]
+}
+],
+"gender": "unknown",
+"birthDate": "2014-06-01",
+"address": [
+{
+"district": "999",
+"state": "15",
+"postalCode": "99999"
+}
+]
+}</code>
 </pre>
 
 **Get all Coverage Information for an Individual Beneficiary**
 
 <pre>HTTP GET /v1/fhir/Patient/[fhir_id]</pre>
 
-The above URL returns the synthetic beneficiary's coverage information as an [ExplanationOfBenefit FHIR Resource.](http://hl7.org/fhir/explanationofbenefit.html)
+The above URL returns the synthetic beneficiary's Coverage information as an [ExplanationOfBenefit FHIR Resource.](http://hl7.org/fhir/explanationofbenefit.html)
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?patient=20140000008325"
 </pre>
