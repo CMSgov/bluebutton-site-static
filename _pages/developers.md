@@ -430,11 +430,11 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
 
 **Get all Coverage Information for an Individual Beneficiary**
 
-<pre>HTTP GET /v1/fhir/Patient/[fhir_id]</pre>
+<pre>HTTP GET /v1/fhir/Coverage/?beneficiary=[fhir_id]</pre>
 
 The above URL returns the synthetic beneficiary's Coverage information as an [ExplanationOfBenefit FHIR Resource.](http://hl7.org/fhir/explanationofbenefit.html)
 
-<pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?patient=20140000008325"
+<pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?beneficiary=20140000008325"
 </pre>
 
 <pre>
