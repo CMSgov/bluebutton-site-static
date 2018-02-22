@@ -64,6 +64,7 @@ data "template_file" "user_data" {
   vars {
     # Replace "$" with "\$" since we're embedding this in user_data
     nginx_conf = "${replace(data.template_file.nginx_conf.rendered, "$", "\\$")}"
+    env        = "${var.env}"
   }
 }
 
