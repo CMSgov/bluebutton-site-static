@@ -52,6 +52,6 @@ codebooks:
     # These files are produced by the
     # `bluebutton-data-model.git/bluebutton-data-model-codebook-extractor`
     # project, and copied by hand to this project, as needed.
-    - _codebooks/codebook-mbsf-abcd.xml
+    - _codebooks/codebook-mbsf-abd.xml
     - _codebooks/codebook-ffs-claims.xml
     - _codebooks/codebook-pde.xml
