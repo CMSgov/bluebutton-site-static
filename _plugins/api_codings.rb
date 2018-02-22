@@ -100,7 +100,7 @@ module Jekyll
     def initialize(site, variable)
       @site = site
       @base = site.source
-      @dir = File.join('resources', variable.id)
+      @dir = File.join('resources', 'variables', variable.id)
       @name = 'index.html'
 
       self.process(@name)
