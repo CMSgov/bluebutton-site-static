@@ -17,7 +17,10 @@ sections:
   - Meet "Jack"
 ctas:
   -
-    title: Register your application
+    title: Sign up for the Developer Preview
+    link: https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite
+  -
+    title: Register an application
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login
 
 ---
