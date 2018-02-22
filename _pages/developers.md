@@ -224,8 +224,7 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=20140000008325"</pre>
 
-<pre>
-{
+<pre>{
     "resourceType": "Bundle",
     "id": "106bf0ec-d274-43a0-909c-0635c50f354b",
     "meta": {
@@ -387,47 +386,47 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
 <pre><code>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/20140000008325"</code></pre>
 
 <pre><code>{
-"resourceType": "Patient",
-"id": "20140000008325",
-"extension": [
-{
-"url": "http://hl7.org/fhir/StructureDefinition/us-core-race",
-"valueCodeableConcept": {
-  "coding": [
+  "resourceType": "Patient",
+  "id": "20140000008325",
+  "extension": [
     {
-      "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/race.txt",
-      "code": "1"
+      "url": "http://hl7.org/fhir/StructureDefinition/us-core-race",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/race.txt",
+            "code": "1"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://bluebutton.cms.hhs.gov/identifier#bene_id",
+      "value": "20140000008325"
+    },
+    {
+      "system": "http://bluebutton.cms.hhs.gov/identifier#hicnHash",
+      "value": "2025fbc612a884853f0c245e686780bf748e5652360ecd7430575491f4e018c5"
+    }
+  ],
+  "name": [
+    {
+      "use": "usual",
+      "family": "Doe",
+      "given": ["Jane", "X"]
+    }
+  ],
+  "gender": "unknown",
+  "birthDate": "2014-06-01",
+  "address": [
+    {
+      "district": "999",
+      "state": "15",
+      "postalCode": "99999"
     }
   ]
-}
-}
-],
-"identifier": [
-{
-"system": "http://bluebutton.cms.hhs.gov/identifier#bene_id",
-"value": "20140000008325"
-},
-{
-"system": "http://bluebutton.cms.hhs.gov/identifier#hicnHash",
-"value": "2025fbc612a884853f0c245e686780bf748e5652360ecd7430575491f4e018c5"
-}
-],
-"name": [
-{
-"use": "usual",
-"family": "Doe",
-"given": ["Jane", "X"]
-}
-],
-"gender": "unknown",
-"birthDate": "2014-06-01",
-"address": [
-{
-"district": "999",
-"state": "15",
-"postalCode": "99999"
-}
-]
 }</code>
 </pre>
 
@@ -623,9 +622,7 @@ For Example:
 
 **Synthetic Data**
 
-For testing purposes, the CMS Blue Button API originally used a fake data set. This means that each claim—including its dates, codings, dollar amounts—was not based in reality, and that values were not associated with one another. For example, a claim for an annual checkup could have shown a $5,000 amount with a date of January 2020.
-
-In December 2017, the CMS Blue Button API launched a new synthetic data set for developers to test against. This means that each claim returns a realistic value. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be accurate.
+The CMS Blue Button API offers a synthetic data set for developers to test against. This means that each request returns a realistic value. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be accurate.
 
 Please note that this synthetic data set does not represent a longitudinal patient view. The claims—though representative independently—are shuffled and randomly assigned to patients. To build the synthetic data set, we selected a number of random claims, and shuffling them like a deck of cards among a group of fictitious Patient IDs. This will allow developers to test the Blue Button API system, but could result in a patient with records for contradictory procedures.
 
@@ -633,9 +630,9 @@ Please note that this synthetic data set does not represent a longitudinal patie
 
 To join the Developer Preview, register a sample application and retrieve synthetic data for a sample Patient ID by calling the API, follow these four steps:
 
-**Step 1:** [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite) and register a sample application
+**Step 1:** [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/create) and register a sample application
 
-- [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite) to access the Developer Dashboard
+- [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/create) to access the Developer Dashboard
 - Click "Application Registration" to register a new sample application and get a Client ID and Secret
 
 **Step 2:** Generate a sample token
@@ -677,6 +674,16 @@ In the API response for Patient 20140000008325 you will find:
 - 25 carrier claims (110 carrier claim lines)
 - 2 inpatient claims (25 inpatient claim lines)
 - 5 Part D events
+
+
+**Step 5:** Accessing Synthetic Data
+
+In order to access the full synthetic dataset, you can do the following:
+
+1.  Set up your sandbox application
+2.  Attempt to log into sandbox.bluebutton.cms.gov.
+3.  Log into account.mymedicare.gov using one of thirty thousand provided usernames and passwords. The first user is BBUser00000, with password PW00000!, and these sample users continue all the way to BBUser29999, with password PW29999!.
+4.  Approve access for your application, which will now have receive an access token, which can be used in the requests described above.
 
 ---
 
