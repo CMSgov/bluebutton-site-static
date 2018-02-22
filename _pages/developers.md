@@ -12,17 +12,17 @@ sections:
   - Overview
   - Authorization
   - Core Resources
+  - FHIR Data Model
   - Try the API
   - Production API Access
   - Meet "Jack"
 ctas:
   -
-    title: Sign up for the Developer Preview
-    link: https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite
+    title: Blue Button Home
+    link: /
   -
-    title: Register an application
+    title: Register your application
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login
-
 ---
 
 ## Overview
@@ -173,7 +173,7 @@ http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX
 
 Below you will find a sample account you can use to test your Blue Button OAuth implementation. This account mimics a valid MyMedicare.gov account but has reduced functionality. For example, you cannot test “Forgot Password” flow.
 
-_Jane Doe Username: User29999 Password: PW29999!_
+_Jane Doe Username: BBUser29999 Password: PW29999!_
 
 ---
 
@@ -596,6 +596,38 @@ The above URL returns the synthetic beneficiary's Coverage information as an [Ex
   ]
 }
 </pre>
+
+## FHIR Data Model
+
+We have mapped over 1,300 fields from the CMS claims data warehouse into FHIR.  These fields are surfaced across the Patient, Coverage and Explanation of Benefits FHIR resources.
+
+- Beneficiary Enrollment Record
+- Carrier Claims
+- Durable Medical Equipment
+- Home Health Agency Claims
+- Hospice Claims
+- Inpatient Claims
+- Outpatient Claims
+- Part D Events
+- Skilled Nursing Facility Claims
+
+The Blue Button API FHIR data model leverages coding systems specific to Medicare billing forms and/or the Chronic Conditions Warehouse, FHIR and Industry Coding Systems.
+
+For Example:
+
+- [National Drug Code Directory](https://www.accessdata.fda.gov/scripts/cder/ndc/)
+- [HL7 v3 Code System ActCode](http://hl7.org/fhir/v3/ActCode/cs.html)
+- [ICD-10](http://hl7.org/fhir/sid/icd-10)
+
+[View the full list of Blue Button API FHIR Data Model Coding Systems and Identifiers](https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md)
+
+**Synthetic Data**
+
+For testing purposes, the CMS Blue Button API originally used a fake data set. This means that each claim—including its dates, codings, dollar amounts—was not based in reality, and that values were not associated with one another. For example, a claim for an annual checkup could have shown a $5,000 amount with a date of January 2020.
+
+In December 2017, the CMS Blue Button API launched a new synthetic data set for developers to test against. This means that each claim returns a realistic value. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be accurate.
+
+Please note that this synthetic data set does not represent a longitudinal patient view. The claims—though representative independently—are shuffled and randomly assigned to patients. To build the synthetic data set, we selected a number of random claims, and shuffling them like a deck of cards among a group of fictitious Patient IDs. This will allow developers to test the Blue Button API system, but could result in a patient with records for contradictory procedures.
 
 ## Try the API
 

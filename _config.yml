@@ -47,8 +47,11 @@ include: ["_pages"]
 # Configure the `_plugins/api_codings.rb` plugin. Note that you can run
 # `bundle exec jekyll serve --verbose` to get debug output from that plugin.
 codebooks:
-  layout: codeset.html
+  layout: variable.html
   xml_files:
-    # Need to get full XML files included here, once CBBI-343 is complete.
-    - _codebooks/codebook-mbsf-abcd-trimmed.xml
-    - _codebooks/codebook-ffs-claims-trimmed.xml
+    # These files are produced by the
+    # `bluebutton-data-model.git/bluebutton-data-model-codebook-extractor`
+    # project, and copied by hand to this project, as needed.
+    - _codebooks/codebook-mbsf-abd.xml
+    - _codebooks/codebook-ffs-claims.xml
+    - _codebooks/codebook-pde.xml
