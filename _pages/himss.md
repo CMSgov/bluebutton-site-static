@@ -17,7 +17,7 @@ ctas:
     link: /developers
   -
     title: Sign up for the Developer Preview
-    link: https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite
+    link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
 
 ---
 
