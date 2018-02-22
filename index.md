@@ -46,25 +46,23 @@ Participants in the Developer Preview can register an application and build inte
 
 ## Value and Use Cases
 
-The Blue Button API adds new value for beneficiaries, providers, care organizations and health applications, and supports a number of use cases within the areas of Healthcare and Life Sciences.
-
-#### You can use the Blue Button API to:
+Developers integrate with the Blue Button API adding value for beneficiaries, providers, care organizations, researchers and many more across Healthcare and Life Sciences to:
 
 **_Reduce patient burden_**
 
-- For example, a research organization can pre-populate medication lists for a patient during clinical trial enrollment
+A research organization can pre-populate a medication lists for a patient during clinical trial enrollment.
 
-**_Streamline information about different kinds of care overtime_**
+**_Streamline information about different kinds of care over time_**
 
-- For example, a primary care physician can access information on other patient care (e.g. related to behavioral health) to better inform treatment
+A primary care physician can access information on other patient care (e.g. related to behavioral health) to better inform treatment.
 
 **_Uncover new insights that can improve health outcomes_**
 
-- For example, a pharmacy can determine if a beneficiary gets healthier over time due to medication adherence
+A pharmacy can determine if a beneficiary gets healthier over time due to medication adherence.
 
 **_Access and monitor health information in one place_**
 
-- For example, a health application can aggregate data into a health dashboard for beneficiaries
+A health application can aggregate data into a health dashboard for beneficiaries.
 
 ---
 
