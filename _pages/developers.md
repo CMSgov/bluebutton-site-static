@@ -173,7 +173,7 @@ http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX
 
 Below you will find a sample account you can use to test your Blue Button OAuth implementation. This account mimics a valid MyMedicare.gov account but has reduced functionality. For example, you cannot test “Forgot Password” flow.
 
-_Jane Doe Username: User29999 Password: PW29999!_
+_Jane Doe Username: BBUser29999 Password: PW29999!_
 
 ---
 
