@@ -620,6 +620,14 @@ For Example:
 
 [View the full list of Blue Button API FHIR Data Model Coding Systems and Identifiers](https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md)
 
+**How Often Will New/Updated Data Be Available?**
+
+Medicare Part A and B claims data will be refreshed weekly, Part D data is refreshed monthly.
+
+Our schedules may vary depending on many things like maintenance, delayed delivery of claims to the CCW data warehouse, or additional data quality processing that's needed.
+
+We recommend you have a daily job to fetch new claims data for your users. Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the Blue Button API Terms of Service.
+
 **Synthetic Data**
 
 The CMS Blue Button API offers a synthetic data set for developers to test against. This means that each request returns a realistic value. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be accurate.
