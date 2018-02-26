@@ -36,9 +36,6 @@ The CMS Blue Button API:
 - Enables a beneficiary to grant an application access to four years of their Part A, B, and D claims data
 - Uses the [HL7 FHIR](https://www.hl7.org/fhir/) standard for beneficiary data and the [OAuth 2.0](https://oauth.net/2/) standard for beneficiary authorization
 
-Developers can sign up [here]()
-to make use of the API.
-
 ---
 
 ## Authorization
@@ -183,198 +180,66 @@ _Jane Doe Username: BBUser29999 Password: PW29999!_
 
 Base Request URL:
 
-<pre>HTTP GET /connect/userinfo </pre>
+<pre>https://sandbox.bluebutton.cms.gov</pre>
 
 Resources:
 
+- Get all Explanation of Benefit records for an individual beneficiary
+- Get all Patient records for an individual beneficiary
+- Get all Coverage information for an individual beneficiary
 - Get User Profile from an Authorization Token
-- Get all Explanation of Benefit Records for an Individual beneficiary
-- Get all Patient Records for an Individual beneficiary
-- Get all Coverage Information for an Individual beneficiary
 
 As a security measure the date of birth, SSN, and HICN will not be provided by the CMS Blue Button API.
 
 We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension) in our API responses.
 
-**Get User Profile for an Authorization Token**
-
-<pre>HTTP GET /connect/userinfo </pre>
-
-The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches the fictitious beneficiary’s basic account information given an Authorization Token. This is most often used when creating an account within your application. An HTTP GET is called and the response is returned as JSON.
-
-<pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/connect/userinfo"</pre>
-
-<pre>
-{
-  "sub": "fflinstone",
-  "prefered_username": "fflinstone",
-  "given_name": "Fred",
-  "family_name:, "Flinstone,
-  "name": "Fred Flinstone",
-  "email": "pebbles-daddy@example.com",
-  "created": "2017-11-28",
-  "patient": "123456789",
-}
-</pre>
-
 **Get all Explanation of Benefit Records for an individual beneficiary**
 
 <pre>/v1/fhir/ExplanationOfBenefit/?patient=[fhir_id]</pre>
 
-The above URL returns all of the synthetic beneficiary's Explanation of Benefit (sometimes referred to as an episode of care) records as an ExplanationOfBenefit FHIR Resource. The bulk of a beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.
+The above URL returns all of the beneficiary's Explanation of Benefit (sometimes referred to as an episode of care) records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html). The bulk of a beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.  Each one can be thousands of lines long.
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=20140000008325"</pre>
 
-<pre>{
-    "resourceType": "Bundle",
-    "id": "106bf0ec-d274-43a0-909c-0635c50f354b",
-    "meta": {
-        "lastUpdated": "2018-02-09T10:51:48.914-05:00"
-    },
-    "type": "searchset",
-    "total": 140,
-    "link": [
-        {
-            "relation": "self",
-            "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?_format=application%2Fjson%2Bfhir&patient=20140000008325"
-        }
-    ],
-    "entry": [
-        {
-            "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/carrier-22011027731",
-            "resource": {
-                "resourceType": "ExplanationOfBenefit",
-                "id": "carrier-22011027731",
-                "contained": [
-                    {
-                        "resourceType": "ReferralRequest",
-                        "id": "1",
-                        "status": "completed",
-                        "subject": {
-                            "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
-                        },
-                        "requester": {
-                            "agent": {
-                                "identifier": {
-                                    "system": "http://hl7.org/fhir/sid/us-npi",
-                                    "value": "999999999999"
-                                }
-                            }
-                        },
-                        "recipient": [
-                            {
-                                "identifier": {
-                                    "system": "http://hl7.org/fhir/sid/us-npi",
-                                    "value": "999999999999"
-                                }
-                            }
-                        ]
-                    }
-                ],
-                "extension": [
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/carr_num.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/carr_num.txt",
-                                    "code": "99999"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/pmtdnlcd.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/pmtdnlcd.txt",
-                                    "code": "1"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/asgmntcd.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/asgmntcd.txt",
-                                    "code": "A"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ccltrnum.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ccltrnum.txt",
-                                    "code": "99999999"
-                                }
-                            ]
-                        }
-                    }
-                ],
-                "identifier": [
-                    {
-                        "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/clm_id.txt",
-                        "value": "22011027731"
-                    },
-                    {
-                        "system": "http://bluebutton.cms.hhs.gov/identifier#claimGroup",
-                        "value": "52241843218"
-                    }
-                ],
-                "status": "active",
-                "type": {
-                    "extension": [
-                        {
-                            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ric_cd.txt",
-                            "valueCodeableConcept": {
-                                "coding": [
-                                    {
-                                        "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ric_cd.txt",
-                                        "code": "O"
-                                    }
-                                ]
-                            }
-                        }
-                    ],
-                    "coding": [
-                        {
-                            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/clm_type.txt",
-                            "code": "71"
-                        }
-                    ]
-                },
-                "patient": {
-                    "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
-                },
-                "billablePeriod": {
-                    "start": "2015-04-01",
-                    "end": "2015-04-01"
-                },
-                "referral": {
-                    "reference": "#1"
-                },
-                "disposition": "Debit accepted",
-                "careTeam": [
-                    {
-                        "extension": [
-                            {
-                                "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prv_type.txt",
-                                "valueCodeableConcept": {
-                                    "coding": [
-                                        {
-                                            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prv_type.txt",
-                                            "code": "1"
-                                        }
-                                    ]
-                                }  
+That API call will return an Explanation of Benefit that contains many FHIR resources and is typically thousands of lines long.  
 
-                  ...this is only a subset of the entire output...
+[Learn more about the Explanation of Benefits FHIR resource in Blue Button](/eob)
+
+<pre>
+
+{
+    "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/carrier-22011027731",
+    "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "carrier-22011027731",
+        "contained": [
+            {
+                "resourceType": "ReferralRequest",
+                "id": "1",
+                "status": "completed",
+                "subject": {
+                    "reference": "Patient/20140000008325"
+                },
+                "requester": {
+                    "agent": {
+                        "identifier": {
+                            "system": "http://hl7.org/fhir/sid/us-npi",
+                            "value": "999999999999"
+                        }
+                    }
+                },
+                "recipient": [
+                    {
+                        "identifier": {
+                            "system": "http://hl7.org/fhir/sid/us-npi",
+                            "value": "999999999999"
+                        }
+                    }
+                ]
+            }
+        ]
+
+        ...this is only a subset of the entire output...
 
 </pre>
 
@@ -382,7 +247,7 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
 
 <pre><code>HTTP GET /v1/fhir/Patient/[fhir_id]</code></pre>
 
-<p>The above URL returns the synthetic Beneficiary's personal health information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html).  This information is mostly contact information, not medical data.</p>
+<p>The above URL returns the beneficiary's personal health information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html).  This information is mostly contact information, not medical data.</p>
 
 <pre><code>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/20140000008325"</code></pre>
 
@@ -435,7 +300,7 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
 
 <pre>HTTP GET /v1/fhir/Coverage/?beneficiary=[fhir_id]</pre>
 
-The above URL returns the synthetic beneficiary's Coverage information as an [ExplanationOfBenefit FHIR Resource.](http://hl7.org/fhir/explanationofbenefit.html)
+The above URL returns the beneficiary's Coverage information as an [ExplanationOfBenefit FHIR Resource.](http://hl7.org/fhir/explanationofbenefit.html)
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?beneficiary=20140000008325"
 </pre>
@@ -597,6 +462,27 @@ The above URL returns the synthetic beneficiary's Coverage information as an [Ex
 }
 </pre>
 
+**Get User Profile for an Authorization Token**
+
+<pre>HTTP GET /connect/userinfo </pre>
+
+The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches the fictitious beneficiary’s basic account information given an Authorization Token. This is most often used when creating an account within your application. An HTTP GET is called and the response is returned as JSON.
+
+<pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/connect/userinfo"</pre>
+
+<pre>
+{
+  "sub": "fflinstone",
+  "prefered_username": "fflinstone",
+  "given_name": "Fred",
+  "family_name:, "Flinstone,
+  "name": "Fred Flinstone",
+  "email": "pebbles-daddy@example.com",
+  "created": "2017-11-28",
+  "patient": "123456789",
+}
+</pre>
+
 ## FHIR Data Model
 
 We have mapped over 1,300 fields from the CMS claims data warehouse into FHIR.  These fields are surfaced across the Patient, Coverage and Explanation of Benefits FHIR resources.
@@ -627,14 +513,23 @@ The CMS Blue Button API offers a synthetic data set for developers to test again
 
 Please note that this synthetic data set does not represent a longitudinal patient view. The claims—though representative independently—are shuffled and randomly assigned to patients. To build the synthetic data set, we selected a number of random claims, and shuffling them like a deck of cards among a group of fictitious Patient IDs. This will allow developers to test the Blue Button API system, but could result in a patient with records for contradictory procedures.
 
+**Production Data**
+
+The CMS Blue Button API has at least one claim for over 53M beneficiaries.
+
+Today, there are approximately 38M beneficiaries in traditional or fee-for-service Medicare.  The Blue Button API has Part A/B/D data for those beneficiaries plus Part D data for some beneficiaries on Medicare Advantage plans.  
+
+Part D has always been a separate program, but certain plans include both the MA benefits (Part C) and Part D.  As a result, Part D drug event data is collected separately from MA encounter data.  Part D drug event data for all participants in Part D has been collected by the agency since the program began in the mid-2000s.  
+
+The API also has historical claims data going back four years.  All of these factors contribute to the 53M number we use to describe the total number of beneficiaries available via the Blue Button API.
+
 ## Try the API
 
 To join the Developer Preview, register a sample application and retrieve synthetic data for a sample Patient ID by calling the API, follow these four steps:
 
 **Step 1:** [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/create) and register a sample application
 
-- [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/create) to access the Developer Dashboard
-- Click "Application Registration" to register a new sample application and get a Client ID and Secret
+Click "Application Registration" to register a new sample application and get a Client ID and Secret
 
 **Step 2:** Generate a sample token
 
