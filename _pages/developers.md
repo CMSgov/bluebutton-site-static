@@ -14,8 +14,9 @@ sections:
   - Core Resources
   - FHIR Data Model
   - Try the API
-  - Production API Access
   - Meet "Jack"
+  - Production API Access
+  - Developer Guidelines
 ctas:
   -
     title: Blue Button Home
@@ -717,6 +718,32 @@ Next, the following criteria needs to be met and verified by the CMS Blue Button
 **What happens after I am approved?**
 
 You will receive an email from the CMS Blue Button API team notifying you of approval.  You will then receive a new Client ID and Secret for your app in production.  You will use the base URL api.cms.bluebutton.gov instead of sandbox.bluebutton.cms.gov.
+
+---
+
+## Developer Guidelines
+
+Below are guidelines you should follow to be successful in your Blue Button API integration.
+
+**Your Privacy Policy**
+
+You will be asked to provide a URL to your privacy policy and terms and conditions when registering your app in the Blue Button Developer Portal.  These links should be easy to access and understand by a beneficiary using your app.  Consider using the [Model Privacy Notice](https://www.healthit.gov/policy-researchers-implementers/model-privacy-notice-mpn).
+
+**Rate Limiting and Data Refresh**
+
+Medicare Part A and B claims data will be refreshed weekly, Part D data monthly.
+
+Our schedules may vary depending on many things like maintenance, delayed delivery of claims to the CCW data warehouse, or additional data quality processing that's needed.
+
+We recommend you have a daily or weekly job to fetch new claims data for your users.  Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the [Blue Button API Terms of Service](/terms).
+
+**Use of the Blue Button Logo**
+
+The Blue Button logo and usage guidelines is detailed [here](https://www.healthit.gov/patients-families/blue-button/blue-button-image).
+
+**Beneficiary Revokes Access**
+
+A beneficiary may revoke access to your application via the MyMedicare.gov website.  When you encounter an invalid token indicating a beneficiary has revoked access, you should make a reasonable attempt to handle that case making it easy for the beneficiary to understand what is happening with their Medicare data.
 
 ---
 
