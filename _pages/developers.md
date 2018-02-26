@@ -223,155 +223,153 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=20140000008325"</pre>
 
 <pre>{
-    "resourceType": "Bundle",
-    "id": "106bf0ec-d274-43a0-909c-0635c50f354b",
-    "meta": {
-        "lastUpdated": "2018-02-09T10:51:48.914-05:00"
+  "resourceType": "Bundle",
+  "id": "af23d99e-5674-4827-bfd3-130470c96f95",
+  "meta": {
+    "lastUpdated": "2018-02-26T13:57:54.361-05:00"
+  },
+  "type": "searchset",
+  "total": 165,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit?startIndex=0&patient=20140000010000&count=10"
     },
-    "type": "searchset",
-    "total": 140,
-    "link": [
-        {
-            "relation": "self",
-            "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?_format=application%2Fjson%2Bfhir&patient=20140000008325"
-        }
-    ],
-    "entry": [
-        {
-            "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/carrier-22011027731",
-            "resource": {
-                "resourceType": "ExplanationOfBenefit",
-                "id": "carrier-22011027731",
-                "contained": [
-                    {
-                        "resourceType": "ReferralRequest",
-                        "id": "1",
-                        "status": "completed",
-                        "subject": {
-                            "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
-                        },
-                        "requester": {
-                            "agent": {
-                                "identifier": {
-                                    "system": "http://hl7.org/fhir/sid/us-npi",
-                                    "value": "999999999999"
-                                }
-                            }
-                        },
-                        "recipient": [
-                            {
-                                "identifier": {
-                                    "system": "http://hl7.org/fhir/sid/us-npi",
-                                    "value": "999999999999"
-                                }
-                            }
-                        ]
-                    }
-                ],
-                "extension": [
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/carr_num.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/carr_num.txt",
-                                    "code": "99999"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/pmtdnlcd.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/pmtdnlcd.txt",
-                                    "code": "1"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/asgmntcd.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/asgmntcd.txt",
-                                    "code": "A"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ccltrnum.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ccltrnum.txt",
-                                    "code": "99999999"
-                                }
-                            ]
-                        }
-                    }
-                ],
-                "identifier": [
-                    {
-                        "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/clm_id.txt",
-                        "value": "22011027731"
-                    },
-                    {
-                        "system": "http://bluebutton.cms.hhs.gov/identifier#claimGroup",
-                        "value": "52241843218"
-                    }
-                ],
-                "status": "active",
-                "type": {
-                    "extension": [
-                        {
-                            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ric_cd.txt",
-                            "valueCodeableConcept": {
-                                "coding": [
-                                    {
-                                        "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ric_cd.txt",
-                                        "code": "O"
-                                    }
-                                ]
-                            }
-                        }
-                    ],
-                    "coding": [
-                        {
-                            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/clm_type.txt",
-                            "code": "71"
-                        }
-                    ]
-                },
-                "patient": {
-                    "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
-                },
-                "billablePeriod": {
-                    "start": "2015-04-01",
-                    "end": "2015-04-01"
-                },
-                "referral": {
-                    "reference": "#1"
-                },
-                "disposition": "Debit accepted",
-                "careTeam": [
-                    {
-                        "extension": [
-                            {
-                                "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prv_type.txt",
-                                "valueCodeableConcept": {
-                                    "coding": [
-                                        {
-                                            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prv_type.txt",
-                                            "code": "1"
-                                        }
-                                    ]
-                                }  
+    {
+      "relation": "next",
+      "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit?startIndex=10&patient=20140000010000&count=10"
+    },
+    {
+      "relation": "last",
+      "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit?startIndex=160&patient=20140000010000&count=10"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/carrier-21213952537",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "carrier-21213952537",
+        "contained": [
+          {
+            "resourceType": "ReferralRequest",
+            "id": "1",
+            "status": "completed",
+            "subject": {
+              "reference": "Patient/20140000010000"
+            },
+            "requester": {
+              "agent": {
+                "identifier": {
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "999999999999"
+                }
+              }
+            },
+            "recipient": [
+              {
+                "identifier": {
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "999999999999"
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/carr_num",
+            "valueIdentifier": {
+              "system": "https://bluebutton.cms.gov/resources/variables/carr_num",
+              "value": "99999"
+            }
+          },
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/carr_clm_pmt_dnl_cd",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/carr_clm_pmt_dnl_cd",
+              "code": "1",
+              "display": "Physician/supplier"
+            }
+          },
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/asgmntcd",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/asgmntcd",
+              "code": "A",
+              "display": "Assigned claim"
+            }
+          },
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/clm_clncl_tril_num",
+            "valueIdentifier": {
+              "system": "https://bluebutton.cms.gov/resources/variables/clm_clncl_tril_num",
+              "value": "99999999"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://bluebutton.cms.gov/resources/variables/clm_id",
+            "value": "21213952537"
+          },
+          {
+            "system": "http://bluebutton.cms.hhs.gov/identifier#claimGroup",
+            "value": "42580758986"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd",
+              "code": "71",
+              "display": "Local carrier non-durable medical equipment, prosthetics, orthotics, and supplies (DMEPOS) claim"
+            },
+            {
+              "system": "https://bluebutton.cms.gov/developer/docs/reference/some-thing",
+              "code": "CARRIER"
+            },
+            {
+              "system": "http://hl7.org/fhir/ex-claimtype",
+              "code": "PROFESSIONAL"
+            },
+            {
+              "system": "https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd",
+              "code": "O",
+              "display": "Part B physician/supplier claim record (processed by local carriers; can include DMEPOS services)"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/20140000010000"
+        },
+        "billablePeriod": {
+          "start": "2014-09-01",
+          "end": "2014-09-01"
+        },
+        "referral": {
+          "reference": "#1"
+        },
+        "disposition": "Debit accepted",
+        "careTeam": [
+          {
+            "extension": [
+              {
+                "url": "https://bluebutton.cms.gov/resources/variables/carr_line_prvdr_type_cd",
+                "valueCoding": {
+                  "system": "https://bluebutton.cms.gov/resources/variables/carr_line_prvdr_type_cd",
+                  "code": "1"
+                }
+              },
+              {
+                "url": "https://bluebutton.cms.gov/resources/variables/prtcptng_ind_cd",
+                "valueCoding": {
+                  "system": "https://bluebutton.cms.gov/resources/variables/prtcptng_ind_cd",
+                  "code": "1",
+                  "display": "Participating"
 
-                  ...this is only a subset of the entire output...
+       ...this is only a subset of the entire output...
 
 </pre>
 
