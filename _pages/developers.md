@@ -203,16 +203,14 @@ The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches t
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/connect/userinfo"</pre>
 
-<pre>
-{
-  "sub": "fflinstone",
-  "prefered_username": "fflinstone",
-  "given_name": "Fred",
-  "family_name:, "Flinstone,
-  "name": "Fred Flinstone",
-  "email": "pebbles-daddy@example.com",
-  "created": "2017-11-28",
-  "patient": "123456789",
+<pre>{
+  "sub": "20140000010000",
+  "name": "John Doe",
+  "given_name": "John",
+  "family_name": "Doe",
+  "email": "",
+  "iat": "2018-02-15T21:10:58.706Z",
+  "patient": "20140000010000"
 }
 </pre>
 
@@ -225,155 +223,153 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=20140000008325"</pre>
 
 <pre>{
-    "resourceType": "Bundle",
-    "id": "106bf0ec-d274-43a0-909c-0635c50f354b",
-    "meta": {
-        "lastUpdated": "2018-02-09T10:51:48.914-05:00"
+  "resourceType": "Bundle",
+  "id": "af23d99e-5674-4827-bfd3-130470c96f95",
+  "meta": {
+    "lastUpdated": "2018-02-26T13:57:54.361-05:00"
+  },
+  "type": "searchset",
+  "total": 165,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit?startIndex=0&patient=20140000010000&count=10"
     },
-    "type": "searchset",
-    "total": 140,
-    "link": [
-        {
-            "relation": "self",
-            "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?_format=application%2Fjson%2Bfhir&patient=20140000008325"
-        }
-    ],
-    "entry": [
-        {
-            "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/carrier-22011027731",
-            "resource": {
-                "resourceType": "ExplanationOfBenefit",
-                "id": "carrier-22011027731",
-                "contained": [
-                    {
-                        "resourceType": "ReferralRequest",
-                        "id": "1",
-                        "status": "completed",
-                        "subject": {
-                            "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
-                        },
-                        "requester": {
-                            "agent": {
-                                "identifier": {
-                                    "system": "http://hl7.org/fhir/sid/us-npi",
-                                    "value": "999999999999"
-                                }
-                            }
-                        },
-                        "recipient": [
-                            {
-                                "identifier": {
-                                    "system": "http://hl7.org/fhir/sid/us-npi",
-                                    "value": "999999999999"
-                                }
-                            }
-                        ]
-                    }
-                ],
-                "extension": [
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/carr_num.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/carr_num.txt",
-                                    "code": "99999"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/pmtdnlcd.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/pmtdnlcd.txt",
-                                    "code": "1"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/asgmntcd.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/asgmntcd.txt",
-                                    "code": "A"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ccltrnum.txt",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ccltrnum.txt",
-                                    "code": "99999999"
-                                }
-                            ]
-                        }
-                    }
-                ],
-                "identifier": [
-                    {
-                        "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/clm_id.txt",
-                        "value": "22011027731"
-                    },
-                    {
-                        "system": "http://bluebutton.cms.hhs.gov/identifier#claimGroup",
-                        "value": "52241843218"
-                    }
-                ],
-                "status": "active",
-                "type": {
-                    "extension": [
-                        {
-                            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ric_cd.txt",
-                            "valueCodeableConcept": {
-                                "coding": [
-                                    {
-                                        "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ric_cd.txt",
-                                        "code": "O"
-                                    }
-                                ]
-                            }
-                        }
-                    ],
-                    "coding": [
-                        {
-                            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/clm_type.txt",
-                            "code": "71"
-                        }
-                    ]
-                },
-                "patient": {
-                    "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
-                },
-                "billablePeriod": {
-                    "start": "2015-04-01",
-                    "end": "2015-04-01"
-                },
-                "referral": {
-                    "reference": "#1"
-                },
-                "disposition": "Debit accepted",
-                "careTeam": [
-                    {
-                        "extension": [
-                            {
-                                "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prv_type.txt",
-                                "valueCodeableConcept": {
-                                    "coding": [
-                                        {
-                                            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prv_type.txt",
-                                            "code": "1"
-                                        }
-                                    ]
-                                }  
+    {
+      "relation": "next",
+      "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit?startIndex=10&patient=20140000010000&count=10"
+    },
+    {
+      "relation": "last",
+      "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit?startIndex=160&patient=20140000010000&count=10"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/carrier-21213952537",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "carrier-21213952537",
+        "contained": [
+          {
+            "resourceType": "ReferralRequest",
+            "id": "1",
+            "status": "completed",
+            "subject": {
+              "reference": "Patient/20140000010000"
+            },
+            "requester": {
+              "agent": {
+                "identifier": {
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "999999999999"
+                }
+              }
+            },
+            "recipient": [
+              {
+                "identifier": {
+                  "system": "http://hl7.org/fhir/sid/us-npi",
+                  "value": "999999999999"
+                }
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/carr_num",
+            "valueIdentifier": {
+              "system": "https://bluebutton.cms.gov/resources/variables/carr_num",
+              "value": "99999"
+            }
+          },
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/carr_clm_pmt_dnl_cd",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/carr_clm_pmt_dnl_cd",
+              "code": "1",
+              "display": "Physician/supplier"
+            }
+          },
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/asgmntcd",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/asgmntcd",
+              "code": "A",
+              "display": "Assigned claim"
+            }
+          },
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/clm_clncl_tril_num",
+            "valueIdentifier": {
+              "system": "https://bluebutton.cms.gov/resources/variables/clm_clncl_tril_num",
+              "value": "99999999"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://bluebutton.cms.gov/resources/variables/clm_id",
+            "value": "21213952537"
+          },
+          {
+            "system": "http://bluebutton.cms.hhs.gov/identifier#claimGroup",
+            "value": "42580758986"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd",
+              "code": "71",
+              "display": "Local carrier non-durable medical equipment, prosthetics, orthotics, and supplies (DMEPOS) claim"
+            },
+            {
+              "system": "https://bluebutton.cms.gov/developer/docs/reference/some-thing",
+              "code": "CARRIER"
+            },
+            {
+              "system": "http://hl7.org/fhir/ex-claimtype",
+              "code": "PROFESSIONAL"
+            },
+            {
+              "system": "https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd",
+              "code": "O",
+              "display": "Part B physician/supplier claim record (processed by local carriers; can include DMEPOS services)"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/20140000010000"
+        },
+        "billablePeriod": {
+          "start": "2014-09-01",
+          "end": "2014-09-01"
+        },
+        "referral": {
+          "reference": "#1"
+        },
+        "disposition": "Debit accepted",
+        "careTeam": [
+          {
+            "extension": [
+              {
+                "url": "https://bluebutton.cms.gov/resources/variables/carr_line_prvdr_type_cd",
+                "valueCoding": {
+                  "system": "https://bluebutton.cms.gov/resources/variables/carr_line_prvdr_type_cd",
+                  "code": "1"
+                }
+              },
+              {
+                "url": "https://bluebutton.cms.gov/resources/variables/prtcptng_ind_cd",
+                "valueCoding": {
+                  "system": "https://bluebutton.cms.gov/resources/variables/prtcptng_ind_cd",
+                  "code": "1",
+                  "display": "Participating"
 
-                  ...this is only a subset of the entire output...
+       ...this is only a subset of the entire output...
 
 </pre>
 
@@ -387,35 +383,32 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
 
 <pre><code>{
   "resourceType": "Patient",
-  "id": "20140000008325",
+  "id": "20140000010000",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/us-core-race",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/race.txt",
-            "code": "1"
-          }
-        ]
+      "url": "https://bluebutton.cms.gov/resources/variables/race",
+      "valueCoding": {
+        "system": "https://bluebutton.cms.gov/resources/variables/race",
+        "code": "2",
+        "display": "Black"
       }
     }
   ],
   "identifier": [
     {
       "system": "http://bluebutton.cms.hhs.gov/identifier#bene_id",
-      "value": "20140000008325"
+      "value": "20140000010000"
     },
     {
       "system": "http://bluebutton.cms.hhs.gov/identifier#hicnHash",
-      "value": "2025fbc612a884853f0c245e686780bf748e5652360ecd7430575491f4e018c5"
+      "value": "88dfce2360cd8cd79ce109aaf8760eb8926503957415caa5298c5b31991967ad"
     }
   ],
   "name": [
     {
       "use": "usual",
       "family": "Doe",
-      "given": ["Jane", "X"]
+      "given": ["John", "X"]
     }
   ],
   "gender": "unknown",
@@ -423,12 +416,12 @@ The above URL returns all of the synthetic beneficiary's Explanation of Benefit 
   "address": [
     {
       "district": "999",
-      "state": "15",
+      "state": "05",
       "postalCode": "99999"
     }
   ]
-}</code>
-</pre>
+}
+</code></pre>
 
 **Get all Coverage Information for an Individual Beneficiary**
 
@@ -439,68 +432,65 @@ The above URL returns the synthetic beneficiary's Coverage information as an [Ex
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?beneficiary=20140000008325"
 </pre>
 
-<pre>
-{
+<pre>{
   "resourceType": "Bundle",
-  "id": "28d26ab6-2043-4afd-8c9a-835c0ff3e179",
+  "id": "199aa952-36cc-4136-bcad-01e78b0a5b7a",
   "meta": {
-    "lastUpdated": "2017-12-20T10:21:08.565-05:00"
+    "lastUpdated": "2018-02-26T12:25:06.791-05:00"
   },
   "type": "searchset",
   "total": 3,
   "link": [
     {
       "relation": "self",
-      "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?_format=application%2Fjson%2Bfhir&beneficiary=Patient%2F20140000008325"
+      "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?beneficiary=Patient%2F20140000010000&count=10&startIndex=0"
     }
   ],
   "entry": [
     {
-      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/part-a-20140000008325", "resource": {
+      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/part-a-20140000010000",
+      "resource": {
         "resourceType": "Coverage",
-        "id": "part-a-20140000008325",
+        "id": "part-a-20140000010000",
         "extension": [
           {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt", "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt",
-                  "code": "10"
-                }
-              ]
+            "url": "https://bluebutton.cms.gov/resources/variables/ms_cd",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/ms_cd",
+              "code": "10",
+              "display": "Aged without end-stage renal disease (ESRD)"
             }
           },
           {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/orec.txt",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/orec.txt",
-                  "code": "0"
-                }
-              ]
+            "url": "https://bluebutton.cms.gov/resources/variables/orec",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/orec",
+              "code": "0",
+              "display": "Old age and survivor\u2019s insurance (OASI)"
             }
           },
           {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/crec.txt",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/crec.txt",
-                  "code": "0"
-                }
-              ]
+            "url": "https://bluebutton.cms.gov/resources/variables/crec",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/crec",
+              "code": "0",
+              "display": "Old age and survivor\u2019s insurance (OASI)"
             }
           },
           {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/esrd_ind.txt",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/esrd_ind.txt",
-                  "code": "0"
-                }
-              ]
+            "url": "https://bluebutton.cms.gov/resources/variables/esrd_ind",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/esrd_ind",
+              "code": "0",
+              "display": "the beneficiary does not have ESRD"
+            }
+          },
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/a_trm_cd",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/a_trm_cd",
+              "code": "0",
+              "display": "Not Terminated"
             }
           }
         ],
@@ -514,28 +504,34 @@ The above URL returns the synthetic beneficiary's Coverage information as an [Ex
           ]
         },
         "beneficiary": {
-          "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
+          "reference": "Patient/20140000010000"
         },
         "grouping": {
           "subGroup": "Medicare",
-          "subPlan": "Part A"
+          "subPlan": "Part A"}
         }
       }
     },
     {
-      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage
-        /part-b-20140000008325", "resource": {
+      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/part-b-20140000010000",
+      "resource": {
         "resourceType": "Coverage",
-        "id": "part-b-20140000008325",
+        "id": "part-b-20140000010000",
         "extension": [
           {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt", "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt",
-                  "code": "10"
-                }
-              ]
+            "url": "https://bluebutton.cms.gov/resources/variables/ms_cd",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/ms_cd",
+              "code": "10",
+              "display": "Aged without end-stage renal disease (ESRD)"
+            }
+          },
+          {
+            "url": "https://bluebutton.cms.gov/resources/variables/b_trm_cd",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/b_trm_cd",
+              "code": "0",
+              "display": "Not Terminated"
             }
           }
         ],
@@ -549,7 +545,7 @@ The above URL returns the synthetic beneficiary's Coverage information as an [Ex
           ]
         },
         "beneficiary": {
-          "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
+          "reference": "Patient/20140000010000"
         },
         "grouping": {
           "subGroup": "Medicare",
@@ -558,23 +554,21 @@ The above URL returns the synthetic beneficiary's Coverage information as an [Ex
       }
     },
     {
-      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/part-d-20140000008325",
+      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/part-d-20140000010000",
       "resource": {
         "resourceType": "Coverage",
-        "id": "part-d-20140000008325",
+        "id": "part-d-20140000010000",
         "extension": [
           {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt",
-                  "code": "10"
-                }
-              ]
+            "url": "https://bluebutton.cms.gov/resources/variables/ms_cd",
+            "valueCoding": {
+              "system": "https://bluebutton.cms.gov/resources/variables/ms_cd",
+              "code": "10",
+              "display": "Aged without end-stage renal disease (ESRD)"
             }
           }
         ],
+        "status": "active",
         "type": {
           "coding": [
             {
@@ -584,7 +578,7 @@ The above URL returns the synthetic beneficiary's Coverage information as an [Ex
           ]
         },
         "beneficiary": {
-          "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
+          "reference": "Patient/20140000010000"
         },
         "grouping": {
           "subGroup": "Medicare",
@@ -593,8 +587,7 @@ The above URL returns the synthetic beneficiary's Coverage information as an [Ex
       }
     }
   ]
-}
-</pre>
+}</pre>
 
 ## FHIR Data Model
 
