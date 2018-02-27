@@ -21,10 +21,10 @@ layout: default
 {% endif %}
 
 {% if page.value_groups.size > 0 %}
+<!-- This field is not always present: -->
 <h2>Values</h2>
 This variable is coded, and will contain one of the following values.
 
-<!-- This field is not always present: -->
 {% for value_group in page.value_groups %}
 
 <!-- This field is not always present: -->
@@ -53,7 +53,6 @@ This variable is coded, and will contain one of the following values.
 </table>
 
 {% endfor %}
-
 {% endif %}
 
 <h2>Other Info</h2>
