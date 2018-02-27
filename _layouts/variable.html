@@ -4,11 +4,13 @@ layout: default
 <h1>Variable: {{ page.id | upcase }}</h1>
 <p>{{ page.label }}</p>
 
-<h2>Description</h2>
+{% if page.description %}
 <!-- This field is not always present: -->
+<h2>Description</h2>
 {% for paragraph in page.description %}
 <p>{{ paragraph }}</p>
 {% endfor %}
+{% endif %}
 
 {% if page.comment %}
 <!-- This field is not always present: -->
