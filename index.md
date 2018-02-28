@@ -1,6 +1,6 @@
 ---
 layout: home
-title:  "Blue Button API"
+title:  "Blue Button 2.0"
 date:   2017-10-30 09:21:12 -0500
 description: A developer-friendly, standards-based API that enables Medicare beneficiaries to connect their claims data to applications, services and research programs they trust.
 landing-page: live
@@ -27,20 +27,23 @@ ctas:
 
 ## Overview
 
-The Blue Button API contains four years of Medicare Part A, B and D data for 53 million Medicare beneficiaries.
+Blue Button 2.0 is an API that contains four years of Medicare Part A, B and D data for 53 million Medicare beneficiaries.
+
 This data reveals a variety of information about a beneficiary’s health, including type of Medicare coverage, drug prescriptions, primary care treatment and cost. Beneficiaries also have full control over how their data can be used and by whom, with identity and authorization controlled by MyMedicare.gov.
 
-The Blue Button API uses the [HL7 FHIR standard](https://www.hl7.org/fhir/) for beneficiary data and the [OAuth 2.0 standard](https://oauth.net/2/) for beneficiary authorization.
+Blue Button 2.0 uses the [HL7 FHIR standard](https://www.hl7.org/fhir/) for beneficiary data and the [OAuth 2.0 standard](https://oauth.net/2/) for beneficiary authorization.
 
 ---
 
 ## Getting started
 
-Documentation for the Blue Button API is available in the Blue Button developer portal. [View API Documentation](https://cmsgov.github.io/bluebutton-developer-help/)
+You can get started on building your integration with the Blue Button API by following these steps:
 
-CMS is inviting developers to provide feedback on the new CMS Blue Button API for the purpose of improved development. [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite)
-
-Participants in the Developer Preview can register an application and build integrations with their software using synthetic claims data. [Register an application](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login)
+- [Read the Developer Docs](/developers)
+- [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/create)
+- [Register Your Application](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login)
+- [Request Production API Access](https://bluebutton.cms.gov/developers/#production-api-access)
+- [Ask a Question](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api)
 
 ---
 
@@ -68,4 +71,4 @@ A health application can aggregate data into a health dashboard for beneficiarie
 
 ## Support
 
-The Blue Button API Google Group is where developers can ask questions, find answers, leave feedback and share experiences using the Blue Button API. [Visit the Blue Button Google Group.](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api)
+The Blue Button 2.0 Google Group is where developers can ask questions, find answers, leave feedback and share experiences using the API. [Visit the Blue Button Google Group.](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api)
