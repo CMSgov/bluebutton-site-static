@@ -4,17 +4,27 @@ layout: default
 <h1>Variable: {{ page.id | upcase }}</h1>
 <p>{{ page.label }}</p>
 
-<h2>Description</h2>
+{% if page.description %}
 <!-- This field is not always present: -->
+<h2>Description</h2>
 {% for paragraph in page.description %}
 <p>{{ paragraph }}</p>
 {% endfor %}
+{% endif %}
+
+{% if page.comment %}
+<!-- This field is not always present: -->
+<h3>Comment</h3>
+{% for paragraph in page.comment %}
+<p>{{ paragraph }}</p>
+{% endfor %}
+{% endif %}
 
 {% if page.value_groups.size > 0 %}
+<!-- This field is not always present: -->
 <h2>Values</h2>
 This variable is coded, and will contain one of the following values.
 
-<!-- This field is not always present: -->
 {% for value_group in page.value_groups %}
 
 <!-- This field is not always present: -->
@@ -43,7 +53,6 @@ This variable is coded, and will contain one of the following values.
 </table>
 
 {% endfor %}
-
 {% endif %}
 
 <h2>Other Info</h2>

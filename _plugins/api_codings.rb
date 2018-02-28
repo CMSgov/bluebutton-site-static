@@ -75,7 +75,7 @@ module BlueButtonApi
         value_group['description'] = parse_paragraphs(value_group_xml.xpath('.//description').first)
 
         # Each <valueGroup/> can have multiple <value/> entries.
-	value_group['values'] = []
+        value_group['values'] = []
         value_group_xml.xpath('.//value').each do |value_xml|
           value = {}
 
