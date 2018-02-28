@@ -3,12 +3,13 @@
   <div class="ds-l-container ds-u-display--flex ds-u-justify-content--between ds-u-align-items--center">
     <div class="ds-u-justify-content--start ds-u-display--flex">
       <nav class="other-main-nav ds-u-font-weight--bold">
-        <ul>
-          <li aria-label="CMS Blue Button API logo">
+        <h5 class="sr-only" id="desktop-nav">Main site navigation</h5>
+        <ul aria-labelledby="desktop-nav">
+          <li aria-label="CMS Blue Button 2.0 logo">
             {% include blue-button-logo.svg %}
-            <a href="{{ "/blue button api" | relative_url }}" > </a>
+            <a href="{{ "/blue button 2.0" | relative_url }}" > </a>
           </li>
-    </ul>
+        </ul>
     </div>
     <div class="ds-u-justify-content--end ds-u-display--flex">
       <nav class="main-nav ds-u-font-weight--bold">
