@@ -533,9 +533,9 @@ The API also has historical claims data going back four years.  All of these fac
 
 ## Try the API
 
-To join the Developer Preview, register a sample application and retrieve synthetic data for a sample Patient ID by calling the API, follow these five steps:
+To join the Developer Sandbox, register a sample application and retrieve synthetic data for a sample Patient ID by calling the API, follow these four steps:
 
-**Step 1:** [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/create) and register a sample application
+**Step 1:** [Join the Developer Sandbox](https://sandbox.bluebutton.cms.gov/v1/accounts/create) and register a sample application
 
 Click "Application Registration" to register a new sample application and get a Client ID and Secret
 

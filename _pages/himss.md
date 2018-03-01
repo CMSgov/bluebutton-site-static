@@ -16,7 +16,7 @@ ctas:
     title: View the documentation
     link: /developers
   -
-    title: Sign up for the Developer Preview
+    title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
 
 ---
