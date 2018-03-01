@@ -17,8 +17,8 @@ ctas:
     title: View the documentation
     link: /developers
   -
-    title: Sign up for the Developer Preview
-    link: https://sandbox.bluebutton.cms.gov/v1/accounts/request-invite
+    title: Sign up for the Developer Sandbox
+    link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
   -
     title: Register an application
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login
@@ -40,7 +40,7 @@ Blue Button 2.0 uses the [HL7 FHIR standard](https://www.hl7.org/fhir/) for bene
 You can get started on building your integration with the Blue Button API by following these steps:
 
 - [Read the Developer Docs](/developers)
-- [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/create)
+- [Join the Developer Sandbox](https://sandbox.bluebutton.cms.gov/v1/accounts/create)
 - [Register Your Application](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login)
 - [Request Production API Access](https://bluebutton.cms.gov/developers/#production-api-access)
 - [Ask a Question](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api)

@@ -533,9 +533,9 @@ The API also has historical claims data going back four years.  All of these fac
 
 ## Try the API
 
-To join the Developer Preview, register a sample application and retrieve synthetic data for a sample Patient ID by calling the API, follow these four steps:
+To join the Developer Sandbox, register a sample application and retrieve synthetic data for a sample Patient ID by calling the API, follow these four steps:
 
-**Step 1:** [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/create) and register a sample application
+**Step 1:** [Join the Developer Sandbox](https://sandbox.bluebutton.cms.gov/v1/accounts/create) and register a sample application
 
 Click "Application Registration" to register a new sample application and get a Client ID and Secret
 
@@ -549,7 +549,7 @@ You can generate an access token for synthetic Patient 20140000008325 and sample
 2.  Click on Test Client to begin
 3.	Click "sample Authorization flow"
 4.	Click the link to authorize. This will start the authorization flow to TestApp
-5.	Login to your Blue Button Developer Preview Account (click here if you need to Join the Developer Preview)
+5.	Login to your Blue Button Developer Sandbox Account (click here if you need to Join the Developer Sandbox)
 6.	Agree to the Personal Health Information Sharing disclaimer (sample)
 7.	Review the App Endorsements and click to accept risks (sample)
 8.	Review the permissions TestApp is asking for and approve (sample)
