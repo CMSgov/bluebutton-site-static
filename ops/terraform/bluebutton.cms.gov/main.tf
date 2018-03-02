@@ -292,3 +292,55 @@ resource "aws_autoscaling_group" "main" {
     create_before_destroy = true
   }
 }
+
+resource "aws_autoscaling_policy" "high-cpu" {
+  name                   = "${var.app}-${var.env}-high-cpu-scaleup"
+  scaling_adjustment     = 2
+  adjustment_type        = "ChangeInCapacity"
+  cooldown               = 300
+  autoscaling_group_name = "${aws_autoscaling_group.main.name}"
+}
+
+resource "aws_cloudwatch_metric_alarm" "high-cpu" {
+  alarm_name          = "${var.app}-${var.env}-high-cpu"
+  comparison_operator = "GreaterThanOrEqualToThreshold"
+  evaluation_periods  = "2"
+  metric_name         = "CPUUtilization"
+  namespace           = "AWS/EC2"
+  period              = "120"
+  statistic           = "Average"
+  threshold           = "60"
+
+  dimensions {
+    AutoScalingGroupName = "${aws_autoscaling_group.main.name}"
+  }
+
+  alarm_description = "CPU usage for ${aws_autoscaling_group.main.name} ASG"
+  alarm_actions     = ["${aws_autoscaling_policy.high-cpu.arn}"]
+}
+
+resource "aws_autoscaling_policy" "low-cpu" {
+  name                   = "${var.app}-${var.env}-low-cpu-scaledown"
+  scaling_adjustment     = -1
+  adjustment_type        = "ChangeInCapacity"
+  cooldown               = 300
+  autoscaling_group_name = "${aws_autoscaling_group.main.name}"
+}
+
+resource "aws_cloudwatch_metric_alarm" "low-cpu" {
+  alarm_name          = "${var.app}-${var.env}-low-cpu"
+  comparison_operator = "LessThanOrEqualToThreshold"
+  evaluation_periods  = "2"
+  metric_name         = "CPUUtilization"
+  namespace           = "AWS/EC2"
+  period              = "120"
+  statistic           = "Average"
+  threshold           = "20"
+
+  dimensions {
+    AutoScalingGroupName = "${aws_autoscaling_group.main.name}"
+  }
+
+  alarm_description = "CPU usage for ${aws_autoscaling_group.main.name} ASG"
+  alarm_actions     = ["${aws_autoscaling_policy.low-cpu.arn}"]
+}
