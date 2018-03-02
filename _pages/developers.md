@@ -605,12 +605,12 @@ First, you must register an application in the Blue Button Developer Sandbox and
 
 You also need to agree to the CMS Blue Button API Terms of Use when registering your app.
 
-Next, the following criteria needs to be met and verified by the CMS Blue Button API team in a meeting with your team:
+Next, the following criteria needs to be met and verified by the CMS Blue Button API team in a meeting with your organization:
 
 - You are a US based company
 - You have a working app or website that can be demoed to the CMS Blue Button API team
 - Your app links to a Privacy statement or Terms of Use that explains to a beneficiary in plain language how you will use their data and how they can cancel their account
-- Your app must serve a Medicare population (obviously)
+- Your app must serve a Medicare population except in certain general research scenarios (obviously)
 - You must articulate your business model and describe the value your app provides a beneficiary
 - You must demonstrate how beneficiary data will be protected within your app
 
