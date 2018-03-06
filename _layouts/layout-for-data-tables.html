@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head-for-data-tables.html %}
+
+  <body class="ds-u-fill--gray-lightest">
+    <a class="ds-c-skip-nav" href="#main">Skip to main content</a>
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    {% include mobile-navigation.html %}
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+    <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+  </body>
+
+</html>

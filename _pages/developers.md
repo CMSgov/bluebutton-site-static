@@ -533,9 +533,9 @@ The API also has historical claims data going back four years.  All of these fac
 
 ## Try the API
 
-To join the Developer Preview, register a sample application and retrieve synthetic data for a sample Patient ID by calling the API, follow these four steps:
+To join the Developer Sandbox, register a sample application and retrieve synthetic data for a sample Patient ID by calling the API, follow these four steps:
 
-**Step 1:** [Join the Developer Preview](https://sandbox.bluebutton.cms.gov/v1/accounts/create) and register a sample application
+**Step 1:** [Join the Developer Sandbox](https://sandbox.bluebutton.cms.gov/v1/accounts/create) and register a sample application
 
 Click "Application Registration" to register a new sample application and get a Client ID and Secret
 
@@ -545,15 +545,9 @@ To test out the Blue Button API, you must first generate a sample token that rep
 
 You can generate an access token for synthetic Patient 20140000008325 and sample Application TestApp by following these steps:
 
-1.  Login to the developer portal
-2.  Click on Test Client to begin
-3.	Click "sample Authorization flow"
-4.	Click the link to authorize. This will start the authorization flow to TestApp
-5.	Login to your Blue Button Developer Preview Account (click here if you need to Join the Developer Preview)
-6.	Agree to the Personal Health Information Sharing disclaimer (sample)
-7.	Review the App Endorsements and click to accept risks (sample)
-8.	Review the permissions TestApp is asking for and approve (sample)
-9.	You will see a JSON document containing your access token and other information
+1.  Login to the developer portal, click "Test Client" to begin and click "sample Authorization flow"
+2.	Click the link to authorize. This will start the authorization flow to TestApp
+3.	Login to your Blue Button Developer Preview Account (click here if you need to Join the Developer Preview) and you will see a JSON document containing your access token and other information
 
 You can now use your access token wherever "YOUR TOKEN HERE" is referenced below.
 
@@ -593,7 +587,7 @@ In order to access the full synthetic dataset, you can do the following:
 
 ## Production API Access
 
-Once you have successfully integrated with the CMS Blue Button API and are ready to go live, you can request access to the CMS Blue Button Production API through the Developer Portal.
+Once you have successfully integrated with the CMS Blue Button API and are ready to go live, you can request access to the CMS Blue Button Production API by emailing bluebuttonapi@cms.hhs.gov.
 
 **How long does it take to get my app approved?**
 
@@ -611,16 +605,20 @@ First, you must register an application in the Blue Button Developer Sandbox and
 
 You also need to agree to the CMS Blue Button API Terms of Use when registering your app.
 
-Next, the following criteria needs to be met and verified by the CMS Blue Button API team:
+Next, the following criteria needs to be met and verified by the CMS Blue Button API team in a meeting with your organization:
 
 - You are a US based company
 - You have a working app or website that can be demoed to the CMS Blue Button API team
 - Your app links to a Privacy statement or Terms of Use that explains to a beneficiary in plain language how you will use their data and how they can cancel their account
-- Your app must serve a Medicare population (obviously)
+- Your app must serve a Medicare population except in certain general research scenarios (obviously)
+- You must articulate your business model and describe the value your app provides a beneficiary
+- You must demonstrate how beneficiary data will be protected within your app
 
 **What happens after I am approved?**
 
 You will receive an email from the CMS Blue Button API team notifying you of approval.  You will then receive a new Client ID and Secret for your app in production.  You will use the base URL api.cms.bluebutton.gov instead of sandbox.bluebutton.cms.gov.
+
+You will also agree to a future audit as part of a Production API access renewal process as your app versions update and the Blue Button API evolves.
 
 ---
 

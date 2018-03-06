@@ -1,30 +1,23 @@
 ---
-layout: default
+layout: layout-for-data-tables
 ---
-<h1>Variable: {{ page.id | upcase }}</h1>
+
+<div class="ds-l-container ds-base">
+
+<h1 class="ds-h1">Variable: {{ page.id | upcase }}</h1>
 <p>{{ page.label }}</p>
 
-{% if page.description %}
+<h1 class="ds-h2">Description</h1>
 <!-- This field is not always present: -->
-<h2>Description</h2>
 {% for paragraph in page.description %}
 <p>{{ paragraph }}</p>
 {% endfor %}
-{% endif %}
-
-{% if page.comment %}
-<!-- This field is not always present: -->
-<h3>Comment</h3>
-{% for paragraph in page.comment %}
-<p>{{ paragraph }}</p>
-{% endfor %}
-{% endif %}
 
 {% if page.value_groups.size > 0 %}
-<!-- This field is not always present: -->
-<h2>Values</h2>
-This variable is coded, and will contain one of the following values.
+<h1 class="ds-h2">Values</h1>
+<p>This variable is coded, and will contain one of the following values.</p>
 
+<!-- This field is not always present: -->
 {% for value_group in page.value_groups %}
 
 <!-- This field is not always present: -->
@@ -45,17 +38,20 @@ This variable is coded, and will contain one of the following values.
   <tbody>
     {% for value_entry in value_group['values'] %}
     <tr>
-      <th scope="row"><code>{{ value_entry['code'] }}</code></th>
-      <td>{{ value_entry['description'] }}</td>
+      <th class="{% cycle 'even', 'odd' %}"><code>{{ value_entry['code'] }}</code></th>
+      <td class="{% cycle 'odd', 'even' %}">{{ value_entry['description'] }}</td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
 
+
+
 {% endfor %}
+
 {% endif %}
 
-<h2>Other Info</h2>
+<h1 class="ds-h2">Other Info</h1>
 <p>Some additional information on this variable:</p>
 <ul>
 	<!-- This field is not always present: -->
@@ -69,3 +65,5 @@ This variable is coded, and will contain one of the following values.
 	<!-- This field is not always present: -->
 	<li><strong>Value Format:</strong> {{ page['value_format'] }}</li>
 </ul>
+
+</div>
