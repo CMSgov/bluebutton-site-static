@@ -1,27 +1,13 @@
 ---
-layout: developers
-title: "Claim Group IDs"
-date: 2018-03-01 13:00:00 -0500
-description:
-landing-page: live
-gradient: "blueberry-lime-background"
-subnav-link-gradient: "blueberry-lime-link"
-badge: api
-permalink: "/resources/identifier/claim-group/"
-sections:
-  - Usage
-  - Background
-ctas:
-  -
-    title: View the documentation
-    link: /developers
-  -
-    title: Sign up for the Developer Preview
-    link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+layout: layout-for-data-tables
+title: 'Claim Group IDs'
+permalink: '/resources/identifier/claim-group/'
 ---
+# Identifier System: Claim Group IDs
 
 ## Usage
 
+**System URI**: `https://bluebutton.cms.gov/resources/identifier/claim-group`
 **Appears In:** <code><a href="http://hl7.org/fhir/STU3/explanationofbenefit-definitions.html#ExplanationOfBenefit.identifier">ExplanationOfBenefit.identifier</a></code>
 
 This FHIR <code><a href="http://hl7.org/fhir/STU3/datatypes.html#identifier">Identifier</a>.system</code> value is used for `Identifier`s that designate a particular claim/event's Claim Group ID. Such `Identifier`s will be present for all `ExplanationOfBenefit` resources returned by the API.
