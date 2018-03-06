@@ -310,6 +310,10 @@ header {
   border: 3px solid #333 !important;
 }
 
+.ds-c-table thead, .ds-c-table thead a {
+  color: white;
+}
+
 .ds-c-table th  {
   padding: 1.0rem;
 }
