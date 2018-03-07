@@ -2,7 +2,7 @@
 layout: developers
 title:  "Blue Button API Docs"
 date:   2017-10-30 09:21:12 -0500
-description:
+description: A developer-friendly, standards-based API that enables Medicare beneficiaries to connect their claims data to the applications, services and research programs they trust.
 landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
@@ -40,39 +40,19 @@ The CMS Blue Button API:
 
 ## Authorization
 
-To use the Blue Button OAuth 2
-a developer must
-[register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/).
-A registered application is given
-a client ID and a client secret.
-The secret should only be used
-if it can be kept confidential,
-such as communication
-between your sever and the Blue Button API.
-Otherwise
-the [Client Application Flow](#client-application-flow) may be used.
+To use the Blue Button OAuth 2 a developer must [register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/).
+
+A registered application is given a client ID and a client secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button API. Otherwise the [Client Application Flow](#client-application-flow) may be used.
 
 ### Web Application Flow
 
-To use this flow
-your application should
-be registered with
-`Client Type` set to `confidential`
-and
+To use this flow your application should be registered with `Client Type` set to `confidential` and
 `Grant Type` set to `authorization-code`.
 
 #### Request authorization from user
 
-To allow
-a user to authorize
-your application,
-direct them to Blue Button's `authorize` endpoint.
-The request must include
-the `response_type` set to `code`,
-your application's client_id, and your application's redirect_uri.
-An optional `state` field
-that your application can use to identify
-the authorization request is recommended.
+To allow a user to authorize your application, direct them to Blue Button's `authorize` endpoint.
+The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri. An optional `state` field that your application can use to identify the authorization request is recommended.
 
 ```
 https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2

@@ -2,7 +2,7 @@
 layout: home
 title:  "Blue Button 2.0"
 date:   2017-10-30 09:21:12 -0500
-description: A developer-friendly, standards-based API that enables Medicare beneficiaries to connect their claims data to applications, services and research programs they trust.
+description: A developer-friendly, standards-based API that enables Medicare beneficiaries to connect their claims data to the applications, services and research programs they trust.
 landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
@@ -27,7 +27,7 @@ ctas:
 
 ## Overview
 
-Blue Button 2.0 is an API that contains four years of Medicare Part A, B and D data for 53 million Medicare beneficiaries.
+Blue Button 2.0 from CMS is an API that contains four years of Medicare Part A, B and D data for 53 million Medicare beneficiaries.
 
 This data reveals a variety of information about a beneficiary’s health, including type of Medicare coverage, drug prescriptions, primary care treatment and cost. Beneficiaries also have full control over how their data can be used and by whom, with identity and authorization controlled by MyMedicare.gov.
 
