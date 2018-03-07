@@ -7,17 +7,27 @@ layout: layout-for-data-tables
 <h1 class="ds-h1">Variable: {{ page.id | upcase }}</h1>
 <p>{{ page.label }}</p>
 
-<h1 class="ds-h2">Description</h1>
+{% if page.description %}
 <!-- This field is not always present: -->
+<h1 class="ds-h2">Description</h1>
 {% for paragraph in page.description %}
 <p>{{ paragraph }}</p>
 {% endfor %}
+{% endif %}
+
+{% if page.comment %}
+<!-- This field is not always present: -->
+<h3>Comment</h3>
+{% for paragraph in page.comment %}
+<p>{{ paragraph }}</p>
+{% endfor %}
+{% endif %}
 
 {% if page.value_groups.size > 0 %}
+<!-- This field is not always present: -->
 <h1 class="ds-h2">Values</h1>
 <p>This variable is coded, and will contain one of the following values.</p>
 
-<!-- This field is not always present: -->
 {% for value_group in page.value_groups %}
 
 <!-- This field is not always present: -->
@@ -45,10 +55,7 @@ layout: layout-for-data-tables
   </tbody>
 </table>
 
-
-
 {% endfor %}
-
 {% endif %}
 
 <h1 class="ds-h2">Other Info</h1>
