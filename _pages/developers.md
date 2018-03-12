@@ -162,18 +162,20 @@ Base Request URL:
 
 <pre>https://sandbox.bluebutton.cms.gov</pre>
 
-Resources:
+FHIR Resources:
 
-- Get all Explanation of Benefit records for an individual beneficiary
-- Get all Patient records for an individual beneficiary
-- Get all Coverage information for an individual beneficiary
+- Explanation of Benefit
+- Patient
+- Coverage
+
+UserInfo
 - Get User Profile from an Authorization Token
 
 As a security measure the date of birth, SSN, and HICN will not be provided by the CMS Blue Button API.
 
 We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension) in our API responses.
 
-**Get all Explanation of Benefit Records for an individual beneficiary**
+**Explanation of Benefit FHIR Resource**
 
 <pre>/v1/fhir/ExplanationOfBenefit/?patient=[fhir_id]</pre>
 
@@ -186,7 +188,6 @@ That API call will return an Explanation of Benefit that contains many FHIR reso
 [Learn more about the Explanation of Benefits FHIR resource in Blue Button](/eob)
 
 <pre>
-
 {
     "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/carrier-22011027731",
     "resource": {
@@ -220,227 +221,120 @@ That API call will return an Explanation of Benefit that contains many FHIR reso
         ]
 
         ...this is only a subset of the entire output...
-
 </pre>
 
-**Get all Patient Records for an individual beneficiary**
+**Patient FHIR Resource**
 
 <pre><code>HTTP GET /v1/fhir/Patient/[fhir_id]</code></pre>
 
-<p>The above URL returns the beneficiary's personal health information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html).  This information is mostly contact information, not medical data.</p>
+The above URL returns the beneficiary's demographics and other administrative information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html).  This information is mostly contact information, not medical data.
 
 <pre><code>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/20140000008325"</code></pre>
 
-<pre><code>{
-  "resourceType": "Patient",
-  "id": "20140000008325",
-  "extension": [
+<pre>
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/us-core-race",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/race.txt",
-            "code": "1"
-          }
+        "resourceType": "Patient",
+        "id": "20140000008325",
+        "extension": [
+            {
+                "url": "https://bluebutton.cms.gov/resources/variables/race",
+                "valueCoding": {
+                    "system": "https://bluebutton.cms.gov/resources/variables/race",
+                    "code": "1",
+                    "display": "White"
+                }
+            }
+        ],
+        "identifier": [
+            {
+                "system": "http://bluebutton.cms.hhs.gov/identifier#bene_id",
+                "value": "20140000008325"
+            },
+            {
+                "system": "http://bluebutton.cms.hhs.gov/identifier#hicnHash",
+                "value": "2025fbc612a884853f0c245e686780bf748e5652360ecd7430575491f4e018c5"
+            }
+        ],
+        "name": [
+            {
+                "use": "usual",
+                "family": "Doe",
+                "given": [
+                    "Jane",
+                    "X"
+                ]
+            }
+        ],
+        "gender": "unknown",
+        "birthDate": "2014-06-01",
+        "address": [
+            {
+                "district": "999",
+                "state": "15",
+                "postalCode": "99999"
+            }
         ]
-      }
     }
-  ],
-  "identifier": [
-    {
-      "system": "http://bluebutton.cms.hhs.gov/identifier#bene_id",
-      "value": "20140000008325"
-    },
-    {
-      "system": "http://bluebutton.cms.hhs.gov/identifier#hicnHash",
-      "value": "2025fbc612a884853f0c245e686780bf748e5652360ecd7430575491f4e018c5"
-    }
-  ],
-  "name": [
-    {
-      "use": "usual",
-      "family": "Doe",
-      "given": ["Jane", "X"]
-    }
-  ],
-  "gender": "unknown",
-  "birthDate": "2014-06-01",
-  "address": [
-    {
-      "district": "999",
-      "state": "15",
-      "postalCode": "99999"
-    }
-  ]
-}</code>
 </pre>
 
-**Get all Coverage Information for an Individual Beneficiary**
+[Download a sample Patient FHIR Resource](/sample-patient-entry.json)
+
+**Coverage FHIR Resource**
 
 <pre>HTTP GET /v1/fhir/Coverage/?beneficiary=[fhir_id]</pre>
 
-The above URL returns the beneficiary's Coverage information as an [ExplanationOfBenefit FHIR Resource.](http://hl7.org/fhir/explanationofbenefit.html)
+The above URL returns the beneficiary's Coverage information as an [Coverage FHIR Resource.](http://hl7.org/fhir/coverage.html)
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?beneficiary=20140000008325"
 </pre>
 
 <pre>
+<code>
 {
-  "resourceType": "Bundle",
-  "id": "28d26ab6-2043-4afd-8c9a-835c0ff3e179",
-  "meta": {
-    "lastUpdated": "2017-12-20T10:21:08.565-05:00"
-  },
-  "type": "searchset",
-  "total": 3,
-  "link": [
-    {
-      "relation": "self",
-      "url": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?_format=application%2Fjson%2Bfhir&beneficiary=Patient%2F20140000008325"
-    }
-  ],
-  "entry": [
-    {
-      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/part-a-20140000008325", "resource": {
-        "resourceType": "Coverage",
-        "id": "part-a-20140000008325",
-        "extension": [
+  "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/part-a-20140000008325",
+  "resource": {
+      "resourceType": "Coverage",
+      "id": "part-a-20140000008325",
+      "extension": [
           {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt", "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt",
-                  "code": "10"
-                }
-              ]
-            }
+              "url": "https://bluebutton.cms.gov/resources/variables/ms_cd",
+              "valueCoding": {
+                  "system": "https://bluebutton.cms.gov/resources/variables/ms_cd",
+                  "code": "10",
+                  "display": "Aged without end-stage renal disease (ESRD)"
+              }
           },
           {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/orec.txt",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/orec.txt",
-                  "code": "0"
-                }
-              ]
-            }
+              "url": "https://bluebutton.cms.gov/resources/variables/orec",
+              "valueCoding": {
+                  "system": "https://bluebutton.cms.gov/resources/variables/orec",
+                  "code": "0",
+                  "display": "Old age and survivor’s insurance (OASI)"
+              }
           },
           {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/crec.txt",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/crec.txt",
-                  "code": "0"
-                }
-              ]
-            }
+              "url": "https://bluebutton.cms.gov/resources/variables/esrd_ind",
+              "valueCoding": {
+                  "system": "https://bluebutton.cms.gov/resources/variables/esrd_ind",
+                  "code": "0",
+                  "display": "the beneficiary does not have ESRD"
+              }
           },
           {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/esrd_ind.txt",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/esrd_ind.txt",
-                  "code": "0"
-                }
-              ]
-            }
+              "url": "https://bluebutton.cms.gov/resources/variables/a_trm_cd",
+              "valueCoding": {
+                  "system": "https://bluebutton.cms.gov/resources/variables/a_trm_cd",
+                  "code": "0",
+                  "display": "Not Terminated"
+              }
           }
-        ],
-        "status": "active",
-        "type": {
-          "coding": [
-            {
-              "system": "Medicare",
-              "code": "Part A"
-            }
-          ]
-        },
-        "beneficiary": {
-          "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
-        },
-        "grouping": {
-          "subGroup": "Medicare",
-          "subPlan": "Part A"
-        }
-      }
-    },
-    {
-      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage
-        /part-b-20140000008325", "resource": {
-        "resourceType": "Coverage",
-        "id": "part-b-20140000008325",
-        "extension": [
-          {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt", "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt",
-                  "code": "10"
-                }
-              ]
-            }
-          }
-        ],
-        "status": "active",
-        "type": {
-          "coding": [
-            {
-              "system": "Medicare",
-              "code": "Part B"
-            }
-          ]
-        },
-        "beneficiary": {
-          "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
-        },
-        "grouping": {
-          "subGroup": "Medicare",
-          "subPlan": "Part B"
-        }
-      }
-    },
-    {
-      "fullUrl": "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/part-d-20140000008325",
-      "resource": {
-        "resourceType": "Coverage",
-        "id": "part-d-20140000008325",
-        "extension": [
-          {
-            "url": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ms_cd.txt",
-                  "code": "10"
-                }
-              ]
-            }
-          }
-        ],
-        "type": {
-          "coding": [
-            {
-              "system": "Medicare",
-              "code": "Part D"
-            }
-          ]
-        },
-        "beneficiary": {
-          "reference": "Patient?identifier=CCW.BENE_ID|20140000008325"
-        },
-        "grouping": {
-          "subGroup": "Medicare",
-          "subPlan": "Part D"
-        }
-      }
-    }
-  ]
-}
+      ]
+
+    ...this is only a subset of the entire output...
+</code>
 </pre>
+
+[Download a sample Coverage FHIR Resource](/sample-coverage-entry.json)
 
 **Get User Profile for an Authorization Token**
 
