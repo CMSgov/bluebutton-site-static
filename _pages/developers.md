@@ -421,7 +421,7 @@ You can generate an access token for synthetic Patient 20140000008325 and sample
 
 1.  Login to the developer portal, click "Test Client" to begin and click "sample Authorization flow"
 2.	Click the link to authorize. This will start the authorization flow to TestApp
-3.	Login to your Blue Button Developer Preview Account (click here if you need to Join the Developer Preview) and you will see a JSON document containing your access token and other information
+3.	Login to your Blue Button Developer Sandbox Account (click [here](https://sandbox.bluebutton.cms.gov/v1/accounts/create) if you need to Join the Developer Sandbox) and you will see a JSON document containing your access token and other information
 
 You can now use your access token wherever "YOUR TOKEN HERE" is referenced below.
 
