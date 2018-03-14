@@ -294,7 +294,7 @@ resource "aws_autoscaling_group" "main" {
 }
 
 resource "aws_autoscaling_policy" "high-cpu" {
-  name                   = "${var.app}-${var.env}-high-cpu-scaleup"
+  name                   = "${var.app}-static-${var.env}-high-cpu-scaleup"
   scaling_adjustment     = 2
   adjustment_type        = "ChangeInCapacity"
   cooldown               = 300
@@ -302,7 +302,7 @@ resource "aws_autoscaling_policy" "high-cpu" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "high-cpu" {
-  alarm_name          = "${var.app}-${var.env}-high-cpu"
+  alarm_name          = "${var.app}-static-${var.env}-high-cpu"
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = "2"
   metric_name         = "CPUUtilization"
@@ -320,7 +320,7 @@ resource "aws_cloudwatch_metric_alarm" "high-cpu" {
 }
 
 resource "aws_autoscaling_policy" "low-cpu" {
-  name                   = "${var.app}-${var.env}-low-cpu-scaledown"
+  name                   = "${var.app}-static-${var.env}-low-cpu-scaledown"
   scaling_adjustment     = -1
   adjustment_type        = "ChangeInCapacity"
   cooldown               = 300
@@ -328,7 +328,7 @@ resource "aws_autoscaling_policy" "low-cpu" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "low-cpu" {
-  alarm_name          = "${var.app}-${var.env}-low-cpu"
+  alarm_name          = "${var.app}-static-${var.env}-low-cpu"
   comparison_operator = "LessThanOrEqualToThreshold"
   evaluation_periods  = "2"
   metric_name         = "CPUUtilization"
