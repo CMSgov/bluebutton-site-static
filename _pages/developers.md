@@ -14,7 +14,7 @@ sections:
   - Core Resources
   - FHIR Data Model
   - Try the API
-  - Meet "Jack"
+  - Sample Beneficiaries
   - Production API Access
   - Developer Guidelines
 ctas:
@@ -459,6 +459,85 @@ In order to access the full synthetic dataset, you can do the following:
 
 ---
 
+## Sample Beneficiaries
+
+When getting started with the Blue Button API, it can be overwhelming to understand all of the coding systems and types of data that can be found in the Explanation of Benefit FHIR resource.
+
+Below are some hypothetical Beneficiaries that gives you a sense of what is found in claims data.
+
+**Meet Lucille**
+
+Lucille is an 70-year old female. She has non-small cell lung cancer. Prior to her diagnosis, Lucille was active and had no significant health issues. She went on daily walks around her neighborhood, did yoga and made a concerted effort to eat healthy. Lucille smoked cigarettes for a few years when she was a teenager, but quit after her father passed away from lung cancer. Her only other family history is mild hypertension on her mother’s side.
+
+Below are some examples you may find in the Explanation of Benefit FHIR resource for Lucille.
+
+Office Visit
+
+<pre>
+  <code>
+    "service": {
+      "coding": [{
+        "system": "https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/index.html",
+        "version": "0",
+        "code": "99215"
+  </code>
+</pre>
+
+Lung Biopsy
+
+<pre>
+  <code>
+    "procedureCodeableConcept": {
+      "coding": [{
+        "system": "http://hl7.org/fhir/sid/icd-9-cm",
+        "code": "3328"
+ </code>
+</pre>
+
+Diagnostic Radiology
+
+<pre>
+  <code>
+    "service": {
+      "coding": [{
+        "system": "https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/index.html",
+        "version": "0",
+        "code": "70553"
+ </code>
+</pre>
+
+Radiation Therapy
+
+<pre>
+  <code>
+    "service": {
+      "coding": [{
+        "system": "https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/index.html",
+        "version": "9",
+        "code": "77263"
+  </code>
+</pre>
+
+Chemo
+
+<pre>
+  <code>
+    "service": {
+      "coding": [{
+        "system": "https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/index.html",
+        "version": "0",
+        "code": "96400"
+  </code>
+</pre>
+
+**Meet Jack**
+
+"Jack" is a hypothetical 70 year-old male with Type 2 Diabetes and high blood pressure. Jack takes daily medication and his Doctor told him he needs to lose weight. He takes Glimepiride to help control his blood sugar and previously was on Metformin.
+
+[Learn more about "Jack" (PDF)](https://cmsgov.github.io/bluebutton-developer-help/Jack-Persona.pdf)
+
+---
+
 ## Production API Access
 
 Once you have successfully integrated with the CMS Blue Button API and are ready to go live, you can request access to the CMS Blue Button Production API by emailing bluebuttonapi@cms.hhs.gov.
@@ -519,13 +598,5 @@ The Blue Button logo and usage guidelines is detailed [here](https://www.healthi
 **Beneficiary Revokes Access**
 
 A beneficiary may revoke access to your application via the MyMedicare.gov website.  When you encounter an invalid token indicating a beneficiary has revoked access, you should make a reasonable attempt to handle that case making it easy for the beneficiary to understand what is happening with their Medicare data.
-
----
-
-## Meet Jack
-
-"Jack" is a hypothetical 70 year-old male with Type 2 Diabetes and high blood pressure. Jack takes daily medication and his Doctor told him he needs to lose weight. He takes Glimepiride to help control his blood sugar and previously was on Metformin.
-
-[Learn more about "Jack" (PDF)](https://cmsgov.github.io/bluebutton-developer-help/Jack-Persona.pdf)
 
 ---
