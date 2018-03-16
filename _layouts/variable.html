@@ -1,6 +1,9 @@
 ---
 layout: layout-for-data-tables
 ---
+
+<div class="ds-l-container ds-base">
+
 <h1 class="ds-h1">Variable: {{ page.id | upcase }}</h1>
 <p>{{ page.label }}</p>
 
@@ -69,3 +72,5 @@ layout: layout-for-data-tables
 	<!-- This field is not always present: -->
 	<li><strong>Value Format:</strong> {{ page['value_format'] }}</li>
 </ul>
+
+</div>
