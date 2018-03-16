@@ -303,31 +303,6 @@ header {
 
 
 //
-// Content, specifically for styling code blocks
-//
-
-pre {
-  background-color: #F3F6FA;
-  border: solid 1px #DCE6F0;
-  padding: 8px;
-  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: .9rem;
-  line-height: 1.45;
-  color: #567482;
-  overflow: auto;
-  white-space: pre-wrap;
-}
-
-code, code a {
-  background-color: #F3F6FA;
-  padding: 2px;
-  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: .9rem;
-  color: #567482;
-}
-
-
-//
 // Data Tables Pages
 //
 
