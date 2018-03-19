@@ -245,7 +245,7 @@ resource "aws_launch_configuration" "app" {
   security_groups = [
     "${aws_security_group.instance_sg.id}",
     "${data.aws_security_group.vpn.id}",
-    "${var.ent_tools_sg_id}"
+    "${var.ent_tools_sg_id}",
   ]
 
   key_name                    = "${var.key_name}"
