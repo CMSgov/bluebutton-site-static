@@ -8,6 +8,8 @@ variable "vpc_id" { }
 
 variable "vpn_sg" { }
 
+variable "ent_tools_sg_id" { }
+
 variable "key_name" { }
 
 variable "ami_id" { }
