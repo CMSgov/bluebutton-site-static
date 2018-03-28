@@ -6,7 +6,7 @@
         <ul>
           <li aria-label="Blue Button 2.0 logo">
             {% include blue-button-logo.svg %}
-            <a href="{{ "/blue button 2.0" | relative_url }}" > </a>
+            <a href="{{ '/blue button 2.0' | relative_url }}" > </a>
           </li>
         </ul>
     </div>
@@ -15,20 +15,24 @@
         <h5 class="sr-only" id="desktop-nav">Main site navigation</h5>
         <ul aria-labelledby="desktop-nav">
           <li>
-            <a href="{{ "/developers" }}" >Documentation</a>
+            <a href="{{ '/developers' }}" >Documentation</a>
           </li>
           <li>
-            <a href="{{ "https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" }}" >Support</a>
+            <a href="{{ 'https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api' }}" >Support</a>
           </li>
-
+          {% if site.posts.size > 0 %}
+            <li>
+              <a href="{{site.posts.first.url}}">Blog</a>
+            </li>
+          {% endif %}
           <li aria-label="icon for login link">
             {% include avatar-mini.svg %}
-            <a href="{{ "https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login" }}" >Login</a>
+            <a href="{{ 'https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login' }}" >Login</a>
           </li>
 
           <li aria-label="icon for sign up link">
             {% include login-icon.svg %}
-            <a href="{{ "https://sandbox.bluebutton.cms.gov/v1/accounts/create" }}" >Sign up</a>
+            <a href="{{ 'https://sandbox.bluebutton.cms.gov/v1/accounts/create' }}" >Sign up</a>
           </li>
 
         </ul>
