@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing a Node.js Client Application 
+title: Installing a node.js client application
 date:   2018-04-01 23:00:00 -0600
 categories: general latest blog
 ctas:
@@ -11,7 +11,6 @@ ctas:
     title: Comments via Google Group
     link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
 ---
-
 # Installing a Node.js client application
 As we prepared to launch our [Production Blue Button 2.0 API](https://bluebutton.cms.gov) we wanted to test the API from the perspective of a third-party client application.  I therefore set about implementing one of our sample clients, in this case an Node.js application developed by a colleague, Brian Glover. You can get the code here:
 
