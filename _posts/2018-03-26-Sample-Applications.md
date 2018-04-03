@@ -2,11 +2,14 @@
 layout: post
 title: Sample client applications 
 date:   2018-03-26 23:22:00 -0600
-categories: general latest blog code
+categories: general latest code
 ctas:
   - 
     title: Home
     link: /
+  - 
+    title: Blog Categories
+    link: /categories/
   -
     title: Comments via Google Group
     link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api

@@ -1,17 +1,20 @@
 ---
 layout: post
-title: Installing a node.js client application
+title: Installing a node.js Client Application
 date:   2018-04-01 23:00:00 -0600
-categories: general latest blog
+categories: code latest
 ctas:
   - 
     title: Home
     link: /
+  - 
+    title: Blog Categories
+    link: /categories/
   -
     title: Comments via Google Group
     link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
 ---
-# Installing a Node.js client application
+
 As we prepared to launch our [Production Blue Button 2.0 API](https://bluebutton.cms.gov) we wanted to test the API from the perspective of a third-party client application.  I therefore set about implementing one of our sample clients, in this case an Node.js application developed by a colleague, Brian Glover. You can get the code here:
 
 [GitHub - CMSgov/bluebutton-sample-client-nodejs](https://github.com/CMSgov/bluebutton-sample-client-nodejs.git)
@@ -107,10 +110,10 @@ If you are running the application against the Blue Button 2.0 Production API th
 
 In order to configure to run against the Production API I needed to accomplish the following additional steps:
 
-	- Install nginx
-	- use Lets Encrypt to issue an SSL certificate for the server 
-	- Configure nginx to act as a proxy for the node application 
-	- Launch the node application with a tunnel parameter
+- Install nginx
+- use Lets Encrypt to issue an SSL certificate for the server 
+- Configure nginx to act as a proxy for the node application 
+- Launch the node application with a tunnel parameter
 
 ### Install nginx
 [Install | NGINX](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
@@ -231,7 +234,3 @@ launch the app with the "tunnel" parameter that is the public url for the server
 ```
 node app.js -t https://consumer.bluebutton.cms.fhirservice.net
 ```
-	-
-
-
-#bluebutton/blog
