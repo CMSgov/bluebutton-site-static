@@ -3,6 +3,7 @@ layout: post
 title: Installing a node.js Client Application
 date:   2018-04-01 23:00:00 -0600
 categories: code latest
+badge: blog
 ctas:
   - 
     title: Home
@@ -14,18 +15,23 @@ ctas:
     title: Comments via Google Group
     link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
 ---
+As we prepared to launch our Production Blue Button 2.0 API The Blue Button API Team wanted to test the API 
+from the perspective of a third-party client application. 
 
-As we prepared to launch our [Production Blue Button 2.0 API](https://bluebutton.cms.gov) we wanted to test the API from the perspective of a third-party client application.  I therefore set about implementing one of our sample clients, in this case an Node.js application developed by a colleague, Brian Glover. You can get the code here:
+You can get the code here:
 
-[GitHub - CMSgov/bluebutton-sample-client-nodejs](https://github.com/CMSgov/bluebutton-sample-client-nodejs.git)
+<a href="https://github.com/CMSgov/bluebutton-sample-client-nodejs.git" target="_blank">GitHub - CMSgov/bluebutton-sample-client-nodejs</a>
 https://github.com/CMSgov/bluebutton-sample-client-nodejs
 
-Installing the application on your own desktop is a quick and easy process and is well documented in the [README](https://github.com/CMSgov/bluebutton-sample-client-nodejs/blob/master/README.md) file.
+Installing the application on your own desktop is a quick and easy process and is well documented in the 
+<a href="https://github.com/CMSgov/bluebutton-sample-client-nodejs/blob/master/README.md" target="_blank">README</a> file.
 
-In oder to run an application you will need node and the node package manager (npm) installed. If you install node you will get npm installed.
+In order to run an application you will need node.js and the node package manager (npm) installed. 
+When you install node you will get npm installed.
 
 ## Red Hat Enterprise Linux
-What I am going to document now are the steps I went through to install this application on a Red Hat Enterprise Linux 7.x server running in AWS.
+Here are the steps to go through to install this application on a Red Hat Enterprise Linux 7.x server running in AWS.
+In this post we are assuming you are comfortable with working in a terminal session on a Linux Server.
 
 After establishing a virtual server, ssh to the server and 
 ```
@@ -34,9 +40,10 @@ yum install -y nodejs
 node -v
 npm -v
 ```
-For help to install on other platforms check out: [Installing Node.js via package manager | Node.js](https://nodejs.org/en/download/package-manager/)
+For help installing on other platforms check out: 
+<a href="https://nodejs.org/en/download/package-manager/" target="_blank">Installing Node.js via package manager</a>.
 
-After installing node the next step is to create a folder for the client code and pull the latest version of the client code from github.
+After installing node the next step is to create a folder for the client code and pull the latest version of that from github.
 
 ```
 cd /var
@@ -46,44 +53,74 @@ git clone https://github.com/ekivemark/bluebutton-sample-client-nodejs.git
 cd bluebutton-sample-client-nodejs/
 ```
  
-The next step is to configure the serverAuth file. This file holds the client id and client secret that is associated with your application in the Blue Button 2.0 API.  It also contains the url for the API.
+The next step is to configure the serverAuth file. This file holds the client id and client secret 
+that is associated with your application in the Blue Button 2.0 API.  
+It also contains the url for the API.
 
 ## Connect to the Blue Button 2.0 Developer Sandbox
-Anyone can register for an account in the Blue Button 2.0 Developer Sandbox. Go to http://bluebutton.cms.gov and click on the "Sign up for the Developer Sandbox" link to create an account. 
+Anyone can register for an account in the Blue Button 2.0 Developer Sandbox. Go to 
+<a href="https://bluebutton.cms.gov" target="_blank">https://bluebutton.cms.gov</a> 
+and click on the "Sign up for the Developer Sandbox" link to create an account. 
 
-You should receive an email notification that your account has been created. Click on the link in the email to validate and activate your account. Then you can login at https://sandbox.bluebutton.cms.gov.
+You should receive an email notification that your account has been created. 
+**Click on the link in the email to validate and activate your account**. 
+Then you can login at 
+<a href="https://sandbox.bluebutton.cms.gov" target="_blank">https://sandbox.bluebutton.cms.gov</a>.
 
-Once you login to your Developer sandbox account you can create an Application.  Click on "[Application Registration](https://sandbox.bluebutton.cms.gov/v1/o/applications/)" and [register a new application](https://sandbox.bluebutton.cms.gov/v1/o/applications/register/).
+Once you login to your Developer sandbox account you can create an application.  
+Click on "[Application Registration](https://sandbox.bluebutton.cms.gov/v1/o/applications/)" and 
+[register a new application](https://sandbox.bluebutton.cms.gov/v1/o/applications/register/).
 
-Give your Application a descriptive name. For example
-"***My Organization's  Claims Analyzer***"
-Client Type: **Confidential**
-Authorization Grant: **Authorization Code**
-The Redirect URIs field is where you can enter multiple URIs separated by a space or on a new line.
-You will need the path to an endpoint where your application will be listening for a request from our API to provide you the results of an authorization request.
+Give your application a descriptive name. For example: 
+"My Organization's  Claims Analyzer"
 
-In the case of this node.js client application the path for the redirect_uri is: */redirect*.
+Set the Client Type and Authorization Grant fields as follows:
+Client Type: "Confidential"
+Authorization Grant: "Authorization Code"
 
-If you want to run your client application communicating to the sandbox environment from your local desktop running on the default port that a node.js  application uses you can use a redirect_uri of:
-*http://localhost:8001/redirect*
-If you are running the application from a server you will want the external ip address or url of the server application. For example:
-*http://10.252.252.252/redirect*
-*http://client.example.com/redirect*
+The Redirect URIs field is where you can enter multiple URIs separated by a space or on a new line / 
+carriage return / Enter key.
 
-Copy the Client id and Client secret values. You will need these to setup your application.
-fill out other fields in the form and click "Save".
+You will need the path to an endpoint where your application will be listening for a request 
+from our API to provide you the results of an authorization request.
 
-Take the Client Id and Client secret and add them to the respective fields in serverAuth.js.
+In the case of the application we are installing the callback path for the redirect_uri is: 
+
+- */redirect*.
+
+If you want to run your client application communicating to the sandbox environment from your local 
+desktop running on the default node.js port you would use a redirect_uri of:
+
+- http://localhost:8001/redirect
+
+If you are running the application from a server you will want the external ip address or url of the 
+server application. For example:
+
+- http://10.252.252.252/redirect
+- http://client.example.com/redirect
+
+Copy the Client Id and Client Secret values. You will need these to setup your application.
+Fill out the other fields in the form and click "Save".
+
+Take the Client Id and Client Secret and add them to the respective fields in serverAuth.js file.
 
 If you are connecting to the Sandbox API the **tokenHost** Blue Button API Endpoint is:
-*https://sandbox.bluebutton.cms.gov*
+
+- https://sandbox.bluebutton.cms.gov
+
 For the Blue Button production API the Endpoint will be:
-*https://api.bluebutton.cms.gov*.
+
+- https://api.bluebutton.cms.gov
 
 edit serverAuth.js:
 
+```
 vi serverAuth.js
+```
 
+Replace the items wrapped with "<>" with the respective data you took from your application registration.
+for example if your application Client Id was *ABCDEF12345* you would replace "<enter client id here>"
+with "ABCDEF12345".
 ```
 // BlueButton Registered Application Credentials
 const credentials = {
@@ -101,22 +138,27 @@ const credentials = {
 exports.credentials = credentials;
 ```
 
+Save the file.
+
 After updating serverAuth.js  you can run the application:
+
 ```
 node app.js
 ```
 
-If you are running the application against the Blue Button 2.0 Production API there are some additional steps that need to be taken because the redirect_uri needs to use a secured connection. ie. *https://*
+If you are running the application against the Blue Button 2.0 Production API there are some additional 
+steps that need to be taken because the redirect_uri needs to use a secured connection. ie. *https://*
 
-In order to configure to run against the Production API I needed to accomplish the following additional steps:
+In order to configure to run against the Production API the following additional steps were necessary:
 
-- Install nginx
-- use Lets Encrypt to issue an SSL certificate for the server 
-- Configure nginx to act as a proxy for the node application 
-- Launch the node application with a tunnel parameter
+- Install the nginx web server
+- use Let's Encrypt to issue an SSL certificate for the server 
+- Configure nginx to act as a proxy for the application 
+- Launch the application with a tunnel parameter
 
 ### Install nginx
-[Install | NGINX](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
+
+<a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/" target="_blank">Install nginx</a>.
 
 ### Get an SSL Certificate from Lets Encrypt
 
@@ -137,16 +179,21 @@ yum install httpd
 sudo service httpd start
 curl http://localhost     # to check apache is running
 ```
- Apache already installed on my test server I used Apache to acquire the Lets Encrypt certificates
+ Apache was already installed on the test server. We used Apache to acquire the Let's Encrypt certificates.
+ 
+ Run the certificate issuing command, replacing the items in (and including) "<>" with your own values:
 
 ```
 cd /root/letsencrypt
 ./acme.sh  --issue  \
-           -d consumer.bluebutton.cms.fhirservice.net  \
+           -d <your_external_server_name>  \
            --apache
 mkdir -p /etc/httpd/certs/ssl/letsencrypt
 ```
 
+Nginx is simpler to configure so we stop Apache and install nginx and transfer the SSL certificates to 
+the nginx configuration.
+ 
 ```
 sudo service httpd stop   # stop apache
 yum install nginx   # install nginx
@@ -158,7 +205,8 @@ service nginx start
 ```
 In this configuration we will run nginx and the client application on the same server. 
 
-Let's edit the /etc/nginx/nginx.conf:
+Edit the /etc/nginx/nginx.conf, replacing the items in (and including) "<>" with your own values:
+
 ```
 user nginx nginx;
 worker_processes 2;
@@ -184,7 +232,7 @@ http {
   server {
     listen 443;
     # set the server name to what you defined in dns 
-    server_name consumer.bluebutton.cms.fhirservice.net;
+    server_name <your_external_server_name>;
     server_tokens off;
 
     access_log /var/log/nginx/ssl_access.log;    
@@ -195,8 +243,8 @@ http {
     add_header   X-Frame-Options DENY;
     ssl on;
     # This is where we copied the Lets Encrypt cert and key to
-    ssl_certificate /etc/ssl/certs/letsencrypt/consumer.bluebutton.cms.fhirservice.net-cert.pem;  
-    ssl_certificate_key /etc/ssl/certs/letsencrypt/consumer.bluebutton.cms.fhirservice.net-key.pem;
+    ssl_certificate /etc/ssl/certs/letsencrypt/<your_external_server_name>-cert.pem;  
+    ssl_certificate_key /etc/ssl/certs/letsencrypt/<your_external_server_name>-key.pem;
 
 
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -215,7 +263,7 @@ http {
       # proxy_redirect off;
       proxy_read_timeout  90;
       # point proxy_redirect from your dns entry
-      proxy_redirect http://application https://consumer.bluebutton.cms.fhirservice.net; 
+      proxy_redirect http://application https://<your_external_server_name>; 
       # proxy_redirect http://application 
       proxy_pass http://application;
     }
@@ -229,8 +277,12 @@ http {
 }
 ```
 
-launch the app with the "tunnel" parameter that is the public url for the server:
+Launch the app with the "tunnel" parameter that is the public url for the server:
 
 ```
-node app.js -t https://consumer.bluebutton.cms.fhirservice.net
+node app.js -t https://<your_external_server_name>
 ```
+
+The node application we have used here is a sample application. It is not meant for production use. 
+Therefore, we recommend that a server-based implementation is only started up for test purposes only. 
+

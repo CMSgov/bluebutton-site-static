@@ -1,25 +1,15 @@
 ---
-layout: post
+layout: default
 title:  "Blue Button Blog"
 date:   2018-03-26 23:46:00 -0500
 description: The Blue Button Blog for Developers using Blue Button 2.0 API.
 landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
-badge: api
+categories: general
+badge: blog
 permalink: "/blog/"
-ctas:
-  - 
-    title: Home
-    link: /
-  - 
-    title: Blog Categories
-    link: /categories/
-  -
-    title: Comments via Google Group
-    link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
 ---
-
 
 {% for post in site.posts %}
 
