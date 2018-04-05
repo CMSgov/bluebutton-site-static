@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_with_category
 title: Installing a node.js Client Application
 date:   2018-04-01 23:00:00 -0600
 categories: code latest
@@ -15,10 +15,10 @@ ctas:
     title: Comments via Google Group
     link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
 ---
-As we prepared to launch our Production Blue Button 2.0 API The Blue Button API Team wanted to test the API 
+As we prepared to launch our Production Blue Button 2.0 API we wanted to test the API 
 from the perspective of a third-party client application. 
 
-You can get the code here:
+You can get the code for our sample client app here:
 
 <a href="https://github.com/CMSgov/bluebutton-sample-client-nodejs.git" target="_blank">GitHub - CMSgov/bluebutton-sample-client-nodejs</a>
 https://github.com/CMSgov/bluebutton-sample-client-nodejs
@@ -26,8 +26,8 @@ https://github.com/CMSgov/bluebutton-sample-client-nodejs
 Installing the application on your own desktop is a quick and easy process and is well documented in the 
 <a href="https://github.com/CMSgov/bluebutton-sample-client-nodejs/blob/master/README.md" target="_blank">README</a> file.
 
-In order to run an application you will need node.js and the node package manager (npm) installed. 
-When you install node you will get npm installed.
+In order to run an application you will need Node.js and the node package manager (npm) installed. 
+When you install Node.js you will get npm installed.
 
 ## Red Hat Enterprise Linux
 Here are the steps to go through to install this application on a Red Hat Enterprise Linux 7.x server running in AWS.
@@ -43,7 +43,7 @@ npm -v
 For help installing on other platforms check out: 
 <a href="https://nodejs.org/en/download/package-manager/" target="_blank">Installing Node.js via package manager</a>.
 
-After installing node the next step is to create a folder for the client code and pull the latest version of that from github.
+After installing Node.js the next step is to create a folder for the client code and pull the latest version of that from GitHub.
 
 ```
 cd /var
@@ -53,21 +53,22 @@ git clone https://github.com/ekivemark/bluebutton-sample-client-nodejs.git
 cd bluebutton-sample-client-nodejs/
 ```
  
-The next step is to configure the serverAuth file. This file holds the client id and client secret 
+The next step is to configure the serverAuth file. This file holds the client ID and Client Secret 
 that is associated with your application in the Blue Button 2.0 API.  
-It also contains the url for the API.
+It also contains the URL for the API.
 
 ## Connect to the Blue Button 2.0 Developer Sandbox
+
 Anyone can register for an account in the Blue Button 2.0 Developer Sandbox. Go to 
 <a href="https://bluebutton.cms.gov" target="_blank">https://bluebutton.cms.gov</a> 
 and click on the "Sign up for the Developer Sandbox" link to create an account. 
 
-You should receive an email notification that your account has been created. 
+You will receive an email notification that your account has been created. 
 **Click on the link in the email to validate and activate your account**. 
-Then you can login at 
+Then you can log in at   
 <a href="https://sandbox.bluebutton.cms.gov" target="_blank">https://sandbox.bluebutton.cms.gov</a>.
 
-Once you login to your Developer sandbox account you can create an application.  
+Once you log in to your Developer sandbox account you can create an application.  
 Click on "[Application Registration](https://sandbox.bluebutton.cms.gov/v1/o/applications/)" and 
 [register a new application](https://sandbox.bluebutton.cms.gov/v1/o/applications/register/).
 
@@ -89,17 +90,17 @@ In the case of the application we are installing the callback path for the redir
 - */redirect*.
 
 If you want to run your client application communicating to the sandbox environment from your local 
-desktop running on the default node.js port you would use a redirect_uri of:
+desktop running on the default Node.js port you would use a redirect_uri of:
 
 - http://localhost:8001/redirect
 
-If you are running the application from a server you will want the external ip address or url of the 
+If you are running the application from a server you will want the external IP address or URL of the 
 server application. For example:
 
 - http://10.252.252.252/redirect
 - http://client.example.com/redirect
 
-Copy the Client Id and Client Secret values. You will need these to setup your application.
+Copy the Client ID and Client Secret values. You will need these to setup your application.
 Fill out the other fields in the form and click "Save".
 
 Take the Client Id and Client Secret and add them to the respective fields in serverAuth.js file.
@@ -118,8 +119,8 @@ edit serverAuth.js:
 vi serverAuth.js
 ```
 
-Replace the items wrapped with "<>" with the respective data you took from your application registration.
-for example if your application Client Id was *ABCDEF12345* you would replace "<enter client id here>"
+Replace the items wrapped with "<>" with the relevant data you took from your application registration.
+For example, if your application Client ID was *ABCDEF12345* you would replace "<enter client id here>"
 with "ABCDEF12345".
 ```
 // BlueButton Registered Application Credentials
@@ -147,7 +148,7 @@ node app.js
 ```
 
 If you are running the application against the Blue Button 2.0 Production API there are some additional 
-steps that need to be taken because the redirect_uri needs to use a secured connection. ie. *https://*
+steps that need to be taken because the redirect_uri needs to use a secured connection, i.e. *https://*
 
 In order to configure to run against the Production API the following additional steps were necessary:
 
@@ -277,7 +278,7 @@ http {
 }
 ```
 
-Launch the app with the "tunnel" parameter that is the public url for the server:
+Launch the app with the "tunnel" parameter that is the public URL for the server:
 
 ```
 node app.js -t https://<your_external_server_name>

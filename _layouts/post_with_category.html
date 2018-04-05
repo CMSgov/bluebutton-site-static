@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="ds-base">
+  <header class="main-header">
+    <div class="solid-container ds-u-padding-y--1 ds-u-lg-padding-y--1">
+      <div class="ds-l-container">
+        <div class="ds-l-row">
+          <div class="ds-u-color--white ds-l-sm-cold--12 ds-l-xl-col--10 ds-u-margin-left--auto">
+              {% if page.badge %}<span class="ds-c-badge ds-u-text-transform--uppercase">{{ page.badge | escape }}</span>{% endif %}
+              <h3 class="ds-display">{{ page.title | escape }}</h3>
+              {% if page.description %}<p class="ds-text--lead">{{ page.description | escape }}</p>{% endif %}
+              <div class="ctas">
+                  {% for item in page.ctas limit:3 %}
+                  {% if item.link contains '://' %}<a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_blank">{{ item.title }}</a>
+                  {% else %}<a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self" >{{ item.title }}</a>{% endif %}
+                  {% endfor %}
+              </div>
+              {% if page.excerpt %}<div class="ds-l-row">
+                      <div class="ds-l-col--1 ds-u-color--white ds-u-font-size--title"><img height="54" src='{{ "/assets/img/blog/quotes-open.png" | absolute_url }}'></div>
+                      <div class="ds-l-col--6 ds-u-display--white ds-u-sm-display--white ds-u-color--white" role="complementary"><i>{{page.excerpt}}</i></div>
+                      <div class="ds-l-col--1 ds-u-color--white ds-u-font-size--title"><img height="54" src='{{ "/assets/img/blog/quotes-close.png" | absolute_url }}'></div>
+                  </div>{% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gradient-container ds-u-padding-y--1 ds-u-lg-padding-y--1 ds-u-display--none ds-u-md-display--block">
+    </div>
+  </header>
+</div>
+
+<div class="ds-l-container ds-base">
+    <div class="ds-l-row">
+        <div class="ds-l-lg-col--2 ds-u-margin-left--right ds-u-display--none ds-u-sm-display--block" role="complementary">
+          <nav class="subnav">
+              {% if post %}{% assign blogcats = post.categories %}{% else %}{% assign blogcats = page.categories %}{% endif %}
+              <h2 id="page-sub-nav">Categories:</h2>
+              <ul class="ds-c-list ds-c-list--bare" id="mainNav" aria-labelledby="page-sub-nav">
+                  {% for category in site.categories %}
+                    {% assign flagcat = "False" %}
+                    {% capture category_name %}{{ category | first }}{% endcapture %}
+                    {% for blogcat in blogcats %}
+                        {% if blogcat == category_name %}
+                            {% assign flagcat = "True" %}
+                        {% endif %}
+                    {% endfor %}
+                    <li><a href="/category/{{ category_name }}" name="{{ category_name }}">
+                        {% if flagcat == "True" %}
+                            <b>[{{ category_name | capitalize }}]</b>
+                        {% else %}
+                            &nbsp;{{ category_name | capitalize }}&nbsp;
+                        {% endif %}
+                        </a>
+                    </li>
+                  {% endfor %}
+              </ul>
+          </nav>
+        </div>
+
+        <div class="ds-l-col--10 ds-l-sm-col--8 {{ page.badge | slugify }}" id="main" role="main">
+            <p></p>
+            {{ content }}
+            <a href="#site-top" class="ds-c-button ds-u-margin-top--4">Back to top</a>
+        </div>
+
+    </div>
+</div>

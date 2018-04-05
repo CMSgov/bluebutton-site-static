@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_with_category
 title: Sample client applications 
 date:   2018-03-26 23:22:00 -0600
 categories: general latest code
@@ -16,8 +16,8 @@ ctas:
     link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
 ---
 It is often easier to take a sample application and modify 
-it to meet the needs of a project, rather than building something from scratch. The Blue Button team 
-have created some sample applications that can be built upon.
+it to meet the needs of a project, rather than building something from scratch. The Blue Button 2.0 team 
+has created some sample applications that developers can be build upon.
 
 We will continue to add to this library and welcome open source contributions from other developers. 
 
@@ -26,6 +26,6 @@ Here are links to the current sample client applications:
 - Node.js: <a href="https://github.com/CMSgov/bluebutton-sample-client-nodejs" target="_blank">bluebutton-sample-client-nodejs</a>
 - Python/Django: <a href="https://github.com/CMSgov/bluebutton-sample-client-django" target="_blank">bluebutton-sample-client-django</a>
 
-In future blog posts we will cover how to install, configure and run each of these 
+In future blog posts we will cover how to install, configure, and run each of these 
 sample applications.
 
