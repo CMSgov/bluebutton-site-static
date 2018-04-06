@@ -53,7 +53,7 @@ git clone https://github.com/ekivemark/bluebutton-sample-client-nodejs.git
 cd bluebutton-sample-client-nodejs/
 ```
  
-The next step is to configure the serverAuth file. This file holds the client ID and Client Secret 
+The next step is to configure the serverAuth file. This file holds the Client ID and Client Secret 
 that is associated with your application in the Blue Button 2.0 API.  
 It also contains the URL for the API.
 
@@ -89,7 +89,7 @@ In the case of the application we are installing the callback path for the redir
 
 - */redirect*.
 
-If you want to run your client application communicating to the sandbox environment from your local 
+If you want to run your client application communicating with the sandbox environment from your local 
 desktop running on the default Node.js port you would use a redirect_uri of:
 
 - http://localhost:8001/redirect
@@ -119,7 +119,7 @@ edit serverAuth.js:
 vi serverAuth.js
 ```
 
-Replace the items wrapped with "<>" with the relevant data you took from your application registration.
+Replace the items wrapped in "<>" with the relevant data you took from your application registration.
 For example, if your application Client ID was *ABCDEF12345* you would replace "<enter client id here>"
 with "ABCDEF12345".
 ```
@@ -153,7 +153,7 @@ steps that need to be taken because the redirect_uri needs to use a secured conn
 In order to configure to run against the Production API the following additional steps were necessary:
 
 - Install the nginx web server
-- use Let's Encrypt to issue an SSL certificate for the server 
+- Use Let's Encrypt to issue an SSL certificate for the server 
 - Configure nginx to act as a proxy for the application 
 - Launch the application with a tunnel parameter
 

@@ -18,7 +18,7 @@ ctas:
 It is often easier to take a sample application and modify 
 it to meet the needs of a project, rather than building something from scratch. 
 
-The Blue Button 2.0 team has created some sample applications that developers can be build upon. We will 
+The Blue Button 2.0 Team has created some sample applications that developers can be build upon. We will 
 continue to add to this library and welcome open source contributions from other developers. 
 
 Here are links to the current sample client applications:

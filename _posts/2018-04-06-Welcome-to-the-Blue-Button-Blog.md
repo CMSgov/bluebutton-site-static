@@ -17,7 +17,7 @@ ctas:
 ---
 **Welcome!** You have found the Blue Button 2.0 Blog. We hope you find the content useful.
 
-This is a place where The Blue Button team can post content, such as: 
+This is a place where The Blue Button Team can post content, such as: 
 
 - Code recipes 
 - Links to sample applications
