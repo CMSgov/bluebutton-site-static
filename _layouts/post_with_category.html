@@ -34,7 +34,10 @@ layout: default
 <div class="ds-l-container ds-base">
     <div class="ds-l-row">
         <div class="ds-l-lg-col--2 ds-u-margin-left--right ds-u-display--none ds-u-sm-display--block" role="complementary">
-          <nav class="subnav">
+            <p></p>
+
+            <nav class="subnav">
+              <a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self" >RSS Feed</a>
               {% if post %}{% assign blogcats = post.categories %}{% else %}{% assign blogcats = page.categories %}{% endif %}
               <h2 id="page-sub-nav">Categories:</h2>
               <ul class="ds-c-list ds-c-list--bare" id="mainNav" aria-labelledby="page-sub-nav">
