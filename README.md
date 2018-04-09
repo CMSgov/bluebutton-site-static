@@ -13,3 +13,7 @@ It is assumed that the environment already has these installed:
 
 ## Build
 Jekyll builds the CSS and HTML pages. Run `bundle exec jekyll serve` from the project root for a local build. By default, the site will run in `http://localhost:4000/`. You can also run `bundle exec jekyll build` to compile the site files into the `_site` directory.
+
+## Deploy
+
+Use the [deploy static site](https://cloudbeesjenkins.cms.gov/dev-master/job/Blue%20Button/job/deploy%20static%20site/) job.
