@@ -16,12 +16,6 @@ layout: default
                   {% else %}<a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self" >{{ item.title }}</a>{% endif %}
                   {% endfor %}
               </div>
-              {% if page.excerpt %}
-                <div class="ds-l-row">
-                    <div class="ds-l-col--1 ds-u-color--white ds-u-font-size--title"><img height="54" src='{{ "/assets/img/blog/quotes-open.png" | absolute_url }}'></div>
-                    <div class="ds-l-col--6 ds-u-display--white ds-u-sm-display--white ds-u-color--white" role="complementary"><i>{{page.excerpt}}</i></div>
-                    <div class="ds-l-col--1 ds-u-color--white ds-u-font-size--title"><img height="54" src='{{ "/assets/img/blog/quotes-close.png" | absolute_url }}'></div>
-                </div>{% endif %}
           </div>
         </div>
       </div>
