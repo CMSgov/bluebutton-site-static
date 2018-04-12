@@ -2,18 +2,21 @@
 layout: default
 permalink: /category/
 title: Category
-permalink: "/category/"
+permalink: "/blog/category/"
 badge: blog
 ctas:
   -
     title: Home
     link: /
   -
-    title: Blog Categories
-    link: /categories/
+    title: Sign up for the Developer Sandbox
+    link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
   -
     title: Comments via Google Group
     link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
+  -
+    title: Blog Categories
+    link: /categories/
 ---
 <div class="ds-base">
     <header class="main-header ds-u-margin-bottom--2 ds-u-lg-margin-bottom--5">
@@ -22,18 +25,13 @@ ctas:
                 <div class="ds-l-row">
                     <div class="ds-u-color--white ds-l-sm-cold--12 ds-l-xl-col--10 ds-u-margin-left--auto ds-u-padding-x--4">
 
-                        {% if page.badge %}
-                        <span class="ds-c-badge ds-u-text-transform--uppercase">{{ page.badge | escape }}</span>
-                        {% endif %}
-
-
-                        <h1 class="ds-display">{{ page.title | escape }}</h1>
+                        <h1 class="ds-display">{{ page.badge | capitalize | escape }}: {{ page.title | escape }}</h1>
                         <p class="ds-text--lead">
                             {{ page.description | escape }}
                         </p>
 
                         <div class="ctas">
-                            {% for item in page.ctas limit:3 %}
+                            {% for item in page.ctas limit:4 %}
                             <a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self">{{ item.title }} &rarr;</a>
                             {% endfor %}
                         </div>
@@ -49,7 +47,6 @@ ctas:
 
     <section class="ds-l-container ds-base">
         <p></p>
-        <a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self" >RSS Feed</a>
 
         {% for post in site.categories[page.category] %}
             <div class="ds-l-row">
@@ -61,7 +58,7 @@ ctas:
         {% endfor %}
 
         <p></p>
-        <a href="#site-top" class="ds-c-button ds-u-margin-top--4">Back to top</a>
+        <a href="#site-top" class="ds-c-button ds-u-margin-top--4">Back to top</a>  <a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self" >Subscribe to RSS Feed</a>
 
     </section>
 </div>

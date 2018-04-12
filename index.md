@@ -17,9 +17,6 @@ ctas:
     title: View the documentation
     link: /developers
   -
-    title: View our blog
-    link: /blog
-  -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
   -
