@@ -12,9 +12,6 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
-  -
-    title: Comments via Google Group
-    link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
 ---
 **Welcome!** You have found the Blue Button 2.0 Blog. We hope you find the content useful.
 

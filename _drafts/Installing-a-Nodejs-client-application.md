@@ -12,9 +12,6 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
-  -
-    title: Comments via Google Group
-    link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
 ---
 As we prepared to launch our Production Blue Button 2.0 API we wanted to test the API 
 from the perspective of a third-party client application. 

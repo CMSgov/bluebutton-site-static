@@ -12,9 +12,6 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
-  -
-    title: Comments via Google Group
-    link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
 ---
 It is often easier to take a sample application and modify 
 it to meet the needs of a project, rather than building something from scratch. 
