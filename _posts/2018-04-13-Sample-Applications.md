@@ -2,18 +2,16 @@
 layout: post_with_category
 title: Sample client applications 
 date:   2018-03-26 23:22:00 -0600
-categories: general latest code
+categories: latest code
 badge: blog
+permalink: /blog/:title
 ctas:
   - 
     title: Home
     link: /
-  - 
-    title: Blog Categories
-    link: /categories/
   -
-    title: Comments via Google Group
-    link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
+    title: Sign up for the Developer Sandbox
+    link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
 ---
 It is often easier to take a sample application and modify 
 it to meet the needs of a project, rather than building something from scratch. 

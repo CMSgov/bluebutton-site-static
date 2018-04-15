@@ -2,18 +2,16 @@
 layout: post_with_category
 title: Welcome to the Blue Button Blog 
 date:   2018-03-26 23:22:00 -0600
-categories: general latest
+categories: general
 badge: blog
+permalink: /blog/:title
 ctas:
   - 
     title: Home
     link: /
-  - 
-    title: Blog Categories
-    link: /categories/
   -
-    title: Comments via Google Group
-    link: https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api
+    title: Sign up for the Developer Sandbox
+    link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
 ---
 **Welcome!** You have found the Blue Button 2.0 Blog. We hope you find the content useful.
 

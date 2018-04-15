@@ -19,7 +19,8 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-permalink: /:categories/:title/
+# permalink: /blog/:title/
+permalink: /blog/:title
 # Build settings
 markdown: kramdown
 theme: minima
@@ -49,7 +50,7 @@ include: ["_pages"]
 name: Blue Button 2.0 Blog
 # the next two values are defined above so we are changing the keys.
 blog_description: How-to guides, code recipes and other useful content related to Blue Button 2.0 API
-blog_url: https://bluebutton.cms.gov/blog
+blog_url: https://bluebutton.cms.gov
 
 # Configure the `_plugins/api_codings.rb` plugin. Note that you can run
 # `bundle exec jekyll serve --verbose` to get debug output from that plugin.
