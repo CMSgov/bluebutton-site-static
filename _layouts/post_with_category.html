@@ -1,7 +1,5 @@
 ---
 layout: default
-sections:
-
 ---
 <div class="ds-base">
   <header class="main-header">
@@ -44,7 +42,7 @@ sections:
                             {% assign flagcat = "True" %}
                         {% endif %}
                     {% endfor %}
-                    <li><a href="/blog/category/{{ category_name }}" name="{{ category_name }}" class="ds-u-display--block blueberry-lime-link" >
+                    <li><a href="/blog/category/{{ category_name }}.html" name="{{ category_name }}" class="ds-u-display--block blueberry-lime-link" >
                         {% if flagcat == "True" %}
                             <b>[x] {{ category_name | capitalize }}</b>
                         {% else %}
