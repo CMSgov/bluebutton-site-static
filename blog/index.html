@@ -14,7 +14,7 @@ ctas:
       {% for post in site.posts %}
         {% if site.posts.first.url == post.url %}
 
-          <h3 class="ds-u-display--inline-block ds-u-display--block blueberry-lime-link"><a href="{{ post.url }}/" class="ds-u-display--block blueberry-lime-link" >{{ post.title | capitalize | escape }}</a></h3>
+          <h3 class="ds-u-display--inline-block ds-u-display--block blueberry-lime-link"><a href="{{ post.url }}.html" class="ds-u-display--block blueberry-lime-link" >{{ post.title | capitalize | escape }}</a></h3>
           <p>{{ post.content }}</p>
           <h3 class="ds-u-display--block">Earlier posts...</h3>
 
@@ -23,7 +23,7 @@ ctas:
                 <p></p>
             </div>
             <div class="ds-u-fill--primary-alt ds-u-padding--2">
-                <h4 class="ds-u-margin--0 ds-u-color--white ds-u-text-align--left"><a href="{{ post.url }}/" class="ds-u-color--white ds-u-text-align--left blueberry-lime-link" >{{ post.title | capitalize | escape }}</a></h4>
+                <h4 class="ds-u-margin--0 ds-u-color--white ds-u-text-align--left"><a href="{{ post.url }}.html" class="ds-u-color--white ds-u-text-align--left blueberry-lime-link" >{{ post.title | capitalize | escape }}</a></h4>
             </div>
             <span class="ds-u-display--block ds-u-display--inline-block">{{ post.excerpt }}<a href="{{ post.url }}">[more...]</a></span>
 
@@ -31,5 +31,5 @@ ctas:
       {% endfor %}
 
 </div>
-<!-- CBBP-1058 Fix 2 - export blog folder -->
+<!-- blog/index.html -->
 
