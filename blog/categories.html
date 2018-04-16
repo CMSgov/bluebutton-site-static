@@ -49,11 +49,11 @@ ctas:
             {% capture category_name %}{{ category | first }}{% endcapture %}
 
             <h2 class="category-head">
-                <a href="/blog/category/{{ category_name }}" name="{{ category_name }}">{{ category_name|capitalize }}</a>
+                <a href="/blog/category/{{ category_name }}/" name="{{ category_name }}">{{ category_name|capitalize }}</a>
             </h2>
             {% for post in site.categories[category_name] %}
             <article class="archive-item">
-                <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+                <h4><a href="{{ site.baseurl }}{{ post.url }}/">{{post.title}}</a></h4>
             </article>
             {% endfor %}
         </div>
