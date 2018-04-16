@@ -15,7 +15,7 @@ layout: default
                   <p class="ds-u-l-display--white">
                       {% if post %}{% assign categories = post.categories %}{% else %}{% assign categories = page.categories %}{% endif %}
                       {% if categories %}Categories:&nbsp;{% endif %}
-                      {% for category in categories %}<a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="ds-u-color--white">[{{ category }}]</a>&nbsp;
+                      {% for category in categories %}<a href="{{site.baseurl}}/categories.html/#{{category|slugize}}" class="ds-u-color--white">[{{ category }}]</a>&nbsp;
                       {% endfor %}</p>
               </div>
               {% if page.badge %}<span class="ds-c-badge ds-u-text-transform--uppercase">{{ page.badge | escape }}</span>{% endif %}
