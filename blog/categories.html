@@ -14,7 +14,7 @@ ctas:
     title: Blog Categories
     link: /categories/
 ---
-
+<!-- blog/categories.html:start -->
 <div class="ds-base">
     <header class="main-header ds-u-margin-bottom--2 ds-u-lg-margin-bottom--5">
         <div class="solid-container ds-u-padding-y--2 ds-u-lg-padding-y--5">
@@ -49,11 +49,11 @@ ctas:
             {% capture category_name %}{{ category | first }}{% endcapture %}
 
             <h2 class="category-head">
-                <a href="/blog/category/{{ category_name }}.html" name="{{ category_name }}">{{ category_name|capitalize }}</a>
+                <a href="/blog/category/{{ category_name }}{% if site.use_dot_html %}.html{% endif %}" name="{{ category_name }}">{{ category_name|capitalize }}</a>
             </h2>
             {% for post in site.categories[category_name] %}
             <article class="archive-item">
-                <h4><a href="{{ site.baseurl }}{{ post.url }}.html">{{post.title}}</a></h4>
+                <h4><a href="{{ site.baseurl }}{{ post.url }}{% if site.use_dot_html %}.html{% endif %}">{{post.title}}</a></h4>
             </article>
             {% endfor %}
         </div>
@@ -69,6 +69,6 @@ ctas:
 
     </div>
 </section>
-<!-- CBBP-1058 Fix 2 - export blog folder -->
+<!-- blog/categories.html:end -->
 
 

@@ -22,7 +22,7 @@
           </li>
           {% if site.posts.size > 0 %}
             <li>
-              <a href="{{site.posts.first.url}}.html">Blog</a>
+              <a href="{{site.posts.first.url}}{% if site.use_dot_html %}.html{% endif %}">Blog</a>
             </li>
           {% endif %}
           <li aria-label="icon for login link">

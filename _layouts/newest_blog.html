@@ -3,6 +3,7 @@ layout: default
 sections:
 
 ---
+<!-- newest_blog:start -->
 <div class="ds-base">
   <header class="main-header">
     <div class="solid-container">
@@ -44,7 +45,7 @@ sections:
                     {% assign flagcat = "True" %}
                     {% endif %}
                     {% endfor %}
-                    <li><a href="/blog/category/{{ category_name }}" name="{{ category_name }}" class="ds-u-display--block blueberry-lime-link" >
+                    <li><a href="/blog/category/{{ category_name }}{% if site.use_dot_html %}.html{% endif %}" name="{{ category_name }}" class="ds-u-display--block blueberry-lime-link" >
                         {% if flagcat == "True" %}
                         <b>[x] {{ category_name | capitalize }}</b>
                         {% else %}
@@ -71,3 +72,4 @@ sections:
 
     </div>
 </section>
+<!-- newest_blog:end -->
