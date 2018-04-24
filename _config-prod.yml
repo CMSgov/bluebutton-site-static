@@ -1,2 +1,6 @@
 tealium_env: "prod"
 url: "https://bluebutton.cms.gov" # the base hostname & protocol for your site, e.g. http://example.com
+# S3 appears to require blog templates to append ".html" to files.
+# Define "use_dot_html" = true in environment _config file
+# default should be false i.e. not defined
+use_dot_html: true
