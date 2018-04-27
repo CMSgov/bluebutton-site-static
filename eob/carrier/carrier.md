@@ -1,4 +1,4 @@
-Annotated `CaRRIER` (Carrier) ExplanationOfBenefit Resource
+Annotated `CARRIER` (Carrier) ExplanationOfBenefit Resource
 ===========================================================
 
 
