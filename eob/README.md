@@ -22,13 +22,13 @@ Types of EOBs
 The Blue Button API defines several "EOB types". These are:
 
 
-* `CARRIER` - Routine office visits, etc. (Part B) [See Example](http://)
+* `CARRIER` - Routine office visits, etc. (Part B) [See Example](https://github.com/TransparentHealth/bluebutton-site-static/blob/CBBP-938/eob/carrier/carrier.md)
 * `DME` - Durable Medical Equipment. (Part B)
 * `HHA` - Home Health Services. (Part A)
 * `HOSPICE` -  Hospice. (Part A)
-* `INPATIENT` - Inpatient Hospital Care (Part A)  [See Example](http://)
+* `INPATIENT` - Inpatient Hospital Care (Part A)  [See Example](https://github.com/TransparentHealth/bluebutton-site-static/blob/CBBP-938/eob/inpatient/inpatient.md)
 * `OUTPATIENT` - Outpatient (Part B)
-* `PDE` - Pharmacy (Part D)  [See Example](http://)
+* `PDE` - Pharmacy (Part D)  [See Example](https://github.com/TransparentHealth/bluebutton-site-static/blob/CBBP-938/eob/pde/pde.md)
 * `SNF` - Skilled Nursing Facility (Part A)
 
 The current version of FHIR (STU 3) does not have a direct one-to-one mapping between the `eob-type` and the `ex-claimtype`. Please see https://bluebutton.cms.gov/resources/codesystem/eob-type  for more detailed information.  Based on the EOB type, the anatomy of the EOB resource will differ.  Currently, in the sample synthetic data set only `CARRIER`, `INPATIENT`, and, `PDE`.
