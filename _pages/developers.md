@@ -569,7 +569,7 @@ Next, the following criteria needs to be met and verified by the CMS Blue Button
 
 **What happens after I am approved?**
 
-You will receive an email from the CMS Blue Button API team notifying you of approval.  You will then receive a new Client ID and Secret for your app in production.  You will use the base URL api.cms.bluebutton.gov instead of sandbox.bluebutton.cms.gov.
+You will receive an email from the CMS Blue Button API team notifying you of approval.  You will then receive a new Client ID and Secret for your app in production.  You will use the base URL api.bluebutton.cms.gov instead of sandbox.bluebutton.cms.gov.
 
 You will also agree to a future audit as part of a Production API access renewal process as your app versions update and the Blue Button API evolves.
 
