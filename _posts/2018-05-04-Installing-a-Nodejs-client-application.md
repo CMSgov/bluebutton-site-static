@@ -34,11 +34,11 @@ In this post we are assuming you are comfortable with working in a terminal sess
 After establishing a virtual server, ssh to the server and 
 ```
 sudo /bin/bash
-yum install -y nodejs
+yum install -y nodejs npm
 node -v
 npm -v
 ```
-For help installing on other platforms check out: 
+**For help installing on other platforms check out:** 
 <a href="https://nodejs.org/en/download/package-manager/" target="_blank">Installing Node.js via package manager</a>.
 
 After installing Node.js the next step is to create a folder for the client code and pull the latest version of that from GitHub.
@@ -85,12 +85,16 @@ from our API to provide you the results of an authorization request.
 
 In the case of the application we are installing the callback path for the redirect_uri is: 
 
-- */redirect*.
+- */redirect*
 
 If you want to run your client application communicating with the sandbox environment from your local 
 desktop running on the default Node.js port you would use a redirect_uri of:
 
 - http://localhost:8001/redirect
+
+**The above redirect_uri setting is critically important.** If this does not match the IP Address or 
+domain name and path that your server is responding to you will get an "Error: invalid_request" after
+authorizing a user.
 
 If you are running the application from a server you will want the external IP address or URL of the 
 server application. For example:
@@ -117,9 +121,11 @@ edit serverAuth.js:
 vi serverAuth.js
 ```
 
-Replace the items wrapped in "<>" with the relevant data you took from your application registration.
-For example, if your application Client ID was *ABCDEF12345* you would replace "<enter client id here>"
-with "ABCDEF12345".
+Because serverAuth.js needs to be customized for each implementation it is not included in the Repository. 
+You can copy the block of text below into a new serverAuth.js file, Replacing the items wrapped in "<>" 
+with the relevant data you took from your application registration. For example, if your application 
+Client ID was *ABCDEF12345* you would replace "<enter client id here>" with "ABCDEF12345".
+
 ```
 // BlueButton Registered Application Credentials
 const credentials = {
@@ -142,18 +148,46 @@ Save the file.
 After updating serverAuth.js  you can run the application:
 
 ```
-node app.js
+node app.js -t localhost -p 8001
 ```
 
-If you are running the application against the Blue Button 2.0 Production API there are some additional 
+## Get a Beneficiary Record
+
+After launching the application you can connect to the sandbox and use a synthetic beneficiary record.
+For example, try the following credentials:
+
+- Username: BBUser12345 /
+- Password: PW12345!
+
+## I am not returned to the app after authorizing
+
+A frequent issue that is encountered is receiving the following error after authenticating and authorizing
+with a synthetic beneficiary account: 
+
+```
+Error: invalid_request
+```
+
+The most frequent cause of this error is that the redirect or callback URI for your application on 
+https://sandbox.bluebutton.cms.gov does not match the url endpoint the server is available on. 
+
+## Production Access requires a secure connection
+
+If you are running your application against the Blue Button 2.0 Production API there are some additional 
 steps that need to be taken because the redirect_uri needs to use a secured connection, i.e. *https://*
 
-In order to configure to run against the Production API the following additional steps were necessary:
+In order to configure to run against the Production API the following additional steps are necessary:
 
-- Install the nginx web server
-- Use Let's Encrypt to issue an SSL certificate for the server 
-- Configure nginx to act as a proxy for the application 
+- Install a web server to act as a proxy - we suggest nginx since it is relatively straightforward to configure
+- Use a TLS Certificate - We suggest Let's Encrypt since it makes the process of acquiring a certificate free and easy
+- Configure the web server to act as a proxy for the application 
 - Launch the application with a tunnel parameter
+
+An outline of this process is included below.
+
+**WE DO NOT RECOMMEND RUNNING THIS APPLICATION IN PRODUCTION**. This application is provided on an "as-is" basis 
+to help developers become familiar with the Blue Button 2.0 API.
+ 
 
 ### Install nginx
 
