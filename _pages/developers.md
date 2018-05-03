@@ -461,6 +461,8 @@ In order to access the full synthetic dataset, you can do the following:
 
 ## Sample Beneficiaries
 
+[CSV of 100 sample beneficiaries with rich claims data](/synthetic_users_by_claim_count_full.csv)
+
 When getting started with the Blue Button API, it can be overwhelming to understand all of the coding systems and types of data that can be found in the Explanation of Benefit FHIR resource.
 
 Below are some hypothetical Beneficiaries that gives you a sense of what is found in claims data.
