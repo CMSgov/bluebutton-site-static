@@ -3,7 +3,7 @@ layout: post_with_category
 title: Configure nginx with SSL
 date:   2018-05-15 23:00:00 -0600
 categories: code latest
-permalink: /blog/:year/:month/:date/:title
+permalink: /blog/:title
 badge: blog
 ctas:
   - 
