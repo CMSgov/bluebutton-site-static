@@ -185,7 +185,10 @@ In order to configure to run against the Production API the following additional
 - Configure the web server to act as a proxy for the application 
 - Launch the application with a tunnel parameter
 
-An outline of this process is included below.
+This is beyond the scope of this post. If there is interest expressed in the 
+<a href="https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" target="_blank" >Google Group</a>
+we might make that a subject of a future blog post.
+
 
 **WE DO NOT RECOMMEND RUNNING THIS APPLICATION IN PRODUCTION**. This application is provided on an "as-is" basis 
 to help developers become familiar with the Blue Button 2.0 API.
