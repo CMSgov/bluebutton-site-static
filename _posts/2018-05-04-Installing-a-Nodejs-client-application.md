@@ -3,7 +3,7 @@ layout: post_with_category
 title: Install a Node.js Application
 date:   2018-04-01 23:00:00 -0600
 categories: code latest
-permalink: /blog/:year/:month/:date/:title
+permalink: /blog/:title
 badge: blog
 ctas:
   - 
@@ -34,11 +34,11 @@ In this post we are assuming you are comfortable with working in a terminal sess
 After establishing a virtual server, ssh to the server and 
 ```
 sudo /bin/bash
-yum install -y nodejs
+yum install -y nodejs npm
 node -v
 npm -v
 ```
-For help installing on other platforms check out: 
+**For help installing on other platforms check out:** 
 <a href="https://nodejs.org/en/download/package-manager/" target="_blank">Installing Node.js via package manager</a>.
 
 After installing Node.js the next step is to create a folder for the client code and pull the latest version of that from GitHub.
@@ -85,18 +85,24 @@ from our API to provide you the results of an authorization request.
 
 In the case of the application we are installing the callback path for the redirect_uri is: 
 
-- */redirect*.
+- */redirect*
 
 If you want to run your client application communicating with the sandbox environment from your local 
 desktop running on the default Node.js port you would use a redirect_uri of:
 
 - http://localhost:8001/redirect
 
+**The above redirect_uri setting is critically important.** If this does not match the IP Address or 
+domain name and path that your server is responding to you will get an "Error: invalid_request" after
+authorizing a user.
+
 If you are running the application from a server you will want the external IP address or URL of the 
 server application. For example:
 
 - http://10.252.252.252/redirect
 - http://client.example.com/redirect
+
+*Note: use an appropriate ip address. The example above is for an internal network (10.x.x.x).*
 
 Copy the Client ID and Client Secret values. You will need these to setup your application.
 Fill out the other fields in the form and click "Save".
@@ -117,9 +123,11 @@ edit serverAuth.js:
 vi serverAuth.js
 ```
 
-Replace the items wrapped in "<>" with the relevant data you took from your application registration.
-For example, if your application Client ID was *ABCDEF12345* you would replace "<enter client id here>"
-with "ABCDEF12345".
+Because serverAuth.js needs to be customized for each implementation it is not included in the Repository. 
+You can copy the block of text below into a new serverAuth.js file, Replacing the items wrapped in "<>" 
+with the relevant data you took from your application registration. For example, if your application 
+Client ID was *ABCDEF12345* you would replace "<enter client id here>" with "ABCDEF12345".
+
 ```
 // BlueButton Registered Application Credentials
 const credentials = {
@@ -142,146 +150,46 @@ Save the file.
 After updating serverAuth.js  you can run the application:
 
 ```
-node app.js
+node app.js -t localhost -p 8001
 ```
 
-If you are running the application against the Blue Button 2.0 Production API there are some additional 
+## Get a Beneficiary Record
+
+After launching the application you can connect to the sandbox and use a synthetic beneficiary record.
+For example, try the following credentials:
+
+- Username: BBUser12345 /
+- Password: PW12345!
+
+## I am not returned to the app after authorizing
+
+A frequent issue that is encountered is receiving the following error after authenticating and authorizing
+with a synthetic beneficiary account: 
+
+```
+Error: invalid_request
+```
+
+The most frequent cause of this error is that the redirect or callback URI for your application on 
+https://sandbox.bluebutton.cms.gov does not match the url endpoint the server is available on. 
+
+## Production Access requires a secure connection
+
+If you are running your application against the Blue Button 2.0 Production API there are some additional 
 steps that need to be taken because the redirect_uri needs to use a secured connection, i.e. *https://*
 
-In order to configure to run against the Production API the following additional steps were necessary:
+In order to configure to run against the Production API the following additional steps are necessary:
 
-- Install the nginx web server
-- Use Let's Encrypt to issue an SSL certificate for the server 
-- Configure nginx to act as a proxy for the application 
+- Install a web server to act as a proxy - we suggest nginx since it is relatively straightforward to configure
+- Use a TLS Certificate - We suggest Let's Encrypt since it makes the process of acquiring a certificate free and easy
+- Configure the web server to act as a proxy for the application 
 - Launch the application with a tunnel parameter
 
-### Install nginx
+An outline of this process is included below.
 
-<a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/" target="_blank">Install nginx</a>.
-
-### Get an SSL Certificate from Lets Encrypt
-
-The first step is to download and install acme.sh 
-```
-mkdir /root/letsencrypt
-cd /root
-git clone  https://github.com/neilpang/acme.sh \ 
-   /root/letsencrypt
-cd /root/letsencrypt
-./acme.sh --install
-mkdir -p  /etc/ssl/certs/letsencrypt
-```
-
-Acme.sh has an apache install option. 
-```
-yum install httpd
-sudo service httpd start
-curl http://localhost     # to check apache is running
-```
- Apache was already installed on the test server. We used Apache to acquire the Let's Encrypt certificates.
+**WE DO NOT RECOMMEND RUNNING THIS APPLICATION IN PRODUCTION**. This application is provided on an "as-is" basis 
+to help developers become familiar with the Blue Button 2.0 API.
  
- Run the certificate issuing command, replacing the items in (and including) "<>" with your own values:
-
-```
-cd /root/letsencrypt
-./acme.sh  --issue  \
-           -d <your_external_server_name>  \
-           --apache
-mkdir -p /etc/httpd/certs/ssl/letsencrypt
-```
-
-Nginx is simpler to configure so we stop Apache and install nginx and transfer the SSL certificates to 
-the nginx configuration.
- 
-```
-sudo service httpd stop   # stop apache
-yum install nginx   # install nginx
-cd /etc/nginx
-mkdir -p  /etc/ssl/certs/letsencrypt
-cp /etc/httpd/certs/ssl/letsencrypt/* /etc/ssl/certs/letsencrypt/
-# start nginx
-service nginx start
-```
-In this configuration we will run nginx and the client application on the same server. 
-
-Edit the /etc/nginx/nginx.conf, replacing the items in (and including) "<>" with your own values:
-
-```
-user nginx nginx;
-worker_processes 2;
-error_log /var/log/nginx/error.log;
-worker_rlimit_nofile 8192;
-
-events {
-  worker_connections 4096;
-}
-
-# connect nginx to the node app running on the same machine
-http {
-  upstream application {
-    # this is where we point to our node app
-    server 127.0.0.1:8001;
-  }
-
-  server {
-    listen 80;
-    return 301 https://$host$request_uri;
-  }  
-
-  server {
-    listen 443;
-    # set the server name to what you defined in dns 
-    server_name <your_external_server_name>;
-    server_tokens off;
-
-    access_log /var/log/nginx/ssl_access.log;    
-    error_log /var/log/nginx/ssl_error.log;
-
-    add_header   Strict-Transport-Security "max-age=31536000; includeSubdomains; preload";
-    add_header   X-Content-Type-Options nosniff;
-    add_header   X-Frame-Options DENY;
-    ssl on;
-    # This is where we copied the Lets Encrypt cert and key to
-    ssl_certificate /etc/ssl/certs/letsencrypt/<your_external_server_name>-cert.pem;  
-    ssl_certificate_key /etc/ssl/certs/letsencrypt/<your_external_server_name>-key.pem;
-
-
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_prefer_server_ciphers   on;
-    ssl_ciphers HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
-    # ssl_ciphers  "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH !RC4";
-    # ssl_ecdh_curve secp384r1;
-    ssl_session_tickets off;
-
-    location / {
-      proxy_set_header Host $host;
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header X-Real-IP $remote_addr;
-      # proxy_set_header X-Forwarded-Proto https;
-      proxy_set_header X-Forwarded-Proto $scheme;
-      # proxy_redirect off;
-      proxy_read_timeout  90;
-      # point proxy_redirect from your dns entry
-      proxy_redirect http://application https://<your_external_server_name>; 
-      # proxy_redirect http://application 
-      proxy_pass http://application;
-    }
-    error_page 500 502 503 504 /custom_50x.html;
-    # This error page will display if the app is not running
-    location = /custom_50x.html {
-            root /var/www/nginx/html;
-            internal;
-    }
-  }
-}
-```
-
-Launch the app with the "tunnel" parameter that is the public URL for the server:
-
-```
-node app.js -t https://<your_external_server_name>
-```
-
 The node application we have used here is a sample application. It is not meant for production use. 
 Therefore, we recommend that a server-based implementation is only started up for test purposes only. 
 
