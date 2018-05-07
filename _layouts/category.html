@@ -49,7 +49,7 @@ ctas:
             <div class="ds-l-row">
                 <ul>
                     <li class="ds-c-list ds-c-list--bare">
-                        <a href="{{ post.url | absolute_url }}.html" >{{ post.title }}</a>&nbsp;</li>
+                        <a href="{{ post.url | absolute_url }}{% if site.use_dot_html %}.html{% endif %}" >{{ post.title }}</a>&nbsp;</li>
                 </ul>
             </div>
         {% endfor %}

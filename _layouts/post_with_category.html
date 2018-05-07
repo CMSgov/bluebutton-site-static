@@ -42,7 +42,7 @@ layout: default
                             {% assign flagcat = "True" %}
                         {% endif %}
                     {% endfor %}
-                    <li><a href="/blog/category/{{ category_name }}.html" name="{{ category_name }}" class="ds-u-display--block blueberry-lime-link" >
+                    <li><a href="/blog/category/{{ category_name }}{% if site.use_dot_html %}.html{% endif %}" name="{{ category_name }}" class="ds-u-display--block blueberry-lime-link" >
                         {% if flagcat == "True" %}
                             <b>[x] {{ category_name | capitalize }}</b>
                         {% else %}
