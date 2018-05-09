@@ -512,7 +512,7 @@
 
 </assets/ig/CodeSystem-carr-num.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/CodeSystem-carr-num.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-carr-num.ttl> .
 
 # -------------------------------------------------------------------------------------
 

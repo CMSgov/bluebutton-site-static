@@ -562,7 +562,7 @@
 
 </assets/ig/CodeSystem-betos-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/CodeSystem-betos-cd.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-betos-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

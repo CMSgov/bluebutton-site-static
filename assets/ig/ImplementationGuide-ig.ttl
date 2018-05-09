@@ -3188,7 +3188,7 @@
 
 </assets/ig/ImplementationGuide/ig.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/ImplementationGuide/ig.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/ImplementationGuide/ig.ttl> .
 
 # -------------------------------------------------------------------------------------
 

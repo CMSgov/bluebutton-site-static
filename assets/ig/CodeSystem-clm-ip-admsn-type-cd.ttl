@@ -82,7 +82,7 @@
 
 </assets/ig/CodeSystem-clm-ip-admsn-type-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/CodeSystem-clm-ip-admsn-type-cd.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-clm-ip-admsn-type-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

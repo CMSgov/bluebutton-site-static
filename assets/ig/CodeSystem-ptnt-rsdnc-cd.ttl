@@ -112,7 +112,7 @@
 
 </assets/ig/CodeSystem-ptnt-rsdnc-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/CodeSystem-ptnt-rsdnc-cd.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-ptnt-rsdnc-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

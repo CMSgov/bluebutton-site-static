@@ -67,7 +67,7 @@
 
 </assets/ig/CodeSystem-prtcptng-ind-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/CodeSystem-prtcptng-ind-cd.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-prtcptng-ind-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

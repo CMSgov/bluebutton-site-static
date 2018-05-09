@@ -134,7 +134,7 @@
 
 </assets/ig/CodeSystem-information-categories.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/CodeSystem-information-categories.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-information-categories.ttl> .
 
 # -------------------------------------------------------------------------------------
 

@@ -404,7 +404,7 @@
 
 </assets/ig/ExplanationOfBenefit/pde-89.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/ExplanationOfBenefit/pde-89.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/ExplanationOfBenefit/pde-89.ttl> .
 
 # -------------------------------------------------------------------------------------
 

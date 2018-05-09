@@ -47,7 +47,7 @@
 
 </assets/ig/CodeSystem-clm-mco-pd-sw.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/CodeSystem-clm-mco-pd-sw.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-clm-mco-pd-sw.ttl> .
 
 # -------------------------------------------------------------------------------------
 

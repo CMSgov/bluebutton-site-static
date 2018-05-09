@@ -52,7 +52,7 @@
 
 </assets/ig/CodeSystem-line-pmt-80-100-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/CodeSystem-line-pmt-80-100-cd.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-line-pmt-80-100-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

@@ -29,7 +29,7 @@
 
 </assets/ig/ValueSet-clm-freq-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI </assets/ig/STU3/ValueSet-clm-freq-cd.ttl> .
+  owl:versionIRI <https://www.hl7.org/fhir/STU3/ValueSet-clm-freq-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 
