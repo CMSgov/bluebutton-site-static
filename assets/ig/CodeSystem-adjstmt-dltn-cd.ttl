@@ -1,0 +1,58 @@
+@prefix fhir: </assets/ig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+</assets/ig/CodeSystem-adjstmt-dltn-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "adjstmt-dltn-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Adjustment Deletion Code</h2><div><p>This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt<em>dltn</em>cd</p>\n</div><p>This code system /assets/ig/CodeSystem-adjstmt-dltn-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"adjstmt-dltn-cd-Blank\"> </a></td><td>Original PDE</td><td>Original PDE</td></tr><tr><td>A<a name=\"adjstmt-dltn-cd-A\"> </a></td><td>Adjustment</td><td>Adjustment</td></tr><tr><td>D<a name=\"adjstmt-dltn-cd-D\"> </a></td><td>Deletion</td><td>Deletion</td></tr><tr><td>R<a name=\"adjstmt-dltn-cd-R\"> </a></td><td>Resubmitted</td><td>Resubmitted</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "/assets/ig/CodeSystem-adjstmt-dltn-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "/assets/ig/CodeSystem-adjstmt-dltn-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Adjustment Deletion Code"];
+  fhir:CodeSystem.title [ fhir:value "Adjustment Deletion Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt_dltn_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "/assets/ig/ValueSet-adjstmt-dltn-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "Blank" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Original PDE" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Original PDE" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "A" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Adjustment" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Adjustment" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "D" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Deletion" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Deletion" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "R" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Resubmitted" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Resubmitted" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+</assets/ig/CodeSystem-adjstmt-dltn-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI </assets/ig/STU3/CodeSystem-adjstmt-dltn-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

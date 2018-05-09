@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="/assets/ig/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2>Dispense as Written (DAW) Product Selection Code</h2>
+
+<p>
+Formats: <a href="ValueSet-daw-prod-slctn-cd.html">Narrative</a>,
+ <a href="ValueSet-daw-prod-slctn-cd.xml.html">XML</a>,
+  <a href="ValueSet-daw-prod-slctn-cd.json.html">JSON</a>,
+   <a href="ValueSet-daw-prod-slctn-cd.ttl.html">Turtle</a>
+</p>
+<p>
+Raw <a href="ValueSet-daw-prod-slctn-cd.ttl" download>ttl</a>
+</p>
+
+<pre class="rdf">
+@prefix fhir: &lt;/assets/ig/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:ValueSet;
+  <a href="/assets/ig/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="/assets/ig/STU3/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="/assets/ig/STU3/datatypes.html#id">fhir:value</a> &quot;daw-prod-slctn-cd&quot;];
+  <a href="/assets/ig/STU3/valueset.html#ValueSet.text">fhir:DomainResource.text</a> [
+     <a href="/assets/ig/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="/assets/ig/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Dispense as Written (DAW) Product Selection Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This field indicates the prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication. Part D plans generally require pharmacies to use generics or the least expensive version of the prescribed drug. However, there are times when a prescriber intends for the beneficiary to receive the drug exactly as it is written on the prescription (e.g., to get the brand-name version of a drug). When there are specific instructions from the prescriber, it is indicated in this variable with a value of 1 or greater. Source: https://bluebutton.cms.gov/resources/variables/daw&lt;em&gt;prod&lt;/em&gt;slctn_cd&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=\&quot;CodeSystem-daw-prod-slctn-cd.html\&quot;&gt;&lt;code&gt;/assets/ig/CodeSystem-daw-prod-slctn-cd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="/assets/ig/STU3/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="/assets/ig/STU3/datatypes.html#uri">fhir:value</a> &quot;/assets/ig/ValueSet-daw-prod-slctn-cd&quot;];
+  <a href="/assets/ig/STU3/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="/assets/ig/STU3/datatypes.html#string">fhir:value</a> &quot;1.1.0&quot;];
+  <a href="/assets/ig/STU3/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="/assets/ig/STU3/datatypes.html#string">fhir:value</a> &quot;Dispense as Written (DAW) Product Selection Code&quot;];
+  <a href="/assets/ig/STU3/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="/assets/ig/STU3/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
+  <a href="/assets/ig/STU3/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="/assets/ig/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-05-07T14:45:05+00:00&quot;^^xsd:dateTime];
+  <a href="/assets/ig/STU3/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="/assets/ig/STU3/datatypes.html#markdown">fhir:value</a> &quot;This field indicates the prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication. Part D plans generally require pharmacies to use generics or the least expensive version of the prescribed drug. However, there are times when a prescriber intends for the beneficiary to receive the drug exactly as it is written on the prescription (e.g., to get the brand-name version of a drug). When there are specific instructions from the prescriber, it is indicated in this variable with a value of 1 or greater. Source: https://bluebutton.cms.gov/resources/variables/daw_prod_slctn_cd&quot;];
+  <a href="/assets/ig/STU3/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
+     <a href="/assets/ig/STU3/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
+       <a href="/assets/ig/STU3/rdf.html#index">fhir:index</a> 0;
+       <a href="/assets/ig/STU3/valueset.html#ValueSet.compose.include.system">fhir:ValueSet.compose.include.system</a> [ <a href="/assets/ig/STU3/datatypes.html#uri">fhir:value</a> &quot;/assets/ig/CodeSystem-daw-prod-slctn-cd&quot; ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="/assets/ig/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="/assets/ig/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+

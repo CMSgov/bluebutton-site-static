@@ -1,0 +1,34 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "line-service-deductible",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Service Deductible Indicator Switch</h2><div><p>Switch indicating whether or not the line item service on the non-institutional claim is subject to a deductible. Source: https://bluebutton.cms.gov/resources/variables/line<em>service</em>deductible</p>\n</div><p>This code system /assets/ig/CodeSystem-line-service-deductible defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"line-service-deductible-0\"> </a></td><td>Service Subject to Deductible</td><td>Service Subject to Deductible</td></tr><tr><td>1<a name=\"line-service-deductible-1\"> </a></td><td>Service Not Subject to Deductible</td><td>Service Not Subject to Deductible</td></tr></table></div>"
+  },
+  "url": "/assets/ig/CodeSystem-line-service-deductible",
+  "identifier": {
+    "value": "/assets/ig/CodeSystem-line-service-deductible"
+  },
+  "version": "1.1.0",
+  "name": "Line Service Deductible Indicator Switch",
+  "title": "Line Service Deductible Indicator Switch",
+  "status": "active",
+  "date": "2018-05-07T14:45:05+00:00",
+  "description": "Switch indicating whether or not the line item service on the non-institutional claim is subject to a deductible. Source: https://bluebutton.cms.gov/resources/variables/line_service_deductible",
+  "caseSensitive": true,
+  "valueSet": "/assets/ig/ValueSet-line-service-deductible",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "0",
+      "display": "Service Subject to Deductible",
+      "definition": "Service Subject to Deductible"
+    },
+    {
+      "code": "1",
+      "display": "Service Not Subject to Deductible",
+      "definition": "Service Not Subject to Deductible"
+    }
+  ]
+}

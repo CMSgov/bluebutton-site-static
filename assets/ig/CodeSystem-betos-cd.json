@@ -1,0 +1,554 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "betos-cd",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Berenson-Eggers Type of Service (BETOS) Code</h2><div><p>The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd</p>\n</div><p>This code system /assets/ig/CodeSystem-betos-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>M1A<a name=\"betos-cd-M1A\"> </a></td><td>Office visits - new</td><td>Office visits - new</td></tr><tr><td>M1B<a name=\"betos-cd-M1B\"> </a></td><td>Office visits - established</td><td>Office visits - established</td></tr><tr><td>M2A<a name=\"betos-cd-M2A\"> </a></td><td>Hospital visit - initial</td><td>Hospital visit - initial</td></tr><tr><td>M2B<a name=\"betos-cd-M2B\"> </a></td><td>Hospital visit - subsequent</td><td>Hospital visit - subsequent</td></tr><tr><td>M2C<a name=\"betos-cd-M2C\"> </a></td><td>Hospital visit - critical care</td><td>Hospital visit - critical care</td></tr><tr><td>M3<a name=\"betos-cd-M3\"> </a></td><td>Emergency room visit</td><td>Emergency room visit</td></tr><tr><td>M4A<a name=\"betos-cd-M4A\"> </a></td><td>Home visit</td><td>Home visit</td></tr><tr><td>M4B<a name=\"betos-cd-M4B\"> </a></td><td>Nursing home visit</td><td>Nursing home visit</td></tr><tr><td>M5A<a name=\"betos-cd-M5A\"> </a></td><td>Specialist - pathology</td><td>Specialist - pathology</td></tr><tr><td>M5B<a name=\"betos-cd-M5B\"> </a></td><td>Specialist - psychiatry</td><td>Specialist - psychiatry</td></tr><tr><td>M5C<a name=\"betos-cd-M5C\"> </a></td><td>Specialist - ophthalmology</td><td>Specialist - ophthalmology</td></tr><tr><td>M5D<a name=\"betos-cd-M5D\"> </a></td><td>Specialist - other</td><td>Specialist - other</td></tr><tr><td>M6<a name=\"betos-cd-M6\"> </a></td><td>Consultations</td><td>Consultations</td></tr><tr><td>P0<a name=\"betos-cd-P0\"> </a></td><td>Anesthesia</td><td>Anesthesia</td></tr><tr><td>P1A<a name=\"betos-cd-P1A\"> </a></td><td>Major procedure - breast</td><td>Major procedure - breast</td></tr><tr><td>P1B<a name=\"betos-cd-P1B\"> </a></td><td>Major procedure - colectomy</td><td>Major procedure - colectomy</td></tr><tr><td>P1C<a name=\"betos-cd-P1C\"> </a></td><td>Major procedure - cholecystectomy</td><td>Major procedure - cholecystectomy</td></tr><tr><td>P1D<a name=\"betos-cd-P1D\"> </a></td><td>Major procedure - turp</td><td>Major procedure - turp</td></tr><tr><td>P1E<a name=\"betos-cd-P1E\"> </a></td><td>Major procedure - hysterectomy</td><td>Major procedure - hysterectomy</td></tr><tr><td>P1F<a name=\"betos-cd-P1F\"> </a></td><td>Major procedure - explor/decompr/excisdisc</td><td>Major procedure - explor/decompr/excisdisc</td></tr><tr><td>P1G<a name=\"betos-cd-P1G\"> </a></td><td>Major procedure - Other</td><td>Major procedure - Other</td></tr><tr><td>P2A<a name=\"betos-cd-P2A\"> </a></td><td>Major procedure, cardiovascular-CABG</td><td>Major procedure, cardiovascular-CABG</td></tr><tr><td>P2B<a name=\"betos-cd-P2B\"> </a></td><td>Major procedure, cardiovascular-Aneurysm repair</td><td>Major procedure, cardiovascular-Aneurysm repair</td></tr><tr><td>P2C<a name=\"betos-cd-P2C\"> </a></td><td>Major Procedure, cardiovascular-Thromboendarterectomy</td><td>Major Procedure, cardiovascular-Thromboendarterectomy</td></tr><tr><td>P2D<a name=\"betos-cd-P2D\"> </a></td><td>Major procedure, cardiovascualr-Coronary angioplasty (PTCA)</td><td>Major procedure, cardiovascualr-Coronary angioplasty (PTCA)</td></tr><tr><td>P2E<a name=\"betos-cd-P2E\"> </a></td><td>Major procedure, cardiovascular-Pacemaker insertion</td><td>Major procedure, cardiovascular-Pacemaker insertion</td></tr><tr><td>P2F<a name=\"betos-cd-P2F\"> </a></td><td>Major procedure, cardiovascular-Other</td><td>Major procedure, cardiovascular-Other</td></tr><tr><td>P3A<a name=\"betos-cd-P3A\"> </a></td><td>Major procedure, orthopedic - Hip fracture repair</td><td>Major procedure, orthopedic - Hip fracture repair</td></tr><tr><td>P3B<a name=\"betos-cd-P3B\"> </a></td><td>Major procedure, orthopedic - Hip replacement</td><td>Major procedure, orthopedic - Hip replacement</td></tr><tr><td>P3C<a name=\"betos-cd-P3C\"> </a></td><td>Major procedure, orthopedic - Knee replacement</td><td>Major procedure, orthopedic - Knee replacement</td></tr><tr><td>P3D<a name=\"betos-cd-P3D\"> </a></td><td>Major procedure, orthopedic - other</td><td>Major procedure, orthopedic - other</td></tr><tr><td>P4A<a name=\"betos-cd-P4A\"> </a></td><td>Eye procedure - corneal transplant</td><td>Eye procedure - corneal transplant</td></tr><tr><td>P4B<a name=\"betos-cd-P4B\"> </a></td><td>Eye procedure - cataract removal/lens insertion</td><td>Eye procedure - cataract removal/lens insertion</td></tr><tr><td>P4C<a name=\"betos-cd-P4C\"> </a></td><td>Eye procedure - retinal detachment</td><td>Eye procedure - retinal detachment</td></tr><tr><td>P4D<a name=\"betos-cd-P4D\"> </a></td><td>Eye procedure - treatment of retinal lesions</td><td>Eye procedure - treatment of retinal lesions</td></tr><tr><td>P4E<a name=\"betos-cd-P4E\"> </a></td><td>Eye procedure - other</td><td>Eye procedure - other</td></tr><tr><td>P5A<a name=\"betos-cd-P5A\"> </a></td><td>Ambulatory procedures - skin</td><td>Ambulatory procedures - skin</td></tr><tr><td>P5B<a name=\"betos-cd-P5B\"> </a></td><td>Ambulatory procedures - musculoskeletal</td><td>Ambulatory procedures - musculoskeletal</td></tr><tr><td>P5C<a name=\"betos-cd-P5C\"> </a></td><td>Ambulatory procedures - inguinal hernia repair</td><td>Ambulatory procedures - inguinal hernia repair</td></tr><tr><td>P5D<a name=\"betos-cd-P5D\"> </a></td><td>Ambulatory procedures - lithotripsy</td><td>Ambulatory procedures - lithotripsy</td></tr><tr><td>P5E<a name=\"betos-cd-P5E\"> </a></td><td>Ambulatory procedures - other</td><td>Ambulatory procedures - other</td></tr><tr><td>P6A<a name=\"betos-cd-P6A\"> </a></td><td>Minor procedures - skin</td><td>Minor procedures - skin</td></tr><tr><td>P6B<a name=\"betos-cd-P6B\"> </a></td><td>Minor procedures - musculoskeletal</td><td>Minor procedures - musculoskeletal</td></tr><tr><td>P6C<a name=\"betos-cd-P6C\"> </a></td><td>Minor procedures - other (Medicare fee schedule)</td><td>Minor procedures - other (Medicare fee schedule)</td></tr><tr><td>P6D<a name=\"betos-cd-P6D\"> </a></td><td>Minor procedures - other (non-Medicare fee schedule)</td><td>Minor procedures - other (non-Medicare fee schedule)</td></tr><tr><td>P7A<a name=\"betos-cd-P7A\"> </a></td><td>Oncology - radiation therapy</td><td>Oncology - radiation therapy</td></tr><tr><td>P7B<a name=\"betos-cd-P7B\"> </a></td><td>Oncology - other</td><td>Oncology - other</td></tr><tr><td>P8A<a name=\"betos-cd-P8A\"> </a></td><td>Endoscopy - arthroscopy</td><td>Endoscopy - arthroscopy</td></tr><tr><td>P8B<a name=\"betos-cd-P8B\"> </a></td><td>Endoscopy - upper gastrointestinal</td><td>Endoscopy - upper gastrointestinal</td></tr><tr><td>P8C<a name=\"betos-cd-P8C\"> </a></td><td>Endoscopy - sigmoidoscopy</td><td>Endoscopy - sigmoidoscopy</td></tr><tr><td>P8D<a name=\"betos-cd-P8D\"> </a></td><td>Endoscopy - colonoscopy</td><td>Endoscopy - colonoscopy</td></tr><tr><td>P8E<a name=\"betos-cd-P8E\"> </a></td><td>Endoscopy - cystoscopy</td><td>Endoscopy - cystoscopy</td></tr><tr><td>P8F<a name=\"betos-cd-P8F\"> </a></td><td>Endoscopy - bronchoscopy</td><td>Endoscopy - bronchoscopy</td></tr><tr><td>P8G<a name=\"betos-cd-P8G\"> </a></td><td>Endoscopy - laparoscopic cholecystectomy</td><td>Endoscopy - laparoscopic cholecystectomy</td></tr><tr><td>P8H<a name=\"betos-cd-P8H\"> </a></td><td>Endoscopy - laryngoscopy</td><td>Endoscopy - laryngoscopy</td></tr><tr><td>P8I<a name=\"betos-cd-P8I\"> </a></td><td>Endoscopy - other</td><td>Endoscopy - other</td></tr><tr><td>P9A<a name=\"betos-cd-P9A\"> </a></td><td>Dialysis services (Medicare fee schedule)</td><td>Dialysis services (Medicare fee schedule)</td></tr><tr><td>P9B<a name=\"betos-cd-P9B\"> </a></td><td>Dialysis services (non-Medicare fee schedule)</td><td>Dialysis services (non-Medicare fee schedule)</td></tr><tr><td>I1A<a name=\"betos-cd-I1A\"> </a></td><td>Standard imaging - chest</td><td>Standard imaging - chest</td></tr><tr><td>I1B<a name=\"betos-cd-I1B\"> </a></td><td>Standard imaging - musculoskeletal</td><td>Standard imaging - musculoskeletal</td></tr><tr><td>I1C<a name=\"betos-cd-I1C\"> </a></td><td>Standard imaging - breast</td><td>Standard imaging - breast</td></tr><tr><td>I1D<a name=\"betos-cd-I1D\"> </a></td><td>Standard imaging - contrast gastrointestinal</td><td>Standard imaging - contrast gastrointestinal</td></tr><tr><td>I1E<a name=\"betos-cd-I1E\"> </a></td><td>Standard imaging - nuclear medicine</td><td>Standard imaging - nuclear medicine</td></tr><tr><td>I1F<a name=\"betos-cd-I1F\"> </a></td><td>Standard imaging - other</td><td>Standard imaging - other</td></tr><tr><td>I2A<a name=\"betos-cd-I2A\"> </a></td><td>Advanced imaging - CAT/CT/CTA: brain/head/neck</td><td>Advanced imaging - CAT/CT/CTA: brain/head/neck</td></tr><tr><td>I2B<a name=\"betos-cd-I2B\"> </a></td><td>Advanced imaging - CAT/CT/CTA: other</td><td>Advanced imaging - CAT/CT/CTA: other</td></tr><tr><td>I2C<a name=\"betos-cd-I2C\"> </a></td><td>Advanced imaging - MRI/MRA: brain/head/neck</td><td>Advanced imaging - MRI/MRA: brain/head/neck</td></tr><tr><td>I2D<a name=\"betos-cd-I2D\"> </a></td><td>Advanced imaging - MRI/MRA: other</td><td>Advanced imaging - MRI/MRA: other</td></tr><tr><td>I3A<a name=\"betos-cd-I3A\"> </a></td><td>Echography/ultrasonography - eye</td><td>Echography/ultrasonography - eye</td></tr><tr><td>I3B<a name=\"betos-cd-I3B\"> </a></td><td>Echography/ultrasonography - abdomen/pelvis</td><td>Echography/ultrasonography - abdomen/pelvis</td></tr><tr><td>I3C<a name=\"betos-cd-I3C\"> </a></td><td>Echography/ultrasonography - heart</td><td>Echography/ultrasonography - heart</td></tr><tr><td>I3D<a name=\"betos-cd-I3D\"> </a></td><td>Echography/ultrasonography - carotid arteries</td><td>Echography/ultrasonography - carotid arteries</td></tr><tr><td>I3E<a name=\"betos-cd-I3E\"> </a></td><td>Echography/ultrasonography - prostate, transrectal</td><td>Echography/ultrasonography - prostate, transrectal</td></tr><tr><td>I3F<a name=\"betos-cd-I3F\"> </a></td><td>Echography/ultrasonography - other</td><td>Echography/ultrasonography - other</td></tr><tr><td>I4A<a name=\"betos-cd-I4A\"> </a></td><td>Imaging/procedure - heart including cardiac catheterization</td><td>Imaging/procedure - heart including cardiac catheterization</td></tr><tr><td>I4B<a name=\"betos-cd-I4B\"> </a></td><td>Imaging/procedure - other</td><td>Imaging/procedure - other</td></tr><tr><td>T1A<a name=\"betos-cd-T1A\"> </a></td><td>Lab tests - routine venipuncture (non-Medicare fee schedule)</td><td>Lab tests - routine venipuncture (non-Medicare fee schedule)</td></tr><tr><td>T1B<a name=\"betos-cd-T1B\"> </a></td><td>Lab tests - automated general profiles</td><td>Lab tests - automated general profiles</td></tr><tr><td>T1C<a name=\"betos-cd-T1C\"> </a></td><td>Lab tests - urinalysis</td><td>Lab tests - urinalysis</td></tr><tr><td>T1D<a name=\"betos-cd-T1D\"> </a></td><td>Lab tests - blood counts</td><td>Lab tests - blood counts</td></tr><tr><td>T1E<a name=\"betos-cd-T1E\"> </a></td><td>Lab tests - glucose</td><td>Lab tests - glucose</td></tr><tr><td>T1F<a name=\"betos-cd-T1F\"> </a></td><td>Lab tests - bacterial cultures</td><td>Lab tests - bacterial cultures</td></tr><tr><td>T1G<a name=\"betos-cd-T1G\"> </a></td><td>Lab tests - other (Medicare fee schedule)</td><td>Lab tests - other (Medicare fee schedule)</td></tr><tr><td>T1H<a name=\"betos-cd-T1H\"> </a></td><td>Lab tests - other (non-Medicare fee schedule)</td><td>Lab tests - other (non-Medicare fee schedule)</td></tr><tr><td>T2A<a name=\"betos-cd-T2A\"> </a></td><td>Other tests - electrocardiograms</td><td>Other tests - electrocardiograms</td></tr><tr><td>T2B<a name=\"betos-cd-T2B\"> </a></td><td>Other tests - cardiovascular stress tests</td><td>Other tests - cardiovascular stress tests</td></tr><tr><td>T2C<a name=\"betos-cd-T2C\"> </a></td><td>Other tests - EKG monitoring</td><td>Other tests - EKG monitoring</td></tr><tr><td>T2D<a name=\"betos-cd-T2D\"> </a></td><td>Other tests - other</td><td>Other tests - other</td></tr><tr><td>D1A<a name=\"betos-cd-D1A\"> </a></td><td>Medical/surgical supplies</td><td>Medical/surgical supplies</td></tr><tr><td>D1B<a name=\"betos-cd-D1B\"> </a></td><td>Hospital beds</td><td>Hospital beds</td></tr><tr><td>D1C<a name=\"betos-cd-D1C\"> </a></td><td>Oxygen and supplies</td><td>Oxygen and supplies</td></tr><tr><td>D1D<a name=\"betos-cd-D1D\"> </a></td><td>Wheelchairs</td><td>Wheelchairs</td></tr><tr><td>D1E<a name=\"betos-cd-D1E\"> </a></td><td>Other DME</td><td>Other DME</td></tr><tr><td>D1F<a name=\"betos-cd-D1F\"> </a></td><td>Prosthetic/Orthotic devices</td><td>Prosthetic/Orthotic devices</td></tr><tr><td>D1G<a name=\"betos-cd-D1G\"> </a></td><td>Drugs Administered through DME</td><td>Drugs Administered through DME</td></tr><tr><td>O1A<a name=\"betos-cd-O1A\"> </a></td><td>Ambulance</td><td>Ambulance</td></tr><tr><td>O1B<a name=\"betos-cd-O1B\"> </a></td><td>Chiropractic</td><td>Chiropractic</td></tr><tr><td>O1C<a name=\"betos-cd-O1C\"> </a></td><td>Enteral and parenteral</td><td>Enteral and parenteral</td></tr><tr><td>O1D<a name=\"betos-cd-O1D\"> </a></td><td>Chemotherapy</td><td>Chemotherapy</td></tr><tr><td>O1E<a name=\"betos-cd-O1E\"> </a></td><td>Other drugs</td><td>Other drugs</td></tr><tr><td>O1F<a name=\"betos-cd-O1F\"> </a></td><td>Hearing and speech services</td><td>Hearing and speech services</td></tr><tr><td>O1G<a name=\"betos-cd-O1G\"> </a></td><td>Immunizations/Vaccinations</td><td>Immunizations/Vaccinations</td></tr><tr><td>Y1<a name=\"betos-cd-Y1\"> </a></td><td>Other - Medicare fee schedule</td><td>Other - Medicare fee schedule</td></tr><tr><td>Y2<a name=\"betos-cd-Y2\"> </a></td><td>Other - non-Medicare fee schedule</td><td>Other - non-Medicare fee schedule</td></tr><tr><td>Z1<a name=\"betos-cd-Z1\"> </a></td><td>Local codes</td><td>Local codes</td></tr><tr><td>Z2<a name=\"betos-cd-Z2\"> </a></td><td>Undefined codes</td><td>Undefined codes</td></tr></table></div>"
+  },
+  "url": "/assets/ig/CodeSystem-betos-cd",
+  "identifier": {
+    "value": "/assets/ig/CodeSystem-betos-cd"
+  },
+  "version": "1.1.0",
+  "name": "Line Berenson-Eggers Type of Service (BETOS) Code",
+  "title": "Line Berenson-Eggers Type of Service (BETOS) Code",
+  "status": "active",
+  "date": "2018-05-07T14:45:05+00:00",
+  "description": "The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd",
+  "caseSensitive": true,
+  "valueSet": "/assets/ig/ValueSet-betos-cd",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "M1A",
+      "display": "Office visits - new",
+      "definition": "Office visits - new"
+    },
+    {
+      "code": "M1B",
+      "display": "Office visits - established",
+      "definition": "Office visits - established"
+    },
+    {
+      "code": "M2A",
+      "display": "Hospital visit - initial",
+      "definition": "Hospital visit - initial"
+    },
+    {
+      "code": "M2B",
+      "display": "Hospital visit - subsequent",
+      "definition": "Hospital visit - subsequent"
+    },
+    {
+      "code": "M2C",
+      "display": "Hospital visit - critical care",
+      "definition": "Hospital visit - critical care"
+    },
+    {
+      "code": "M3",
+      "display": "Emergency room visit",
+      "definition": "Emergency room visit"
+    },
+    {
+      "code": "M4A",
+      "display": "Home visit",
+      "definition": "Home visit"
+    },
+    {
+      "code": "M4B",
+      "display": "Nursing home visit",
+      "definition": "Nursing home visit"
+    },
+    {
+      "code": "M5A",
+      "display": "Specialist - pathology",
+      "definition": "Specialist - pathology"
+    },
+    {
+      "code": "M5B",
+      "display": "Specialist - psychiatry",
+      "definition": "Specialist - psychiatry"
+    },
+    {
+      "code": "M5C",
+      "display": "Specialist - ophthalmology",
+      "definition": "Specialist - ophthalmology"
+    },
+    {
+      "code": "M5D",
+      "display": "Specialist - other",
+      "definition": "Specialist - other"
+    },
+    {
+      "code": "M6",
+      "display": "Consultations",
+      "definition": "Consultations"
+    },
+    {
+      "code": "P0",
+      "display": "Anesthesia",
+      "definition": "Anesthesia"
+    },
+    {
+      "code": "P1A",
+      "display": "Major procedure - breast",
+      "definition": "Major procedure - breast"
+    },
+    {
+      "code": "P1B",
+      "display": "Major procedure - colectomy",
+      "definition": "Major procedure - colectomy"
+    },
+    {
+      "code": "P1C",
+      "display": "Major procedure - cholecystectomy",
+      "definition": "Major procedure - cholecystectomy"
+    },
+    {
+      "code": "P1D",
+      "display": "Major procedure - turp",
+      "definition": "Major procedure - turp"
+    },
+    {
+      "code": "P1E",
+      "display": "Major procedure - hysterectomy",
+      "definition": "Major procedure - hysterectomy"
+    },
+    {
+      "code": "P1F",
+      "display": "Major procedure - explor/decompr/excisdisc",
+      "definition": "Major procedure - explor/decompr/excisdisc"
+    },
+    {
+      "code": "P1G",
+      "display": "Major procedure - Other",
+      "definition": "Major procedure - Other"
+    },
+    {
+      "code": "P2A",
+      "display": "Major procedure, cardiovascular-CABG",
+      "definition": "Major procedure, cardiovascular-CABG"
+    },
+    {
+      "code": "P2B",
+      "display": "Major procedure, cardiovascular-Aneurysm repair",
+      "definition": "Major procedure, cardiovascular-Aneurysm repair"
+    },
+    {
+      "code": "P2C",
+      "display": "Major Procedure, cardiovascular-Thromboendarterectomy",
+      "definition": "Major Procedure, cardiovascular-Thromboendarterectomy"
+    },
+    {
+      "code": "P2D",
+      "display": "Major procedure, cardiovascualr-Coronary angioplasty (PTCA)",
+      "definition": "Major procedure, cardiovascualr-Coronary angioplasty (PTCA)"
+    },
+    {
+      "code": "P2E",
+      "display": "Major procedure, cardiovascular-Pacemaker insertion",
+      "definition": "Major procedure, cardiovascular-Pacemaker insertion"
+    },
+    {
+      "code": "P2F",
+      "display": "Major procedure, cardiovascular-Other",
+      "definition": "Major procedure, cardiovascular-Other"
+    },
+    {
+      "code": "P3A",
+      "display": "Major procedure, orthopedic - Hip fracture repair",
+      "definition": "Major procedure, orthopedic - Hip fracture repair"
+    },
+    {
+      "code": "P3B",
+      "display": "Major procedure, orthopedic - Hip replacement",
+      "definition": "Major procedure, orthopedic - Hip replacement"
+    },
+    {
+      "code": "P3C",
+      "display": "Major procedure, orthopedic - Knee replacement",
+      "definition": "Major procedure, orthopedic - Knee replacement"
+    },
+    {
+      "code": "P3D",
+      "display": "Major procedure, orthopedic - other",
+      "definition": "Major procedure, orthopedic - other"
+    },
+    {
+      "code": "P4A",
+      "display": "Eye procedure - corneal transplant",
+      "definition": "Eye procedure - corneal transplant"
+    },
+    {
+      "code": "P4B",
+      "display": "Eye procedure - cataract removal/lens insertion",
+      "definition": "Eye procedure - cataract removal/lens insertion"
+    },
+    {
+      "code": "P4C",
+      "display": "Eye procedure - retinal detachment",
+      "definition": "Eye procedure - retinal detachment"
+    },
+    {
+      "code": "P4D",
+      "display": "Eye procedure - treatment of retinal lesions",
+      "definition": "Eye procedure - treatment of retinal lesions"
+    },
+    {
+      "code": "P4E",
+      "display": "Eye procedure - other",
+      "definition": "Eye procedure - other"
+    },
+    {
+      "code": "P5A",
+      "display": "Ambulatory procedures - skin",
+      "definition": "Ambulatory procedures - skin"
+    },
+    {
+      "code": "P5B",
+      "display": "Ambulatory procedures - musculoskeletal",
+      "definition": "Ambulatory procedures - musculoskeletal"
+    },
+    {
+      "code": "P5C",
+      "display": "Ambulatory procedures - inguinal hernia repair",
+      "definition": "Ambulatory procedures - inguinal hernia repair"
+    },
+    {
+      "code": "P5D",
+      "display": "Ambulatory procedures - lithotripsy",
+      "definition": "Ambulatory procedures - lithotripsy"
+    },
+    {
+      "code": "P5E",
+      "display": "Ambulatory procedures - other",
+      "definition": "Ambulatory procedures - other"
+    },
+    {
+      "code": "P6A",
+      "display": "Minor procedures - skin",
+      "definition": "Minor procedures - skin"
+    },
+    {
+      "code": "P6B",
+      "display": "Minor procedures - musculoskeletal",
+      "definition": "Minor procedures - musculoskeletal"
+    },
+    {
+      "code": "P6C",
+      "display": "Minor procedures - other (Medicare fee schedule)",
+      "definition": "Minor procedures - other (Medicare fee schedule)"
+    },
+    {
+      "code": "P6D",
+      "display": "Minor procedures - other (non-Medicare fee schedule)",
+      "definition": "Minor procedures - other (non-Medicare fee schedule)"
+    },
+    {
+      "code": "P7A",
+      "display": "Oncology - radiation therapy",
+      "definition": "Oncology - radiation therapy"
+    },
+    {
+      "code": "P7B",
+      "display": "Oncology - other",
+      "definition": "Oncology - other"
+    },
+    {
+      "code": "P8A",
+      "display": "Endoscopy - arthroscopy",
+      "definition": "Endoscopy - arthroscopy"
+    },
+    {
+      "code": "P8B",
+      "display": "Endoscopy - upper gastrointestinal",
+      "definition": "Endoscopy - upper gastrointestinal"
+    },
+    {
+      "code": "P8C",
+      "display": "Endoscopy - sigmoidoscopy",
+      "definition": "Endoscopy - sigmoidoscopy"
+    },
+    {
+      "code": "P8D",
+      "display": "Endoscopy - colonoscopy",
+      "definition": "Endoscopy - colonoscopy"
+    },
+    {
+      "code": "P8E",
+      "display": "Endoscopy - cystoscopy",
+      "definition": "Endoscopy - cystoscopy"
+    },
+    {
+      "code": "P8F",
+      "display": "Endoscopy - bronchoscopy",
+      "definition": "Endoscopy - bronchoscopy"
+    },
+    {
+      "code": "P8G",
+      "display": "Endoscopy - laparoscopic cholecystectomy",
+      "definition": "Endoscopy - laparoscopic cholecystectomy"
+    },
+    {
+      "code": "P8H",
+      "display": "Endoscopy - laryngoscopy",
+      "definition": "Endoscopy - laryngoscopy"
+    },
+    {
+      "code": "P8I",
+      "display": "Endoscopy - other",
+      "definition": "Endoscopy - other"
+    },
+    {
+      "code": "P9A",
+      "display": "Dialysis services (Medicare fee schedule)",
+      "definition": "Dialysis services (Medicare fee schedule)"
+    },
+    {
+      "code": "P9B",
+      "display": "Dialysis services (non-Medicare fee schedule)",
+      "definition": "Dialysis services (non-Medicare fee schedule)"
+    },
+    {
+      "code": "I1A",
+      "display": "Standard imaging - chest",
+      "definition": "Standard imaging - chest"
+    },
+    {
+      "code": "I1B",
+      "display": "Standard imaging - musculoskeletal",
+      "definition": "Standard imaging - musculoskeletal"
+    },
+    {
+      "code": "I1C",
+      "display": "Standard imaging - breast",
+      "definition": "Standard imaging - breast"
+    },
+    {
+      "code": "I1D",
+      "display": "Standard imaging - contrast gastrointestinal",
+      "definition": "Standard imaging - contrast gastrointestinal"
+    },
+    {
+      "code": "I1E",
+      "display": "Standard imaging - nuclear medicine",
+      "definition": "Standard imaging - nuclear medicine"
+    },
+    {
+      "code": "I1F",
+      "display": "Standard imaging - other",
+      "definition": "Standard imaging - other"
+    },
+    {
+      "code": "I2A",
+      "display": "Advanced imaging - CAT/CT/CTA: brain/head/neck",
+      "definition": "Advanced imaging - CAT/CT/CTA: brain/head/neck"
+    },
+    {
+      "code": "I2B",
+      "display": "Advanced imaging - CAT/CT/CTA: other",
+      "definition": "Advanced imaging - CAT/CT/CTA: other"
+    },
+    {
+      "code": "I2C",
+      "display": "Advanced imaging - MRI/MRA: brain/head/neck",
+      "definition": "Advanced imaging - MRI/MRA: brain/head/neck"
+    },
+    {
+      "code": "I2D",
+      "display": "Advanced imaging - MRI/MRA: other",
+      "definition": "Advanced imaging - MRI/MRA: other"
+    },
+    {
+      "code": "I3A",
+      "display": "Echography/ultrasonography - eye",
+      "definition": "Echography/ultrasonography - eye"
+    },
+    {
+      "code": "I3B",
+      "display": "Echography/ultrasonography - abdomen/pelvis",
+      "definition": "Echography/ultrasonography - abdomen/pelvis"
+    },
+    {
+      "code": "I3C",
+      "display": "Echography/ultrasonography - heart",
+      "definition": "Echography/ultrasonography - heart"
+    },
+    {
+      "code": "I3D",
+      "display": "Echography/ultrasonography - carotid arteries",
+      "definition": "Echography/ultrasonography - carotid arteries"
+    },
+    {
+      "code": "I3E",
+      "display": "Echography/ultrasonography - prostate, transrectal",
+      "definition": "Echography/ultrasonography - prostate, transrectal"
+    },
+    {
+      "code": "I3F",
+      "display": "Echography/ultrasonography - other",
+      "definition": "Echography/ultrasonography - other"
+    },
+    {
+      "code": "I4A",
+      "display": "Imaging/procedure - heart including cardiac catheterization",
+      "definition": "Imaging/procedure - heart including cardiac catheterization"
+    },
+    {
+      "code": "I4B",
+      "display": "Imaging/procedure - other",
+      "definition": "Imaging/procedure - other"
+    },
+    {
+      "code": "T1A",
+      "display": "Lab tests - routine venipuncture (non-Medicare fee schedule)",
+      "definition": "Lab tests - routine venipuncture (non-Medicare fee schedule)"
+    },
+    {
+      "code": "T1B",
+      "display": "Lab tests - automated general profiles",
+      "definition": "Lab tests - automated general profiles"
+    },
+    {
+      "code": "T1C",
+      "display": "Lab tests - urinalysis",
+      "definition": "Lab tests - urinalysis"
+    },
+    {
+      "code": "T1D",
+      "display": "Lab tests - blood counts",
+      "definition": "Lab tests - blood counts"
+    },
+    {
+      "code": "T1E",
+      "display": "Lab tests - glucose",
+      "definition": "Lab tests - glucose"
+    },
+    {
+      "code": "T1F",
+      "display": "Lab tests - bacterial cultures",
+      "definition": "Lab tests - bacterial cultures"
+    },
+    {
+      "code": "T1G",
+      "display": "Lab tests - other (Medicare fee schedule)",
+      "definition": "Lab tests - other (Medicare fee schedule)"
+    },
+    {
+      "code": "T1H",
+      "display": "Lab tests - other (non-Medicare fee schedule)",
+      "definition": "Lab tests - other (non-Medicare fee schedule)"
+    },
+    {
+      "code": "T2A",
+      "display": "Other tests - electrocardiograms",
+      "definition": "Other tests - electrocardiograms"
+    },
+    {
+      "code": "T2B",
+      "display": "Other tests - cardiovascular stress tests",
+      "definition": "Other tests - cardiovascular stress tests"
+    },
+    {
+      "code": "T2C",
+      "display": "Other tests - EKG monitoring",
+      "definition": "Other tests - EKG monitoring"
+    },
+    {
+      "code": "T2D",
+      "display": "Other tests - other",
+      "definition": "Other tests - other"
+    },
+    {
+      "code": "D1A",
+      "display": "Medical/surgical supplies",
+      "definition": "Medical/surgical supplies"
+    },
+    {
+      "code": "D1B",
+      "display": "Hospital beds",
+      "definition": "Hospital beds"
+    },
+    {
+      "code": "D1C",
+      "display": "Oxygen and supplies",
+      "definition": "Oxygen and supplies"
+    },
+    {
+      "code": "D1D",
+      "display": "Wheelchairs",
+      "definition": "Wheelchairs"
+    },
+    {
+      "code": "D1E",
+      "display": "Other DME",
+      "definition": "Other DME"
+    },
+    {
+      "code": "D1F",
+      "display": "Prosthetic/Orthotic devices",
+      "definition": "Prosthetic/Orthotic devices"
+    },
+    {
+      "code": "D1G",
+      "display": "Drugs Administered through DME",
+      "definition": "Drugs Administered through DME"
+    },
+    {
+      "code": "O1A",
+      "display": "Ambulance",
+      "definition": "Ambulance"
+    },
+    {
+      "code": "O1B",
+      "display": "Chiropractic",
+      "definition": "Chiropractic"
+    },
+    {
+      "code": "O1C",
+      "display": "Enteral and parenteral",
+      "definition": "Enteral and parenteral"
+    },
+    {
+      "code": "O1D",
+      "display": "Chemotherapy",
+      "definition": "Chemotherapy"
+    },
+    {
+      "code": "O1E",
+      "display": "Other drugs",
+      "definition": "Other drugs"
+    },
+    {
+      "code": "O1F",
+      "display": "Hearing and speech services",
+      "definition": "Hearing and speech services"
+    },
+    {
+      "code": "O1G",
+      "display": "Immunizations/Vaccinations",
+      "definition": "Immunizations/Vaccinations"
+    },
+    {
+      "code": "Y1",
+      "display": "Other - Medicare fee schedule",
+      "definition": "Other - Medicare fee schedule"
+    },
+    {
+      "code": "Y2",
+      "display": "Other - non-Medicare fee schedule",
+      "definition": "Other - non-Medicare fee schedule"
+    },
+    {
+      "code": "Z1",
+      "display": "Local codes",
+      "definition": "Local codes"
+    },
+    {
+      "code": "Z2",
+      "display": "Undefined codes",
+      "definition": "Undefined codes"
+    }
+  ]
+}

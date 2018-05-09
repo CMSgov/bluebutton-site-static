@@ -1,0 +1,104 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "ptnt-rsdnc-cd",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient Residence Code</h2><div><p>This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt<em>rsdnc</em>cd</p>\n</div><p>This code system /assets/ig/CodeSystem-ptnt-rsdnc-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>00<a name=\"ptnt-rsdnc-cd-00\"> </a></td><td>Not specified, other patient residence not identified below</td><td>Not specified, other patient residence not identified below</td></tr><tr><td>01<a name=\"ptnt-rsdnc-cd-01\"> </a></td><td>Home</td><td>Home</td></tr><tr><td>02<a name=\"ptnt-rsdnc-cd-02\"> </a></td><td>Skilled Nursing Facility</td><td>Skilled Nursing Facility</td></tr><tr><td>03<a name=\"ptnt-rsdnc-cd-03\"> </a></td><td>Nursing facility (long-term care facility)</td><td>Nursing facility (long-term care facility)</td></tr><tr><td>04<a name=\"ptnt-rsdnc-cd-04\"> </a></td><td>Assisted living facility</td><td>Assisted living facility</td></tr><tr><td>05<a name=\"ptnt-rsdnc-cd-05\"> </a></td><td>Custodial Care Facility (residential but not medical care)</td><td>Custodial Care Facility (residential but not medical care)</td></tr><tr><td>06<a name=\"ptnt-rsdnc-cd-06\"> </a></td><td>Group home (e.g., congregate residential foster care)</td><td>Group home (e.g., congregate residential foster care)</td></tr><tr><td>07<a name=\"ptnt-rsdnc-cd-07\"> </a></td><td>Inpatient Psychiatric Facility</td><td>Inpatient Psychiatric Facility</td></tr><tr><td>08<a name=\"ptnt-rsdnc-cd-08\"> </a></td><td>Psychiatric Facility – Partial Hospitalization</td><td>Psychiatric Facility – Partial Hospitalization</td></tr><tr><td>09<a name=\"ptnt-rsdnc-cd-09\"> </a></td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td></tr><tr><td>10<a name=\"ptnt-rsdnc-cd-10\"> </a></td><td>Residential Substance Abuse Treatment Facility</td><td>Residential Substance Abuse Treatment Facility</td></tr><tr><td>11<a name=\"ptnt-rsdnc-cd-11\"> </a></td><td>Hospice</td><td>Hospice</td></tr><tr><td>12<a name=\"ptnt-rsdnc-cd-12\"> </a></td><td>Psychiatric Residential Treatment Facility</td><td>Psychiatric Residential Treatment Facility</td></tr><tr><td>13<a name=\"ptnt-rsdnc-cd-13\"> </a></td><td>Comprehensive Inpatient Rehabilitation Facility</td><td>Comprehensive Inpatient Rehabilitation Facility</td></tr><tr><td>14<a name=\"ptnt-rsdnc-cd-14\"> </a></td><td>Homeless Shelter</td><td>Homeless Shelter</td></tr><tr><td>15<a name=\"ptnt-rsdnc-cd-15\"> </a></td><td>Correctional Institution</td><td>Correctional Institution</td></tr></table></div>"
+  },
+  "url": "/assets/ig/CodeSystem-ptnt-rsdnc-cd",
+  "identifier": {
+    "value": "/assets/ig/CodeSystem-ptnt-rsdnc-cd"
+  },
+  "version": "1.1.0",
+  "name": "Patient Residence Code",
+  "title": "Patient Residence Code",
+  "status": "active",
+  "date": "2018-05-07T14:45:05+00:00",
+  "description": "This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt_rsdnc_cd",
+  "caseSensitive": true,
+  "valueSet": "/assets/ig/ValueSet-ptnt-rsdnc-cd",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "00",
+      "display": "Not specified, other patient residence not identified below",
+      "definition": "Not specified, other patient residence not identified below"
+    },
+    {
+      "code": "01",
+      "display": "Home",
+      "definition": "Home"
+    },
+    {
+      "code": "02",
+      "display": "Skilled Nursing Facility",
+      "definition": "Skilled Nursing Facility"
+    },
+    {
+      "code": "03",
+      "display": "Nursing facility (long-term care facility)",
+      "definition": "Nursing facility (long-term care facility)"
+    },
+    {
+      "code": "04",
+      "display": "Assisted living facility",
+      "definition": "Assisted living facility"
+    },
+    {
+      "code": "05",
+      "display": "Custodial Care Facility (residential but not medical care)",
+      "definition": "Custodial Care Facility (residential but not medical care)"
+    },
+    {
+      "code": "06",
+      "display": "Group home (e.g., congregate residential foster care)",
+      "definition": "Group home (e.g., congregate residential foster care)"
+    },
+    {
+      "code": "07",
+      "display": "Inpatient Psychiatric Facility",
+      "definition": "Inpatient Psychiatric Facility"
+    },
+    {
+      "code": "08",
+      "display": "Psychiatric Facility – Partial Hospitalization",
+      "definition": "Psychiatric Facility – Partial Hospitalization"
+    },
+    {
+      "code": "09",
+      "display": "Intermediate care facility for the mentally retarded (ICF/MR)",
+      "definition": "Intermediate care facility for the mentally retarded (ICF/MR)"
+    },
+    {
+      "code": "10",
+      "display": "Residential Substance Abuse Treatment Facility",
+      "definition": "Residential Substance Abuse Treatment Facility"
+    },
+    {
+      "code": "11",
+      "display": "Hospice",
+      "definition": "Hospice"
+    },
+    {
+      "code": "12",
+      "display": "Psychiatric Residential Treatment Facility",
+      "definition": "Psychiatric Residential Treatment Facility"
+    },
+    {
+      "code": "13",
+      "display": "Comprehensive Inpatient Rehabilitation Facility",
+      "definition": "Comprehensive Inpatient Rehabilitation Facility"
+    },
+    {
+      "code": "14",
+      "display": "Homeless Shelter",
+      "definition": "Homeless Shelter"
+    },
+    {
+      "code": "15",
+      "display": "Correctional Institution",
+      "definition": "Correctional Institution"
+    }
+  ]
+}

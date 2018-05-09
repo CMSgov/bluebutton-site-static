@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="/assets/ig/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+
+<h2>CodeSystem: submsn-clr-cd</h2>
+
+<p>
+Formats: <a href="CodeSystem-submsn-clr-cd.xml.html">XML</a>, <a href="CodeSystem-submsn-clr-cd.json.html">JSON</a>, <a href="CodeSystem-submsn-clr-cd.ttl.html">Turtle</a>
+</p>
+
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Submission clarification code</h2><div><p>For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT<em>RSDNC</em>CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn<em>clr</em>cd</p>
+</div><p>This code system /assets/ig/CodeSystem-submsn-clr-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>00<a name="submsn-clr-cd-00"> </a></td><td>(Unknown value – rarely populated)</td><td>(Unknown value – rarely populated)</td></tr><tr><td>05<a name="submsn-clr-cd-05"> </a></td><td>Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.</td><td>Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.</td></tr><tr><td>07<a name="submsn-clr-cd-07"> </a></td><td>Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.</td><td>Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.</td></tr><tr><td>08<a name="submsn-clr-cd-08"> </a></td><td>Process compound for approved ingredients</td><td>Process compound for approved ingredients</td></tr><tr><td>14<a name="submsn-clr-cd-14"> </a></td><td>LTC leave of absence – short fill required for take-home use</td><td>LTC leave of absence – short fill required for take-home use</td></tr><tr><td>16<a name="submsn-clr-cd-16"> </a></td><td>LTC emergency box (e box) /automated dispensing machine</td><td>LTC emergency box (e box) /automated dispensing machine</td></tr><tr><td>17<a name="submsn-clr-cd-17"> </a></td><td>LTC emergency supply remainder (remainder of drug from the emergency supply)</td><td>LTC emergency supply remainder (remainder of drug from the emergency supply)</td></tr><tr><td>18<a name="submsn-clr-cd-18"> </a></td><td>LTC patient admit/readmission indicator. This status required new dispensing of medication.</td><td>LTC patient admit/readmission indicator. This status required new dispensing of medication.</td></tr><tr><td>19<a name="submsn-clr-cd-19"> </a></td><td>Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).</td><td>Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).</td></tr><tr><td>21<a name="submsn-clr-cd-21"> </a></td><td>LTC dispensing rule for &lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing</td><td>LTC dispensing rule for &lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing</td></tr><tr><td>22<a name="submsn-clr-cd-22"> </a></td><td>LTC dispensing, 7-day supply</td><td>LTC dispensing, 7-day supply</td></tr><tr><td>23<a name="submsn-clr-cd-23"> </a></td><td>LTC dispensing, 4-day supply</td><td>LTC dispensing, 4-day supply</td></tr><tr><td>24<a name="submsn-clr-cd-24"> </a></td><td>LTC dispensing, 3-day supply</td><td>LTC dispensing, 3-day supply</td></tr><tr><td>25<a name="submsn-clr-cd-25"> </a></td><td>LTC dispensing, 2-day supply</td><td>LTC dispensing, 2-day supply</td></tr><tr><td>26<a name="submsn-clr-cd-26"> </a></td><td>LTC dispensing, 1-day supply</td><td>LTC dispensing, 1-day supply</td></tr><tr><td>27<a name="submsn-clr-cd-27"> </a></td><td>LTC dispensing, 4-day supply, then 3-day supply</td><td>LTC dispensing, 4-day supply, then 3-day supply</td></tr><tr><td>28<a name="submsn-clr-cd-28"> </a></td><td>LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply</td><td>LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply</td></tr><tr><td>29<a name="submsn-clr-cd-29"> </a></td><td>LTC dispensing, daily during the week then multiple days (3) for weekend</td><td>LTC dispensing, daily during the week then multiple days (3) for weekend</td></tr><tr><td>30<a name="submsn-clr-cd-30"> </a></td><td>LTC dispensing, per shift (multiple medication passes)</td><td>LTC dispensing, per shift (multiple medication passes)</td></tr><tr><td>31<a name="submsn-clr-cd-31"> </a></td><td>LTC dispensing, per medication pass</td><td>LTC dispensing, per medication pass</td></tr><tr><td>32<a name="submsn-clr-cd-32"> </a></td><td>LTC dispensing, PRN on demand</td><td>LTC dispensing, PRN on demand</td></tr><tr><td>33<a name="submsn-clr-cd-33"> </a></td><td>LTC dispensing, other &lt;=7 day cycle</td><td>LTC dispensing, other &lt;=7 day cycle</td></tr><tr><td>34<a name="submsn-clr-cd-34"> </a></td><td>LTC dispensing, 14-day supply</td><td>LTC dispensing, 14-day supply</td></tr><tr><td>35<a name="submsn-clr-cd-35"> </a></td><td>LTC dispensing, other 8-14 day dispensing not listed above</td><td>LTC dispensing, other 8-14 day dispensing not listed above</td></tr><tr><td>36<a name="submsn-clr-cd-36"> </a></td><td>LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer</td><td>LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer</td></tr><tr><td>42<a name="submsn-clr-cd-42"> </a></td><td>The prescriber ID submitted has been validated and is active (rarely populated)</td><td>The prescriber ID submitted has been validated and is active (rarely populated)</td></tr><tr><td>43<a name="submsn-clr-cd-43"> </a></td><td>For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)</td><td>For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)</td></tr><tr><td>44<a name="submsn-clr-cd-44"> </a></td><td>(Unknown value – rarely populated)</td><td>(Unknown value – rarely populated)</td></tr><tr><td>45<a name="submsn-clr-cd-45"> </a></td><td>For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)</td><td>For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)</td></tr><tr><td>Null<a name="submsn-clr-cd-Null"> </a></td><td>Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)</td><td>Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)</td></tr></table></div>
+
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="/assets/ig/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="/assets/ig/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+

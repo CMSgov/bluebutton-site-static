@@ -1,0 +1,35 @@
+@prefix fhir: </assets/ig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+</assets/ig/ValueSet-dspnsng-stus-cd> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "dspnsng-stus-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Dispensing Status Code</h2><div><p>This field indicates how the pharmacy dispensed the complete quantity of the prescription. When the pharmacy partially fills a prescription, this field indicates a partial fill. When the full quantity is dispensed at one time, this field is blank. Source: https://bluebutton.cms.gov/resources/variables/dspnsng<em>stus</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-dspnsng-stus-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-dspnsng-stus-cd</code></a></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "/assets/ig/ValueSet-dspnsng-stus-cd"];
+  fhir:ValueSet.version [ fhir:value "1.1.0"];
+  fhir:ValueSet.name [ fhir:value "Dispensing Status Code"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "This field indicates how the pharmacy dispensed the complete quantity of the prescription. When the pharmacy partially fills a prescription, this field indicates a partial fill. When the full quantity is dispensed at one time, this field is blank. Source: https://bluebutton.cms.gov/resources/variables/dspnsng_stus_cd"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "/assets/ig/CodeSystem-dspnsng-stus-cd" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+</assets/ig/ValueSet-dspnsng-stus-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI </assets/ig/STU3/ValueSet-dspnsng-stus-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

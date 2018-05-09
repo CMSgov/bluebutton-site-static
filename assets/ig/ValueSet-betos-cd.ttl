@@ -1,0 +1,35 @@
+@prefix fhir: </assets/ig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+</assets/ig/ValueSet-betos-cd> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "betos-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Berenson-Eggers Type of Service (BETOS) Code</h2><div><p>The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-betos-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd</code></a></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "/assets/ig/ValueSet-betos-cd"];
+  fhir:ValueSet.version [ fhir:value "1.1.0"];
+  fhir:ValueSet.name [ fhir:value "Line Berenson-Eggers Type of Service (BETOS) Code"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "/assets/ig/CodeSystem-betos-cd" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+</assets/ig/ValueSet-betos-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI </assets/ig/STU3/ValueSet-betos-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

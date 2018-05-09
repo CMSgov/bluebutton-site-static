@@ -1,0 +1,73 @@
+@prefix fhir: </assets/ig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+</assets/ig/CodeSystem-clm-fac-type-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "clm-fac-type-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Facility Type Code</h2><div><p>The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm<em>fac</em>type_cd</p>\n</div><p>This code system /assets/ig/CodeSystem-clm-fac-type-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name=\"clm-fac-type-cd-1\"> </a></td><td>Hospital</td><td>Hospital</td></tr><tr><td>2<a name=\"clm-fac-type-cd-2\"> </a></td><td>Skilled Nursing Facility (SNF)</td><td>Skilled Nursing Facility (SNF)</td></tr><tr><td>3<a name=\"clm-fac-type-cd-3\"> </a></td><td>Home Health Agency (HHA)</td><td>Home Health Agency (HHA)</td></tr><tr><td>4<a name=\"clm-fac-type-cd-4\"> </a></td><td>Religious Non-medical (hospital)</td><td>Religious Non-medical (hospital)</td></tr><tr><td>6<a name=\"clm-fac-type-cd-6\"> </a></td><td>Intermediate Care (IMC)</td><td>Intermediate Care (IMC)</td></tr><tr><td>7<a name=\"clm-fac-type-cd-7\"> </a></td><td>Clinic services or hospital-based renal dialysis facility</td><td>Clinic services or hospital-based renal dialysis facility</td></tr><tr><td>8<a name=\"clm-fac-type-cd-8\"> </a></td><td>Ambulatory Surgery Center (ASC) or other special facility (e.g. hospice)</td><td>Ambulatory Surgery Center (ASC) or other special facility (e.g. hospice)</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "/assets/ig/CodeSystem-clm-fac-type-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "/assets/ig/CodeSystem-clm-fac-type-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Claim Facility Type Code"];
+  fhir:CodeSystem.title [ fhir:value "Claim Facility Type Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm_fac_type_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "/assets/ig/ValueSet-clm-fac-type-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Hospital" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Hospital" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Skilled Nursing Facility (SNF)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Skilled Nursing Facility (SNF)" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Home Health Agency (HHA)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Home Health Agency (HHA)" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "4" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Religious Non-medical (hospital)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Religious Non-medical (hospital)" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "6" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Intermediate Care (IMC)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Intermediate Care (IMC)" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "7" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Clinic services or hospital-based renal dialysis facility" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Clinic services or hospital-based renal dialysis facility" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "8" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Ambulatory Surgery Center (ASC) or other special facility (e.g. hospice)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Ambulatory Surgery Center (ASC) or other special facility (e.g. hospice)" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+</assets/ig/CodeSystem-clm-fac-type-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI </assets/ig/STU3/CodeSystem-clm-fac-type-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

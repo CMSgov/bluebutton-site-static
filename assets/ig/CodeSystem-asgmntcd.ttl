@@ -1,0 +1,48 @@
+@prefix fhir: </assets/ig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+</assets/ig/CodeSystem-asgmntcd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "asgmntcd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Claim Provider Assignment Indicator Switch</h2><div><p>Variable indicates whether or not the provider accepts assignment for the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/asgmntcd</p>\n</div><p>This code system /assets/ig/CodeSystem-asgmntcd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name=\"asgmntcd-A\"> </a></td><td>Assigned claim</td><td>Assigned claim</td></tr><tr><td>N<a name=\"asgmntcd-N\"> </a></td><td>Non-assigned claim</td><td>Non-assigned claim</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "/assets/ig/CodeSystem-asgmntcd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "/assets/ig/CodeSystem-asgmntcd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Carrier Claim Provider Assignment Indicator Switch"];
+  fhir:CodeSystem.title [ fhir:value "Carrier Claim Provider Assignment Indicator Switch"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "Variable indicates whether or not the provider accepts assignment for the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/asgmntcd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "/assets/ig/ValueSet-asgmntcd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "A" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Assigned claim" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Assigned claim" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "N" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Non-assigned claim" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Non-assigned claim" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+</assets/ig/CodeSystem-asgmntcd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI </assets/ig/STU3/CodeSystem-asgmntcd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

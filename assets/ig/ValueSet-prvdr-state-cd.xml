@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="prvdr-state-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>NCH Provider SSA State Code</h2><div><p>The two -digit numeric social security administration (SSA) state code where provider or facility is located. Source: https://bluebutton.cms.gov/resources/variables/prvdr<em>state</em>cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-prvdr-state-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-prvdr-state-cd</code></a></li></ul></div>
+  </text>
+  <url value="/assets/ig/ValueSet-prvdr-state-cd"/>
+  <version value="1.1.0"/>
+  <name value="NCH Provider SSA State Code"/>
+  <status value="draft"/>
+  <date value="2018-05-07T14:45:05+00:00"/>
+  <description value="The two -digit numeric social security administration (SSA) state code where provider or facility is located. Source: https://bluebutton.cms.gov/resources/variables/prvdr_state_cd"/>
+  <compose>
+    <include>
+      <system value="/assets/ig/CodeSystem-prvdr-state-cd"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,98 @@
+@prefix fhir: </assets/ig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+</assets/ig/CodeSystem-nch-prmry-pyr-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "nch-prmry-pyr-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>NCH Primary Payer Code (if not Medicare)</h2><div><p>The code, on an institutional claim, specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's health insurance bills. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/nch<em>prmry</em>pyr_cd</p>\n</div><p>This code system /assets/ig/CodeSystem-nch-prmry-pyr-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name=\"nch-prmry-pyr-cd-A\"> </a></td><td>Employer group health plan (EGHP) insurance for an aged beneficiary</td><td>Employer group health plan (EGHP) insurance for an aged beneficiary</td></tr><tr><td>B<a name=\"nch-prmry-pyr-cd-B\"> </a></td><td>EGHP insurance for an end-stage renal disease (ESRD) beneficiary</td><td>EGHP insurance for an end-stage renal disease (ESRD) beneficiary</td></tr><tr><td>C<a name=\"nch-prmry-pyr-cd-C\"> </a></td><td>Conditional payment by Medicare; future reimbursement from the Public Health Service (PHS) expected</td><td>Conditional payment by Medicare; future reimbursement from the Public Health Service (PHS) expected</td></tr><tr><td>D<a name=\"nch-prmry-pyr-cd-D\"> </a></td><td>No fault automobile insurance</td><td>No fault automobile insurance</td></tr><tr><td>E<a name=\"nch-prmry-pyr-cd-E\"> </a></td><td>Worker's compensation (WC)</td><td>Worker's compensation (WC)</td></tr><tr><td>F<a name=\"nch-prmry-pyr-cd-F\"> </a></td><td>Public Health Service (PHS) or other Federal agency (other than VA)</td><td>Public Health Service (PHS) or other Federal agency (other than VA)</td></tr><tr><td>G<a name=\"nch-prmry-pyr-cd-G\"> </a></td><td>Working disabled beneficiary under age 65 with a local government health plan (LGHP)</td><td>Working disabled beneficiary under age 65 with a local government health plan (LGHP)</td></tr><tr><td>H<a name=\"nch-prmry-pyr-cd-H\"> </a></td><td>Black lung (BL) program</td><td>Black lung (BL) program</td></tr><tr><td>I<a name=\"nch-prmry-pyr-cd-I\"> </a></td><td>Department of Veteran's Affairs</td><td>Department of Veteran's Affairs</td></tr><tr><td>L<a name=\"nch-prmry-pyr-cd-L\"> </a></td><td>Any liability insurance</td><td>Any liability insurance</td></tr><tr><td>M<a name=\"nch-prmry-pyr-cd-M\"> </a></td><td>Override EGHP - Medicare is primary payer</td><td>Override EGHP - Medicare is primary payer</td></tr><tr><td>N<a name=\"nch-prmry-pyr-cd-N\"> </a></td><td>Override non-EGHP - Medicare is primary payer Blank / missing = No other primary payer</td><td>Override non-EGHP - Medicare is primary payer Blank / missing = No other primary payer</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "/assets/ig/CodeSystem-nch-prmry-pyr-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "/assets/ig/CodeSystem-nch-prmry-pyr-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "NCH Primary Payer Code (if not Medicare)"];
+  fhir:CodeSystem.title [ fhir:value "NCH Primary Payer Code (if not Medicare)"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "The code, on an institutional claim, specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's health insurance bills. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/nch_prmry_pyr_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "/assets/ig/ValueSet-nch-prmry-pyr-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "A" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Employer group health plan (EGHP) insurance for an aged beneficiary" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Employer group health plan (EGHP) insurance for an aged beneficiary" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "B" ];
+     fhir:CodeSystem.concept.display [ fhir:value "EGHP insurance for an end-stage renal disease (ESRD) beneficiary" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "EGHP insurance for an end-stage renal disease (ESRD) beneficiary" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "C" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Conditional payment by Medicare; future reimbursement from the Public Health Service (PHS) expected" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Conditional payment by Medicare; future reimbursement from the Public Health Service (PHS) expected" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "D" ];
+     fhir:CodeSystem.concept.display [ fhir:value "No fault automobile insurance" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "No fault automobile insurance" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "E" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Worker's compensation (WC)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Worker's compensation (WC)" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "F" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Public Health Service (PHS) or other Federal agency (other than VA)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Public Health Service (PHS) or other Federal agency (other than VA)" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "G" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Working disabled beneficiary under age 65 with a local government health plan (LGHP)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Working disabled beneficiary under age 65 with a local government health plan (LGHP)" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "H" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Black lung (BL) program" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Black lung (BL) program" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "I" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Department of Veteran's Affairs" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Department of Veteran's Affairs" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "L" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Any liability insurance" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Any liability insurance" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "M" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Override EGHP - Medicare is primary payer" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Override EGHP - Medicare is primary payer" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "N" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Override non-EGHP - Medicare is primary payer Blank / missing = No other primary payer" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Override non-EGHP - Medicare is primary payer Blank / missing = No other primary payer" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+</assets/ig/CodeSystem-nch-prmry-pyr-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI </assets/ig/STU3/CodeSystem-nch-prmry-pyr-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

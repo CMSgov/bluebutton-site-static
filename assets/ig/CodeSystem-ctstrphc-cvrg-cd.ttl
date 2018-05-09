@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/ctstrphc-cvrg-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ctstrphc-cvrg-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Catastrophic Coverage Code</h2><div><p>This variable indicates whether the PDE occurred within the catastrophic benefit phase of the Medicare Part D benefit, according to the source PDE. When the value equals C (above attachment point), then the PDE is in the catastrophic phase. When the value equals A (attachment point), the PDE has caused the beneficiary to move into the catastrophic phase (i.e., this is the “triggering” PDE). Source: https://bluebutton.cms.gov/resources/variables/ctstrphc<em>cvrg</em>cd</p>\n</div><p>This code system http://hl7.org/fhir/CodeSystem/ctstrphc-cvrg-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name=\"ctstrphc-cvrg-cd-A\"> </a></td><td>Attachment point met on this event</td><td>Attachment point met on this event</td></tr><tr><td>C<a name=\"ctstrphc-cvrg-cd-C\"> </a></td><td>Above attachment point</td><td>Above attachment point</td></tr><tr><td>Blank<a name=\"ctstrphc-cvrg-cd-Blank\"> </a></td><td>Attachment point not met</td><td>Attachment point not met</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/CodeSystem/ctstrphc-cvrg-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "http://hl7.org/fhir/CodeSystem/ctstrphc-cvrg-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Catastrophic Coverage Code"];
+  fhir:CodeSystem.title [ fhir:value "Catastrophic Coverage Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "This variable indicates whether the PDE occurred within the catastrophic benefit phase of the Medicare Part D benefit, according to the source PDE. When the value equals C (above attachment point), then the PDE is in the catastrophic phase. When the value equals A (attachment point), the PDE has caused the beneficiary to move into the catastrophic phase (i.e., this is the “triggering” PDE). Source: https://bluebutton.cms.gov/resources/variables/ctstrphc_cvrg_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "http://hl7.org/fhir/ValueSet/ctstrphc-cvrg-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "A" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Attachment point met on this event" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Attachment point met on this event" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "C" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Above attachment point" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Above attachment point" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "Blank" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Attachment point not met" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Attachment point not met" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/ctstrphc-cvrg-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/ctstrphc-cvrg-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

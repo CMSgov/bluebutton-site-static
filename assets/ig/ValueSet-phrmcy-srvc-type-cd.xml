@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="phrmcy-srvc-type-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Pharmacy service type code</h2><div><p>The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide “in-network” services. Source: https://bluebutton.cms.gov/resources/variables/phrmcy<em>srvc</em>type_cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-phrmcy-srvc-type-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-phrmcy-srvc-type-cd</code></a></li></ul></div>
+  </text>
+  <url value="/assets/ig/ValueSet-phrmcy-srvc-type-cd"/>
+  <version value="1.1.0"/>
+  <name value="Pharmacy service type code"/>
+  <status value="draft"/>
+  <date value="2018-05-07T14:45:05+00:00"/>
+  <description value="The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries &#x2013; including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide &#x201C;in-network&#x201D; services. Source: https://bluebutton.cms.gov/resources/variables/phrmcy_srvc_type_cd"/>
+  <compose>
+    <include>
+      <system value="/assets/ig/CodeSystem-phrmcy-srvc-type-cd"/>
+    </include>
+  </compose>
+</ValueSet>

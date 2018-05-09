@@ -1,0 +1,39 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "claim-query-cd",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Query Code</h2><div><p>Code indicating the type of claim record being processed with respect to payment (debit/credit indicator; interim/final indicator). Source: https://bluebutton.cms.gov/resources/variables/claim<em>query</em>cd</p>\n</div><p>This code system /assets/ig/CodeSystem-claim-query-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name=\"claim-query-cd-1\"> </a></td><td>Interim bill</td><td>Interim bill</td></tr><tr><td>3<a name=\"claim-query-cd-3\"> </a></td><td>Final bill</td><td>Final bill</td></tr><tr><td>5<a name=\"claim-query-cd-5\"> </a></td><td>Debit adjustment</td><td>Debit adjustment</td></tr></table></div>"
+  },
+  "url": "/assets/ig/CodeSystem-claim-query-cd",
+  "identifier": {
+    "value": "/assets/ig/CodeSystem-claim-query-cd"
+  },
+  "version": "1.1.0",
+  "name": "Claim Query Code",
+  "title": "Claim Query Code",
+  "status": "active",
+  "date": "2018-05-07T14:45:05+00:00",
+  "description": "Code indicating the type of claim record being processed with respect to payment (debit/credit indicator; interim/final indicator). Source: https://bluebutton.cms.gov/resources/variables/claim_query_cd",
+  "caseSensitive": true,
+  "valueSet": "/assets/ig/ValueSet-claim-query-cd",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Interim bill",
+      "definition": "Interim bill"
+    },
+    {
+      "code": "3",
+      "display": "Final bill",
+      "definition": "Final bill"
+    },
+    {
+      "code": "5",
+      "display": "Debit adjustment",
+      "definition": "Debit adjustment"
+    }
+  ]
+}

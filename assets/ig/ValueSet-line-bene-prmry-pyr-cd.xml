@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="line-bene-prmry-pyr-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Line Primary Payer Code (if not Medicare)</h2><div><p>The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's medical bills relating to the line item service on the non-institutional claim. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/line<em>bene</em>prmry<em>pyr</em>cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-line-bene-prmry-pyr-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-line-bene-prmry-pyr-cd</code></a></li></ul></div>
+  </text>
+  <url value="/assets/ig/ValueSet-line-bene-prmry-pyr-cd"/>
+  <version value="1.1.0"/>
+  <name value="Line Primary Payer Code (if not Medicare)"/>
+  <status value="draft"/>
+  <date value="2018-05-07T14:45:05+00:00"/>
+  <description value="The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary&#39;s medical bills relating to the line item service on the non-institutional claim. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/line_bene_prmry_pyr_cd"/>
+  <compose>
+    <include>
+      <system value="/assets/ig/CodeSystem-line-bene-prmry-pyr-cd"/>
+    </include>
+  </compose>
+</ValueSet>

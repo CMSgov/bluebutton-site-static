@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="/assets/ig/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+
+<h2>CodeSystem: rev-cntr-stus-ind-cd</h2>
+
+<p>
+Formats: <a href="CodeSystem-rev-cntr-stus-ind-cd.xml.html">XML</a>, <a href="CodeSystem-rev-cntr-stus-ind-cd.json.html">JSON</a>, <a href="CodeSystem-rev-cntr-stus-ind-cd.ttl.html">Turtle</a>
+</p>
+
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Revenue Center Status Indicator Code</h2><div><p>This variable indicates how the service listed on the revenue center record was priced for payment purposes. The revenue center status indicator code is most useful with outpatient hospital claims, where multiple methods may be used to determine the payment amount for the various revenue center records on the claim (for example, some lines may be bundled into an APC and paid under the outpatient PPS, while other lines may be paid under other fee schedules). Source: https://bluebutton.cms.gov/resources/variables/rev<em>cntr</em>stus<em>ind</em>cd</p>
+</div><p>This code system /assets/ig/CodeSystem-rev-cntr-stus-ind-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name="rev-cntr-stus-ind-cd-A"> </a></td><td>Services not paid under OPPS; uses a different fee schedule (e.g., ambulance, PT, mammography)</td><td>Services not paid under OPPS; uses a different fee schedule (e.g., ambulance, PT, mammography)</td></tr><tr><td>B<a name="rev-cntr-stus-ind-cd-B"> </a></td><td>Non-allowed item or service for OPPS; may be paid under a different bill type (e.g., CORF)</td><td>Non-allowed item or service for OPPS; may be paid under a different bill type (e.g., CORF)</td></tr><tr><td>C<a name="rev-cntr-stus-ind-cd-C"> </a></td><td>Inpatient procedure (not paid under OPPS)</td><td>Inpatient procedure (not paid under OPPS)</td></tr><tr><td>E<a name="rev-cntr-stus-ind-cd-E"> </a></td><td>Non-allowed item or service (not paid by OPPS or any other Medicare payment system)</td><td>Non-allowed item or service (not paid by OPPS or any other Medicare payment system)</td></tr><tr><td>F<a name="rev-cntr-stus-ind-cd-F"> </a></td><td>Corneal tissue acquisition, certain CRNA services and Hepatitis B vaccinations</td><td>Corneal tissue acquisition, certain CRNA services and Hepatitis B vaccinations</td></tr><tr><td>G<a name="rev-cntr-stus-ind-cd-G"> </a></td><td>Drug/biological pass-through (separate APC includes this pass-through amount)</td><td>Drug/biological pass-through (separate APC includes this pass-through amount)</td></tr><tr><td>H<a name="rev-cntr-stus-ind-cd-H"> </a></td><td>Device pass-through (separate cost-based pass-through payment, not subject to coinsurance)</td><td>Device pass-through (separate cost-based pass-through payment, not subject to coinsurance)</td></tr><tr><td>J<a name="rev-cntr-stus-ind-cd-J"> </a></td><td>New drug or new biological pass-through</td><td>New drug or new biological pass-through</td></tr><tr><td>J1<a name="rev-cntr-stus-ind-cd-J1"> </a></td><td>Primary service and all adjunctive services on the claim (comprehensive APC; effective 01/2015)</td><td>Primary service and all adjunctive services on the claim (comprehensive APC; effective 01/2015)</td></tr><tr><td>K<a name="rev-cntr-stus-ind-cd-K"> </a></td><td>Non pass-through drug/biological, radio-pharmaceutical agent, certain brachytherapy sources (paid under OPPS; separate APC payment)</td><td>Non pass-through drug/biological, radio-pharmaceutical agent, certain brachytherapy sources (paid under OPPS; separate APC payment)</td></tr><tr><td>L<a name="rev-cntr-stus-ind-cd-L"> </a></td><td>Flu/PPV vaccines</td><td>Flu/PPV vaccines</td></tr><tr><td>M<a name="rev-cntr-stus-ind-cd-M"> </a></td><td>Service not billable to fiscal intermediary [now a MAC] (not paid under OPPS)</td><td>Service not billable to fiscal intermediary [now a MAC] (not paid under OPPS)</td></tr><tr><td>N<a name="rev-cntr-stus-ind-cd-N"> </a></td><td>Packaged incidental service (no separate APC payment)</td><td>Packaged incidental service (no separate APC payment)</td></tr><tr><td>P<a name="rev-cntr-stus-ind-cd-P"> </a></td><td>Paid partial hospitalization per diem APC payment</td><td>Paid partial hospitalization per diem APC payment</td></tr><tr><td>Q1<a name="rev-cntr-stus-ind-cd-Q1"> </a></td><td>Separate payment made; OPPS - APC (effective 2009)</td><td>Separate payment made; OPPS - APC (effective 2009)</td></tr><tr><td>Q2<a name="rev-cntr-stus-ind-cd-Q2"> </a></td><td>No separate payment made; OPPS - APC were packaged into payment for other services (effective 2009)</td><td>No separate payment made; OPPS - APC were packaged into payment for other services (effective 2009)</td></tr><tr><td>Q3<a name="rev-cntr-stus-ind-cd-Q3"> </a></td><td>May be paid through a composite APC-based on composite-specific criteria or separately through single code APCs when the criteria are not met (effective 2009)</td><td>May be paid through a composite APC-based on composite-specific criteria or separately through single code APCs when the criteria are not met (effective 2009)</td></tr><tr><td>R<a name="rev-cntr-stus-ind-cd-R"> </a></td><td>Blood products</td><td>Blood products</td></tr><tr><td>S<a name="rev-cntr-stus-ind-cd-S"> </a></td><td>Significant procedure not subject to multiple procedure discounting</td><td>Significant procedure not subject to multiple procedure discounting</td></tr><tr><td>T<a name="rev-cntr-stus-ind-cd-T"> </a></td><td>Significant procedure subject to multiple procedure discounting</td><td>Significant procedure subject to multiple procedure discounting</td></tr><tr><td>U<a name="rev-cntr-stus-ind-cd-U"> </a></td><td>Brachytherapy</td><td>Brachytherapy</td></tr><tr><td>V<a name="rev-cntr-stus-ind-cd-V"> </a></td><td>Medical visit to clinic or emergency department</td><td>Medical visit to clinic or emergency department</td></tr><tr><td>W<a name="rev-cntr-stus-ind-cd-W"> </a></td><td>Invalid HCPCS or invalid revenue code with blank HCPCS</td><td>Invalid HCPCS or invalid revenue code with blank HCPCS</td></tr><tr><td>X<a name="rev-cntr-stus-ind-cd-X"> </a></td><td>Ancillary service</td><td>Ancillary service</td></tr><tr><td>Y<a name="rev-cntr-stus-ind-cd-Y"> </a></td><td>Non-implantable DME(e.g., therapeutic shoes; not paid under OPPS -bill to DMERC)</td><td>Non-implantable DME(e.g., therapeutic shoes; not paid under OPPS -bill to DMERC)</td></tr><tr><td>Z<a name="rev-cntr-stus-ind-cd-Z"> </a></td><td>Valid revenue with blank HCPCS and no other SI assigned</td><td>Valid revenue with blank HCPCS and no other SI assigned</td></tr></table></div>
+
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="/assets/ig/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="/assets/ig/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+
