@@ -1,0 +1,422 @@
+{
+  "resourceType": "ExplanationOfBenefit",
+  "id": "pde-89",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>identifier</b>: 89, 900, 799999</p><p><b>status</b>: ACTIVE</p><p><b>type</b>: PDE <span style=\"background: LightGoldenRodYellow\">(Details : {https://bluebutton.cms.gov/developer/docs/reference/some-thing code 'PDE' = 'PDE; {/assets/ig/ex-claimtype code 'PHARMACY' = 'PHARMACY)</span></p><p><b>patient</b>: <a href=\"Patient/567834\">Patient/567834</a></p><p><b>organization</b>: </p><p><b>facility</b>: </p><p><b>disposition</b>: Debit accepted</p><blockquote><p><b>information</b></p><p><b>sequence</b>: 1</p><p><b>category</b>: 0 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/daw_prod_slctn_cd.txt code '0' = '0)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 2</p><p><b>category</b>: P <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/dspnsng_stus_cd.txt code 'P' = 'P)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 3</p><p><b>category</b>: C <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/drug_cvrg_stus_cd.txt code 'C' = 'C)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 4</p><p><b>category</b>: A <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/adjstmt_dltn_cd.txt code 'A' = 'A)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 5</p><p><b>category</b>: X <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/nstd_frmt_cd.txt code 'X' = 'X)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 6</p><p><b>category</b>: M <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prcng_excptn_cd.txt code 'M' = 'M)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 7</p><p><b>category</b>: C <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ctstrphc_cvrg_cd.txt code 'C' = 'C)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 8</p><p><b>category</b>: 3 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/rx_orgn_cd.txt code '3' = '3)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 9</p><p><b>category</b>: G <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/brnd_gnrc_cd.txt code 'G' = 'G)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 10</p><p><b>category</b>: 01 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/phrmcy_srvc_type_cd.txt code '01' = '01)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 11</p><p><b>category</b>: 02 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ptnt_rsdnc_cd.txt code '02' = '02)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 12</p><p><b>category</b>: 08 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/submsn_clr_cd.txt code '08' = '08)</span></p></blockquote><h3>CareTeams</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>Provider</b></td><td><b>Role</b></td></tr><tr><td>*</td><td>2</td><td/><td>Primary provider <span style=\"background: LightGoldenRodYellow\">(Details : {/assets/ig/claimcareteamrole code 'primary' = 'Primary provider)</span></td></tr></table><h3>Insurances</h3><table class=\"grid\"><tr><td>-</td><td><b>Coverage</b></td></tr><tr><td>*</td><td><a href=\"Coverage/part-d-567834\">Coverage/part-d-567834</a></td></tr></table><blockquote><p><b>item</b></p><p><b>sequence</b>: 1</p><p><b>careTeamLinkId</b>: 2</p><p><b>service</b>: 987654331212 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.accessdata.fda.gov/scripts/cder/ndc code '987654331212' = '987654331212)</span></p><p><b>serviced</b>: May 12, 2015</p><p><b>quantity</b>: 60</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Part D Covered <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Part D Covered' = 'Part D Covered)</span></p><p><b>amount</b>: 126.99 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Gross Drug Cost Below Out-of-Pocket Threshold (GDCB) <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Gross Drug Cost Below Out-of-Pocket Threshold (GDCB)' = 'Gross Drug Cost Below Out-of-Pocket Threshold (GDCB))</span></p><p><b>amount</b>: 995.34 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Gross Drug Cost Above Out-of-Pocket Threshold (GDCA) <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Gross Drug Cost Above Out-of-Pocket Threshold (GDCA)' = 'Gross Drug Cost Above Out-of-Pocket Threshold (GDCA))</span></p><p><b>amount</b>: 15.25 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Patient Pay Amount <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Patient Pay Amount' = 'Patient Pay Amount)</span></p><p><b>amount</b>: 235.85 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Other True Out-of-Pocket (TrOOP) Amount <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Other True Out-of-Pocket (TrOOP) Amount' = 'Other True Out-of-Pocket (TrOOP) Amount)</span></p><p><b>amount</b>: 17.30 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Part D Low Income Subsidy (LICS) Amount <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Part D Low Income Subsidy (LICS) Amount' = 'Part D Low Income Subsidy (LICS) Amount)</span></p><p><b>amount</b>: 122.23 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Reduction in patient liability due to payments by other payers (PLRO) Amount <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Reduction in patient liability due to payments by other payers (PLRO) Amount' = 'Reduction in patient liability due to payments by other payers (PLRO) Amount)</span></p><p><b>amount</b>: 42.42 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total Prescription Cost <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Total Prescription Cost' = 'Total Prescription Cost)</span></p><p><b>amount</b>: 550.00 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Medicare Coverage Gap Discount Amount <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Medicare Coverage Gap Discount Amount' = 'Medicare Coverage Gap Discount Amount)</span></p><p><b>amount</b>: 317.22 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><h3>Details</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td></tr><tr><td>*</td><td>Rx dispense invoice <span style=\"background: LightGoldenRodYellow\">(Details : {/assets/ig/v3/ActCode code 'RXDINV' = 'Rx dispense invoice)</span></td></tr></table></blockquote><h3>Payments</h3><table class=\"grid\"><tr><td>-</td><td><b>Date</b></td></tr><tr><td>*</td><td>May 27, 2015</td></tr></table></div>"
+  },
+  "identifier": [
+    {
+      "system": "CCW.PDE_ID",
+      "value": "89"
+    },
+    {
+      "system": "http://bluebutton.cms.hhs.gov/identifier#claimGroup",
+      "value": "900"
+    },
+    {
+      "system": "CCW.RX_SRVC_RFRNC_NUM",
+      "value": "799999"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "https://bluebutton.cms.gov/developer/docs/reference/some-thing",
+        "code": "PDE"
+      },
+      {
+        "system": "/assets/ig/ex-claimtype",
+        "code": "PHARMACY"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/567834"
+  },
+  "organization": {
+    "identifier": {
+      "system": "/assets/ig/sid/us-npi",
+      "value": "111222333"
+    }
+  },
+  "facility": {
+    "extension": [
+      {
+        "url": "/assets/ig/ValueSet-phrmcy-srvc-type-cd",
+        "valueCoding": {
+          "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/phrmcy_srvc_type_cd.txt",
+          "code": "01"
+        }
+      }
+    ],
+    "identifier": {
+      "system": "/assets/ig/sid/us-npi",
+      "value": "111222333"
+    }
+  },
+  "disposition": "Debit accepted",
+  "information": [
+    {
+      "sequence": 1,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/daw_prod_slctn_cd.txt",
+            "code": "0"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 2,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/dspnsng_stus_cd.txt",
+            "code": "P"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 3,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/drug_cvrg_stus_cd.txt",
+            "code": "C"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 4,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/adjstmt_dltn_cd.txt",
+            "code": "A"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/nstd_frmt_cd.txt",
+            "code": "X"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prcng_excptn_cd.txt",
+            "code": "M"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ctstrphc_cvrg_cd.txt",
+            "code": "C"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 8,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/rx_orgn_cd.txt",
+            "code": "3"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 9,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/brnd_gnrc_cd.txt",
+            "code": "G"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 10,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/phrmcy_srvc_type_cd.txt",
+            "code": "01"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 11,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ptnt_rsdnc_cd.txt",
+            "code": "02"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 12,
+      "category": {
+        "coding": [
+          {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/submsn_clr_cd.txt",
+            "code": "08"
+          }
+        ]
+      }
+    }
+  ],
+  "careTeam": [
+    {
+      "sequence": 2,
+      "provider": {
+        "identifier": {
+          "system": "/assets/ig/sid/us-npi",
+          "value": "444555666"
+        }
+      },
+      "role": {
+        "coding": [
+          {
+            "system": "/assets/ig/claimcareteamrole",
+            "code": "primary"
+          }
+        ]
+      }
+    }
+  ],
+  "insurance": {
+    "coverage": {
+      "extension": [
+        {
+          "url": "/assets/ig/ValueSet-plan_cntrct_rec_id",
+          "valueIdentifier": {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/plan_cntrct_rec_id.txt",
+            "value": "H9999"
+          }
+        },
+        {
+          "url": "/assets/ig/ValueSet-plan_pbp_rec_num",
+          "valueIdentifier": {
+            "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/plan_pbp_rec_num.txt",
+            "value": "020"
+          }
+        }
+      ],
+      "reference": "Coverage/part-d-567834"
+    }
+  },
+  "item": [
+    {
+      "sequence": 1,
+      "careTeamLinkId": [
+        2
+      ],
+      "service": {
+        "coding": [
+          {
+            "system": "https://www.accessdata.fda.gov/scripts/cder/ndc",
+            "code": "987654331212"
+          }
+        ]
+      },
+      "servicedDate": "2015-05-12",
+      "quantity": {
+        "extension": [
+          {
+            "url": "/assets/ig/ValueSet-fill_num",
+            "valueCoding": {
+              "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/fill_num.txt",
+              "code": "3"
+            }
+          },
+          {
+            "url": "/assets/ig/ValueSet-days_suply_num",
+            "valueCoding": {
+              "system": "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/days_suply_num.txt",
+              "code": "30"
+            }
+          }
+        ],
+        "value": 60
+      },
+      "adjudication": [
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "CMS Adjudications",
+                "code": "Part D Covered"
+              }
+            ]
+          },
+          "amount": {
+            "value": 126.99,
+            "system": "urn:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "CMS Adjudications",
+                "code": "Gross Drug Cost Below Out-of-Pocket Threshold (GDCB)"
+              }
+            ]
+          },
+          "amount": {
+            "value": 995.34,
+            "system": "urn:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "CMS Adjudications",
+                "code": "Gross Drug Cost Above Out-of-Pocket Threshold (GDCA)"
+              }
+            ]
+          },
+          "amount": {
+            "value": 15.25,
+            "system": "urn:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "CMS Adjudications",
+                "code": "Patient Pay Amount"
+              }
+            ]
+          },
+          "amount": {
+            "value": 235.85,
+            "system": "urn:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "CMS Adjudications",
+                "code": "Other True Out-of-Pocket (TrOOP) Amount"
+              }
+            ]
+          },
+          "amount": {
+            "value": 17.30,
+            "system": "urn:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "CMS Adjudications",
+                "code": "Part D Low Income Subsidy (LICS) Amount"
+              }
+            ]
+          },
+          "amount": {
+            "value": 122.23,
+            "system": "urn:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "CMS Adjudications",
+                "code": "Reduction in patient liability due to payments by other payers (PLRO) Amount"
+              }
+            ]
+          },
+          "amount": {
+            "value": 42.42,
+            "system": "urn:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "CMS Adjudications",
+                "code": "Total Prescription Cost"
+              }
+            ]
+          },
+          "amount": {
+            "value": 550.00,
+            "system": "urn:std:iso:4217",
+            "code": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "CMS Adjudications",
+                "code": "Medicare Coverage Gap Discount Amount"
+              }
+            ]
+          },
+          "amount": {
+            "value": 317.22,
+            "system": "urn:std:iso:4217",
+            "code": "USD"
+          }
+        }
+      ],
+      "detail": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "/assets/ig/v3/ActCode",
+                "code": "RXDINV"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "payment": {
+    "date": "2015-05-27"
+  }
+}

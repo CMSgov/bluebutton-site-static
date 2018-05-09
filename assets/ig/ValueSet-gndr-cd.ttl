@@ -1,0 +1,35 @@
+@prefix fhir: </assets/ig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+</assets/ig/ValueSet-gndr-cd> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "gndr-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient Gender</h2><div><p>Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-gndr-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd</code></a></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "/assets/ig/ValueSet-gndr-cd"];
+  fhir:ValueSet.version [ fhir:value "1.1.0"];
+  fhir:ValueSet.name [ fhir:value "Patient Gender"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "/assets/ig/CodeSystem-gndr-cd" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+</assets/ig/ValueSet-gndr-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI </assets/ig/STU3/ValueSet-gndr-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

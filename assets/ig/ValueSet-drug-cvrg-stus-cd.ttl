@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/drug-cvrg-stus-cd> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "drug-cvrg-stus-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Drug Coverage Status Code</h2><div><p>This field indicates whether or not the drug is covered by Medicare Part D. The Part D benefit does not cover all FDA-approved drugs. However, plan sponsors can offer an “enhanced” benefit package that covers non-Part D drugs, such as over-the-counter medications. Source: https://bluebutton.cms.gov/resources/variables/drug<em>cvrg</em>stus_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/drug-cvrg-stus-cd.html\"><code>http://hl7.org/fhir/CodeSystem/drug-cvrg-stus-cd</code></a></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ValueSet/drug-cvrg-stus-cd"];
+  fhir:ValueSet.version [ fhir:value "1.1.0"];
+  fhir:ValueSet.name [ fhir:value "Drug Coverage Status Code"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "This field indicates whether or not the drug is covered by Medicare Part D. The Part D benefit does not cover all FDA-approved drugs. However, plan sponsors can offer an “enhanced” benefit package that covers non-Part D drugs, such as over-the-counter medications. Source: https://bluebutton.cms.gov/resources/variables/drug_cvrg_stus_cd"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/drug-cvrg-stus-cd" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/ValueSet/drug-cvrg-stus-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/drug-cvrg-stus-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

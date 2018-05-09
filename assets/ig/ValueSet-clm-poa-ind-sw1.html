@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="/assets/ig/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+<!-- ============BreadCrumbs=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<!--
+<h2>Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code</h2>
+
+<p>
+Formats: <a href="ValueSet-clm-poa-ind-sw1.xml.html">XML</a>, <a href="ValueSet-clm-poa-ind-sw1.json.html">JSON</a>, <a href="ValueSet-clm-poa-ind-sw1.ttl.html">Turtle</a>
+</p>
+
+-->
+
+<!-- include ValueSet-clm-poa-ind-sw1-html.xhtml   -->
+
+<table class="grid">
+ <tbody><tr><td>Defining URL:</td><td>/assets/ig/ValueSet-clm-poa-ind-sw1</td></tr>
+ <tr><td>Name:</td><td>Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code</td></tr>
+ <tr><td>Definition:</td><td><p>The present on admission (POA) indicator code associated with the diagnosis codes (principal and secondary). In response to the Deficit Reduction Act of 2005, CMS began to distinguish between hospitalization diagnoses that occurred prior to versus during the admission. The objective was to eventually not pay hospitals more if the patient acquired a condition (e.g., infection) during the admission. This present on admission (POA) field is used to indicate whether the diagnosis was present on admission. Medicare claims did not indicate whether a diagnosis was POA until 2011. Source: https://bluebutton.cms.gov/resources/variables/clm<em>poa</em>ind_sw1</p>
+</td></tr>
+ <tr><td>Source Resource</td><td><a href="ValueSet-clm-poa-ind-sw1.xml.html">XML</a> / <a href="ValueSet-clm-poa-ind-sw1.json.html">JSON</a> / <a href="ValueSet-clm-poa-ind-sw1.ttl.html">Turtle</a></td></tr>
+</tbody></table>
+
+
+This value set is used by:
+
+
+<ul>
+ <li><a href="StructureDefinition-bluebutton-inpatient-claim.html">BluebuttonInpatientClaim</a></li>
+</ul>
+
+
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code</h2><div><p>The present on admission (POA) indicator code associated with the diagnosis codes (principal and secondary). In response to the Deficit Reduction Act of 2005, CMS began to distinguish between hospitalization diagnoses that occurred prior to versus during the admission. The objective was to eventually not pay hospitals more if the patient acquired a condition (e.g., infection) during the admission. This present on admission (POA) field is used to indicate whether the diagnosis was present on admission. Medicare claims did not indicate whether a diagnosis was POA until 2011. Source: https://bluebutton.cms.gov/resources/variables/clm<em>poa</em>ind_sw1</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-clm-poa-ind-sw1.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-poa-ind-sw1</code></a></li></ul></div>
+
+<h3>Expansion</h3>
+
+<div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 7 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on /assets/ig/CodeSystem-clm-poa-ind-sw1 version 1.1.0</p><p>All codes from system <a href="CodeSystem-clm-poa-ind-sw1.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-poa-ind-sw1</code></a></p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-poa-ind-sw1-Y"> </a><a href="CodeSystem-clm-poa-ind-sw1.html#clm-poa-ind-sw1-Y">Y</a></td><td>Diagnosis was present at the time of admission (POA)</td><td>Diagnosis was present at the time of admission (POA)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-poa-ind-sw1-N"> </a><a href="CodeSystem-clm-poa-ind-sw1.html#clm-poa-ind-sw1-N">N</a></td><td>Diagnosis was not present at the time of admission</td><td>Diagnosis was not present at the time of admission</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-poa-ind-sw1-U"> </a><a href="CodeSystem-clm-poa-ind-sw1.html#clm-poa-ind-sw1-U">U</a></td><td>Documentation is insufficient to determine if condition was present on admission</td><td>Documentation is insufficient to determine if condition was present on admission</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-poa-ind-sw1-W"> </a><a href="CodeSystem-clm-poa-ind-sw1.html#clm-poa-ind-sw1-W">W</a></td><td>Provider is unable to clinically determine whether condition was present on admission</td><td>Provider is unable to clinically determine whether condition was present on admission</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-poa-ind-sw1-1"> </a><a href="CodeSystem-clm-poa-ind-sw1.html#clm-poa-ind-sw1-1">1</a></td><td>Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data</td><td>Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-poa-ind-sw1-Z"> </a><a href="CodeSystem-clm-poa-ind-sw1.html#clm-poa-ind-sw1-Z">Z</a></td><td>Denotes the end of the POA indicators</td><td>Denotes the end of the POA indicators</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-poa-ind-sw1-X"> </a><a href="CodeSystem-clm-poa-ind-sw1.html#clm-poa-ind-sw1-X">X</a></td><td>Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future</td><td>Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future</td></tr></table></div>
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="/assets/ig/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="/assets/ig/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+

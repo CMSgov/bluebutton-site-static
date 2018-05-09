@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="clm-fac-type-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Facility Type Code</h2><div><p>The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm<em>fac</em>type_cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-clm-fac-type-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-fac-type-cd</code></a></li></ul></div>
+  </text>
+  <url value="/assets/ig/ValueSet-clm-fac-type-cd"/>
+  <version value="1.1.0"/>
+  <name value="Claim Facility Type Code"/>
+  <status value="draft"/>
+  <date value="2018-05-07T14:45:05+00:00"/>
+  <description value="The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm_fac_type_cd"/>
+  <compose>
+    <include>
+      <system value="/assets/ig/CodeSystem-clm-fac-type-cd"/>
+    </include>
+  </compose>
+</ValueSet>

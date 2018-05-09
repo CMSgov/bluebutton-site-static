@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="/assets/ig/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2>Patient Residence Code</h2>
+
+<p>
+Formats: <a href="CodeSystem-ptnt-rsdnc-cd.html">Narrative</a>,
+ <a href="CodeSystem-ptnt-rsdnc-cd.xml.html">XML</a>,
+  <a href="CodeSystem-ptnt-rsdnc-cd.json.html">JSON</a>,
+   <a href="CodeSystem-ptnt-rsdnc-cd.ttl.html">Turtle</a>
+</p>
+<p>
+Raw <a href="CodeSystem-ptnt-rsdnc-cd.xml" download>xml</a>
+</p>
+
+<pre class="xml">
+
+&lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.id">id</a> <a href="/assets/ig/STU3/datatypes.html#id">value</a>=&quot;ptnt-rsdnc-cd&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.text">text</a>&gt;
+    &lt;<a href="/assets/ig/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Patient Residence Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt&lt;em&gt;rsdnc&lt;/em&gt;cd&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;This code system /assets/ig/CodeSystem-ptnt-rsdnc-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;a name=&quot;ptnt-rsdnc-cd-00&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Not specified, other patient residence not identified below&lt;/td&gt;&lt;td&gt;Not specified, other patient residence not identified below&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;01&lt;a name=&quot;ptnt-rsdnc-cd-01&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Home&lt;/td&gt;&lt;td&gt;Home&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02&lt;a name=&quot;ptnt-rsdnc-cd-02&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Skilled Nursing Facility&lt;/td&gt;&lt;td&gt;Skilled Nursing Facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03&lt;a name=&quot;ptnt-rsdnc-cd-03&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nursing facility (long-term care facility)&lt;/td&gt;&lt;td&gt;Nursing facility (long-term care facility)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04&lt;a name=&quot;ptnt-rsdnc-cd-04&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Assisted living facility&lt;/td&gt;&lt;td&gt;Assisted living facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05&lt;a name=&quot;ptnt-rsdnc-cd-05&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Custodial Care Facility (residential but not medical care)&lt;/td&gt;&lt;td&gt;Custodial Care Facility (residential but not medical care)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06&lt;a name=&quot;ptnt-rsdnc-cd-06&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Group home (e.g., congregate residential foster care)&lt;/td&gt;&lt;td&gt;Group home (e.g., congregate residential foster care)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07&lt;a name=&quot;ptnt-rsdnc-cd-07&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inpatient Psychiatric Facility&lt;/td&gt;&lt;td&gt;Inpatient Psychiatric Facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08&lt;a name=&quot;ptnt-rsdnc-cd-08&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Psychiatric Facility – Partial Hospitalization&lt;/td&gt;&lt;td&gt;Psychiatric Facility – Partial Hospitalization&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09&lt;a name=&quot;ptnt-rsdnc-cd-09&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Intermediate care facility for the mentally retarded (ICF/MR)&lt;/td&gt;&lt;td&gt;Intermediate care facility for the mentally retarded (ICF/MR)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;a name=&quot;ptnt-rsdnc-cd-10&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Residential Substance Abuse Treatment Facility&lt;/td&gt;&lt;td&gt;Residential Substance Abuse Treatment Facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11&lt;a name=&quot;ptnt-rsdnc-cd-11&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospice&lt;/td&gt;&lt;td&gt;Hospice&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;a name=&quot;ptnt-rsdnc-cd-12&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Psychiatric Residential Treatment Facility&lt;/td&gt;&lt;td&gt;Psychiatric Residential Treatment Facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;a name=&quot;ptnt-rsdnc-cd-13&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Comprehensive Inpatient Rehabilitation Facility&lt;/td&gt;&lt;td&gt;Comprehensive Inpatient Rehabilitation Facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;a name=&quot;ptnt-rsdnc-cd-14&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Homeless Shelter&lt;/td&gt;&lt;td&gt;Homeless Shelter&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;a name=&quot;ptnt-rsdnc-cd-15&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Correctional Institution&lt;/td&gt;&lt;td&gt;Correctional Institution&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+  &lt;/text&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.url">url</a> <a href="/assets/ig/STU3/datatypes.html#uri">value</a>=&quot;/assets/ig/CodeSystem-ptnt-rsdnc-cd&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.identifier">identifier</a>&gt;
+    &lt;<a href="/assets/ig/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;/assets/ig/CodeSystem-ptnt-rsdnc-cd&quot;/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.version">version</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;1.1.0&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.name">name</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Patient Residence Code&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.title">title</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Patient Residence Code&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.status">status</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.date">date</a> <a href="/assets/ig/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-07T14:45:05+00:00&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.description">description</a>
+               <a href="/assets/ig/STU3/datatypes.html#markdown">value</a>=&quot;This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt_rsdnc_cd&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="/assets/ig/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a> <a href="/assets/ig/STU3/datatypes.html#uri">value</a>=&quot;/assets/ig/ValueSet-ptnt-rsdnc-cd&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;is-a&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.content">content</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;00&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Not specified, other patient residence not identified below&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Not specified, other patient residence not identified below&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;01&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Home&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Home&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;02&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Skilled Nursing Facility&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Skilled Nursing Facility&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;03&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Nursing facility (long-term care facility)&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Nursing facility (long-term care facility)&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;04&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Assisted living facility&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Assisted living facility&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;05&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Custodial Care Facility (residential but not medical care)&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Custodial Care Facility (residential but not medical care)&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;06&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Group home (e.g., congregate residential foster care)&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Group home (e.g., congregate residential foster care)&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;07&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Inpatient Psychiatric Facility&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Inpatient Psychiatric Facility&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;08&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Psychiatric Facility – Partial Hospitalization&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Psychiatric Facility – Partial Hospitalization&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;09&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Intermediate care facility for the mentally retarded (ICF/MR)&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Intermediate care facility for the mentally retarded (ICF/MR)&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;10&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Residential Substance Abuse Treatment Facility&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Residential Substance Abuse Treatment Facility&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;11&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Hospice&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Hospice&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;12&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Psychiatric Residential Treatment Facility&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Psychiatric Residential Treatment Facility&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;13&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Comprehensive Inpatient Rehabilitation Facility&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Comprehensive Inpatient Rehabilitation Facility&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;14&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Homeless Shelter&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Homeless Shelter&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="/assets/ig/STU3/datatypes.html#code">value</a>=&quot;15&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Correctional Institution&quot;/&gt;
+    &lt;<a href="/assets/ig/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="/assets/ig/STU3/datatypes.html#string">value</a>=&quot;Correctional Institution&quot;/&gt;
+  &lt;/concept&gt;
+&lt;/CodeSystem&gt;</pre>
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="/assets/ig/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="/assets/ig/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+

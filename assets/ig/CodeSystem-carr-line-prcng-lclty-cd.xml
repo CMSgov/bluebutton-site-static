@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="carr-line-prcng-lclty-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Carrier Line Pricing Locality Code</h2><div><p>Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>prcng<em>lclty</em>cd</p>
+</div><p>This code system /assets/ig/CodeSystem-carr-line-prcng-lclty-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name="carr-line-prcng-lclty-cd-1"> </a></td><td>ALABAMA</td><td>ALABAMA</td></tr><tr><td>2<a name="carr-line-prcng-lclty-cd-2"> </a></td><td>ALASKA</td><td>ALASKA</td></tr><tr><td>3<a name="carr-line-prcng-lclty-cd-3"> </a></td><td>ARIZONA</td><td>ARIZONA</td></tr><tr><td>4<a name="carr-line-prcng-lclty-cd-4"> </a></td><td>ARKANSAS</td><td>ARKANSAS</td></tr><tr><td>5<a name="carr-line-prcng-lclty-cd-5"> </a></td><td>ANAHEIM/SANTA ANA, CA</td><td>ANAHEIM/SANTA ANA, CA</td></tr><tr><td>6<a name="carr-line-prcng-lclty-cd-6"> </a></td><td>LOS ANGELES, CA</td><td>LOS ANGELES, CA</td></tr><tr><td>7<a name="carr-line-prcng-lclty-cd-7"> </a></td><td>MARIN/NAPA/SOLANO, CA</td><td>MARIN/NAPA/SOLANO, CA</td></tr><tr><td>8<a name="carr-line-prcng-lclty-cd-8"> </a></td><td>OAKLAND/BERKELEY, CA</td><td>OAKLAND/BERKELEY, CA</td></tr><tr><td>9<a name="carr-line-prcng-lclty-cd-9"> </a></td><td>REST OF CALIFORNIA</td><td>REST OF CALIFORNIA</td></tr><tr><td>10<a name="carr-line-prcng-lclty-cd-10"> </a></td><td>SAN FRANCISCO, CA</td><td>SAN FRANCISCO, CA</td></tr><tr><td>11<a name="carr-line-prcng-lclty-cd-11"> </a></td><td>SAN MATEO, CA</td><td>SAN MATEO, CA</td></tr><tr><td>12<a name="carr-line-prcng-lclty-cd-12"> </a></td><td>SANTA CLARA, CA</td><td>SANTA CLARA, CA</td></tr><tr><td>13<a name="carr-line-prcng-lclty-cd-13"> </a></td><td>VENTURA, CA</td><td>VENTURA, CA</td></tr><tr><td>14<a name="carr-line-prcng-lclty-cd-14"> </a></td><td>COLORADO</td><td>COLORADO</td></tr><tr><td>15<a name="carr-line-prcng-lclty-cd-15"> </a></td><td>CONNECTICUT</td><td>CONNECTICUT</td></tr><tr><td>16<a name="carr-line-prcng-lclty-cd-16"> </a></td><td>DC + MD/VA SUBURBS</td><td>DC + MD/VA SUBURBS</td></tr><tr><td>17<a name="carr-line-prcng-lclty-cd-17"> </a></td><td>DELAWARE</td><td>DELAWARE</td></tr><tr><td>18<a name="carr-line-prcng-lclty-cd-18"> </a></td><td>FORT LAUDERDALE, FL</td><td>FORT LAUDERDALE, FL</td></tr><tr><td>19<a name="carr-line-prcng-lclty-cd-19"> </a></td><td>MIAMI, FL</td><td>MIAMI, FL</td></tr><tr><td>20<a name="carr-line-prcng-lclty-cd-20"> </a></td><td>REST OF FLORIDA</td><td>REST OF FLORIDA</td></tr><tr><td>21<a name="carr-line-prcng-lclty-cd-21"> </a></td><td>ATLANTA, GA</td><td>ATLANTA, GA</td></tr><tr><td>22<a name="carr-line-prcng-lclty-cd-22"> </a></td><td>REST OF GEORGIA</td><td>REST OF GEORGIA</td></tr><tr><td>23<a name="carr-line-prcng-lclty-cd-23"> </a></td><td>HAWAII</td><td>HAWAII</td></tr><tr><td>24<a name="carr-line-prcng-lclty-cd-24"> </a></td><td>IDAHO</td><td>IDAHO</td></tr><tr><td>25<a name="carr-line-prcng-lclty-cd-25"> </a></td><td>CHICAGO, IL</td><td>CHICAGO, IL</td></tr><tr><td>26<a name="carr-line-prcng-lclty-cd-26"> </a></td><td>EAST ST. LOUIS, IL</td><td>EAST ST. LOUIS, IL</td></tr><tr><td>27<a name="carr-line-prcng-lclty-cd-27"> </a></td><td>REST OF ILLINOIS</td><td>REST OF ILLINOIS</td></tr><tr><td>28<a name="carr-line-prcng-lclty-cd-28"> </a></td><td>SUBURBAN CHICAGO, IL</td><td>SUBURBAN CHICAGO, IL</td></tr><tr><td>29<a name="carr-line-prcng-lclty-cd-29"> </a></td><td>INDIANA</td><td>INDIANA</td></tr><tr><td>30<a name="carr-line-prcng-lclty-cd-30"> </a></td><td>IOWA</td><td>IOWA</td></tr><tr><td>31<a name="carr-line-prcng-lclty-cd-31"> </a></td><td>KANSAS</td><td>KANSAS</td></tr><tr><td>32<a name="carr-line-prcng-lclty-cd-32"> </a></td><td>KENTUCKY</td><td>KENTUCKY</td></tr><tr><td>33<a name="carr-line-prcng-lclty-cd-33"> </a></td><td>NEW ORLEANS, LA</td><td>NEW ORLEANS, LA</td></tr><tr><td>34<a name="carr-line-prcng-lclty-cd-34"> </a></td><td>REST OF LOUISIANA</td><td>REST OF LOUISIANA</td></tr><tr><td>35<a name="carr-line-prcng-lclty-cd-35"> </a></td><td>REST OF MAINE</td><td>REST OF MAINE</td></tr><tr><td>36<a name="carr-line-prcng-lclty-cd-36"> </a></td><td>SOUTHERN MAINE</td><td>SOUTHERN MAINE</td></tr><tr><td>37<a name="carr-line-prcng-lclty-cd-37"> </a></td><td>BALTIMORE/SURR. CNTYS, MD</td><td>BALTIMORE/SURR. CNTYS, MD</td></tr><tr><td>38<a name="carr-line-prcng-lclty-cd-38"> </a></td><td>REST OF MARYLAND</td><td>REST OF MARYLAND</td></tr><tr><td>39<a name="carr-line-prcng-lclty-cd-39"> </a></td><td>METROPOLITAN BOSTON</td><td>METROPOLITAN BOSTON</td></tr><tr><td>40<a name="carr-line-prcng-lclty-cd-40"> </a></td><td>REST OF MASSACHUSETTS</td><td>REST OF MASSACHUSETTS</td></tr><tr><td>41<a name="carr-line-prcng-lclty-cd-41"> </a></td><td>DETROIT, MI</td><td>DETROIT, MI</td></tr><tr><td>42<a name="carr-line-prcng-lclty-cd-42"> </a></td><td>REST OF MICHIGAN</td><td>REST OF MICHIGAN</td></tr><tr><td>43<a name="carr-line-prcng-lclty-cd-43"> </a></td><td>MINNESOTA</td><td>MINNESOTA</td></tr><tr><td>44<a name="carr-line-prcng-lclty-cd-44"> </a></td><td>MISSISSIPPI</td><td>MISSISSIPPI</td></tr><tr><td>45<a name="carr-line-prcng-lclty-cd-45"> </a></td><td>METROPOLITAN KANSAS CITY, MO</td><td>METROPOLITAN KANSAS CITY, MO</td></tr><tr><td>46<a name="carr-line-prcng-lclty-cd-46"> </a></td><td>METROPOLITAN ST. LOUIS, MO</td><td>METROPOLITAN ST. LOUIS, MO</td></tr><tr><td>47<a name="carr-line-prcng-lclty-cd-47"> </a></td><td>REST OF MISSOURI</td><td>REST OF MISSOURI</td></tr><tr><td>48<a name="carr-line-prcng-lclty-cd-48"> </a></td><td>MONTANA</td><td>MONTANA</td></tr><tr><td>49<a name="carr-line-prcng-lclty-cd-49"> </a></td><td>NEBRASKA</td><td>NEBRASKA</td></tr><tr><td>50<a name="carr-line-prcng-lclty-cd-50"> </a></td><td>NEVADA</td><td>NEVADA</td></tr><tr><td>51<a name="carr-line-prcng-lclty-cd-51"> </a></td><td>NEW HAMPSHIRE</td><td>NEW HAMPSHIRE</td></tr><tr><td>52<a name="carr-line-prcng-lclty-cd-52"> </a></td><td>NORTHERN NJ</td><td>NORTHERN NJ</td></tr><tr><td>53<a name="carr-line-prcng-lclty-cd-53"> </a></td><td>REST OF NEW JERSEY</td><td>REST OF NEW JERSEY</td></tr><tr><td>54<a name="carr-line-prcng-lclty-cd-54"> </a></td><td>NEW MEXICO</td><td>NEW MEXICO</td></tr><tr><td>55<a name="carr-line-prcng-lclty-cd-55"> </a></td><td>MANHATTAN, NY</td><td>MANHATTAN, NY</td></tr><tr><td>56<a name="carr-line-prcng-lclty-cd-56"> </a></td><td>NYC SUBURBS/LONG I., NY</td><td>NYC SUBURBS/LONG I., NY</td></tr><tr><td>57<a name="carr-line-prcng-lclty-cd-57"> </a></td><td>POUGHKPSIE/N NYC SUBURBS, NY</td><td>POUGHKPSIE/N NYC SUBURBS, NY</td></tr><tr><td>58<a name="carr-line-prcng-lclty-cd-58"> </a></td><td>QUEENS, NY</td><td>QUEENS, NY</td></tr><tr><td>59<a name="carr-line-prcng-lclty-cd-59"> </a></td><td>REST OF NEW YORK</td><td>REST OF NEW YORK</td></tr><tr><td>60<a name="carr-line-prcng-lclty-cd-60"> </a></td><td>NORTH CAROLINA</td><td>NORTH CAROLINA</td></tr><tr><td>61<a name="carr-line-prcng-lclty-cd-61"> </a></td><td>NORTH DAKOTA</td><td>NORTH DAKOTA</td></tr><tr><td>62<a name="carr-line-prcng-lclty-cd-62"> </a></td><td>OHIO</td><td>OHIO</td></tr><tr><td>63<a name="carr-line-prcng-lclty-cd-63"> </a></td><td>OKLAHOMA</td><td>OKLAHOMA</td></tr><tr><td>64<a name="carr-line-prcng-lclty-cd-64"> </a></td><td>PORTLAND, OR</td><td>PORTLAND, OR</td></tr><tr><td>65<a name="carr-line-prcng-lclty-cd-65"> </a></td><td>REST OF OREGON</td><td>REST OF OREGON</td></tr><tr><td>66<a name="carr-line-prcng-lclty-cd-66"> </a></td><td>METROPOLITAN PHILADELPHIA, PA</td><td>METROPOLITAN PHILADELPHIA, PA</td></tr><tr><td>67<a name="carr-line-prcng-lclty-cd-67"> </a></td><td>REST OF PENNSYLVANIA</td><td>REST OF PENNSYLVANIA</td></tr><tr><td>68<a name="carr-line-prcng-lclty-cd-68"> </a></td><td>PUERTO RICO</td><td>PUERTO RICO</td></tr><tr><td>69<a name="carr-line-prcng-lclty-cd-69"> </a></td><td>RHODE ISLAND</td><td>RHODE ISLAND</td></tr><tr><td>70<a name="carr-line-prcng-lclty-cd-70"> </a></td><td>SOUTH CAROLINA</td><td>SOUTH CAROLINA</td></tr><tr><td>71<a name="carr-line-prcng-lclty-cd-71"> </a></td><td>SOUTH DAKOTA</td><td>SOUTH DAKOTA</td></tr><tr><td>72<a name="carr-line-prcng-lclty-cd-72"> </a></td><td>TENNESSEE</td><td>TENNESSEE</td></tr><tr><td>73<a name="carr-line-prcng-lclty-cd-73"> </a></td><td>AUSTIN, TX</td><td>AUSTIN, TX</td></tr><tr><td>74<a name="carr-line-prcng-lclty-cd-74"> </a></td><td>BEAUMONT, TX</td><td>BEAUMONT, TX</td></tr><tr><td>75<a name="carr-line-prcng-lclty-cd-75"> </a></td><td>BRAZORIA, TX</td><td>BRAZORIA, TX</td></tr><tr><td>76<a name="carr-line-prcng-lclty-cd-76"> </a></td><td>DALLAS, TX</td><td>DALLAS, TX</td></tr><tr><td>77<a name="carr-line-prcng-lclty-cd-77"> </a></td><td>FORT WORTH, TX</td><td>FORT WORTH, TX</td></tr><tr><td>78<a name="carr-line-prcng-lclty-cd-78"> </a></td><td>GALVESTON, TX</td><td>GALVESTON, TX</td></tr><tr><td>79<a name="carr-line-prcng-lclty-cd-79"> </a></td><td>HOUSTON, TX</td><td>HOUSTON, TX</td></tr><tr><td>80<a name="carr-line-prcng-lclty-cd-80"> </a></td><td>REST OF TEXAS</td><td>REST OF TEXAS</td></tr><tr><td>81<a name="carr-line-prcng-lclty-cd-81"> </a></td><td>UTAH</td><td>UTAH</td></tr><tr><td>82<a name="carr-line-prcng-lclty-cd-82"> </a></td><td>VERMONT</td><td>VERMONT</td></tr><tr><td>83<a name="carr-line-prcng-lclty-cd-83"> </a></td><td>VIRGIN ISLANDS</td><td>VIRGIN ISLANDS</td></tr><tr><td>84<a name="carr-line-prcng-lclty-cd-84"> </a></td><td>VIRGINIA</td><td>VIRGINIA</td></tr><tr><td>85<a name="carr-line-prcng-lclty-cd-85"> </a></td><td>REST OF WASHINGTON</td><td>REST OF WASHINGTON</td></tr><tr><td>86<a name="carr-line-prcng-lclty-cd-86"> </a></td><td>SEATTLE (KING CNTY), WA</td><td>SEATTLE (KING CNTY), WA</td></tr><tr><td>87<a name="carr-line-prcng-lclty-cd-87"> </a></td><td>WEST VIRGINIA</td><td>WEST VIRGINIA</td></tr><tr><td>88<a name="carr-line-prcng-lclty-cd-88"> </a></td><td>WISCONSIN 89 WYOMING</td><td>WISCONSIN 89 WYOMING</td></tr></table></div>
+  </text>
+  <url value="/assets/ig/CodeSystem-carr-line-prcng-lclty-cd"/>
+  <identifier>
+    <value value="/assets/ig/CodeSystem-carr-line-prcng-lclty-cd"/>
+  </identifier>
+  <version value="1.1.0"/>
+  <name value="Carrier Line Pricing Locality Code"/>
+  <title value="Carrier Line Pricing Locality Code"/>
+  <status value="active"/>
+  <date value="2018-05-07T14:45:05+00:00"/>
+  <description value="Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr_line_prcng_lclty_cd"/>
+  <caseSensitive value="true"/>
+  <valueSet value="/assets/ig/ValueSet-carr-line-prcng-lclty-cd"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <concept>
+    <code value="1"/>
+    <display value="ALABAMA"/>
+    <definition value="ALABAMA"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="ALASKA"/>
+    <definition value="ALASKA"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="ARIZONA"/>
+    <definition value="ARIZONA"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="ARKANSAS"/>
+    <definition value="ARKANSAS"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="ANAHEIM/SANTA ANA, CA"/>
+    <definition value="ANAHEIM/SANTA ANA, CA"/>
+  </concept>
+  <concept>
+    <code value="6"/>
+    <display value="LOS ANGELES, CA"/>
+    <definition value="LOS ANGELES, CA"/>
+  </concept>
+  <concept>
+    <code value="7"/>
+    <display value="MARIN/NAPA/SOLANO, CA"/>
+    <definition value="MARIN/NAPA/SOLANO, CA"/>
+  </concept>
+  <concept>
+    <code value="8"/>
+    <display value="OAKLAND/BERKELEY, CA"/>
+    <definition value="OAKLAND/BERKELEY, CA"/>
+  </concept>
+  <concept>
+    <code value="9"/>
+    <display value="REST OF CALIFORNIA"/>
+    <definition value="REST OF CALIFORNIA"/>
+  </concept>
+  <concept>
+    <code value="10"/>
+    <display value="SAN FRANCISCO, CA"/>
+    <definition value="SAN FRANCISCO, CA"/>
+  </concept>
+  <concept>
+    <code value="11"/>
+    <display value="SAN MATEO, CA"/>
+    <definition value="SAN MATEO, CA"/>
+  </concept>
+  <concept>
+    <code value="12"/>
+    <display value="SANTA CLARA, CA"/>
+    <definition value="SANTA CLARA, CA"/>
+  </concept>
+  <concept>
+    <code value="13"/>
+    <display value="VENTURA, CA"/>
+    <definition value="VENTURA, CA"/>
+  </concept>
+  <concept>
+    <code value="14"/>
+    <display value="COLORADO"/>
+    <definition value="COLORADO"/>
+  </concept>
+  <concept>
+    <code value="15"/>
+    <display value="CONNECTICUT"/>
+    <definition value="CONNECTICUT"/>
+  </concept>
+  <concept>
+    <code value="16"/>
+    <display value="DC + MD/VA SUBURBS"/>
+    <definition value="DC + MD/VA SUBURBS"/>
+  </concept>
+  <concept>
+    <code value="17"/>
+    <display value="DELAWARE"/>
+    <definition value="DELAWARE"/>
+  </concept>
+  <concept>
+    <code value="18"/>
+    <display value="FORT LAUDERDALE, FL"/>
+    <definition value="FORT LAUDERDALE, FL"/>
+  </concept>
+  <concept>
+    <code value="19"/>
+    <display value="MIAMI, FL"/>
+    <definition value="MIAMI, FL"/>
+  </concept>
+  <concept>
+    <code value="20"/>
+    <display value="REST OF FLORIDA"/>
+    <definition value="REST OF FLORIDA"/>
+  </concept>
+  <concept>
+    <code value="21"/>
+    <display value="ATLANTA, GA"/>
+    <definition value="ATLANTA, GA"/>
+  </concept>
+  <concept>
+    <code value="22"/>
+    <display value="REST OF GEORGIA"/>
+    <definition value="REST OF GEORGIA"/>
+  </concept>
+  <concept>
+    <code value="23"/>
+    <display value="HAWAII"/>
+    <definition value="HAWAII"/>
+  </concept>
+  <concept>
+    <code value="24"/>
+    <display value="IDAHO"/>
+    <definition value="IDAHO"/>
+  </concept>
+  <concept>
+    <code value="25"/>
+    <display value="CHICAGO, IL"/>
+    <definition value="CHICAGO, IL"/>
+  </concept>
+  <concept>
+    <code value="26"/>
+    <display value="EAST ST. LOUIS, IL"/>
+    <definition value="EAST ST. LOUIS, IL"/>
+  </concept>
+  <concept>
+    <code value="27"/>
+    <display value="REST OF ILLINOIS"/>
+    <definition value="REST OF ILLINOIS"/>
+  </concept>
+  <concept>
+    <code value="28"/>
+    <display value="SUBURBAN CHICAGO, IL"/>
+    <definition value="SUBURBAN CHICAGO, IL"/>
+  </concept>
+  <concept>
+    <code value="29"/>
+    <display value="INDIANA"/>
+    <definition value="INDIANA"/>
+  </concept>
+  <concept>
+    <code value="30"/>
+    <display value="IOWA"/>
+    <definition value="IOWA"/>
+  </concept>
+  <concept>
+    <code value="31"/>
+    <display value="KANSAS"/>
+    <definition value="KANSAS"/>
+  </concept>
+  <concept>
+    <code value="32"/>
+    <display value="KENTUCKY"/>
+    <definition value="KENTUCKY"/>
+  </concept>
+  <concept>
+    <code value="33"/>
+    <display value="NEW ORLEANS, LA"/>
+    <definition value="NEW ORLEANS, LA"/>
+  </concept>
+  <concept>
+    <code value="34"/>
+    <display value="REST OF LOUISIANA"/>
+    <definition value="REST OF LOUISIANA"/>
+  </concept>
+  <concept>
+    <code value="35"/>
+    <display value="REST OF MAINE"/>
+    <definition value="REST OF MAINE"/>
+  </concept>
+  <concept>
+    <code value="36"/>
+    <display value="SOUTHERN MAINE"/>
+    <definition value="SOUTHERN MAINE"/>
+  </concept>
+  <concept>
+    <code value="37"/>
+    <display value="BALTIMORE/SURR. CNTYS, MD"/>
+    <definition value="BALTIMORE/SURR. CNTYS, MD"/>
+  </concept>
+  <concept>
+    <code value="38"/>
+    <display value="REST OF MARYLAND"/>
+    <definition value="REST OF MARYLAND"/>
+  </concept>
+  <concept>
+    <code value="39"/>
+    <display value="METROPOLITAN BOSTON"/>
+    <definition value="METROPOLITAN BOSTON"/>
+  </concept>
+  <concept>
+    <code value="40"/>
+    <display value="REST OF MASSACHUSETTS"/>
+    <definition value="REST OF MASSACHUSETTS"/>
+  </concept>
+  <concept>
+    <code value="41"/>
+    <display value="DETROIT, MI"/>
+    <definition value="DETROIT, MI"/>
+  </concept>
+  <concept>
+    <code value="42"/>
+    <display value="REST OF MICHIGAN"/>
+    <definition value="REST OF MICHIGAN"/>
+  </concept>
+  <concept>
+    <code value="43"/>
+    <display value="MINNESOTA"/>
+    <definition value="MINNESOTA"/>
+  </concept>
+  <concept>
+    <code value="44"/>
+    <display value="MISSISSIPPI"/>
+    <definition value="MISSISSIPPI"/>
+  </concept>
+  <concept>
+    <code value="45"/>
+    <display value="METROPOLITAN KANSAS CITY, MO"/>
+    <definition value="METROPOLITAN KANSAS CITY, MO"/>
+  </concept>
+  <concept>
+    <code value="46"/>
+    <display value="METROPOLITAN ST. LOUIS, MO"/>
+    <definition value="METROPOLITAN ST. LOUIS, MO"/>
+  </concept>
+  <concept>
+    <code value="47"/>
+    <display value="REST OF MISSOURI"/>
+    <definition value="REST OF MISSOURI"/>
+  </concept>
+  <concept>
+    <code value="48"/>
+    <display value="MONTANA"/>
+    <definition value="MONTANA"/>
+  </concept>
+  <concept>
+    <code value="49"/>
+    <display value="NEBRASKA"/>
+    <definition value="NEBRASKA"/>
+  </concept>
+  <concept>
+    <code value="50"/>
+    <display value="NEVADA"/>
+    <definition value="NEVADA"/>
+  </concept>
+  <concept>
+    <code value="51"/>
+    <display value="NEW HAMPSHIRE"/>
+    <definition value="NEW HAMPSHIRE"/>
+  </concept>
+  <concept>
+    <code value="52"/>
+    <display value="NORTHERN NJ"/>
+    <definition value="NORTHERN NJ"/>
+  </concept>
+  <concept>
+    <code value="53"/>
+    <display value="REST OF NEW JERSEY"/>
+    <definition value="REST OF NEW JERSEY"/>
+  </concept>
+  <concept>
+    <code value="54"/>
+    <display value="NEW MEXICO"/>
+    <definition value="NEW MEXICO"/>
+  </concept>
+  <concept>
+    <code value="55"/>
+    <display value="MANHATTAN, NY"/>
+    <definition value="MANHATTAN, NY"/>
+  </concept>
+  <concept>
+    <code value="56"/>
+    <display value="NYC SUBURBS/LONG I., NY"/>
+    <definition value="NYC SUBURBS/LONG I., NY"/>
+  </concept>
+  <concept>
+    <code value="57"/>
+    <display value="POUGHKPSIE/N NYC SUBURBS, NY"/>
+    <definition value="POUGHKPSIE/N NYC SUBURBS, NY"/>
+  </concept>
+  <concept>
+    <code value="58"/>
+    <display value="QUEENS, NY"/>
+    <definition value="QUEENS, NY"/>
+  </concept>
+  <concept>
+    <code value="59"/>
+    <display value="REST OF NEW YORK"/>
+    <definition value="REST OF NEW YORK"/>
+  </concept>
+  <concept>
+    <code value="60"/>
+    <display value="NORTH CAROLINA"/>
+    <definition value="NORTH CAROLINA"/>
+  </concept>
+  <concept>
+    <code value="61"/>
+    <display value="NORTH DAKOTA"/>
+    <definition value="NORTH DAKOTA"/>
+  </concept>
+  <concept>
+    <code value="62"/>
+    <display value="OHIO"/>
+    <definition value="OHIO"/>
+  </concept>
+  <concept>
+    <code value="63"/>
+    <display value="OKLAHOMA"/>
+    <definition value="OKLAHOMA"/>
+  </concept>
+  <concept>
+    <code value="64"/>
+    <display value="PORTLAND, OR"/>
+    <definition value="PORTLAND, OR"/>
+  </concept>
+  <concept>
+    <code value="65"/>
+    <display value="REST OF OREGON"/>
+    <definition value="REST OF OREGON"/>
+  </concept>
+  <concept>
+    <code value="66"/>
+    <display value="METROPOLITAN PHILADELPHIA, PA"/>
+    <definition value="METROPOLITAN PHILADELPHIA, PA"/>
+  </concept>
+  <concept>
+    <code value="67"/>
+    <display value="REST OF PENNSYLVANIA"/>
+    <definition value="REST OF PENNSYLVANIA"/>
+  </concept>
+  <concept>
+    <code value="68"/>
+    <display value="PUERTO RICO"/>
+    <definition value="PUERTO RICO"/>
+  </concept>
+  <concept>
+    <code value="69"/>
+    <display value="RHODE ISLAND"/>
+    <definition value="RHODE ISLAND"/>
+  </concept>
+  <concept>
+    <code value="70"/>
+    <display value="SOUTH CAROLINA"/>
+    <definition value="SOUTH CAROLINA"/>
+  </concept>
+  <concept>
+    <code value="71"/>
+    <display value="SOUTH DAKOTA"/>
+    <definition value="SOUTH DAKOTA"/>
+  </concept>
+  <concept>
+    <code value="72"/>
+    <display value="TENNESSEE"/>
+    <definition value="TENNESSEE"/>
+  </concept>
+  <concept>
+    <code value="73"/>
+    <display value="AUSTIN, TX"/>
+    <definition value="AUSTIN, TX"/>
+  </concept>
+  <concept>
+    <code value="74"/>
+    <display value="BEAUMONT, TX"/>
+    <definition value="BEAUMONT, TX"/>
+  </concept>
+  <concept>
+    <code value="75"/>
+    <display value="BRAZORIA, TX"/>
+    <definition value="BRAZORIA, TX"/>
+  </concept>
+  <concept>
+    <code value="76"/>
+    <display value="DALLAS, TX"/>
+    <definition value="DALLAS, TX"/>
+  </concept>
+  <concept>
+    <code value="77"/>
+    <display value="FORT WORTH, TX"/>
+    <definition value="FORT WORTH, TX"/>
+  </concept>
+  <concept>
+    <code value="78"/>
+    <display value="GALVESTON, TX"/>
+    <definition value="GALVESTON, TX"/>
+  </concept>
+  <concept>
+    <code value="79"/>
+    <display value="HOUSTON, TX"/>
+    <definition value="HOUSTON, TX"/>
+  </concept>
+  <concept>
+    <code value="80"/>
+    <display value="REST OF TEXAS"/>
+    <definition value="REST OF TEXAS"/>
+  </concept>
+  <concept>
+    <code value="81"/>
+    <display value="UTAH"/>
+    <definition value="UTAH"/>
+  </concept>
+  <concept>
+    <code value="82"/>
+    <display value="VERMONT"/>
+    <definition value="VERMONT"/>
+  </concept>
+  <concept>
+    <code value="83"/>
+    <display value="VIRGIN ISLANDS"/>
+    <definition value="VIRGIN ISLANDS"/>
+  </concept>
+  <concept>
+    <code value="84"/>
+    <display value="VIRGINIA"/>
+    <definition value="VIRGINIA"/>
+  </concept>
+  <concept>
+    <code value="85"/>
+    <display value="REST OF WASHINGTON"/>
+    <definition value="REST OF WASHINGTON"/>
+  </concept>
+  <concept>
+    <code value="86"/>
+    <display value="SEATTLE (KING CNTY), WA"/>
+    <definition value="SEATTLE (KING CNTY), WA"/>
+  </concept>
+  <concept>
+    <code value="87"/>
+    <display value="WEST VIRGINIA"/>
+    <definition value="WEST VIRGINIA"/>
+  </concept>
+  <concept>
+    <code value="88"/>
+    <display value="WISCONSIN 89 WYOMING"/>
+    <definition value="WISCONSIN 89 WYOMING"/>
+  </concept>
+</CodeSystem>

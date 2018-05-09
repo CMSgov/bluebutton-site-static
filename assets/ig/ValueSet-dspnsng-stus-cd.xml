@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="dspnsng-stus-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Dispensing Status Code</h2><div><p>This field indicates how the pharmacy dispensed the complete quantity of the prescription. When the pharmacy partially fills a prescription, this field indicates a partial fill. When the full quantity is dispensed at one time, this field is blank. Source: https://bluebutton.cms.gov/resources/variables/dspnsng<em>stus</em>cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-dspnsng-stus-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-dspnsng-stus-cd</code></a></li></ul></div>
+  </text>
+  <url value="/assets/ig/ValueSet-dspnsng-stus-cd"/>
+  <version value="1.1.0"/>
+  <name value="Dispensing Status Code"/>
+  <status value="draft"/>
+  <date value="2018-05-07T14:45:05+00:00"/>
+  <description value="This field indicates how the pharmacy dispensed the complete quantity of the prescription. When the pharmacy partially fills a prescription, this field indicates a partial fill. When the full quantity is dispensed at one time, this field is blank. Source: https://bluebutton.cms.gov/resources/variables/dspnsng_stus_cd"/>
+  <compose>
+    <include>
+      <system value="/assets/ig/CodeSystem-dspnsng-stus-cd"/>
+    </include>
+  </compose>
+</ValueSet>

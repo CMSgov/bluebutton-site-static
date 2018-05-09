@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/phrmcy-srvc-type-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "phrmcy-srvc-type-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Pharmacy service type code</h2><div><p>The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide “in-network” services. Source: https://bluebutton.cms.gov/resources/variables/phrmcy<em>srvc</em>type_cd</p>\n</div><p>This code system http://hl7.org/fhir/CodeSystem/phrmcy-srvc-type-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>01<a name=\"phrmcy-srvc-type-cd-01\"> </a></td><td>Community/retail pharmacy</td><td>Community/retail pharmacy</td></tr><tr><td>02<a name=\"phrmcy-srvc-type-cd-02\"> </a></td><td>Compounding pharmacy</td><td>Compounding pharmacy</td></tr><tr><td>03<a name=\"phrmcy-srvc-type-cd-03\"> </a></td><td>Home infusion therapy provider</td><td>Home infusion therapy provider</td></tr><tr><td>04<a name=\"phrmcy-srvc-type-cd-04\"> </a></td><td>Institutional pharmacy</td><td>Institutional pharmacy</td></tr><tr><td>05<a name=\"phrmcy-srvc-type-cd-05\"> </a></td><td>Long-term care pharmacy</td><td>Long-term care pharmacy</td></tr><tr><td>06<a name=\"phrmcy-srvc-type-cd-06\"> </a></td><td>Mail order pharmacy</td><td>Mail order pharmacy</td></tr><tr><td>07<a name=\"phrmcy-srvc-type-cd-07\"> </a></td><td>Managed care organization (MCO) pharmacy</td><td>Managed care organization (MCO) pharmacy</td></tr><tr><td>08<a name=\"phrmcy-srvc-type-cd-08\"> </a></td><td>Specialty care pharmacy</td><td>Specialty care pharmacy</td></tr><tr><td>99<a name=\"phrmcy-srvc-type-cd-99\"> </a></td><td>Other</td><td>Other</td></tr><tr><td>Null<a name=\"phrmcy-srvc-type-cd-Null\"> </a></td><td>Pharmacy is not in any other category above</td><td>Pharmacy is not in any other category above</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/CodeSystem/phrmcy-srvc-type-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "http://hl7.org/fhir/CodeSystem/phrmcy-srvc-type-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Pharmacy service type code"];
+  fhir:CodeSystem.title [ fhir:value "Pharmacy service type code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide “in-network” services. Source: https://bluebutton.cms.gov/resources/variables/phrmcy_srvc_type_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "http://hl7.org/fhir/ValueSet/phrmcy-srvc-type-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "01" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Community/retail pharmacy" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Community/retail pharmacy" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "02" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Compounding pharmacy" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Compounding pharmacy" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "03" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Home infusion therapy provider" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Home infusion therapy provider" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "04" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Institutional pharmacy" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Institutional pharmacy" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "05" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Long-term care pharmacy" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Long-term care pharmacy" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "06" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Mail order pharmacy" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Mail order pharmacy" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "07" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Managed care organization (MCO) pharmacy" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Managed care organization (MCO) pharmacy" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "08" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Specialty care pharmacy" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Specialty care pharmacy" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "99" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Other" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Other" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "Null" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Pharmacy is not in any other category above" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Pharmacy is not in any other category above" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/CodeSystem/phrmcy-srvc-type-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/phrmcy-srvc-type-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

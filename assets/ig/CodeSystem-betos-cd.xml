@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="betos-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Line Berenson-Eggers Type of Service (BETOS) Code</h2><div><p>The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd</p>
+</div><p>This code system /assets/ig/CodeSystem-betos-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>M1A<a name="betos-cd-M1A"> </a></td><td>Office visits - new</td><td>Office visits - new</td></tr><tr><td>M1B<a name="betos-cd-M1B"> </a></td><td>Office visits - established</td><td>Office visits - established</td></tr><tr><td>M2A<a name="betos-cd-M2A"> </a></td><td>Hospital visit - initial</td><td>Hospital visit - initial</td></tr><tr><td>M2B<a name="betos-cd-M2B"> </a></td><td>Hospital visit - subsequent</td><td>Hospital visit - subsequent</td></tr><tr><td>M2C<a name="betos-cd-M2C"> </a></td><td>Hospital visit - critical care</td><td>Hospital visit - critical care</td></tr><tr><td>M3<a name="betos-cd-M3"> </a></td><td>Emergency room visit</td><td>Emergency room visit</td></tr><tr><td>M4A<a name="betos-cd-M4A"> </a></td><td>Home visit</td><td>Home visit</td></tr><tr><td>M4B<a name="betos-cd-M4B"> </a></td><td>Nursing home visit</td><td>Nursing home visit</td></tr><tr><td>M5A<a name="betos-cd-M5A"> </a></td><td>Specialist - pathology</td><td>Specialist - pathology</td></tr><tr><td>M5B<a name="betos-cd-M5B"> </a></td><td>Specialist - psychiatry</td><td>Specialist - psychiatry</td></tr><tr><td>M5C<a name="betos-cd-M5C"> </a></td><td>Specialist - ophthalmology</td><td>Specialist - ophthalmology</td></tr><tr><td>M5D<a name="betos-cd-M5D"> </a></td><td>Specialist - other</td><td>Specialist - other</td></tr><tr><td>M6<a name="betos-cd-M6"> </a></td><td>Consultations</td><td>Consultations</td></tr><tr><td>P0<a name="betos-cd-P0"> </a></td><td>Anesthesia</td><td>Anesthesia</td></tr><tr><td>P1A<a name="betos-cd-P1A"> </a></td><td>Major procedure - breast</td><td>Major procedure - breast</td></tr><tr><td>P1B<a name="betos-cd-P1B"> </a></td><td>Major procedure - colectomy</td><td>Major procedure - colectomy</td></tr><tr><td>P1C<a name="betos-cd-P1C"> </a></td><td>Major procedure - cholecystectomy</td><td>Major procedure - cholecystectomy</td></tr><tr><td>P1D<a name="betos-cd-P1D"> </a></td><td>Major procedure - turp</td><td>Major procedure - turp</td></tr><tr><td>P1E<a name="betos-cd-P1E"> </a></td><td>Major procedure - hysterectomy</td><td>Major procedure - hysterectomy</td></tr><tr><td>P1F<a name="betos-cd-P1F"> </a></td><td>Major procedure - explor/decompr/excisdisc</td><td>Major procedure - explor/decompr/excisdisc</td></tr><tr><td>P1G<a name="betos-cd-P1G"> </a></td><td>Major procedure - Other</td><td>Major procedure - Other</td></tr><tr><td>P2A<a name="betos-cd-P2A"> </a></td><td>Major procedure, cardiovascular-CABG</td><td>Major procedure, cardiovascular-CABG</td></tr><tr><td>P2B<a name="betos-cd-P2B"> </a></td><td>Major procedure, cardiovascular-Aneurysm repair</td><td>Major procedure, cardiovascular-Aneurysm repair</td></tr><tr><td>P2C<a name="betos-cd-P2C"> </a></td><td>Major Procedure, cardiovascular-Thromboendarterectomy</td><td>Major Procedure, cardiovascular-Thromboendarterectomy</td></tr><tr><td>P2D<a name="betos-cd-P2D"> </a></td><td>Major procedure, cardiovascualr-Coronary angioplasty (PTCA)</td><td>Major procedure, cardiovascualr-Coronary angioplasty (PTCA)</td></tr><tr><td>P2E<a name="betos-cd-P2E"> </a></td><td>Major procedure, cardiovascular-Pacemaker insertion</td><td>Major procedure, cardiovascular-Pacemaker insertion</td></tr><tr><td>P2F<a name="betos-cd-P2F"> </a></td><td>Major procedure, cardiovascular-Other</td><td>Major procedure, cardiovascular-Other</td></tr><tr><td>P3A<a name="betos-cd-P3A"> </a></td><td>Major procedure, orthopedic - Hip fracture repair</td><td>Major procedure, orthopedic - Hip fracture repair</td></tr><tr><td>P3B<a name="betos-cd-P3B"> </a></td><td>Major procedure, orthopedic - Hip replacement</td><td>Major procedure, orthopedic - Hip replacement</td></tr><tr><td>P3C<a name="betos-cd-P3C"> </a></td><td>Major procedure, orthopedic - Knee replacement</td><td>Major procedure, orthopedic - Knee replacement</td></tr><tr><td>P3D<a name="betos-cd-P3D"> </a></td><td>Major procedure, orthopedic - other</td><td>Major procedure, orthopedic - other</td></tr><tr><td>P4A<a name="betos-cd-P4A"> </a></td><td>Eye procedure - corneal transplant</td><td>Eye procedure - corneal transplant</td></tr><tr><td>P4B<a name="betos-cd-P4B"> </a></td><td>Eye procedure - cataract removal/lens insertion</td><td>Eye procedure - cataract removal/lens insertion</td></tr><tr><td>P4C<a name="betos-cd-P4C"> </a></td><td>Eye procedure - retinal detachment</td><td>Eye procedure - retinal detachment</td></tr><tr><td>P4D<a name="betos-cd-P4D"> </a></td><td>Eye procedure - treatment of retinal lesions</td><td>Eye procedure - treatment of retinal lesions</td></tr><tr><td>P4E<a name="betos-cd-P4E"> </a></td><td>Eye procedure - other</td><td>Eye procedure - other</td></tr><tr><td>P5A<a name="betos-cd-P5A"> </a></td><td>Ambulatory procedures - skin</td><td>Ambulatory procedures - skin</td></tr><tr><td>P5B<a name="betos-cd-P5B"> </a></td><td>Ambulatory procedures - musculoskeletal</td><td>Ambulatory procedures - musculoskeletal</td></tr><tr><td>P5C<a name="betos-cd-P5C"> </a></td><td>Ambulatory procedures - inguinal hernia repair</td><td>Ambulatory procedures - inguinal hernia repair</td></tr><tr><td>P5D<a name="betos-cd-P5D"> </a></td><td>Ambulatory procedures - lithotripsy</td><td>Ambulatory procedures - lithotripsy</td></tr><tr><td>P5E<a name="betos-cd-P5E"> </a></td><td>Ambulatory procedures - other</td><td>Ambulatory procedures - other</td></tr><tr><td>P6A<a name="betos-cd-P6A"> </a></td><td>Minor procedures - skin</td><td>Minor procedures - skin</td></tr><tr><td>P6B<a name="betos-cd-P6B"> </a></td><td>Minor procedures - musculoskeletal</td><td>Minor procedures - musculoskeletal</td></tr><tr><td>P6C<a name="betos-cd-P6C"> </a></td><td>Minor procedures - other (Medicare fee schedule)</td><td>Minor procedures - other (Medicare fee schedule)</td></tr><tr><td>P6D<a name="betos-cd-P6D"> </a></td><td>Minor procedures - other (non-Medicare fee schedule)</td><td>Minor procedures - other (non-Medicare fee schedule)</td></tr><tr><td>P7A<a name="betos-cd-P7A"> </a></td><td>Oncology - radiation therapy</td><td>Oncology - radiation therapy</td></tr><tr><td>P7B<a name="betos-cd-P7B"> </a></td><td>Oncology - other</td><td>Oncology - other</td></tr><tr><td>P8A<a name="betos-cd-P8A"> </a></td><td>Endoscopy - arthroscopy</td><td>Endoscopy - arthroscopy</td></tr><tr><td>P8B<a name="betos-cd-P8B"> </a></td><td>Endoscopy - upper gastrointestinal</td><td>Endoscopy - upper gastrointestinal</td></tr><tr><td>P8C<a name="betos-cd-P8C"> </a></td><td>Endoscopy - sigmoidoscopy</td><td>Endoscopy - sigmoidoscopy</td></tr><tr><td>P8D<a name="betos-cd-P8D"> </a></td><td>Endoscopy - colonoscopy</td><td>Endoscopy - colonoscopy</td></tr><tr><td>P8E<a name="betos-cd-P8E"> </a></td><td>Endoscopy - cystoscopy</td><td>Endoscopy - cystoscopy</td></tr><tr><td>P8F<a name="betos-cd-P8F"> </a></td><td>Endoscopy - bronchoscopy</td><td>Endoscopy - bronchoscopy</td></tr><tr><td>P8G<a name="betos-cd-P8G"> </a></td><td>Endoscopy - laparoscopic cholecystectomy</td><td>Endoscopy - laparoscopic cholecystectomy</td></tr><tr><td>P8H<a name="betos-cd-P8H"> </a></td><td>Endoscopy - laryngoscopy</td><td>Endoscopy - laryngoscopy</td></tr><tr><td>P8I<a name="betos-cd-P8I"> </a></td><td>Endoscopy - other</td><td>Endoscopy - other</td></tr><tr><td>P9A<a name="betos-cd-P9A"> </a></td><td>Dialysis services (Medicare fee schedule)</td><td>Dialysis services (Medicare fee schedule)</td></tr><tr><td>P9B<a name="betos-cd-P9B"> </a></td><td>Dialysis services (non-Medicare fee schedule)</td><td>Dialysis services (non-Medicare fee schedule)</td></tr><tr><td>I1A<a name="betos-cd-I1A"> </a></td><td>Standard imaging - chest</td><td>Standard imaging - chest</td></tr><tr><td>I1B<a name="betos-cd-I1B"> </a></td><td>Standard imaging - musculoskeletal</td><td>Standard imaging - musculoskeletal</td></tr><tr><td>I1C<a name="betos-cd-I1C"> </a></td><td>Standard imaging - breast</td><td>Standard imaging - breast</td></tr><tr><td>I1D<a name="betos-cd-I1D"> </a></td><td>Standard imaging - contrast gastrointestinal</td><td>Standard imaging - contrast gastrointestinal</td></tr><tr><td>I1E<a name="betos-cd-I1E"> </a></td><td>Standard imaging - nuclear medicine</td><td>Standard imaging - nuclear medicine</td></tr><tr><td>I1F<a name="betos-cd-I1F"> </a></td><td>Standard imaging - other</td><td>Standard imaging - other</td></tr><tr><td>I2A<a name="betos-cd-I2A"> </a></td><td>Advanced imaging - CAT/CT/CTA: brain/head/neck</td><td>Advanced imaging - CAT/CT/CTA: brain/head/neck</td></tr><tr><td>I2B<a name="betos-cd-I2B"> </a></td><td>Advanced imaging - CAT/CT/CTA: other</td><td>Advanced imaging - CAT/CT/CTA: other</td></tr><tr><td>I2C<a name="betos-cd-I2C"> </a></td><td>Advanced imaging - MRI/MRA: brain/head/neck</td><td>Advanced imaging - MRI/MRA: brain/head/neck</td></tr><tr><td>I2D<a name="betos-cd-I2D"> </a></td><td>Advanced imaging - MRI/MRA: other</td><td>Advanced imaging - MRI/MRA: other</td></tr><tr><td>I3A<a name="betos-cd-I3A"> </a></td><td>Echography/ultrasonography - eye</td><td>Echography/ultrasonography - eye</td></tr><tr><td>I3B<a name="betos-cd-I3B"> </a></td><td>Echography/ultrasonography - abdomen/pelvis</td><td>Echography/ultrasonography - abdomen/pelvis</td></tr><tr><td>I3C<a name="betos-cd-I3C"> </a></td><td>Echography/ultrasonography - heart</td><td>Echography/ultrasonography - heart</td></tr><tr><td>I3D<a name="betos-cd-I3D"> </a></td><td>Echography/ultrasonography - carotid arteries</td><td>Echography/ultrasonography - carotid arteries</td></tr><tr><td>I3E<a name="betos-cd-I3E"> </a></td><td>Echography/ultrasonography - prostate, transrectal</td><td>Echography/ultrasonography - prostate, transrectal</td></tr><tr><td>I3F<a name="betos-cd-I3F"> </a></td><td>Echography/ultrasonography - other</td><td>Echography/ultrasonography - other</td></tr><tr><td>I4A<a name="betos-cd-I4A"> </a></td><td>Imaging/procedure - heart including cardiac catheterization</td><td>Imaging/procedure - heart including cardiac catheterization</td></tr><tr><td>I4B<a name="betos-cd-I4B"> </a></td><td>Imaging/procedure - other</td><td>Imaging/procedure - other</td></tr><tr><td>T1A<a name="betos-cd-T1A"> </a></td><td>Lab tests - routine venipuncture (non-Medicare fee schedule)</td><td>Lab tests - routine venipuncture (non-Medicare fee schedule)</td></tr><tr><td>T1B<a name="betos-cd-T1B"> </a></td><td>Lab tests - automated general profiles</td><td>Lab tests - automated general profiles</td></tr><tr><td>T1C<a name="betos-cd-T1C"> </a></td><td>Lab tests - urinalysis</td><td>Lab tests - urinalysis</td></tr><tr><td>T1D<a name="betos-cd-T1D"> </a></td><td>Lab tests - blood counts</td><td>Lab tests - blood counts</td></tr><tr><td>T1E<a name="betos-cd-T1E"> </a></td><td>Lab tests - glucose</td><td>Lab tests - glucose</td></tr><tr><td>T1F<a name="betos-cd-T1F"> </a></td><td>Lab tests - bacterial cultures</td><td>Lab tests - bacterial cultures</td></tr><tr><td>T1G<a name="betos-cd-T1G"> </a></td><td>Lab tests - other (Medicare fee schedule)</td><td>Lab tests - other (Medicare fee schedule)</td></tr><tr><td>T1H<a name="betos-cd-T1H"> </a></td><td>Lab tests - other (non-Medicare fee schedule)</td><td>Lab tests - other (non-Medicare fee schedule)</td></tr><tr><td>T2A<a name="betos-cd-T2A"> </a></td><td>Other tests - electrocardiograms</td><td>Other tests - electrocardiograms</td></tr><tr><td>T2B<a name="betos-cd-T2B"> </a></td><td>Other tests - cardiovascular stress tests</td><td>Other tests - cardiovascular stress tests</td></tr><tr><td>T2C<a name="betos-cd-T2C"> </a></td><td>Other tests - EKG monitoring</td><td>Other tests - EKG monitoring</td></tr><tr><td>T2D<a name="betos-cd-T2D"> </a></td><td>Other tests - other</td><td>Other tests - other</td></tr><tr><td>D1A<a name="betos-cd-D1A"> </a></td><td>Medical/surgical supplies</td><td>Medical/surgical supplies</td></tr><tr><td>D1B<a name="betos-cd-D1B"> </a></td><td>Hospital beds</td><td>Hospital beds</td></tr><tr><td>D1C<a name="betos-cd-D1C"> </a></td><td>Oxygen and supplies</td><td>Oxygen and supplies</td></tr><tr><td>D1D<a name="betos-cd-D1D"> </a></td><td>Wheelchairs</td><td>Wheelchairs</td></tr><tr><td>D1E<a name="betos-cd-D1E"> </a></td><td>Other DME</td><td>Other DME</td></tr><tr><td>D1F<a name="betos-cd-D1F"> </a></td><td>Prosthetic/Orthotic devices</td><td>Prosthetic/Orthotic devices</td></tr><tr><td>D1G<a name="betos-cd-D1G"> </a></td><td>Drugs Administered through DME</td><td>Drugs Administered through DME</td></tr><tr><td>O1A<a name="betos-cd-O1A"> </a></td><td>Ambulance</td><td>Ambulance</td></tr><tr><td>O1B<a name="betos-cd-O1B"> </a></td><td>Chiropractic</td><td>Chiropractic</td></tr><tr><td>O1C<a name="betos-cd-O1C"> </a></td><td>Enteral and parenteral</td><td>Enteral and parenteral</td></tr><tr><td>O1D<a name="betos-cd-O1D"> </a></td><td>Chemotherapy</td><td>Chemotherapy</td></tr><tr><td>O1E<a name="betos-cd-O1E"> </a></td><td>Other drugs</td><td>Other drugs</td></tr><tr><td>O1F<a name="betos-cd-O1F"> </a></td><td>Hearing and speech services</td><td>Hearing and speech services</td></tr><tr><td>O1G<a name="betos-cd-O1G"> </a></td><td>Immunizations/Vaccinations</td><td>Immunizations/Vaccinations</td></tr><tr><td>Y1<a name="betos-cd-Y1"> </a></td><td>Other - Medicare fee schedule</td><td>Other - Medicare fee schedule</td></tr><tr><td>Y2<a name="betos-cd-Y2"> </a></td><td>Other - non-Medicare fee schedule</td><td>Other - non-Medicare fee schedule</td></tr><tr><td>Z1<a name="betos-cd-Z1"> </a></td><td>Local codes</td><td>Local codes</td></tr><tr><td>Z2<a name="betos-cd-Z2"> </a></td><td>Undefined codes</td><td>Undefined codes</td></tr></table></div>
+  </text>
+  <url value="/assets/ig/CodeSystem-betos-cd"/>
+  <identifier>
+    <value value="/assets/ig/CodeSystem-betos-cd"/>
+  </identifier>
+  <version value="1.1.0"/>
+  <name value="Line Berenson-Eggers Type of Service (BETOS) Code"/>
+  <title value="Line Berenson-Eggers Type of Service (BETOS) Code"/>
+  <status value="active"/>
+  <date value="2018-05-07T14:45:05+00:00"/>
+  <description value="The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd"/>
+  <caseSensitive value="true"/>
+  <valueSet value="/assets/ig/ValueSet-betos-cd"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <concept>
+    <code value="M1A"/>
+    <display value="Office visits - new"/>
+    <definition value="Office visits - new"/>
+  </concept>
+  <concept>
+    <code value="M1B"/>
+    <display value="Office visits - established"/>
+    <definition value="Office visits - established"/>
+  </concept>
+  <concept>
+    <code value="M2A"/>
+    <display value="Hospital visit - initial"/>
+    <definition value="Hospital visit - initial"/>
+  </concept>
+  <concept>
+    <code value="M2B"/>
+    <display value="Hospital visit - subsequent"/>
+    <definition value="Hospital visit - subsequent"/>
+  </concept>
+  <concept>
+    <code value="M2C"/>
+    <display value="Hospital visit - critical care"/>
+    <definition value="Hospital visit - critical care"/>
+  </concept>
+  <concept>
+    <code value="M3"/>
+    <display value="Emergency room visit"/>
+    <definition value="Emergency room visit"/>
+  </concept>
+  <concept>
+    <code value="M4A"/>
+    <display value="Home visit"/>
+    <definition value="Home visit"/>
+  </concept>
+  <concept>
+    <code value="M4B"/>
+    <display value="Nursing home visit"/>
+    <definition value="Nursing home visit"/>
+  </concept>
+  <concept>
+    <code value="M5A"/>
+    <display value="Specialist - pathology"/>
+    <definition value="Specialist - pathology"/>
+  </concept>
+  <concept>
+    <code value="M5B"/>
+    <display value="Specialist - psychiatry"/>
+    <definition value="Specialist - psychiatry"/>
+  </concept>
+  <concept>
+    <code value="M5C"/>
+    <display value="Specialist - ophthalmology"/>
+    <definition value="Specialist - ophthalmology"/>
+  </concept>
+  <concept>
+    <code value="M5D"/>
+    <display value="Specialist - other"/>
+    <definition value="Specialist - other"/>
+  </concept>
+  <concept>
+    <code value="M6"/>
+    <display value="Consultations"/>
+    <definition value="Consultations"/>
+  </concept>
+  <concept>
+    <code value="P0"/>
+    <display value="Anesthesia"/>
+    <definition value="Anesthesia"/>
+  </concept>
+  <concept>
+    <code value="P1A"/>
+    <display value="Major procedure - breast"/>
+    <definition value="Major procedure - breast"/>
+  </concept>
+  <concept>
+    <code value="P1B"/>
+    <display value="Major procedure - colectomy"/>
+    <definition value="Major procedure - colectomy"/>
+  </concept>
+  <concept>
+    <code value="P1C"/>
+    <display value="Major procedure - cholecystectomy"/>
+    <definition value="Major procedure - cholecystectomy"/>
+  </concept>
+  <concept>
+    <code value="P1D"/>
+    <display value="Major procedure - turp"/>
+    <definition value="Major procedure - turp"/>
+  </concept>
+  <concept>
+    <code value="P1E"/>
+    <display value="Major procedure - hysterectomy"/>
+    <definition value="Major procedure - hysterectomy"/>
+  </concept>
+  <concept>
+    <code value="P1F"/>
+    <display value="Major procedure - explor/decompr/excisdisc"/>
+    <definition value="Major procedure - explor/decompr/excisdisc"/>
+  </concept>
+  <concept>
+    <code value="P1G"/>
+    <display value="Major procedure - Other"/>
+    <definition value="Major procedure - Other"/>
+  </concept>
+  <concept>
+    <code value="P2A"/>
+    <display value="Major procedure, cardiovascular-CABG"/>
+    <definition value="Major procedure, cardiovascular-CABG"/>
+  </concept>
+  <concept>
+    <code value="P2B"/>
+    <display value="Major procedure, cardiovascular-Aneurysm repair"/>
+    <definition value="Major procedure, cardiovascular-Aneurysm repair"/>
+  </concept>
+  <concept>
+    <code value="P2C"/>
+    <display value="Major Procedure, cardiovascular-Thromboendarterectomy"/>
+    <definition value="Major Procedure, cardiovascular-Thromboendarterectomy"/>
+  </concept>
+  <concept>
+    <code value="P2D"/>
+    <display value="Major procedure, cardiovascualr-Coronary angioplasty (PTCA)"/>
+    <definition value="Major procedure, cardiovascualr-Coronary angioplasty (PTCA)"/>
+  </concept>
+  <concept>
+    <code value="P2E"/>
+    <display value="Major procedure, cardiovascular-Pacemaker insertion"/>
+    <definition value="Major procedure, cardiovascular-Pacemaker insertion"/>
+  </concept>
+  <concept>
+    <code value="P2F"/>
+    <display value="Major procedure, cardiovascular-Other"/>
+    <definition value="Major procedure, cardiovascular-Other"/>
+  </concept>
+  <concept>
+    <code value="P3A"/>
+    <display value="Major procedure, orthopedic - Hip fracture repair"/>
+    <definition value="Major procedure, orthopedic - Hip fracture repair"/>
+  </concept>
+  <concept>
+    <code value="P3B"/>
+    <display value="Major procedure, orthopedic - Hip replacement"/>
+    <definition value="Major procedure, orthopedic - Hip replacement"/>
+  </concept>
+  <concept>
+    <code value="P3C"/>
+    <display value="Major procedure, orthopedic - Knee replacement"/>
+    <definition value="Major procedure, orthopedic - Knee replacement"/>
+  </concept>
+  <concept>
+    <code value="P3D"/>
+    <display value="Major procedure, orthopedic - other"/>
+    <definition value="Major procedure, orthopedic - other"/>
+  </concept>
+  <concept>
+    <code value="P4A"/>
+    <display value="Eye procedure - corneal transplant"/>
+    <definition value="Eye procedure - corneal transplant"/>
+  </concept>
+  <concept>
+    <code value="P4B"/>
+    <display value="Eye procedure - cataract removal/lens insertion"/>
+    <definition value="Eye procedure - cataract removal/lens insertion"/>
+  </concept>
+  <concept>
+    <code value="P4C"/>
+    <display value="Eye procedure - retinal detachment"/>
+    <definition value="Eye procedure - retinal detachment"/>
+  </concept>
+  <concept>
+    <code value="P4D"/>
+    <display value="Eye procedure - treatment of retinal lesions"/>
+    <definition value="Eye procedure - treatment of retinal lesions"/>
+  </concept>
+  <concept>
+    <code value="P4E"/>
+    <display value="Eye procedure - other"/>
+    <definition value="Eye procedure - other"/>
+  </concept>
+  <concept>
+    <code value="P5A"/>
+    <display value="Ambulatory procedures - skin"/>
+    <definition value="Ambulatory procedures - skin"/>
+  </concept>
+  <concept>
+    <code value="P5B"/>
+    <display value="Ambulatory procedures - musculoskeletal"/>
+    <definition value="Ambulatory procedures - musculoskeletal"/>
+  </concept>
+  <concept>
+    <code value="P5C"/>
+    <display value="Ambulatory procedures - inguinal hernia repair"/>
+    <definition value="Ambulatory procedures - inguinal hernia repair"/>
+  </concept>
+  <concept>
+    <code value="P5D"/>
+    <display value="Ambulatory procedures - lithotripsy"/>
+    <definition value="Ambulatory procedures - lithotripsy"/>
+  </concept>
+  <concept>
+    <code value="P5E"/>
+    <display value="Ambulatory procedures - other"/>
+    <definition value="Ambulatory procedures - other"/>
+  </concept>
+  <concept>
+    <code value="P6A"/>
+    <display value="Minor procedures - skin"/>
+    <definition value="Minor procedures - skin"/>
+  </concept>
+  <concept>
+    <code value="P6B"/>
+    <display value="Minor procedures - musculoskeletal"/>
+    <definition value="Minor procedures - musculoskeletal"/>
+  </concept>
+  <concept>
+    <code value="P6C"/>
+    <display value="Minor procedures - other (Medicare fee schedule)"/>
+    <definition value="Minor procedures - other (Medicare fee schedule)"/>
+  </concept>
+  <concept>
+    <code value="P6D"/>
+    <display value="Minor procedures - other (non-Medicare fee schedule)"/>
+    <definition value="Minor procedures - other (non-Medicare fee schedule)"/>
+  </concept>
+  <concept>
+    <code value="P7A"/>
+    <display value="Oncology - radiation therapy"/>
+    <definition value="Oncology - radiation therapy"/>
+  </concept>
+  <concept>
+    <code value="P7B"/>
+    <display value="Oncology - other"/>
+    <definition value="Oncology - other"/>
+  </concept>
+  <concept>
+    <code value="P8A"/>
+    <display value="Endoscopy - arthroscopy"/>
+    <definition value="Endoscopy - arthroscopy"/>
+  </concept>
+  <concept>
+    <code value="P8B"/>
+    <display value="Endoscopy - upper gastrointestinal"/>
+    <definition value="Endoscopy - upper gastrointestinal"/>
+  </concept>
+  <concept>
+    <code value="P8C"/>
+    <display value="Endoscopy - sigmoidoscopy"/>
+    <definition value="Endoscopy - sigmoidoscopy"/>
+  </concept>
+  <concept>
+    <code value="P8D"/>
+    <display value="Endoscopy - colonoscopy"/>
+    <definition value="Endoscopy - colonoscopy"/>
+  </concept>
+  <concept>
+    <code value="P8E"/>
+    <display value="Endoscopy - cystoscopy"/>
+    <definition value="Endoscopy - cystoscopy"/>
+  </concept>
+  <concept>
+    <code value="P8F"/>
+    <display value="Endoscopy - bronchoscopy"/>
+    <definition value="Endoscopy - bronchoscopy"/>
+  </concept>
+  <concept>
+    <code value="P8G"/>
+    <display value="Endoscopy - laparoscopic cholecystectomy"/>
+    <definition value="Endoscopy - laparoscopic cholecystectomy"/>
+  </concept>
+  <concept>
+    <code value="P8H"/>
+    <display value="Endoscopy - laryngoscopy"/>
+    <definition value="Endoscopy - laryngoscopy"/>
+  </concept>
+  <concept>
+    <code value="P8I"/>
+    <display value="Endoscopy - other"/>
+    <definition value="Endoscopy - other"/>
+  </concept>
+  <concept>
+    <code value="P9A"/>
+    <display value="Dialysis services (Medicare fee schedule)"/>
+    <definition value="Dialysis services (Medicare fee schedule)"/>
+  </concept>
+  <concept>
+    <code value="P9B"/>
+    <display value="Dialysis services (non-Medicare fee schedule)"/>
+    <definition value="Dialysis services (non-Medicare fee schedule)"/>
+  </concept>
+  <concept>
+    <code value="I1A"/>
+    <display value="Standard imaging - chest"/>
+    <definition value="Standard imaging - chest"/>
+  </concept>
+  <concept>
+    <code value="I1B"/>
+    <display value="Standard imaging - musculoskeletal"/>
+    <definition value="Standard imaging - musculoskeletal"/>
+  </concept>
+  <concept>
+    <code value="I1C"/>
+    <display value="Standard imaging - breast"/>
+    <definition value="Standard imaging - breast"/>
+  </concept>
+  <concept>
+    <code value="I1D"/>
+    <display value="Standard imaging - contrast gastrointestinal"/>
+    <definition value="Standard imaging - contrast gastrointestinal"/>
+  </concept>
+  <concept>
+    <code value="I1E"/>
+    <display value="Standard imaging - nuclear medicine"/>
+    <definition value="Standard imaging - nuclear medicine"/>
+  </concept>
+  <concept>
+    <code value="I1F"/>
+    <display value="Standard imaging - other"/>
+    <definition value="Standard imaging - other"/>
+  </concept>
+  <concept>
+    <code value="I2A"/>
+    <display value="Advanced imaging - CAT/CT/CTA: brain/head/neck"/>
+    <definition value="Advanced imaging - CAT/CT/CTA: brain/head/neck"/>
+  </concept>
+  <concept>
+    <code value="I2B"/>
+    <display value="Advanced imaging - CAT/CT/CTA: other"/>
+    <definition value="Advanced imaging - CAT/CT/CTA: other"/>
+  </concept>
+  <concept>
+    <code value="I2C"/>
+    <display value="Advanced imaging - MRI/MRA: brain/head/neck"/>
+    <definition value="Advanced imaging - MRI/MRA: brain/head/neck"/>
+  </concept>
+  <concept>
+    <code value="I2D"/>
+    <display value="Advanced imaging - MRI/MRA: other"/>
+    <definition value="Advanced imaging - MRI/MRA: other"/>
+  </concept>
+  <concept>
+    <code value="I3A"/>
+    <display value="Echography/ultrasonography - eye"/>
+    <definition value="Echography/ultrasonography - eye"/>
+  </concept>
+  <concept>
+    <code value="I3B"/>
+    <display value="Echography/ultrasonography - abdomen/pelvis"/>
+    <definition value="Echography/ultrasonography - abdomen/pelvis"/>
+  </concept>
+  <concept>
+    <code value="I3C"/>
+    <display value="Echography/ultrasonography - heart"/>
+    <definition value="Echography/ultrasonography - heart"/>
+  </concept>
+  <concept>
+    <code value="I3D"/>
+    <display value="Echography/ultrasonography - carotid arteries"/>
+    <definition value="Echography/ultrasonography - carotid arteries"/>
+  </concept>
+  <concept>
+    <code value="I3E"/>
+    <display value="Echography/ultrasonography - prostate, transrectal"/>
+    <definition value="Echography/ultrasonography - prostate, transrectal"/>
+  </concept>
+  <concept>
+    <code value="I3F"/>
+    <display value="Echography/ultrasonography - other"/>
+    <definition value="Echography/ultrasonography - other"/>
+  </concept>
+  <concept>
+    <code value="I4A"/>
+    <display value="Imaging/procedure - heart including cardiac catheterization"/>
+    <definition value="Imaging/procedure - heart including cardiac catheterization"/>
+  </concept>
+  <concept>
+    <code value="I4B"/>
+    <display value="Imaging/procedure - other"/>
+    <definition value="Imaging/procedure - other"/>
+  </concept>
+  <concept>
+    <code value="T1A"/>
+    <display value="Lab tests - routine venipuncture (non-Medicare fee schedule)"/>
+    <definition value="Lab tests - routine venipuncture (non-Medicare fee schedule)"/>
+  </concept>
+  <concept>
+    <code value="T1B"/>
+    <display value="Lab tests - automated general profiles"/>
+    <definition value="Lab tests - automated general profiles"/>
+  </concept>
+  <concept>
+    <code value="T1C"/>
+    <display value="Lab tests - urinalysis"/>
+    <definition value="Lab tests - urinalysis"/>
+  </concept>
+  <concept>
+    <code value="T1D"/>
+    <display value="Lab tests - blood counts"/>
+    <definition value="Lab tests - blood counts"/>
+  </concept>
+  <concept>
+    <code value="T1E"/>
+    <display value="Lab tests - glucose"/>
+    <definition value="Lab tests - glucose"/>
+  </concept>
+  <concept>
+    <code value="T1F"/>
+    <display value="Lab tests - bacterial cultures"/>
+    <definition value="Lab tests - bacterial cultures"/>
+  </concept>
+  <concept>
+    <code value="T1G"/>
+    <display value="Lab tests - other (Medicare fee schedule)"/>
+    <definition value="Lab tests - other (Medicare fee schedule)"/>
+  </concept>
+  <concept>
+    <code value="T1H"/>
+    <display value="Lab tests - other (non-Medicare fee schedule)"/>
+    <definition value="Lab tests - other (non-Medicare fee schedule)"/>
+  </concept>
+  <concept>
+    <code value="T2A"/>
+    <display value="Other tests - electrocardiograms"/>
+    <definition value="Other tests - electrocardiograms"/>
+  </concept>
+  <concept>
+    <code value="T2B"/>
+    <display value="Other tests - cardiovascular stress tests"/>
+    <definition value="Other tests - cardiovascular stress tests"/>
+  </concept>
+  <concept>
+    <code value="T2C"/>
+    <display value="Other tests - EKG monitoring"/>
+    <definition value="Other tests - EKG monitoring"/>
+  </concept>
+  <concept>
+    <code value="T2D"/>
+    <display value="Other tests - other"/>
+    <definition value="Other tests - other"/>
+  </concept>
+  <concept>
+    <code value="D1A"/>
+    <display value="Medical/surgical supplies"/>
+    <definition value="Medical/surgical supplies"/>
+  </concept>
+  <concept>
+    <code value="D1B"/>
+    <display value="Hospital beds"/>
+    <definition value="Hospital beds"/>
+  </concept>
+  <concept>
+    <code value="D1C"/>
+    <display value="Oxygen and supplies"/>
+    <definition value="Oxygen and supplies"/>
+  </concept>
+  <concept>
+    <code value="D1D"/>
+    <display value="Wheelchairs"/>
+    <definition value="Wheelchairs"/>
+  </concept>
+  <concept>
+    <code value="D1E"/>
+    <display value="Other DME"/>
+    <definition value="Other DME"/>
+  </concept>
+  <concept>
+    <code value="D1F"/>
+    <display value="Prosthetic/Orthotic devices"/>
+    <definition value="Prosthetic/Orthotic devices"/>
+  </concept>
+  <concept>
+    <code value="D1G"/>
+    <display value="Drugs Administered through DME"/>
+    <definition value="Drugs Administered through DME"/>
+  </concept>
+  <concept>
+    <code value="O1A"/>
+    <display value="Ambulance"/>
+    <definition value="Ambulance"/>
+  </concept>
+  <concept>
+    <code value="O1B"/>
+    <display value="Chiropractic"/>
+    <definition value="Chiropractic"/>
+  </concept>
+  <concept>
+    <code value="O1C"/>
+    <display value="Enteral and parenteral"/>
+    <definition value="Enteral and parenteral"/>
+  </concept>
+  <concept>
+    <code value="O1D"/>
+    <display value="Chemotherapy"/>
+    <definition value="Chemotherapy"/>
+  </concept>
+  <concept>
+    <code value="O1E"/>
+    <display value="Other drugs"/>
+    <definition value="Other drugs"/>
+  </concept>
+  <concept>
+    <code value="O1F"/>
+    <display value="Hearing and speech services"/>
+    <definition value="Hearing and speech services"/>
+  </concept>
+  <concept>
+    <code value="O1G"/>
+    <display value="Immunizations/Vaccinations"/>
+    <definition value="Immunizations/Vaccinations"/>
+  </concept>
+  <concept>
+    <code value="Y1"/>
+    <display value="Other - Medicare fee schedule"/>
+    <definition value="Other - Medicare fee schedule"/>
+  </concept>
+  <concept>
+    <code value="Y2"/>
+    <display value="Other - non-Medicare fee schedule"/>
+    <definition value="Other - non-Medicare fee schedule"/>
+  </concept>
+  <concept>
+    <code value="Z1"/>
+    <display value="Local codes"/>
+    <definition value="Local codes"/>
+  </concept>
+  <concept>
+    <code value="Z2"/>
+    <display value="Undefined codes"/>
+    <definition value="Undefined codes"/>
+  </concept>
+</CodeSystem>

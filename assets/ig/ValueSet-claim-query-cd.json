@@ -1,0 +1,21 @@
+{
+  "resourceType": "ValueSet",
+  "id": "claim-query-cd",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Query Code</h2><div><p>Code indicating the type of claim record being processed with respect to payment (debit/credit indicator; interim/final indicator). Source: https://bluebutton.cms.gov/resources/variables/claim<em>query</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-claim-query-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-claim-query-cd</code></a></li></ul></div>"
+  },
+  "url": "/assets/ig/ValueSet-claim-query-cd",
+  "version": "1.1.0",
+  "name": "Claim Query Code",
+  "status": "draft",
+  "date": "2018-05-07T14:45:05+00:00",
+  "description": "Code indicating the type of claim record being processed with respect to payment (debit/credit indicator; interim/final indicator). Source: https://bluebutton.cms.gov/resources/variables/claim_query_cd",
+  "compose": {
+    "include": [
+      {
+        "system": "/assets/ig/CodeSystem-claim-query-cd"
+      }
+    ]
+  }
+}

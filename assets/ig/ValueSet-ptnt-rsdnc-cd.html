@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="/assets/ig/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+<!-- ============BreadCrumbs=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<!--
+<h2>Patient Residence Code</h2>
+
+<p>
+Formats: <a href="ValueSet-ptnt-rsdnc-cd.xml.html">XML</a>, <a href="ValueSet-ptnt-rsdnc-cd.json.html">JSON</a>, <a href="ValueSet-ptnt-rsdnc-cd.ttl.html">Turtle</a>
+</p>
+
+-->
+
+<!-- include ValueSet-ptnt-rsdnc-cd-html.xhtml   -->
+
+<table class="grid">
+ <tbody><tr><td>Defining URL:</td><td>/assets/ig/ValueSet-ptnt-rsdnc-cd</td></tr>
+ <tr><td>Name:</td><td>Patient Residence Code</td></tr>
+ <tr><td>Definition:</td><td><p>This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt<em>rsdnc</em>cd</p>
+</td></tr>
+ <tr><td>Source Resource</td><td><a href="ValueSet-ptnt-rsdnc-cd.xml.html">XML</a> / <a href="ValueSet-ptnt-rsdnc-cd.json.html">JSON</a> / <a href="ValueSet-ptnt-rsdnc-cd.ttl.html">Turtle</a></td></tr>
+</tbody></table>
+
+
+This value set is used by:
+
+
+<p>This value set is not used</p>
+
+
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Patient Residence Code</h2><div><p>This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt<em>rsdnc</em>cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-ptnt-rsdnc-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd</code></a></li></ul></div>
+
+<h3>Expansion</h3>
+
+<div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 16 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on /assets/ig/CodeSystem-ptnt-rsdnc-cd version 1.1.0</p><p>All codes from system <a href="CodeSystem-ptnt-rsdnc-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd</code></a></p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-00"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-00">00</a></td><td>Not specified, other patient residence not identified below</td><td>Not specified, other patient residence not identified below</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-01"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-01">01</a></td><td>Home</td><td>Home</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-02"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-02">02</a></td><td>Skilled Nursing Facility</td><td>Skilled Nursing Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-03"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-03">03</a></td><td>Nursing facility (long-term care facility)</td><td>Nursing facility (long-term care facility)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-04"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-04">04</a></td><td>Assisted living facility</td><td>Assisted living facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-05"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-05">05</a></td><td>Custodial Care Facility (residential but not medical care)</td><td>Custodial Care Facility (residential but not medical care)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-06"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-06">06</a></td><td>Group home (e.g., congregate residential foster care)</td><td>Group home (e.g., congregate residential foster care)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-07"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-07">07</a></td><td>Inpatient Psychiatric Facility</td><td>Inpatient Psychiatric Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-08"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-08">08</a></td><td>Psychiatric Facility – Partial Hospitalization</td><td>Psychiatric Facility – Partial Hospitalization</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-09"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-09">09</a></td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-10"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-10">10</a></td><td>Residential Substance Abuse Treatment Facility</td><td>Residential Substance Abuse Treatment Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-11"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-11">11</a></td><td>Hospice</td><td>Hospice</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-12"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-12">12</a></td><td>Psychiatric Residential Treatment Facility</td><td>Psychiatric Residential Treatment Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-13"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-13">13</a></td><td>Comprehensive Inpatient Rehabilitation Facility</td><td>Comprehensive Inpatient Rehabilitation Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-14"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-14">14</a></td><td>Homeless Shelter</td><td>Homeless Shelter</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-15"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-15">15</a></td><td>Correctional Institution</td><td>Correctional Institution</td></tr></table></div>
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="/assets/ig/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="/assets/ig/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+
