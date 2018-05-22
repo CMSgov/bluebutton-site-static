@@ -145,7 +145,7 @@ You should now have a synthetic user account connected to your application and t
 should be displaying a series of links for each type of resource. The screen should look 
 something like this:
 
-[Sample Django Client App](/assets/img/blog/sample_django_client.png)
+![Sample Django Client App](/assets/img/blog/sample_django_client.png)
 
 
 
