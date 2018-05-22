@@ -23,10 +23,12 @@ As a developer, let's assume that you have successfully submitted an application
 *What happens next?*
 
 ## Discovery
-A Medicare beneficiary discovers your app and creates an account. As they navigate your application they see an option to connect with Medicare and share their claims data with your application. 
+A Medicare beneficiary discovers your app and creates an account. 
+As they navigate your application they see an option to connect with Medicare and share 
+their claims data with your application. 
  
 ## Connecting
-The Beneficiary clicks the link in your application and is connected to the Blue Button 2.0 api.
+The Beneficiary clicks the link in your application and is connected to the Blue Button 2.0 API.
 
 ## Authenticating with MyMedicare.gov
 The Blue Button 2.0 API does not recognize the person connecting to the API so a login screen is presented to enable the Beneficiary to authenticate.
@@ -35,19 +37,19 @@ The Blue Button 2.0 API does not recognize the person connecting to the API so a
 
 There are four tracks a beneficiary can take from this sign in page:
 
-	1. Cancel. The beneficiary doesn't authenticate
-	2.  Forget their credentials Click "Trouble Signing In to reset their credentials.
-	3. Create an Account. If the Beneficiary doesn't have a MyMedicare.gov account
-	4. Sign In. Correctly enter the account credentials.
+1. Cancel: The beneficiary doesn't authenticate
+2. Forget their credentials: Click "Trouble Signing In to reset their credentials.
+3. Create an Account: If the Beneficiary doesn't have a MyMedicare.gov account
+4. Sign In: Correctly enter the account credentials.
 
-### Cancel
+### 1. Cancel:
 The beneficiary clicks the "Cancel" button. The API returns control to your application, but  no token is provided.  
 Your callback/redirect uri will receive a response that includes an "access_denied" error. 
 We considering upgrading this condition to also include the state value your app provided in order 
 to enable you to map the response back to the user on your app that made the request and chose to cancel.
 
-### Forget credentials
-The "Trouble Signing in" link would be used by the beneficiary if they are unable to remember their User name and/or Password, or are unsure if they have a MyMedicare account.
+### 2. Forgotten credentials
+The "**Trouble Signing in**" link would be used by the beneficiary if they are unable to remember their User name and/or Password, or are unsure if they have a MyMedicare account.
 
 ![Trouble with Access screen](/assets/img/blog/beneficiary_trouble_screen.png)
 
@@ -59,7 +61,7 @@ As a minimum the beneficiary will need the following information to reset or che
 
 After providing this information and answering a challenge question the Beneficiary will be led through further pages until credentials are reset.
 
-### Create an Account
+### 3. Create an Account:
 
 If a Beneficiary does not have an account on MyMedicare.gov they can create one using the "Create Account" link.
 
@@ -106,7 +108,7 @@ The address verification is the next page to be displayed. This is Page 2 of 4:
 
 ![Create an Account](/assets/img/blog/beneficiary_registration_screen_2a.png)
 
-#### Step 3 - Register a Username and Password
+#### Step 3 - Register a Username and Password:
 
 Create a Username, Choose a secret question and enter an Answer, optionally enter 
 an Email Address and create a Password:
@@ -114,12 +116,12 @@ an Email Address and create a Password:
 ![Create an Account](/assets/img/blog/beneficiary_registration_screen_3b.png)
 ![Create an Account](/assets/img/blog/beneficiary_registration_screen_3c.png)
 
-#### Step 4 - Confirmation
+#### Step 4 - Confirmation:
 
 If the three previous pages are successfully completed a confirmation screen will be 
 displayed with the username and the date that the account was created.
 
-### Sign in
+### 4. Sign in:
 
 The Sign In option is the option to choose when a beneficiary wants to authorize an application. 
 Clicking the **Sign in** button passes the beneficiary to the next step where they will authorize access of 
