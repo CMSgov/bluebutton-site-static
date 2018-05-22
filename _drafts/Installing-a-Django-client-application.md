@@ -66,27 +66,88 @@ Activate the environment with
     
 ## Get Your Sandbox Credentials
 
+Anyone can register for an account in the Blue Button 2.0 Developer Sandbox. Go to 
+<a href="https://bluebutton.cms.gov" target="_blank">https://bluebutton.cms.gov</a> 
+and click on the "Sign up for the Developer Sandbox" link to create an account. 
 
+You will receive an email notification that your account has been created. 
+**Click on the link in the email to validate and activate your account**. 
+Then you can log in at   
+<a href="https://sandbox.bluebutton.cms.gov" target="_blank">https://sandbox.bluebutton.cms.gov</a>.
+
+Once you log in to your Developer sandbox account you can create an application.  
+Click on "[Application Registration](https://sandbox.bluebutton.cms.gov/v1/o/applications/)" and 
+[register a new application](https://sandbox.bluebutton.cms.gov/v1/o/applications/register/).
+
+Give your application a descriptive name. For example: 
+"My Organization's Claims Analyzer"
+
+Set the Client Type and Authorization Grant fields as follows:
+Client Type: "Confidential"
+Authorization Grant: "Authorization Code"
+
+The Redirect URIs field is where you can enter multiple URIs separated by a space or on a new line / 
+carriage return / Enter key.
+
+You will need the path to an endpoint where your application will be listening for a request 
+from our API to provide you the results of an authorization request.
+
+In the case of the application we are installing the callback path for the redirect_uri is: 
+
+    http://localhost:8000/social-auth/complete/oauth2io/
+
+**The above redirect_uri setting is critically important.** If this does not match the IP Address or 
+domain name and path that your application is responding to you will get an "Error: invalid_request" after
+authorizing a user.
+
+Copy the Client ID and Client Secret values. You will need these to setup your application.
+Fill out the other fields in the form and click "Save".
 
 ## Configure the Settings File 
 
     cd ~/developer/pd_bbc/bluebutton-sample-client-django/bbc
+    cp bbc/settings/local_sample.py bbc/settings/local.py
+    vi bbc/settings/local.py
     
+update the values for     
+    `SOCIAL_AUTH_OAUTH2IO_KEY`
+    `SOCIAL_AUTH_OAUTH2IO_SECRET`
+
+Set the value for Client ID in the SOCIAL_AUTH_OAUTH2IO_KEY variable.
+Set the value for Client Secret in the SOCIAL_AUTH_OAUTH2IO_SECRET variable.
+
+Save the file.
     
 ## Setup the Client Application
 
-    python manage.py createsuperuser 
-    
+    python manage.py makemigrations --settings bbc.settings.local
+    python manage.py migrate --settings bbc.settings.local
+    python manage.py createsuperuser --settings bbc.settings.local
+       
 Enter the name and password for the superuse/admin account.
-Then setup the database
-
-    python manage.py makemigrations
-
+        
 ## Run the Client Application
 
-    python manage.py runserver --insecure
+    python manage.py runserver --settings bbc.settings.local --insecure
 
 ## Connect to the Synthetic Data
+
+Open a browser and goto:
+
+    http://localhost:8000
+    
+Click the button to login to CMS. When prompted use one of the synthetic beneficiary user names 
+and passwords and authorize access to your application. 
+
+Here is an example synthetic user account: *BBUser10100* with password *PW10100!*.
+
+You should now have a synthetic user account connected to your application and the app 
+should be displaying a series of links for each type of resource. The screen should look 
+something like this:
+
+[Sample Django Client App](/assets/img/blog/sample_django_client.png)
+
+
 
 
 
