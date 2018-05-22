@@ -43,10 +43,10 @@ There are four tracks a beneficiary can take from this sign in page:
 4. Sign In: Correctly enter the account credentials.
 
 ### 1. Cancel:
-The beneficiary clicks the "Cancel" button. The API returns control to your application, but  no token is provided.  
-Your callback/redirect uri will receive a response that includes an "access_denied" error. 
-We considering upgrading this condition to also include the state value your app provided in order 
-to enable you to map the response back to the user on your app that made the request and chose to cancel.
+When the beneficiary chooses cancel the Login page will be redisplayed. 
+
+We considering upgrading this condition to redirect back to the application with the state value your app provided in order 
+and an error condition. This would enable applications to map the response back to the user in the app that made the request and chose to cancel.
 
 ### 2. Forgotten credentials
 The "**Trouble Signing in**" link would be used by the beneficiary if they are unable to remember their User name and/or Password, or are unsure if they have a MyMedicare account.
