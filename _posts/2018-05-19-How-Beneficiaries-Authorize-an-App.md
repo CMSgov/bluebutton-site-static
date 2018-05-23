@@ -45,8 +45,8 @@ There are four tracks a beneficiary can take from this sign in page:
 ### 1. Cancel:
 When the beneficiary chooses cancel the Login page will be redisplayed. 
 
-We considering upgrading this condition to redirect back to the application with the state value your app provided in order 
-and an error condition. This would enable applications to map the response back to the user in the app that made the request and chose to cancel.
+We are considering changing this action to redirect back to the application with the state value your app provided and 
+an error condition. This would enable applications to map the response back to the user in the app that made the request and chose to cancel.
 
 ### 2. Forgotten credentials
 The "**Trouble Signing in**" link would be used by the beneficiary if they are unable to remember their User name and/or Password, or are unsure if they have a MyMedicare account.
@@ -110,8 +110,8 @@ The address verification is the next page to be displayed. This is Page 2 of 4:
 
 #### Step 3 - Register a Username and Password:
 
-Create a Username, Choose a secret question and enter an Answer, optionally enter 
-an Email Address and create a Password:
+Create a Username, choose a secret question and enter an answer, enter 
+an Email Address (this is optional) and create a Password:
 ![Create an Account](/assets/img/blog/beneficiary_registration_screen_3a.png)
 ![Create an Account](/assets/img/blog/beneficiary_registration_screen_3b.png)
 ![Create an Account](/assets/img/blog/beneficiary_registration_screen_3c.png)
