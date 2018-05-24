@@ -44,9 +44,9 @@ layout: default
                     {% endfor %}
                     <li><a href="/blog/category/{{ category_name }}.html" name="{{ category_name }}" class="ds-u-display--block blueberry-lime-link" >
                         {% if flagcat == "True" %}
-                            <b>◉&nbsp;{{ category_name | capitalize }}&nbsp;</b>
+                            <b>&#9673;&nbsp;{{ category_name | capitalize }}&nbsp;</b>
                         {% else %}
-                            ◎&nbsp;{{ category_name | capitalize }}&nbsp;
+                            &#9678;&nbsp;{{ category_name | capitalize }}&nbsp;
                         {% endif %}
                         </a>
                     </li>
