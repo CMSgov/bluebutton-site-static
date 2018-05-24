@@ -1,9 +1,9 @@
 ---
-layout: post_with_category
+layout: post_with_category2
 title: Welcome to the Blue Button Blog 
 date:   2018-03-26 23:22:00 -0600
 categories: general
-badge: blog
+badge: api
 permalink: /blog/:title
 ctas:
   - 

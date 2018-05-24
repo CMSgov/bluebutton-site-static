@@ -1,10 +1,10 @@
 ---
-layout: post_with_category
+layout: post_with_category2
 title: How Beneficiaries Authorize an App
 date:   2018-05-19 23:00:00 -0600
 categories: latest general
 permalink: /blog/:title
-badge: blog
+badge: api
 ctas:
   - 
     title: Home
@@ -14,7 +14,7 @@ ctas:
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
 ---
 # How does a beneficiary grant access to their data
-One of the frequent questions we get is: "How does a beneficiary grant access to their claims information to an application.
+One of the frequent questions we get is: *How does a beneficiary grant access to their claims information to an application?*
 
 Let's look at this step-by-step.
 

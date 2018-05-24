@@ -1,8 +1,9 @@
 ---
-layout: post_with_category
+layout: post_with_category2
 title: Sample Code Recipes
 category: code
-badge: blog categories
+categories: code
+badge: api
 ctas:
   -
     title: Home
