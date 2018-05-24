@@ -1,8 +1,9 @@
 ---
-layout: post_with_category
-title: Sample Code Recipes
-category: code
-badge: blog categories
+layout: post_with_category2
+title: Blog
+category: blog
+categories: blog
+badge: api
 ctas:
   -
     title: Home
@@ -10,10 +11,13 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+  -
+    title: Blog Categories
+    link: /categories/
 ---
-<!-- blog/category/code.html:start -->
+<!-- blog/category.html:start -->
 {% for category in site.categories %}
-    {% capture category_name %}{{ category | first }}{% endcapture %}
+{% capture category_name %}{{ category | first }}{% endcapture %}
     {% if category_name == page.category %}
         <div class="ds-l-col--12 ds-l-sm-col--7 {{ page.badge | slugify }}" id="main" role="main">
             {% for post in site.categories[category_name] %}
@@ -25,5 +29,4 @@ ctas:
         </div>
     {% endif %}
 {% endfor %}
-
-<!-- blog/category/code.html:end -->
+<!-- blog/category.html:end -->

@@ -1,8 +1,9 @@
 ---
-layout: post_with_category
+layout: post_with_category2
 title: General
 category: general
-badge: blog categories
+categories: general
+badge: api
 ctas:
   -
     title: Home

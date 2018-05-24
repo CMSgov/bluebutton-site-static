@@ -1,8 +1,9 @@
 ---
-layout: post_with_category
-title: Latest Posts
-category: latest
-badge: blog categories
+layout: post_with_category2
+title: Sample Code Recipes
+category: code
+categories: code
+badge: api
 ctas:
   -
     title: Home
@@ -11,9 +12,9 @@ ctas:
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
 ---
-<!-- blog/category/latest.html -->
+<!-- blog/category/code.html:start -->
 {% for category in site.categories %}
-{% capture category_name %}{{ category | first }}{% endcapture %}
+    {% capture category_name %}{{ category | first }}{% endcapture %}
     {% if category_name == page.category %}
         <div class="ds-l-col--12 ds-l-sm-col--7 {{ page.badge | slugify }}" id="main" role="main">
             {% for post in site.categories[category_name] %}
@@ -26,4 +27,4 @@ ctas:
     {% endif %}
 {% endfor %}
 
-<!-- blog/category/latest.html:end -->
+<!-- blog/category/code.html:end -->

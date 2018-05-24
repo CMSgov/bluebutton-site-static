@@ -1,8 +1,9 @@
 ---
-layout: post_with_category
-title: Blog
-category: blog
-badge: blog categories
+layout: post_with_category2
+title: Latest Posts
+category: latest
+categopries: latest
+badge: api
 ctas:
   -
     title: Home
@@ -10,11 +11,8 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
-  -
-    title: Blog Categories
-    link: /categories/
 ---
-<!-- blog/category.html:start -->
+<!-- blog/category/latest.html -->
 {% for category in site.categories %}
 {% capture category_name %}{{ category | first }}{% endcapture %}
     {% if category_name == page.category %}
@@ -28,4 +26,5 @@ ctas:
         </div>
     {% endif %}
 {% endfor %}
-<!-- blog/category.html:end -->
+
+<!-- blog/category/latest.html:end -->
