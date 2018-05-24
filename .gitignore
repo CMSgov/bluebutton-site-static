@@ -8,3 +8,4 @@ terraform.tfstate.backup
 *.tfvars
 *.retry
 .idea
+node_modules
