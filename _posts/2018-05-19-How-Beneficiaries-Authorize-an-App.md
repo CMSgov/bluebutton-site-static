@@ -1,10 +1,10 @@
 ---
-layout: post_with_category
+layout: post_with_category2
 title: How Beneficiaries Authorize an App
 date:   2018-05-19 23:00:00 -0600
 categories: latest general
 permalink: /blog/:title
-badge: blog
+badge: api
 ctas:
   - 
     title: Home
@@ -14,7 +14,7 @@ ctas:
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
 ---
 # How does a beneficiary grant access to their data
-One of the frequent questions we get is: "How does a beneficiary grant access to their claims information to an application.
+One of the frequent questions we get is: *How does a beneficiary grant access to their claims information to an application?*
 
 Let's look at this step-by-step.
 
@@ -28,12 +28,12 @@ As they navigate your application they see an option to connect with Medicare an
 their claims data with your application. 
  
 ## Connecting
-The Beneficiary clicks the link in your application and is connected to the Blue Button 2.0 API.
+The beneficiary clicks the link in your application and is connected to the Blue Button 2.0 API.
 
 ## Authenticating with MyMedicare.gov
 The Blue Button 2.0 API does not recognize the person connecting to the API so a login screen is presented to enable the Beneficiary to authenticate.
 
-![MyMedicare Beneficiary Sign-in screen](/assets/img/blog/beneficiary_auth_screen.png)
+![MyMedicare beneficiary Sign-in screen](/assets/img/blog/beneficiary_auth_screen.png)
 
 There are four tracks a beneficiary can take from this sign in page:
 
@@ -59,17 +59,17 @@ As a minimum the beneficiary will need the following information to reset or che
 	- Suffix (if appropriate)
 	- Date of Birth
 
-After providing this information and answering a challenge question the Beneficiary will be led through further pages until credentials are reset.
+After providing this information and answering a challenge question the beneficiary will be led through further pages until credentials are reset.
 
 ### 3. Create an Account:
 
-If a Beneficiary does not have an account on MyMedicare.gov they can create one using the "Create Account" link.
+If a beneficiary does not have an account on MyMedicare.gov they can create one using the "Create Account" link.
 
 In order for a beneficiary to sign up for a MyMedicare.gov account they will need their Medicare card. 
 This has their Medicare Number and their Medicare Part A and Part B eligibility dates.
 
 In our [Google Group](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api) we have seen a 
-number of questions posed about Medicare Advantage Beneficiaries. Medicare Advantage Pharmacy information 
+number of questions posed about Medicare Advantage beneficiaries. Medicare Advantage Pharmacy information 
 (Part D claims) are found in the Blue Button 2.0 API. The question that is raised is how does a beneficiary 
 register a MyMedicare.gov account in order to access their pharmacy claims if they don't have a Medicare Part A or Part B plan.  
 The answer is that a beneficiary should refer to their Medicare card and enter the eligibility date for their Part A
@@ -159,7 +159,7 @@ application dashboard in their profile to revoke access permission to your appli
 If the beneficiary decides not to give the application access to their claims information the Blue Button 2.0 API calls back
 to the application with an "Access Denied" error.
 
-After navigating these screens the Beneficiary is returned to your application. If they provided approval your application
+After navigating these screens the beneficiary is returned to your application. If they provided approval your application
 will be able to take the token that is returned and use it in accessing the Blue Button 2.0 API to retrieve the 
 beneficiary's data.
 
