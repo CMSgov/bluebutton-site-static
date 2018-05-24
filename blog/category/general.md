@@ -1,0 +1,29 @@
+---
+layout: post_with_category2
+title: General
+category: general
+categories: general
+badge: api
+ctas:
+  -
+    title: Home
+    link: /
+  -
+    title: Sign up for the Developer Sandbox
+    link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+---
+<!-- blog/category/general.html:start -->
+{% for category in site.categories %}
+  {% capture category_name %}{{ category | first }}{% endcapture %}
+  {% if category_name == page.category %}
+    <div class="ds-l-col--12 ds-l-sm-col--7 {{ page.badge | slugify }}" id="main" role="main">
+      {% for post in site.categories[category_name] %}
+        <article class="archive-item">
+          <h4><a href="{{ site.baseurl }}{{ post.url }}{% if site.use_dot_html %}.html{% endif %}">{{post.title}}</a></h4>
+          {{ post.excerpt }}
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}
+<!-- blog/category/general.html:end -->
