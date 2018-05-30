@@ -1,7 +1,7 @@
 ---
 layout: post_with_category
 title: Install a Django Client
-date:   2018-05-01 23:00:00 -0600
+date:   2018-06-01 09:00:00 -0500
 categories: code latest
 permalink: /blog/:title
 badge: blog
@@ -13,8 +13,9 @@ ctas:
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
 ---
-In the previous blog post we covered how to install a Node.js client application. In this post we 
-will cover installing a Python3/Django application to interact with the Blue Button 2.0 Sandbox API.
+In a previous blog post we covered how to 
+[install a Node.js client application](https://bluebutton.cms.gov/blog/Installing-a-Nodejs-client-application.html). 
+In this post we will cover installing a Python3/Django application to interact with the Blue Button 2.0 Sandbox API.
 
 ## Pre-requisites
 
@@ -58,6 +59,11 @@ Activate the environment with
     mkdir -p ~/developer/pd_bbc
     cd ~/developer/pd_bbc
     git clone https://github.com/CMSgov/bluebutton-sample-client-django.git
+
+## Check out the README.md file
+
+There are detailed instructions for installing the client application in the README.md file in the
+root directory of the project.
 
 ## Install the Client Application Requirements
 
@@ -147,10 +153,6 @@ something like this:
 
 ![Sample Django Client App](/assets/img/blog/sample_django_client.png)
 
-
-
-
-
-
-
+If you have feedback on this post. Please drop us a message in the 
+[Google Developer Group for Blue Button 2.0 API](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api).
 
