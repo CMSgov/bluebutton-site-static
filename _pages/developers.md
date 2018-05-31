@@ -17,6 +17,7 @@ sections:
   - Sample Beneficiaries
   - Production API Access
   - Developer Guidelines
+  - FHIR Implementation Guide
 ctas:
   -
     title: Blue Button Home
@@ -600,5 +601,26 @@ The Blue Button logo and usage guidelines is detailed [here](https://www.healthi
 **Beneficiary Revokes Access**
 
 A beneficiary may revoke access to your application via the MyMedicare.gov website.  When you encounter an invalid token indicating a beneficiary has revoked access, you should make a reasonable attempt to handle that case making it easy for the beneficiary to understand what is happening with their Medicare data.
+
+---
+
+## FHIR Implementation Guide
+
+The Blue Button team have created a Blue Button 2.0 FHIR Implementation Guide (BB2IG). 
+You can access the guide here: [Blue Button 2.0 FHIR Implementation Guide](/assets/ig/index.html).
+
+The BB2IG features nine profiles in this version of the guide:
+
+<li><a href="/assets/ig/StructureDefinition-bluebutton-patient-claim.html" target="_blank">Blue Button Patient Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-carrier-claim.html" target="_blank">Blue Button Carrier Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-dme-claim.html" target="_blank">Blue Button DME Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-hha-claim.html" target="_blank">Blue Button HHA Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-hospice-claim.html" target="_blank">Blue Button Hospice Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-inpatient-claim.html" target="_blank">Blue Button Inpatient Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-outpatient-claim.html" target="_blank">Blue Button Outpatient Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-pde-claim.html" target="_blank">Blue Button Part D Event Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-snf-claim.html" target="_blank">Blue Button SNF Claim Profile</a></li>
+
+
 
 ---
