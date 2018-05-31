@@ -1,35 +1,35 @@
-@prefix fhir: </assets/ig/> .
+@prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
 
-</assets/ig/ValueSet-clm-mco-pd-sw> a fhir:ValueSet;
+<http://hl7.org/fhir/ValueSet/clm-mco-pd-sw> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "clm-mco-pd-sw"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim MCO Paid Switch</h2><div><p>A switch indicating whether or not a Managed Care Organization (MCO) has paid the provider for an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm<em>mco</em>pd_sw</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-clm-mco-pd-sw.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mco-pd-sw</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim MCO Paid Switch</h2><div><p>A switch indicating whether or not a Managed Care Organization (MCO) has paid the provider for an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm<em>mco</em>pd_sw</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-mco-pd-sw.html\"><code>http://hl7.org/fhir/CodeSystem/clm-mco-pd-sw</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "/assets/ig/ValueSet-clm-mco-pd-sw"];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ValueSet/clm-mco-pd-sw"];
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Claim MCO Paid Switch"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "A switch indicating whether or not a Managed Care Organization (MCO) has paid the provider for an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm_mco_pd_sw"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "/assets/ig/CodeSystem-clm-mco-pd-sw" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/clm-mco-pd-sw" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-</assets/ig/ValueSet-clm-mco-pd-sw.ttl> a owl:Ontology;
+<http://hl7.org/fhir/ValueSet/clm-mco-pd-sw.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <https://www.hl7.org/fhir/STU3/ValueSet-clm-mco-pd-sw.ttl> .
+  owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/clm-mco-pd-sw.ttl> .
 
 # -------------------------------------------------------------------------------------
 

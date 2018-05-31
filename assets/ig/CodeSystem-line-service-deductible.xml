@@ -4,20 +4,20 @@
   <id value="line-service-deductible"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Line Service Deductible Indicator Switch</h2><div><p>Switch indicating whether or not the line item service on the non-institutional claim is subject to a deductible. Source: https://bluebutton.cms.gov/resources/variables/line<em>service</em>deductible</p>
-</div><p>This code system /assets/ig/CodeSystem-line-service-deductible defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name="line-service-deductible-0"> </a></td><td>Service Subject to Deductible</td><td>Service Subject to Deductible</td></tr><tr><td>1<a name="line-service-deductible-1"> </a></td><td>Service Not Subject to Deductible</td><td>Service Not Subject to Deductible</td></tr></table></div>
+</div><p>This code system http://hl7.org/fhir/CodeSystem/line-service-deductible defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name="line-service-deductible-0"> </a></td><td>Service Subject to Deductible</td><td>Service Subject to Deductible</td></tr><tr><td>1<a name="line-service-deductible-1"> </a></td><td>Service Not Subject to Deductible</td><td>Service Not Subject to Deductible</td></tr></table></div>
   </text>
-  <url value="/assets/ig/CodeSystem-line-service-deductible"/>
+  <url value="http://hl7.org/fhir/CodeSystem/line-service-deductible"/>
   <identifier>
-    <value value="/assets/ig/CodeSystem-line-service-deductible"/>
+    <value value="http://hl7.org/fhir/CodeSystem/line-service-deductible"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Line Service Deductible Indicator Switch"/>
   <title value="Line Service Deductible Indicator Switch"/>
   <status value="active"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="Switch indicating whether or not the line item service on the non-institutional claim is subject to a deductible. Source: https://bluebutton.cms.gov/resources/variables/line_service_deductible"/>
   <caseSensitive value="true"/>
-  <valueSet value="/assets/ig/ValueSet-line-service-deductible"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/line-service-deductible"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

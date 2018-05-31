@@ -3,20 +3,20 @@
   "id": "adjstmt-dltn-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Adjustment Deletion Code</h2><div><p>This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt<em>dltn</em>cd</p>\n</div><p>This code system /assets/ig/CodeSystem-adjstmt-dltn-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"adjstmt-dltn-cd-Blank\"> </a></td><td>Original PDE</td><td>Original PDE</td></tr><tr><td>A<a name=\"adjstmt-dltn-cd-A\"> </a></td><td>Adjustment</td><td>Adjustment</td></tr><tr><td>D<a name=\"adjstmt-dltn-cd-D\"> </a></td><td>Deletion</td><td>Deletion</td></tr><tr><td>R<a name=\"adjstmt-dltn-cd-R\"> </a></td><td>Resubmitted</td><td>Resubmitted</td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Adjustment Deletion Code</h2><div><p>This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt<em>dltn</em>cd</p>\n</div><p>This code system http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"adjstmt-dltn-cd-Blank\"> </a></td><td>Original PDE</td><td>Original PDE</td></tr><tr><td>A<a name=\"adjstmt-dltn-cd-A\"> </a></td><td>Adjustment</td><td>Adjustment</td></tr><tr><td>D<a name=\"adjstmt-dltn-cd-D\"> </a></td><td>Deletion</td><td>Deletion</td></tr><tr><td>R<a name=\"adjstmt-dltn-cd-R\"> </a></td><td>Resubmitted</td><td>Resubmitted</td></tr></table></div>"
   },
-  "url": "/assets/ig/CodeSystem-adjstmt-dltn-cd",
+  "url": "http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd",
   "identifier": {
-    "value": "/assets/ig/CodeSystem-adjstmt-dltn-cd"
+    "value": "http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd"
   },
   "version": "1.1.0",
   "name": "Adjustment Deletion Code",
   "title": "Adjustment Deletion Code",
   "status": "active",
-  "date": "2018-05-07T14:45:05+00:00",
+  "date": "2018-05-31T14:39:32+00:00",
   "description": "This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt_dltn_cd",
   "caseSensitive": true,
-  "valueSet": "/assets/ig/ValueSet-adjstmt-dltn-cd",
+  "valueSet": "http://hl7.org/fhir/ValueSet/adjstmt-dltn-cd",
   "hierarchyMeaning": "is-a",
   "content": "complete",
   "concept": [

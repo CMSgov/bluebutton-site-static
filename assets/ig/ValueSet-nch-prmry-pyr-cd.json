@@ -3,18 +3,18 @@
   "id": "nch-prmry-pyr-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>NCH Primary Payer Code (if not Medicare)</h2><div><p>The code, on an institutional claim, specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's health insurance bills. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/nch<em>prmry</em>pyr_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-nch-prmry-pyr-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-nch-prmry-pyr-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>NCH Primary Payer Code (if not Medicare)</h2><div><p>The code, on an institutional claim, specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's health insurance bills. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/nch<em>prmry</em>pyr_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/nch-prmry-pyr-cd.html\"><code>http://hl7.org/fhir/CodeSystem/nch-prmry-pyr-cd</code></a></li></ul></div>"
   },
-  "url": "/assets/ig/ValueSet-nch-prmry-pyr-cd",
+  "url": "http://hl7.org/fhir/ValueSet/nch-prmry-pyr-cd",
   "version": "1.1.0",
   "name": "NCH Primary Payer Code (if not Medicare)",
   "status": "draft",
-  "date": "2018-05-07T14:45:05+00:00",
+  "date": "2018-05-31T14:39:32+00:00",
   "description": "The code, on an institutional claim, specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's health insurance bills. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/nch_prmry_pyr_cd",
   "compose": {
     "include": [
       {
-        "system": "/assets/ig/CodeSystem-nch-prmry-pyr-cd"
+        "system": "http://hl7.org/fhir/CodeSystem/nch-prmry-pyr-cd"
       }
     ]
   }

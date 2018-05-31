@@ -20,7 +20,7 @@
   fhir:CodeSystem.name [ fhir:value "Catastrophic Coverage Code"];
   fhir:CodeSystem.title [ fhir:value "Catastrophic Coverage Code"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:CodeSystem.description [ fhir:value "This variable indicates whether the PDE occurred within the catastrophic benefit phase of the Medicare Part D benefit, according to the source PDE. When the value equals C (above attachment point), then the PDE is in the catastrophic phase. When the value equals A (attachment point), the PDE has caused the beneficiary to move into the catastrophic phase (i.e., this is the “triggering” PDE). Source: https://bluebutton.cms.gov/resources/variables/ctstrphc_cvrg_cd"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
   fhir:CodeSystem.valueSet [ fhir:value "http://hl7.org/fhir/ValueSet/ctstrphc-cvrg-cd"];

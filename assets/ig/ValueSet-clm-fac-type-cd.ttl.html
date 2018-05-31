@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -110,7 +115,7 @@ Raw <a href="ValueSet-clm-fac-type-cd.ttl" download>ttl</a>
 </p>
 
 <pre class="rdf">
-@prefix fhir: &lt;/assets/ig/&gt; .
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
@@ -118,22 +123,22 @@ Raw <a href="ValueSet-clm-fac-type-cd.ttl" download>ttl</a>
 # - resource -------------------------------------------------------------------
 
  a fhir:ValueSet;
-  <a href="https://www.hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
-  <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;clm-fac-type-cd&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.text">fhir:DomainResource.text</a> [
-     <a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Claim Facility Type Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm&lt;em&gt;fac&lt;/em&gt;type_cd&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=\&quot;CodeSystem-clm-fac-type-cd.html\&quot;&gt;&lt;code&gt;/assets/ig/CodeSystem-clm-fac-type-cd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
+  <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;clm-fac-type-cd&quot;];
+  <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Claim Facility Type Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm&lt;em&gt;fac&lt;/em&gt;type_cd&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=\&quot;CodeSystem/clm-fac-type-cd.html\&quot;&gt;&lt;code&gt;http://hl7.org/fhir/CodeSystem/clm-fac-type-cd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
   ];
-  <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;/assets/ig/ValueSet-clm-fac-type-cd&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1.1.0&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Claim Facility Type Code&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-05-07T14:45:05+00:00&quot;^^xsd:dateTime];
-  <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm_fac_type_cd&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
-     <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
-       <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include.system">fhir:ValueSet.compose.include.system</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;/assets/ig/CodeSystem-clm-fac-type-cd&quot; ]     ]
+  <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/ValueSet/clm-fac-type-cd&quot;];
+  <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1.1.0&quot;];
+  <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Claim Facility Type Code&quot;];
+  <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
+  <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-05-31T14:39:32+00:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm_fac_type_cd&quot;];
+  <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
+     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include.system">fhir:ValueSet.compose.include.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/CodeSystem/clm-fac-type-cd&quot; ]     ]
   ].
 
 # - ontology header ------------------------------------------------------------
@@ -173,9 +178,9 @@ Raw <a href="ValueSet-clm-fac-type-cd.ttl" download>ttl</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

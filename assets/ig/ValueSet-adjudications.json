@@ -3,9 +3,9 @@
   "id": "adjudications",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Blue Button Adjudications Amounts</h2><div><p>Blue Button Adjudication amounts.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudications</code></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Blue Button Adjudications Amounts</h2><div><p>Blue Button Adjudication amounts.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http://hl7.org/fhir/CodeSystem/adjudications</code></li></ul></div>"
   },
-  "url": "/assets/ig/ValueSet-adjudications",
+  "url": "http://hl7.org/fhir/ValueSet/adjudications",
   "version": "1.1.0",
   "name": "Blue Button Adjudications Amounts",
   "status": "draft",
@@ -14,7 +14,7 @@
   "compose": {
     "include": [
       {
-        "system": "/assets/ig/CodeSystem-adjudications"
+        "system": "http://hl7.org/fhir/CodeSystem/adjudications"
       }
     ]
   }

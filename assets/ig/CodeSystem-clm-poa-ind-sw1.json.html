@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -111,62 +116,62 @@ Raw <a href="CodeSystem-clm-poa-ind-sw1.json" download>json</a>
 
 <pre class="json">
 {
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "clm-poa-ind-sw1",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The present on admission (POA) indicator code associated with the diagnosis codes (principal and secondary). In response to the Deficit Reduction Act of 2005, CMS began to distinguish between hospitalization diagnoses that occurred prior to versus during the admission. The objective was to eventually not pay hospitals more if the patient acquired a condition (e.g., infection) during the admission. This present on admission (POA) field is used to indicate whether the diagnosis was present on admission. Medicare claims did not indicate whether a diagnosis was POA until 2011. Source: https://bluebutton.cms.gov/resources/variables/clm&lt;em&gt;poa&lt;/em&gt;ind_sw1&lt;/p&gt;
-&lt;/div&gt;&lt;p&gt;This code system /assets/ig/CodeSystem-clm-poa-ind-sw1 defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y&lt;a name=&quot;clm-poa-ind-sw1-Y&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Diagnosis was present at the time of admission (POA)&lt;/td&gt;&lt;td&gt;Diagnosis was present at the time of admission (POA)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N&lt;a name=&quot;clm-poa-ind-sw1-N&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Diagnosis was not present at the time of admission&lt;/td&gt;&lt;td&gt;Diagnosis was not present at the time of admission&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;U&lt;a name=&quot;clm-poa-ind-sw1-U&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Documentation is insufficient to determine if condition was present on admission&lt;/td&gt;&lt;td&gt;Documentation is insufficient to determine if condition was present on admission&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;W&lt;a name=&quot;clm-poa-ind-sw1-W&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Provider is unable to clinically determine whether condition was present on admission&lt;/td&gt;&lt;td&gt;Provider is unable to clinically determine whether condition was present on admission&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;a name=&quot;clm-poa-ind-sw1-1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data&lt;/td&gt;&lt;td&gt;Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z&lt;a name=&quot;clm-poa-ind-sw1-Z&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Denotes the end of the POA indicators&lt;/td&gt;&lt;td&gt;Denotes the end of the POA indicators&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;X&lt;a name=&quot;clm-poa-ind-sw1-X&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future&lt;/td&gt;&lt;td&gt;Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "clm-poa-ind-sw1",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The present on admission (POA) indicator code associated with the diagnosis codes (principal and secondary). In response to the Deficit Reduction Act of 2005, CMS began to distinguish between hospitalization diagnoses that occurred prior to versus during the admission. The objective was to eventually not pay hospitals more if the patient acquired a condition (e.g., infection) during the admission. This present on admission (POA) field is used to indicate whether the diagnosis was present on admission. Medicare claims did not indicate whether a diagnosis was POA until 2011. Source: https://bluebutton.cms.gov/resources/variables/clm&lt;em&gt;poa&lt;/em&gt;ind_sw1&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;This code system http://hl7.org/fhir/CodeSystem/clm-poa-ind-sw1 defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y&lt;a name=&quot;clm-poa-ind-sw1-Y&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Diagnosis was present at the time of admission (POA)&lt;/td&gt;&lt;td&gt;Diagnosis was present at the time of admission (POA)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N&lt;a name=&quot;clm-poa-ind-sw1-N&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Diagnosis was not present at the time of admission&lt;/td&gt;&lt;td&gt;Diagnosis was not present at the time of admission&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;U&lt;a name=&quot;clm-poa-ind-sw1-U&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Documentation is insufficient to determine if condition was present on admission&lt;/td&gt;&lt;td&gt;Documentation is insufficient to determine if condition was present on admission&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;W&lt;a name=&quot;clm-poa-ind-sw1-W&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Provider is unable to clinically determine whether condition was present on admission&lt;/td&gt;&lt;td&gt;Provider is unable to clinically determine whether condition was present on admission&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;a name=&quot;clm-poa-ind-sw1-1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data&lt;/td&gt;&lt;td&gt;Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z&lt;a name=&quot;clm-poa-ind-sw1-Z&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Denotes the end of the POA indicators&lt;/td&gt;&lt;td&gt;Denotes the end of the POA indicators&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;X&lt;a name=&quot;clm-poa-ind-sw1-X&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future&lt;/td&gt;&lt;td&gt;Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "/assets/ig/CodeSystem-clm-poa-ind-sw1",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "/assets/ig/CodeSystem-clm-poa-ind-sw1"
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "http://hl7.org/fhir/CodeSystem/clm-poa-ind-sw1",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "http://hl7.org/fhir/CodeSystem/clm-poa-ind-sw1"
   },
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.0",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-05-07T14:45:05+00:00",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "The present on admission (POA) indicator code associated with the diagnosis codes (principal and secondary). In response to the Deficit Reduction Act of 2005, CMS began to distinguish between hospitalization diagnoses that occurred prior to versus during the admission. The objective was to eventually not pay hospitals more if the patient acquired a condition (e.g., infection) during the admission. This present on admission (POA) field is used to indicate whether the diagnosis was present on admission. Medicare claims did not indicate whether a diagnosis was POA until 2011. Source: https://bluebutton.cms.gov/resources/variables/clm_poa_ind_sw1",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "/assets/ig/ValueSet-clm-poa-ind-sw1",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.0",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-05-31T14:39:32+00:00",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "The present on admission (POA) indicator code associated with the diagnosis codes (principal and secondary). In response to the Deficit Reduction Act of 2005, CMS began to distinguish between hospitalization diagnoses that occurred prior to versus during the admission. The objective was to eventually not pay hospitals more if the patient acquired a condition (e.g., infection) during the admission. This present on admission (POA) field is used to indicate whether the diagnosis was present on admission. Medicare claims did not indicate whether a diagnosis was POA until 2011. Source: https://bluebutton.cms.gov/resources/variables/clm_poa_ind_sw1",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "http://hl7.org/fhir/ValueSet/clm-poa-ind-sw1",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Y",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Diagnosis was present at the time of admission (POA)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Diagnosis was present at the time of admission (POA)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Y",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Diagnosis was present at the time of admission (POA)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Diagnosis was present at the time of admission (POA)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "N",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Diagnosis was not present at the time of admission",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Diagnosis was not present at the time of admission"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "N",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Diagnosis was not present at the time of admission",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Diagnosis was not present at the time of admission"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "U",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Documentation is insufficient to determine if condition was present on admission",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Documentation is insufficient to determine if condition was present on admission"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "U",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Documentation is insufficient to determine if condition was present on admission",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Documentation is insufficient to determine if condition was present on admission"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "W",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Provider is unable to clinically determine whether condition was present on admission",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Provider is unable to clinically determine whether condition was present on admission"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "W",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Provider is unable to clinically determine whether condition was present on admission",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Provider is unable to clinically determine whether condition was present on admission"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "1",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "1",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Z",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Denotes the end of the POA indicators",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Denotes the end of the POA indicators"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Z",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Denotes the end of the POA indicators",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Denotes the end of the POA indicators"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "X",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "X",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future"
     }
   ]
 }</pre>
@@ -200,9 +205,9 @@ Raw <a href="CodeSystem-clm-poa-ind-sw1.json" download>json</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

@@ -1,29 +1,29 @@
-@prefix fhir: </assets/ig/> .
+@prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
 
-</assets/ig/CodeSystem-nstd-frmt-cd> a fhir:CodeSystem;
+<http://hl7.org/fhir/CodeSystem/nstd-frmt-cd> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "nstd-frmt-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Non-Standard Format Code</h2><div><p>This data element is used by CMS to identify PDE records that are compiled from non-standard sources. The National Council for Prescription Drug Program (NCPDP) is the standard format in which plans receive data from pharmacies. Source: https://bluebutton.cms.gov/resources/variables/nstd<em>frmt</em>cd</p>\n</div><p>This code system /assets/ig/CodeSystem-nstd-frmt-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>X<a name=\"nstd-frmt-cd-X\"> </a></td><td>X12 837</td><td>X12 837</td></tr><tr><td>B<a name=\"nstd-frmt-cd-B\"> </a></td><td>Beneficiary submitted claim</td><td>Beneficiary submitted claim</td></tr><tr><td>C<a name=\"nstd-frmt-cd-C\"> </a></td><td>Coordination of Benefits</td><td>Coordination of Benefits</td></tr><tr><td>P<a name=\"nstd-frmt-cd-P\"> </a></td><td>Paper claim from provider</td><td>Paper claim from provider</td></tr><tr><td>Blank<a name=\"nstd-frmt-cd-Blank\"> </a></td><td>NCPDP electronic format</td><td>NCPDP electronic format</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Non-Standard Format Code</h2><div><p>This data element is used by CMS to identify PDE records that are compiled from non-standard sources. The National Council for Prescription Drug Program (NCPDP) is the standard format in which plans receive data from pharmacies. Source: https://bluebutton.cms.gov/resources/variables/nstd<em>frmt</em>cd</p>\n</div><p>This code system http://hl7.org/fhir/CodeSystem/nstd-frmt-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>X<a name=\"nstd-frmt-cd-X\"> </a></td><td>X12 837</td><td>X12 837</td></tr><tr><td>B<a name=\"nstd-frmt-cd-B\"> </a></td><td>Beneficiary submitted claim</td><td>Beneficiary submitted claim</td></tr><tr><td>C<a name=\"nstd-frmt-cd-C\"> </a></td><td>Coordination of Benefits</td><td>Coordination of Benefits</td></tr><tr><td>P<a name=\"nstd-frmt-cd-P\"> </a></td><td>Paper claim from provider</td><td>Paper claim from provider</td></tr><tr><td>Blank<a name=\"nstd-frmt-cd-Blank\"> </a></td><td>NCPDP electronic format</td><td>NCPDP electronic format</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "/assets/ig/CodeSystem-nstd-frmt-cd"];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/CodeSystem/nstd-frmt-cd"];
   fhir:CodeSystem.identifier [
-     fhir:Identifier.value [ fhir:value "/assets/ig/CodeSystem-nstd-frmt-cd" ]
+     fhir:Identifier.value [ fhir:value "http://hl7.org/fhir/CodeSystem/nstd-frmt-cd" ]
   ];
   fhir:CodeSystem.version [ fhir:value "1.1.0"];
   fhir:CodeSystem.name [ fhir:value "Non-Standard Format Code"];
   fhir:CodeSystem.title [ fhir:value "Non-Standard Format Code"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:CodeSystem.description [ fhir:value "This data element is used by CMS to identify PDE records that are compiled from non-standard sources. The National Council for Prescription Drug Program (NCPDP) is the standard format in which plans receive data from pharmacies. Source: https://bluebutton.cms.gov/resources/variables/nstd_frmt_cd"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
-  fhir:CodeSystem.valueSet [ fhir:value "/assets/ig/ValueSet-nstd-frmt-cd"];
+  fhir:CodeSystem.valueSet [ fhir:value "http://hl7.org/fhir/ValueSet/nstd-frmt-cd"];
   fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.concept [
@@ -55,9 +55,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-</assets/ig/CodeSystem-nstd-frmt-cd.ttl> a owl:Ontology;
+<http://hl7.org/fhir/CodeSystem/nstd-frmt-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-nstd-frmt-cd.ttl> .
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/nstd-frmt-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

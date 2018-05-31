@@ -16,7 +16,7 @@
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Pharmacy service type code"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide “in-network” services. Source: https://bluebutton.cms.gov/resources/variables/phrmcy_srvc_type_cd"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

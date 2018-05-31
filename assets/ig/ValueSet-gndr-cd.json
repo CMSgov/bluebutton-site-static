@@ -3,18 +3,18 @@
   "id": "gndr-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient Gender</h2><div><p>Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-gndr-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient Gender</h2><div><p>Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/gndr-cd.html\"><code>http://hl7.org/fhir/CodeSystem/gndr-cd</code></a></li></ul></div>"
   },
-  "url": "/assets/ig/ValueSet-gndr-cd",
+  "url": "http://hl7.org/fhir/ValueSet/gndr-cd",
   "version": "1.1.0",
   "name": "Patient Gender",
   "status": "draft",
-  "date": "2018-05-07T14:45:05+00:00",
+  "date": "2018-05-31T14:39:32+00:00",
   "description": "Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd",
   "compose": {
     "include": [
       {
-        "system": "/assets/ig/CodeSystem-gndr-cd"
+        "system": "http://hl7.org/fhir/CodeSystem/gndr-cd"
       }
     ]
   }

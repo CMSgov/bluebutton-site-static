@@ -3,20 +3,20 @@
   "id": "race",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Race Codes</h2><div><p>Blue Button Race Codes. Source: (https://bluebutton.cms.gov/resources/variables/race/)</p>\n</div><p>This code system /assets/ig/CodeSystem-race defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"race-0\"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td>1<a name=\"race-1\"> </a></td><td>White</td><td>White</td></tr><tr><td>2<a name=\"race-2\"> </a></td><td>Black</td><td>Black</td></tr><tr><td>3<a name=\"race-3\"> </a></td><td>Other</td><td>Other</td></tr><tr><td>4<a name=\"race-4\"> </a></td><td>Asian</td><td>Asian</td></tr><tr><td>5<a name=\"race-5\"> </a></td><td>Hispanic</td><td>Hispanic</td></tr><tr><td>6<a name=\"race-6\"> </a></td><td>North American Native</td><td>North American Native</td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Race Codes</h2><div><p>Blue Button Race Codes. Source: (https://bluebutton.cms.gov/resources/variables/race/)</p>\n</div><p>This code system http://hl7.org/fhir/CodeSystem/race defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"race-0\"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td>1<a name=\"race-1\"> </a></td><td>White</td><td>White</td></tr><tr><td>2<a name=\"race-2\"> </a></td><td>Black</td><td>Black</td></tr><tr><td>3<a name=\"race-3\"> </a></td><td>Other</td><td>Other</td></tr><tr><td>4<a name=\"race-4\"> </a></td><td>Asian</td><td>Asian</td></tr><tr><td>5<a name=\"race-5\"> </a></td><td>Hispanic</td><td>Hispanic</td></tr><tr><td>6<a name=\"race-6\"> </a></td><td>North American Native</td><td>North American Native</td></tr></table></div>"
   },
-  "url": "/assets/ig/CodeSystem-race",
+  "url": "http://hl7.org/fhir/CodeSystem/race",
   "identifier": {
-    "value": "/assets/ig/CodeSystem-race"
+    "value": "http://hl7.org/fhir/CodeSystem/race"
   },
   "version": "1.1.0",
   "name": "Race Codes",
   "title": "Race Codes",
   "status": "active",
-  "date": "2018-05-07T14:45:05+00:00",
+  "date": "2018-05-31T14:39:32+00:00",
   "description": "Blue Button Race Codes. Source: (https://bluebutton.cms.gov/resources/variables/race/)",
   "caseSensitive": true,
-  "valueSet": "/assets/ig/ValueSet-race",
+  "valueSet": "http://hl7.org/fhir/ValueSet/race",
   "hierarchyMeaning": "is-a",
   "content": "complete",
   "count": 7,

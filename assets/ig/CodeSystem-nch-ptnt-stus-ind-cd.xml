@@ -4,20 +4,20 @@
   <id value="nch-ptnt-stus-ind-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>NCH Patient Status Indicator Code</h2><div><p>This variable is a recoded version of the discharge status code (variable called PTNT<em>DSCHRG</em>STUS<em>CD). Source: https://bluebutton.cms.gov/resources/variables/nch</em>ptnt<em>stus</em>ind_cd</p>
-</div><p>This code system /assets/ig/CodeSystem-nch-ptnt-stus-ind-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name="nch-ptnt-stus-ind-cd-A"> </a></td><td>Discharged</td><td>Discharged</td></tr><tr><td>B<a name="nch-ptnt-stus-ind-cd-B"> </a></td><td>Died</td><td>Died</td></tr><tr><td>C<a name="nch-ptnt-stus-ind-cd-C"> </a></td><td>Still a patient</td><td>Still a patient</td></tr></table></div>
+</div><p>This code system http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name="nch-ptnt-stus-ind-cd-A"> </a></td><td>Discharged</td><td>Discharged</td></tr><tr><td>B<a name="nch-ptnt-stus-ind-cd-B"> </a></td><td>Died</td><td>Died</td></tr><tr><td>C<a name="nch-ptnt-stus-ind-cd-C"> </a></td><td>Still a patient</td><td>Still a patient</td></tr></table></div>
   </text>
-  <url value="/assets/ig/CodeSystem-nch-ptnt-stus-ind-cd"/>
+  <url value="http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd"/>
   <identifier>
-    <value value="/assets/ig/CodeSystem-nch-ptnt-stus-ind-cd"/>
+    <value value="http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="NCH Patient Status Indicator Code"/>
   <title value="NCH Patient Status Indicator Code"/>
   <status value="active"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="This variable is a recoded version of the discharge status code (variable called PTNT_DSCHRG_STUS_CD). Source: https://bluebutton.cms.gov/resources/variables/nch_ptnt_stus_ind_cd"/>
   <caseSensitive value="true"/>
-  <valueSet value="/assets/ig/ValueSet-nch-ptnt-stus-ind-cd"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/nch-ptnt-stus-ind-cd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

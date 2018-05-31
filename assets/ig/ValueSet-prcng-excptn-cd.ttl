@@ -1,35 +1,35 @@
-@prefix fhir: </assets/ig/> .
+@prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
 
-</assets/ig/ValueSet-prcng-excptn-cd> a fhir:ValueSet;
+<http://hl7.org/fhir/ValueSet/prcng-excptn-cd> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "prcng-excptn-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Pricing Exception Code</h2><div><p>This variable indicates if the PDE was processed by the Part D plan using pricing rules that differ from the plan's negotiated price. Most PDEs have missing values, indicating that they were obtained from in-network pharmacies. Source: https://bluebutton.cms.gov/resources/variables/prcng<em>excptn</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-prcng-excptn-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-prcng-excptn-cd</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Pricing Exception Code</h2><div><p>This variable indicates if the PDE was processed by the Part D plan using pricing rules that differ from the plan's negotiated price. Most PDEs have missing values, indicating that they were obtained from in-network pharmacies. Source: https://bluebutton.cms.gov/resources/variables/prcng<em>excptn</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/prcng-excptn-cd.html\"><code>http://hl7.org/fhir/CodeSystem/prcng-excptn-cd</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "/assets/ig/ValueSet-prcng-excptn-cd"];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ValueSet/prcng-excptn-cd"];
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Pricing Exception Code"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "This variable indicates if the PDE was processed by the Part D plan using pricing rules that differ from the plan's negotiated price. Most PDEs have missing values, indicating that they were obtained from in-network pharmacies. Source: https://bluebutton.cms.gov/resources/variables/prcng_excptn_cd"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "/assets/ig/CodeSystem-prcng-excptn-cd" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/prcng-excptn-cd" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-</assets/ig/ValueSet-prcng-excptn-cd.ttl> a owl:Ontology;
+<http://hl7.org/fhir/ValueSet/prcng-excptn-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <https://www.hl7.org/fhir/STU3/ValueSet-prcng-excptn-cd.ttl> .
+  owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/prcng-excptn-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

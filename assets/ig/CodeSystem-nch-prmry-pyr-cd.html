@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -105,7 +110,7 @@ Formats: <a href="CodeSystem-nch-prmry-pyr-cd.xml.html">XML</a>, <a href="CodeSy
 </p>
 
 <div xmlns="http://www.w3.org/1999/xhtml"><h2>NCH Primary Payer Code (if not Medicare)</h2><div><p>The code, on an institutional claim, specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's health insurance bills. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/nch<em>prmry</em>pyr_cd</p>
-</div><p>This code system /assets/ig/CodeSystem-nch-prmry-pyr-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name="nch-prmry-pyr-cd-A"> </a></td><td>Employer group health plan (EGHP) insurance for an aged beneficiary</td><td>Employer group health plan (EGHP) insurance for an aged beneficiary</td></tr><tr><td>B<a name="nch-prmry-pyr-cd-B"> </a></td><td>EGHP insurance for an end-stage renal disease (ESRD) beneficiary</td><td>EGHP insurance for an end-stage renal disease (ESRD) beneficiary</td></tr><tr><td>C<a name="nch-prmry-pyr-cd-C"> </a></td><td>Conditional payment by Medicare; future reimbursement from the Public Health Service (PHS) expected</td><td>Conditional payment by Medicare; future reimbursement from the Public Health Service (PHS) expected</td></tr><tr><td>D<a name="nch-prmry-pyr-cd-D"> </a></td><td>No fault automobile insurance</td><td>No fault automobile insurance</td></tr><tr><td>E<a name="nch-prmry-pyr-cd-E"> </a></td><td>Worker's compensation (WC)</td><td>Worker's compensation (WC)</td></tr><tr><td>F<a name="nch-prmry-pyr-cd-F"> </a></td><td>Public Health Service (PHS) or other Federal agency (other than VA)</td><td>Public Health Service (PHS) or other Federal agency (other than VA)</td></tr><tr><td>G<a name="nch-prmry-pyr-cd-G"> </a></td><td>Working disabled beneficiary under age 65 with a local government health plan (LGHP)</td><td>Working disabled beneficiary under age 65 with a local government health plan (LGHP)</td></tr><tr><td>H<a name="nch-prmry-pyr-cd-H"> </a></td><td>Black lung (BL) program</td><td>Black lung (BL) program</td></tr><tr><td>I<a name="nch-prmry-pyr-cd-I"> </a></td><td>Department of Veteran's Affairs</td><td>Department of Veteran's Affairs</td></tr><tr><td>L<a name="nch-prmry-pyr-cd-L"> </a></td><td>Any liability insurance</td><td>Any liability insurance</td></tr><tr><td>M<a name="nch-prmry-pyr-cd-M"> </a></td><td>Override EGHP - Medicare is primary payer</td><td>Override EGHP - Medicare is primary payer</td></tr><tr><td>N<a name="nch-prmry-pyr-cd-N"> </a></td><td>Override non-EGHP - Medicare is primary payer Blank / missing = No other primary payer</td><td>Override non-EGHP - Medicare is primary payer Blank / missing = No other primary payer</td></tr></table></div>
+</div><p>This code system http://hl7.org/fhir/CodeSystem/nch-prmry-pyr-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name="nch-prmry-pyr-cd-A"> </a></td><td>Employer group health plan (EGHP) insurance for an aged beneficiary</td><td>Employer group health plan (EGHP) insurance for an aged beneficiary</td></tr><tr><td>B<a name="nch-prmry-pyr-cd-B"> </a></td><td>EGHP insurance for an end-stage renal disease (ESRD) beneficiary</td><td>EGHP insurance for an end-stage renal disease (ESRD) beneficiary</td></tr><tr><td>C<a name="nch-prmry-pyr-cd-C"> </a></td><td>Conditional payment by Medicare; future reimbursement from the Public Health Service (PHS) expected</td><td>Conditional payment by Medicare; future reimbursement from the Public Health Service (PHS) expected</td></tr><tr><td>D<a name="nch-prmry-pyr-cd-D"> </a></td><td>No fault automobile insurance</td><td>No fault automobile insurance</td></tr><tr><td>E<a name="nch-prmry-pyr-cd-E"> </a></td><td>Worker's compensation (WC)</td><td>Worker's compensation (WC)</td></tr><tr><td>F<a name="nch-prmry-pyr-cd-F"> </a></td><td>Public Health Service (PHS) or other Federal agency (other than VA)</td><td>Public Health Service (PHS) or other Federal agency (other than VA)</td></tr><tr><td>G<a name="nch-prmry-pyr-cd-G"> </a></td><td>Working disabled beneficiary under age 65 with a local government health plan (LGHP)</td><td>Working disabled beneficiary under age 65 with a local government health plan (LGHP)</td></tr><tr><td>H<a name="nch-prmry-pyr-cd-H"> </a></td><td>Black lung (BL) program</td><td>Black lung (BL) program</td></tr><tr><td>I<a name="nch-prmry-pyr-cd-I"> </a></td><td>Department of Veteran's Affairs</td><td>Department of Veteran's Affairs</td></tr><tr><td>L<a name="nch-prmry-pyr-cd-L"> </a></td><td>Any liability insurance</td><td>Any liability insurance</td></tr><tr><td>M<a name="nch-prmry-pyr-cd-M"> </a></td><td>Override EGHP - Medicare is primary payer</td><td>Override EGHP - Medicare is primary payer</td></tr><tr><td>N<a name="nch-prmry-pyr-cd-N"> </a></td><td>Override non-EGHP - Medicare is primary payer Blank / missing = No other primary payer</td><td>Override non-EGHP - Medicare is primary payer Blank / missing = No other primary payer</td></tr></table></div>
 
 
 <!-- ==============END CONTENT END CONTENT=================== -->
@@ -135,9 +140,9 @@ Formats: <a href="CodeSystem-nch-prmry-pyr-cd.xml.html">XML</a>, <a href="CodeSy
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

@@ -1,35 +1,35 @@
-@prefix fhir: </assets/ig/> .
+@prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
 
-</assets/ig/ValueSet-nstd-frmt-cd> a fhir:ValueSet;
+<http://hl7.org/fhir/ValueSet/nstd-frmt-cd> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "nstd-frmt-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Non-Standard Format Code</h2><div><p>This data element is used by CMS to identify PDE records that are compiled from non-standard sources. The National Council for Prescription Drug Program (NCPDP) is the standard format in which plans receive data from pharmacies. Source: https://bluebutton.cms.gov/resources/variables/nstd<em>frmt</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-nstd-frmt-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-nstd-frmt-cd</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Non-Standard Format Code</h2><div><p>This data element is used by CMS to identify PDE records that are compiled from non-standard sources. The National Council for Prescription Drug Program (NCPDP) is the standard format in which plans receive data from pharmacies. Source: https://bluebutton.cms.gov/resources/variables/nstd<em>frmt</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/nstd-frmt-cd.html\"><code>http://hl7.org/fhir/CodeSystem/nstd-frmt-cd</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "/assets/ig/ValueSet-nstd-frmt-cd"];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ValueSet/nstd-frmt-cd"];
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Non-Standard Format Code"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "This data element is used by CMS to identify PDE records that are compiled from non-standard sources. The National Council for Prescription Drug Program (NCPDP) is the standard format in which plans receive data from pharmacies. Source: https://bluebutton.cms.gov/resources/variables/nstd_frmt_cd"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "/assets/ig/CodeSystem-nstd-frmt-cd" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/nstd-frmt-cd" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-</assets/ig/ValueSet-nstd-frmt-cd.ttl> a owl:Ontology;
+<http://hl7.org/fhir/ValueSet/nstd-frmt-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <https://www.hl7.org/fhir/STU3/ValueSet-nstd-frmt-cd.ttl> .
+  owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/nstd-frmt-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

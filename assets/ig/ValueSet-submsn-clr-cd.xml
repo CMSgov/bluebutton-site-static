@@ -4,17 +4,17 @@
   <id value="submsn-clr-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Submission clarification code</h2><div><p>For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT<em>RSDNC</em>CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn<em>clr</em>cd</p>
-</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-submsn-clr-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd</code></a></li></ul></div>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem/submsn-clr-cd.html"><code>http://hl7.org/fhir/CodeSystem/submsn-clr-cd</code></a></li></ul></div>
   </text>
-  <url value="/assets/ig/ValueSet-submsn-clr-cd"/>
+  <url value="http://hl7.org/fhir/ValueSet/submsn-clr-cd"/>
   <version value="1.1.0"/>
   <name value="Submission clarification code"/>
   <status value="draft"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days&#x2019; supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT_RSDNC_CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn_clr_cd"/>
   <compose>
     <include>
-      <system value="/assets/ig/CodeSystem-submsn-clr-cd"/>
+      <system value="http://hl7.org/fhir/CodeSystem/submsn-clr-cd"/>
     </include>
   </compose>
 </ValueSet>

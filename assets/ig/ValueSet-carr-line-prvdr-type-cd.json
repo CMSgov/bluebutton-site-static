@@ -3,18 +3,18 @@
   "id": "carr-line-prvdr-type-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Provider Type Code</h2><div><p>Code identifying the type of provider furnishing the service for this line item on the carrier claim. Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>prvdr<em>type</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-carr-line-prvdr-type-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prvdr-type-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Provider Type Code</h2><div><p>Code identifying the type of provider furnishing the service for this line item on the carrier claim. Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>prvdr<em>type</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/carr-line-prvdr-type-cd.html\"><code>http://hl7.org/fhir/CodeSystem/carr-line-prvdr-type-cd</code></a></li></ul></div>"
   },
-  "url": "/assets/ig/ValueSet-carr-line-prvdr-type-cd",
+  "url": "http://hl7.org/fhir/ValueSet/carr-line-prvdr-type-cd",
   "version": "1.1.0",
   "name": "Carrier Line Provider Type Code",
   "status": "draft",
-  "date": "2018-05-07T14:45:05+00:00",
+  "date": "2018-05-31T14:39:32+00:00",
   "description": "Code identifying the type of provider furnishing the service for this line item on the carrier claim. Source: https://bluebutton.cms.gov/resources/variables/carr_line_prvdr_type_cd",
   "compose": {
     "include": [
       {
-        "system": "/assets/ig/CodeSystem-carr-line-prvdr-type-cd"
+        "system": "http://hl7.org/fhir/CodeSystem/carr-line-prvdr-type-cd"
       }
     ]
   }

@@ -4,20 +4,20 @@
   <id value="prcng-excptn-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Pricing Exception Code</h2><div><p>This variable indicates if the PDE was processed by the Part D plan using pricing rules that differ from the plan's negotiated price. Most PDEs have missing values, indicating that they were obtained from in-network pharmacies. Source: https://bluebutton.cms.gov/resources/variables/prcng<em>excptn</em>cd</p>
-</div><p>This code system /assets/ig/CodeSystem-prcng-excptn-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>M<a name="prcng-excptn-cd-M"> </a></td><td>Medicare is a secondary payer (MSP)</td><td>Medicare is a secondary payer (MSP)</td></tr><tr><td>O<a name="prcng-excptn-cd-O"> </a></td><td>Out of network pharmacy</td><td>Out of network pharmacy</td></tr><tr><td>Blank<a name="prcng-excptn-cd-Blank"> </a></td><td>In-network pharmacy</td><td>In-network pharmacy</td></tr></table></div>
+</div><p>This code system http://hl7.org/fhir/CodeSystem/prcng-excptn-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>M<a name="prcng-excptn-cd-M"> </a></td><td>Medicare is a secondary payer (MSP)</td><td>Medicare is a secondary payer (MSP)</td></tr><tr><td>O<a name="prcng-excptn-cd-O"> </a></td><td>Out of network pharmacy</td><td>Out of network pharmacy</td></tr><tr><td>Blank<a name="prcng-excptn-cd-Blank"> </a></td><td>In-network pharmacy</td><td>In-network pharmacy</td></tr></table></div>
   </text>
-  <url value="/assets/ig/CodeSystem-prcng-excptn-cd"/>
+  <url value="http://hl7.org/fhir/CodeSystem/prcng-excptn-cd"/>
   <identifier>
-    <value value="/assets/ig/CodeSystem-prcng-excptn-cd"/>
+    <value value="http://hl7.org/fhir/CodeSystem/prcng-excptn-cd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Pricing Exception Code"/>
   <title value="Pricing Exception Code"/>
   <status value="active"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="This variable indicates if the PDE was processed by the Part D plan using pricing rules that differ from the plan&#39;s negotiated price. Most PDEs have missing values, indicating that they were obtained from in-network pharmacies. Source: https://bluebutton.cms.gov/resources/variables/prcng_excptn_cd"/>
   <caseSensitive value="true"/>
-  <valueSet value="/assets/ig/ValueSet-prcng-excptn-cd"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/prcng-excptn-cd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

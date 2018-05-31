@@ -1,35 +1,35 @@
-@prefix fhir: </assets/ig/> .
+@prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
 
-</assets/ig/ValueSet-carr-clm-pmt-dnl-cd> a fhir:ValueSet;
+<http://hl7.org/fhir/ValueSet/carr-clm-pmt-dnl-cd> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carr-clm-pmt-dnl-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Claim Payment Denial Code</h2><div><p>The code on a non-institutional claim indicating to whom payment was made or if the claim was denied. Source: https://bluebutton.cms.gov/resources/variables/carr<em>clm</em>pmt<em>dnl</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-carr-clm-pmt-dnl-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-clm-pmt-dnl-cd</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Claim Payment Denial Code</h2><div><p>The code on a non-institutional claim indicating to whom payment was made or if the claim was denied. Source: https://bluebutton.cms.gov/resources/variables/carr<em>clm</em>pmt<em>dnl</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/carr-clm-pmt-dnl-cd.html\"><code>http://hl7.org/fhir/CodeSystem/carr-clm-pmt-dnl-cd</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "/assets/ig/ValueSet-carr-clm-pmt-dnl-cd"];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ValueSet/carr-clm-pmt-dnl-cd"];
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Carrier Claim Payment Denial Code"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "The code on a non-institutional claim indicating to whom payment was made or if the claim was denied. Source: https://bluebutton.cms.gov/resources/variables/carr_clm_pmt_dnl_cd"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "/assets/ig/CodeSystem-carr-clm-pmt-dnl-cd" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/carr-clm-pmt-dnl-cd" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-</assets/ig/ValueSet-carr-clm-pmt-dnl-cd.ttl> a owl:Ontology;
+<http://hl7.org/fhir/ValueSet/carr-clm-pmt-dnl-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <https://www.hl7.org/fhir/STU3/ValueSet-carr-clm-pmt-dnl-cd.ttl> .
+  owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/carr-clm-pmt-dnl-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -143,8 +148,8 @@ The Blue Button API FHIR data model leverages coding systems specific to Medicar
 
 <ul>
   <li><a href="https://www.accessdata.fda.gov/scripts/cder/ndc/">National Drug Code Directory</a></li>
-  <li><a href="/assets/ig/v3/ActCode/cs.html">HL7 v3 Code System ActCode</a></li>
-  <li><a href="/assets/ig/terminologies-systems.html#http://hl7.html">ICD-10</a></li>
+  <li><a href="http://hl7.org/fhir/v3/ActCode/cs.html">HL7 v3 Code System ActCode</a></li>
+  <li><a href="http://hl7.org/fhir/terminologies-systems.html#http://hl7.html">ICD-10</a></li>
 </ul>
 
 <p><a href="https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md">View the full list of Blue Button API FHIR Data Model Coding Systems and Identifiers</a></p>
@@ -152,17 +157,17 @@ The Blue Button API FHIR data model leverages coding systems specific to Medicar
 <h2 id="blue-button-profiles">Blue Button Profiles</h2>
 
 <p>The list of Blue Button Profiles is shown below. Each profile defines the minimum mandatory elements, extensions and terminology requirements that MUST be present. For each profile requirements
-and guidance are given in a simple narrative summary. A formal hierarchical table that presents a <a href="/assets/ig/formats.html#table">logical view</a> of the content in both a differential and snapshot view is also provided along with
+and guidance are given in a simple narrative summary. A formal hierarchical table that presents a <a href="http://hl7.org/fhir/formats.html#table">logical view</a> of the content in both a differential and snapshot view is also provided along with
 references to appropriate terminologies and examples. In addition each profile has a “Quick Start” section which is intended as an implementer friendly overview of the required search and read
 operations.</p>
 
-<li><a href="StructureDefinition-bluebutton-patient-claim.html">Blue Button Patient Profile</a></li>
 <li><a href="StructureDefinition-bluebutton-carrier-claim.html">Blue Button Carrier Claim Profile</a></li>
 <li><a href="StructureDefinition-bluebutton-dme-claim.html">Blue Button DME Claim Profile</a></li>
 <li><a href="StructureDefinition-bluebutton-hha-claim.html">Blue Button HHA Claim Profile</a></li>
 <li><a href="StructureDefinition-bluebutton-hospice-claim.html">Blue Button Hospice Claim Profile</a></li>
 <li><a href="StructureDefinition-bluebutton-inpatient-claim.html">Blue Button Inpatient Claim Profile</a></li>
 <li><a href="StructureDefinition-bluebutton-outpatient-claim.html">Blue Button Outpatient Claim Profile</a></li>
+<li><a href="StructureDefinition-bluebutton-patient-claim.html">Blue Button Patient Profile</a></li>
 <li><a href="StructureDefinition-bluebutton-pde-claim.html">Blue Button Part D Event Profile</a></li>
 <li><a href="StructureDefinition-bluebutton-snf-claim.html">Blue Button SNF Claim Profile</a></li>
 
@@ -194,9 +199,9 @@ operations.</p>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

@@ -3,20 +3,20 @@
   "id": "gndr-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient Gender</h2><div><p>Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd</p>\n</div><p>This code system /assets/ig/CodeSystem-gndr-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"gndr-cd-Blank\"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td>1<a name=\"gndr-cd-1\"> </a></td><td>Male</td><td>Male</td></tr><tr><td>2<a name=\"gndr-cd-2\"> </a></td><td>Female</td><td>Female</td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient Gender</h2><div><p>Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd</p>\n</div><p>This code system http://hl7.org/fhir/CodeSystem/gndr-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"gndr-cd-Blank\"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td>1<a name=\"gndr-cd-1\"> </a></td><td>Male</td><td>Male</td></tr><tr><td>2<a name=\"gndr-cd-2\"> </a></td><td>Female</td><td>Female</td></tr></table></div>"
   },
-  "url": "/assets/ig/CodeSystem-gndr-cd",
+  "url": "http://hl7.org/fhir/CodeSystem/gndr-cd",
   "identifier": {
-    "value": "/assets/ig/CodeSystem-gndr-cd"
+    "value": "http://hl7.org/fhir/CodeSystem/gndr-cd"
   },
   "version": "1.1.0",
   "name": "Patient Gender",
   "title": "Patient Gender",
   "status": "active",
-  "date": "2018-05-07T14:45:05+00:00",
+  "date": "2018-05-31T14:39:32+00:00",
   "description": "Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd",
   "caseSensitive": true,
-  "valueSet": "/assets/ig/ValueSet-gndr-cd",
+  "valueSet": "http://hl7.org/fhir/ValueSet/gndr-cd",
   "hierarchyMeaning": "is-a",
   "content": "complete",
   "concept": [

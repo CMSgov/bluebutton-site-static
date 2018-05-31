@@ -4,20 +4,20 @@
   <id value="ctstrphc-cvrg-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Catastrophic Coverage Code</h2><div><p>This variable indicates whether the PDE occurred within the catastrophic benefit phase of the Medicare Part D benefit, according to the source PDE. When the value equals C (above attachment point), then the PDE is in the catastrophic phase. When the value equals A (attachment point), the PDE has caused the beneficiary to move into the catastrophic phase (i.e., this is the “triggering” PDE). Source: https://bluebutton.cms.gov/resources/variables/ctstrphc<em>cvrg</em>cd</p>
-</div><p>This code system /assets/ig/CodeSystem-ctstrphc-cvrg-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name="ctstrphc-cvrg-cd-A"> </a></td><td>Attachment point met on this event</td><td>Attachment point met on this event</td></tr><tr><td>C<a name="ctstrphc-cvrg-cd-C"> </a></td><td>Above attachment point</td><td>Above attachment point</td></tr><tr><td>Blank<a name="ctstrphc-cvrg-cd-Blank"> </a></td><td>Attachment point not met</td><td>Attachment point not met</td></tr></table></div>
+</div><p>This code system http://hl7.org/fhir/CodeSystem/ctstrphc-cvrg-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name="ctstrphc-cvrg-cd-A"> </a></td><td>Attachment point met on this event</td><td>Attachment point met on this event</td></tr><tr><td>C<a name="ctstrphc-cvrg-cd-C"> </a></td><td>Above attachment point</td><td>Above attachment point</td></tr><tr><td>Blank<a name="ctstrphc-cvrg-cd-Blank"> </a></td><td>Attachment point not met</td><td>Attachment point not met</td></tr></table></div>
   </text>
-  <url value="/assets/ig/CodeSystem-ctstrphc-cvrg-cd"/>
+  <url value="http://hl7.org/fhir/CodeSystem/ctstrphc-cvrg-cd"/>
   <identifier>
-    <value value="/assets/ig/CodeSystem-ctstrphc-cvrg-cd"/>
+    <value value="http://hl7.org/fhir/CodeSystem/ctstrphc-cvrg-cd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Catastrophic Coverage Code"/>
   <title value="Catastrophic Coverage Code"/>
   <status value="active"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="This variable indicates whether the PDE occurred within the catastrophic benefit phase of the Medicare Part D benefit, according to the source PDE. When the value equals C (above attachment point), then the PDE is in the catastrophic phase. When the value equals A (attachment point), the PDE has caused the beneficiary to move into the catastrophic phase (i.e., this is the &#x201C;triggering&#x201D; PDE). Source: https://bluebutton.cms.gov/resources/variables/ctstrphc_cvrg_cd"/>
   <caseSensitive value="true"/>
-  <valueSet value="/assets/ig/ValueSet-ctstrphc-cvrg-cd"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/ctstrphc-cvrg-cd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

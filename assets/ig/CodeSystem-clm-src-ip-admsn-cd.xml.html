@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -111,189 +116,189 @@ Raw <a href="CodeSystem-clm-src-ip-admsn-cd.xml" download>xml</a>
 
 <pre class="xml">
 
-&lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;clm-src-ip-admsn-cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+&lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;clm-src-ip-admsn-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Claim Source Inpatient Admission Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm&lt;em&gt;src&lt;/em&gt;ip&lt;em&gt;admsn&lt;/em&gt;cd&lt;/p&gt;
-&lt;/div&gt;&lt;p&gt;This code system /assets/ig/CodeSystem-clm-src-ip-admsn-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0&lt;a name=&quot;clm-src-ip-admsn-cd-0&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ANOMALY: invalid value, if present, translate to '9'&lt;/td&gt;&lt;td&gt;ANOMALY: invalid value, if present, translate to '9'&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;a name=&quot;clm-src-ip-admsn-cd-1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician.&lt;/td&gt;&lt;td&gt;Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;a name=&quot;clm-src-ip-admsn-cd-2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Clinic referral – The patient was admitted upon the recommendation of this facility's clinic physician.&lt;/td&gt;&lt;td&gt;Clinic referral – The patient was admitted upon the recommendation of this facility's clinic physician.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;a name=&quot;clm-src-ip-admsn-cd-3&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.&lt;/td&gt;&lt;td&gt;HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;a name=&quot;clm-src-ip-admsn-cd-4&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient.&lt;/td&gt;&lt;td&gt;Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;a name=&quot;clm-src-ip-admsn-cd-5&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident.&lt;/td&gt;&lt;td&gt;Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;a name=&quot;clm-src-ip-admsn-cd-6&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient.&lt;/td&gt;&lt;td&gt;Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;7&lt;a name=&quot;clm-src-ip-admsn-cd-7&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency room – The patient was admitted to this facility after receiving services in this facility's emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time).&lt;/td&gt;&lt;td&gt;Emergency room – The patient was admitted to this facility after receiving services in this facility's emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;a name=&quot;clm-src-ip-admsn-cd-8&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency's representative.&lt;/td&gt;&lt;td&gt;Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency's representative.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;a name=&quot;clm-src-ip-admsn-cd-9&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Information not available – The means by which the patient was admitted is not known.&lt;/td&gt;&lt;td&gt;Information not available – The means by which the patient was admitted is not known.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A&lt;a name=&quot;clm-src-ip-admsn-cd-A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital.&lt;/td&gt;&lt;td&gt;Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B&lt;a name=&quot;clm-src-ip-admsn-cd-B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)&lt;/td&gt;&lt;td&gt;Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C&lt;a name=&quot;clm-src-ip-admsn-cd-C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)&lt;/td&gt;&lt;td&gt;Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D&lt;a name=&quot;clm-src-ip-admsn-cd-D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.&lt;/td&gt;&lt;td&gt;Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E&lt;a name=&quot;clm-src-ip-admsn-cd-E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from Ambulatory Surgical Center&lt;/td&gt;&lt;td&gt;Transfer from Ambulatory Surgical Center&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F&lt;a name=&quot;clm-src-ip-admsn-cd-F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission&lt;/td&gt;&lt;td&gt;Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;a name=&quot;clm-src-ip-admsn-cd-1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Normal delivery – A baby delivered without complications.&lt;/td&gt;&lt;td&gt;Normal delivery – A baby delivered without complications.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;a name=&quot;clm-src-ip-admsn-cd-2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status.&lt;/td&gt;&lt;td&gt;Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;a name=&quot;clm-src-ip-admsn-cd-3&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sick baby – A baby delivered with medical complications, other than those relating to premature status.&lt;/td&gt;&lt;td&gt;Sick baby – A baby delivered with medical complications, other than those relating to premature status.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;a name=&quot;clm-src-ip-admsn-cd-4&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Extramural birth – A baby delivered in a nonsterile environment.&lt;/td&gt;&lt;td&gt;Extramural birth – A baby delivered in a nonsterile environment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;a name=&quot;clm-src-ip-admsn-cd-5&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;a name=&quot;clm-src-ip-admsn-cd-6&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;7&lt;a name=&quot;clm-src-ip-admsn-cd-7&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;a name=&quot;clm-src-ip-admsn-cd-8&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;a name=&quot;clm-src-ip-admsn-cd-9&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Information not available.&lt;/td&gt;&lt;td&gt;Information not available.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This code system http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0&lt;a name=&quot;clm-src-ip-admsn-cd-0&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ANOMALY: invalid value, if present, translate to '9'&lt;/td&gt;&lt;td&gt;ANOMALY: invalid value, if present, translate to '9'&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;a name=&quot;clm-src-ip-admsn-cd-1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician.&lt;/td&gt;&lt;td&gt;Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;a name=&quot;clm-src-ip-admsn-cd-2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Clinic referral – The patient was admitted upon the recommendation of this facility's clinic physician.&lt;/td&gt;&lt;td&gt;Clinic referral – The patient was admitted upon the recommendation of this facility's clinic physician.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;a name=&quot;clm-src-ip-admsn-cd-3&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.&lt;/td&gt;&lt;td&gt;HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;a name=&quot;clm-src-ip-admsn-cd-4&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient.&lt;/td&gt;&lt;td&gt;Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;a name=&quot;clm-src-ip-admsn-cd-5&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident.&lt;/td&gt;&lt;td&gt;Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;a name=&quot;clm-src-ip-admsn-cd-6&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient.&lt;/td&gt;&lt;td&gt;Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;7&lt;a name=&quot;clm-src-ip-admsn-cd-7&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency room – The patient was admitted to this facility after receiving services in this facility's emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time).&lt;/td&gt;&lt;td&gt;Emergency room – The patient was admitted to this facility after receiving services in this facility's emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;a name=&quot;clm-src-ip-admsn-cd-8&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency's representative.&lt;/td&gt;&lt;td&gt;Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency's representative.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;a name=&quot;clm-src-ip-admsn-cd-9&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Information not available – The means by which the patient was admitted is not known.&lt;/td&gt;&lt;td&gt;Information not available – The means by which the patient was admitted is not known.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A&lt;a name=&quot;clm-src-ip-admsn-cd-A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital.&lt;/td&gt;&lt;td&gt;Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B&lt;a name=&quot;clm-src-ip-admsn-cd-B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)&lt;/td&gt;&lt;td&gt;Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C&lt;a name=&quot;clm-src-ip-admsn-cd-C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)&lt;/td&gt;&lt;td&gt;Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D&lt;a name=&quot;clm-src-ip-admsn-cd-D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.&lt;/td&gt;&lt;td&gt;Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E&lt;a name=&quot;clm-src-ip-admsn-cd-E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from Ambulatory Surgical Center&lt;/td&gt;&lt;td&gt;Transfer from Ambulatory Surgical Center&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F&lt;a name=&quot;clm-src-ip-admsn-cd-F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission&lt;/td&gt;&lt;td&gt;Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;a name=&quot;clm-src-ip-admsn-cd-1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Normal delivery – A baby delivered without complications.&lt;/td&gt;&lt;td&gt;Normal delivery – A baby delivered without complications.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;a name=&quot;clm-src-ip-admsn-cd-2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status.&lt;/td&gt;&lt;td&gt;Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;a name=&quot;clm-src-ip-admsn-cd-3&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sick baby – A baby delivered with medical complications, other than those relating to premature status.&lt;/td&gt;&lt;td&gt;Sick baby – A baby delivered with medical complications, other than those relating to premature status.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;a name=&quot;clm-src-ip-admsn-cd-4&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Extramural birth – A baby delivered in a nonsterile environment.&lt;/td&gt;&lt;td&gt;Extramural birth – A baby delivered in a nonsterile environment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;a name=&quot;clm-src-ip-admsn-cd-5&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;a name=&quot;clm-src-ip-admsn-cd-6&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;7&lt;a name=&quot;clm-src-ip-admsn-cd-7&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;a name=&quot;clm-src-ip-admsn-cd-8&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;td&gt;Reserved for national assignment.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;a name=&quot;clm-src-ip-admsn-cd-9&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Information not available.&lt;/td&gt;&lt;td&gt;Information not available.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
   &lt;/text&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;/assets/ig/CodeSystem-clm-src-ip-admsn-cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;/assets/ig/CodeSystem-clm-src-ip-admsn-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd&quot;/&gt;
   &lt;/identifier&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.0&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Claim Source Inpatient Admission Code&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Claim Source Inpatient Admission Code&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-07T14:45:05+00:00&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>
-               <a href="https://www.hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm_src_ip_admsn_cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;/assets/ig/ValueSet-clm-src-ip-admsn-cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;is-a&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;0&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;ANOMALY: invalid value, if present, translate to &amp;#39;9&amp;#39;&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;ANOMALY: invalid value, if present, translate to &amp;#39;9&amp;#39;&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Claim Source Inpatient Admission Code&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Claim Source Inpatient Admission Code&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-31T14:39:32+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm_src_ip_admsn_cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/ValueSet/clm-src-ip-admsn-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;is-a&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;0&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;ANOMALY: invalid value, if present, translate to &amp;#39;9&amp;#39;&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;ANOMALY: invalid value, if present, translate to &amp;#39;9&amp;#39;&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;1&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;2&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Clinic referral – The patient was admitted upon the recommendation of this facility&amp;#39;s clinic physician.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Clinic referral – The patient was admitted upon the recommendation of this facility&amp;#39;s clinic physician.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;2&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Clinic referral – The patient was admitted upon the recommendation of this facility&amp;#39;s clinic physician.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Clinic referral – The patient was admitted upon the recommendation of this facility&amp;#39;s clinic physician.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;3&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;3&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;4&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;4&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;5&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;5&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;6&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;6&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;7&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Emergency room – The patient was admitted to this facility after receiving services in this facility&amp;#39;s emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time).&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Emergency room – The patient was admitted to this facility after receiving services in this facility&amp;#39;s emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time).&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;7&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Emergency room – The patient was admitted to this facility after receiving services in this facility&amp;#39;s emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time).&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Emergency room – The patient was admitted to this facility after receiving services in this facility&amp;#39;s emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time).&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;8&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency&amp;#39;s representative.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency&amp;#39;s representative.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;8&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency&amp;#39;s representative.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency&amp;#39;s representative.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;9&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Information not available – The means by which the patient was admitted is not known.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Information not available – The means by which the patient was admitted is not known.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;9&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Information not available – The means by which the patient was admitted is not known.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Information not available – The means by which the patient was admitted is not known.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;A&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;A&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;B&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;B&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;C&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;C&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;D&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;D&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;E&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from Ambulatory Surgical Center&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from Ambulatory Surgical Center&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;E&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from Ambulatory Surgical Center&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from Ambulatory Surgical Center&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;F&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;F&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;1&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Normal delivery – A baby delivered without complications.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Normal delivery – A baby delivered without complications.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Normal delivery – A baby delivered without complications.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Normal delivery – A baby delivered without complications.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;2&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;2&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;3&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Sick baby – A baby delivered with medical complications, other than those relating to premature status.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Sick baby – A baby delivered with medical complications, other than those relating to premature status.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;3&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Sick baby – A baby delivered with medical complications, other than those relating to premature status.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Sick baby – A baby delivered with medical complications, other than those relating to premature status.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;4&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Extramural birth – A baby delivered in a nonsterile environment.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Extramural birth – A baby delivered in a nonsterile environment.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;4&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Extramural birth – A baby delivered in a nonsterile environment.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Extramural birth – A baby delivered in a nonsterile environment.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;5&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;5&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;6&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;6&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;7&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;7&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;8&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;8&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Reserved for national assignment.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;9&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Information not available.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Information not available.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;9&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Information not available.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Information not available.&quot;/&gt;
   &lt;/concept&gt;
 &lt;/CodeSystem&gt;</pre>
 
@@ -326,9 +331,9 @@ Raw <a href="CodeSystem-clm-src-ip-admsn-cd.xml" download>xml</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

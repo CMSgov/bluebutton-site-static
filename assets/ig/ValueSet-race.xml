@@ -4,17 +4,17 @@
   <id value="race"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Blue Button Race Codes</h2><div><p>Blue Button race codes found at https://bluebutton.cms.gov/resources/variables/race/</p>
-</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-race.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-race</code></a></li></ul></div>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem/race.html"><code>http://hl7.org/fhir/CodeSystem/race</code></a></li></ul></div>
   </text>
-  <url value="/assets/ig/ValueSet-race"/>
+  <url value="http://hl7.org/fhir/ValueSet/race"/>
   <version value="1.1.0"/>
   <name value="Blue Button Race Codes"/>
   <status value="draft"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="Blue Button race codes found at https://bluebutton.cms.gov/resources/variables/race/"/>
   <compose>
     <include>
-      <system value="/assets/ig/CodeSystem-race"/>
+      <system value="http://hl7.org/fhir/CodeSystem/race"/>
     </include>
   </compose>
 </ValueSet>

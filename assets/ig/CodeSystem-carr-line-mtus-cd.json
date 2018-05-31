@@ -3,20 +3,20 @@
   "id": "carr-line-mtus-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code</h2><div><p>Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>mtus_cd</p>\n</div><p>This code system /assets/ig/CodeSystem-carr-line-mtus-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"carr-line-mtus-cd-0\"> </a></td><td>Values reported as zero (no allowed activities)</td><td>Values reported as zero (no allowed activities)</td></tr><tr><td>1<a name=\"carr-line-mtus-cd-1\"> </a></td><td>Transportation (ambulance) miles</td><td>Transportation (ambulance) miles</td></tr><tr><td>2<a name=\"carr-line-mtus-cd-2\"> </a></td><td>Anesthesia time units</td><td>Anesthesia time units</td></tr><tr><td>3<a name=\"carr-line-mtus-cd-3\"> </a></td><td>Services</td><td>Services</td></tr><tr><td>4<a name=\"carr-line-mtus-cd-4\"> </a></td><td>Oxygen units</td><td>Oxygen units</td></tr><tr><td>5<a name=\"carr-line-mtus-cd-5\"> </a></td><td>Units of blood</td><td>Units of blood</td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code</h2><div><p>Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>mtus_cd</p>\n</div><p>This code system http://hl7.org/fhir/CodeSystem/carr-line-mtus-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"carr-line-mtus-cd-0\"> </a></td><td>Values reported as zero (no allowed activities)</td><td>Values reported as zero (no allowed activities)</td></tr><tr><td>1<a name=\"carr-line-mtus-cd-1\"> </a></td><td>Transportation (ambulance) miles</td><td>Transportation (ambulance) miles</td></tr><tr><td>2<a name=\"carr-line-mtus-cd-2\"> </a></td><td>Anesthesia time units</td><td>Anesthesia time units</td></tr><tr><td>3<a name=\"carr-line-mtus-cd-3\"> </a></td><td>Services</td><td>Services</td></tr><tr><td>4<a name=\"carr-line-mtus-cd-4\"> </a></td><td>Oxygen units</td><td>Oxygen units</td></tr><tr><td>5<a name=\"carr-line-mtus-cd-5\"> </a></td><td>Units of blood</td><td>Units of blood</td></tr></table></div>"
   },
-  "url": "/assets/ig/CodeSystem-carr-line-mtus-cd",
+  "url": "http://hl7.org/fhir/CodeSystem/carr-line-mtus-cd",
   "identifier": {
-    "value": "/assets/ig/CodeSystem-carr-line-mtus-cd"
+    "value": "http://hl7.org/fhir/CodeSystem/carr-line-mtus-cd"
   },
   "version": "1.1.0",
   "name": "Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code",
   "title": "Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code",
   "status": "active",
-  "date": "2018-05-07T14:45:05+00:00",
+  "date": "2018-05-31T14:39:32+00:00",
   "description": "Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr_line_mtus_cd",
   "caseSensitive": true,
-  "valueSet": "/assets/ig/ValueSet-carr-line-mtus-cd",
+  "valueSet": "http://hl7.org/fhir/ValueSet/carr-line-mtus-cd",
   "hierarchyMeaning": "is-a",
   "content": "complete",
   "concept": [

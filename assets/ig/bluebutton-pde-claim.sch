@@ -221,8 +221,8 @@
     <sch:title>f:ExplanationOfBenefit/f:facility</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:facility">
       <sch:assert test="count(f:id) &lt;= 0">id: maximum cardinality of 'id' is 0</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-pde-phrmcy-srvc-type-cd-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-pde-phrmcy-srvc-type-cd-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-pde-phrmcy-srvc-type-cd-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-pde-phrmcy-srvc-type-cd-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-phrmcy-srvc-type-cd-extension']) &gt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-phrmcy-srvc-type-cd-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-phrmcy-srvc-type-cd-extension']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-phrmcy-srvc-type-cd-extension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:reference) &lt;= 0">reference: maximum cardinality of 'reference' is 0</sch:assert>
       <sch:assert test="count(f:identifier) &gt;= 1">identifier: minimum cardinality of 'identifier' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
@@ -591,10 +591,10 @@
     <sch:title>f:ExplanationOfBenefit/f:insurance/f:coverage</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:insurance/f:coverage">
       <sch:assert test="count(f:id) &lt;= 0">id: maximum cardinality of 'id' is 0</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-pde-plan-cntrct-rec-id-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-pde-plan-cntrct-rec-id-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-pde-plan-cntrct-rec-id-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-pde-plan-cntrct-rec-id-extension': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-pde-benefit-package-id-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-pde-benefit-package-id-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-pde-benefit-package-id-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-pde-benefit-package-id-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-plan-cntrct-rec-id-extension']) &gt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-plan-cntrct-rec-id-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-plan-cntrct-rec-id-extension']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-plan-cntrct-rec-id-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-benefit-package-id-extension']) &gt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-benefit-package-id-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-benefit-package-id-extension']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-benefit-package-id-extension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:reference) &gt;= 1">reference: minimum cardinality of 'reference' is 1</sch:assert>
       <sch:assert test="count(f:reference) &lt;= 1">reference: maximum cardinality of 'reference' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &lt;= 0">identifier: maximum cardinality of 'identifier' is 0</sch:assert>
@@ -1463,10 +1463,10 @@
     <sch:title>f:ExplanationOfBenefit/f:item/f:quantity</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:item/f:quantity">
       <sch:assert test="count(f:id) &lt;= 0">id: maximum cardinality of 'id' is 0</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-pde-fill-num-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-pde-fill-num-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-pde-fill-num-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-pde-fill-num-extension': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-pde-days-supply-num-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-pde-days-supply-num-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-pde-days-supply-num-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-pde-days-supply-num-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-fill-num-extension']) &gt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-fill-num-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-fill-num-extension']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-fill-num-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-days-supply-num-extension']) &gt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-days-supply-num-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-days-supply-num-extension']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/bluebutton-pde-days-supply-num-extension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:value) &gt;= 1">value: minimum cardinality of 'value' is 1</sch:assert>
       <sch:assert test="count(f:value) &lt;= 1">value: maximum cardinality of 'value' is 1</sch:assert>
       <sch:assert test="count(f:comparator) &lt;= 0">comparator: maximum cardinality of 'comparator' is 0</sch:assert>
