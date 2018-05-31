@@ -4,11 +4,11 @@
   <id value="rev-cntr-ndc-qty-qlfr-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Revenue Center NDC Quantity Qualifier Code</h2><div><p>Effective with Version 'J', the code used to indicate the unit of measurement for the drug that was administered. Source: https://bluebutton.cms.gov/resources/variables/rev<em>cntr</em>ndc<em>qty</em>qlfr_cd</p>
-</div><p>This code system http://hl7.org/fhir/CodeSystem/rev-cntr-ndc-qty-qlfr-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>F2<a name="rev-cntr-ndc-qty-qlfr-cd-F2"> </a></td><td>International Unit</td><td>International Unit</td></tr><tr><td>GR<a name="rev-cntr-ndc-qty-qlfr-cd-GR"> </a></td><td>Gram</td><td>Gram</td></tr><tr><td>ML<a name="rev-cntr-ndc-qty-qlfr-cd-ML"> </a></td><td>Milliliter</td><td>Milliliter</td></tr><tr><td>UN<a name="rev-cntr-ndc-qty-qlfr-cd-UN"> </a></td><td>Unit</td><td>Unit</td></tr></table></div>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ndc-qty-qlfr-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>F2<a name="rev-cntr-ndc-qty-qlfr-cd-F2"> </a></td><td>International Unit</td><td>International Unit</td></tr><tr><td>GR<a name="rev-cntr-ndc-qty-qlfr-cd-GR"> </a></td><td>Gram</td><td>Gram</td></tr><tr><td>ML<a name="rev-cntr-ndc-qty-qlfr-cd-ML"> </a></td><td>Milliliter</td><td>Milliliter</td></tr><tr><td>UN<a name="rev-cntr-ndc-qty-qlfr-cd-UN"> </a></td><td>Unit</td><td>Unit</td></tr></table></div>
   </text>
-  <url value="http://hl7.org/fhir/CodeSystem/rev-cntr-ndc-qty-qlfr-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ndc-qty-qlfr-cd"/>
   <identifier>
-    <value value="http://hl7.org/fhir/CodeSystem/rev-cntr-ndc-qty-qlfr-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ndc-qty-qlfr-cd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Revenue Center NDC Quantity Qualifier Code"/>
@@ -17,7 +17,7 @@
   <date value="2018-05-31T14:39:32+00:00"/>
   <description value="Effective with Version &#39;J&#39;, the code used to indicate the unit of measurement for the drug that was administered. Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_ndc_qty_qlfr_cd"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/rev-cntr-ndc-qty-qlfr-cd"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-ndc-qty-qlfr-cd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

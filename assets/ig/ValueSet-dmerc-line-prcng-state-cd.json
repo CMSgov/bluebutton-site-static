@@ -3,9 +3,9 @@
   "id": "dmerc-line-prcng-state-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>DMERC Line Pricing State Code (SSA)</h2><div><p>The 2-digit SSA state code where the durable medical equipment (DME) supplier was located; used by the Medicare Administrative Contractor (MAC) for pricing the service. Source: https://bluebutton.cms.gov/resources/variables/dmerc<em>line</em>prcng<em>state</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/dmerc-line-prcng-state-cd.html\"><code>http://hl7.org/fhir/CodeSystem/dmerc-line-prcng-state-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>DMERC Line Pricing State Code (SSA)</h2><div><p>The 2-digit SSA state code where the durable medical equipment (DME) supplier was located; used by the Medicare Administrative Contractor (MAC) for pricing the service. Source: https://bluebutton.cms.gov/resources/variables/dmerc<em>line</em>prcng<em>state</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/dmerc-line-prcng-state-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-dmerc-line-prcng-state-cd</code></a></li></ul></div>"
   },
-  "url": "http://hl7.org/fhir/ValueSet/dmerc-line-prcng-state-cd",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-dmerc-line-prcng-state-cd",
   "version": "1.1.0",
   "name": "DMERC Line Pricing State Code (SSA)",
   "status": "draft",
@@ -14,7 +14,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/CodeSystem/dmerc-line-prcng-state-cd"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-dmerc-line-prcng-state-cd"
       }
     ]
   }

@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ValueSet/adjudications> a fhir:ValueSet;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-adjudications> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "adjudications"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Blue Button Adjudications Amounts</h2><div><p>Blue Button Adjudication amounts.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http://hl7.org/fhir/CodeSystem/adjudications</code></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Blue Button Adjudications Amounts</h2><div><p>Blue Button Adjudication amounts.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudications</code></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ValueSet/adjudications"];
+  fhir:ValueSet.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-adjudications"];
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Blue Button Adjudications Amounts"];
   fhir:ValueSet.status [ fhir:value "draft"];
@@ -21,13 +21,13 @@
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/adjudications" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudications" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ValueSet/adjudications.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-adjudications.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
   owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/adjudications.ttl> .
 

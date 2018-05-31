@@ -4,11 +4,11 @@
   <id value="prtcptng-ind-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Line Provider Participating Indicator Code</h2><div><p>Code indicating whether or not a provider is participating (accepting assignment) for this line item service on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/prtcptng<em>ind</em>cd</p>
-</div><p>This code system http://hl7.org/fhir/CodeSystem/prtcptng-ind-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name="prtcptng-ind-cd-1"> </a></td><td>Participating</td><td>Participating</td></tr><tr><td>2<a name="prtcptng-ind-cd-2"> </a></td><td>All or some covered and allowed expenses applied to deductible Participating</td><td>All or some covered and allowed expenses applied to deductible Participating</td></tr><tr><td>3<a name="prtcptng-ind-cd-3"> </a></td><td>Assignment accepted/non-participating</td><td>Assignment accepted/non-participating</td></tr><tr><td>4<a name="prtcptng-ind-cd-4"> </a></td><td>Assignment not accepted/non-participating</td><td>Assignment not accepted/non-participating</td></tr><tr><td>5<a name="prtcptng-ind-cd-5"> </a></td><td>Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating.</td><td>Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating.</td></tr><tr><td>6<a name="prtcptng-ind-cd-6"> </a></td><td>Assignment not accepted and all covered and allowed expenses applied to deductible non- participating.</td><td>Assignment not accepted and all covered and allowed expenses applied to deductible non- participating.</td></tr><tr><td>7<a name="prtcptng-ind-cd-7"> </a></td><td>Participating provider not accepting assignment</td><td>Participating provider not accepting assignment</td></tr></table></div>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name="prtcptng-ind-cd-1"> </a></td><td>Participating</td><td>Participating</td></tr><tr><td>2<a name="prtcptng-ind-cd-2"> </a></td><td>All or some covered and allowed expenses applied to deductible Participating</td><td>All or some covered and allowed expenses applied to deductible Participating</td></tr><tr><td>3<a name="prtcptng-ind-cd-3"> </a></td><td>Assignment accepted/non-participating</td><td>Assignment accepted/non-participating</td></tr><tr><td>4<a name="prtcptng-ind-cd-4"> </a></td><td>Assignment not accepted/non-participating</td><td>Assignment not accepted/non-participating</td></tr><tr><td>5<a name="prtcptng-ind-cd-5"> </a></td><td>Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating.</td><td>Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating.</td></tr><tr><td>6<a name="prtcptng-ind-cd-6"> </a></td><td>Assignment not accepted and all covered and allowed expenses applied to deductible non- participating.</td><td>Assignment not accepted and all covered and allowed expenses applied to deductible non- participating.</td></tr><tr><td>7<a name="prtcptng-ind-cd-7"> </a></td><td>Participating provider not accepting assignment</td><td>Participating provider not accepting assignment</td></tr></table></div>
   </text>
-  <url value="http://hl7.org/fhir/CodeSystem/prtcptng-ind-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd"/>
   <identifier>
-    <value value="http://hl7.org/fhir/CodeSystem/prtcptng-ind-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Line Provider Participating Indicator Code"/>
@@ -17,7 +17,7 @@
   <date value="2018-05-31T14:39:32+00:00"/>
   <description value="Code indicating whether or not a provider is participating (accepting assignment) for this line item service on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/prtcptng_ind_cd"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/prtcptng-ind-cd"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-prtcptng-ind-cd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

@@ -3,9 +3,9 @@
   "id": "adjstmt-dltn-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Adjustment Deletion Code</h2><div><p>This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt<em>dltn</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/adjstmt-dltn-cd.html\"><code>http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Adjustment Deletion Code</h2><div><p>This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt<em>dltn</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/adjstmt-dltn-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-adjstmt-dltn-cd</code></a></li></ul></div>"
   },
-  "url": "http://hl7.org/fhir/ValueSet/adjstmt-dltn-cd",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-adjstmt-dltn-cd",
   "version": "1.1.0",
   "name": "Adjustment Deletion Code",
   "status": "draft",
@@ -14,7 +14,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjstmt-dltn-cd"
       }
     ]
   }

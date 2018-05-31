@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ValueSet/plan-cntrct-rec-id> a fhir:ValueSet;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-plan-cntrct-rec-id> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "plan-cntrct-rec-id"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Plan Contract ID</h2><div><p>This variable is the unique Part D contract identifier for the beneficiary’s Part D plan of record for the year. CMS assigns an identifier to each contract that a Part D plan has with CMS. If the beneficiary was enrolled in more than one plan during the year, this is the contract number for the Part D plan in which the beneficiary was enrolled at the end of the year. The first character of the plan contract ID is a letter representing the type of plan. Source: https://bluebutton.cms.gov/resources/variables/plan<em>cntrct</em>rec_id</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/plan-cntrct-rec-id.html\"><code>http://hl7.org/fhir/CodeSystem/plan-cntrct-rec-id</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Plan Contract ID</h2><div><p>This variable is the unique Part D contract identifier for the beneficiary’s Part D plan of record for the year. CMS assigns an identifier to each contract that a Part D plan has with CMS. If the beneficiary was enrolled in more than one plan during the year, this is the contract number for the Part D plan in which the beneficiary was enrolled at the end of the year. The first character of the plan contract ID is a letter representing the type of plan. Source: https://bluebutton.cms.gov/resources/variables/plan<em>cntrct</em>rec_id</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/plan-cntrct-rec-id.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-plan-cntrct-rec-id</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ValueSet/plan-cntrct-rec-id"];
+  fhir:ValueSet.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-plan-cntrct-rec-id"];
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Plan Contract ID"];
   fhir:ValueSet.status [ fhir:value "draft"];
@@ -21,13 +21,13 @@
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/plan-cntrct-rec-id" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-plan-cntrct-rec-id" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ValueSet/plan-cntrct-rec-id.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-plan-cntrct-rec-id.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
   owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/plan-cntrct-rec-id.ttl> .
 

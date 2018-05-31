@@ -5,16 +5,16 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd> a fhir:CodeSystem;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-adjstmt-dltn-cd> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "adjstmt-dltn-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Adjustment Deletion Code</h2><div><p>This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt<em>dltn</em>cd</p>\n</div><p>This code system http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"adjstmt-dltn-cd-Blank\"> </a></td><td>Original PDE</td><td>Original PDE</td></tr><tr><td>A<a name=\"adjstmt-dltn-cd-A\"> </a></td><td>Adjustment</td><td>Adjustment</td></tr><tr><td>D<a name=\"adjstmt-dltn-cd-D\"> </a></td><td>Deletion</td><td>Deletion</td></tr><tr><td>R<a name=\"adjstmt-dltn-cd-R\"> </a></td><td>Resubmitted</td><td>Resubmitted</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Adjustment Deletion Code</h2><div><p>This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt<em>dltn</em>cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-adjstmt-dltn-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"adjstmt-dltn-cd-Blank\"> </a></td><td>Original PDE</td><td>Original PDE</td></tr><tr><td>A<a name=\"adjstmt-dltn-cd-A\"> </a></td><td>Adjustment</td><td>Adjustment</td></tr><tr><td>D<a name=\"adjstmt-dltn-cd-D\"> </a></td><td>Deletion</td><td>Deletion</td></tr><tr><td>R<a name=\"adjstmt-dltn-cd-R\"> </a></td><td>Resubmitted</td><td>Resubmitted</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd"];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjstmt-dltn-cd"];
   fhir:CodeSystem.identifier [
-     fhir:Identifier.value [ fhir:value "http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd" ]
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjstmt-dltn-cd" ]
   ];
   fhir:CodeSystem.version [ fhir:value "1.1.0"];
   fhir:CodeSystem.name [ fhir:value "Adjustment Deletion Code"];
@@ -23,7 +23,7 @@
   fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:CodeSystem.description [ fhir:value "This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt_dltn_cd"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
-  fhir:CodeSystem.valueSet [ fhir:value "http://hl7.org/fhir/ValueSet/adjstmt-dltn-cd"];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-adjstmt-dltn-cd"];
   fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.concept [
@@ -50,7 +50,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-adjstmt-dltn-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
   owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/adjstmt-dltn-cd.ttl> .
 

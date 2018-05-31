@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ValueSet/clm-hha-lupa-ind-cd> a fhir:ValueSet;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-lupa-ind-cd> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "clm-hha-lupa-ind-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code</h2><div><p>The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode. If an HHA provides 4 visits or less, they will be reimbursed based on a national standardized per visit rate instead of Home Health resource groups (HHRGs). Source: https://bluebutton.cms.gov/resources/variables/clm<em>hha</em>lupa<em>ind</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-hha-lupa-ind-cd.html\"><code>http://hl7.org/fhir/CodeSystem/clm-hha-lupa-ind-cd</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code</h2><div><p>The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode. If an HHA provides 4 visits or less, they will be reimbursed based on a national standardized per visit rate instead of Home Health resource groups (HHRGs). Source: https://bluebutton.cms.gov/resources/variables/clm<em>hha</em>lupa<em>ind</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-hha-lupa-ind-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-lupa-ind-cd</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ValueSet/clm-hha-lupa-ind-cd"];
+  fhir:ValueSet.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-lupa-ind-cd"];
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code"];
   fhir:ValueSet.status [ fhir:value "draft"];
@@ -21,13 +21,13 @@
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/clm-hha-lupa-ind-cd" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-lupa-ind-cd" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ValueSet/clm-hha-lupa-ind-cd.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-lupa-ind-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
   owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/clm-hha-lupa-ind-cd.ttl> .
 

@@ -5,16 +5,16 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/CodeSystem/plan-cntrct-rec-id> a fhir:CodeSystem;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-plan-cntrct-rec-id> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "plan-cntrct-rec-id"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Plan Contract ID</h2><div><p>This variable is the unique Part D contract identifier for the beneficiary’s Part D plan of record for the year. CMS assigns an identifier to each contract that a Part D plan has with CMS. If the beneficiary was enrolled in more than one plan during the year, this is the contract number for the Part D plan in which the beneficiary was enrolled at the end of the year. The first character of the plan contract ID is a letter representing the type of plan. Source: https://bluebutton.cms.gov/resources/variables/plan<em>cntrct</em>rec_id</p>\n</div><p>This code system http://hl7.org/fhir/CodeSystem/plan-cntrct-rec-id defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>H<a name=\"plan-cntrct-rec-id-H\"> </a></td><td>Managed Care Organizations other than Regional PPO</td><td>Managed Care Organizations other than Regional PPO</td></tr><tr><td>R<a name=\"plan-cntrct-rec-id-R\"> </a></td><td>Regional preferred provider organization (PPO)</td><td>Regional preferred provider organization (PPO)</td></tr><tr><td>S<a name=\"plan-cntrct-rec-id-S\"> </a></td><td>Stand-alone prescription drug plan (PDP)</td><td>Stand-alone prescription drug plan (PDP)</td></tr><tr><td>E<a name=\"plan-cntrct-rec-id-E\"> </a></td><td>Employer direct plan (starting January 2007)</td><td>Employer direct plan (starting January 2007)</td></tr><tr><td>X<a name=\"plan-cntrct-rec-id-X\"> </a></td><td>Limited Income Newly Eligible Transition plan (LI NET, starting July 2009)</td><td>Limited Income Newly Eligible Transition plan (LI NET, starting July 2009)</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Plan Contract ID</h2><div><p>This variable is the unique Part D contract identifier for the beneficiary’s Part D plan of record for the year. CMS assigns an identifier to each contract that a Part D plan has with CMS. If the beneficiary was enrolled in more than one plan during the year, this is the contract number for the Part D plan in which the beneficiary was enrolled at the end of the year. The first character of the plan contract ID is a letter representing the type of plan. Source: https://bluebutton.cms.gov/resources/variables/plan<em>cntrct</em>rec_id</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-plan-cntrct-rec-id defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>H<a name=\"plan-cntrct-rec-id-H\"> </a></td><td>Managed Care Organizations other than Regional PPO</td><td>Managed Care Organizations other than Regional PPO</td></tr><tr><td>R<a name=\"plan-cntrct-rec-id-R\"> </a></td><td>Regional preferred provider organization (PPO)</td><td>Regional preferred provider organization (PPO)</td></tr><tr><td>S<a name=\"plan-cntrct-rec-id-S\"> </a></td><td>Stand-alone prescription drug plan (PDP)</td><td>Stand-alone prescription drug plan (PDP)</td></tr><tr><td>E<a name=\"plan-cntrct-rec-id-E\"> </a></td><td>Employer direct plan (starting January 2007)</td><td>Employer direct plan (starting January 2007)</td></tr><tr><td>X<a name=\"plan-cntrct-rec-id-X\"> </a></td><td>Limited Income Newly Eligible Transition plan (LI NET, starting July 2009)</td><td>Limited Income Newly Eligible Transition plan (LI NET, starting July 2009)</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/CodeSystem/plan-cntrct-rec-id"];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-plan-cntrct-rec-id"];
   fhir:CodeSystem.identifier [
-     fhir:Identifier.value [ fhir:value "http://hl7.org/fhir/CodeSystem/plan-cntrct-rec-id" ]
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-plan-cntrct-rec-id" ]
   ];
   fhir:CodeSystem.version [ fhir:value "1.1.0"];
   fhir:CodeSystem.name [ fhir:value "Plan Contract ID"];
@@ -23,7 +23,7 @@
   fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:CodeSystem.description [ fhir:value "This variable is the unique Part D contract identifier for the beneficiary’s Part D plan of record for the year. CMS assigns an identifier to each contract that a Part D plan has with CMS. If the beneficiary was enrolled in more than one plan during the year, this is the contract number for the Part D plan in which the beneficiary was enrolled at the end of the year. The first character of the plan contract ID is a letter representing the type of plan. Source: https://bluebutton.cms.gov/resources/variables/plan_cntrct_rec_id"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
-  fhir:CodeSystem.valueSet [ fhir:value "http://hl7.org/fhir/ValueSet/plan-cntrct-rec-id"];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-plan-cntrct-rec-id"];
   fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.concept [
@@ -55,7 +55,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/CodeSystem/plan-cntrct-rec-id.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-plan-cntrct-rec-id.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
   owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/plan-cntrct-rec-id.ttl> .
 

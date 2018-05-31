@@ -4,11 +4,11 @@
   <id value="clm-fac-type-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Facility Type Code</h2><div><p>The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm<em>fac</em>type_cd</p>
-</div><p>This code system http://hl7.org/fhir/CodeSystem/clm-fac-type-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name="clm-fac-type-cd-1"> </a></td><td>Hospital</td><td>Hospital</td></tr><tr><td>2<a name="clm-fac-type-cd-2"> </a></td><td>Skilled Nursing Facility (SNF)</td><td>Skilled Nursing Facility (SNF)</td></tr><tr><td>3<a name="clm-fac-type-cd-3"> </a></td><td>Home Health Agency (HHA)</td><td>Home Health Agency (HHA)</td></tr><tr><td>4<a name="clm-fac-type-cd-4"> </a></td><td>Religious Non-medical (hospital)</td><td>Religious Non-medical (hospital)</td></tr><tr><td>6<a name="clm-fac-type-cd-6"> </a></td><td>Intermediate Care (IMC)</td><td>Intermediate Care (IMC)</td></tr><tr><td>7<a name="clm-fac-type-cd-7"> </a></td><td>Clinic services or hospital-based renal dialysis facility</td><td>Clinic services or hospital-based renal dialysis facility</td></tr><tr><td>8<a name="clm-fac-type-cd-8"> </a></td><td>Ambulatory Surgery Center (ASC) or other special facility (e.g. hospice)</td><td>Ambulatory Surgery Center (ASC) or other special facility (e.g. hospice)</td></tr></table></div>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-fac-type-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name="clm-fac-type-cd-1"> </a></td><td>Hospital</td><td>Hospital</td></tr><tr><td>2<a name="clm-fac-type-cd-2"> </a></td><td>Skilled Nursing Facility (SNF)</td><td>Skilled Nursing Facility (SNF)</td></tr><tr><td>3<a name="clm-fac-type-cd-3"> </a></td><td>Home Health Agency (HHA)</td><td>Home Health Agency (HHA)</td></tr><tr><td>4<a name="clm-fac-type-cd-4"> </a></td><td>Religious Non-medical (hospital)</td><td>Religious Non-medical (hospital)</td></tr><tr><td>6<a name="clm-fac-type-cd-6"> </a></td><td>Intermediate Care (IMC)</td><td>Intermediate Care (IMC)</td></tr><tr><td>7<a name="clm-fac-type-cd-7"> </a></td><td>Clinic services or hospital-based renal dialysis facility</td><td>Clinic services or hospital-based renal dialysis facility</td></tr><tr><td>8<a name="clm-fac-type-cd-8"> </a></td><td>Ambulatory Surgery Center (ASC) or other special facility (e.g. hospice)</td><td>Ambulatory Surgery Center (ASC) or other special facility (e.g. hospice)</td></tr></table></div>
   </text>
-  <url value="http://hl7.org/fhir/CodeSystem/clm-fac-type-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-fac-type-cd"/>
   <identifier>
-    <value value="http://hl7.org/fhir/CodeSystem/clm-fac-type-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-fac-type-cd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Claim Facility Type Code"/>
@@ -17,7 +17,7 @@
   <date value="2018-05-31T14:39:32+00:00"/>
   <description value="The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm_fac_type_cd"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/clm-fac-type-cd"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-clm-fac-type-cd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

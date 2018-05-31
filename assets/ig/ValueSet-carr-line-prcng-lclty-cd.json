@@ -3,9 +3,9 @@
   "id": "carr-line-prcng-lclty-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Pricing Locality Code</h2><div><p>Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>prcng<em>lclty</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/carr-line-prcng-lclty-cd.html\"><code>http://hl7.org/fhir/CodeSystem/carr-line-prcng-lclty-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Pricing Locality Code</h2><div><p>Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>prcng<em>lclty</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/carr-line-prcng-lclty-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd</code></a></li></ul></div>"
   },
-  "url": "http://hl7.org/fhir/ValueSet/carr-line-prcng-lclty-cd",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-prcng-lclty-cd",
   "version": "1.1.0",
   "name": "Carrier Line Pricing Locality Code",
   "status": "draft",
@@ -14,7 +14,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/CodeSystem/carr-line-prcng-lclty-cd"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd"
       }
     ]
   }

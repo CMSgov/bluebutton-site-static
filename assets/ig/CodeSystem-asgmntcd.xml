@@ -4,11 +4,11 @@
   <id value="asgmntcd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Carrier Claim Provider Assignment Indicator Switch</h2><div><p>Variable indicates whether or not the provider accepts assignment for the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/asgmntcd</p>
-</div><p>This code system http://hl7.org/fhir/CodeSystem/asgmntcd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name="asgmntcd-A"> </a></td><td>Assigned claim</td><td>Assigned claim</td></tr><tr><td>N<a name="asgmntcd-N"> </a></td><td>Non-assigned claim</td><td>Non-assigned claim</td></tr></table></div>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-asgmntcd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name="asgmntcd-A"> </a></td><td>Assigned claim</td><td>Assigned claim</td></tr><tr><td>N<a name="asgmntcd-N"> </a></td><td>Non-assigned claim</td><td>Non-assigned claim</td></tr></table></div>
   </text>
-  <url value="http://hl7.org/fhir/CodeSystem/asgmntcd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-asgmntcd"/>
   <identifier>
-    <value value="http://hl7.org/fhir/CodeSystem/asgmntcd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-asgmntcd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Carrier Claim Provider Assignment Indicator Switch"/>
@@ -17,7 +17,7 @@
   <date value="2018-05-31T14:39:32+00:00"/>
   <description value="Variable indicates whether or not the provider accepts assignment for the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/asgmntcd"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/asgmntcd"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-asgmntcd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

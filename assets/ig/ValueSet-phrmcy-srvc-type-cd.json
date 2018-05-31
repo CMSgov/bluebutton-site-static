@@ -3,9 +3,9 @@
   "id": "phrmcy-srvc-type-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Pharmacy service type code</h2><div><p>The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide “in-network” services. Source: https://bluebutton.cms.gov/resources/variables/phrmcy<em>srvc</em>type_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/phrmcy-srvc-type-cd.html\"><code>http://hl7.org/fhir/CodeSystem/phrmcy-srvc-type-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Pharmacy service type code</h2><div><p>The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide “in-network” services. Source: https://bluebutton.cms.gov/resources/variables/phrmcy<em>srvc</em>type_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/phrmcy-srvc-type-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-phrmcy-srvc-type-cd</code></a></li></ul></div>"
   },
-  "url": "http://hl7.org/fhir/ValueSet/phrmcy-srvc-type-cd",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-phrmcy-srvc-type-cd",
   "version": "1.1.0",
   "name": "Pharmacy service type code",
   "status": "draft",
@@ -14,7 +14,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/CodeSystem/phrmcy-srvc-type-cd"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-phrmcy-srvc-type-cd"
       }
     ]
   }

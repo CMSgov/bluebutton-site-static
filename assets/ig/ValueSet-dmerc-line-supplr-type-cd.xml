@@ -4,9 +4,9 @@
   <id value="dmerc-line-supplr-type-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>DMERC Line Supplier Type Code</h2><div><p>The type of DMERC supplier. Source: https://bluebutton.cms.gov/resources/variables/dmerc<em>line</em>supplr<em>type</em>cd</p>
-</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem/dmerc-line-supplr-type-cd.html"><code>http://hl7.org/fhir/CodeSystem/dmerc-line-supplr-type-cd</code></a></li></ul></div>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-dmerc-line-supplr-type-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-dmerc-line-supplr-type-cd</code></a></li></ul></div>
   </text>
-  <url value="http://hl7.org/fhir/ValueSet/dmerc-line-supplr-type-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-dmerc-line-supplr-type-cd"/>
   <version value="1.1.0"/>
   <name value="DMERC Line Supplier Type Code"/>
   <status value="draft"/>
@@ -14,7 +14,7 @@
   <description value="The type of DMERC supplier. Source: https://bluebutton.cms.gov/resources/variables/dmerc_line_supplr_type_cd"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/CodeSystem/dmerc-line-supplr-type-cd"/>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-dmerc-line-supplr-type-cd"/>
     </include>
   </compose>
 </ValueSet>

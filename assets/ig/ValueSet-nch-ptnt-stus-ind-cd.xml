@@ -4,9 +4,9 @@
   <id value="nch-ptnt-stus-ind-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>NCH Patient Status Indicator Code</h2><div><p>This variable is a recoded version of the discharge status code (variable called PTNT<em>DSCHRG</em>STUS<em>CD). Source: https://bluebutton.cms.gov/resources/variables/nch</em>ptnt<em>stus</em>ind_cd</p>
-</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem/nch-ptnt-stus-ind-cd.html"><code>http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd</code></a></li></ul></div>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-nch-ptnt-stus-ind-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-nch-ptnt-stus-ind-cd</code></a></li></ul></div>
   </text>
-  <url value="http://hl7.org/fhir/ValueSet/nch-ptnt-stus-ind-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-nch-ptnt-stus-ind-cd"/>
   <version value="1.1.0"/>
   <name value="NCH Patient Status Indicator Code"/>
   <status value="draft"/>
@@ -14,7 +14,7 @@
   <description value="This variable is a recoded version of the discharge status code (variable called PTNT_DSCHRG_STUS_CD). Source: https://bluebutton.cms.gov/resources/variables/nch_ptnt_stus_ind_cd"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd"/>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-nch-ptnt-stus-ind-cd"/>
     </include>
   </compose>
 </ValueSet>

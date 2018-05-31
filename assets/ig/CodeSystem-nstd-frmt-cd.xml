@@ -4,11 +4,11 @@
   <id value="nstd-frmt-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Non-Standard Format Code</h2><div><p>This data element is used by CMS to identify PDE records that are compiled from non-standard sources. The National Council for Prescription Drug Program (NCPDP) is the standard format in which plans receive data from pharmacies. Source: https://bluebutton.cms.gov/resources/variables/nstd<em>frmt</em>cd</p>
-</div><p>This code system http://hl7.org/fhir/CodeSystem/nstd-frmt-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>X<a name="nstd-frmt-cd-X"> </a></td><td>X12 837</td><td>X12 837</td></tr><tr><td>B<a name="nstd-frmt-cd-B"> </a></td><td>Beneficiary submitted claim</td><td>Beneficiary submitted claim</td></tr><tr><td>C<a name="nstd-frmt-cd-C"> </a></td><td>Coordination of Benefits</td><td>Coordination of Benefits</td></tr><tr><td>P<a name="nstd-frmt-cd-P"> </a></td><td>Paper claim from provider</td><td>Paper claim from provider</td></tr><tr><td>Blank<a name="nstd-frmt-cd-Blank"> </a></td><td>NCPDP electronic format</td><td>NCPDP electronic format</td></tr></table></div>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-nstd-frmt-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>X<a name="nstd-frmt-cd-X"> </a></td><td>X12 837</td><td>X12 837</td></tr><tr><td>B<a name="nstd-frmt-cd-B"> </a></td><td>Beneficiary submitted claim</td><td>Beneficiary submitted claim</td></tr><tr><td>C<a name="nstd-frmt-cd-C"> </a></td><td>Coordination of Benefits</td><td>Coordination of Benefits</td></tr><tr><td>P<a name="nstd-frmt-cd-P"> </a></td><td>Paper claim from provider</td><td>Paper claim from provider</td></tr><tr><td>Blank<a name="nstd-frmt-cd-Blank"> </a></td><td>NCPDP electronic format</td><td>NCPDP electronic format</td></tr></table></div>
   </text>
-  <url value="http://hl7.org/fhir/CodeSystem/nstd-frmt-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-nstd-frmt-cd"/>
   <identifier>
-    <value value="http://hl7.org/fhir/CodeSystem/nstd-frmt-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-nstd-frmt-cd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Non-Standard Format Code"/>
@@ -17,7 +17,7 @@
   <date value="2018-05-31T14:39:32+00:00"/>
   <description value="This data element is used by CMS to identify PDE records that are compiled from non-standard sources. The National Council for Prescription Drug Program (NCPDP) is the standard format in which plans receive data from pharmacies. Source: https://bluebutton.cms.gov/resources/variables/nstd_frmt_cd"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/nstd-frmt-cd"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-nstd-frmt-cd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

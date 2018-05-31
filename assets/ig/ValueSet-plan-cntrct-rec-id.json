@@ -3,9 +3,9 @@
   "id": "plan-cntrct-rec-id",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Plan Contract ID</h2><div><p>This variable is the unique Part D contract identifier for the beneficiary’s Part D plan of record for the year. CMS assigns an identifier to each contract that a Part D plan has with CMS. If the beneficiary was enrolled in more than one plan during the year, this is the contract number for the Part D plan in which the beneficiary was enrolled at the end of the year. The first character of the plan contract ID is a letter representing the type of plan. Source: https://bluebutton.cms.gov/resources/variables/plan<em>cntrct</em>rec_id</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/plan-cntrct-rec-id.html\"><code>http://hl7.org/fhir/CodeSystem/plan-cntrct-rec-id</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Plan Contract ID</h2><div><p>This variable is the unique Part D contract identifier for the beneficiary’s Part D plan of record for the year. CMS assigns an identifier to each contract that a Part D plan has with CMS. If the beneficiary was enrolled in more than one plan during the year, this is the contract number for the Part D plan in which the beneficiary was enrolled at the end of the year. The first character of the plan contract ID is a letter representing the type of plan. Source: https://bluebutton.cms.gov/resources/variables/plan<em>cntrct</em>rec_id</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/plan-cntrct-rec-id.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-plan-cntrct-rec-id</code></a></li></ul></div>"
   },
-  "url": "http://hl7.org/fhir/ValueSet/plan-cntrct-rec-id",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-plan-cntrct-rec-id",
   "version": "1.1.0",
   "name": "Plan Contract ID",
   "status": "draft",
@@ -14,7 +14,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/CodeSystem/plan-cntrct-rec-id"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-plan-cntrct-rec-id"
       }
     ]
   }

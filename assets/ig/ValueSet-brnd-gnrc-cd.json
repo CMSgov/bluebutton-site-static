@@ -3,9 +3,9 @@
   "id": "brnd-gnrc-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Brand-Generic Code Reported by Submitting Plan</h2><div><p>Plan reported value indicating whether the plan adjudicated the claim as a brand or generic drug. Applies to covered drugs only. Source: https://bluebutton.cms.gov/resources/variables/brnd<em>gnrc</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/brnd-gnrc-cd.html\"><code>http://hl7.org/fhir/CodeSystem/brnd-gnrc-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Brand-Generic Code Reported by Submitting Plan</h2><div><p>Plan reported value indicating whether the plan adjudicated the claim as a brand or generic drug. Applies to covered drugs only. Source: https://bluebutton.cms.gov/resources/variables/brnd<em>gnrc</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/brnd-gnrc-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd</code></a></li></ul></div>"
   },
-  "url": "http://hl7.org/fhir/ValueSet/brnd-gnrc-cd",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-brnd-gnrc-cd",
   "version": "1.1.0",
   "name": "Brand-Generic Code Reported by Submitting Plan",
   "status": "draft",
@@ -14,7 +14,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/CodeSystem/brnd-gnrc-cd"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd"
       }
     ]
   }

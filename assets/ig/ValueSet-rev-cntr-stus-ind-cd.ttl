@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ValueSet/rev-cntr-stus-ind-cd> a fhir:ValueSet;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-stus-ind-cd> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rev-cntr-stus-ind-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Revenue Center Status Indicator Code</h2><div><p>This variable indicates how the service listed on the revenue center record was priced for payment purposes. The revenue center status indicator code is most useful with outpatient hospital claims, where multiple methods may be used to determine the payment amount for the various revenue center records on the claim (for example, some lines may be bundled into an APC and paid under the outpatient PPS, while other lines may be paid under other fee schedules). Source: https://bluebutton.cms.gov/resources/variables/rev<em>cntr</em>stus<em>ind</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/rev-cntr-stus-ind-cd.html\"><code>http://hl7.org/fhir/CodeSystem/rev-cntr-stus-ind-cd</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Revenue Center Status Indicator Code</h2><div><p>This variable indicates how the service listed on the revenue center record was priced for payment purposes. The revenue center status indicator code is most useful with outpatient hospital claims, where multiple methods may be used to determine the payment amount for the various revenue center records on the claim (for example, some lines may be bundled into an APC and paid under the outpatient PPS, while other lines may be paid under other fee schedules). Source: https://bluebutton.cms.gov/resources/variables/rev<em>cntr</em>stus<em>ind</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/rev-cntr-stus-ind-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-stus-ind-cd</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ValueSet/rev-cntr-stus-ind-cd"];
+  fhir:ValueSet.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-stus-ind-cd"];
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Revenue Center Status Indicator Code"];
   fhir:ValueSet.status [ fhir:value "draft"];
@@ -21,13 +21,13 @@
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/rev-cntr-stus-ind-cd" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-stus-ind-cd" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ValueSet/rev-cntr-stus-ind-cd.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-stus-ind-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
   owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/rev-cntr-stus-ind-cd.ttl> .
 

@@ -38,7 +38,7 @@
     </identifier>
   </organization>
   <facility>
-    <extension url="http://hl7.org/fhir/ValueSet/phrmcy-srvc-type-cd">
+    <extension url="https://bluebutton.cms.gov/assets/ig/ValueSet-phrmcy-srvc-type-cd">
       <valueCoding>
         <system value="https://www.ccwdata.org/cs/groups/public/documents/datadictionary/phrmcy_srvc_type_cd.txt"/>
         <code value="01"/>
@@ -175,13 +175,13 @@
   </careTeam>
   <insurance>
     <coverage>
-      <extension url="http://hl7.org/fhir/ValueSet/plan_cntrct_rec_id">
+      <extension url="https://bluebutton.cms.gov/assets/ig/ValueSet-plan_cntrct_rec_id">
         <valueIdentifier>
           <system value="https://www.ccwdata.org/cs/groups/public/documents/datadictionary/plan_cntrct_rec_id.txt"/>
           <value value="H9999"/>
         </valueIdentifier>
       </extension>
-      <extension url="http://hl7.org/fhir/ValueSet/plan_pbp_rec_num">
+      <extension url="https://bluebutton.cms.gov/assets/ig/ValueSet-plan_pbp_rec_num">
         <valueIdentifier>
           <system value="https://www.ccwdata.org/cs/groups/public/documents/datadictionary/plan_pbp_rec_num.txt"/>
           <value value="020"/>
@@ -201,13 +201,13 @@
     </service>
     <servicedDate value="2015-05-12"/>
     <quantity>
-      <extension url="http://hl7.org/fhir/ValueSet/fill_num">
+      <extension url="https://bluebutton.cms.gov/assets/ig/ValueSet-fill_num">
         <valueCoding>
           <system value="https://www.ccwdata.org/cs/groups/public/documents/datadictionary/fill_num.txt"/>
           <code value="3"/>
         </valueCoding>
       </extension>
-      <extension url="http://hl7.org/fhir/ValueSet/days_suply_num">
+      <extension url="https://bluebutton.cms.gov/assets/ig/ValueSet-days_suply_num">
         <valueCoding>
           <system value="https://www.ccwdata.org/cs/groups/public/documents/datadictionary/days_suply_num.txt"/>
           <code value="30"/>

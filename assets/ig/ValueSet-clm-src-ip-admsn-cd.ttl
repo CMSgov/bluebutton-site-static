@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ValueSet/clm-src-ip-admsn-cd> a fhir:ValueSet;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-clm-src-ip-admsn-cd> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "clm-src-ip-admsn-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Source Inpatient Admission Code</h2><div><p>The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm<em>src</em>ip<em>admsn</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-src-ip-admsn-cd.html\"><code>http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Source Inpatient Admission Code</h2><div><p>The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm<em>src</em>ip<em>admsn</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-src-ip-admsn-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-src-ip-admsn-cd</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/ValueSet/clm-src-ip-admsn-cd"];
+  fhir:ValueSet.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-src-ip-admsn-cd"];
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Claim Source Inpatient Admission Code"];
   fhir:ValueSet.status [ fhir:value "draft"];
@@ -21,13 +21,13 @@
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-src-ip-admsn-cd" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ValueSet/clm-src-ip-admsn-cd.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-clm-src-ip-admsn-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
   owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/clm-src-ip-admsn-cd.ttl> .
 

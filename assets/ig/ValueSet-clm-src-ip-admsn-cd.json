@@ -3,9 +3,9 @@
   "id": "clm-src-ip-admsn-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Source Inpatient Admission Code</h2><div><p>The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm<em>src</em>ip<em>admsn</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-src-ip-admsn-cd.html\"><code>http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Source Inpatient Admission Code</h2><div><p>The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm<em>src</em>ip<em>admsn</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-src-ip-admsn-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-src-ip-admsn-cd</code></a></li></ul></div>"
   },
-  "url": "http://hl7.org/fhir/ValueSet/clm-src-ip-admsn-cd",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-src-ip-admsn-cd",
   "version": "1.1.0",
   "name": "Claim Source Inpatient Admission Code",
   "status": "draft",
@@ -14,7 +14,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-src-ip-admsn-cd"
       }
     ]
   }

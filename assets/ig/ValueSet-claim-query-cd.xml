@@ -4,9 +4,9 @@
   <id value="claim-query-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Query Code</h2><div><p>Code indicating the type of claim record being processed with respect to payment (debit/credit indicator; interim/final indicator). Source: https://bluebutton.cms.gov/resources/variables/claim<em>query</em>cd</p>
-</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem/claim-query-cd.html"><code>http://hl7.org/fhir/CodeSystem/claim-query-cd</code></a></li></ul></div>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-claim-query-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-claim-query-cd</code></a></li></ul></div>
   </text>
-  <url value="http://hl7.org/fhir/ValueSet/claim-query-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-claim-query-cd"/>
   <version value="1.1.0"/>
   <name value="Claim Query Code"/>
   <status value="draft"/>
@@ -14,7 +14,7 @@
   <description value="Code indicating the type of claim record being processed with respect to payment (debit/credit indicator; interim/final indicator). Source: https://bluebutton.cms.gov/resources/variables/claim_query_cd"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/CodeSystem/claim-query-cd"/>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-claim-query-cd"/>
     </include>
   </compose>
 </ValueSet>

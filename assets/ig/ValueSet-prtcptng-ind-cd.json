@@ -3,9 +3,9 @@
   "id": "prtcptng-ind-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Provider Participating Indicator Code</h2><div><p>Code indicating whether or not a provider is participating (accepting assignment) for this line item service on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/prtcptng<em>ind</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/prtcptng-ind-cd.html\"><code>http://hl7.org/fhir/CodeSystem/prtcptng-ind-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Provider Participating Indicator Code</h2><div><p>Code indicating whether or not a provider is participating (accepting assignment) for this line item service on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/prtcptng<em>ind</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/prtcptng-ind-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd</code></a></li></ul></div>"
   },
-  "url": "http://hl7.org/fhir/ValueSet/prtcptng-ind-cd",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-prtcptng-ind-cd",
   "version": "1.1.0",
   "name": "Line Provider Participating Indicator Code",
   "status": "draft",
@@ -14,7 +14,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/CodeSystem/prtcptng-ind-cd"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd"
       }
     ]
   }

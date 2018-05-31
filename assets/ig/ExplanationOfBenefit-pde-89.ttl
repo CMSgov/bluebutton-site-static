@@ -50,7 +50,7 @@
   fhir:ExplanationOfBenefit.facility [
      fhir:Element.extension [
        fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ValueSet/phrmcy-srvc-type-cd" ];
+       fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-phrmcy-srvc-type-cd" ];
        fhir:Extension.valueCoding [
          fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/phrmcy_srvc_type_cd.txt" ];
          fhir:Coding.code [ fhir:value "01" ]
@@ -205,14 +205,14 @@
        fhir:link <http://hl7.org/fhir/Coverage/part-d-567834>;
        fhir:Element.extension [
          fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ValueSet/plan_cntrct_rec_id" ];
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-plan_cntrct_rec_id" ];
          fhir:Extension.valueIdentifier [
            fhir:Identifier.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/plan_cntrct_rec_id.txt" ];
            fhir:Identifier.value [ fhir:value "H9999" ]
          ]
        ], [
          fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ValueSet/plan_pbp_rec_num" ];
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-plan_pbp_rec_num" ];
          fhir:Extension.valueIdentifier [
            fhir:Identifier.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/plan_pbp_rec_num.txt" ];
            fhir:Identifier.value [ fhir:value "020" ]
@@ -239,14 +239,14 @@
      fhir:ExplanationOfBenefit.item.quantity [
        fhir:Element.extension [
          fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ValueSet/fill_num" ];
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-fill_num" ];
          fhir:Extension.valueCoding [
            fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/fill_num.txt" ];
            fhir:Coding.code [ fhir:value "3" ]
          ]
        ], [
          fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/ValueSet/days_suply_num" ];
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-days_suply_num" ];
          fhir:Extension.valueCoding [
            fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/days_suply_num.txt" ];
            fhir:Coding.code [ fhir:value "30" ]

@@ -4,9 +4,9 @@
   <id value="asgmntcd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Carrier Claim Provider Assignment Indicator Switch</h2><div><p>Variable indicates whether or not the provider accepts assignment for the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/asgmntcd</p>
-</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem/asgmntcd.html"><code>http://hl7.org/fhir/CodeSystem/asgmntcd</code></a></li></ul></div>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-asgmntcd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-asgmntcd</code></a></li></ul></div>
   </text>
-  <url value="http://hl7.org/fhir/ValueSet/asgmntcd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-asgmntcd"/>
   <version value="1.1.0"/>
   <name value="Carrier Claim Provider Assignment Indicator Switch"/>
   <status value="draft"/>
@@ -14,7 +14,7 @@
   <description value="Variable indicates whether or not the provider accepts assignment for the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/asgmntcd"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/CodeSystem/asgmntcd"/>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-asgmntcd"/>
     </include>
   </compose>
 </ValueSet>

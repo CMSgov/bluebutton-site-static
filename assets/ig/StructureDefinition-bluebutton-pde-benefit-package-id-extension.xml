@@ -13,7 +13,7 @@
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through" title="null">userSelected</span><a name="Extension.valueCoding.userSelected"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"/><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
-  <url value="http://hl7.org/fhir/StructureDefinition/bluebutton-pde-benefit-package-id-extension"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-pde-benefit-package-id-extension"/>
   <version value="1.1.0"/>
   <name value="Benefit Package Id for part D event"/>
   <status value="draft"/>
@@ -30,7 +30,7 @@
   <contextType value="resource"/>
   <context value="ExplanationOfBenefit.insurance.coverage"/>
   <type value="Extension"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <baseDefinition value="https://bluebutton.cms.gov/assets/ig/StructureDefinition-Extension"/>
   <derivation value="constraint"/>
   <snapshot>
     <element id="Extension">
@@ -417,7 +417,7 @@
       </mapping>
     </element>
     <element id="Extension.value[x]:valueCoding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-elementdefinition-translatable">
         <valueBoolean value="true"/>
       </extension>
       <path value="Extension.valueCoding.display"/>
@@ -564,7 +564,7 @@
       <min value="1"/>
     </element>
     <element id="Extension.value[x]:valueCoding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-elementdefinition-translatable">
         <valueBoolean value="true"/>
       </extension>
       <path value="Extension.valueCoding.display"/>

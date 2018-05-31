@@ -5,16 +5,16 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/CodeSystem/dspnsng-stus-cd> a fhir:CodeSystem;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-dspnsng-stus-cd> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "dspnsng-stus-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Dispensing Status Code</h2><div><p>This field indicates how the pharmacy dispensed the complete quantity of the prescription. When the pharmacy partially fills a prescription, this field indicates a partial fill. When the full quantity is dispensed at one time, this field is blank. Source: https://bluebutton.cms.gov/resources/variables/dspnsng<em>stus</em>cd</p>\n</div><p>This code system http://hl7.org/fhir/CodeSystem/dspnsng-stus-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"dspnsng-stus-cd-Blank\"> </a></td><td>Not specified or presumably full quantity of prescription</td><td>Not specified or presumably full quantity of prescription</td></tr><tr><td>P<a name=\"dspnsng-stus-cd-P\"> </a></td><td>Partial fill</td><td>Partial fill</td></tr><tr><td>C<a name=\"dspnsng-stus-cd-C\"> </a></td><td>Completion of partial fill</td><td>Completion of partial fill</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Dispensing Status Code</h2><div><p>This field indicates how the pharmacy dispensed the complete quantity of the prescription. When the pharmacy partially fills a prescription, this field indicates a partial fill. When the full quantity is dispensed at one time, this field is blank. Source: https://bluebutton.cms.gov/resources/variables/dspnsng<em>stus</em>cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-dspnsng-stus-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"dspnsng-stus-cd-Blank\"> </a></td><td>Not specified or presumably full quantity of prescription</td><td>Not specified or presumably full quantity of prescription</td></tr><tr><td>P<a name=\"dspnsng-stus-cd-P\"> </a></td><td>Partial fill</td><td>Partial fill</td></tr><tr><td>C<a name=\"dspnsng-stus-cd-C\"> </a></td><td>Completion of partial fill</td><td>Completion of partial fill</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/CodeSystem/dspnsng-stus-cd"];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-dspnsng-stus-cd"];
   fhir:CodeSystem.identifier [
-     fhir:Identifier.value [ fhir:value "http://hl7.org/fhir/CodeSystem/dspnsng-stus-cd" ]
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-dspnsng-stus-cd" ]
   ];
   fhir:CodeSystem.version [ fhir:value "1.1.0"];
   fhir:CodeSystem.name [ fhir:value "Dispensing Status Code"];
@@ -23,7 +23,7 @@
   fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:CodeSystem.description [ fhir:value "This field indicates how the pharmacy dispensed the complete quantity of the prescription. When the pharmacy partially fills a prescription, this field indicates a partial fill. When the full quantity is dispensed at one time, this field is blank. Source: https://bluebutton.cms.gov/resources/variables/dspnsng_stus_cd"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
-  fhir:CodeSystem.valueSet [ fhir:value "http://hl7.org/fhir/ValueSet/dspnsng-stus-cd"];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-dspnsng-stus-cd"];
   fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.concept [
@@ -45,7 +45,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/CodeSystem/dspnsng-stus-cd.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-dspnsng-stus-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
   owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/dspnsng-stus-cd.ttl> .
 
