@@ -163,13 +163,13 @@ Base Request URL:
 
 <pre>https://sandbox.bluebutton.cms.gov</pre>
 
-FHIR Resources:
+### FHIR Resources:
 
 - Explanation of Benefit
 - Patient
 - Coverage
 
-UserInfo
+### UserInfo:
 - Get User Profile from an Authorization Token
 
 As a security measure the date of birth, SSN, and HICN will not be provided by the CMS Blue Button API.
@@ -180,7 +180,10 @@ We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension) 
 
 <pre>/v1/fhir/ExplanationOfBenefit/?patient=[fhir_id]</pre>
 
-The above URL returns all of the beneficiary's Explanation of Benefit (sometimes referred to as an episode of care) records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html). The bulk of a beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.  Each one can be thousands of lines long.
+The above URL returns all of the beneficiary's Explanation of Benefit (sometimes referred to as an episode of care) 
+records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html). 
+The bulk of a beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.  
+Each one can be thousands of lines long.
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=20140000008325"</pre>
 
@@ -334,6 +337,24 @@ The above URL returns the beneficiary's Coverage information as an [Coverage FHI
     ...this is only a subset of the entire output...
 </code>
 </pre>
+
+
+**Compress Resources for more efficient data transfers**
+
+To improve the performance when transferring large data resources it is possible to turn on compression. Gzip 
+compression is turned off by default. Compression can be activated for the following content types:
+
+- text/html
+- text/plain
+- application/json
+- application/json+fhir
+
+To activate compression add the following to the header:
+
+<pre>
+Accept-Encoding: gzip
+</pre>
+
 
 [Download a sample Coverage FHIR Resource](/sample-coverage-entry.json)
 
