@@ -13,12 +13,12 @@
     <sch:title>f:ExplanationOfBenefit</sch:title>
     <sch:rule context="f:ExplanationOfBenefit">
       <sch:assert test="count(f:id) &gt;= 1">id: minimum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-prpayamt-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-prpayamt-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-prpayamt-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-prpayamt-extension': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-fi-num-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-fi-num-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-fi-num-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-fi-num-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension']) &gt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension']) &lt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-prpayamt-extension']) &gt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-prpayamt-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-prpayamt-extension']) &lt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-prpayamt-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-fi-num-extension']) &gt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-fi-num-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-fi-num-extension']) &lt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-fi-num-extension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &gt;= 1">identifier: minimum cardinality of 'identifier' is 1</sch:assert>
       <sch:assert test="count(f:status) &gt;= 1">status: minimum cardinality of 'status' is 1</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
@@ -211,8 +211,8 @@
     <sch:title>f:ExplanationOfBenefit/f:facility</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:facility">
       <sch:assert test="count(f:id) &lt;= 0">id: maximum cardinality of 'id' is 0</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension']) &gt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension']) &lt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:reference) &lt;= 0">reference: maximum cardinality of 'reference' is 0</sch:assert>
       <sch:assert test="count(f:identifier) &gt;= 1">identifier: minimum cardinality of 'identifier' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
@@ -628,8 +628,8 @@
     <sch:title>f:ExplanationOfBenefit/f:item</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:item">
       <sch:assert test="count(f:id) &lt;= 0">id: maximum cardinality of 'id' is 0</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension']) &gt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension']) &lt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:careTeamLinkId) &lt;= 1">careTeamLinkId: maximum cardinality of 'careTeamLinkId' is 1</sch:assert>
       <sch:assert test="count(f:diagnosisLinkId) &lt;= 0">diagnosisLinkId: maximum cardinality of 'diagnosisLinkId' is 0</sch:assert>
       <sch:assert test="count(f:procedureLinkId) &lt;= 0">procedureLinkId: maximum cardinality of 'procedureLinkId' is 0</sch:assert>
@@ -652,10 +652,10 @@
     <sch:title>f:ExplanationOfBenefit/f:item/f:revenue</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:item/f:revenue">
       <sch:assert test="count(f:id) &lt;= 0">id: maximum cardinality of 'id' is 0</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension']) &gt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension']) &lt;= 1">extension with URL = '/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension']) &gt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension']) &lt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension']) &gt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension']) &lt;= 1">extension with URL = 'https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
       <sch:assert test="count(f:coding) &lt;= 1">coding: maximum cardinality of 'coding' is 1</sch:assert>
       <sch:assert test="count(f:text) &lt;= 0">text: maximum cardinality of 'text' is 0</sch:assert>

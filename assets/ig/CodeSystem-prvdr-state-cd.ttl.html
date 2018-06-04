@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -110,7 +115,7 @@ Raw <a href="CodeSystem-prvdr-state-cd.ttl" download>ttl</a>
 </p>
 
 <pre class="rdf">
-@prefix fhir: &lt;/assets/ig/&gt; .
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
@@ -118,421 +123,421 @@ Raw <a href="CodeSystem-prvdr-state-cd.ttl" download>ttl</a>
 # - resource -------------------------------------------------------------------
 
  a fhir:CodeSystem;
-  <a href="https://www.hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">fhir:Resource.id</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;prvdr-state-cd&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">fhir:DomainResource.text</a> [
-     <a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;NCH Provider SSA State Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The two -digit numeric social security administration (SSA) state code where provider or facility is located. Source: https://bluebutton.cms.gov/resources/variables/prvdr&lt;em&gt;state&lt;/em&gt;cd&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This code system /assets/ig/CodeSystem-prvdr-state-cd defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;a name=\&quot;prvdr-state-cd-00\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unknown/other&lt;/td&gt;&lt;td&gt;Unknown/other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;01&lt;a name=\&quot;prvdr-state-cd-01\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alabama&lt;/td&gt;&lt;td&gt;Alabama&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02&lt;a name=\&quot;prvdr-state-cd-02\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alaska&lt;/td&gt;&lt;td&gt;Alaska&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03&lt;a name=\&quot;prvdr-state-cd-03\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Arizona&lt;/td&gt;&lt;td&gt;Arizona&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04&lt;a name=\&quot;prvdr-state-cd-04\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Arkansas&lt;/td&gt;&lt;td&gt;Arkansas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05&lt;a name=\&quot;prvdr-state-cd-05\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;California&lt;/td&gt;&lt;td&gt;California&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06&lt;a name=\&quot;prvdr-state-cd-06\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Colorado&lt;/td&gt;&lt;td&gt;Colorado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07&lt;a name=\&quot;prvdr-state-cd-07\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Connecticut&lt;/td&gt;&lt;td&gt;Connecticut&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08&lt;a name=\&quot;prvdr-state-cd-08\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Delaware&lt;/td&gt;&lt;td&gt;Delaware&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09&lt;a name=\&quot;prvdr-state-cd-09\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;District of Columbia&lt;/td&gt;&lt;td&gt;District of Columbia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;a name=\&quot;prvdr-state-cd-10\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Florida&lt;/td&gt;&lt;td&gt;Florida&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11&lt;a name=\&quot;prvdr-state-cd-11\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Georgia&lt;/td&gt;&lt;td&gt;Georgia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;a name=\&quot;prvdr-state-cd-12\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hawaii&lt;/td&gt;&lt;td&gt;Hawaii&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;a name=\&quot;prvdr-state-cd-13\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Idaho&lt;/td&gt;&lt;td&gt;Idaho&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;a name=\&quot;prvdr-state-cd-14\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Illinois&lt;/td&gt;&lt;td&gt;Illinois&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;a name=\&quot;prvdr-state-cd-15\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indiana&lt;/td&gt;&lt;td&gt;Indiana&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;a name=\&quot;prvdr-state-cd-16\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Iowa&lt;/td&gt;&lt;td&gt;Iowa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;a name=\&quot;prvdr-state-cd-17\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kansas&lt;/td&gt;&lt;td&gt;Kansas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;a name=\&quot;prvdr-state-cd-18\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kentucky&lt;/td&gt;&lt;td&gt;Kentucky&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;a name=\&quot;prvdr-state-cd-19\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Louisiana&lt;/td&gt;&lt;td&gt;Louisiana&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20&lt;a name=\&quot;prvdr-state-cd-20\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Maine&lt;/td&gt;&lt;td&gt;Maine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;a name=\&quot;prvdr-state-cd-21\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Maryland&lt;/td&gt;&lt;td&gt;Maryland&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;a name=\&quot;prvdr-state-cd-22\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Massachusetts&lt;/td&gt;&lt;td&gt;Massachusetts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23&lt;a name=\&quot;prvdr-state-cd-23\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Michigan&lt;/td&gt;&lt;td&gt;Michigan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24&lt;a name=\&quot;prvdr-state-cd-24\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minnesota&lt;/td&gt;&lt;td&gt;Minnesota&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;a name=\&quot;prvdr-state-cd-25\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mississippi&lt;/td&gt;&lt;td&gt;Mississippi&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;a name=\&quot;prvdr-state-cd-26\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Missouri&lt;/td&gt;&lt;td&gt;Missouri&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27&lt;a name=\&quot;prvdr-state-cd-27\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Montana&lt;/td&gt;&lt;td&gt;Montana&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28&lt;a name=\&quot;prvdr-state-cd-28\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nebraska&lt;/td&gt;&lt;td&gt;Nebraska&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29&lt;a name=\&quot;prvdr-state-cd-29\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nevada&lt;/td&gt;&lt;td&gt;Nevada&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;a name=\&quot;prvdr-state-cd-30\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Hampshire&lt;/td&gt;&lt;td&gt;New Hampshire&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;31&lt;a name=\&quot;prvdr-state-cd-31\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Jersey&lt;/td&gt;&lt;td&gt;New Jersey&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32&lt;a name=\&quot;prvdr-state-cd-32\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Mexico&lt;/td&gt;&lt;td&gt;New Mexico&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;33&lt;a name=\&quot;prvdr-state-cd-33\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New York&lt;/td&gt;&lt;td&gt;New York&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;34&lt;a name=\&quot;prvdr-state-cd-34\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;North Carolina&lt;/td&gt;&lt;td&gt;North Carolina&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;35&lt;a name=\&quot;prvdr-state-cd-35\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;North Dakota&lt;/td&gt;&lt;td&gt;North Dakota&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;36&lt;a name=\&quot;prvdr-state-cd-36\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ohio&lt;/td&gt;&lt;td&gt;Ohio&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;37&lt;a name=\&quot;prvdr-state-cd-37\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oklahoma&lt;/td&gt;&lt;td&gt;Oklahoma&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;38&lt;a name=\&quot;prvdr-state-cd-38\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oregon&lt;/td&gt;&lt;td&gt;Oregon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;39&lt;a name=\&quot;prvdr-state-cd-39\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pennsylvania&lt;/td&gt;&lt;td&gt;Pennsylvania&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;40&lt;a name=\&quot;prvdr-state-cd-40\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Puerto Rico&lt;/td&gt;&lt;td&gt;Puerto Rico&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;41&lt;a name=\&quot;prvdr-state-cd-41\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rhode Island&lt;/td&gt;&lt;td&gt;Rhode Island&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;42&lt;a name=\&quot;prvdr-state-cd-42\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;South Carolina&lt;/td&gt;&lt;td&gt;South Carolina&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;43&lt;a name=\&quot;prvdr-state-cd-43\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;South Dakota&lt;/td&gt;&lt;td&gt;South Dakota&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;44&lt;a name=\&quot;prvdr-state-cd-44\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Tennessee&lt;/td&gt;&lt;td&gt;Tennessee&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;45&lt;a name=\&quot;prvdr-state-cd-45\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Texas&lt;/td&gt;&lt;td&gt;Texas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;46&lt;a name=\&quot;prvdr-state-cd-46\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Utah&lt;/td&gt;&lt;td&gt;Utah&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;47&lt;a name=\&quot;prvdr-state-cd-47\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Vermont&lt;/td&gt;&lt;td&gt;Vermont&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;48&lt;a name=\&quot;prvdr-state-cd-48\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Virgin Islands&lt;/td&gt;&lt;td&gt;Virgin Islands&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;49&lt;a name=\&quot;prvdr-state-cd-49\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Virginia&lt;/td&gt;&lt;td&gt;Virginia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;50&lt;a name=\&quot;prvdr-state-cd-50\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Washington&lt;/td&gt;&lt;td&gt;Washington&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;51&lt;a name=\&quot;prvdr-state-cd-51\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;West Virginia&lt;/td&gt;&lt;td&gt;West Virginia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;52&lt;a name=\&quot;prvdr-state-cd-52\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Wisconsin&lt;/td&gt;&lt;td&gt;Wisconsin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;53&lt;a name=\&quot;prvdr-state-cd-53\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Wyoming&lt;/td&gt;&lt;td&gt;Wyoming&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;54&lt;a name=\&quot;prvdr-state-cd-54\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Africa&lt;/td&gt;&lt;td&gt;Africa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;55&lt;a name=\&quot;prvdr-state-cd-55\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;California&lt;/td&gt;&lt;td&gt;California&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;56&lt;a name=\&quot;prvdr-state-cd-56\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Canada &amp;amp; Islands&lt;/td&gt;&lt;td&gt;Canada &amp;amp; Islands&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;57&lt;a name=\&quot;prvdr-state-cd-57\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Central America and West Indies&lt;/td&gt;&lt;td&gt;Central America and West Indies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;58&lt;a name=\&quot;prvdr-state-cd-58\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Europe&lt;/td&gt;&lt;td&gt;Europe&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;59&lt;a name=\&quot;prvdr-state-cd-59\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mexico&lt;/td&gt;&lt;td&gt;Mexico&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;60&lt;a name=\&quot;prvdr-state-cd-60\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oceania&lt;/td&gt;&lt;td&gt;Oceania&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;61&lt;a name=\&quot;prvdr-state-cd-61\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Philippines&lt;/td&gt;&lt;td&gt;Philippines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;62&lt;a name=\&quot;prvdr-state-cd-62\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;South America&lt;/td&gt;&lt;td&gt;South America&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;63&lt;a name=\&quot;prvdr-state-cd-63\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;U.S. Possessions&lt;/td&gt;&lt;td&gt;U.S. Possessions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;64&lt;a name=\&quot;prvdr-state-cd-64\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;American Samoa&lt;/td&gt;&lt;td&gt;American Samoa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;65&lt;a name=\&quot;prvdr-state-cd-65\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Guam&lt;/td&gt;&lt;td&gt;Guam&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;66&lt;a name=\&quot;prvdr-state-cd-66\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Commonwealth of the Northern Marianas Islands&lt;/td&gt;&lt;td&gt;Commonwealth of the Northern Marianas Islands&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;67&lt;a name=\&quot;prvdr-state-cd-67\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Texas&lt;/td&gt;&lt;td&gt;Texas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;68&lt;a name=\&quot;prvdr-state-cd-68\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Florida (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Florida (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;69&lt;a name=\&quot;prvdr-state-cd-69\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Florida (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Florida (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;70&lt;a name=\&quot;prvdr-state-cd-70\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kansas (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Kansas (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;71&lt;a name=\&quot;prvdr-state-cd-71\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Louisiana (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Louisiana (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;72&lt;a name=\&quot;prvdr-state-cd-72\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ohio (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Ohio (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;73&lt;a name=\&quot;prvdr-state-cd-73\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pennsylvania (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Pennsylvania (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;74&lt;a name=\&quot;prvdr-state-cd-74\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Texas (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Texas (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;80&lt;a name=\&quot;prvdr-state-cd-80\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Maryland (eff. 8/2000)&lt;/td&gt;&lt;td&gt;Maryland (eff. 8/2000)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;97&lt;a name=\&quot;prvdr-state-cd-97\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Northern Marianas&lt;/td&gt;&lt;td&gt;Northern Marianas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;98&lt;a name=\&quot;prvdr-state-cd-98\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Guam&lt;/td&gt;&lt;td&gt;Guam&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;99&lt;a name=\&quot;prvdr-state-cd-99\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;With 000 county code is American Samoa; otherwise unknown&lt;/td&gt;&lt;td&gt;With 000 county code is American Samoa; otherwise unknown&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;prvdr-state-cd&quot;];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;NCH Provider SSA State Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The two -digit numeric social security administration (SSA) state code where provider or facility is located. Source: https://bluebutton.cms.gov/resources/variables/prvdr&lt;em&gt;state&lt;/em&gt;cd&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-prvdr-state-cd defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;a name=\&quot;prvdr-state-cd-00\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unknown/other&lt;/td&gt;&lt;td&gt;Unknown/other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;01&lt;a name=\&quot;prvdr-state-cd-01\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alabama&lt;/td&gt;&lt;td&gt;Alabama&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02&lt;a name=\&quot;prvdr-state-cd-02\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alaska&lt;/td&gt;&lt;td&gt;Alaska&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03&lt;a name=\&quot;prvdr-state-cd-03\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Arizona&lt;/td&gt;&lt;td&gt;Arizona&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04&lt;a name=\&quot;prvdr-state-cd-04\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Arkansas&lt;/td&gt;&lt;td&gt;Arkansas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05&lt;a name=\&quot;prvdr-state-cd-05\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;California&lt;/td&gt;&lt;td&gt;California&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06&lt;a name=\&quot;prvdr-state-cd-06\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Colorado&lt;/td&gt;&lt;td&gt;Colorado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07&lt;a name=\&quot;prvdr-state-cd-07\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Connecticut&lt;/td&gt;&lt;td&gt;Connecticut&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08&lt;a name=\&quot;prvdr-state-cd-08\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Delaware&lt;/td&gt;&lt;td&gt;Delaware&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09&lt;a name=\&quot;prvdr-state-cd-09\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;District of Columbia&lt;/td&gt;&lt;td&gt;District of Columbia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;a name=\&quot;prvdr-state-cd-10\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Florida&lt;/td&gt;&lt;td&gt;Florida&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11&lt;a name=\&quot;prvdr-state-cd-11\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Georgia&lt;/td&gt;&lt;td&gt;Georgia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;a name=\&quot;prvdr-state-cd-12\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hawaii&lt;/td&gt;&lt;td&gt;Hawaii&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;a name=\&quot;prvdr-state-cd-13\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Idaho&lt;/td&gt;&lt;td&gt;Idaho&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;a name=\&quot;prvdr-state-cd-14\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Illinois&lt;/td&gt;&lt;td&gt;Illinois&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;a name=\&quot;prvdr-state-cd-15\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indiana&lt;/td&gt;&lt;td&gt;Indiana&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;a name=\&quot;prvdr-state-cd-16\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Iowa&lt;/td&gt;&lt;td&gt;Iowa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;a name=\&quot;prvdr-state-cd-17\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kansas&lt;/td&gt;&lt;td&gt;Kansas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;a name=\&quot;prvdr-state-cd-18\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kentucky&lt;/td&gt;&lt;td&gt;Kentucky&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;a name=\&quot;prvdr-state-cd-19\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Louisiana&lt;/td&gt;&lt;td&gt;Louisiana&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20&lt;a name=\&quot;prvdr-state-cd-20\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Maine&lt;/td&gt;&lt;td&gt;Maine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;a name=\&quot;prvdr-state-cd-21\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Maryland&lt;/td&gt;&lt;td&gt;Maryland&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;a name=\&quot;prvdr-state-cd-22\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Massachusetts&lt;/td&gt;&lt;td&gt;Massachusetts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23&lt;a name=\&quot;prvdr-state-cd-23\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Michigan&lt;/td&gt;&lt;td&gt;Michigan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24&lt;a name=\&quot;prvdr-state-cd-24\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minnesota&lt;/td&gt;&lt;td&gt;Minnesota&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;a name=\&quot;prvdr-state-cd-25\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mississippi&lt;/td&gt;&lt;td&gt;Mississippi&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;a name=\&quot;prvdr-state-cd-26\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Missouri&lt;/td&gt;&lt;td&gt;Missouri&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27&lt;a name=\&quot;prvdr-state-cd-27\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Montana&lt;/td&gt;&lt;td&gt;Montana&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28&lt;a name=\&quot;prvdr-state-cd-28\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nebraska&lt;/td&gt;&lt;td&gt;Nebraska&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29&lt;a name=\&quot;prvdr-state-cd-29\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nevada&lt;/td&gt;&lt;td&gt;Nevada&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;a name=\&quot;prvdr-state-cd-30\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Hampshire&lt;/td&gt;&lt;td&gt;New Hampshire&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;31&lt;a name=\&quot;prvdr-state-cd-31\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Jersey&lt;/td&gt;&lt;td&gt;New Jersey&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32&lt;a name=\&quot;prvdr-state-cd-32\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Mexico&lt;/td&gt;&lt;td&gt;New Mexico&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;33&lt;a name=\&quot;prvdr-state-cd-33\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;New York&lt;/td&gt;&lt;td&gt;New York&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;34&lt;a name=\&quot;prvdr-state-cd-34\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;North Carolina&lt;/td&gt;&lt;td&gt;North Carolina&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;35&lt;a name=\&quot;prvdr-state-cd-35\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;North Dakota&lt;/td&gt;&lt;td&gt;North Dakota&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;36&lt;a name=\&quot;prvdr-state-cd-36\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ohio&lt;/td&gt;&lt;td&gt;Ohio&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;37&lt;a name=\&quot;prvdr-state-cd-37\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oklahoma&lt;/td&gt;&lt;td&gt;Oklahoma&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;38&lt;a name=\&quot;prvdr-state-cd-38\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oregon&lt;/td&gt;&lt;td&gt;Oregon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;39&lt;a name=\&quot;prvdr-state-cd-39\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pennsylvania&lt;/td&gt;&lt;td&gt;Pennsylvania&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;40&lt;a name=\&quot;prvdr-state-cd-40\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Puerto Rico&lt;/td&gt;&lt;td&gt;Puerto Rico&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;41&lt;a name=\&quot;prvdr-state-cd-41\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rhode Island&lt;/td&gt;&lt;td&gt;Rhode Island&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;42&lt;a name=\&quot;prvdr-state-cd-42\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;South Carolina&lt;/td&gt;&lt;td&gt;South Carolina&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;43&lt;a name=\&quot;prvdr-state-cd-43\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;South Dakota&lt;/td&gt;&lt;td&gt;South Dakota&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;44&lt;a name=\&quot;prvdr-state-cd-44\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Tennessee&lt;/td&gt;&lt;td&gt;Tennessee&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;45&lt;a name=\&quot;prvdr-state-cd-45\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Texas&lt;/td&gt;&lt;td&gt;Texas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;46&lt;a name=\&quot;prvdr-state-cd-46\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Utah&lt;/td&gt;&lt;td&gt;Utah&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;47&lt;a name=\&quot;prvdr-state-cd-47\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Vermont&lt;/td&gt;&lt;td&gt;Vermont&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;48&lt;a name=\&quot;prvdr-state-cd-48\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Virgin Islands&lt;/td&gt;&lt;td&gt;Virgin Islands&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;49&lt;a name=\&quot;prvdr-state-cd-49\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Virginia&lt;/td&gt;&lt;td&gt;Virginia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;50&lt;a name=\&quot;prvdr-state-cd-50\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Washington&lt;/td&gt;&lt;td&gt;Washington&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;51&lt;a name=\&quot;prvdr-state-cd-51\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;West Virginia&lt;/td&gt;&lt;td&gt;West Virginia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;52&lt;a name=\&quot;prvdr-state-cd-52\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Wisconsin&lt;/td&gt;&lt;td&gt;Wisconsin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;53&lt;a name=\&quot;prvdr-state-cd-53\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Wyoming&lt;/td&gt;&lt;td&gt;Wyoming&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;54&lt;a name=\&quot;prvdr-state-cd-54\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Africa&lt;/td&gt;&lt;td&gt;Africa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;55&lt;a name=\&quot;prvdr-state-cd-55\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;California&lt;/td&gt;&lt;td&gt;California&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;56&lt;a name=\&quot;prvdr-state-cd-56\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Canada &amp;amp; Islands&lt;/td&gt;&lt;td&gt;Canada &amp;amp; Islands&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;57&lt;a name=\&quot;prvdr-state-cd-57\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Central America and West Indies&lt;/td&gt;&lt;td&gt;Central America and West Indies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;58&lt;a name=\&quot;prvdr-state-cd-58\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Europe&lt;/td&gt;&lt;td&gt;Europe&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;59&lt;a name=\&quot;prvdr-state-cd-59\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mexico&lt;/td&gt;&lt;td&gt;Mexico&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;60&lt;a name=\&quot;prvdr-state-cd-60\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oceania&lt;/td&gt;&lt;td&gt;Oceania&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;61&lt;a name=\&quot;prvdr-state-cd-61\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Philippines&lt;/td&gt;&lt;td&gt;Philippines&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;62&lt;a name=\&quot;prvdr-state-cd-62\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;South America&lt;/td&gt;&lt;td&gt;South America&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;63&lt;a name=\&quot;prvdr-state-cd-63\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;U.S. Possessions&lt;/td&gt;&lt;td&gt;U.S. Possessions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;64&lt;a name=\&quot;prvdr-state-cd-64\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;American Samoa&lt;/td&gt;&lt;td&gt;American Samoa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;65&lt;a name=\&quot;prvdr-state-cd-65\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Guam&lt;/td&gt;&lt;td&gt;Guam&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;66&lt;a name=\&quot;prvdr-state-cd-66\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Commonwealth of the Northern Marianas Islands&lt;/td&gt;&lt;td&gt;Commonwealth of the Northern Marianas Islands&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;67&lt;a name=\&quot;prvdr-state-cd-67\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Texas&lt;/td&gt;&lt;td&gt;Texas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;68&lt;a name=\&quot;prvdr-state-cd-68\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Florida (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Florida (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;69&lt;a name=\&quot;prvdr-state-cd-69\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Florida (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Florida (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;70&lt;a name=\&quot;prvdr-state-cd-70\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kansas (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Kansas (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;71&lt;a name=\&quot;prvdr-state-cd-71\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Louisiana (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Louisiana (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;72&lt;a name=\&quot;prvdr-state-cd-72\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ohio (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Ohio (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;73&lt;a name=\&quot;prvdr-state-cd-73\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pennsylvania (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Pennsylvania (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;74&lt;a name=\&quot;prvdr-state-cd-74\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Texas (eff. 10/2005)&lt;/td&gt;&lt;td&gt;Texas (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;80&lt;a name=\&quot;prvdr-state-cd-80\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Maryland (eff. 8/2000)&lt;/td&gt;&lt;td&gt;Maryland (eff. 8/2000)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;97&lt;a name=\&quot;prvdr-state-cd-97\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Northern Marianas&lt;/td&gt;&lt;td&gt;Northern Marianas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;98&lt;a name=\&quot;prvdr-state-cd-98\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Guam&lt;/td&gt;&lt;td&gt;Guam&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;99&lt;a name=\&quot;prvdr-state-cd-99\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;With 000 county code is American Samoa; otherwise unknown&lt;/td&gt;&lt;td&gt;With 000 county code is American Samoa; otherwise unknown&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
   ];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">fhir:CodeSystem.url</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;/assets/ig/CodeSystem-prvdr-state-cd&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">fhir:CodeSystem.identifier</a> [
-     <a href="https://www.hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;/assets/ig/CodeSystem-prvdr-state-cd&quot; ]
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">fhir:CodeSystem.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-prvdr-state-cd&quot;];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">fhir:CodeSystem.identifier</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-prvdr-state-cd&quot; ]
   ];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">fhir:CodeSystem.version</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1.1.0&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">fhir:CodeSystem.name</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;NCH Provider SSA State Code&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">fhir:CodeSystem.title</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;NCH Provider SSA State Code&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">fhir:CodeSystem.status</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;active&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">fhir:CodeSystem.date</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-05-07T14:45:05+00:00&quot;^^xsd:dateTime];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">fhir:CodeSystem.description</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;The two -digit numeric social security administration (SSA) state code where provider or facility is located. Source: https://bluebutton.cms.gov/resources/variables/prvdr_state_cd&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">fhir:CodeSystem.caseSensitive</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">fhir:CodeSystem.valueSet</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;/assets/ig/ValueSet-prvdr-state-cd&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">fhir:CodeSystem.hierarchyMeaning</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;is-a&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">fhir:CodeSystem.content</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;complete&quot;];
-  <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">fhir:CodeSystem.concept</a> [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;00&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Unknown/other&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Unknown/other&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;01&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Alabama&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Alabama&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;02&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Alaska&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Alaska&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;03&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Arizona&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Arizona&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 4;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;04&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Arkansas&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Arkansas&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 5;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;05&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;California&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;California&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 6;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;06&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Colorado&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Colorado&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 7;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;07&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Connecticut&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Connecticut&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 8;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;08&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Delaware&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Delaware&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 9;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;09&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;District of Columbia&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;District of Columbia&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 10;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;10&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 11;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;11&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Georgia&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Georgia&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 12;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;12&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Hawaii&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Hawaii&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 13;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;13&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Idaho&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Idaho&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 14;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;14&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Illinois&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Illinois&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 15;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;15&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Indiana&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Indiana&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 16;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;16&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Iowa&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Iowa&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 17;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;17&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kansas&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kansas&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 18;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;18&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kentucky&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kentucky&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 19;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;19&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Louisiana&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Louisiana&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 20;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;20&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maine&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maine&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 21;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;21&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maryland&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maryland&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 22;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;22&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Massachusetts&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Massachusetts&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 23;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;23&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Michigan&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Michigan&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 24;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;24&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Minnesota&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Minnesota&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 25;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;25&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Mississippi&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Mississippi&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 26;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;26&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Missouri&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Missouri&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 27;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;27&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Montana&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Montana&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 28;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;28&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Nebraska&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Nebraska&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 29;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;29&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Nevada&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Nevada&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 30;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;30&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Hampshire&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Hampshire&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 31;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;31&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Jersey&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Jersey&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 32;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;32&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Mexico&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Mexico&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 33;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;33&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New York&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New York&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 34;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;34&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;North Carolina&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;North Carolina&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 35;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;35&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;North Dakota&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;North Dakota&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 36;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;36&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Ohio&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Ohio&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 37;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;37&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oklahoma&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oklahoma&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 38;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;38&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oregon&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oregon&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 39;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;39&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Pennsylvania&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Pennsylvania&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 40;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;40&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Puerto Rico&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Puerto Rico&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 41;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;41&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Rhode Island&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Rhode Island&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 42;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;42&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South Carolina&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South Carolina&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 43;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;43&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South Dakota&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South Dakota&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 44;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;44&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Tennessee&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Tennessee&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 45;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;45&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 46;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;46&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Utah&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Utah&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 47;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;47&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Vermont&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Vermont&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 48;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;48&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Virgin Islands&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Virgin Islands&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 49;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;49&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Virginia&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Virginia&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 50;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;50&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Washington&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Washington&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 51;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;51&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;West Virginia&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;West Virginia&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 52;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;52&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Wisconsin&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Wisconsin&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 53;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;53&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Wyoming&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Wyoming&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 54;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;54&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Africa&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Africa&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 55;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;55&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;California&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;California&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 56;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;56&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Canada &amp; Islands&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Canada &amp; Islands&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 57;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;57&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Central America and West Indies&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Central America and West Indies&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 58;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;58&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Europe&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Europe&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 59;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;59&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Mexico&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Mexico&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 60;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;60&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oceania&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oceania&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 61;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;61&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Philippines&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Philippines&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 62;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;62&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South America&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South America&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 63;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;63&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;U.S. Possessions&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;U.S. Possessions&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 64;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;64&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;American Samoa&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;American Samoa&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 65;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;65&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Guam&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Guam&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 66;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;66&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Commonwealth of the Northern Marianas Islands&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Commonwealth of the Northern Marianas Islands&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 67;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;67&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 68;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;68&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida (eff. 10/2005)&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida (eff. 10/2005)&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 69;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;69&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida (eff. 10/2005)&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida (eff. 10/2005)&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 70;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;70&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kansas (eff. 10/2005)&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kansas (eff. 10/2005)&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 71;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;71&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Louisiana (eff. 10/2005)&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Louisiana (eff. 10/2005)&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 72;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;72&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Ohio (eff. 10/2005)&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Ohio (eff. 10/2005)&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 73;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;73&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Pennsylvania (eff. 10/2005)&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Pennsylvania (eff. 10/2005)&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 74;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;74&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas (eff. 10/2005)&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas (eff. 10/2005)&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 75;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;80&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maryland (eff. 8/2000)&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maryland (eff. 8/2000)&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 76;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;97&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Northern Marianas&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Northern Marianas&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 77;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;98&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Guam&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Guam&quot; ]
-  ], [
-     <a href="https://www.hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 78;
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;99&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;With 000 county code is American Samoa; otherwise unknown&quot; ];
-     <a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;With 000 county code is American Samoa; otherwise unknown&quot; ]
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">fhir:CodeSystem.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1.1.0&quot;];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">fhir:CodeSystem.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;NCH Provider SSA State Code&quot;];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">fhir:CodeSystem.title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;NCH Provider SSA State Code&quot;];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">fhir:CodeSystem.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">fhir:CodeSystem.date</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-05-31T14:39:32+00:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">fhir:CodeSystem.description</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;The two -digit numeric social security administration (SSA) state code where provider or facility is located. Source: https://bluebutton.cms.gov/resources/variables/prvdr_state_cd&quot;];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">fhir:CodeSystem.caseSensitive</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">fhir:CodeSystem.valueSet</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;https://bluebutton.cms.gov/assets/ig/ValueSet-prvdr-state-cd&quot;];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">fhir:CodeSystem.hierarchyMeaning</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;is-a&quot;];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">fhir:CodeSystem.content</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;complete&quot;];
+  <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">fhir:CodeSystem.concept</a> [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;00&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Unknown/other&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Unknown/other&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;01&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Alabama&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Alabama&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;02&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Alaska&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Alaska&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;03&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Arizona&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Arizona&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 4;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;04&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Arkansas&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Arkansas&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 5;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;05&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;California&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;California&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 6;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;06&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Colorado&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Colorado&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 7;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;07&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Connecticut&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Connecticut&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 8;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;08&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Delaware&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Delaware&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 9;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;09&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;District of Columbia&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;District of Columbia&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 10;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;10&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 11;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;11&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Georgia&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Georgia&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 12;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;12&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Hawaii&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Hawaii&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 13;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;13&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Idaho&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Idaho&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 14;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;14&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Illinois&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Illinois&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 15;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;15&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Indiana&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Indiana&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 16;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;16&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Iowa&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Iowa&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 17;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;17&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kansas&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kansas&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 18;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;18&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kentucky&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kentucky&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 19;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;19&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Louisiana&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Louisiana&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 20;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;20&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maine&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maine&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 21;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;21&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maryland&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maryland&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 22;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;22&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Massachusetts&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Massachusetts&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 23;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;23&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Michigan&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Michigan&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 24;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;24&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Minnesota&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Minnesota&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 25;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;25&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Mississippi&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Mississippi&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 26;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;26&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Missouri&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Missouri&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 27;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;27&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Montana&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Montana&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 28;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;28&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Nebraska&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Nebraska&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 29;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;29&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Nevada&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Nevada&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 30;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;30&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Hampshire&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Hampshire&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 31;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;31&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Jersey&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Jersey&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 32;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;32&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Mexico&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New Mexico&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 33;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;33&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New York&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;New York&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 34;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;34&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;North Carolina&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;North Carolina&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 35;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;35&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;North Dakota&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;North Dakota&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 36;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;36&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Ohio&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Ohio&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 37;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;37&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oklahoma&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oklahoma&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 38;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;38&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oregon&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oregon&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 39;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;39&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Pennsylvania&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Pennsylvania&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 40;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;40&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Puerto Rico&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Puerto Rico&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 41;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;41&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Rhode Island&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Rhode Island&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 42;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;42&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South Carolina&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South Carolina&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 43;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;43&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South Dakota&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South Dakota&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 44;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;44&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Tennessee&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Tennessee&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 45;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;45&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 46;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;46&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Utah&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Utah&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 47;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;47&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Vermont&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Vermont&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 48;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;48&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Virgin Islands&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Virgin Islands&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 49;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;49&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Virginia&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Virginia&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 50;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;50&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Washington&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Washington&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 51;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;51&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;West Virginia&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;West Virginia&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 52;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;52&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Wisconsin&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Wisconsin&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 53;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;53&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Wyoming&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Wyoming&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 54;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;54&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Africa&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Africa&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 55;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;55&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;California&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;California&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 56;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;56&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Canada &amp; Islands&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Canada &amp; Islands&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 57;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;57&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Central America and West Indies&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Central America and West Indies&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 58;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;58&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Europe&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Europe&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 59;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;59&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Mexico&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Mexico&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 60;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;60&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oceania&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Oceania&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 61;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;61&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Philippines&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Philippines&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 62;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;62&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South America&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;South America&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 63;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;63&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;U.S. Possessions&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;U.S. Possessions&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 64;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;64&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;American Samoa&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;American Samoa&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 65;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;65&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Guam&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Guam&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 66;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;66&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Commonwealth of the Northern Marianas Islands&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Commonwealth of the Northern Marianas Islands&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 67;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;67&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 68;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;68&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida (eff. 10/2005)&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida (eff. 10/2005)&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 69;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;69&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida (eff. 10/2005)&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Florida (eff. 10/2005)&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 70;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;70&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kansas (eff. 10/2005)&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Kansas (eff. 10/2005)&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 71;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;71&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Louisiana (eff. 10/2005)&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Louisiana (eff. 10/2005)&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 72;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;72&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Ohio (eff. 10/2005)&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Ohio (eff. 10/2005)&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 73;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;73&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Pennsylvania (eff. 10/2005)&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Pennsylvania (eff. 10/2005)&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 74;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;74&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas (eff. 10/2005)&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Texas (eff. 10/2005)&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 75;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;80&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maryland (eff. 8/2000)&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Maryland (eff. 8/2000)&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 76;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;97&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Northern Marianas&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Northern Marianas&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 77;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;98&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Guam&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Guam&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 78;
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;99&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;With 000 county code is American Samoa; otherwise unknown&quot; ];
+     <a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">fhir:CodeSystem.concept.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;With 000 county code is American Samoa; otherwise unknown&quot; ]
   ].
 
 # - ontology header ------------------------------------------------------------
@@ -572,9 +577,9 @@ Raw <a href="CodeSystem-prvdr-state-cd.ttl" download>ttl</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

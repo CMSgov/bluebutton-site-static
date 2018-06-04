@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -105,7 +110,7 @@ Formats: <a href="CodeSystem-clm-freq-cd.xml.html">XML</a>, <a href="CodeSystem-
 </p>
 
 <div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Frequency Code</h2><div><p>The third digit of the type of bill (TOB3) submitted on an institutional claim record to indicate the sequence of a claim in the beneficiary's current episode of care. Source: https://bluebutton.cms.gov/resources/variables/clm<em>freq</em>cd</p>
-</div><p>This code system /assets/ig/CodeSystem-clm-freq-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name="clm-freq-cd-0"> </a></td><td>Non-payment/zero claims</td><td>Non-payment/zero claims</td></tr><tr><td>1<a name="clm-freq-cd-1"> </a></td><td>Admit thru discharge claim</td><td>Admit thru discharge claim</td></tr><tr><td>2<a name="clm-freq-cd-2"> </a></td><td>Interim – first claim</td><td>Interim – first claim</td></tr><tr><td>3<a name="clm-freq-cd-3"> </a></td><td>Interim – continuing claim</td><td>Interim – continuing claim</td></tr><tr><td>4<a name="clm-freq-cd-4"> </a></td><td>Interim – last claim</td><td>Interim – last claim</td></tr><tr><td>5<a name="clm-freq-cd-5"> </a></td><td>Late charge(s) only claim</td><td>Late charge(s) only claim</td></tr><tr><td>7<a name="clm-freq-cd-7"> </a></td><td>Replacement of prior claim</td><td>Replacement of prior claim</td></tr><tr><td>8<a name="clm-freq-cd-8"> </a></td><td>Void/cancel prior claim</td><td>Void/cancel prior claim</td></tr><tr><td>9<a name="clm-freq-cd-9"> </a></td><td>Final claim (for HH PPS = process as a debit/credit to RAP claim)</td><td>Final claim (for HH PPS = process as a debit/credit to RAP claim)</td></tr><tr><td>G<a name="clm-freq-cd-G"> </a></td><td>Common Working File (NCH) generated adjustment claim</td><td>Common Working File (NCH) generated adjustment claim</td></tr><tr><td>H<a name="clm-freq-cd-H"> </a></td><td>CMS generated adjustment claim</td><td>CMS generated adjustment claim</td></tr><tr><td>I<a name="clm-freq-cd-I"> </a></td><td>Misc. adjustment claim (e.g., initiated by intermediary or QIO)</td><td>Misc. adjustment claim (e.g., initiated by intermediary or QIO)</td></tr><tr><td>J<a name="clm-freq-cd-J"> </a></td><td>Other adjustment request</td><td>Other adjustment request</td></tr><tr><td>M<a name="clm-freq-cd-M"> </a></td><td>Medicare secondary payer (MSP) adjustment</td><td>Medicare secondary payer (MSP) adjustment</td></tr><tr><td>P<a name="clm-freq-cd-P"> </a></td><td>Adjustment required by QIO</td><td>Adjustment required by QIO</td></tr></table></div>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-freq-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name="clm-freq-cd-0"> </a></td><td>Non-payment/zero claims</td><td>Non-payment/zero claims</td></tr><tr><td>1<a name="clm-freq-cd-1"> </a></td><td>Admit thru discharge claim</td><td>Admit thru discharge claim</td></tr><tr><td>2<a name="clm-freq-cd-2"> </a></td><td>Interim – first claim</td><td>Interim – first claim</td></tr><tr><td>3<a name="clm-freq-cd-3"> </a></td><td>Interim – continuing claim</td><td>Interim – continuing claim</td></tr><tr><td>4<a name="clm-freq-cd-4"> </a></td><td>Interim – last claim</td><td>Interim – last claim</td></tr><tr><td>5<a name="clm-freq-cd-5"> </a></td><td>Late charge(s) only claim</td><td>Late charge(s) only claim</td></tr><tr><td>7<a name="clm-freq-cd-7"> </a></td><td>Replacement of prior claim</td><td>Replacement of prior claim</td></tr><tr><td>8<a name="clm-freq-cd-8"> </a></td><td>Void/cancel prior claim</td><td>Void/cancel prior claim</td></tr><tr><td>9<a name="clm-freq-cd-9"> </a></td><td>Final claim (for HH PPS = process as a debit/credit to RAP claim)</td><td>Final claim (for HH PPS = process as a debit/credit to RAP claim)</td></tr><tr><td>G<a name="clm-freq-cd-G"> </a></td><td>Common Working File (NCH) generated adjustment claim</td><td>Common Working File (NCH) generated adjustment claim</td></tr><tr><td>H<a name="clm-freq-cd-H"> </a></td><td>CMS generated adjustment claim</td><td>CMS generated adjustment claim</td></tr><tr><td>I<a name="clm-freq-cd-I"> </a></td><td>Misc. adjustment claim (e.g., initiated by intermediary or QIO)</td><td>Misc. adjustment claim (e.g., initiated by intermediary or QIO)</td></tr><tr><td>J<a name="clm-freq-cd-J"> </a></td><td>Other adjustment request</td><td>Other adjustment request</td></tr><tr><td>M<a name="clm-freq-cd-M"> </a></td><td>Medicare secondary payer (MSP) adjustment</td><td>Medicare secondary payer (MSP) adjustment</td></tr><tr><td>P<a name="clm-freq-cd-P"> </a></td><td>Adjustment required by QIO</td><td>Adjustment required by QIO</td></tr></table></div>
 
 
 <!-- ==============END CONTENT END CONTENT=================== -->
@@ -135,9 +140,9 @@ Formats: <a href="CodeSystem-clm-freq-cd.xml.html">XML</a>, <a href="CodeSystem-
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

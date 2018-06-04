@@ -4,20 +4,20 @@
   <id value="phrmcy-srvc-type-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Pharmacy service type code</h2><div><p>The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide “in-network” services. Source: https://bluebutton.cms.gov/resources/variables/phrmcy<em>srvc</em>type_cd</p>
-</div><p>This code system /assets/ig/CodeSystem-phrmcy-srvc-type-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>01<a name="phrmcy-srvc-type-cd-01"> </a></td><td>Community/retail pharmacy</td><td>Community/retail pharmacy</td></tr><tr><td>02<a name="phrmcy-srvc-type-cd-02"> </a></td><td>Compounding pharmacy</td><td>Compounding pharmacy</td></tr><tr><td>03<a name="phrmcy-srvc-type-cd-03"> </a></td><td>Home infusion therapy provider</td><td>Home infusion therapy provider</td></tr><tr><td>04<a name="phrmcy-srvc-type-cd-04"> </a></td><td>Institutional pharmacy</td><td>Institutional pharmacy</td></tr><tr><td>05<a name="phrmcy-srvc-type-cd-05"> </a></td><td>Long-term care pharmacy</td><td>Long-term care pharmacy</td></tr><tr><td>06<a name="phrmcy-srvc-type-cd-06"> </a></td><td>Mail order pharmacy</td><td>Mail order pharmacy</td></tr><tr><td>07<a name="phrmcy-srvc-type-cd-07"> </a></td><td>Managed care organization (MCO) pharmacy</td><td>Managed care organization (MCO) pharmacy</td></tr><tr><td>08<a name="phrmcy-srvc-type-cd-08"> </a></td><td>Specialty care pharmacy</td><td>Specialty care pharmacy</td></tr><tr><td>99<a name="phrmcy-srvc-type-cd-99"> </a></td><td>Other</td><td>Other</td></tr><tr><td>Null<a name="phrmcy-srvc-type-cd-Null"> </a></td><td>Pharmacy is not in any other category above</td><td>Pharmacy is not in any other category above</td></tr></table></div>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-phrmcy-srvc-type-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>01<a name="phrmcy-srvc-type-cd-01"> </a></td><td>Community/retail pharmacy</td><td>Community/retail pharmacy</td></tr><tr><td>02<a name="phrmcy-srvc-type-cd-02"> </a></td><td>Compounding pharmacy</td><td>Compounding pharmacy</td></tr><tr><td>03<a name="phrmcy-srvc-type-cd-03"> </a></td><td>Home infusion therapy provider</td><td>Home infusion therapy provider</td></tr><tr><td>04<a name="phrmcy-srvc-type-cd-04"> </a></td><td>Institutional pharmacy</td><td>Institutional pharmacy</td></tr><tr><td>05<a name="phrmcy-srvc-type-cd-05"> </a></td><td>Long-term care pharmacy</td><td>Long-term care pharmacy</td></tr><tr><td>06<a name="phrmcy-srvc-type-cd-06"> </a></td><td>Mail order pharmacy</td><td>Mail order pharmacy</td></tr><tr><td>07<a name="phrmcy-srvc-type-cd-07"> </a></td><td>Managed care organization (MCO) pharmacy</td><td>Managed care organization (MCO) pharmacy</td></tr><tr><td>08<a name="phrmcy-srvc-type-cd-08"> </a></td><td>Specialty care pharmacy</td><td>Specialty care pharmacy</td></tr><tr><td>99<a name="phrmcy-srvc-type-cd-99"> </a></td><td>Other</td><td>Other</td></tr><tr><td>Null<a name="phrmcy-srvc-type-cd-Null"> </a></td><td>Pharmacy is not in any other category above</td><td>Pharmacy is not in any other category above</td></tr></table></div>
   </text>
-  <url value="/assets/ig/CodeSystem-phrmcy-srvc-type-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-phrmcy-srvc-type-cd"/>
   <identifier>
-    <value value="/assets/ig/CodeSystem-phrmcy-srvc-type-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-phrmcy-srvc-type-cd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Pharmacy service type code"/>
   <title value="Pharmacy service type code"/>
   <status value="active"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries &#x2013; including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide &#x201C;in-network&#x201D; services. Source: https://bluebutton.cms.gov/resources/variables/phrmcy_srvc_type_cd"/>
   <caseSensitive value="true"/>
-  <valueSet value="/assets/ig/ValueSet-phrmcy-srvc-type-cd"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-phrmcy-srvc-type-cd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

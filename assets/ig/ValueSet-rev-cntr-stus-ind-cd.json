@@ -3,18 +3,18 @@
   "id": "rev-cntr-stus-ind-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Revenue Center Status Indicator Code</h2><div><p>This variable indicates how the service listed on the revenue center record was priced for payment purposes. The revenue center status indicator code is most useful with outpatient hospital claims, where multiple methods may be used to determine the payment amount for the various revenue center records on the claim (for example, some lines may be bundled into an APC and paid under the outpatient PPS, while other lines may be paid under other fee schedules). Source: https://bluebutton.cms.gov/resources/variables/rev<em>cntr</em>stus<em>ind</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-rev-cntr-stus-ind-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-stus-ind-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Revenue Center Status Indicator Code</h2><div><p>This variable indicates how the service listed on the revenue center record was priced for payment purposes. The revenue center status indicator code is most useful with outpatient hospital claims, where multiple methods may be used to determine the payment amount for the various revenue center records on the claim (for example, some lines may be bundled into an APC and paid under the outpatient PPS, while other lines may be paid under other fee schedules). Source: https://bluebutton.cms.gov/resources/variables/rev<em>cntr</em>stus<em>ind</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/rev-cntr-stus-ind-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-stus-ind-cd</code></a></li></ul></div>"
   },
-  "url": "/assets/ig/ValueSet-rev-cntr-stus-ind-cd",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-stus-ind-cd",
   "version": "1.1.0",
   "name": "Revenue Center Status Indicator Code",
   "status": "draft",
-  "date": "2018-05-07T14:45:05+00:00",
+  "date": "2018-05-31T14:39:32+00:00",
   "description": "This variable indicates how the service listed on the revenue center record was priced for payment purposes. The revenue center status indicator code is most useful with outpatient hospital claims, where multiple methods may be used to determine the payment amount for the various revenue center records on the claim (for example, some lines may be bundled into an APC and paid under the outpatient PPS, while other lines may be paid under other fee schedules). Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_stus_ind_cd",
   "compose": {
     "include": [
       {
-        "system": "/assets/ig/CodeSystem-rev-cntr-stus-ind-cd"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-stus-ind-cd"
       }
     ]
   }

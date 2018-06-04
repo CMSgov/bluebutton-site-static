@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -111,7 +116,7 @@ Formats: <a href="ValueSet-ptnt-rsdnc-cd.xml.html">XML</a>, <a href="ValueSet-pt
 <!-- include ValueSet-ptnt-rsdnc-cd-html.xhtml   -->
 
 <table class="grid">
- <tbody><tr><td>Defining URL:</td><td>/assets/ig/ValueSet-ptnt-rsdnc-cd</td></tr>
+ <tbody><tr><td>Defining URL:</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-rsdnc-cd</td></tr>
  <tr><td>Name:</td><td>Patient Residence Code</td></tr>
  <tr><td>Definition:</td><td><p>This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt<em>rsdnc</em>cd</p>
 </td></tr>
@@ -130,7 +135,7 @@ This value set is used by:
 
 <h3>Expansion</h3>
 
-<div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 16 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on /assets/ig/CodeSystem-ptnt-rsdnc-cd version 1.1.0</p><p>All codes from system <a href="CodeSystem-ptnt-rsdnc-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd</code></a></p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-00"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-00">00</a></td><td>Not specified, other patient residence not identified below</td><td>Not specified, other patient residence not identified below</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-01"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-01">01</a></td><td>Home</td><td>Home</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-02"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-02">02</a></td><td>Skilled Nursing Facility</td><td>Skilled Nursing Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-03"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-03">03</a></td><td>Nursing facility (long-term care facility)</td><td>Nursing facility (long-term care facility)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-04"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-04">04</a></td><td>Assisted living facility</td><td>Assisted living facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-05"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-05">05</a></td><td>Custodial Care Facility (residential but not medical care)</td><td>Custodial Care Facility (residential but not medical care)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-06"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-06">06</a></td><td>Group home (e.g., congregate residential foster care)</td><td>Group home (e.g., congregate residential foster care)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-07"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-07">07</a></td><td>Inpatient Psychiatric Facility</td><td>Inpatient Psychiatric Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-08"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-08">08</a></td><td>Psychiatric Facility – Partial Hospitalization</td><td>Psychiatric Facility – Partial Hospitalization</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-09"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-09">09</a></td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-10"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-10">10</a></td><td>Residential Substance Abuse Treatment Facility</td><td>Residential Substance Abuse Treatment Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-11"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-11">11</a></td><td>Hospice</td><td>Hospice</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-12"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-12">12</a></td><td>Psychiatric Residential Treatment Facility</td><td>Psychiatric Residential Treatment Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-13"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-13">13</a></td><td>Comprehensive Inpatient Rehabilitation Facility</td><td>Comprehensive Inpatient Rehabilitation Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-14"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-14">14</a></td><td>Homeless Shelter</td><td>Homeless Shelter</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-15"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-15">15</a></td><td>Correctional Institution</td><td>Correctional Institution</td></tr></table></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 16 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd version 1.1.0</p><p>All codes from system <a href="CodeSystem-ptnt-rsdnc-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd</code></a></p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-00"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-00">00</a></td><td>Not specified, other patient residence not identified below</td><td>Not specified, other patient residence not identified below</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-01"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-01">01</a></td><td>Home</td><td>Home</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-02"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-02">02</a></td><td>Skilled Nursing Facility</td><td>Skilled Nursing Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-03"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-03">03</a></td><td>Nursing facility (long-term care facility)</td><td>Nursing facility (long-term care facility)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-04"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-04">04</a></td><td>Assisted living facility</td><td>Assisted living facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-05"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-05">05</a></td><td>Custodial Care Facility (residential but not medical care)</td><td>Custodial Care Facility (residential but not medical care)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-06"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-06">06</a></td><td>Group home (e.g., congregate residential foster care)</td><td>Group home (e.g., congregate residential foster care)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-07"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-07">07</a></td><td>Inpatient Psychiatric Facility</td><td>Inpatient Psychiatric Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-08"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-08">08</a></td><td>Psychiatric Facility – Partial Hospitalization</td><td>Psychiatric Facility – Partial Hospitalization</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-09"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-09">09</a></td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-10"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-10">10</a></td><td>Residential Substance Abuse Treatment Facility</td><td>Residential Substance Abuse Treatment Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-11"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-11">11</a></td><td>Hospice</td><td>Hospice</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-12"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-12">12</a></td><td>Psychiatric Residential Treatment Facility</td><td>Psychiatric Residential Treatment Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-13"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-13">13</a></td><td>Comprehensive Inpatient Rehabilitation Facility</td><td>Comprehensive Inpatient Rehabilitation Facility</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-14"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-14">14</a></td><td>Homeless Shelter</td><td>Homeless Shelter</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-rsdnc-cd-15"> </a><a href="CodeSystem-ptnt-rsdnc-cd.html#ptnt-rsdnc-cd-15">15</a></td><td>Correctional Institution</td><td>Correctional Institution</td></tr></table></div>
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
@@ -158,9 +163,9 @@ This value set is used by:
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

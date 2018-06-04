@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -111,23 +116,23 @@ Raw <a href="ValueSet-line-bene-prmry-pyr-cd.xml" download>xml</a>
 
 <pre class="xml">
 
-&lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet">ValueSet</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.id">id</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;line-bene-prmry-pyr-cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.text">text</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+&lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet">ValueSet</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;line-bene-prmry-pyr-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Line Primary Payer Code (if not Medicare)&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's medical bills relating to the line item service on the non-institutional claim. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/line&lt;em&gt;bene&lt;/em&gt;prmry&lt;em&gt;pyr&lt;/em&gt;cd&lt;/p&gt;
-&lt;/div&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=&quot;CodeSystem-line-bene-prmry-pyr-cd.html&quot;&gt;&lt;code&gt;/assets/ig/CodeSystem-line-bene-prmry-pyr-cd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=&quot;CodeSystem/line-bene-prmry-pyr-cd.html&quot;&gt;&lt;code&gt;https://bluebutton.cms.gov/assets/ig/CodeSystem-line-bene-prmry-pyr-cd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
   &lt;/text&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.url">url</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;/assets/ig/ValueSet-line-bene-prmry-pyr-cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.version">version</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.0&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.name">name</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Line Primary Payer Code (if not Medicare)&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.status">status</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.date">date</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-07T14:45:05+00:00&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.description">description</a>
-               <a href="https://www.hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary&amp;#39;s medical bills relating to the line item service on the non-institutional claim. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/line_bene_prmry_pyr_cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.compose">compose</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include">include</a>&gt;
-      &lt;<a href="https://www.hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include.system">system</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;/assets/ig/CodeSystem-line-bene-prmry-pyr-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">url</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/ValueSet-line-bene-prmry-pyr-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Line Primary Payer Code (if not Medicare)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-31T14:39:32+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.description">description</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary&amp;#39;s medical bills relating to the line item service on the non-institutional claim. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/line_bene_prmry_pyr_cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.compose">compose</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include">include</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-line-bene-prmry-pyr-cd&quot;/&gt;
     &lt;/include&gt;
   &lt;/compose&gt;
 &lt;/ValueSet&gt;</pre>
@@ -161,9 +166,9 @@ Raw <a href="ValueSet-line-bene-prmry-pyr-cd.xml" download>xml</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

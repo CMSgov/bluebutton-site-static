@@ -1,35 +1,35 @@
-@prefix fhir: </assets/ig/> .
+@prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
 
-</assets/ig/ValueSet-clm-fac-type-cd> a fhir:ValueSet;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-clm-fac-type-cd> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "clm-fac-type-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Facility Type Code</h2><div><p>The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm<em>fac</em>type_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-clm-fac-type-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-fac-type-cd</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Facility Type Code</h2><div><p>The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm<em>fac</em>type_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-fac-type-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-fac-type-cd</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "/assets/ig/ValueSet-clm-fac-type-cd"];
+  fhir:ValueSet.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-fac-type-cd"];
   fhir:ValueSet.version [ fhir:value "1.1.0"];
   fhir:ValueSet.name [ fhir:value "Claim Facility Type Code"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm_fac_type_cd"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "/assets/ig/CodeSystem-clm-fac-type-cd" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-fac-type-cd" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-</assets/ig/ValueSet-clm-fac-type-cd.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-clm-fac-type-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <https://www.hl7.org/fhir/STU3/ValueSet-clm-fac-type-cd.ttl> .
+  owl:versionIRI <http://hl7.org/fhir/STU3/ValueSet/clm-fac-type-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

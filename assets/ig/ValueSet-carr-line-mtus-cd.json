@@ -3,18 +3,18 @@
   "id": "carr-line-mtus-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code</h2><div><p>Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>mtus_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-carr-line-mtus-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code</h2><div><p>Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>mtus_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/carr-line-mtus-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd</code></a></li></ul></div>"
   },
-  "url": "/assets/ig/ValueSet-carr-line-mtus-cd",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-mtus-cd",
   "version": "1.1.0",
   "name": "Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code",
   "status": "draft",
-  "date": "2018-05-07T14:45:05+00:00",
+  "date": "2018-05-31T14:39:32+00:00",
   "description": "Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr_line_mtus_cd",
   "compose": {
     "include": [
       {
-        "system": "/assets/ig/CodeSystem-carr-line-mtus-cd"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd"
       }
     ]
   }

@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -105,7 +110,7 @@ Formats: <a href="CodeSystem-adjudication-categories.xml.html">XML</a>, <a href=
 </p>
 
 <div xmlns="http://www.w3.org/1999/xhtml"><h2>Adjudication Categories</h2><div><p>Blue Button Adjudication Categories.</p>
-</div><p>This code system /assets/ig/CodeSystem-adjudication-categories defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Part D Covered<a name="adjudication-categories-PartDCovered"> </a></td><td>Problem List Item</td><td>This is the net amount that the Part D plan paid for a        PDE that was covered by the Medicare Part D benefit.</td></tr><tr><td>Gross Drug Cost Below Out-of-Pocket Threshold (GDCB)<a name="adjudication-categories-GrossDrugCostBelowOut-of-PocketThreshold.40GDCB.41"> </a></td><td>Encounter Diagnosis</td><td>This variable is the portion of the gross drug cost        for the prescription drug fill that was not covered by Part        D’s catastrophic coverage.</td></tr><tr><td>Gross Drug Cost Above Out-of-Pocket Threshold (GDCA)<a name="adjudication-categories-GrossDrugCostAboveOut-of-PocketThreshold.40GDCA.41"> </a></td><td>Problem</td><td>This variable is the portion of the gross drug cost        for the prescription drug fill that was covered by Part D’s        catastrophic coverage.</td></tr><tr><td>Patient Pay Amount<a name="adjudication-categories-PatientPayAmount"> </a></td><td>Health Concern</td><td>This variable is the dollar amount that the        beneficiary paid for the PDE without being reimbursed by a        third party.</td></tr><tr><td>Other True Out-of-Pocket (TrOOP) Amount<a name="adjudication-categories-OtherTrueOut-of-Pocket.40TrOOP.41Amount"> </a></td><td>Cell</td><td>This is the amount of any payment made by other        third-party payers that reduces the beneficiary’s liability        for the PDE and counts towards Part D’s true out-of-pocket        (TrOOP) requirement.</td></tr><tr><td>Part D Low Income Subsidy (LICS) Amount<a name="adjudication-categories-PartDLowIncomeSubsidy.40LICS.41Amount"> </a></td><td>Cell</td><td>This is the amount of cost sharing for the drug that was paid        by the Part D low-income subsidy (LICS).</td></tr><tr><td>Reduction in patient liability due to payments by other payers (PLRO) Amount<a name="adjudication-categories-Reductioninpatientliabilityduetopaymentsbyotherpayers.40PLRO.41Amount"> </a></td><td>Cell</td><td>This is the amount of any payment by other third-party payers        that reduces the beneficiary’s liability for the PDE but         does not count towards Part D’s true out-of-pocket (TrOOP)        requirement.</td></tr><tr><td>Total Prescription Cost<a name="adjudication-categories-TotalPrescriptionCost"> </a></td><td>Cell</td><td>This is the price paid for the drug at the point of sale        (i.e., the pharmacy counter), and it does not include any        rebates or discounts that the drug manufacturer provides        directly to the Part D plan sponsor.</td></tr><tr><td>Medicare Coverage Gap Discount Amount<a name="adjudication-categories-MedicareCoverageGapDiscountAmount"> </a></td><td>Cell</td><td>This variable indicates the amount of the discount provided        by the drug’s manufacturer under the Medicare Coverage Gap        Discount Program, as calculated by CMS based on data reported        in the PDE.</td></tr></table></div>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudication-categories defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Part D Covered<a name="adjudication-categories-PartDCovered"> </a></td><td>Problem List Item</td><td>This is the net amount that the Part D plan paid for a        PDE that was covered by the Medicare Part D benefit.</td></tr><tr><td>Gross Drug Cost Below Out-of-Pocket Threshold (GDCB)<a name="adjudication-categories-GrossDrugCostBelowOut-of-PocketThreshold.40GDCB.41"> </a></td><td>Encounter Diagnosis</td><td>This variable is the portion of the gross drug cost        for the prescription drug fill that was not covered by Part        D’s catastrophic coverage.</td></tr><tr><td>Gross Drug Cost Above Out-of-Pocket Threshold (GDCA)<a name="adjudication-categories-GrossDrugCostAboveOut-of-PocketThreshold.40GDCA.41"> </a></td><td>Problem</td><td>This variable is the portion of the gross drug cost        for the prescription drug fill that was covered by Part D’s        catastrophic coverage.</td></tr><tr><td>Patient Pay Amount<a name="adjudication-categories-PatientPayAmount"> </a></td><td>Health Concern</td><td>This variable is the dollar amount that the        beneficiary paid for the PDE without being reimbursed by a        third party.</td></tr><tr><td>Other True Out-of-Pocket (TrOOP) Amount<a name="adjudication-categories-OtherTrueOut-of-Pocket.40TrOOP.41Amount"> </a></td><td>Cell</td><td>This is the amount of any payment made by other        third-party payers that reduces the beneficiary’s liability        for the PDE and counts towards Part D’s true out-of-pocket        (TrOOP) requirement.</td></tr><tr><td>Part D Low Income Subsidy (LICS) Amount<a name="adjudication-categories-PartDLowIncomeSubsidy.40LICS.41Amount"> </a></td><td>Cell</td><td>This is the amount of cost sharing for the drug that was paid        by the Part D low-income subsidy (LICS).</td></tr><tr><td>Reduction in patient liability due to payments by other payers (PLRO) Amount<a name="adjudication-categories-Reductioninpatientliabilityduetopaymentsbyotherpayers.40PLRO.41Amount"> </a></td><td>Cell</td><td>This is the amount of any payment by other third-party payers        that reduces the beneficiary’s liability for the PDE but         does not count towards Part D’s true out-of-pocket (TrOOP)        requirement.</td></tr><tr><td>Total Prescription Cost<a name="adjudication-categories-TotalPrescriptionCost"> </a></td><td>Cell</td><td>This is the price paid for the drug at the point of sale        (i.e., the pharmacy counter), and it does not include any        rebates or discounts that the drug manufacturer provides        directly to the Part D plan sponsor.</td></tr><tr><td>Medicare Coverage Gap Discount Amount<a name="adjudication-categories-MedicareCoverageGapDiscountAmount"> </a></td><td>Cell</td><td>This variable indicates the amount of the discount provided        by the drug’s manufacturer under the Medicare Coverage Gap        Discount Program, as calculated by CMS based on data reported        in the PDE.</td></tr></table></div>
 
 
 <!-- ==============END CONTENT END CONTENT=================== -->
@@ -135,9 +140,9 @@ Formats: <a href="CodeSystem-adjudication-categories.xml.html">XML</a>, <a href=
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

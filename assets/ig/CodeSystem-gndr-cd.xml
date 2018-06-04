@@ -4,20 +4,20 @@
   <id value="gndr-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Patient Gender</h2><div><p>Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd</p>
-</div><p>This code system /assets/ig/CodeSystem-gndr-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name="gndr-cd-Blank"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td>1<a name="gndr-cd-1"> </a></td><td>Male</td><td>Male</td></tr><tr><td>2<a name="gndr-cd-2"> </a></td><td>Female</td><td>Female</td></tr></table></div>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name="gndr-cd-Blank"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td>1<a name="gndr-cd-1"> </a></td><td>Male</td><td>Male</td></tr><tr><td>2<a name="gndr-cd-2"> </a></td><td>Female</td><td>Female</td></tr></table></div>
   </text>
-  <url value="/assets/ig/CodeSystem-gndr-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd"/>
   <identifier>
-    <value value="/assets/ig/CodeSystem-gndr-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Patient Gender"/>
   <title value="Patient Gender"/>
   <status value="active"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd"/>
   <caseSensitive value="true"/>
-  <valueSet value="/assets/ig/ValueSet-gndr-cd"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-gndr-cd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

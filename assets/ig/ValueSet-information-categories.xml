@@ -6,15 +6,15 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Information Categories</h2><div><p>Information Categories</p>
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-information-categories.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories</code></a></li></ul></div>
   </text>
-  <url value="/assets/ig/ValueSet-information-categories"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-information-categories"/>
   <version value="1.1.0"/>
   <name value="Information Categories"/>
   <status value="draft"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="Information Categories"/>
   <compose>
     <include>
-      <system value="/assets/ig/CodeSystem-information-categories"/>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories"/>
     </include>
   </compose>
 </ValueSet>

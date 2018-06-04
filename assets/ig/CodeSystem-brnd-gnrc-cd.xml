@@ -4,20 +4,20 @@
   <id value="brnd-gnrc-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Brand-Generic Code Reported by Submitting Plan</h2><div><p>Plan reported value indicating whether the plan adjudicated the claim as a brand or generic drug. Applies to covered drugs only. Source: https://bluebutton.cms.gov/resources/variables/brnd<em>gnrc</em>cd</p>
-</div><p>This code system /assets/ig/CodeSystem-brnd-gnrc-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>B<a name="brnd-gnrc-cd-B"> </a></td><td>Brand</td><td>Brand</td></tr><tr><td>G<a name="brnd-gnrc-cd-G"> </a></td><td>Generic Null/missing</td><td>Generic Null/missing</td></tr></table></div>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>B<a name="brnd-gnrc-cd-B"> </a></td><td>Brand</td><td>Brand</td></tr><tr><td>G<a name="brnd-gnrc-cd-G"> </a></td><td>Generic Null/missing</td><td>Generic Null/missing</td></tr></table></div>
   </text>
-  <url value="/assets/ig/CodeSystem-brnd-gnrc-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd"/>
   <identifier>
-    <value value="/assets/ig/CodeSystem-brnd-gnrc-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd"/>
   </identifier>
   <version value="1.1.0"/>
   <name value="Brand-Generic Code Reported by Submitting Plan"/>
   <title value="Brand-Generic Code Reported by Submitting Plan"/>
   <status value="active"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="Plan reported value indicating whether the plan adjudicated the claim as a brand or generic drug. Applies to covered drugs only. Source: https://bluebutton.cms.gov/resources/variables/brnd_gnrc_cd"/>
   <caseSensitive value="true"/>
-  <valueSet value="/assets/ig/ValueSet-brnd-gnrc-cd"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-brnd-gnrc-cd"/>
   <hierarchyMeaning value="is-a"/>
   <content value="complete"/>
   <concept>

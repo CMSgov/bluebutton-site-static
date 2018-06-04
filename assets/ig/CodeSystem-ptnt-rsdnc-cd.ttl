@@ -1,29 +1,29 @@
-@prefix fhir: </assets/ig/> .
+@prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
 
-</assets/ig/CodeSystem-ptnt-rsdnc-cd> a fhir:CodeSystem;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "ptnt-rsdnc-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient Residence Code</h2><div><p>This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt<em>rsdnc</em>cd</p>\n</div><p>This code system /assets/ig/CodeSystem-ptnt-rsdnc-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>00<a name=\"ptnt-rsdnc-cd-00\"> </a></td><td>Not specified, other patient residence not identified below</td><td>Not specified, other patient residence not identified below</td></tr><tr><td>01<a name=\"ptnt-rsdnc-cd-01\"> </a></td><td>Home</td><td>Home</td></tr><tr><td>02<a name=\"ptnt-rsdnc-cd-02\"> </a></td><td>Skilled Nursing Facility</td><td>Skilled Nursing Facility</td></tr><tr><td>03<a name=\"ptnt-rsdnc-cd-03\"> </a></td><td>Nursing facility (long-term care facility)</td><td>Nursing facility (long-term care facility)</td></tr><tr><td>04<a name=\"ptnt-rsdnc-cd-04\"> </a></td><td>Assisted living facility</td><td>Assisted living facility</td></tr><tr><td>05<a name=\"ptnt-rsdnc-cd-05\"> </a></td><td>Custodial Care Facility (residential but not medical care)</td><td>Custodial Care Facility (residential but not medical care)</td></tr><tr><td>06<a name=\"ptnt-rsdnc-cd-06\"> </a></td><td>Group home (e.g., congregate residential foster care)</td><td>Group home (e.g., congregate residential foster care)</td></tr><tr><td>07<a name=\"ptnt-rsdnc-cd-07\"> </a></td><td>Inpatient Psychiatric Facility</td><td>Inpatient Psychiatric Facility</td></tr><tr><td>08<a name=\"ptnt-rsdnc-cd-08\"> </a></td><td>Psychiatric Facility – Partial Hospitalization</td><td>Psychiatric Facility – Partial Hospitalization</td></tr><tr><td>09<a name=\"ptnt-rsdnc-cd-09\"> </a></td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td></tr><tr><td>10<a name=\"ptnt-rsdnc-cd-10\"> </a></td><td>Residential Substance Abuse Treatment Facility</td><td>Residential Substance Abuse Treatment Facility</td></tr><tr><td>11<a name=\"ptnt-rsdnc-cd-11\"> </a></td><td>Hospice</td><td>Hospice</td></tr><tr><td>12<a name=\"ptnt-rsdnc-cd-12\"> </a></td><td>Psychiatric Residential Treatment Facility</td><td>Psychiatric Residential Treatment Facility</td></tr><tr><td>13<a name=\"ptnt-rsdnc-cd-13\"> </a></td><td>Comprehensive Inpatient Rehabilitation Facility</td><td>Comprehensive Inpatient Rehabilitation Facility</td></tr><tr><td>14<a name=\"ptnt-rsdnc-cd-14\"> </a></td><td>Homeless Shelter</td><td>Homeless Shelter</td></tr><tr><td>15<a name=\"ptnt-rsdnc-cd-15\"> </a></td><td>Correctional Institution</td><td>Correctional Institution</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient Residence Code</h2><div><p>This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt<em>rsdnc</em>cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>00<a name=\"ptnt-rsdnc-cd-00\"> </a></td><td>Not specified, other patient residence not identified below</td><td>Not specified, other patient residence not identified below</td></tr><tr><td>01<a name=\"ptnt-rsdnc-cd-01\"> </a></td><td>Home</td><td>Home</td></tr><tr><td>02<a name=\"ptnt-rsdnc-cd-02\"> </a></td><td>Skilled Nursing Facility</td><td>Skilled Nursing Facility</td></tr><tr><td>03<a name=\"ptnt-rsdnc-cd-03\"> </a></td><td>Nursing facility (long-term care facility)</td><td>Nursing facility (long-term care facility)</td></tr><tr><td>04<a name=\"ptnt-rsdnc-cd-04\"> </a></td><td>Assisted living facility</td><td>Assisted living facility</td></tr><tr><td>05<a name=\"ptnt-rsdnc-cd-05\"> </a></td><td>Custodial Care Facility (residential but not medical care)</td><td>Custodial Care Facility (residential but not medical care)</td></tr><tr><td>06<a name=\"ptnt-rsdnc-cd-06\"> </a></td><td>Group home (e.g., congregate residential foster care)</td><td>Group home (e.g., congregate residential foster care)</td></tr><tr><td>07<a name=\"ptnt-rsdnc-cd-07\"> </a></td><td>Inpatient Psychiatric Facility</td><td>Inpatient Psychiatric Facility</td></tr><tr><td>08<a name=\"ptnt-rsdnc-cd-08\"> </a></td><td>Psychiatric Facility – Partial Hospitalization</td><td>Psychiatric Facility – Partial Hospitalization</td></tr><tr><td>09<a name=\"ptnt-rsdnc-cd-09\"> </a></td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td><td>Intermediate care facility for the mentally retarded (ICF/MR)</td></tr><tr><td>10<a name=\"ptnt-rsdnc-cd-10\"> </a></td><td>Residential Substance Abuse Treatment Facility</td><td>Residential Substance Abuse Treatment Facility</td></tr><tr><td>11<a name=\"ptnt-rsdnc-cd-11\"> </a></td><td>Hospice</td><td>Hospice</td></tr><tr><td>12<a name=\"ptnt-rsdnc-cd-12\"> </a></td><td>Psychiatric Residential Treatment Facility</td><td>Psychiatric Residential Treatment Facility</td></tr><tr><td>13<a name=\"ptnt-rsdnc-cd-13\"> </a></td><td>Comprehensive Inpatient Rehabilitation Facility</td><td>Comprehensive Inpatient Rehabilitation Facility</td></tr><tr><td>14<a name=\"ptnt-rsdnc-cd-14\"> </a></td><td>Homeless Shelter</td><td>Homeless Shelter</td></tr><tr><td>15<a name=\"ptnt-rsdnc-cd-15\"> </a></td><td>Correctional Institution</td><td>Correctional Institution</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "/assets/ig/CodeSystem-ptnt-rsdnc-cd"];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd"];
   fhir:CodeSystem.identifier [
-     fhir:Identifier.value [ fhir:value "/assets/ig/CodeSystem-ptnt-rsdnc-cd" ]
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd" ]
   ];
   fhir:CodeSystem.version [ fhir:value "1.1.0"];
   fhir:CodeSystem.name [ fhir:value "Patient Residence Code"];
   fhir:CodeSystem.title [ fhir:value "Patient Residence Code"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:CodeSystem.description [ fhir:value "This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt_rsdnc_cd"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
-  fhir:CodeSystem.valueSet [ fhir:value "/assets/ig/ValueSet-ptnt-rsdnc-cd"];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-rsdnc-cd"];
   fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.concept [
@@ -110,9 +110,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-</assets/ig/CodeSystem-ptnt-rsdnc-cd.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-ptnt-rsdnc-cd.ttl> .
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/ptnt-rsdnc-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

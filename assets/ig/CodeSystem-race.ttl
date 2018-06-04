@@ -1,29 +1,29 @@
-@prefix fhir: </assets/ig/> .
+@prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
 
-</assets/ig/CodeSystem-race> a fhir:CodeSystem;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-race> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "race"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Race Codes</h2><div><p>Blue Button Race Codes. Source: (https://bluebutton.cms.gov/resources/variables/race/)</p>\n</div><p>This code system /assets/ig/CodeSystem-race defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"race-0\"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td>1<a name=\"race-1\"> </a></td><td>White</td><td>White</td></tr><tr><td>2<a name=\"race-2\"> </a></td><td>Black</td><td>Black</td></tr><tr><td>3<a name=\"race-3\"> </a></td><td>Other</td><td>Other</td></tr><tr><td>4<a name=\"race-4\"> </a></td><td>Asian</td><td>Asian</td></tr><tr><td>5<a name=\"race-5\"> </a></td><td>Hispanic</td><td>Hispanic</td></tr><tr><td>6<a name=\"race-6\"> </a></td><td>North American Native</td><td>North American Native</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Race Codes</h2><div><p>Blue Button Race Codes. Source: (https://bluebutton.cms.gov/resources/variables/race/)</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-race defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"race-0\"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td>1<a name=\"race-1\"> </a></td><td>White</td><td>White</td></tr><tr><td>2<a name=\"race-2\"> </a></td><td>Black</td><td>Black</td></tr><tr><td>3<a name=\"race-3\"> </a></td><td>Other</td><td>Other</td></tr><tr><td>4<a name=\"race-4\"> </a></td><td>Asian</td><td>Asian</td></tr><tr><td>5<a name=\"race-5\"> </a></td><td>Hispanic</td><td>Hispanic</td></tr><tr><td>6<a name=\"race-6\"> </a></td><td>North American Native</td><td>North American Native</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "/assets/ig/CodeSystem-race"];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-race"];
   fhir:CodeSystem.identifier [
-     fhir:Identifier.value [ fhir:value "/assets/ig/CodeSystem-race" ]
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-race" ]
   ];
   fhir:CodeSystem.version [ fhir:value "1.1.0"];
   fhir:CodeSystem.name [ fhir:value "Race Codes"];
   fhir:CodeSystem.title [ fhir:value "Race Codes"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:CodeSystem.description [ fhir:value "Blue Button Race Codes. Source: (https://bluebutton.cms.gov/resources/variables/race/)"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
-  fhir:CodeSystem.valueSet [ fhir:value "/assets/ig/ValueSet-race"];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-race"];
   fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.count [ fhir:value "7"^^xsd:nonNegativeInteger];
@@ -66,9 +66,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-</assets/ig/CodeSystem-race.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-race.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-race.ttl> .
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/race.ttl> .
 
 # -------------------------------------------------------------------------------------
 

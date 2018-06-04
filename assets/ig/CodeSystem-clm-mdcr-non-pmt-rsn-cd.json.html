@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -111,267 +116,267 @@ Raw <a href="CodeSystem-clm-mdcr-non-pmt-rsn-cd.json" download>json</a>
 
 <pre class="json">
 {
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "clm-mdcr-non-pmt-rsn-cd",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Claim Medicare Non Payment Reason Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The reason that no Medicare payment is made for services on an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm&lt;em&gt;mdcr&lt;/em&gt;non&lt;em&gt;pmt&lt;/em&gt;rsn_cd&lt;/p&gt;
-&lt;/div&gt;&lt;p&gt;This code system /assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Covered worker's compensation (Obsolete)&lt;/td&gt;&lt;td&gt;Covered worker's compensation (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Benefit exhausted&lt;/td&gt;&lt;td&gt;Benefit exhausted&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Custodial care – non-covered care (includes all 'beneficiary at fault' waiver cases) (Obsolete)&lt;/td&gt;&lt;td&gt;Custodial care – non-covered care (includes all 'beneficiary at fault' waiver cases) (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HMO out-of-plan services not emergency or urgently needed (Obsolete)&lt;/td&gt;&lt;td&gt;HMO out-of-plan services not emergency or urgently needed (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoid HMO Rate Cell (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoid HMO Rate Cell (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;G&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided Litigation Settlement (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided Litigation Settlement (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;H&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-H&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided Employer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided Employer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-J&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-K&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-N&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;All other reasons for non-payment&lt;/td&gt;&lt;td&gt;All other reasons for non-payment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-P&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Payment requested&lt;/td&gt;&lt;td&gt;Payment requested&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Q&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-Q&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided Voluntary Agreement (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided Voluntary Agreement (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;R&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-R&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Benefits refused, or evidence not submitted&lt;/td&gt;&lt;td&gt;Benefits refused, or evidence not submitted&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-T&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;U&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-U&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;V&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-V&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;W&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-W&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Worker's compensation (Obsolete)&lt;/td&gt;&lt;td&gt;Worker's compensation (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;X&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-X&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - generic&lt;/td&gt;&lt;td&gt;MSP cost avoided - generic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-Y&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-Z&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)&lt;/td&gt;&lt;td&gt;Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-00&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-12&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - BCBS Voluntary Agreements&lt;/td&gt;&lt;td&gt;MSP cost avoided - BCBS Voluntary Agreements&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-13&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-14&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-15&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-16&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-17&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-18&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-19&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-21&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-22&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-25&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-26&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;42&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-42&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;43&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-43&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp;amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp;amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;!&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.33&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor ('00' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor ('00' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;@&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.64&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - BC/BS Voluntary Agreements ('12' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - BC/BS Voluntary Agreements ('12' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;#&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management ('13' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management ('13' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;$&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.36&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch ('14' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch ('14' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.42&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) ('15' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) ('15' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;(&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.40&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA ('16' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA ('16' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;)&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.41&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA ('17' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA ('17' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;+&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.43&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement ('18' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement ('18' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;lt;&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.60&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan ('21' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan ('21' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;gt;&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.62&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan ('22' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan ('22' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.37&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California ('25' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California ('25' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;amp;&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.38&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida ('26' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida ('26' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "clm-mdcr-non-pmt-rsn-cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Claim Medicare Non Payment Reason Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The reason that no Medicare payment is made for services on an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm&lt;em&gt;mdcr&lt;/em&gt;non&lt;em&gt;pmt&lt;/em&gt;rsn_cd&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Covered worker's compensation (Obsolete)&lt;/td&gt;&lt;td&gt;Covered worker's compensation (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Benefit exhausted&lt;/td&gt;&lt;td&gt;Benefit exhausted&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Custodial care – non-covered care (includes all 'beneficiary at fault' waiver cases) (Obsolete)&lt;/td&gt;&lt;td&gt;Custodial care – non-covered care (includes all 'beneficiary at fault' waiver cases) (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HMO out-of-plan services not emergency or urgently needed (Obsolete)&lt;/td&gt;&lt;td&gt;HMO out-of-plan services not emergency or urgently needed (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoid HMO Rate Cell (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoid HMO Rate Cell (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;G&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided Litigation Settlement (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided Litigation Settlement (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;H&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-H&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided Employer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided Employer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-J&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-K&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-N&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;All other reasons for non-payment&lt;/td&gt;&lt;td&gt;All other reasons for non-payment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-P&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Payment requested&lt;/td&gt;&lt;td&gt;Payment requested&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Q&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-Q&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided Voluntary Agreement (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided Voluntary Agreement (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;R&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-R&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Benefits refused, or evidence not submitted&lt;/td&gt;&lt;td&gt;Benefits refused, or evidence not submitted&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-T&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;U&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-U&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;V&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-V&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;W&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-W&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Worker's compensation (Obsolete)&lt;/td&gt;&lt;td&gt;Worker's compensation (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;X&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-X&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - generic&lt;/td&gt;&lt;td&gt;MSP cost avoided - generic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-Y&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-Z&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)&lt;/td&gt;&lt;td&gt;Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-00&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-12&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - BCBS Voluntary Agreements&lt;/td&gt;&lt;td&gt;MSP cost avoided - BCBS Voluntary Agreements&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-13&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-14&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-15&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-16&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-17&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-18&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-19&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-21&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-22&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-25&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-26&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;42&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-42&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;43&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-43&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp;amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp;amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;!&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.33&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor ('00' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor ('00' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;@&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.64&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - BC/BS Voluntary Agreements ('12' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - BC/BS Voluntary Agreements ('12' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;#&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management ('13' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management ('13' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;$&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.36&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch ('14' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch ('14' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.42&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) ('15' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) ('15' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;(&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.40&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA ('16' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA ('16' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;)&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.41&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA ('17' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA ('17' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;+&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.43&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement ('18' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement ('18' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;lt;&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.60&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan ('21' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan ('21' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;gt;&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.62&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan ('22' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan ('22' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.37&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California ('25' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California ('25' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;amp;&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.38&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida ('26' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida ('26' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd"
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd"
   },
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.0",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Claim Medicare Non Payment Reason Code",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Claim Medicare Non Payment Reason Code",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-05-07T14:45:05+00:00",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "The reason that no Medicare payment is made for services on an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm_mdcr_non_pmt_rsn_cd",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "/assets/ig/ValueSet-clm-mdcr-non-pmt-rsn-cd",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.0",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Claim Medicare Non Payment Reason Code",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Claim Medicare Non Payment Reason Code",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-05-31T14:39:32+00:00",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "The reason that no Medicare payment is made for services on an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm_mdcr_non_pmt_rsn_cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-mdcr-non-pmt-rsn-cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Covered worker's compensation (Obsolete)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Covered worker's compensation (Obsolete)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Covered worker's compensation (Obsolete)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Covered worker's compensation (Obsolete)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Benefit exhausted",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Benefit exhausted"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Benefit exhausted",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Benefit exhausted"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Custodial care – non-covered care (includes all 'beneficiary at fault' waiver cases) (Obsolete)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Custodial care – non-covered care (includes all 'beneficiary at fault' waiver cases) (Obsolete)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Custodial care – non-covered care (includes all 'beneficiary at fault' waiver cases) (Obsolete)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Custodial care – non-covered care (includes all 'beneficiary at fault' waiver cases) (Obsolete)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "HMO out-of-plan services not emergency or urgently needed (Obsolete)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "HMO out-of-plan services not emergency or urgently needed (Obsolete)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "HMO out-of-plan services not emergency or urgently needed (Obsolete)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "HMO out-of-plan services not emergency or urgently needed (Obsolete)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "F",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoid HMO Rate Cell (eff. 7/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoid HMO Rate Cell (eff. 7/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "F",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoid HMO Rate Cell (eff. 7/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoid HMO Rate Cell (eff. 7/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "G",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided Litigation Settlement (eff. 7/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided Litigation Settlement (eff. 7/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "G",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided Litigation Settlement (eff. 7/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided Litigation Settlement (eff. 7/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "H",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided Employer Voluntary Reporting (eff. 7/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided Employer Voluntary Reporting (eff. 7/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "H",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided Employer Voluntary Reporting (eff. 7/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided Employer Voluntary Reporting (eff. 7/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "J",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "J",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "K",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "K",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "N",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "All other reasons for non-payment",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "All other reasons for non-payment"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "N",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "All other reasons for non-payment",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "All other reasons for non-payment"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Payment requested",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Payment requested"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Payment requested",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Payment requested"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Q",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided Voluntary Agreement (eff. 7/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided Voluntary Agreement (eff. 7/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Q",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided Voluntary Agreement (eff. 7/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided Voluntary Agreement (eff. 7/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "R",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Benefits refused, or evidence not submitted",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Benefits refused, or evidence not submitted"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "R",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Benefits refused, or evidence not submitted",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Benefits refused, or evidence not submitted"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "U",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "U",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "V",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "V",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "W",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Worker's compensation (Obsolete)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Worker's compensation (Obsolete)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "W",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Worker's compensation (Obsolete)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Worker's compensation (Obsolete)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "X",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - generic",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - generic"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "X",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - generic",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - generic"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Y",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Y",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Z",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Z",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "00",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - COB Contractor",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - COB Contractor"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "00",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - COB Contractor",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - COB Contractor"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "12",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - BCBS Voluntary Agreements",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - BCBS Voluntary Agreements"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "12",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - BCBS Voluntary Agreements",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - BCBS Voluntary Agreements"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "13",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Office of Personnel Management",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Office of Personnel Management"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "13",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Office of Personnel Management",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Office of Personnel Management"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "14",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Workman's Compensation (WC) Datamatch",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Workman's Compensation (WC) Datamatch"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "14",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Workman's Compensation (WC) Datamatch",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Workman's Compensation (WC) Datamatch"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "15",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "15",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "16",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "16",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "17",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "17",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "18",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "18",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "19",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "19",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "21",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - MIR Group Health Plan (eff. 1/2009)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - MIR Group Health Plan (eff. 1/2009)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "21",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - MIR Group Health Plan (eff. 1/2009)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - MIR Group Health Plan (eff. 1/2009)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "22",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "22",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "25",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "25",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "26",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "26",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "42",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "42",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "43",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code."
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "43",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code."
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "!",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - COB Contractor ('00' 2-byte code)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - COB Contractor ('00' 2-byte code)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "!",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - COB Contractor ('00' 2-byte code)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - COB Contractor ('00' 2-byte code)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "@",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - BC/BS Voluntary Agreements ('12' 2-byte code)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - BC/BS Voluntary Agreements ('12' 2-byte code)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "@",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - BC/BS Voluntary Agreements ('12' 2-byte code)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - BC/BS Voluntary Agreements ('12' 2-byte code)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "#",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Office of Personnel Management ('13' 2-byte code)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Office of Personnel Management ('13' 2-byte code)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "#",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Office of Personnel Management ('13' 2-byte code)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Office of Personnel Management ('13' 2-byte code)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "$",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Workman's Compensation (WC) Datamatch ('14' 2-byte code)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Workman's Compensation (WC) Datamatch ('14' 2-byte code)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "$",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Workman's Compensation (WC) Datamatch ('14' 2-byte code)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Workman's Compensation (WC) Datamatch ('14' 2-byte code)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "*",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) ('15' 2-byte code) (eff. 4/2006)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) ('15' 2-byte code) (eff. 4/2006)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "*",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) ('15' 2-byte code) (eff. 4/2006)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) ('15' 2-byte code) (eff. 4/2006)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "(",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Liability Insurer VDSA ('16' 2-byte code) (eff. 4/2006)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Liability Insurer VDSA ('16' 2-byte code) (eff. 4/2006)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "(",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Liability Insurer VDSA ('16' 2-byte code) (eff. 4/2006)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Liability Insurer VDSA ('16' 2-byte code) (eff. 4/2006)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : ")",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - No-Fault Insurer VDSA ('17' 2-byte code) (eff. 4/2006)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - No-Fault Insurer VDSA ('17' 2-byte code) (eff. 4/2006)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : ")",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - No-Fault Insurer VDSA ('17' 2-byte code) (eff. 4/2006)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - No-Fault Insurer VDSA ('17' 2-byte code) (eff. 4/2006)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "+",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement ('18' 2-byte code) (eff. 4/2006)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement ('18' 2-byte code) (eff. 4/2006)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "+",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement ('18' 2-byte code) (eff. 4/2006)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement ('18' 2-byte code) (eff. 4/2006)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "&lt;",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - MIR Group Health Plan ('21' 2-byte code) (eff. 1/2009)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - MIR Group Health Plan ('21' 2-byte code) (eff. 1/2009)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "&lt;",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - MIR Group Health Plan ('21' 2-byte code) (eff. 1/2009)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - MIR Group Health Plan ('21' 2-byte code) (eff. 1/2009)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "&gt;",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - MIR non-Group Health Plan ('22' 2-byte code) (eff. 1/2009)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - MIR non-Group Health Plan ('22' 2-byte code) (eff. 1/2009)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "&gt;",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - MIR non-Group Health Plan ('22' 2-byte code) (eff. 1/2009)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - MIR non-Group Health Plan ('22' 2-byte code) (eff. 1/2009)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "%",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Recovery Audit Contractor - California ('25' 2-byte code) (eff. 10/2005)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Recovery Audit Contractor - California ('25' 2-byte code) (eff. 10/2005)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "%",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Recovery Audit Contractor - California ('25' 2-byte code) (eff. 10/2005)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Recovery Audit Contractor - California ('25' 2-byte code) (eff. 10/2005)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "&amp;",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Recovery Audit Contractor - Florida ('26' 2-byte code) (eff. 10/2005)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Recovery Audit Contractor - Florida ('26' 2-byte code) (eff. 10/2005)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "&amp;",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "MSP cost avoided - Recovery Audit Contractor - Florida ('26' 2-byte code) (eff. 10/2005)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "MSP cost avoided - Recovery Audit Contractor - Florida ('26' 2-byte code) (eff. 10/2005)"
     }
   ]
 }</pre>
@@ -405,9 +410,9 @@ Raw <a href="CodeSystem-clm-mdcr-non-pmt-rsn-cd.json" download>json</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

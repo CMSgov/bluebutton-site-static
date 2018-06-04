@@ -6,15 +6,15 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Inpatient Admission Type Code</h2><div><p>The code indicating the type and priority of an inpatient admission associated with the service on an intermediary submitted claim. Source: https://bluebutton.cms.gov/resources/variables/clm<em>ip</em>admsn<em>type</em>cd</p>
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-clm-ip-admsn-type-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-ip-admsn-type-cd</code></a></li></ul></div>
   </text>
-  <url value="/assets/ig/ValueSet-clm-ip-admsn-type-cd"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-clm-ip-admsn-type-cd"/>
   <version value="1.1.0"/>
   <name value="Claim Inpatient Admission Type Code"/>
   <status value="draft"/>
-  <date value="2018-05-07T14:45:05+00:00"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
   <description value="The code indicating the type and priority of an inpatient admission associated with the service on an intermediary submitted claim. Source: https://bluebutton.cms.gov/resources/variables/clm_ip_admsn_type_cd"/>
   <compose>
     <include>
-      <system value="/assets/ig/CodeSystem-clm-ip-admsn-type-cd"/>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-ip-admsn-type-cd"/>
     </include>
   </compose>
 </ValueSet>

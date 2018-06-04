@@ -3,18 +3,18 @@
   "id": "betos-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Berenson-Eggers Type of Service (BETOS) Code</h2><div><p>The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-betos-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Berenson-Eggers Type of Service (BETOS) Code</h2><div><p>The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/betos-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd</code></a></li></ul></div>"
   },
-  "url": "/assets/ig/ValueSet-betos-cd",
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-betos-cd",
   "version": "1.1.0",
   "name": "Line Berenson-Eggers Type of Service (BETOS) Code",
   "status": "draft",
-  "date": "2018-05-07T14:45:05+00:00",
+  "date": "2018-05-31T14:39:32+00:00",
   "description": "The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd",
   "compose": {
     "include": [
       {
-        "system": "/assets/ig/CodeSystem-betos-cd"
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd"
       }
     ]
   }

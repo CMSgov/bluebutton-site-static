@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -111,557 +116,557 @@ Raw <a href="CodeSystem-betos-cd.json" download>json</a>
 
 <pre class="json">
 {
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "betos-cd",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Line Berenson-Eggers Type of Service (BETOS) Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd&lt;/p&gt;
-&lt;/div&gt;&lt;p&gt;This code system /assets/ig/CodeSystem-betos-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M1A&lt;a name=&quot;betos-cd-M1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Office visits - new&lt;/td&gt;&lt;td&gt;Office visits - new&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M1B&lt;a name=&quot;betos-cd-M1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Office visits - established&lt;/td&gt;&lt;td&gt;Office visits - established&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M2A&lt;a name=&quot;betos-cd-M2A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital visit - initial&lt;/td&gt;&lt;td&gt;Hospital visit - initial&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M2B&lt;a name=&quot;betos-cd-M2B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital visit - subsequent&lt;/td&gt;&lt;td&gt;Hospital visit - subsequent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M2C&lt;a name=&quot;betos-cd-M2C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital visit - critical care&lt;/td&gt;&lt;td&gt;Hospital visit - critical care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M3&lt;a name=&quot;betos-cd-M3&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency room visit&lt;/td&gt;&lt;td&gt;Emergency room visit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M4A&lt;a name=&quot;betos-cd-M4A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Home visit&lt;/td&gt;&lt;td&gt;Home visit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M4B&lt;a name=&quot;betos-cd-M4B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nursing home visit&lt;/td&gt;&lt;td&gt;Nursing home visit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M5A&lt;a name=&quot;betos-cd-M5A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Specialist - pathology&lt;/td&gt;&lt;td&gt;Specialist - pathology&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M5B&lt;a name=&quot;betos-cd-M5B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Specialist - psychiatry&lt;/td&gt;&lt;td&gt;Specialist - psychiatry&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M5C&lt;a name=&quot;betos-cd-M5C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Specialist - ophthalmology&lt;/td&gt;&lt;td&gt;Specialist - ophthalmology&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M5D&lt;a name=&quot;betos-cd-M5D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Specialist - other&lt;/td&gt;&lt;td&gt;Specialist - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M6&lt;a name=&quot;betos-cd-M6&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Consultations&lt;/td&gt;&lt;td&gt;Consultations&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P0&lt;a name=&quot;betos-cd-P0&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Anesthesia&lt;/td&gt;&lt;td&gt;Anesthesia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1A&lt;a name=&quot;betos-cd-P1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - breast&lt;/td&gt;&lt;td&gt;Major procedure - breast&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1B&lt;a name=&quot;betos-cd-P1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - colectomy&lt;/td&gt;&lt;td&gt;Major procedure - colectomy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1C&lt;a name=&quot;betos-cd-P1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - cholecystectomy&lt;/td&gt;&lt;td&gt;Major procedure - cholecystectomy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1D&lt;a name=&quot;betos-cd-P1D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - turp&lt;/td&gt;&lt;td&gt;Major procedure - turp&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1E&lt;a name=&quot;betos-cd-P1E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - hysterectomy&lt;/td&gt;&lt;td&gt;Major procedure - hysterectomy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1F&lt;a name=&quot;betos-cd-P1F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - explor/decompr/excisdisc&lt;/td&gt;&lt;td&gt;Major procedure - explor/decompr/excisdisc&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1G&lt;a name=&quot;betos-cd-P1G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - Other&lt;/td&gt;&lt;td&gt;Major procedure - Other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2A&lt;a name=&quot;betos-cd-P2A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-CABG&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-CABG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2B&lt;a name=&quot;betos-cd-P2B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Aneurysm repair&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Aneurysm repair&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2C&lt;a name=&quot;betos-cd-P2C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major Procedure, cardiovascular-Thromboendarterectomy&lt;/td&gt;&lt;td&gt;Major Procedure, cardiovascular-Thromboendarterectomy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2D&lt;a name=&quot;betos-cd-P2D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascualr-Coronary angioplasty (PTCA)&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascualr-Coronary angioplasty (PTCA)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2E&lt;a name=&quot;betos-cd-P2E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Pacemaker insertion&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Pacemaker insertion&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2F&lt;a name=&quot;betos-cd-P2F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Other&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P3A&lt;a name=&quot;betos-cd-P3A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Hip fracture repair&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Hip fracture repair&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P3B&lt;a name=&quot;betos-cd-P3B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Hip replacement&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Hip replacement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P3C&lt;a name=&quot;betos-cd-P3C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Knee replacement&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Knee replacement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P3D&lt;a name=&quot;betos-cd-P3D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - other&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P4A&lt;a name=&quot;betos-cd-P4A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eye procedure - corneal transplant&lt;/td&gt;&lt;td&gt;Eye procedure - corneal transplant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P4B&lt;a name=&quot;betos-cd-P4B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eye procedure - cataract removal/lens insertion&lt;/td&gt;&lt;td&gt;Eye procedure - cataract removal/lens insertion&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P4C&lt;a name=&quot;betos-cd-P4C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eye procedure - retinal detachment&lt;/td&gt;&lt;td&gt;Eye procedure - retinal detachment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P4D&lt;a name=&quot;betos-cd-P4D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eye procedure - treatment of retinal lesions&lt;/td&gt;&lt;td&gt;Eye procedure - treatment of retinal lesions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P4E&lt;a name=&quot;betos-cd-P4E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eye procedure - other&lt;/td&gt;&lt;td&gt;Eye procedure - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P5A&lt;a name=&quot;betos-cd-P5A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatory procedures - skin&lt;/td&gt;&lt;td&gt;Ambulatory procedures - skin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P5B&lt;a name=&quot;betos-cd-P5B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatory procedures - musculoskeletal&lt;/td&gt;&lt;td&gt;Ambulatory procedures - musculoskeletal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P5C&lt;a name=&quot;betos-cd-P5C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatory procedures - inguinal hernia repair&lt;/td&gt;&lt;td&gt;Ambulatory procedures - inguinal hernia repair&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P5D&lt;a name=&quot;betos-cd-P5D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatory procedures - lithotripsy&lt;/td&gt;&lt;td&gt;Ambulatory procedures - lithotripsy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P5E&lt;a name=&quot;betos-cd-P5E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatory procedures - other&lt;/td&gt;&lt;td&gt;Ambulatory procedures - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P6A&lt;a name=&quot;betos-cd-P6A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minor procedures - skin&lt;/td&gt;&lt;td&gt;Minor procedures - skin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P6B&lt;a name=&quot;betos-cd-P6B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minor procedures - musculoskeletal&lt;/td&gt;&lt;td&gt;Minor procedures - musculoskeletal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P6C&lt;a name=&quot;betos-cd-P6C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minor procedures - other (Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Minor procedures - other (Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P6D&lt;a name=&quot;betos-cd-P6D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minor procedures - other (non-Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Minor procedures - other (non-Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P7A&lt;a name=&quot;betos-cd-P7A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oncology - radiation therapy&lt;/td&gt;&lt;td&gt;Oncology - radiation therapy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P7B&lt;a name=&quot;betos-cd-P7B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oncology - other&lt;/td&gt;&lt;td&gt;Oncology - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8A&lt;a name=&quot;betos-cd-P8A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - arthroscopy&lt;/td&gt;&lt;td&gt;Endoscopy - arthroscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8B&lt;a name=&quot;betos-cd-P8B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - upper gastrointestinal&lt;/td&gt;&lt;td&gt;Endoscopy - upper gastrointestinal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8C&lt;a name=&quot;betos-cd-P8C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - sigmoidoscopy&lt;/td&gt;&lt;td&gt;Endoscopy - sigmoidoscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8D&lt;a name=&quot;betos-cd-P8D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - colonoscopy&lt;/td&gt;&lt;td&gt;Endoscopy - colonoscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8E&lt;a name=&quot;betos-cd-P8E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - cystoscopy&lt;/td&gt;&lt;td&gt;Endoscopy - cystoscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8F&lt;a name=&quot;betos-cd-P8F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - bronchoscopy&lt;/td&gt;&lt;td&gt;Endoscopy - bronchoscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8G&lt;a name=&quot;betos-cd-P8G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - laparoscopic cholecystectomy&lt;/td&gt;&lt;td&gt;Endoscopy - laparoscopic cholecystectomy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8H&lt;a name=&quot;betos-cd-P8H&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - laryngoscopy&lt;/td&gt;&lt;td&gt;Endoscopy - laryngoscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8I&lt;a name=&quot;betos-cd-P8I&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - other&lt;/td&gt;&lt;td&gt;Endoscopy - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P9A&lt;a name=&quot;betos-cd-P9A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dialysis services (Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Dialysis services (Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P9B&lt;a name=&quot;betos-cd-P9B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dialysis services (non-Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Dialysis services (non-Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1A&lt;a name=&quot;betos-cd-I1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - chest&lt;/td&gt;&lt;td&gt;Standard imaging - chest&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1B&lt;a name=&quot;betos-cd-I1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - musculoskeletal&lt;/td&gt;&lt;td&gt;Standard imaging - musculoskeletal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1C&lt;a name=&quot;betos-cd-I1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - breast&lt;/td&gt;&lt;td&gt;Standard imaging - breast&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1D&lt;a name=&quot;betos-cd-I1D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - contrast gastrointestinal&lt;/td&gt;&lt;td&gt;Standard imaging - contrast gastrointestinal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1E&lt;a name=&quot;betos-cd-I1E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - nuclear medicine&lt;/td&gt;&lt;td&gt;Standard imaging - nuclear medicine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1F&lt;a name=&quot;betos-cd-I1F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - other&lt;/td&gt;&lt;td&gt;Standard imaging - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I2A&lt;a name=&quot;betos-cd-I2A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Advanced imaging - CAT/CT/CTA: brain/head/neck&lt;/td&gt;&lt;td&gt;Advanced imaging - CAT/CT/CTA: brain/head/neck&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I2B&lt;a name=&quot;betos-cd-I2B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Advanced imaging - CAT/CT/CTA: other&lt;/td&gt;&lt;td&gt;Advanced imaging - CAT/CT/CTA: other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I2C&lt;a name=&quot;betos-cd-I2C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Advanced imaging - MRI/MRA: brain/head/neck&lt;/td&gt;&lt;td&gt;Advanced imaging - MRI/MRA: brain/head/neck&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I2D&lt;a name=&quot;betos-cd-I2D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Advanced imaging - MRI/MRA: other&lt;/td&gt;&lt;td&gt;Advanced imaging - MRI/MRA: other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3A&lt;a name=&quot;betos-cd-I3A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - eye&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - eye&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3B&lt;a name=&quot;betos-cd-I3B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - abdomen/pelvis&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - abdomen/pelvis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3C&lt;a name=&quot;betos-cd-I3C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - heart&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - heart&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3D&lt;a name=&quot;betos-cd-I3D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - carotid arteries&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - carotid arteries&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3E&lt;a name=&quot;betos-cd-I3E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - prostate, transrectal&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - prostate, transrectal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3F&lt;a name=&quot;betos-cd-I3F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - other&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I4A&lt;a name=&quot;betos-cd-I4A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Imaging/procedure - heart including cardiac catheterization&lt;/td&gt;&lt;td&gt;Imaging/procedure - heart including cardiac catheterization&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I4B&lt;a name=&quot;betos-cd-I4B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Imaging/procedure - other&lt;/td&gt;&lt;td&gt;Imaging/procedure - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1A&lt;a name=&quot;betos-cd-T1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - routine venipuncture (non-Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Lab tests - routine venipuncture (non-Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1B&lt;a name=&quot;betos-cd-T1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - automated general profiles&lt;/td&gt;&lt;td&gt;Lab tests - automated general profiles&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1C&lt;a name=&quot;betos-cd-T1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - urinalysis&lt;/td&gt;&lt;td&gt;Lab tests - urinalysis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1D&lt;a name=&quot;betos-cd-T1D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - blood counts&lt;/td&gt;&lt;td&gt;Lab tests - blood counts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1E&lt;a name=&quot;betos-cd-T1E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - glucose&lt;/td&gt;&lt;td&gt;Lab tests - glucose&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1F&lt;a name=&quot;betos-cd-T1F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - bacterial cultures&lt;/td&gt;&lt;td&gt;Lab tests - bacterial cultures&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1G&lt;a name=&quot;betos-cd-T1G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - other (Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Lab tests - other (Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1H&lt;a name=&quot;betos-cd-T1H&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - other (non-Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Lab tests - other (non-Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T2A&lt;a name=&quot;betos-cd-T2A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other tests - electrocardiograms&lt;/td&gt;&lt;td&gt;Other tests - electrocardiograms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T2B&lt;a name=&quot;betos-cd-T2B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other tests - cardiovascular stress tests&lt;/td&gt;&lt;td&gt;Other tests - cardiovascular stress tests&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T2C&lt;a name=&quot;betos-cd-T2C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other tests - EKG monitoring&lt;/td&gt;&lt;td&gt;Other tests - EKG monitoring&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T2D&lt;a name=&quot;betos-cd-T2D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other tests - other&lt;/td&gt;&lt;td&gt;Other tests - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1A&lt;a name=&quot;betos-cd-D1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Medical/surgical supplies&lt;/td&gt;&lt;td&gt;Medical/surgical supplies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1B&lt;a name=&quot;betos-cd-D1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital beds&lt;/td&gt;&lt;td&gt;Hospital beds&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1C&lt;a name=&quot;betos-cd-D1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oxygen and supplies&lt;/td&gt;&lt;td&gt;Oxygen and supplies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1D&lt;a name=&quot;betos-cd-D1D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Wheelchairs&lt;/td&gt;&lt;td&gt;Wheelchairs&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1E&lt;a name=&quot;betos-cd-D1E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other DME&lt;/td&gt;&lt;td&gt;Other DME&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1F&lt;a name=&quot;betos-cd-D1F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Prosthetic/Orthotic devices&lt;/td&gt;&lt;td&gt;Prosthetic/Orthotic devices&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1G&lt;a name=&quot;betos-cd-D1G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Drugs Administered through DME&lt;/td&gt;&lt;td&gt;Drugs Administered through DME&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1A&lt;a name=&quot;betos-cd-O1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulance&lt;/td&gt;&lt;td&gt;Ambulance&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1B&lt;a name=&quot;betos-cd-O1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Chiropractic&lt;/td&gt;&lt;td&gt;Chiropractic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1C&lt;a name=&quot;betos-cd-O1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Enteral and parenteral&lt;/td&gt;&lt;td&gt;Enteral and parenteral&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1D&lt;a name=&quot;betos-cd-O1D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Chemotherapy&lt;/td&gt;&lt;td&gt;Chemotherapy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1E&lt;a name=&quot;betos-cd-O1E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other drugs&lt;/td&gt;&lt;td&gt;Other drugs&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1F&lt;a name=&quot;betos-cd-O1F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hearing and speech services&lt;/td&gt;&lt;td&gt;Hearing and speech services&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1G&lt;a name=&quot;betos-cd-O1G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Immunizations/Vaccinations&lt;/td&gt;&lt;td&gt;Immunizations/Vaccinations&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y1&lt;a name=&quot;betos-cd-Y1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other - Medicare fee schedule&lt;/td&gt;&lt;td&gt;Other - Medicare fee schedule&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y2&lt;a name=&quot;betos-cd-Y2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other - non-Medicare fee schedule&lt;/td&gt;&lt;td&gt;Other - non-Medicare fee schedule&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z1&lt;a name=&quot;betos-cd-Z1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Local codes&lt;/td&gt;&lt;td&gt;Local codes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z2&lt;a name=&quot;betos-cd-Z2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Undefined codes&lt;/td&gt;&lt;td&gt;Undefined codes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "betos-cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Line Berenson-Eggers Type of Service (BETOS) Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M1A&lt;a name=&quot;betos-cd-M1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Office visits - new&lt;/td&gt;&lt;td&gt;Office visits - new&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M1B&lt;a name=&quot;betos-cd-M1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Office visits - established&lt;/td&gt;&lt;td&gt;Office visits - established&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M2A&lt;a name=&quot;betos-cd-M2A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital visit - initial&lt;/td&gt;&lt;td&gt;Hospital visit - initial&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M2B&lt;a name=&quot;betos-cd-M2B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital visit - subsequent&lt;/td&gt;&lt;td&gt;Hospital visit - subsequent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M2C&lt;a name=&quot;betos-cd-M2C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital visit - critical care&lt;/td&gt;&lt;td&gt;Hospital visit - critical care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M3&lt;a name=&quot;betos-cd-M3&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency room visit&lt;/td&gt;&lt;td&gt;Emergency room visit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M4A&lt;a name=&quot;betos-cd-M4A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Home visit&lt;/td&gt;&lt;td&gt;Home visit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M4B&lt;a name=&quot;betos-cd-M4B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nursing home visit&lt;/td&gt;&lt;td&gt;Nursing home visit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M5A&lt;a name=&quot;betos-cd-M5A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Specialist - pathology&lt;/td&gt;&lt;td&gt;Specialist - pathology&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M5B&lt;a name=&quot;betos-cd-M5B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Specialist - psychiatry&lt;/td&gt;&lt;td&gt;Specialist - psychiatry&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M5C&lt;a name=&quot;betos-cd-M5C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Specialist - ophthalmology&lt;/td&gt;&lt;td&gt;Specialist - ophthalmology&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M5D&lt;a name=&quot;betos-cd-M5D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Specialist - other&lt;/td&gt;&lt;td&gt;Specialist - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;M6&lt;a name=&quot;betos-cd-M6&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Consultations&lt;/td&gt;&lt;td&gt;Consultations&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P0&lt;a name=&quot;betos-cd-P0&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Anesthesia&lt;/td&gt;&lt;td&gt;Anesthesia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1A&lt;a name=&quot;betos-cd-P1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - breast&lt;/td&gt;&lt;td&gt;Major procedure - breast&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1B&lt;a name=&quot;betos-cd-P1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - colectomy&lt;/td&gt;&lt;td&gt;Major procedure - colectomy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1C&lt;a name=&quot;betos-cd-P1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - cholecystectomy&lt;/td&gt;&lt;td&gt;Major procedure - cholecystectomy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1D&lt;a name=&quot;betos-cd-P1D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - turp&lt;/td&gt;&lt;td&gt;Major procedure - turp&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1E&lt;a name=&quot;betos-cd-P1E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - hysterectomy&lt;/td&gt;&lt;td&gt;Major procedure - hysterectomy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1F&lt;a name=&quot;betos-cd-P1F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - explor/decompr/excisdisc&lt;/td&gt;&lt;td&gt;Major procedure - explor/decompr/excisdisc&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P1G&lt;a name=&quot;betos-cd-P1G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure - Other&lt;/td&gt;&lt;td&gt;Major procedure - Other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2A&lt;a name=&quot;betos-cd-P2A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-CABG&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-CABG&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2B&lt;a name=&quot;betos-cd-P2B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Aneurysm repair&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Aneurysm repair&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2C&lt;a name=&quot;betos-cd-P2C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major Procedure, cardiovascular-Thromboendarterectomy&lt;/td&gt;&lt;td&gt;Major Procedure, cardiovascular-Thromboendarterectomy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2D&lt;a name=&quot;betos-cd-P2D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascualr-Coronary angioplasty (PTCA)&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascualr-Coronary angioplasty (PTCA)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2E&lt;a name=&quot;betos-cd-P2E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Pacemaker insertion&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Pacemaker insertion&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P2F&lt;a name=&quot;betos-cd-P2F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Other&lt;/td&gt;&lt;td&gt;Major procedure, cardiovascular-Other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P3A&lt;a name=&quot;betos-cd-P3A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Hip fracture repair&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Hip fracture repair&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P3B&lt;a name=&quot;betos-cd-P3B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Hip replacement&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Hip replacement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P3C&lt;a name=&quot;betos-cd-P3C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Knee replacement&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - Knee replacement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P3D&lt;a name=&quot;betos-cd-P3D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - other&lt;/td&gt;&lt;td&gt;Major procedure, orthopedic - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P4A&lt;a name=&quot;betos-cd-P4A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eye procedure - corneal transplant&lt;/td&gt;&lt;td&gt;Eye procedure - corneal transplant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P4B&lt;a name=&quot;betos-cd-P4B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eye procedure - cataract removal/lens insertion&lt;/td&gt;&lt;td&gt;Eye procedure - cataract removal/lens insertion&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P4C&lt;a name=&quot;betos-cd-P4C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eye procedure - retinal detachment&lt;/td&gt;&lt;td&gt;Eye procedure - retinal detachment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P4D&lt;a name=&quot;betos-cd-P4D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eye procedure - treatment of retinal lesions&lt;/td&gt;&lt;td&gt;Eye procedure - treatment of retinal lesions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P4E&lt;a name=&quot;betos-cd-P4E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eye procedure - other&lt;/td&gt;&lt;td&gt;Eye procedure - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P5A&lt;a name=&quot;betos-cd-P5A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatory procedures - skin&lt;/td&gt;&lt;td&gt;Ambulatory procedures - skin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P5B&lt;a name=&quot;betos-cd-P5B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatory procedures - musculoskeletal&lt;/td&gt;&lt;td&gt;Ambulatory procedures - musculoskeletal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P5C&lt;a name=&quot;betos-cd-P5C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatory procedures - inguinal hernia repair&lt;/td&gt;&lt;td&gt;Ambulatory procedures - inguinal hernia repair&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P5D&lt;a name=&quot;betos-cd-P5D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatory procedures - lithotripsy&lt;/td&gt;&lt;td&gt;Ambulatory procedures - lithotripsy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P5E&lt;a name=&quot;betos-cd-P5E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulatory procedures - other&lt;/td&gt;&lt;td&gt;Ambulatory procedures - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P6A&lt;a name=&quot;betos-cd-P6A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minor procedures - skin&lt;/td&gt;&lt;td&gt;Minor procedures - skin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P6B&lt;a name=&quot;betos-cd-P6B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minor procedures - musculoskeletal&lt;/td&gt;&lt;td&gt;Minor procedures - musculoskeletal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P6C&lt;a name=&quot;betos-cd-P6C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minor procedures - other (Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Minor procedures - other (Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P6D&lt;a name=&quot;betos-cd-P6D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Minor procedures - other (non-Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Minor procedures - other (non-Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P7A&lt;a name=&quot;betos-cd-P7A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oncology - radiation therapy&lt;/td&gt;&lt;td&gt;Oncology - radiation therapy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P7B&lt;a name=&quot;betos-cd-P7B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oncology - other&lt;/td&gt;&lt;td&gt;Oncology - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8A&lt;a name=&quot;betos-cd-P8A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - arthroscopy&lt;/td&gt;&lt;td&gt;Endoscopy - arthroscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8B&lt;a name=&quot;betos-cd-P8B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - upper gastrointestinal&lt;/td&gt;&lt;td&gt;Endoscopy - upper gastrointestinal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8C&lt;a name=&quot;betos-cd-P8C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - sigmoidoscopy&lt;/td&gt;&lt;td&gt;Endoscopy - sigmoidoscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8D&lt;a name=&quot;betos-cd-P8D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - colonoscopy&lt;/td&gt;&lt;td&gt;Endoscopy - colonoscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8E&lt;a name=&quot;betos-cd-P8E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - cystoscopy&lt;/td&gt;&lt;td&gt;Endoscopy - cystoscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8F&lt;a name=&quot;betos-cd-P8F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - bronchoscopy&lt;/td&gt;&lt;td&gt;Endoscopy - bronchoscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8G&lt;a name=&quot;betos-cd-P8G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - laparoscopic cholecystectomy&lt;/td&gt;&lt;td&gt;Endoscopy - laparoscopic cholecystectomy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8H&lt;a name=&quot;betos-cd-P8H&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - laryngoscopy&lt;/td&gt;&lt;td&gt;Endoscopy - laryngoscopy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P8I&lt;a name=&quot;betos-cd-P8I&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Endoscopy - other&lt;/td&gt;&lt;td&gt;Endoscopy - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P9A&lt;a name=&quot;betos-cd-P9A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dialysis services (Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Dialysis services (Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P9B&lt;a name=&quot;betos-cd-P9B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dialysis services (non-Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Dialysis services (non-Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1A&lt;a name=&quot;betos-cd-I1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - chest&lt;/td&gt;&lt;td&gt;Standard imaging - chest&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1B&lt;a name=&quot;betos-cd-I1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - musculoskeletal&lt;/td&gt;&lt;td&gt;Standard imaging - musculoskeletal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1C&lt;a name=&quot;betos-cd-I1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - breast&lt;/td&gt;&lt;td&gt;Standard imaging - breast&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1D&lt;a name=&quot;betos-cd-I1D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - contrast gastrointestinal&lt;/td&gt;&lt;td&gt;Standard imaging - contrast gastrointestinal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1E&lt;a name=&quot;betos-cd-I1E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - nuclear medicine&lt;/td&gt;&lt;td&gt;Standard imaging - nuclear medicine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I1F&lt;a name=&quot;betos-cd-I1F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Standard imaging - other&lt;/td&gt;&lt;td&gt;Standard imaging - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I2A&lt;a name=&quot;betos-cd-I2A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Advanced imaging - CAT/CT/CTA: brain/head/neck&lt;/td&gt;&lt;td&gt;Advanced imaging - CAT/CT/CTA: brain/head/neck&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I2B&lt;a name=&quot;betos-cd-I2B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Advanced imaging - CAT/CT/CTA: other&lt;/td&gt;&lt;td&gt;Advanced imaging - CAT/CT/CTA: other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I2C&lt;a name=&quot;betos-cd-I2C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Advanced imaging - MRI/MRA: brain/head/neck&lt;/td&gt;&lt;td&gt;Advanced imaging - MRI/MRA: brain/head/neck&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I2D&lt;a name=&quot;betos-cd-I2D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Advanced imaging - MRI/MRA: other&lt;/td&gt;&lt;td&gt;Advanced imaging - MRI/MRA: other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3A&lt;a name=&quot;betos-cd-I3A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - eye&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - eye&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3B&lt;a name=&quot;betos-cd-I3B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - abdomen/pelvis&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - abdomen/pelvis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3C&lt;a name=&quot;betos-cd-I3C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - heart&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - heart&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3D&lt;a name=&quot;betos-cd-I3D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - carotid arteries&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - carotid arteries&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3E&lt;a name=&quot;betos-cd-I3E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - prostate, transrectal&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - prostate, transrectal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I3F&lt;a name=&quot;betos-cd-I3F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - other&lt;/td&gt;&lt;td&gt;Echography/ultrasonography - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I4A&lt;a name=&quot;betos-cd-I4A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Imaging/procedure - heart including cardiac catheterization&lt;/td&gt;&lt;td&gt;Imaging/procedure - heart including cardiac catheterization&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I4B&lt;a name=&quot;betos-cd-I4B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Imaging/procedure - other&lt;/td&gt;&lt;td&gt;Imaging/procedure - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1A&lt;a name=&quot;betos-cd-T1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - routine venipuncture (non-Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Lab tests - routine venipuncture (non-Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1B&lt;a name=&quot;betos-cd-T1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - automated general profiles&lt;/td&gt;&lt;td&gt;Lab tests - automated general profiles&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1C&lt;a name=&quot;betos-cd-T1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - urinalysis&lt;/td&gt;&lt;td&gt;Lab tests - urinalysis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1D&lt;a name=&quot;betos-cd-T1D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - blood counts&lt;/td&gt;&lt;td&gt;Lab tests - blood counts&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1E&lt;a name=&quot;betos-cd-T1E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - glucose&lt;/td&gt;&lt;td&gt;Lab tests - glucose&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1F&lt;a name=&quot;betos-cd-T1F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - bacterial cultures&lt;/td&gt;&lt;td&gt;Lab tests - bacterial cultures&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1G&lt;a name=&quot;betos-cd-T1G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - other (Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Lab tests - other (Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T1H&lt;a name=&quot;betos-cd-T1H&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lab tests - other (non-Medicare fee schedule)&lt;/td&gt;&lt;td&gt;Lab tests - other (non-Medicare fee schedule)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T2A&lt;a name=&quot;betos-cd-T2A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other tests - electrocardiograms&lt;/td&gt;&lt;td&gt;Other tests - electrocardiograms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T2B&lt;a name=&quot;betos-cd-T2B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other tests - cardiovascular stress tests&lt;/td&gt;&lt;td&gt;Other tests - cardiovascular stress tests&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T2C&lt;a name=&quot;betos-cd-T2C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other tests - EKG monitoring&lt;/td&gt;&lt;td&gt;Other tests - EKG monitoring&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T2D&lt;a name=&quot;betos-cd-T2D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other tests - other&lt;/td&gt;&lt;td&gt;Other tests - other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1A&lt;a name=&quot;betos-cd-D1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Medical/surgical supplies&lt;/td&gt;&lt;td&gt;Medical/surgical supplies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1B&lt;a name=&quot;betos-cd-D1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospital beds&lt;/td&gt;&lt;td&gt;Hospital beds&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1C&lt;a name=&quot;betos-cd-D1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Oxygen and supplies&lt;/td&gt;&lt;td&gt;Oxygen and supplies&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1D&lt;a name=&quot;betos-cd-D1D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Wheelchairs&lt;/td&gt;&lt;td&gt;Wheelchairs&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1E&lt;a name=&quot;betos-cd-D1E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other DME&lt;/td&gt;&lt;td&gt;Other DME&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1F&lt;a name=&quot;betos-cd-D1F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Prosthetic/Orthotic devices&lt;/td&gt;&lt;td&gt;Prosthetic/Orthotic devices&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D1G&lt;a name=&quot;betos-cd-D1G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Drugs Administered through DME&lt;/td&gt;&lt;td&gt;Drugs Administered through DME&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1A&lt;a name=&quot;betos-cd-O1A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ambulance&lt;/td&gt;&lt;td&gt;Ambulance&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1B&lt;a name=&quot;betos-cd-O1B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Chiropractic&lt;/td&gt;&lt;td&gt;Chiropractic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1C&lt;a name=&quot;betos-cd-O1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Enteral and parenteral&lt;/td&gt;&lt;td&gt;Enteral and parenteral&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1D&lt;a name=&quot;betos-cd-O1D&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Chemotherapy&lt;/td&gt;&lt;td&gt;Chemotherapy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1E&lt;a name=&quot;betos-cd-O1E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other drugs&lt;/td&gt;&lt;td&gt;Other drugs&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1F&lt;a name=&quot;betos-cd-O1F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hearing and speech services&lt;/td&gt;&lt;td&gt;Hearing and speech services&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O1G&lt;a name=&quot;betos-cd-O1G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Immunizations/Vaccinations&lt;/td&gt;&lt;td&gt;Immunizations/Vaccinations&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y1&lt;a name=&quot;betos-cd-Y1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other - Medicare fee schedule&lt;/td&gt;&lt;td&gt;Other - Medicare fee schedule&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y2&lt;a name=&quot;betos-cd-Y2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Other - non-Medicare fee schedule&lt;/td&gt;&lt;td&gt;Other - non-Medicare fee schedule&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z1&lt;a name=&quot;betos-cd-Z1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Local codes&lt;/td&gt;&lt;td&gt;Local codes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z2&lt;a name=&quot;betos-cd-Z2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Undefined codes&lt;/td&gt;&lt;td&gt;Undefined codes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "/assets/ig/CodeSystem-betos-cd",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "/assets/ig/CodeSystem-betos-cd"
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd"
   },
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.0",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Line Berenson-Eggers Type of Service (BETOS) Code",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Line Berenson-Eggers Type of Service (BETOS) Code",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-05-07T14:45:05+00:00",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "/assets/ig/ValueSet-betos-cd",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
-  "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.0",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Line Berenson-Eggers Type of Service (BETOS) Code",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Line Berenson-Eggers Type of Service (BETOS) Code",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-05-31T14:39:32+00:00",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "https://bluebutton.cms.gov/assets/ig/ValueSet-betos-cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M1A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Office visits - new",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Office visits - new"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M1A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Office visits - new",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Office visits - new"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M1B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Office visits - established",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Office visits - established"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M1B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Office visits - established",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Office visits - established"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M2A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hospital visit - initial",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hospital visit - initial"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M2A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hospital visit - initial",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hospital visit - initial"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M2B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hospital visit - subsequent",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hospital visit - subsequent"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M2B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hospital visit - subsequent",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hospital visit - subsequent"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M2C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hospital visit - critical care",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hospital visit - critical care"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M2C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hospital visit - critical care",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hospital visit - critical care"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M3",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Emergency room visit",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Emergency room visit"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M3",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Emergency room visit",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Emergency room visit"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M4A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Home visit",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Home visit"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M4A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Home visit",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Home visit"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M4B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Nursing home visit",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Nursing home visit"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M4B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Nursing home visit",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Nursing home visit"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M5A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Specialist - pathology",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Specialist - pathology"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M5A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Specialist - pathology",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Specialist - pathology"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M5B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Specialist - psychiatry",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Specialist - psychiatry"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M5B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Specialist - psychiatry",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Specialist - psychiatry"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M5C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Specialist - ophthalmology",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Specialist - ophthalmology"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M5C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Specialist - ophthalmology",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Specialist - ophthalmology"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M5D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Specialist - other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Specialist - other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M5D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Specialist - other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Specialist - other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M6",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Consultations",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Consultations"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "M6",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Consultations",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Consultations"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P0",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Anesthesia",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Anesthesia"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P0",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Anesthesia",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Anesthesia"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - breast",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - breast"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - breast",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - breast"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - colectomy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - colectomy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - colectomy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - colectomy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - cholecystectomy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - cholecystectomy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - cholecystectomy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - cholecystectomy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - turp",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - turp"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - turp",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - turp"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - hysterectomy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - hysterectomy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - hysterectomy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - hysterectomy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1F",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - explor/decompr/excisdisc",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - explor/decompr/excisdisc"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1F",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - explor/decompr/excisdisc",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - explor/decompr/excisdisc"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1G",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - Other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - Other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P1G",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure - Other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure - Other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, cardiovascular-CABG",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, cardiovascular-CABG"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, cardiovascular-CABG",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, cardiovascular-CABG"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, cardiovascular-Aneurysm repair",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, cardiovascular-Aneurysm repair"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, cardiovascular-Aneurysm repair",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, cardiovascular-Aneurysm repair"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major Procedure, cardiovascular-Thromboendarterectomy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major Procedure, cardiovascular-Thromboendarterectomy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major Procedure, cardiovascular-Thromboendarterectomy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major Procedure, cardiovascular-Thromboendarterectomy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, cardiovascualr-Coronary angioplasty (PTCA)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, cardiovascualr-Coronary angioplasty (PTCA)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, cardiovascualr-Coronary angioplasty (PTCA)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, cardiovascualr-Coronary angioplasty (PTCA)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, cardiovascular-Pacemaker insertion",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, cardiovascular-Pacemaker insertion"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, cardiovascular-Pacemaker insertion",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, cardiovascular-Pacemaker insertion"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2F",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, cardiovascular-Other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, cardiovascular-Other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P2F",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, cardiovascular-Other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, cardiovascular-Other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P3A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, orthopedic - Hip fracture repair",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, orthopedic - Hip fracture repair"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P3A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, orthopedic - Hip fracture repair",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, orthopedic - Hip fracture repair"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P3B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, orthopedic - Hip replacement",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, orthopedic - Hip replacement"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P3B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, orthopedic - Hip replacement",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, orthopedic - Hip replacement"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P3C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, orthopedic - Knee replacement",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, orthopedic - Knee replacement"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P3C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, orthopedic - Knee replacement",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, orthopedic - Knee replacement"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P3D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, orthopedic - other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, orthopedic - other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P3D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Major procedure, orthopedic - other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Major procedure, orthopedic - other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P4A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Eye procedure - corneal transplant",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Eye procedure - corneal transplant"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P4A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Eye procedure - corneal transplant",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Eye procedure - corneal transplant"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P4B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Eye procedure - cataract removal/lens insertion",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Eye procedure - cataract removal/lens insertion"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P4B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Eye procedure - cataract removal/lens insertion",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Eye procedure - cataract removal/lens insertion"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P4C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Eye procedure - retinal detachment",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Eye procedure - retinal detachment"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P4C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Eye procedure - retinal detachment",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Eye procedure - retinal detachment"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P4D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Eye procedure - treatment of retinal lesions",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Eye procedure - treatment of retinal lesions"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P4D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Eye procedure - treatment of retinal lesions",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Eye procedure - treatment of retinal lesions"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P4E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Eye procedure - other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Eye procedure - other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P4E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Eye procedure - other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Eye procedure - other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P5A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulatory procedures - skin",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulatory procedures - skin"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P5A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulatory procedures - skin",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulatory procedures - skin"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P5B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulatory procedures - musculoskeletal",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulatory procedures - musculoskeletal"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P5B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulatory procedures - musculoskeletal",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulatory procedures - musculoskeletal"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P5C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulatory procedures - inguinal hernia repair",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulatory procedures - inguinal hernia repair"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P5C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulatory procedures - inguinal hernia repair",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulatory procedures - inguinal hernia repair"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P5D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulatory procedures - lithotripsy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulatory procedures - lithotripsy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P5D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulatory procedures - lithotripsy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulatory procedures - lithotripsy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P5E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulatory procedures - other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulatory procedures - other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P5E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulatory procedures - other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulatory procedures - other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P6A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Minor procedures - skin",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Minor procedures - skin"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P6A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Minor procedures - skin",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Minor procedures - skin"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P6B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Minor procedures - musculoskeletal",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Minor procedures - musculoskeletal"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P6B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Minor procedures - musculoskeletal",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Minor procedures - musculoskeletal"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P6C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Minor procedures - other (Medicare fee schedule)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Minor procedures - other (Medicare fee schedule)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P6C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Minor procedures - other (Medicare fee schedule)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Minor procedures - other (Medicare fee schedule)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P6D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Minor procedures - other (non-Medicare fee schedule)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Minor procedures - other (non-Medicare fee schedule)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P6D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Minor procedures - other (non-Medicare fee schedule)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Minor procedures - other (non-Medicare fee schedule)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P7A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Oncology - radiation therapy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Oncology - radiation therapy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P7A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Oncology - radiation therapy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Oncology - radiation therapy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P7B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Oncology - other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Oncology - other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P7B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Oncology - other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Oncology - other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - arthroscopy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - arthroscopy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - arthroscopy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - arthroscopy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - upper gastrointestinal",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - upper gastrointestinal"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - upper gastrointestinal",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - upper gastrointestinal"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - sigmoidoscopy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - sigmoidoscopy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - sigmoidoscopy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - sigmoidoscopy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - colonoscopy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - colonoscopy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - colonoscopy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - colonoscopy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - cystoscopy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - cystoscopy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - cystoscopy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - cystoscopy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8F",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - bronchoscopy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - bronchoscopy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8F",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - bronchoscopy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - bronchoscopy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8G",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - laparoscopic cholecystectomy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - laparoscopic cholecystectomy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8G",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - laparoscopic cholecystectomy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - laparoscopic cholecystectomy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8H",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - laryngoscopy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - laryngoscopy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8H",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - laryngoscopy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - laryngoscopy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8I",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P8I",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Endoscopy - other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Endoscopy - other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P9A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Dialysis services (Medicare fee schedule)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Dialysis services (Medicare fee schedule)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P9A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Dialysis services (Medicare fee schedule)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Dialysis services (Medicare fee schedule)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P9B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Dialysis services (non-Medicare fee schedule)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Dialysis services (non-Medicare fee schedule)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "P9B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Dialysis services (non-Medicare fee schedule)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Dialysis services (non-Medicare fee schedule)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - chest",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - chest"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - chest",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - chest"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - musculoskeletal",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - musculoskeletal"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - musculoskeletal",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - musculoskeletal"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - breast",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - breast"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - breast",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - breast"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - contrast gastrointestinal",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - contrast gastrointestinal"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - contrast gastrointestinal",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - contrast gastrointestinal"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - nuclear medicine",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - nuclear medicine"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - nuclear medicine",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - nuclear medicine"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1F",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I1F",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Standard imaging - other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Standard imaging - other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I2A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Advanced imaging - CAT/CT/CTA: brain/head/neck",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Advanced imaging - CAT/CT/CTA: brain/head/neck"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I2A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Advanced imaging - CAT/CT/CTA: brain/head/neck",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Advanced imaging - CAT/CT/CTA: brain/head/neck"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I2B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Advanced imaging - CAT/CT/CTA: other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Advanced imaging - CAT/CT/CTA: other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I2B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Advanced imaging - CAT/CT/CTA: other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Advanced imaging - CAT/CT/CTA: other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I2C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Advanced imaging - MRI/MRA: brain/head/neck",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Advanced imaging - MRI/MRA: brain/head/neck"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I2C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Advanced imaging - MRI/MRA: brain/head/neck",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Advanced imaging - MRI/MRA: brain/head/neck"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I2D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Advanced imaging - MRI/MRA: other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Advanced imaging - MRI/MRA: other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I2D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Advanced imaging - MRI/MRA: other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Advanced imaging - MRI/MRA: other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - eye",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - eye"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - eye",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - eye"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - abdomen/pelvis",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - abdomen/pelvis"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - abdomen/pelvis",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - abdomen/pelvis"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - heart",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - heart"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - heart",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - heart"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - carotid arteries",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - carotid arteries"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - carotid arteries",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - carotid arteries"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - prostate, transrectal",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - prostate, transrectal"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - prostate, transrectal",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - prostate, transrectal"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3F",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I3F",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Echography/ultrasonography - other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Echography/ultrasonography - other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I4A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Imaging/procedure - heart including cardiac catheterization",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Imaging/procedure - heart including cardiac catheterization"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I4A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Imaging/procedure - heart including cardiac catheterization",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Imaging/procedure - heart including cardiac catheterization"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I4B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Imaging/procedure - other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Imaging/procedure - other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "I4B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Imaging/procedure - other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Imaging/procedure - other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - routine venipuncture (non-Medicare fee schedule)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - routine venipuncture (non-Medicare fee schedule)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - routine venipuncture (non-Medicare fee schedule)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - routine venipuncture (non-Medicare fee schedule)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - automated general profiles",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - automated general profiles"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - automated general profiles",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - automated general profiles"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - urinalysis",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - urinalysis"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - urinalysis",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - urinalysis"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - blood counts",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - blood counts"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - blood counts",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - blood counts"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - glucose",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - glucose"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - glucose",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - glucose"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1F",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - bacterial cultures",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - bacterial cultures"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1F",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - bacterial cultures",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - bacterial cultures"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1G",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - other (Medicare fee schedule)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - other (Medicare fee schedule)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1G",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - other (Medicare fee schedule)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - other (Medicare fee schedule)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1H",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - other (non-Medicare fee schedule)",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - other (non-Medicare fee schedule)"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T1H",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Lab tests - other (non-Medicare fee schedule)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Lab tests - other (non-Medicare fee schedule)"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T2A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other tests - electrocardiograms",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other tests - electrocardiograms"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T2A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other tests - electrocardiograms",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other tests - electrocardiograms"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T2B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other tests - cardiovascular stress tests",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other tests - cardiovascular stress tests"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T2B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other tests - cardiovascular stress tests",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other tests - cardiovascular stress tests"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T2C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other tests - EKG monitoring",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other tests - EKG monitoring"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T2C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other tests - EKG monitoring",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other tests - EKG monitoring"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T2D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other tests - other",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other tests - other"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "T2D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other tests - other",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other tests - other"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Medical/surgical supplies",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Medical/surgical supplies"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Medical/surgical supplies",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Medical/surgical supplies"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hospital beds",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hospital beds"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hospital beds",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hospital beds"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Oxygen and supplies",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Oxygen and supplies"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Oxygen and supplies",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Oxygen and supplies"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Wheelchairs",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Wheelchairs"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Wheelchairs",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Wheelchairs"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other DME",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other DME"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other DME",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other DME"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1F",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Prosthetic/Orthotic devices",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Prosthetic/Orthotic devices"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1F",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Prosthetic/Orthotic devices",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Prosthetic/Orthotic devices"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1G",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Drugs Administered through DME",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Drugs Administered through DME"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "D1G",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Drugs Administered through DME",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Drugs Administered through DME"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1A",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulance",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulance"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1A",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Ambulance",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Ambulance"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1B",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Chiropractic",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Chiropractic"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1B",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Chiropractic",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Chiropractic"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1C",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Enteral and parenteral",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Enteral and parenteral"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1C",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Enteral and parenteral",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Enteral and parenteral"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1D",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Chemotherapy",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Chemotherapy"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1D",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Chemotherapy",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Chemotherapy"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1E",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other drugs",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other drugs"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1E",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other drugs",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other drugs"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1F",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hearing and speech services",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hearing and speech services"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1F",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hearing and speech services",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hearing and speech services"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1G",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Immunizations/Vaccinations",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Immunizations/Vaccinations"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "O1G",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Immunizations/Vaccinations",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Immunizations/Vaccinations"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Y1",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other - Medicare fee schedule",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other - Medicare fee schedule"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Y1",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other - Medicare fee schedule",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other - Medicare fee schedule"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Y2",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other - non-Medicare fee schedule",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other - non-Medicare fee schedule"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Y2",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Other - non-Medicare fee schedule",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Other - non-Medicare fee schedule"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Z1",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Local codes",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Local codes"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Z1",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Local codes",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Local codes"
     },
     {
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Z2",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Undefined codes",
-      "<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Undefined codes"
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Z2",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Undefined codes",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Undefined codes"
     }
   ]
 }</pre>
@@ -695,9 +700,9 @@ Raw <a href="CodeSystem-betos-cd.json" download>json</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -111,702 +116,702 @@ Raw <a href="StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-exte
 
 <pre class="json">
 {
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition">resourceType</a>" : "StructureDefinition",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.id">id</a>" : "bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.text">text</a>" : {
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;&quot;&gt;&lt;tr style=&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;&quot;&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://www.hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;The logical name of the element&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://www.hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Information about the use of the element&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://www.hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Minimum and Maximum # of times the the element can appear in the instance&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;width: 100px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://www.hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Reference to the type of the element&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://www.hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Additional information about the element&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=&quot;float: right&quot;&gt;&lt;a href=&quot;https://www.hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;https://www.hl7.org/fhir/STU3/help16.png&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span title=&quot;null&quot;&gt;Extension&lt;/span&gt;&lt;a name=&quot;Extension&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..1&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition">resourceType</a>" : "StructureDefinition",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.id">id</a>" : "bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;&quot;&gt;&lt;tr style=&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;&quot;&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;The logical name of the element&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Information about the use of the element&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Minimum and Maximum # of times the the element can appear in the instance&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;width: 100px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Reference to the type of the element&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Additional information about the element&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=&quot;float: right&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;http://hl7.org/fhir/STU3/help16.png&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span title=&quot;null&quot;&gt;Extension&lt;/span&gt;&lt;a name=&quot;Extension&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..1&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
 &lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span title=&quot;null&quot;&gt;id&lt;/span&gt;&lt;a name=&quot;Extension.id&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
-&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span title=&quot;null&quot;&gt;url&lt;/span&gt;&lt;a name=&quot;Extension.url&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;color: darkgreen&quot;&gt;&amp;quot;/assets/ig/StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension&amp;quot;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin_end.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_datatype.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;span title=&quot;Slice valueMoney: null&quot;&gt;valueMoney&lt;/span&gt;&lt;a name=&quot;Extension.valueMoney&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://www.hl7.org/fhir/STU3/datatypes.html#Money&quot;&gt;Money&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span title=&quot;null&quot;&gt;url&lt;/span&gt;&lt;a name=&quot;Extension.url&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;color: darkgreen&quot;&gt;&amp;quot;https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension&amp;quot;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin_end.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_datatype.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;span title=&quot;Slice valueMoney: null&quot;&gt;valueMoney&lt;/span&gt;&lt;a name=&quot;Extension.valueMoney&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/STU3/datatypes.html#Money&quot;&gt;Money&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
 &lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_blank.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span style=&quot;text-decoration:line-through&quot; title=&quot;null&quot;&gt;id&lt;/span&gt;&lt;a name=&quot;Extension.valueMoney.id&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;text-decoration:line-through&quot;/&gt;&lt;span style=&quot;text-decoration:line-through&quot;&gt;&lt;/span&gt;&lt;span style=&quot;text-decoration:line-through&quot;&gt;..&lt;/span&gt;&lt;span style=&quot;text-decoration:line-through&quot;&gt;0&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
 &lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_blank.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span title=&quot;null&quot;&gt;value&lt;/span&gt;&lt;a name=&quot;Extension.valueMoney.value&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
 &lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_blank.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span style=&quot;text-decoration:line-through&quot; title=&quot;null&quot;&gt;comparator&lt;/span&gt;&lt;a name=&quot;Extension.valueMoney.comparator&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;text-decoration:line-through&quot;/&gt;&lt;span style=&quot;text-decoration:line-through&quot;&gt;&lt;/span&gt;&lt;span style=&quot;text-decoration:line-through&quot;&gt;..&lt;/span&gt;&lt;span style=&quot;text-decoration:line-through&quot;&gt;0&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
 &lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_blank.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span style=&quot;text-decoration:line-through&quot; title=&quot;null&quot;&gt;unit&lt;/span&gt;&lt;a name=&quot;Extension.valueMoney.unit&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;text-decoration:line-through&quot;/&gt;&lt;span style=&quot;text-decoration:line-through&quot;&gt;&lt;/span&gt;&lt;span style=&quot;text-decoration:line-through&quot;&gt;..&lt;/span&gt;&lt;span style=&quot;text-decoration:line-through&quot;&gt;0&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
 &lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_blank.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span title=&quot;null&quot;&gt;system&lt;/span&gt;&lt;a name=&quot;Extension.valueMoney.system&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
 &lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_blank.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin_end.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;span title=&quot;null&quot;&gt;code&lt;/span&gt;&lt;a name=&quot;Extension.valueMoney.code&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;1..&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td colspan=&quot;5&quot; class=&quot;hierarchy&quot;&gt;&lt;br/&gt;&lt;a href=&quot;https://www.hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;https://www.hl7.org/fhir/STU3/help16.png&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+&lt;tr&gt;&lt;td colspan=&quot;5&quot; class=&quot;hierarchy&quot;&gt;&lt;br/&gt;&lt;a href=&quot;http://hl7.org/fhir/STU3/formats.html#table&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;http://hl7.org/fhir/STU3/help16.png&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.url">url</a>" : "/assets/ig/StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.version">version</a>" : "1.1.0",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.name">name</a>" : "bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.status">status</a>" : "draft",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a>" : "2018-03-20T12:41:24.648-05:00",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.fhirVersion">fhirVersion</a>" : "3.0.1",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.mapping">mapping</a>" : [
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.version">version</a>" : "1.1.0",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.name">name</a>" : "bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a>" : "2018-03-20T12:41:24.648-05:00",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.fhirVersion">fhirVersion</a>" : "3.0.1",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.mapping">mapping</a>" : [
     {
-      "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "rim",
-      "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/v3",
-      "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "RIM Mapping"
+      "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "rim",
+      "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/v3",
+      "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "RIM Mapping"
     }
   ],
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.kind">kind</a>" : "complex-type",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.abstract">abstract</a>" : false,
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.contextType">contextType</a>" : "extension",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.context">context</a>" : [
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.kind">kind</a>" : "complex-type",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.abstract">abstract</a>" : false,
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.contextType">contextType</a>" : "extension",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.context">context</a>" : [
     "ExplanationOfBenefit"
   ],
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.type">type</a>" : "Extension",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a>" : "/assets/ig/StructureDefinition-Extension",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.derivation">derivation</a>" : "constraint",
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>" : {
-    "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.snapshot.element">element</a>" : [
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.type">type</a>" : "Extension",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a>" : "https://bluebutton.cms.gov/assets/ig/StructureDefinition-Extension",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.derivation">derivation</a>" : "constraint",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.snapshot.element">element</a>" : [
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Optional Extensions Element",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Optional Extension Element - found in all resources.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Optional Extensions Element",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Optional Extension Element - found in all resources.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.id",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.id",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.id",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.id",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
           "xmlAttr"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "xml:id (or equivalent in JSON)",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Note that FHIR strings may not exceed 1MB in size",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "xml:id (or equivalent in JSON)",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Note that FHIR strings may not exceed 1MB in size",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
             {
-              "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a>" : "value",
-              "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a>" : "url"
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a>" : "value",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a>" : "url"
             }
           ],
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.description">description</a>" : "Extensions are always sliced by (at least) url",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.description">description</a>" : "Extensions are always sliced by (at least) url",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional Content defined by implementations",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional Content defined by implementations",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
           "extensions",
           "user content"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.url",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.url",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.url",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.url",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
           "xmlAttr"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "identifies the meaning of the extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Source of the definition for the extension code - a logical name or a URL.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Extension.url",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "identifies the meaning of the extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Source of the definition for the extension code - a logical name or a URL.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Extension.url",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.fixed[x]">fixedUri</a>" : "/assets/ig/StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.fixed[x]">fixedUri</a>" : "https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "valueMoney",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Value of extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "A stream of bytes, base64 encoded",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Extension.value[x]",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "valueMoney",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Value of extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "A stream of bytes, base64 encoded",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Extension.value[x]",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Money"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Money"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.id",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.id",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.id",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.id",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
           "xmlAttr"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "xml:id (or equivalent in JSON)",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Note that FHIR strings may not exceed 1MB in size",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "xml:id (or equivalent in JSON)",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Note that FHIR strings may not exceed 1MB in size",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.value[x]:valueMoney.extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.value[x]:valueMoney.extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
             {
-              "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a>" : "value",
-              "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a>" : "url"
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a>" : "value",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a>" : "url"
             }
           ],
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.description">description</a>" : "Extensions are always sliced by (at least) url",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.description">description</a>" : "Extensions are always sliced by (at least) url",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional Content defined by implementations",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional Content defined by implementations",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
           "extensions",
           "user content"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.value",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.value",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Numerical value (with implicit precision)",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The value of the measured amount. The value includes an implicit precision in the presentation of the value.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Precision is handled implicitly in almost all cases of measurement.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Quantity.value",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.value",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.value",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Numerical value (with implicit precision)",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The value of the measured amount. The value includes an implicit precision in the presentation of the value.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Precision is handled implicitly in almost all cases of measurement.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Quantity.value",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "decimal"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "decimal"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "SN.2  / CQ - N/A"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "SN.2  / CQ - N/A"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.comparator",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.comparator",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "&lt; | &lt;= | &gt;= | &gt; - how to understand the value",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is &quot;&lt;&quot; , then the real value is &lt; stated value.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "This is labeled as &quot;Is Modifier&quot; because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Need a framework for handling measures where the value is &lt;5ug/L or &gt;400mg/L due to the limitations of measuring methodology.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Quantity.comparator",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.comparator",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.comparator",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "&lt; | &lt;= | &gt;= | &gt; - how to understand the value",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is &quot;&lt;&quot; , then the real value is &lt; stated value.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "This is labeled as &quot;Is Modifier&quot; because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Need a framework for handling measures where the value is &lt;5ug/L or &gt;400mg/L due to the limitations of measuring methodology.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Quantity.comparator",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.meaningWhenMissing">meaningWhenMissing</a>" : "If there is no comparator, then there is no modification of the value",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.meaningWhenMissing">meaningWhenMissing</a>" : "If there is no comparator, then there is no modification of the value",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
             {
-              "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "/assets/ig/StructureDefinition-elementdefinition-bindingName",
-              "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueString</a>" : "QuantityComparator"
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/StructureDefinition-elementdefinition-bindingName",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueString</a>" : "QuantityComparator"
             }
           ],
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "How the Quantity should be understood and represented.",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "/assets/ig/ValueSet-quantity-comparator"
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "How the Quantity should be understood and represented.",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "https://bluebutton.cms.gov/assets/ig/ValueSet-quantity-comparator"
           }
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "SN.1  / CQ.1"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "SN.1  / CQ.1"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "IVL properties"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "IVL properties"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.unit",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.unit",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "/assets/ig/StructureDefinition-elementdefinition-translatable",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/StructureDefinition-elementdefinition-translatable",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a>" : true
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.unit",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Unit representation",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A human-readable form of the unit.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Note that FHIR strings may not exceed 1MB in size",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Quantity.unit",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.unit",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Unit representation",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A human-readable form of the unit.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "Note that FHIR strings may not exceed 1MB in size",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Quantity.unit",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "(see OBX.6 etc.) / CQ.2"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "(see OBX.6 etc.) / CQ.2"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "PQ.unit"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "PQ.unit"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.system",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.system",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "System that defines coded unit form",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The identification of the system that provides the coded form of the unit.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "see http://en.wikipedia.org/wiki/Uniform_resource_identifier",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Need to know the system that defines the coded form of the unit.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Quantity.system",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.system",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.system",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "System that defines coded unit form",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The identification of the system that provides the coded form of the unit.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "see http://en.wikipedia.org/wiki/Uniform_resource_identifier",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Need to know the system that defines the coded form of the unit.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Quantity.system",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1",
           "qty-3"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "(see OBX.6 etc.) / CQ.2"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "(see OBX.6 etc.) / CQ.2"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CO.codeSystem, PQ.translation.codeSystem"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "CO.codeSystem, PQ.translation.codeSystem"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.code",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.code",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Coded form of the unit",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A computer processable form of the unit in some unit representation system.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest.",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Quantity.code",
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
-          "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.code",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.code",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Coded form of the unit",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A computer processable form of the unit in some unit representation system.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Quantity.code",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
         },
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
           "ele-1"
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div"
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "(see OBX.6 etc.) / CQ.2"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "v2",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "(see OBX.6 etc.) / CQ.2"
           },
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "PQ.code, MO.currency, PQ.translation.code"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "PQ.code, MO.currency, PQ.translation.code"
           }
         ]
       }
     ]
   },
-  "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.differential">differential</a>" : {
-    "<a href="https://www.hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.differential.element">element</a>" : [
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.differential">differential</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.differential.element">element</a>" : [
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1"
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.id",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.id",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.id",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.id",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.url",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.url",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.fixed[x]">fixedUri</a>" : "/assets/ig/StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.url",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.url",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.fixed[x]">fixedUri</a>" : "https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension"
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "valueMoney",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "valueMoney",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Money"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Money"
           }
         ]
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.id",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.id",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.id",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.id",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0"
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.value",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.value",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.value",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.value",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.comparator",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.comparator",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.comparator",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.comparator",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0"
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.unit",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.unit",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "/assets/ig/StructureDefinition-elementdefinition-translatable",
-            "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/StructureDefinition-elementdefinition-translatable",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a>" : true
           }
         ],
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.unit",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0"
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.unit",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "0"
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.system",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.system",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.system",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.system",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
       },
       {
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.code",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.code",
-        "<a href="https://www.hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Extension.valueMoney:valueMoney.code",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Extension.valueMoney.code",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1
       }
     ]
   }
@@ -841,9 +846,9 @@ Raw <a href="StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-exte
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

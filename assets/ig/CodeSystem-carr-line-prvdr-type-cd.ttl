@@ -1,29 +1,29 @@
-@prefix fhir: </assets/ig/> .
+@prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
 
-</assets/ig/CodeSystem-carr-line-prvdr-type-cd> a fhir:CodeSystem;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prvdr-type-cd> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carr-line-prvdr-type-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Provider Type Code</h2><div><p>Code identifying the type of provider furnishing the service for this line item on the carrier claim. Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>prvdr<em>type</em>cd</p>\n</div><p>This code system /assets/ig/CodeSystem-carr-line-prvdr-type-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"carr-line-prvdr-type-cd-0\"> </a></td><td>Clinics, groups, associations, partnerships, or other entities for whom the carrier's own ID number has been assigned.</td><td>Clinics, groups, associations, partnerships, or other entities for whom the carrier's own ID number has been assigned.</td></tr><tr><td>1<a name=\"carr-line-prvdr-type-cd-1\"> </a></td><td>Physicians or suppliers billing as solo practitioners for whom SSN's are shown in the physician ID code field.</td><td>Physicians or suppliers billing as solo practitioners for whom SSN's are shown in the physician ID code field.</td></tr><tr><td>2<a name=\"carr-line-prvdr-type-cd-2\"> </a></td><td>Physicians or suppliers billing as solo practitioners for whom the carrier's own physician ID code is shown.</td><td>Physicians or suppliers billing as solo practitioners for whom the carrier's own physician ID code is shown.</td></tr><tr><td>3<a name=\"carr-line-prvdr-type-cd-3\"> </a></td><td>Suppliers (other than sole proprietorship) for whom EI numbers are used in coding the ID field.</td><td>Suppliers (other than sole proprietorship) for whom EI numbers are used in coding the ID field.</td></tr><tr><td>4<a name=\"carr-line-prvdr-type-cd-4\"> </a></td><td>Suppliers (other than sole proprietorship) for whom the carrier's own code has been shown.</td><td>Suppliers (other than sole proprietorship) for whom the carrier's own code has been shown.</td></tr><tr><td>5<a name=\"carr-line-prvdr-type-cd-5\"> </a></td><td>Institutional providers and independent laboratories for whom EI numbers are used in coding the ID field.</td><td>Institutional providers and independent laboratories for whom EI numbers are used in coding the ID field.</td></tr><tr><td>6<a name=\"carr-line-prvdr-type-cd-6\"> </a></td><td>Institutional providers and independent laboratories for whom the carrier's own ID number is shown.</td><td>Institutional providers and independent laboratories for whom the carrier's own ID number is shown.</td></tr><tr><td>7<a name=\"carr-line-prvdr-type-cd-7\"> </a></td><td>Clinics, groups, associations, or partnerships for whom EI numbers are used in coding the ID field.</td><td>Clinics, groups, associations, or partnerships for whom EI numbers are used in coding the ID field.</td></tr><tr><td>8<a name=\"carr-line-prvdr-type-cd-8\"> </a></td><td>Other entities for whom EI numbers are used in coding the ID field or proprietorship for whom EI numbers are used in coding the ID field.</td><td>Other entities for whom EI numbers are used in coding the ID field or proprietorship for whom EI numbers are used in coding the ID field.</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Provider Type Code</h2><div><p>Code identifying the type of provider furnishing the service for this line item on the carrier claim. Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>prvdr<em>type</em>cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prvdr-type-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"carr-line-prvdr-type-cd-0\"> </a></td><td>Clinics, groups, associations, partnerships, or other entities for whom the carrier's own ID number has been assigned.</td><td>Clinics, groups, associations, partnerships, or other entities for whom the carrier's own ID number has been assigned.</td></tr><tr><td>1<a name=\"carr-line-prvdr-type-cd-1\"> </a></td><td>Physicians or suppliers billing as solo practitioners for whom SSN's are shown in the physician ID code field.</td><td>Physicians or suppliers billing as solo practitioners for whom SSN's are shown in the physician ID code field.</td></tr><tr><td>2<a name=\"carr-line-prvdr-type-cd-2\"> </a></td><td>Physicians or suppliers billing as solo practitioners for whom the carrier's own physician ID code is shown.</td><td>Physicians or suppliers billing as solo practitioners for whom the carrier's own physician ID code is shown.</td></tr><tr><td>3<a name=\"carr-line-prvdr-type-cd-3\"> </a></td><td>Suppliers (other than sole proprietorship) for whom EI numbers are used in coding the ID field.</td><td>Suppliers (other than sole proprietorship) for whom EI numbers are used in coding the ID field.</td></tr><tr><td>4<a name=\"carr-line-prvdr-type-cd-4\"> </a></td><td>Suppliers (other than sole proprietorship) for whom the carrier's own code has been shown.</td><td>Suppliers (other than sole proprietorship) for whom the carrier's own code has been shown.</td></tr><tr><td>5<a name=\"carr-line-prvdr-type-cd-5\"> </a></td><td>Institutional providers and independent laboratories for whom EI numbers are used in coding the ID field.</td><td>Institutional providers and independent laboratories for whom EI numbers are used in coding the ID field.</td></tr><tr><td>6<a name=\"carr-line-prvdr-type-cd-6\"> </a></td><td>Institutional providers and independent laboratories for whom the carrier's own ID number is shown.</td><td>Institutional providers and independent laboratories for whom the carrier's own ID number is shown.</td></tr><tr><td>7<a name=\"carr-line-prvdr-type-cd-7\"> </a></td><td>Clinics, groups, associations, or partnerships for whom EI numbers are used in coding the ID field.</td><td>Clinics, groups, associations, or partnerships for whom EI numbers are used in coding the ID field.</td></tr><tr><td>8<a name=\"carr-line-prvdr-type-cd-8\"> </a></td><td>Other entities for whom EI numbers are used in coding the ID field or proprietorship for whom EI numbers are used in coding the ID field.</td><td>Other entities for whom EI numbers are used in coding the ID field or proprietorship for whom EI numbers are used in coding the ID field.</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "/assets/ig/CodeSystem-carr-line-prvdr-type-cd"];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prvdr-type-cd"];
   fhir:CodeSystem.identifier [
-     fhir:Identifier.value [ fhir:value "/assets/ig/CodeSystem-carr-line-prvdr-type-cd" ]
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prvdr-type-cd" ]
   ];
   fhir:CodeSystem.version [ fhir:value "1.1.0"];
   fhir:CodeSystem.name [ fhir:value "Carrier Line Provider Type Code"];
   fhir:CodeSystem.title [ fhir:value "Carrier Line Provider Type Code"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2018-05-07T14:45:05+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
   fhir:CodeSystem.description [ fhir:value "Code identifying the type of provider furnishing the service for this line item on the carrier claim. Source: https://bluebutton.cms.gov/resources/variables/carr_line_prvdr_type_cd"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
-  fhir:CodeSystem.valueSet [ fhir:value "/assets/ig/ValueSet-carr-line-prvdr-type-cd"];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-prvdr-type-cd"];
   fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.concept [
@@ -75,9 +75,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-</assets/ig/CodeSystem-carr-line-prvdr-type-cd.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prvdr-type-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <https://www.hl7.org/fhir/STU3/CodeSystem-carr-line-prvdr-type-cd.ttl> .
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/carr-line-prvdr-type-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

@@ -28,6 +28,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets/ico/favicon.png"/>
 
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
 </head>
 <body>
 
@@ -46,7 +51,7 @@
 </div>
  </div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -64,7 +69,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="https://www.hl7.org/fhir/STU3/index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -111,206 +116,206 @@ Raw <a href="CodeSystem-submsn-clr-cd.xml" download>xml</a>
 
 <pre class="xml">
 
-&lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;submsn-clr-cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+&lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;submsn-clr-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Submission clarification code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT&lt;em&gt;RSDNC&lt;/em&gt;CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn&lt;em&gt;clr&lt;/em&gt;cd&lt;/p&gt;
-&lt;/div&gt;&lt;p&gt;This code system /assets/ig/CodeSystem-submsn-clr-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;a name=&quot;submsn-clr-cd-00&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05&lt;a name=&quot;submsn-clr-cd-05&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.&lt;/td&gt;&lt;td&gt;Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07&lt;a name=&quot;submsn-clr-cd-07&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.&lt;/td&gt;&lt;td&gt;Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08&lt;a name=&quot;submsn-clr-cd-08&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Process compound for approved ingredients&lt;/td&gt;&lt;td&gt;Process compound for approved ingredients&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;a name=&quot;submsn-clr-cd-14&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC leave of absence – short fill required for take-home use&lt;/td&gt;&lt;td&gt;LTC leave of absence – short fill required for take-home use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;a name=&quot;submsn-clr-cd-16&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC emergency box (e box) /automated dispensing machine&lt;/td&gt;&lt;td&gt;LTC emergency box (e box) /automated dispensing machine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;a name=&quot;submsn-clr-cd-17&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC emergency supply remainder (remainder of drug from the emergency supply)&lt;/td&gt;&lt;td&gt;LTC emergency supply remainder (remainder of drug from the emergency supply)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;a name=&quot;submsn-clr-cd-18&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC patient admit/readmission indicator. This status required new dispensing of medication.&lt;/td&gt;&lt;td&gt;LTC patient admit/readmission indicator. This status required new dispensing of medication.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;a name=&quot;submsn-clr-cd-19&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).&lt;/td&gt;&lt;td&gt;Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;a name=&quot;submsn-clr-cd-21&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing rule for &amp;lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing&lt;/td&gt;&lt;td&gt;LTC dispensing rule for &amp;lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;a name=&quot;submsn-clr-cd-22&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 7-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 7-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23&lt;a name=&quot;submsn-clr-cd-23&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24&lt;a name=&quot;submsn-clr-cd-24&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 3-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 3-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;a name=&quot;submsn-clr-cd-25&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;a name=&quot;submsn-clr-cd-26&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 1-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 1-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27&lt;a name=&quot;submsn-clr-cd-27&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply, then 3-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply, then 3-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28&lt;a name=&quot;submsn-clr-cd-28&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29&lt;a name=&quot;submsn-clr-cd-29&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, daily during the week then multiple days (3) for weekend&lt;/td&gt;&lt;td&gt;LTC dispensing, daily during the week then multiple days (3) for weekend&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;a name=&quot;submsn-clr-cd-30&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, per shift (multiple medication passes)&lt;/td&gt;&lt;td&gt;LTC dispensing, per shift (multiple medication passes)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;31&lt;a name=&quot;submsn-clr-cd-31&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, per medication pass&lt;/td&gt;&lt;td&gt;LTC dispensing, per medication pass&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32&lt;a name=&quot;submsn-clr-cd-32&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, PRN on demand&lt;/td&gt;&lt;td&gt;LTC dispensing, PRN on demand&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;33&lt;a name=&quot;submsn-clr-cd-33&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, other &amp;lt;=7 day cycle&lt;/td&gt;&lt;td&gt;LTC dispensing, other &amp;lt;=7 day cycle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;34&lt;a name=&quot;submsn-clr-cd-34&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 14-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 14-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;35&lt;a name=&quot;submsn-clr-cd-35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, other 8-14 day dispensing not listed above&lt;/td&gt;&lt;td&gt;LTC dispensing, other 8-14 day dispensing not listed above&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;36&lt;a name=&quot;submsn-clr-cd-36&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer&lt;/td&gt;&lt;td&gt;LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;42&lt;a name=&quot;submsn-clr-cd-42&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;The prescriber ID submitted has been validated and is active (rarely populated)&lt;/td&gt;&lt;td&gt;The prescriber ID submitted has been validated and is active (rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;43&lt;a name=&quot;submsn-clr-cd-43&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;44&lt;a name=&quot;submsn-clr-cd-44&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;45&lt;a name=&quot;submsn-clr-cd-45&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Null&lt;a name=&quot;submsn-clr-cd-Null&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)&lt;/td&gt;&lt;td&gt;Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;a name=&quot;submsn-clr-cd-00&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05&lt;a name=&quot;submsn-clr-cd-05&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.&lt;/td&gt;&lt;td&gt;Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07&lt;a name=&quot;submsn-clr-cd-07&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.&lt;/td&gt;&lt;td&gt;Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08&lt;a name=&quot;submsn-clr-cd-08&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Process compound for approved ingredients&lt;/td&gt;&lt;td&gt;Process compound for approved ingredients&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;a name=&quot;submsn-clr-cd-14&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC leave of absence – short fill required for take-home use&lt;/td&gt;&lt;td&gt;LTC leave of absence – short fill required for take-home use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;a name=&quot;submsn-clr-cd-16&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC emergency box (e box) /automated dispensing machine&lt;/td&gt;&lt;td&gt;LTC emergency box (e box) /automated dispensing machine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;a name=&quot;submsn-clr-cd-17&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC emergency supply remainder (remainder of drug from the emergency supply)&lt;/td&gt;&lt;td&gt;LTC emergency supply remainder (remainder of drug from the emergency supply)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;a name=&quot;submsn-clr-cd-18&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC patient admit/readmission indicator. This status required new dispensing of medication.&lt;/td&gt;&lt;td&gt;LTC patient admit/readmission indicator. This status required new dispensing of medication.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;a name=&quot;submsn-clr-cd-19&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).&lt;/td&gt;&lt;td&gt;Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;a name=&quot;submsn-clr-cd-21&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing rule for &amp;lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing&lt;/td&gt;&lt;td&gt;LTC dispensing rule for &amp;lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;a name=&quot;submsn-clr-cd-22&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 7-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 7-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23&lt;a name=&quot;submsn-clr-cd-23&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24&lt;a name=&quot;submsn-clr-cd-24&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 3-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 3-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;a name=&quot;submsn-clr-cd-25&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;a name=&quot;submsn-clr-cd-26&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 1-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 1-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27&lt;a name=&quot;submsn-clr-cd-27&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply, then 3-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply, then 3-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28&lt;a name=&quot;submsn-clr-cd-28&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29&lt;a name=&quot;submsn-clr-cd-29&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, daily during the week then multiple days (3) for weekend&lt;/td&gt;&lt;td&gt;LTC dispensing, daily during the week then multiple days (3) for weekend&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;a name=&quot;submsn-clr-cd-30&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, per shift (multiple medication passes)&lt;/td&gt;&lt;td&gt;LTC dispensing, per shift (multiple medication passes)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;31&lt;a name=&quot;submsn-clr-cd-31&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, per medication pass&lt;/td&gt;&lt;td&gt;LTC dispensing, per medication pass&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32&lt;a name=&quot;submsn-clr-cd-32&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, PRN on demand&lt;/td&gt;&lt;td&gt;LTC dispensing, PRN on demand&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;33&lt;a name=&quot;submsn-clr-cd-33&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, other &amp;lt;=7 day cycle&lt;/td&gt;&lt;td&gt;LTC dispensing, other &amp;lt;=7 day cycle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;34&lt;a name=&quot;submsn-clr-cd-34&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 14-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 14-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;35&lt;a name=&quot;submsn-clr-cd-35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, other 8-14 day dispensing not listed above&lt;/td&gt;&lt;td&gt;LTC dispensing, other 8-14 day dispensing not listed above&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;36&lt;a name=&quot;submsn-clr-cd-36&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer&lt;/td&gt;&lt;td&gt;LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;42&lt;a name=&quot;submsn-clr-cd-42&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;The prescriber ID submitted has been validated and is active (rarely populated)&lt;/td&gt;&lt;td&gt;The prescriber ID submitted has been validated and is active (rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;43&lt;a name=&quot;submsn-clr-cd-43&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;44&lt;a name=&quot;submsn-clr-cd-44&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;45&lt;a name=&quot;submsn-clr-cd-45&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Null&lt;a name=&quot;submsn-clr-cd-Null&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)&lt;/td&gt;&lt;td&gt;Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
   &lt;/text&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;/assets/ig/CodeSystem-submsn-clr-cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;/assets/ig/CodeSystem-submsn-clr-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd&quot;/&gt;
   &lt;/identifier&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.0&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Submission clarification code&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Submission clarification code&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-07T14:45:05+00:00&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>
-               <a href="https://www.hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT_RSDNC_CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn_clr_cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;/assets/ig/ValueSet-submsn-clr-cd&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;is-a&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;00&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(Unknown value – rarely populated)&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(Unknown value – rarely populated)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Submission clarification code&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Submission clarification code&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-31T14:39:32+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT_RSDNC_CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn_clr_cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/ValueSet-submsn-clr-cd&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;is-a&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;00&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(Unknown value – rarely populated)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(Unknown value – rarely populated)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;05&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;05&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;07&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;07&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;08&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Process compound for approved ingredients&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Process compound for approved ingredients&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;08&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Process compound for approved ingredients&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Process compound for approved ingredients&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;14&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC leave of absence – short fill required for take-home use&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC leave of absence – short fill required for take-home use&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;14&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC leave of absence – short fill required for take-home use&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC leave of absence – short fill required for take-home use&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;16&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC emergency box (e box) /automated dispensing machine&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC emergency box (e box) /automated dispensing machine&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;16&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC emergency box (e box) /automated dispensing machine&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC emergency box (e box) /automated dispensing machine&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;17&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC emergency supply remainder (remainder of drug from the emergency supply)&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC emergency supply remainder (remainder of drug from the emergency supply)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;17&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC emergency supply remainder (remainder of drug from the emergency supply)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC emergency supply remainder (remainder of drug from the emergency supply)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;18&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC patient admit/readmission indicator. This status required new dispensing of medication.&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC patient admit/readmission indicator. This status required new dispensing of medication.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;18&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC patient admit/readmission indicator. This status required new dispensing of medication.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC patient admit/readmission indicator. This status required new dispensing of medication.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;19&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;19&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;21&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing rule for &amp;lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing rule for &amp;lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;21&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing rule for &amp;lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing rule for &amp;lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;22&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 7-day supply&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 7-day supply&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;22&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 7-day supply&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 7-day supply&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;23&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 4-day supply&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 4-day supply&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;23&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 4-day supply&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 4-day supply&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;24&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 3-day supply&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 3-day supply&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;24&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 3-day supply&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 3-day supply&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;25&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 2-day supply&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 2-day supply&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;25&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 2-day supply&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 2-day supply&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;26&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 1-day supply&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 1-day supply&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;26&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 1-day supply&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 1-day supply&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;27&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 4-day supply, then 3-day supply&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 4-day supply, then 3-day supply&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;27&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 4-day supply, then 3-day supply&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 4-day supply, then 3-day supply&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;28&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;28&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;29&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, daily during the week then multiple days (3) for weekend&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, daily during the week then multiple days (3) for weekend&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;29&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, daily during the week then multiple days (3) for weekend&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, daily during the week then multiple days (3) for weekend&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;30&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, per shift (multiple medication passes)&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, per shift (multiple medication passes)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;30&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, per shift (multiple medication passes)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, per shift (multiple medication passes)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;31&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, per medication pass&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, per medication pass&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;31&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, per medication pass&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, per medication pass&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;32&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, PRN on demand&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, PRN on demand&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;32&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, PRN on demand&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, PRN on demand&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;33&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, other &amp;lt;=7 day cycle&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, other &amp;lt;=7 day cycle&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;33&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, other &amp;lt;=7 day cycle&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, other &amp;lt;=7 day cycle&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;34&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 14-day supply&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 14-day supply&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;34&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 14-day supply&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, 14-day supply&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;35&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, other 8-14 day dispensing not listed above&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, other 8-14 day dispensing not listed above&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;35&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, other 8-14 day dispensing not listed above&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, other 8-14 day dispensing not listed above&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;36&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;36&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;42&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The prescriber ID submitted has been validated and is active (rarely populated)&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The prescriber ID submitted has been validated and is active (rarely populated)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;42&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The prescriber ID submitted has been validated and is active (rarely populated)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The prescriber ID submitted has been validated and is active (rarely populated)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;43&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;43&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;44&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(Unknown value – rarely populated)&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(Unknown value – rarely populated)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;44&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(Unknown value – rarely populated)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(Unknown value – rarely populated)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;45&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;45&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://www.hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Null&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)&quot;/&gt;
-    &lt;<a href="https://www.hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="https://www.hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Null&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)&quot;/&gt;
   &lt;/concept&gt;
 &lt;/CodeSystem&gt;</pre>
 
@@ -343,9 +348,9 @@ Raw <a href="CodeSystem-submsn-clr-cd.xml" download>xml</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="https://www.hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Mon, May 7, 2018 14:45+0000. |
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="https://www.hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
