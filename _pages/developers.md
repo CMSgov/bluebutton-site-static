@@ -355,6 +355,7 @@ To activate compression add the following to the header:
 Accept-Encoding: gzip
 </pre>
 
+The minimum payload size we will gzip is 1 kilobyte. 
 
 [Download a sample Coverage FHIR Resource](/sample-coverage-entry.json)
 

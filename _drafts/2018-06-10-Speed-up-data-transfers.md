@@ -27,6 +27,8 @@ This enables gzip compression for a few content types:
 - application/json
 - application/json+fhir
 
+The minimum payload size we will gzip is 1 kilobyte. 
+
 ## Compression is switched off by default
 
 In order to see the benefit of gzip compression, the client must send the **Accept-Encoding: gzip** header as part of 
