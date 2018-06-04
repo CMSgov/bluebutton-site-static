@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="clm-hha-lupa-ind-cd"/>
+    <url value="http://hl7.org/fhir/CodeSystem/clm-hha-lupa-ind-cd"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/clm-hha-lupa-ind-cd"/>
+    </identifier>
+    <name value="Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code"/>
+    <title value="Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code"/>
+    <status value="active"/>
+    <description value="The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode. If an HHA provides 4 visits or less, they will be reimbursed based on a national standardized per visit rate instead of Home Health resource groups (HHRGs). Source: https://bluebutton.cms.gov/resources/variables/clm_hha_lupa_ind_cd"/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/clm-hha-lupa-ind-cd"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="L"/>
+        <display value="Low utilization payment adjustment (LUPA) claim"/>
+        <definition value="Low utilization payment adjustment (LUPA) claim"/>
+    </concept>
+    <concept>
+        <code value="Blank"/>
+        <display value="Not a LUPA claim; process using Home Health resource groups (HHRG)"/>
+        <definition value="Not a LUPA claim; process using Home Health resource groups (HHRG)"/>
+    </concept>
+</CodeSystem>

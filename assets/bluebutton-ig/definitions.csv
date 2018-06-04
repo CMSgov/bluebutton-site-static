@@ -1,0 +1,30 @@
+Configuration Parameter,Configuration Value ( use '|' for lists)
+broken-links,warning
+canonicalBase,https://bluebutton.cms.gov/resources/ig
+codesystems,
+dependencyList.location,http://www.fhir.org/guides/argonaut/pd/release1/
+dependencyList.name,argopd
+dependencyList.source,
+do-transforms,FALSE
+extensions,
+fixed-business-version,1.0.1
+gen-examples,FALSE
+jurisdiction,US
+no-inactive-codes,FALSE
+paths.output,output
+paths.pages,pages
+paths.qa,qa
+paths.resources,resources|examples
+paths.specification,http://hl7.org/fhir/STU3
+paths.temp,temp
+paths.txCache,txCache
+sct-edition,http://snomed.info/sct/731000124108
+searches,
+source,ig.xml
+special-urls,urn:oid:2.16.840.1.113883.6.238
+status,draft
+structuremaps,
+title,Blue Button
+tool,jekyll
+valuesets,
+version,3.0.1

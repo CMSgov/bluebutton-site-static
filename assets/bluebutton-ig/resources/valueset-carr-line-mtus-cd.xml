@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="carr-line-mtus-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/carr-line-mtus-cd"/>
+    <name value="Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code"/>
+    <description value="Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr_line_mtus_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/carr-line-mtus-cd"/>
+        </include>
+    </compose>
+</ValueSet>

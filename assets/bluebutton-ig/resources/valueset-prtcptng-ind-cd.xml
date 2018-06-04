@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="prtcptng-ind-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/prtcptng-ind-cd"/>
+    <name value="Line Provider Participating Indicator Code"/>
+    <description value="Code indicating whether or not a provider is participating (accepting assignment) for this line item service on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/prtcptng_ind_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/prtcptng-ind-cd"/>
+        </include>
+    </compose>
+</ValueSet>

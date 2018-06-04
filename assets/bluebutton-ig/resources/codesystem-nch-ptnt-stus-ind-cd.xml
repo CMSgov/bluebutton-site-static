@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="nch-ptnt-stus-ind-cd"/>
+    <url value="http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd"/>
+    </identifier>
+    <name value="NCH Patient Status Indicator Code"/>
+    <title value="NCH Patient Status Indicator Code"/>
+    <status value="active"/>
+    <description value="This variable is a recoded version of the discharge status code (variable called PTNT_DSCHRG_STUS_CD). Source: https://bluebutton.cms.gov/resources/variables/nch_ptnt_stus_ind_cd"/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/nch-ptnt-stus-ind-cd"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="A"/>
+        <display value="Discharged"/>
+        <definition value="Discharged"/>
+    </concept>
+    <concept>
+        <code value="B"/>
+        <display value="Died"/>
+        <definition value="Died"/>
+    </concept>
+    <concept>
+        <code value="C"/>
+        <display value="Still a patient"/>
+        <definition value="Still a patient"/>
+    </concept>
+</CodeSystem>

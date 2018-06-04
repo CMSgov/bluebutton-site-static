@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="race"/>
+	<url value="http://hl7.org/fhir/CodeSystem/race"/>
+	<identifier>
+		<value value="http://hl7.org/fhir/CodeSystem/race"/>
+	</identifier>
+	<name value="Race Codes"/>
+	<title value="Race Codes"/>
+	<status value="active"/>
+	<description value="Blue Button Race Codes. Source: (https://bluebutton.cms.gov/resources/variables/race/)"/>
+	<caseSensitive value="true"/>
+	<valueSet value="http://hl7.org/fhir/ValueSet/race"/>
+	<hierarchyMeaning value="is-a"/>
+	<content value="complete"/>
+	<count value="7"/>
+	<concept>
+		<code value="0"/>
+		<display value="Unknown"/>
+		<definition value="Unknown"/>
+	</concept>
+	<concept>
+		<code value="1"/>
+		<display value="White"/>
+		<definition value="White"/>
+	</concept>
+	<concept>
+		<code value="2"/>
+		<display value="Black"/>
+		<definition value="Black"/>
+	</concept>
+	<concept>
+		<code value="3"/>
+		<display value="Other"/>
+		<definition value="Other"/>
+	</concept>
+	<concept>
+		<code value="4"/>
+		<display value="Asian"/>
+		<definition value="Asian"/>
+	</concept>
+	<concept>
+		<code value="5"/>
+		<display value="Hispanic"/>
+		<definition value="Hispanic"/>
+	</concept>
+	<concept>
+		<code value="6"/>
+		<display value="North American Native"/>
+		<definition value="North American Native"/>
+	</concept>
+</CodeSystem>

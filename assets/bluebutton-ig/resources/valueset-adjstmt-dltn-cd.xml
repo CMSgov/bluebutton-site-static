@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="adjstmt-dltn-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/adjstmt-dltn-cd"/>
+    <name value="Adjustment Deletion Code"/>
+    <description value="This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt_dltn_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd"/>
+        </include>
+    </compose>
+</ValueSet>

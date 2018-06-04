@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="clm-src-ip-admsn-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/clm-src-ip-admsn-cd"/>
+    <name value="Claim Source Inpatient Admission Code"/>
+    <description value="The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm_src_ip_admsn_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd"/>
+        </include>
+    </compose>
+</ValueSet>

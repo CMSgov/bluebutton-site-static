@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="adjudication-categories"/>
+	<url value="http://hl7.org/fhir/CodeSystem/adjudication-categories"/>
+	<identifier>
+		<value value="http://hl7.org/fhir/CodeSystem/adjudication-categories"/>
+	</identifier>
+	<name value="Adjudication Categories"/>
+	<title value="Adjudication Categories"/>
+	<status value="active"/>
+	<description value="Blue Button Adjudication Categories."/>
+	<caseSensitive value="true"/>
+	<valueSet value="http://hl7.org/fhir/us/core/ValueSet/adjudications"/>
+	<hierarchyMeaning value="is-a"/>
+	<content value="complete"/>
+	<concept>
+		<code value="Part D Covered"/>
+		<display value="Problem List Item"/>
+		<definition value="This is the net amount that the Part D plan paid for a
+							PDE that was covered by the Medicare Part D benefit."/>
+	</concept>
+	<concept>
+		<code value="Gross Drug Cost Below Out-of-Pocket Threshold (GDCB)"/>
+		<display value="Encounter Diagnosis"/>
+		<definition value="This variable is the portion of the gross drug cost
+							for the prescription drug fill that was not covered by Part
+							D’s catastrophic coverage."/>
+	</concept>
+	<concept>
+		<code value="Gross Drug Cost Above Out-of-Pocket Threshold (GDCA)"/>
+		<display value="Problem"/>
+		<definition value="This variable is the portion of the gross drug cost
+							for the prescription drug fill that was covered by Part D’s
+							catastrophic coverage."/>
+	</concept>
+	<concept>
+		<code value="Patient Pay Amount"/>
+		<display value="Health Concern"/>
+		<definition value="This variable is the dollar amount that the
+							beneficiary paid for the PDE without being reimbursed by a
+							third party."/>
+	</concept>
+	<concept>
+		<code value="Other True Out-of-Pocket (TrOOP) Amount"/>
+		<display value="Cell"/>
+		<definition value="This is the amount of any payment made by other
+							third-party payers that reduces the beneficiary’s liability
+							for the PDE and counts towards Part D’s true out-of-pocket
+							(TrOOP) requirement."/>
+	</concept>
+	<concept>
+		<code value="Part D Low Income Subsidy (LICS) Amount"/>
+		<display value="Cell"/>
+		<definition value="This is the amount of cost sharing for the drug that was paid
+							by the Part D low-income subsidy (LICS)."/>
+	</concept>
+	<concept>
+		<code value="Reduction in patient liability due to payments by other payers (PLRO) Amount"/>
+		<display value="Cell"/>
+		<definition value="This is the amount of any payment by other third-party payers
+							that reduces the beneficiary’s liability for the PDE but 
+							does not count towards Part D’s true out-of-pocket (TrOOP)
+							requirement."/>
+	</concept>
+	<concept>
+		<code value="Total Prescription Cost"/>
+		<display value="Cell"/>
+		<definition value="This is the price paid for the drug at the point of sale
+							(i.e., the pharmacy counter), and it does not include any
+							rebates or discounts that the drug manufacturer provides
+							directly to the Part D plan sponsor."/>
+	</concept>
+	<concept>
+		<code value="Medicare Coverage Gap Discount Amount"/>
+		<display value="Cell"/>
+		<definition value="This variable indicates the amount of the discount provided
+							by the drug’s manufacturer under the Medicare Coverage Gap
+							Discount Program, as calculated by CMS based on data reported
+							in the PDE."/>
+	</concept>
+</CodeSystem>
