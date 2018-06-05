@@ -1,7 +1,7 @@
 ---
 layout: post_with_category
 title: Speed up data transfers
-date:   2018-05-30} 9:19 PM -0600
+date:   2018-06-05} 9:19 PM -0600
 categories: latest code
 permalink: /blog/:title
 badge: blog
@@ -39,5 +39,5 @@ their request. Otherwise, the server will respond with the unmodified content ty
 The change is an opt-in enhancement and will not create any backward compatibility issues. Developers can choose to
 implement, or not. 
 
-The change has been implemented in Release (Which release) that went live on (date).
+The change has been implemented in Release r17 that went live on 2018-06-05.
 
