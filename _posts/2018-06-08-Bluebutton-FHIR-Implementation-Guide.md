@@ -1,7 +1,7 @@
 ---
 layout: post_with_category
-title: Blue Button 2.0 FHIR Implementation Guide
-date:   2018-06-07 09:00:00 -0500
+title: Blue Button FHIR Implementation Guide
+date:   2018-06-08 09:00:00 -0500
 categories: latest
 permalink: /blog/:title
 badge: blog
