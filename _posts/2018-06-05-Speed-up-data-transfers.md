@@ -1,7 +1,7 @@
 ---
 layout: post_with_category
 title: Speed up data transfers
-date:   2018-06-05} 9:19 PM -0600
+date:   2018-06-05 09:19 PM -0600
 categories: latest code
 permalink: /blog/:title
 badge: blog
@@ -14,11 +14,11 @@ ctas:
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
 ---
 # Would you like faster data transfers?
-
 The Blue Button Team continues to look at performance improvements for the Blue Button 2.0 API. The 
 ExplanationOfBenefit resource can involve a large amount of data being transferred. To improve performance
-in this area we are introducing the ability to apply gzip compression. The following data types can be enabled
-for compression:
+in this area we are introducing the ability to apply gzip compression. 
+
+The following data types can be enabled for compression:
 
 This enables gzip compression for a few content types:
 
