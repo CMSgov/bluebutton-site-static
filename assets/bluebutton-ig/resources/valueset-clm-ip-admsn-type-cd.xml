@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="clm-ip-admsn-type-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/clm-ip-admsn-type-cd"/>
+    <name value="Claim Inpatient Admission Type Code"/>
+    <description value="The code indicating the type and priority of an inpatient admission associated with the service on an intermediary submitted claim. Source: https://bluebutton.cms.gov/resources/variables/clm_ip_admsn_type_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/clm-ip-admsn-type-cd"/>
+        </include>
+    </compose>
+</ValueSet>

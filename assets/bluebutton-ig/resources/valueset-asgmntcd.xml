@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="asgmntcd"/>
+    <url value="http://hl7.org/fhir/ValueSet/asgmntcd"/>
+    <name value="Carrier Claim Provider Assignment Indicator Switch"/>
+    <description value="Variable indicates whether or not the provider accepts assignment for the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/asgmntcd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/asgmntcd"/>
+        </include>
+    </compose>
+</ValueSet>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="carr-line-prvdr-type-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/carr-line-prvdr-type-cd"/>
+    <name value="Carrier Line Provider Type Code"/>
+    <description value="Code identifying the type of provider furnishing the service for this line item on the carrier claim. Source: https://bluebutton.cms.gov/resources/variables/carr_line_prvdr_type_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/carr-line-prvdr-type-cd"/>
+        </include>
+    </compose>
+</ValueSet>

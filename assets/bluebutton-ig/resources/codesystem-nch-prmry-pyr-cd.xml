@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="nch-prmry-pyr-cd"/>
+    <url value="http://hl7.org/fhir/CodeSystem/nch-prmry-pyr-cd"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/nch-prmry-pyr-cd"/>
+    </identifier>
+    <name value="NCH Primary Payer Code (if not Medicare)"/>
+    <title value="NCH Primary Payer Code (if not Medicare)"/>
+    <status value="active"/>
+    <description value="The code, on an institutional claim, specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's health insurance bills. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/nch_prmry_pyr_cd"/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/nch-prmry-pyr-cd"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="A"/>
+        <display value="Employer group health plan (EGHP) insurance for an aged beneficiary"/>
+        <definition value="Employer group health plan (EGHP) insurance for an aged beneficiary"/>
+    </concept>
+    <concept>
+        <code value="B"/>
+        <display value="EGHP insurance for an end-stage renal disease (ESRD) beneficiary"/>
+        <definition value="EGHP insurance for an end-stage renal disease (ESRD) beneficiary"/>
+    </concept>
+    <concept>
+        <code value="C"/>
+        <display value="Conditional payment by Medicare; future reimbursement from the Public Health Service (PHS) expected"/>
+        <definition value="Conditional payment by Medicare; future reimbursement from the Public Health Service (PHS) expected"/>
+    </concept>
+    <concept>
+        <code value="D"/>
+        <display value="No fault automobile insurance"/>
+        <definition value="No fault automobile insurance"/>
+    </concept>
+    <concept>
+        <code value="E"/>
+        <display value="Worker's compensation (WC)"/>
+        <definition value="Worker's compensation (WC)"/>
+    </concept>
+    <concept>
+        <code value="F"/>
+        <display value="Public Health Service (PHS) or other Federal agency (other than VA)"/>
+        <definition value="Public Health Service (PHS) or other Federal agency (other than VA)"/>
+    </concept>
+    <concept>
+        <code value="G"/>
+        <display value="Working disabled beneficiary under age 65 with a local government health plan (LGHP)"/>
+        <definition value="Working disabled beneficiary under age 65 with a local government health plan (LGHP)"/>
+    </concept>
+    <concept>
+        <code value="H"/>
+        <display value="Black lung (BL) program"/>
+        <definition value="Black lung (BL) program"/>
+    </concept>
+    <concept>
+        <code value="I"/>
+        <display value="Department of Veteran's Affairs"/>
+        <definition value="Department of Veteran's Affairs"/>
+    </concept>
+    <concept>
+        <code value="L"/>
+        <display value="Any liability insurance"/>
+        <definition value="Any liability insurance"/>
+    </concept>
+    <concept>
+        <code value="M"/>
+        <display value="Override EGHP - Medicare is primary payer"/>
+        <definition value="Override EGHP - Medicare is primary payer"/>
+    </concept>
+    <concept>
+        <code value="N"/>
+        <display value="Override non-EGHP - Medicare is primary payer Blank / missing = No other primary payer"/>
+        <definition value="Override non-EGHP - Medicare is primary payer Blank / missing = No other primary payer"/>
+    </concept>
+</CodeSystem>

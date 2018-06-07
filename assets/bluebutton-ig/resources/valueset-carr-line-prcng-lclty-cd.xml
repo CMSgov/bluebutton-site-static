@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="carr-line-prcng-lclty-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/carr-line-prcng-lclty-cd"/>
+    <name value="Carrier Line Pricing Locality Code"/>
+    <description value="Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr_line_prcng_lclty_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/carr-line-prcng-lclty-cd"/>
+        </include>
+    </compose>
+</ValueSet>

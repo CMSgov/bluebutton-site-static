@@ -46,6 +46,8 @@ exclude:
 
 include: ["_pages"]
 
+exclude: ["assets/bluebutton-ig/"]
+
 # Settings for RSS Feed for Blog
 name: Blue Button 2.0 Blog
 # the next two values are defined above so we are changing the keys.

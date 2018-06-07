@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="asgmntcd"/>
+    <url value="http://hl7.org/fhir/CodeSystem/asgmntcd"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/asgmntcd"/>
+    </identifier>
+    <name value="Carrier Claim Provider Assignment Indicator Switch"/>
+    <title value="Carrier Claim Provider Assignment Indicator Switch"/>
+    <status value="active"/>
+    <description value="Variable indicates whether or not the provider accepts assignment for the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/asgmntcd"/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/asgmntcd"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="A"/>
+        <display value="Assigned claim"/>
+        <definition value="Assigned claim"/>
+    </concept>
+    <concept>
+        <code value="N"/>
+        <display value="Non-assigned claim"/>
+        <definition value="Non-assigned claim"/>
+    </concept>
+</CodeSystem>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="drug-cvrg-stus-cd"/>
+    <url value="http://hl7.org/fhir/CodeSystem/drug-cvrg-stus-cd"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/drug-cvrg-stus-cd"/>
+    </identifier>
+    <name value="Drug Coverage Status Code"/>
+    <title value="Drug Coverage Status Code"/>
+    <status value="active"/>
+    <description value="This field indicates whether or not the drug is covered by Medicare Part D. The Part D benefit does not cover all FDA-approved drugs. However, plan sponsors can offer an “enhanced” benefit package that covers non-Part D drugs, such as over-the-counter medications. Source: https://bluebutton.cms.gov/resources/variables/drug_cvrg_stus_cd"/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/drug-cvrg-stus-cd"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="C"/>
+        <display value="Covered"/>
+        <definition value="Covered"/>
+    </concept>
+    <concept>
+        <code value="E"/>
+        <display value="Supplemental drugs (reported by plans that provide Enhanced Alternative coverage)"/>
+        <definition value="Supplemental drugs (reported by plans that provide Enhanced Alternative coverage)"/>
+    </concept>
+    <concept>
+        <code value="O"/>
+        <display value="Over-the-counter drugs"/>
+        <definition value="Over-the-counter drugs"/>
+    </concept>
+</CodeSystem>

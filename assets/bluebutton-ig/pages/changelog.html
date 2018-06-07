@@ -1,0 +1,22 @@
+---
+# jekyll header
+---
+{% include header.html %}
+
+  <!-- ============BreadCrumb=============== -->
+
+{% include container-start.html %}
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2>Change Log<h2>
+
+    {% capture my-include %}{% include changelog.md %}{% endcapture %}{{ my-include | markdownify }}
+
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+
+    {% include footer.html %}

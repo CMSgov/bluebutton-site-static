@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="race"/>
+	<url value="http://hl7.org/fhir/ValueSet/race"/>
+	<name value="Blue Button Race Codes"/>
+	<description value="Blue Button race codes found at https://bluebutton.cms.gov/resources/variables/race/"/>
+	<compose>
+		<include>
+			<system value="http://hl7.org/fhir/CodeSystem/race"/>
+		</include>
+	</compose>
+</ValueSet>

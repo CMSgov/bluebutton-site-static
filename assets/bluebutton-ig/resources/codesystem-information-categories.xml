@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="information-categories"/>
+    <url value="http://hl7.org/fhir/CodeSystem/information-categories"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/information-categories"/>
+    </identifier>
+    <name value=""/>
+    <title value=""/>
+    <status value="active"/>
+    <description value=""/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/information-categories"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="daw-prod-slctn-cd"/>
+        <display value="Dispense as Written (DAW) Product Selection Code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/daw-prod-slctn-cd"/>
+    </concept>
+    <concept>
+        <code value="dspnsng-stus-cd"/>
+        <display value="Dispensing Status Code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/dspnsng-stus-cd"/>
+    </concept>
+    <concept>
+        <code value="drug-cvrg-stus-cd"/>
+        <display value="Drug Coverage Status Code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/drug-cvrg-stus-cd"/>
+    </concept>
+    <concept>
+        <code value="adjstmt-dltn-cd"/>
+        <display value="Adjustment Deletion Code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/adjstmt-dltn-cd"/>
+    </concept>
+    <concept>
+        <code value="nstd-frmt-cd"/>
+        <display value="Non-Standard Format Code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/nstd-frmt-cd"/>
+    </concept>
+    <concept>
+        <code value="prcng-excptn-cd"/>
+        <display value="Pricing Exception Code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/prcng-excptn-cd"/>
+    </concept>
+    <concept>
+        <code value="ctstrphc-cvrg-cd"/>
+        <display value="Catastrophic Coverage Code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/ctstrphc-cvrg-cd"/>
+    </concept>
+    <concept>
+        <code value="rx-orgn-cd"/>
+        <display value="Prescription Origination Code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/rx-orgn-cd"/>
+    </concept>
+    <concept>
+        <code value="brnd-gnrc-cd"/>
+        <display value="Brand-Generic Code Reported by Submitting Plan"/>
+        <definition value="http://hl7.org/fhir/ValueSet/brnd-gnrc-cd"/>
+    </concept>
+    <concept>
+        <code value="phrmcy-srvc-type-cd"/>
+        <display value="Pharmacy service type code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/phrmcy-srvc-type-cd"/>
+    </concept>
+    <concept>
+        <code value="ptnt-rsdnc-cd"/>
+        <display value="Patient Residence Code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/ptnt-rsdnc-cd"/>
+    </concept>
+    <concept>
+        <code value="submsn-clr-cd"/>
+        <display value="Submission clarification code"/>
+        <definition value="http://hl7.org/fhir/ValueSet/submsn-clr-cd"/>
+    </concept>
+    <concept>
+		<code value="nch-ptnt-stus-ind-cd"/>
+		<display value="NCH Patient Status Indicator Code"/>
+		<definition value="http://hl7.org/fhir/ValueSet/nch-ptnt-stus-ind-cd"/>
+	</concept>
+	<concept>
+		<code value="clm-ip-admsn-type-cd"/>
+		<display value="Claim Inpatient Admission Type Code"/>
+		<definition value="http://hl7.org/fhir/ValueSet/clm-ip-admsn-type-cd"/>
+	</concept>
+	<concept>
+		<code value="clm-src-ip-admsn-cd"/>
+		<display value="Claim Source Inpatient Admission Code"/>
+		<definition value="http://hl7.org/fhir/ValueSet/clm-src-ip-admsn-cd"/>
+	</concept>
+	<concept>
+		<code value="clm-mco-pd-sw"/>
+		<display value="Claim MCO Paid Switch"/>
+		<definition value="http://hl7.org/fhir/ValueSet/clm-mco-pd-sw"/>
+	</concept>
+	<concept>
+		<code value="clm-freq-cd"/>
+		<display value="Claim Frequency Code"/>
+		<definition value="http://hl7.org/fhir/ValueSet/clm-freq-cd"/>
+	</concept>
+	<concept>
+		<code value="ptnt-dschrg-stus-cd"/>
+		<display value="Patient Discharge Status Code"/>
+		<definition value="http://hl7.org/fhir/ValueSet/ptnt-dschrg-stus-cd"/>
+	</concept>
+	<concept>
+		<code value="nch-prmry-pyr-cd"/>
+		<display value="NCH Primary Payer Code (if not Medicare)"/>
+		<definition value="http://hl7.org/fhir/ValueSet/nch-prmry-pyr-cd"/>
+	</concept>
+    <concept>
+      	<code value="clm-hha-lupa-ind-cd"/>
+      	<display value="Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code"/>
+      	<definition value="http://hl7.org/fhir/ValueSet/clm-hha-lupa-ind-cd"/>
+    </concept>
+    <concept>
+        <code value="clm-hha-rfrl-cd"/>
+        <display value="Physician referral - The patient was admitted upon the recommendation of a personal physician"/>
+        <definition value="http://hl7.org/fhir/ValueSet/clm-hha-rfrl-cd"/>
+    </concept>
+</CodeSystem>

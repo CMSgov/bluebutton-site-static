@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="betos-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/betos-cd"/>
+    <name value="Line Berenson-Eggers Type of Service (BETOS) Code"/>
+    <description value="The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/betos-cd"/>
+        </include>
+    </compose>
+</ValueSet>

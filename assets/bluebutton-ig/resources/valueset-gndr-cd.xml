@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="gndr-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/gndr-cd"/>
+    <name value="Patient Gender"/>
+    <description value="Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/gndr-cd"/>
+        </include>
+    </compose>
+</ValueSet>
