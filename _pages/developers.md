@@ -355,7 +355,10 @@ To activate compression add the following to the header:
 Accept-Encoding: gzip
 </pre>
 
-The minimum payload size we will gzip is 1 kilobyte. 
+The minimum payload size we will gzip is 1 kilobyte. If the original uncompressed size of the payload is less than 1 kb, 
+we will not apply gzip compression to our response. Therefore, developers should ensure their applications handle 
+this scenario gracefully by checking for the **Content-Encoding: gzip** response header before trying to 
+decompress.
 
 [Download a sample Coverage FHIR Resource](/sample-coverage-entry.json)
 
