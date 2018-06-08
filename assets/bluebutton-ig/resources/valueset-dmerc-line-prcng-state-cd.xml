@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="dmerc-line-prcng-state-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/dmerc-line-prcng-state-cd"/>
+    <name value="DMERC Line Pricing State Code (SSA)"/>
+    <description value="The 2-digit SSA state code where the durable medical equipment (DME) supplier was located; used by the Medicare Administrative Contractor (MAC) for pricing the service. Source: https://bluebutton.cms.gov/resources/variables/dmerc_line_prcng_state_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/dmerc-line-prcng-state-cd"/>
+        </include>
+    </compose>
+</ValueSet>

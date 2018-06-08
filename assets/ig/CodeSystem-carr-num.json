@@ -1,0 +1,504 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "carr-num",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier or MAC Number</h2><div><p>The identification number assigned by CMS to a carrier authorized to process claims from a physician or supplier. Effective July 2006, the Medicare Administrative Contractors (MACs) began replacing the existing carriers and started processing physician or supplier claim records for states assigned to its jurisdiction. Source: https://bluebutton.cms.gov/resources/variables/carr_num</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-num defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>00510<a name=\"carr-num-00510\"> </a></td><td>Alabama - CAHABA</td><td>Alabama - CAHABA</td></tr><tr><td>00511<a name=\"carr-num-00511\"> </a></td><td>Georgia - CAHABA</td><td>Georgia - CAHABA</td></tr><tr><td>00512<a name=\"carr-num-00512\"> </a></td><td>Mississippi - CAHABA (eff. 2000)</td><td>Mississippi - CAHABA (eff. 2000)</td></tr><tr><td>00520<a name=\"carr-num-00520\"> </a></td><td>Arkansas BC/BS</td><td>Arkansas BC/BS</td></tr><tr><td>00521<a name=\"carr-num-00521\"> </a></td><td>New Mexico - Arkansas BC/BS (term. 2008) (replaced by MAC #04202)</td><td>New Mexico - Arkansas BC/BS (term. 2008) (replaced by MAC #04202)</td></tr><tr><td>00522<a name=\"carr-num-00522\"> </a></td><td>Oklahoma - Arkansas BC/BS (term. 2008) (replaced by MAC #04302)</td><td>Oklahoma - Arkansas BC/BS (term. 2008) (replaced by MAC #04302)</td></tr><tr><td>00523<a name=\"carr-num-00523\"> </a></td><td>Missouri East - Arkansas BC/BS (term. 2008) (replaced by MAC #05392)</td><td>Missouri East - Arkansas BC/BS (term. 2008) (replaced by MAC #05392)</td></tr><tr><td>00524<a name=\"carr-num-00524\"> </a></td><td>Rhode Island - Arkansas BC/BS (eff. 2004)</td><td>Rhode Island - Arkansas BC/BS (eff. 2004)</td></tr><tr><td>00528<a name=\"carr-num-00528\"> </a></td><td>Louisiana - Arkansas BS</td><td>Louisiana - Arkansas BS</td></tr><tr><td>00590<a name=\"carr-num-00590\"> </a></td><td>Florida - First Coast</td><td>Florida - First Coast</td></tr><tr><td>00591<a name=\"carr-num-00591\"> </a></td><td>Connecticut - First Coast (eff. 2000)</td><td>Connecticut - First Coast (eff. 2000)</td></tr><tr><td>00630<a name=\"carr-num-00630\"> </a></td><td>Indiana - Administar</td><td>Indiana - Administar</td></tr><tr><td>00635<a name=\"carr-num-00635\"> </a></td><td>DMERC-B - Administar (replaced by MAC #17003)</td><td>DMERC-B - Administar (replaced by MAC #17003)</td></tr><tr><td>00640<a name=\"carr-num-00640\"> </a></td><td>Iowa - Wellmark, Inc.</td><td>Iowa - Wellmark, Inc.</td></tr><tr><td>00645<a name=\"carr-num-00645\"> </a></td><td>Nebraska - Iowa BS</td><td>Nebraska - Iowa BS</td></tr><tr><td>00650<a name=\"carr-num-00650\"> </a></td><td>Kansas BCBS (term. 2008) (replaced by MAC #05202)</td><td>Kansas BCBS (term. 2008) (replaced by MAC #05202)</td></tr><tr><td>00655<a name=\"carr-num-00655\"> </a></td><td>Nebraska - Kansas BC/BS (term. 2008) (replaced by MAC #05402)</td><td>Nebraska - Kansas BC/BS (term. 2008) (replaced by MAC #05402)</td></tr><tr><td>00660<a name=\"carr-num-00660\"> </a></td><td>Kentucky - Administar</td><td>Kentucky - Administar</td></tr><tr><td>00740<a name=\"carr-num-00740\"> </a></td><td>Western Missouri - Kansas BS (term.2008) (replaced by MAC #05302)</td><td>Western Missouri - Kansas BS (term.2008) (replaced by MAC #05302)</td></tr><tr><td>00751<a name=\"carr-num-00751\"> </a></td><td>Montana BC/BS (replaced by MAC # 03202)</td><td>Montana BC/BS (replaced by MAC # 03202)</td></tr><tr><td>00801<a name=\"carr-num-00801\"> </a></td><td>New York - Healthnow</td><td>New York - Healthnow</td></tr><tr><td>00803<a name=\"carr-num-00803\"> </a></td><td>New York - Empire BS</td><td>New York - Empire BS</td></tr><tr><td>00805<a name=\"carr-num-00805\"> </a></td><td>New Jersey - Empire BS</td><td>New Jersey - Empire BS</td></tr><tr><td>00811<a name=\"carr-num-00811\"> </a></td><td>DMERC (A) - Healthnow (eff. 2000) (replaced by MAC #16003)</td><td>DMERC (A) - Healthnow (eff. 2000) (replaced by MAC #16003)</td></tr><tr><td>00820<a name=\"carr-num-00820\"> </a></td><td>North Dakota - Noridian (replaced by MAC #03302)</td><td>North Dakota - Noridian (replaced by MAC #03302)</td></tr><tr><td>00823<a name=\"carr-num-00823\"> </a></td><td>Utah - Noridian (eff. 12/1/2005) (replaced by MAC #03502)</td><td>Utah - Noridian (eff. 12/1/2005) (replaced by MAC #03502)</td></tr><tr><td>00824<a name=\"carr-num-00824\"> </a></td><td>Colorado - Noridian (term. 2008) (replaced by MAC #04102)</td><td>Colorado - Noridian (term. 2008) (replaced by MAC #04102)</td></tr><tr><td>00825<a name=\"carr-num-00825\"> </a></td><td>Wyoming - Noridian (replaced by MAC #03602)</td><td>Wyoming - Noridian (replaced by MAC #03602)</td></tr><tr><td>00826<a name=\"carr-num-00826\"> </a></td><td>Iowa - Noridian (term. 2008) (replaced by MAC #05102)</td><td>Iowa - Noridian (term. 2008) (replaced by MAC #05102)</td></tr><tr><td>00831<a name=\"carr-num-00831\"> </a></td><td>Alaska - Noridian</td><td>Alaska - Noridian</td></tr><tr><td>00832<a name=\"carr-num-00832\"> </a></td><td>Arizona - Noridian (replaced by MAC # 03102)</td><td>Arizona - Noridian (replaced by MAC # 03102)</td></tr><tr><td>00833<a name=\"carr-num-00833\"> </a></td><td>Hawaii - Noridian</td><td>Hawaii - Noridian</td></tr><tr><td>00834<a name=\"carr-num-00834\"> </a></td><td>Nevada - Noridian</td><td>Nevada - Noridian</td></tr><tr><td>00835<a name=\"carr-num-00835\"> </a></td><td>Oregon - Noridian</td><td>Oregon - Noridian</td></tr><tr><td>00836<a name=\"carr-num-00836\"> </a></td><td>Washington - Noridian</td><td>Washington - Noridian</td></tr><tr><td>00865<a name=\"carr-num-00865\"> </a></td><td>Pennsylvania - Highmark</td><td>Pennsylvania - Highmark</td></tr><tr><td>00870<a name=\"carr-num-00870\"> </a></td><td>Rhode Island BS (term. 2004)</td><td>Rhode Island BS (term. 2004)</td></tr><tr><td>00880<a name=\"carr-num-00880\"> </a></td><td>South Carolina - Palmetto</td><td>South Carolina - Palmetto</td></tr><tr><td>00882<a name=\"carr-num-00882\"> </a></td><td>RRB - South Carolina PGBA (eff. 2000)</td><td>RRB - South Carolina PGBA (eff. 2000)</td></tr><tr><td>00883<a name=\"carr-num-00883\"> </a></td><td>Ohio - Palmetto (eff. 2002)</td><td>Ohio - Palmetto (eff. 2002)</td></tr><tr><td>00884<a name=\"carr-num-00884\"> </a></td><td>West Virginia - Palmetto (eff. 2002)</td><td>West Virginia - Palmetto (eff. 2002)</td></tr><tr><td>00885<a name=\"carr-num-00885\"> </a></td><td>DMERC C - Palmetto (replaced by MAC #18003)</td><td>DMERC C - Palmetto (replaced by MAC #18003)</td></tr><tr><td>00889<a name=\"carr-num-00889\"> </a></td><td>South Dakota - Noridian (eff. 4/1/2006) (replaced by MAC # 03402)</td><td>South Dakota - Noridian (eff. 4/1/2006) (replaced by MAC # 03402)</td></tr><tr><td>00900<a name=\"carr-num-00900\"> </a></td><td>Texas - Trailblazer (term. 2008) (replaced by MAC # 04402)</td><td>Texas - Trailblazer (term. 2008) (replaced by MAC # 04402)</td></tr><tr><td>00901<a name=\"carr-num-00901\"> </a></td><td>Maryland - Trailblazer</td><td>Maryland - Trailblazer</td></tr><tr><td>00902<a name=\"carr-num-00902\"> </a></td><td>Delaware - Trailblazer</td><td>Delaware - Trailblazer</td></tr><tr><td>00903<a name=\"carr-num-00903\"> </a></td><td>District of Columbia - Trailblazer</td><td>District of Columbia - Trailblazer</td></tr><tr><td>00904<a name=\"carr-num-00904\"> </a></td><td>Virginia - Trailblazer (eff. 2000)</td><td>Virginia - Trailblazer (eff. 2000)</td></tr><tr><td>00910<a name=\"carr-num-00910\"> </a></td><td>Utah BS</td><td>Utah BS</td></tr><tr><td>00951<a name=\"carr-num-00951\"> </a></td><td>Wisconsin - Wisconsin Phy Svc</td><td>Wisconsin - Wisconsin Phy Svc</td></tr><tr><td>00952<a name=\"carr-num-00952\"> </a></td><td>Illinois - Wisconsin Phy Svc</td><td>Illinois - Wisconsin Phy Svc</td></tr><tr><td>00953<a name=\"carr-num-00953\"> </a></td><td>Michigan - Wisconsin Phy Svc</td><td>Michigan - Wisconsin Phy Svc</td></tr><tr><td>00954<a name=\"carr-num-00954\"> </a></td><td>Minnesota - Wisconsin Phy Svc (eff. 2000)</td><td>Minnesota - Wisconsin Phy Svc (eff. 2000)</td></tr><tr><td>00973<a name=\"carr-num-00973\"> </a></td><td>Puerto Rico - Triple S, Inc.</td><td>Puerto Rico - Triple S, Inc.</td></tr><tr><td>00974<a name=\"carr-num-00974\"> </a></td><td>Triple-S, Inc. - Virgin Islands</td><td>Triple-S, Inc. - Virgin Islands</td></tr><tr><td>02050<a name=\"carr-num-02050\"> </a></td><td>California - TOLIC (term. 2000)</td><td>California - TOLIC (term. 2000)</td></tr><tr><td>05130<a name=\"carr-num-05130\"> </a></td><td>Idaho - CIGNA</td><td>Idaho - CIGNA</td></tr><tr><td>05302<a name=\"carr-num-05302\"> </a></td><td>Western Missouri (eff. 3/2008)</td><td>Western Missouri (eff. 3/2008)</td></tr><tr><td>05440<a name=\"carr-num-05440\"> </a></td><td>Tennessee - CIGNA</td><td>Tennessee - CIGNA</td></tr><tr><td>05535<a name=\"carr-num-05535\"> </a></td><td>North Carolina - CIGNA</td><td>North Carolina - CIGNA</td></tr><tr><td>05655<a name=\"carr-num-05655\"> </a></td><td>DMERC-D Alaska - CIGNA (replaced by MAC #19003)</td><td>DMERC-D Alaska - CIGNA (replaced by MAC #19003)</td></tr><tr><td>10071<a name=\"carr-num-10071\"> </a></td><td>Railroad Board Travelers (term. 2000)</td><td>Railroad Board Travelers (term. 2000)</td></tr><tr><td>10230<a name=\"carr-num-10230\"> </a></td><td>Connecticut - Metra Health (term. 2000)</td><td>Connecticut - Metra Health (term. 2000)</td></tr><tr><td>10240<a name=\"carr-num-10240\"> </a></td><td>Minnesota - Metra Health (term. 2000)</td><td>Minnesota - Metra Health (term. 2000)</td></tr><tr><td>10250<a name=\"carr-num-10250\"> </a></td><td>Mississippi - Metra Health (term. 2000)</td><td>Mississippi - Metra Health (term. 2000)</td></tr><tr><td>10490<a name=\"carr-num-10490\"> </a></td><td>Virginia - Metra Health (term. 2000)</td><td>Virginia - Metra Health (term. 2000)</td></tr><tr><td>10555<a name=\"carr-num-10555\"> </a></td><td>DMERC A - Travelers Insurance Co. (term. 2000)</td><td>DMERC A - Travelers Insurance Co. (term. 2000)</td></tr><tr><td>14330<a name=\"carr-num-14330\"> </a></td><td>New York - GHI</td><td>New York - GHI</td></tr><tr><td>16360<a name=\"carr-num-16360\"> </a></td><td>Ohio - Nationwide Insurance Co. (term. 2002)</td><td>Ohio - Nationwide Insurance Co. (term. 2002)</td></tr><tr><td>16510<a name=\"carr-num-16510\"> </a></td><td>West Virginia - Nationwide Insur Co. (term. 2002)</td><td>West Virginia - Nationwide Insur Co. (term. 2002)</td></tr><tr><td>31140<a name=\"carr-num-31140\"> </a></td><td>N. California - National Heritage Ins.</td><td>N. California - National Heritage Ins.</td></tr><tr><td>31142<a name=\"carr-num-31142\"> </a></td><td>Maine - National Heritage Ins.</td><td>Maine - National Heritage Ins.</td></tr><tr><td>31143<a name=\"carr-num-31143\"> </a></td><td>Massachusetts - National Heritage Ins.</td><td>Massachusetts - National Heritage Ins.</td></tr><tr><td>31144<a name=\"carr-num-31144\"> </a></td><td>New Hampshire - National Heritage Ins.</td><td>New Hampshire - National Heritage Ins.</td></tr><tr><td>31145<a name=\"carr-num-31145\"> </a></td><td>Vermont - National Heritage Ins.</td><td>Vermont - National Heritage Ins.</td></tr><tr><td>31146<a name=\"carr-num-31146\"> </a></td><td>So. California - NHIC (eff. 2000)</td><td>So. California - NHIC (eff. 2000)</td></tr><tr><td>80884<a name=\"carr-num-80884\"> </a></td><td>Contractor ID for Physician Risk Adjustment Data (data not sent through NCH, but through Palmetto) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Medicare Administrative Contractors (MACs) JURISDICTION 3 -- Part B MACs</td><td>Contractor ID for Physician Risk Adjustment Data (data not sent through NCH, but through Palmetto) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Medicare Administrative Contractors (MACs) JURISDICTION 3 -- Part B MACs</td></tr><tr><td>03102<a name=\"carr-num-03102\"> </a></td><td>Arizona (eff. 12/1/06) (replaces carrier #00832)</td><td>Arizona (eff. 12/1/06) (replaces carrier #00832)</td></tr><tr><td>03202<a name=\"carr-num-03202\"> </a></td><td>Montana (eff. 12/1/06) (replaces carrier #00751)</td><td>Montana (eff. 12/1/06) (replaces carrier #00751)</td></tr><tr><td>03302<a name=\"carr-num-03302\"> </a></td><td>N. Dakota (eff. 12/1/06) (replaces carrier #00820)</td><td>N. Dakota (eff. 12/1/06) (replaces carrier #00820)</td></tr><tr><td>03402<a name=\"carr-num-03402\"> </a></td><td>S. Dakota (eff. 12/1/06) (replaces carrier #00889)</td><td>S. Dakota (eff. 12/1/06) (replaces carrier #00889)</td></tr><tr><td>03502<a name=\"carr-num-03502\"> </a></td><td>Utah (eff. 12/1/06) (replaces carrier #00823)</td><td>Utah (eff. 12/1/06) (replaces carrier #00823)</td></tr><tr><td>03602<a name=\"carr-num-03602\"> </a></td><td>Wyoming (eff. 12/1/06) (replaces carrier #00825) JURISDICTION 4 -- Part B MACs</td><td>Wyoming (eff. 12/1/06) (replaces carrier #00825) JURISDICTION 4 -- Part B MACs</td></tr><tr><td>04102<a name=\"carr-num-04102\"> </a></td><td>Colorado (eff. 3/24/08) (replaces carrier #00824)</td><td>Colorado (eff. 3/24/08) (replaces carrier #00824)</td></tr><tr><td>04202<a name=\"carr-num-04202\"> </a></td><td>New Mexico (eff. 3/1/08 (replaces carrier #00521)</td><td>New Mexico (eff. 3/1/08 (replaces carrier #00521)</td></tr><tr><td>04302<a name=\"carr-num-04302\"> </a></td><td>Oklahoma (eff. 3/1/08) (replaces carrier #00522)</td><td>Oklahoma (eff. 3/1/08) (replaces carrier #00522)</td></tr><tr><td>04402<a name=\"carr-num-04402\"> </a></td><td>Texas (eff. 6/13/08) (replaces carrier #00900) JURISDICTION 5 -- Part B MACs</td><td>Texas (eff. 6/13/08) (replaces carrier #00900) JURISDICTION 5 -- Part B MACs</td></tr><tr><td>05102<a name=\"carr-num-05102\"> </a></td><td>Iowa (eff.2/1/08) (replaces carrier #00826)</td><td>Iowa (eff.2/1/08) (replaces carrier #00826)</td></tr><tr><td>05202<a name=\"carr-num-05202\"> </a></td><td>Kansas (eff. 3/1/08) (replaces carrier #00650)</td><td>Kansas (eff. 3/1/08) (replaces carrier #00650)</td></tr><tr><td>05302<a name=\"carr-num-05302\"> </a></td><td>W. Missouri (eff. 3/1/08) (replaces carrier #00651 or 00740)</td><td>W. Missouri (eff. 3/1/08) (replaces carrier #00651 or 00740)</td></tr><tr><td>05392<a name=\"carr-num-05392\"> </a></td><td>E. Missouri (eff. 6/1/08) (replaces carrier #00523)</td><td>E. Missouri (eff. 6/1/08) (replaces carrier #00523)</td></tr><tr><td>05402<a name=\"carr-num-05402\"> </a></td><td>Nebraska (eff. 3/1/08) (replaces carrier #00655) Durable Medical Equipment (DME) MACs</td><td>Nebraska (eff. 3/1/08) (replaces carrier #00655) Durable Medical Equipment (DME) MACs</td></tr><tr><td>16003<a name=\"carr-num-16003\"> </a></td><td>National Heritage Insur Co (NHIC) (eff. 7/1/06) (replaces carrier #00811)</td><td>National Heritage Insur Co (NHIC) (eff. 7/1/06) (replaces carrier #00811)</td></tr><tr><td>17003<a name=\"carr-num-17003\"> </a></td><td>Administar Federal, Inc. (eff. 7/1/06) (replaces carrier # 00635)</td><td>Administar Federal, Inc. (eff. 7/1/06) (replaces carrier # 00635)</td></tr><tr><td>18003<a name=\"carr-num-18003\"> </a></td><td>Palmetto GBA, LLC (eff. 6/1/07) (replaces carrier #00885)</td><td>Palmetto GBA, LLC (eff. 6/1/07) (replaces carrier #00885)</td></tr><tr><td>19003<a name=\"carr-num-19003\"> </a></td><td>Noridan Administrative Services (eff. 10/1/06) (replaces carrier #05655)</td><td>Noridan Administrative Services (eff. 10/1/06) (replaces carrier #05655)</td></tr></table></div>"
+  },
+  "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-num",
+  "identifier": {
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-num"
+  },
+  "version": "1.1.0",
+  "name": "Carrier or MAC Number",
+  "title": "Carrier or MAC Number",
+  "status": "active",
+  "date": "2018-05-31T14:39:32+00:00",
+  "description": "The identification number assigned by CMS to a carrier authorized to process claims from a physician or supplier. Effective July 2006, the Medicare Administrative Contractors (MACs) began replacing the existing carriers and started processing physician or supplier claim records for states assigned to its jurisdiction. Source: https://bluebutton.cms.gov/resources/variables/carr_num",
+  "caseSensitive": true,
+  "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-carr-num",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "00510",
+      "display": "Alabama - CAHABA",
+      "definition": "Alabama - CAHABA"
+    },
+    {
+      "code": "00511",
+      "display": "Georgia - CAHABA",
+      "definition": "Georgia - CAHABA"
+    },
+    {
+      "code": "00512",
+      "display": "Mississippi - CAHABA (eff. 2000)",
+      "definition": "Mississippi - CAHABA (eff. 2000)"
+    },
+    {
+      "code": "00520",
+      "display": "Arkansas BC/BS",
+      "definition": "Arkansas BC/BS"
+    },
+    {
+      "code": "00521",
+      "display": "New Mexico - Arkansas BC/BS (term. 2008) (replaced by MAC #04202)",
+      "definition": "New Mexico - Arkansas BC/BS (term. 2008) (replaced by MAC #04202)"
+    },
+    {
+      "code": "00522",
+      "display": "Oklahoma - Arkansas BC/BS (term. 2008) (replaced by MAC #04302)",
+      "definition": "Oklahoma - Arkansas BC/BS (term. 2008) (replaced by MAC #04302)"
+    },
+    {
+      "code": "00523",
+      "display": "Missouri East - Arkansas BC/BS (term. 2008) (replaced by MAC #05392)",
+      "definition": "Missouri East - Arkansas BC/BS (term. 2008) (replaced by MAC #05392)"
+    },
+    {
+      "code": "00524",
+      "display": "Rhode Island - Arkansas BC/BS (eff. 2004)",
+      "definition": "Rhode Island - Arkansas BC/BS (eff. 2004)"
+    },
+    {
+      "code": "00528",
+      "display": "Louisiana - Arkansas BS",
+      "definition": "Louisiana - Arkansas BS"
+    },
+    {
+      "code": "00590",
+      "display": "Florida - First Coast",
+      "definition": "Florida - First Coast"
+    },
+    {
+      "code": "00591",
+      "display": "Connecticut - First Coast (eff. 2000)",
+      "definition": "Connecticut - First Coast (eff. 2000)"
+    },
+    {
+      "code": "00630",
+      "display": "Indiana - Administar",
+      "definition": "Indiana - Administar"
+    },
+    {
+      "code": "00635",
+      "display": "DMERC-B - Administar (replaced by MAC #17003)",
+      "definition": "DMERC-B - Administar (replaced by MAC #17003)"
+    },
+    {
+      "code": "00640",
+      "display": "Iowa - Wellmark, Inc.",
+      "definition": "Iowa - Wellmark, Inc."
+    },
+    {
+      "code": "00645",
+      "display": "Nebraska - Iowa BS",
+      "definition": "Nebraska - Iowa BS"
+    },
+    {
+      "code": "00650",
+      "display": "Kansas BCBS (term. 2008) (replaced by MAC #05202)",
+      "definition": "Kansas BCBS (term. 2008) (replaced by MAC #05202)"
+    },
+    {
+      "code": "00655",
+      "display": "Nebraska - Kansas BC/BS (term. 2008) (replaced by MAC #05402)",
+      "definition": "Nebraska - Kansas BC/BS (term. 2008) (replaced by MAC #05402)"
+    },
+    {
+      "code": "00660",
+      "display": "Kentucky - Administar",
+      "definition": "Kentucky - Administar"
+    },
+    {
+      "code": "00740",
+      "display": "Western Missouri - Kansas BS (term.2008) (replaced by MAC #05302)",
+      "definition": "Western Missouri - Kansas BS (term.2008) (replaced by MAC #05302)"
+    },
+    {
+      "code": "00751",
+      "display": "Montana BC/BS (replaced by MAC # 03202)",
+      "definition": "Montana BC/BS (replaced by MAC # 03202)"
+    },
+    {
+      "code": "00801",
+      "display": "New York - Healthnow",
+      "definition": "New York - Healthnow"
+    },
+    {
+      "code": "00803",
+      "display": "New York - Empire BS",
+      "definition": "New York - Empire BS"
+    },
+    {
+      "code": "00805",
+      "display": "New Jersey - Empire BS",
+      "definition": "New Jersey - Empire BS"
+    },
+    {
+      "code": "00811",
+      "display": "DMERC (A) - Healthnow (eff. 2000) (replaced by MAC #16003)",
+      "definition": "DMERC (A) - Healthnow (eff. 2000) (replaced by MAC #16003)"
+    },
+    {
+      "code": "00820",
+      "display": "North Dakota - Noridian (replaced by MAC #03302)",
+      "definition": "North Dakota - Noridian (replaced by MAC #03302)"
+    },
+    {
+      "code": "00823",
+      "display": "Utah - Noridian (eff. 12/1/2005) (replaced by MAC #03502)",
+      "definition": "Utah - Noridian (eff. 12/1/2005) (replaced by MAC #03502)"
+    },
+    {
+      "code": "00824",
+      "display": "Colorado - Noridian (term. 2008) (replaced by MAC #04102)",
+      "definition": "Colorado - Noridian (term. 2008) (replaced by MAC #04102)"
+    },
+    {
+      "code": "00825",
+      "display": "Wyoming - Noridian (replaced by MAC #03602)",
+      "definition": "Wyoming - Noridian (replaced by MAC #03602)"
+    },
+    {
+      "code": "00826",
+      "display": "Iowa - Noridian (term. 2008) (replaced by MAC #05102)",
+      "definition": "Iowa - Noridian (term. 2008) (replaced by MAC #05102)"
+    },
+    {
+      "code": "00831",
+      "display": "Alaska - Noridian",
+      "definition": "Alaska - Noridian"
+    },
+    {
+      "code": "00832",
+      "display": "Arizona - Noridian (replaced by MAC # 03102)",
+      "definition": "Arizona - Noridian (replaced by MAC # 03102)"
+    },
+    {
+      "code": "00833",
+      "display": "Hawaii - Noridian",
+      "definition": "Hawaii - Noridian"
+    },
+    {
+      "code": "00834",
+      "display": "Nevada - Noridian",
+      "definition": "Nevada - Noridian"
+    },
+    {
+      "code": "00835",
+      "display": "Oregon - Noridian",
+      "definition": "Oregon - Noridian"
+    },
+    {
+      "code": "00836",
+      "display": "Washington - Noridian",
+      "definition": "Washington - Noridian"
+    },
+    {
+      "code": "00865",
+      "display": "Pennsylvania - Highmark",
+      "definition": "Pennsylvania - Highmark"
+    },
+    {
+      "code": "00870",
+      "display": "Rhode Island BS (term. 2004)",
+      "definition": "Rhode Island BS (term. 2004)"
+    },
+    {
+      "code": "00880",
+      "display": "South Carolina - Palmetto",
+      "definition": "South Carolina - Palmetto"
+    },
+    {
+      "code": "00882",
+      "display": "RRB - South Carolina PGBA (eff. 2000)",
+      "definition": "RRB - South Carolina PGBA (eff. 2000)"
+    },
+    {
+      "code": "00883",
+      "display": "Ohio - Palmetto (eff. 2002)",
+      "definition": "Ohio - Palmetto (eff. 2002)"
+    },
+    {
+      "code": "00884",
+      "display": "West Virginia - Palmetto (eff. 2002)",
+      "definition": "West Virginia - Palmetto (eff. 2002)"
+    },
+    {
+      "code": "00885",
+      "display": "DMERC C - Palmetto (replaced by MAC #18003)",
+      "definition": "DMERC C - Palmetto (replaced by MAC #18003)"
+    },
+    {
+      "code": "00889",
+      "display": "South Dakota - Noridian (eff. 4/1/2006) (replaced by MAC # 03402)",
+      "definition": "South Dakota - Noridian (eff. 4/1/2006) (replaced by MAC # 03402)"
+    },
+    {
+      "code": "00900",
+      "display": "Texas - Trailblazer (term. 2008) (replaced by MAC # 04402)",
+      "definition": "Texas - Trailblazer (term. 2008) (replaced by MAC # 04402)"
+    },
+    {
+      "code": "00901",
+      "display": "Maryland - Trailblazer",
+      "definition": "Maryland - Trailblazer"
+    },
+    {
+      "code": "00902",
+      "display": "Delaware - Trailblazer",
+      "definition": "Delaware - Trailblazer"
+    },
+    {
+      "code": "00903",
+      "display": "District of Columbia - Trailblazer",
+      "definition": "District of Columbia - Trailblazer"
+    },
+    {
+      "code": "00904",
+      "display": "Virginia - Trailblazer (eff. 2000)",
+      "definition": "Virginia - Trailblazer (eff. 2000)"
+    },
+    {
+      "code": "00910",
+      "display": "Utah BS",
+      "definition": "Utah BS"
+    },
+    {
+      "code": "00951",
+      "display": "Wisconsin - Wisconsin Phy Svc",
+      "definition": "Wisconsin - Wisconsin Phy Svc"
+    },
+    {
+      "code": "00952",
+      "display": "Illinois - Wisconsin Phy Svc",
+      "definition": "Illinois - Wisconsin Phy Svc"
+    },
+    {
+      "code": "00953",
+      "display": "Michigan - Wisconsin Phy Svc",
+      "definition": "Michigan - Wisconsin Phy Svc"
+    },
+    {
+      "code": "00954",
+      "display": "Minnesota - Wisconsin Phy Svc (eff. 2000)",
+      "definition": "Minnesota - Wisconsin Phy Svc (eff. 2000)"
+    },
+    {
+      "code": "00973",
+      "display": "Puerto Rico - Triple S, Inc.",
+      "definition": "Puerto Rico - Triple S, Inc."
+    },
+    {
+      "code": "00974",
+      "display": "Triple-S, Inc. - Virgin Islands",
+      "definition": "Triple-S, Inc. - Virgin Islands"
+    },
+    {
+      "code": "02050",
+      "display": "California - TOLIC (term. 2000)",
+      "definition": "California - TOLIC (term. 2000)"
+    },
+    {
+      "code": "05130",
+      "display": "Idaho - CIGNA",
+      "definition": "Idaho - CIGNA"
+    },
+    {
+      "code": "05302",
+      "display": "Western Missouri (eff. 3/2008)",
+      "definition": "Western Missouri (eff. 3/2008)"
+    },
+    {
+      "code": "05440",
+      "display": "Tennessee - CIGNA",
+      "definition": "Tennessee - CIGNA"
+    },
+    {
+      "code": "05535",
+      "display": "North Carolina - CIGNA",
+      "definition": "North Carolina - CIGNA"
+    },
+    {
+      "code": "05655",
+      "display": "DMERC-D Alaska - CIGNA (replaced by MAC #19003)",
+      "definition": "DMERC-D Alaska - CIGNA (replaced by MAC #19003)"
+    },
+    {
+      "code": "10071",
+      "display": "Railroad Board Travelers (term. 2000)",
+      "definition": "Railroad Board Travelers (term. 2000)"
+    },
+    {
+      "code": "10230",
+      "display": "Connecticut - Metra Health (term. 2000)",
+      "definition": "Connecticut - Metra Health (term. 2000)"
+    },
+    {
+      "code": "10240",
+      "display": "Minnesota - Metra Health (term. 2000)",
+      "definition": "Minnesota - Metra Health (term. 2000)"
+    },
+    {
+      "code": "10250",
+      "display": "Mississippi - Metra Health (term. 2000)",
+      "definition": "Mississippi - Metra Health (term. 2000)"
+    },
+    {
+      "code": "10490",
+      "display": "Virginia - Metra Health (term. 2000)",
+      "definition": "Virginia - Metra Health (term. 2000)"
+    },
+    {
+      "code": "10555",
+      "display": "DMERC A - Travelers Insurance Co. (term. 2000)",
+      "definition": "DMERC A - Travelers Insurance Co. (term. 2000)"
+    },
+    {
+      "code": "14330",
+      "display": "New York - GHI",
+      "definition": "New York - GHI"
+    },
+    {
+      "code": "16360",
+      "display": "Ohio - Nationwide Insurance Co. (term. 2002)",
+      "definition": "Ohio - Nationwide Insurance Co. (term. 2002)"
+    },
+    {
+      "code": "16510",
+      "display": "West Virginia - Nationwide Insur Co. (term. 2002)",
+      "definition": "West Virginia - Nationwide Insur Co. (term. 2002)"
+    },
+    {
+      "code": "31140",
+      "display": "N. California - National Heritage Ins.",
+      "definition": "N. California - National Heritage Ins."
+    },
+    {
+      "code": "31142",
+      "display": "Maine - National Heritage Ins.",
+      "definition": "Maine - National Heritage Ins."
+    },
+    {
+      "code": "31143",
+      "display": "Massachusetts - National Heritage Ins.",
+      "definition": "Massachusetts - National Heritage Ins."
+    },
+    {
+      "code": "31144",
+      "display": "New Hampshire - National Heritage Ins.",
+      "definition": "New Hampshire - National Heritage Ins."
+    },
+    {
+      "code": "31145",
+      "display": "Vermont - National Heritage Ins.",
+      "definition": "Vermont - National Heritage Ins."
+    },
+    {
+      "code": "31146",
+      "display": "So. California - NHIC (eff. 2000)",
+      "definition": "So. California - NHIC (eff. 2000)"
+    },
+    {
+      "code": "80884",
+      "display": "Contractor ID for Physician Risk Adjustment Data (data not sent through NCH, but through Palmetto) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Medicare Administrative Contractors (MACs) JURISDICTION 3 -- Part B MACs",
+      "definition": "Contractor ID for Physician Risk Adjustment Data (data not sent through NCH, but through Palmetto) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Medicare Administrative Contractors (MACs) JURISDICTION 3 -- Part B MACs"
+    },
+    {
+      "code": "03102",
+      "display": "Arizona (eff. 12/1/06) (replaces carrier #00832)",
+      "definition": "Arizona (eff. 12/1/06) (replaces carrier #00832)"
+    },
+    {
+      "code": "03202",
+      "display": "Montana (eff. 12/1/06) (replaces carrier #00751)",
+      "definition": "Montana (eff. 12/1/06) (replaces carrier #00751)"
+    },
+    {
+      "code": "03302",
+      "display": "N. Dakota (eff. 12/1/06) (replaces carrier #00820)",
+      "definition": "N. Dakota (eff. 12/1/06) (replaces carrier #00820)"
+    },
+    {
+      "code": "03402",
+      "display": "S. Dakota (eff. 12/1/06) (replaces carrier #00889)",
+      "definition": "S. Dakota (eff. 12/1/06) (replaces carrier #00889)"
+    },
+    {
+      "code": "03502",
+      "display": "Utah (eff. 12/1/06) (replaces carrier #00823)",
+      "definition": "Utah (eff. 12/1/06) (replaces carrier #00823)"
+    },
+    {
+      "code": "03602",
+      "display": "Wyoming (eff. 12/1/06) (replaces carrier #00825) JURISDICTION 4 -- Part B MACs",
+      "definition": "Wyoming (eff. 12/1/06) (replaces carrier #00825) JURISDICTION 4 -- Part B MACs"
+    },
+    {
+      "code": "04102",
+      "display": "Colorado (eff. 3/24/08) (replaces carrier #00824)",
+      "definition": "Colorado (eff. 3/24/08) (replaces carrier #00824)"
+    },
+    {
+      "code": "04202",
+      "display": "New Mexico (eff. 3/1/08 (replaces carrier #00521)",
+      "definition": "New Mexico (eff. 3/1/08 (replaces carrier #00521)"
+    },
+    {
+      "code": "04302",
+      "display": "Oklahoma (eff. 3/1/08) (replaces carrier #00522)",
+      "definition": "Oklahoma (eff. 3/1/08) (replaces carrier #00522)"
+    },
+    {
+      "code": "04402",
+      "display": "Texas (eff. 6/13/08) (replaces carrier #00900) JURISDICTION 5 -- Part B MACs",
+      "definition": "Texas (eff. 6/13/08) (replaces carrier #00900) JURISDICTION 5 -- Part B MACs"
+    },
+    {
+      "code": "05102",
+      "display": "Iowa (eff.2/1/08) (replaces carrier #00826)",
+      "definition": "Iowa (eff.2/1/08) (replaces carrier #00826)"
+    },
+    {
+      "code": "05202",
+      "display": "Kansas (eff. 3/1/08) (replaces carrier #00650)",
+      "definition": "Kansas (eff. 3/1/08) (replaces carrier #00650)"
+    },
+    {
+      "code": "05302",
+      "display": "W. Missouri (eff. 3/1/08) (replaces carrier #00651 or 00740)",
+      "definition": "W. Missouri (eff. 3/1/08) (replaces carrier #00651 or 00740)"
+    },
+    {
+      "code": "05392",
+      "display": "E. Missouri (eff. 6/1/08) (replaces carrier #00523)",
+      "definition": "E. Missouri (eff. 6/1/08) (replaces carrier #00523)"
+    },
+    {
+      "code": "05402",
+      "display": "Nebraska (eff. 3/1/08) (replaces carrier #00655) Durable Medical Equipment (DME) MACs",
+      "definition": "Nebraska (eff. 3/1/08) (replaces carrier #00655) Durable Medical Equipment (DME) MACs"
+    },
+    {
+      "code": "16003",
+      "display": "National Heritage Insur Co (NHIC) (eff. 7/1/06) (replaces carrier #00811)",
+      "definition": "National Heritage Insur Co (NHIC) (eff. 7/1/06) (replaces carrier #00811)"
+    },
+    {
+      "code": "17003",
+      "display": "Administar Federal, Inc. (eff. 7/1/06) (replaces carrier # 00635)",
+      "definition": "Administar Federal, Inc. (eff. 7/1/06) (replaces carrier # 00635)"
+    },
+    {
+      "code": "18003",
+      "display": "Palmetto GBA, LLC (eff. 6/1/07) (replaces carrier #00885)",
+      "definition": "Palmetto GBA, LLC (eff. 6/1/07) (replaces carrier #00885)"
+    },
+    {
+      "code": "19003",
+      "display": "Noridan Administrative Services (eff. 10/1/06) (replaces carrier #05655)",
+      "definition": "Noridan Administrative Services (eff. 10/1/06) (replaces carrier #05655)"
+    }
+  ]
+}

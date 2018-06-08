@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="clm-src-ip-admsn-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Source Inpatient Admission Code</h2><div><p>The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm<em>src</em>ip<em>admsn</em>cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-clm-src-ip-admsn-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-src-ip-admsn-cd</code></a></li></ul></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-clm-src-ip-admsn-cd"/>
+  <version value="1.1.0"/>
+  <name value="Claim Source Inpatient Admission Code"/>
+  <status value="draft"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm_src_ip_admsn_cd"/>
+  <compose>
+    <include>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-src-ip-admsn-cd"/>
+    </include>
+  </compose>
+</ValueSet>

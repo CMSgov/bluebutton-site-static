@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+<!-- ============BreadCrumbs=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<!--
+<h2>Carrier Line Pricing Locality Code</h2>
+
+<p>
+Formats: <a href="ValueSet-carr-line-prcng-lclty-cd.xml.html">XML</a>, <a href="ValueSet-carr-line-prcng-lclty-cd.json.html">JSON</a>, <a href="ValueSet-carr-line-prcng-lclty-cd.ttl.html">Turtle</a>
+</p>
+
+-->
+
+<!-- include ValueSet-carr-line-prcng-lclty-cd-html.xhtml   -->
+
+<table class="grid">
+ <tbody><tr><td>Defining URL:</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-prcng-lclty-cd</td></tr>
+ <tr><td>Name:</td><td>Carrier Line Pricing Locality Code</td></tr>
+ <tr><td>Definition:</td><td><p>Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>prcng<em>lclty</em>cd</p>
+</td></tr>
+ <tr><td>Source Resource</td><td><a href="ValueSet-carr-line-prcng-lclty-cd.xml.html">XML</a> / <a href="ValueSet-carr-line-prcng-lclty-cd.json.html">JSON</a> / <a href="ValueSet-carr-line-prcng-lclty-cd.ttl.html">Turtle</a></td></tr>
+</tbody></table>
+
+
+This value set is used by:
+
+
+<ul>
+ <li><a href="StructureDefinition-bluebutton-carrier-claim.html">BluebuttonCarrierClaim</a></li>
+</ul>
+
+
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Carrier Line Pricing Locality Code</h2><div><p>Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>prcng<em>lclty</em>cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-carr-line-prcng-lclty-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd</code></a></li></ul></div>
+
+<h3>Expansion</h3>
+
+<div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 88 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd version 1.1.0</p><p>All codes from system <a href="CodeSystem-carr-line-prcng-lclty-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd</code></a></p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-1"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-1">1</a></td><td>ALABAMA</td><td>ALABAMA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-2"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-2">2</a></td><td>ALASKA</td><td>ALASKA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-3"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-3">3</a></td><td>ARIZONA</td><td>ARIZONA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-4"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-4">4</a></td><td>ARKANSAS</td><td>ARKANSAS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-5"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-5">5</a></td><td>ANAHEIM/SANTA ANA, CA</td><td>ANAHEIM/SANTA ANA, CA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-6"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-6">6</a></td><td>LOS ANGELES, CA</td><td>LOS ANGELES, CA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-7"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-7">7</a></td><td>MARIN/NAPA/SOLANO, CA</td><td>MARIN/NAPA/SOLANO, CA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-8"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-8">8</a></td><td>OAKLAND/BERKELEY, CA</td><td>OAKLAND/BERKELEY, CA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-9"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-9">9</a></td><td>REST OF CALIFORNIA</td><td>REST OF CALIFORNIA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-10"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-10">10</a></td><td>SAN FRANCISCO, CA</td><td>SAN FRANCISCO, CA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-11"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-11">11</a></td><td>SAN MATEO, CA</td><td>SAN MATEO, CA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-12"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-12">12</a></td><td>SANTA CLARA, CA</td><td>SANTA CLARA, CA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-13"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-13">13</a></td><td>VENTURA, CA</td><td>VENTURA, CA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-14"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-14">14</a></td><td>COLORADO</td><td>COLORADO</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-15"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-15">15</a></td><td>CONNECTICUT</td><td>CONNECTICUT</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-16"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-16">16</a></td><td>DC + MD/VA SUBURBS</td><td>DC + MD/VA SUBURBS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-17"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-17">17</a></td><td>DELAWARE</td><td>DELAWARE</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-18"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-18">18</a></td><td>FORT LAUDERDALE, FL</td><td>FORT LAUDERDALE, FL</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-19"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-19">19</a></td><td>MIAMI, FL</td><td>MIAMI, FL</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-20"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-20">20</a></td><td>REST OF FLORIDA</td><td>REST OF FLORIDA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-21"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-21">21</a></td><td>ATLANTA, GA</td><td>ATLANTA, GA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-22"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-22">22</a></td><td>REST OF GEORGIA</td><td>REST OF GEORGIA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-23"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-23">23</a></td><td>HAWAII</td><td>HAWAII</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-24"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-24">24</a></td><td>IDAHO</td><td>IDAHO</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-25"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-25">25</a></td><td>CHICAGO, IL</td><td>CHICAGO, IL</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-26"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-26">26</a></td><td>EAST ST. LOUIS, IL</td><td>EAST ST. LOUIS, IL</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-27"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-27">27</a></td><td>REST OF ILLINOIS</td><td>REST OF ILLINOIS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-28"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-28">28</a></td><td>SUBURBAN CHICAGO, IL</td><td>SUBURBAN CHICAGO, IL</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-29"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-29">29</a></td><td>INDIANA</td><td>INDIANA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-30"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-30">30</a></td><td>IOWA</td><td>IOWA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-31"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-31">31</a></td><td>KANSAS</td><td>KANSAS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-32"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-32">32</a></td><td>KENTUCKY</td><td>KENTUCKY</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-33"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-33">33</a></td><td>NEW ORLEANS, LA</td><td>NEW ORLEANS, LA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-34"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-34">34</a></td><td>REST OF LOUISIANA</td><td>REST OF LOUISIANA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-35"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-35">35</a></td><td>REST OF MAINE</td><td>REST OF MAINE</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-36"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-36">36</a></td><td>SOUTHERN MAINE</td><td>SOUTHERN MAINE</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-37"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-37">37</a></td><td>BALTIMORE/SURR. CNTYS, MD</td><td>BALTIMORE/SURR. CNTYS, MD</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-38"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-38">38</a></td><td>REST OF MARYLAND</td><td>REST OF MARYLAND</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-39"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-39">39</a></td><td>METROPOLITAN BOSTON</td><td>METROPOLITAN BOSTON</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-40"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-40">40</a></td><td>REST OF MASSACHUSETTS</td><td>REST OF MASSACHUSETTS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-41"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-41">41</a></td><td>DETROIT, MI</td><td>DETROIT, MI</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-42"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-42">42</a></td><td>REST OF MICHIGAN</td><td>REST OF MICHIGAN</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-43"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-43">43</a></td><td>MINNESOTA</td><td>MINNESOTA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-44"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-44">44</a></td><td>MISSISSIPPI</td><td>MISSISSIPPI</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-45"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-45">45</a></td><td>METROPOLITAN KANSAS CITY, MO</td><td>METROPOLITAN KANSAS CITY, MO</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-46"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-46">46</a></td><td>METROPOLITAN ST. LOUIS, MO</td><td>METROPOLITAN ST. LOUIS, MO</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-47"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-47">47</a></td><td>REST OF MISSOURI</td><td>REST OF MISSOURI</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-48"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-48">48</a></td><td>MONTANA</td><td>MONTANA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-49"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-49">49</a></td><td>NEBRASKA</td><td>NEBRASKA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-50"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-50">50</a></td><td>NEVADA</td><td>NEVADA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-51"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-51">51</a></td><td>NEW HAMPSHIRE</td><td>NEW HAMPSHIRE</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-52"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-52">52</a></td><td>NORTHERN NJ</td><td>NORTHERN NJ</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-53"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-53">53</a></td><td>REST OF NEW JERSEY</td><td>REST OF NEW JERSEY</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-54"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-54">54</a></td><td>NEW MEXICO</td><td>NEW MEXICO</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-55"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-55">55</a></td><td>MANHATTAN, NY</td><td>MANHATTAN, NY</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-56"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-56">56</a></td><td>NYC SUBURBS/LONG I., NY</td><td>NYC SUBURBS/LONG I., NY</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-57"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-57">57</a></td><td>POUGHKPSIE/N NYC SUBURBS, NY</td><td>POUGHKPSIE/N NYC SUBURBS, NY</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-58"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-58">58</a></td><td>QUEENS, NY</td><td>QUEENS, NY</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-59"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-59">59</a></td><td>REST OF NEW YORK</td><td>REST OF NEW YORK</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-60"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-60">60</a></td><td>NORTH CAROLINA</td><td>NORTH CAROLINA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-61"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-61">61</a></td><td>NORTH DAKOTA</td><td>NORTH DAKOTA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-62"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-62">62</a></td><td>OHIO</td><td>OHIO</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-63"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-63">63</a></td><td>OKLAHOMA</td><td>OKLAHOMA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-64"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-64">64</a></td><td>PORTLAND, OR</td><td>PORTLAND, OR</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-65"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-65">65</a></td><td>REST OF OREGON</td><td>REST OF OREGON</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-66"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-66">66</a></td><td>METROPOLITAN PHILADELPHIA, PA</td><td>METROPOLITAN PHILADELPHIA, PA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-67"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-67">67</a></td><td>REST OF PENNSYLVANIA</td><td>REST OF PENNSYLVANIA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-68"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-68">68</a></td><td>PUERTO RICO</td><td>PUERTO RICO</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-69"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-69">69</a></td><td>RHODE ISLAND</td><td>RHODE ISLAND</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-70"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-70">70</a></td><td>SOUTH CAROLINA</td><td>SOUTH CAROLINA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-71"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-71">71</a></td><td>SOUTH DAKOTA</td><td>SOUTH DAKOTA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-72"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-72">72</a></td><td>TENNESSEE</td><td>TENNESSEE</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-73"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-73">73</a></td><td>AUSTIN, TX</td><td>AUSTIN, TX</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-74"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-74">74</a></td><td>BEAUMONT, TX</td><td>BEAUMONT, TX</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-75"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-75">75</a></td><td>BRAZORIA, TX</td><td>BRAZORIA, TX</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-76"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-76">76</a></td><td>DALLAS, TX</td><td>DALLAS, TX</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-77"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-77">77</a></td><td>FORT WORTH, TX</td><td>FORT WORTH, TX</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-78"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-78">78</a></td><td>GALVESTON, TX</td><td>GALVESTON, TX</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-79"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-79">79</a></td><td>HOUSTON, TX</td><td>HOUSTON, TX</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-80"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-80">80</a></td><td>REST OF TEXAS</td><td>REST OF TEXAS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-81"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-81">81</a></td><td>UTAH</td><td>UTAH</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-82"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-82">82</a></td><td>VERMONT</td><td>VERMONT</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-83"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-83">83</a></td><td>VIRGIN ISLANDS</td><td>VIRGIN ISLANDS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-84"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-84">84</a></td><td>VIRGINIA</td><td>VIRGINIA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-85"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-85">85</a></td><td>REST OF WASHINGTON</td><td>REST OF WASHINGTON</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-86"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-86">86</a></td><td>SEATTLE (KING CNTY), WA</td><td>SEATTLE (KING CNTY), WA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-87"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-87">87</a></td><td>WEST VIRGINIA</td><td>WEST VIRGINIA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-line-prcng-lclty-cd-88"> </a><a href="CodeSystem-carr-line-prcng-lclty-cd.html#carr-line-prcng-lclty-cd-88">88</a></td><td>WISCONSIN 89 WYOMING</td><td>WISCONSIN 89 WYOMING</td></tr></table></div>
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+

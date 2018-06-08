@@ -1,0 +1,21 @@
+{
+  "resourceType": "ValueSet",
+  "id": "information-categories",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Information Categories</h2><div><p>Information Categories</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/information-categories.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories</code></a></li></ul></div>"
+  },
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-information-categories",
+  "version": "1.1.0",
+  "name": "Information Categories",
+  "status": "draft",
+  "date": "2018-05-31T14:39:32+00:00",
+  "description": "Information Categories",
+  "compose": {
+    "include": [
+      {
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories"
+      }
+    ]
+  }
+}

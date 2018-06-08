@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+<!-- ============BreadCrumbs=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<!--
+<h2>Claim Source Inpatient Admission Code</h2>
+
+<p>
+Formats: <a href="ValueSet-clm-src-ip-admsn-cd.xml.html">XML</a>, <a href="ValueSet-clm-src-ip-admsn-cd.json.html">JSON</a>, <a href="ValueSet-clm-src-ip-admsn-cd.ttl.html">Turtle</a>
+</p>
+
+-->
+
+<!-- include ValueSet-clm-src-ip-admsn-cd-html.xhtml   -->
+
+<table class="grid">
+ <tbody><tr><td>Defining URL:</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-clm-src-ip-admsn-cd</td></tr>
+ <tr><td>Name:</td><td>Claim Source Inpatient Admission Code</td></tr>
+ <tr><td>Definition:</td><td><p>The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm<em>src</em>ip<em>admsn</em>cd</p>
+</td></tr>
+ <tr><td>Source Resource</td><td><a href="ValueSet-clm-src-ip-admsn-cd.xml.html">XML</a> / <a href="ValueSet-clm-src-ip-admsn-cd.json.html">JSON</a> / <a href="ValueSet-clm-src-ip-admsn-cd.ttl.html">Turtle</a></td></tr>
+</tbody></table>
+
+
+This value set is used by:
+
+
+<p>This value set is not used</p>
+
+
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Source Inpatient Admission Code</h2><div><p>The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm<em>src</em>ip<em>admsn</em>cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-clm-src-ip-admsn-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-src-ip-admsn-cd</code></a></li></ul></div>
+
+<h3>Expansion</h3>
+
+<div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 16 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-src-ip-admsn-cd version 1.1.0</p><p>All codes from system <a href="CodeSystem-clm-src-ip-admsn-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-src-ip-admsn-cd</code></a></p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-0"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-0">0</a></td><td>ANOMALY: invalid value, if present, translate to '9'</td><td>ANOMALY: invalid value, if present, translate to '9'</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-1"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-1">1</a></td><td>Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician.</td><td>Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-2"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-2">2</a></td><td>Clinic referral – The patient was admitted upon the recommendation of this facility's clinic physician.</td><td>Clinic referral – The patient was admitted upon the recommendation of this facility's clinic physician.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-3"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-3">3</a></td><td>HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.</td><td>HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-4"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-4">4</a></td><td>Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient.</td><td>Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-5"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-5">5</a></td><td>Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident.</td><td>Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-6"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-6">6</a></td><td>Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient.</td><td>Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-7"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-7">7</a></td><td>Emergency room – The patient was admitted to this facility after receiving services in this facility's emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time).</td><td>Emergency room – The patient was admitted to this facility after receiving services in this facility's emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time).</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-8"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-8">8</a></td><td>Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency's representative.</td><td>Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency's representative.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-9"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-9">9</a></td><td>Information not available – The means by which the patient was admitted is not known.</td><td>Information not available – The means by which the patient was admitted is not known.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-A"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-A">A</a></td><td>Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital.</td><td>Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-B"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-B">B</a></td><td>Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)</td><td>Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-C"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-C">C</a></td><td>Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)</td><td>Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-D"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-D">D</a></td><td>Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.</td><td>Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-E"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-E">E</a></td><td>Transfer from Ambulatory Surgical Center</td><td>Transfer from Ambulatory Surgical Center</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-clm-src-ip-admsn-cd-F"> </a><a href="CodeSystem-clm-src-ip-admsn-cd.html#clm-src-ip-admsn-cd-F">F</a></td><td>Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission</td><td>Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission</td></tr></table></div>
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+

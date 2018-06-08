@@ -1,0 +1,21 @@
+{
+  "resourceType": "ValueSet",
+  "id": "submsn-clr-cd",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Submission clarification code</h2><div><p>For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT<em>RSDNC</em>CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn<em>clr</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/submsn-clr-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd</code></a></li></ul></div>"
+  },
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-submsn-clr-cd",
+  "version": "1.1.0",
+  "name": "Submission clarification code",
+  "status": "draft",
+  "date": "2018-05-31T14:39:32+00:00",
+  "description": "For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT_RSDNC_CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn_clr_cd",
+  "compose": {
+    "include": [
+      {
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd"
+      }
+    ]
+  }
+}

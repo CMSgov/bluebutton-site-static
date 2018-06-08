@@ -1,0 +1,59 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "prtcptng-ind-cd",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Provider Participating Indicator Code</h2><div><p>Code indicating whether or not a provider is participating (accepting assignment) for this line item service on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/prtcptng<em>ind</em>cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name=\"prtcptng-ind-cd-1\"> </a></td><td>Participating</td><td>Participating</td></tr><tr><td>2<a name=\"prtcptng-ind-cd-2\"> </a></td><td>All or some covered and allowed expenses applied to deductible Participating</td><td>All or some covered and allowed expenses applied to deductible Participating</td></tr><tr><td>3<a name=\"prtcptng-ind-cd-3\"> </a></td><td>Assignment accepted/non-participating</td><td>Assignment accepted/non-participating</td></tr><tr><td>4<a name=\"prtcptng-ind-cd-4\"> </a></td><td>Assignment not accepted/non-participating</td><td>Assignment not accepted/non-participating</td></tr><tr><td>5<a name=\"prtcptng-ind-cd-5\"> </a></td><td>Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating.</td><td>Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating.</td></tr><tr><td>6<a name=\"prtcptng-ind-cd-6\"> </a></td><td>Assignment not accepted and all covered and allowed expenses applied to deductible non- participating.</td><td>Assignment not accepted and all covered and allowed expenses applied to deductible non- participating.</td></tr><tr><td>7<a name=\"prtcptng-ind-cd-7\"> </a></td><td>Participating provider not accepting assignment</td><td>Participating provider not accepting assignment</td></tr></table></div>"
+  },
+  "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd",
+  "identifier": {
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd"
+  },
+  "version": "1.1.0",
+  "name": "Line Provider Participating Indicator Code",
+  "title": "Line Provider Participating Indicator Code",
+  "status": "active",
+  "date": "2018-05-31T14:39:32+00:00",
+  "description": "Code indicating whether or not a provider is participating (accepting assignment) for this line item service on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/prtcptng_ind_cd",
+  "caseSensitive": true,
+  "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-prtcptng-ind-cd",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Participating",
+      "definition": "Participating"
+    },
+    {
+      "code": "2",
+      "display": "All or some covered and allowed expenses applied to deductible Participating",
+      "definition": "All or some covered and allowed expenses applied to deductible Participating"
+    },
+    {
+      "code": "3",
+      "display": "Assignment accepted/non-participating",
+      "definition": "Assignment accepted/non-participating"
+    },
+    {
+      "code": "4",
+      "display": "Assignment not accepted/non-participating",
+      "definition": "Assignment not accepted/non-participating"
+    },
+    {
+      "code": "5",
+      "display": "Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating.",
+      "definition": "Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating."
+    },
+    {
+      "code": "6",
+      "display": "Assignment not accepted and all covered and allowed expenses applied to deductible non- participating.",
+      "definition": "Assignment not accepted and all covered and allowed expenses applied to deductible non- participating."
+    },
+    {
+      "code": "7",
+      "display": "Participating provider not accepting assignment",
+      "definition": "Participating provider not accepting assignment"
+    }
+  ]
+}

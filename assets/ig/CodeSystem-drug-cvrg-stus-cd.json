@@ -1,0 +1,39 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "drug-cvrg-stus-cd",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Drug Coverage Status Code</h2><div><p>This field indicates whether or not the drug is covered by Medicare Part D. The Part D benefit does not cover all FDA-approved drugs. However, plan sponsors can offer an “enhanced” benefit package that covers non-Part D drugs, such as over-the-counter medications. Source: https://bluebutton.cms.gov/resources/variables/drug<em>cvrg</em>stus_cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-drug-cvrg-stus-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>C<a name=\"drug-cvrg-stus-cd-C\"> </a></td><td>Covered</td><td>Covered</td></tr><tr><td>E<a name=\"drug-cvrg-stus-cd-E\"> </a></td><td>Supplemental drugs (reported by plans that provide Enhanced Alternative coverage)</td><td>Supplemental drugs (reported by plans that provide Enhanced Alternative coverage)</td></tr><tr><td>O<a name=\"drug-cvrg-stus-cd-O\"> </a></td><td>Over-the-counter drugs</td><td>Over-the-counter drugs</td></tr></table></div>"
+  },
+  "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-drug-cvrg-stus-cd",
+  "identifier": {
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-drug-cvrg-stus-cd"
+  },
+  "version": "1.1.0",
+  "name": "Drug Coverage Status Code",
+  "title": "Drug Coverage Status Code",
+  "status": "active",
+  "date": "2018-05-31T14:39:32+00:00",
+  "description": "This field indicates whether or not the drug is covered by Medicare Part D. The Part D benefit does not cover all FDA-approved drugs. However, plan sponsors can offer an “enhanced” benefit package that covers non-Part D drugs, such as over-the-counter medications. Source: https://bluebutton.cms.gov/resources/variables/drug_cvrg_stus_cd",
+  "caseSensitive": true,
+  "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-drug-cvrg-stus-cd",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "C",
+      "display": "Covered",
+      "definition": "Covered"
+    },
+    {
+      "code": "E",
+      "display": "Supplemental drugs (reported by plans that provide Enhanced Alternative coverage)",
+      "definition": "Supplemental drugs (reported by plans that provide Enhanced Alternative coverage)"
+    },
+    {
+      "code": "O",
+      "display": "Over-the-counter drugs",
+      "definition": "Over-the-counter drugs"
+    }
+  ]
+}

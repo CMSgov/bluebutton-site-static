@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="clm-freq-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/clm-freq-cd"/>
+    <name value="Claim Frequency Code"/>
+    <description value="The third digit of the type of bill (TOB3) submitted on an institutional claim record to indicate the sequence of a claim in the beneficiary's current episode of care. Source: https://bluebutton.cms.gov/resources/variables/clm_freq_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/clm-freq-cd"/>
+        </include>
+    </compose>
+</ValueSet>

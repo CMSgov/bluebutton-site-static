@@ -1,0 +1,410 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/ExplanationOfBenefit/pde-89> a fhir:ExplanationOfBenefit;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "pde-89"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>identifier</b>: 89, 900, 799999</p><p><b>status</b>: ACTIVE</p><p><b>type</b>: PDE <span style=\"background: LightGoldenRodYellow\">(Details : {https://bluebutton.cms.gov/developer/docs/reference/some-thing code 'PDE' = 'PDE; {http://hl7.org/fhir/ex-claimtype code 'PHARMACY' = 'PHARMACY)</span></p><p><b>patient</b>: <a href=\"Patient/567834\">Patient/567834</a></p><p><b>organization</b>: </p><p><b>facility</b>: </p><p><b>disposition</b>: Debit accepted</p><blockquote><p><b>information</b></p><p><b>sequence</b>: 1</p><p><b>category</b>: 0 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/daw_prod_slctn_cd.txt code '0' = '0)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 2</p><p><b>category</b>: P <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/dspnsng_stus_cd.txt code 'P' = 'P)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 3</p><p><b>category</b>: C <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/drug_cvrg_stus_cd.txt code 'C' = 'C)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 4</p><p><b>category</b>: A <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/adjstmt_dltn_cd.txt code 'A' = 'A)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 5</p><p><b>category</b>: X <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/nstd_frmt_cd.txt code 'X' = 'X)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 6</p><p><b>category</b>: M <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prcng_excptn_cd.txt code 'M' = 'M)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 7</p><p><b>category</b>: C <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ctstrphc_cvrg_cd.txt code 'C' = 'C)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 8</p><p><b>category</b>: 3 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/rx_orgn_cd.txt code '3' = '3)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 9</p><p><b>category</b>: G <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/brnd_gnrc_cd.txt code 'G' = 'G)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 10</p><p><b>category</b>: 01 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/phrmcy_srvc_type_cd.txt code '01' = '01)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 11</p><p><b>category</b>: 02 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ptnt_rsdnc_cd.txt code '02' = '02)</span></p></blockquote><blockquote><p><b>information</b></p><p><b>sequence</b>: 12</p><p><b>category</b>: 08 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.ccwdata.org/cs/groups/public/documents/datadictionary/submsn_clr_cd.txt code '08' = '08)</span></p></blockquote><h3>CareTeams</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>Provider</b></td><td><b>Role</b></td></tr><tr><td>*</td><td>2</td><td/><td>Primary provider <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/claimcareteamrole code 'primary' = 'Primary provider)</span></td></tr></table><h3>Insurances</h3><table class=\"grid\"><tr><td>-</td><td><b>Coverage</b></td></tr><tr><td>*</td><td><a href=\"Coverage/part-d-567834\">Coverage/part-d-567834</a></td></tr></table><blockquote><p><b>item</b></p><p><b>sequence</b>: 1</p><p><b>careTeamLinkId</b>: 2</p><p><b>service</b>: 987654331212 <span style=\"background: LightGoldenRodYellow\">(Details : {https://www.accessdata.fda.gov/scripts/cder/ndc code '987654331212' = '987654331212)</span></p><p><b>serviced</b>: May 12, 2015</p><p><b>quantity</b>: 60</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Part D Covered <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Part D Covered' = 'Part D Covered)</span></p><p><b>amount</b>: 126.99 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Gross Drug Cost Below Out-of-Pocket Threshold (GDCB) <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Gross Drug Cost Below Out-of-Pocket Threshold (GDCB)' = 'Gross Drug Cost Below Out-of-Pocket Threshold (GDCB))</span></p><p><b>amount</b>: 995.34 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Gross Drug Cost Above Out-of-Pocket Threshold (GDCA) <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Gross Drug Cost Above Out-of-Pocket Threshold (GDCA)' = 'Gross Drug Cost Above Out-of-Pocket Threshold (GDCA))</span></p><p><b>amount</b>: 15.25 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Patient Pay Amount <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Patient Pay Amount' = 'Patient Pay Amount)</span></p><p><b>amount</b>: 235.85 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Other True Out-of-Pocket (TrOOP) Amount <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Other True Out-of-Pocket (TrOOP) Amount' = 'Other True Out-of-Pocket (TrOOP) Amount)</span></p><p><b>amount</b>: 17.30 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Part D Low Income Subsidy (LICS) Amount <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Part D Low Income Subsidy (LICS) Amount' = 'Part D Low Income Subsidy (LICS) Amount)</span></p><p><b>amount</b>: 122.23 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Reduction in patient liability due to payments by other payers (PLRO) Amount <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Reduction in patient liability due to payments by other payers (PLRO) Amount' = 'Reduction in patient liability due to payments by other payers (PLRO) Amount)</span></p><p><b>amount</b>: 42.42 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total Prescription Cost <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Total Prescription Cost' = 'Total Prescription Cost)</span></p><p><b>amount</b>: 550.00 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Medicare Coverage Gap Discount Amount <span style=\"background: LightGoldenRodYellow\">(Details : {CMS Adjudications code 'Medicare Coverage Gap Discount Amount' = 'Medicare Coverage Gap Discount Amount)</span></p><p><b>amount</b>: 317.22 USD<span style=\"background: LightGoldenRodYellow\"> (Details: urn:std:iso:4217 code USD = 'USD')</span></p></blockquote><h3>Details</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td></tr><tr><td>*</td><td>Rx dispense invoice <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/v3/ActCode code 'RXDINV' = 'Rx dispense invoice)</span></td></tr></table></blockquote><h3>Payments</h3><table class=\"grid\"><tr><td>-</td><td><b>Date</b></td></tr><tr><td>*</td><td>May 27, 2015</td></tr></table></div>"
+  ];
+  fhir:ExplanationOfBenefit.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "CCW.PDE_ID" ];
+     fhir:Identifier.value [ fhir:value "89" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.system [ fhir:value "http://bluebutton.cms.hhs.gov/identifier#claimGroup" ];
+     fhir:Identifier.value [ fhir:value "900" ]
+  ], [
+     fhir:index 2;
+     fhir:Identifier.system [ fhir:value "CCW.RX_SRVC_RFRNC_NUM" ];
+     fhir:Identifier.value [ fhir:value "799999" ]
+  ];
+  fhir:ExplanationOfBenefit.status [ fhir:value "active"];
+  fhir:ExplanationOfBenefit.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://bluebutton.cms.gov/developer/docs/reference/some-thing" ];
+       fhir:Coding.code [ fhir:value "PDE" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/ex-claimtype" ];
+       fhir:Coding.code [ fhir:value "PHARMACY" ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.patient [
+     fhir:link <http://hl7.org/fhir/Patient/567834>;
+     fhir:Reference.reference [ fhir:value "Patient/567834" ]
+  ];
+  fhir:ExplanationOfBenefit.organization [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+       fhir:Identifier.value [ fhir:value "111222333" ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.facility [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-phrmcy-srvc-type-cd" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/phrmcy_srvc_type_cd.txt" ];
+         fhir:Coding.code [ fhir:value "01" ]
+       ]
+     ];
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+       fhir:Identifier.value [ fhir:value "111222333" ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.disposition [ fhir:value "Debit accepted"];
+  fhir:ExplanationOfBenefit.information [
+     fhir:index 0;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/daw_prod_slctn_cd.txt" ];
+         fhir:Coding.code [ fhir:value "0" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "2"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/dspnsng_stus_cd.txt" ];
+         fhir:Coding.code [ fhir:value "P" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "3"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/drug_cvrg_stus_cd.txt" ];
+         fhir:Coding.code [ fhir:value "C" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "4"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/adjstmt_dltn_cd.txt" ];
+         fhir:Coding.code [ fhir:value "A" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "5"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/nstd_frmt_cd.txt" ];
+         fhir:Coding.code [ fhir:value "X" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "6"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/prcng_excptn_cd.txt" ];
+         fhir:Coding.code [ fhir:value "M" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "7"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ctstrphc_cvrg_cd.txt" ];
+         fhir:Coding.code [ fhir:value "C" ]
+       ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "8"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/rx_orgn_cd.txt" ];
+         fhir:Coding.code [ fhir:value "3" ]
+       ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "9"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/brnd_gnrc_cd.txt" ];
+         fhir:Coding.code [ fhir:value "G" ]
+       ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "10"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/phrmcy_srvc_type_cd.txt" ];
+         fhir:Coding.code [ fhir:value "01" ]
+       ]
+     ]
+  ], [
+     fhir:index 10;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "11"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/ptnt_rsdnc_cd.txt" ];
+         fhir:Coding.code [ fhir:value "02" ]
+       ]
+     ]
+  ], [
+     fhir:index 11;
+     fhir:ExplanationOfBenefit.information.sequence [ fhir:value "12"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.information.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/submsn_clr_cd.txt" ];
+         fhir:Coding.code [ fhir:value "08" ]
+       ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.careTeam [
+     fhir:index 0;
+     fhir:ExplanationOfBenefit.careTeam.sequence [ fhir:value "2"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.careTeam.provider [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+         fhir:Identifier.value [ fhir:value "444555666" ]
+       ]
+     ];
+     fhir:ExplanationOfBenefit.careTeam.role [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/claimcareteamrole" ];
+         fhir:Coding.code [ fhir:value "primary" ]
+       ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.insurance [
+     fhir:ExplanationOfBenefit.insurance.coverage [
+       fhir:link <http://hl7.org/fhir/Coverage/part-d-567834>;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-plan_cntrct_rec_id" ];
+         fhir:Extension.valueIdentifier [
+           fhir:Identifier.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/plan_cntrct_rec_id.txt" ];
+           fhir:Identifier.value [ fhir:value "H9999" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-plan_pbp_rec_num" ];
+         fhir:Extension.valueIdentifier [
+           fhir:Identifier.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/plan_pbp_rec_num.txt" ];
+           fhir:Identifier.value [ fhir:value "020" ]
+         ]
+       ];
+       fhir:Reference.reference [ fhir:value "Coverage/part-d-567834" ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.item [
+     fhir:index 0;
+     fhir:ExplanationOfBenefit.item.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.item.careTeamLinkId [
+       fhir:value "2"^^xsd:positiveInteger;
+       fhir:index 0
+     ];
+     fhir:ExplanationOfBenefit.item.service [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://www.accessdata.fda.gov/scripts/cder/ndc" ];
+         fhir:Coding.code [ fhir:value "987654331212" ]
+       ]
+     ];
+     fhir:ExplanationOfBenefit.item.servicedDate [ fhir:value "2015-05-12"^^xsd:date ];
+     fhir:ExplanationOfBenefit.item.quantity [
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-fill_num" ];
+         fhir:Extension.valueCoding [
+           fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/fill_num.txt" ];
+           fhir:Coding.code [ fhir:value "3" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-days_suply_num" ];
+         fhir:Extension.valueCoding [
+           fhir:Coding.system [ fhir:value "https://www.ccwdata.org/cs/groups/public/documents/datadictionary/days_suply_num.txt" ];
+           fhir:Coding.code [ fhir:value "30" ]
+         ]
+       ];
+       fhir:Quantity.value [ fhir:value "60"^^xsd:decimal ]
+     ];
+     fhir:ExplanationOfBenefit.item.adjudication [
+       fhir:index 0;
+       fhir:ExplanationOfBenefit.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "CMS Adjudications" ];
+           fhir:Coding.code [ fhir:value "Part D Covered" ]
+         ]
+       ];
+       fhir:ExplanationOfBenefit.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "126.99"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ExplanationOfBenefit.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "CMS Adjudications" ];
+           fhir:Coding.code [ fhir:value "Gross Drug Cost Below Out-of-Pocket Threshold (GDCB)" ]
+         ]
+       ];
+       fhir:ExplanationOfBenefit.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "995.34"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ExplanationOfBenefit.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "CMS Adjudications" ];
+           fhir:Coding.code [ fhir:value "Gross Drug Cost Above Out-of-Pocket Threshold (GDCA)" ]
+         ]
+       ];
+       fhir:ExplanationOfBenefit.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "15.25"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ExplanationOfBenefit.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "CMS Adjudications" ];
+           fhir:Coding.code [ fhir:value "Patient Pay Amount" ]
+         ]
+       ];
+       fhir:ExplanationOfBenefit.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "235.85"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ExplanationOfBenefit.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "CMS Adjudications" ];
+           fhir:Coding.code [ fhir:value "Other True Out-of-Pocket (TrOOP) Amount" ]
+         ]
+       ];
+       fhir:ExplanationOfBenefit.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "17.30"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ExplanationOfBenefit.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "CMS Adjudications" ];
+           fhir:Coding.code [ fhir:value "Part D Low Income Subsidy (LICS) Amount" ]
+         ]
+       ];
+       fhir:ExplanationOfBenefit.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "122.23"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ExplanationOfBenefit.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "CMS Adjudications" ];
+           fhir:Coding.code [ fhir:value "Reduction in patient liability due to payments by other payers (PLRO) Amount" ]
+         ]
+       ];
+       fhir:ExplanationOfBenefit.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "42.42"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ExplanationOfBenefit.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "CMS Adjudications" ];
+           fhir:Coding.code [ fhir:value "Total Prescription Cost" ]
+         ]
+       ];
+       fhir:ExplanationOfBenefit.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "550.00"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ExplanationOfBenefit.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "CMS Adjudications" ];
+           fhir:Coding.code [ fhir:value "Medicare Coverage Gap Discount Amount" ]
+         ]
+       ];
+       fhir:ExplanationOfBenefit.item.adjudication.amount [
+         fhir:Quantity.value [ fhir:value "317.22"^^xsd:decimal ];
+         fhir:Quantity.system [ fhir:value "urn:std:iso:4217" ];
+         fhir:Quantity.code [ fhir:value "USD" ]
+       ]
+     ];
+     fhir:ExplanationOfBenefit.item.detail [
+       fhir:index 0;
+       fhir:ExplanationOfBenefit.item.detail.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+           fhir:Coding.code [ fhir:value "RXDINV" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.payment [
+     fhir:ExplanationOfBenefit.payment.date [ fhir:value "2015-05-27"^^xsd:date ]
+  ] .
+
+<http://hl7.org/fhir/Patient/567834> a fhir:Patient .
+
+<http://hl7.org/fhir/Coverage/part-d-567834> a fhir:Coverage .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/ExplanationOfBenefit/pde-89.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/ExplanationOfBenefit/pde-89.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="nstd-frmt-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/nstd-frmt-cd"/>
+    <name value="Non-Standard Format Code"/>
+    <description value="This data element is used by CMS to identify PDE records that are compiled from non-standard sources. The National Council for Prescription Drug Program (NCPDP) is the standard format in which plans receive data from pharmacies. Source: https://bluebutton.cms.gov/resources/variables/nstd_frmt_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/nstd-frmt-cd"/>
+        </include>
+    </compose>
+</ValueSet>

@@ -17,6 +17,7 @@ sections:
   - Sample Beneficiaries
   - Production API Access
   - Developer Guidelines
+  - Blue Button 2.0 Implementation Guide
 ctas:
   -
     title: Blue Button Home
@@ -162,13 +163,13 @@ Base Request URL:
 
 <pre>https://sandbox.bluebutton.cms.gov</pre>
 
-FHIR Resources:
+### FHIR Resources:
 
 - Explanation of Benefit
 - Patient
 - Coverage
 
-UserInfo
+### UserInfo:
 - Get User Profile from an Authorization Token
 
 As a security measure the date of birth, SSN, and HICN will not be provided by the CMS Blue Button API.
@@ -179,7 +180,10 @@ We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension) 
 
 <pre>/v1/fhir/ExplanationOfBenefit/?patient=[fhir_id]</pre>
 
-The above URL returns all of the beneficiary's Explanation of Benefit (sometimes referred to as an episode of care) records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html). The bulk of a beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.  Each one can be thousands of lines long.
+The above URL returns all of the beneficiary's Explanation of Benefit (sometimes referred to as an episode of care) 
+records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html). 
+The bulk of a beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.  
+Each one can be thousands of lines long.
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=20140000008325"</pre>
 
@@ -333,6 +337,28 @@ The above URL returns the beneficiary's Coverage information as an [Coverage FHI
     ...this is only a subset of the entire output...
 </code>
 </pre>
+
+
+**Compress Resources for more efficient data transfers**
+
+To improve the performance when transferring large data resources it is possible to turn on compression. Gzip 
+compression is turned off by default. Compression can be activated for the following content types:
+
+- text/html
+- text/plain
+- application/json
+- application/json+fhir
+
+To activate compression add the following to the header:
+
+<pre>
+Accept-Encoding: gzip
+</pre>
+
+The minimum payload size we will gzip is 1 kilobyte. If the original uncompressed size of the payload is less than 1 kb, 
+we will not apply gzip compression to our response. Therefore, developers should ensure their applications handle 
+this scenario gracefully by checking for the **Content-Encoding: gzip** response header before trying to 
+decompress.
 
 [Download a sample Coverage FHIR Resource](/sample-coverage-entry.json)
 
@@ -600,5 +626,26 @@ The Blue Button logo and usage guidelines is detailed [here](https://www.healthi
 **Beneficiary Revokes Access**
 
 A beneficiary may revoke access to your application via the MyMedicare.gov website.  When you encounter an invalid token indicating a beneficiary has revoked access, you should make a reasonable attempt to handle that case making it easy for the beneficiary to understand what is happening with their Medicare data.
+
+---
+
+## Blue Button 2.0 Implementation Guide
+
+The Blue Button team have created a Blue Button 2.0 Implementation Guide (BB2IG). 
+You can access the guide here: [Blue Button 2.0 Implementation Guide](/assets/ig/index.html).
+
+The BB2IG features nine profiles in this version of the guide:
+
+<li><a href="/assets/ig/StructureDefinition-bluebutton-patient-claim.html" target="_blank">Blue Button Patient Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-carrier-claim.html" target="_blank">Blue Button Carrier Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-dme-claim.html" target="_blank">Blue Button DME Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-hha-claim.html" target="_blank">Blue Button HHA Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-hospice-claim.html" target="_blank">Blue Button Hospice Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-inpatient-claim.html" target="_blank">Blue Button Inpatient Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-outpatient-claim.html" target="_blank">Blue Button Outpatient Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-pde-claim.html" target="_blank">Blue Button Part D Event Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-snf-claim.html" target="_blank">Blue Button SNF Claim Profile</a></li>
+
+
 
 ---

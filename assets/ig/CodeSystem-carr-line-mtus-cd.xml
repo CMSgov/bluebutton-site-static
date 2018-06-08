@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="carr-line-mtus-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code</h2><div><p>Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>mtus_cd</p>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name="carr-line-mtus-cd-0"> </a></td><td>Values reported as zero (no allowed activities)</td><td>Values reported as zero (no allowed activities)</td></tr><tr><td>1<a name="carr-line-mtus-cd-1"> </a></td><td>Transportation (ambulance) miles</td><td>Transportation (ambulance) miles</td></tr><tr><td>2<a name="carr-line-mtus-cd-2"> </a></td><td>Anesthesia time units</td><td>Anesthesia time units</td></tr><tr><td>3<a name="carr-line-mtus-cd-3"> </a></td><td>Services</td><td>Services</td></tr><tr><td>4<a name="carr-line-mtus-cd-4"> </a></td><td>Oxygen units</td><td>Oxygen units</td></tr><tr><td>5<a name="carr-line-mtus-cd-5"> </a></td><td>Units of blood</td><td>Units of blood</td></tr></table></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd"/>
+  <identifier>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd"/>
+  </identifier>
+  <version value="1.1.0"/>
+  <name value="Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code"/>
+  <title value="Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code"/>
+  <status value="active"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr_line_mtus_cd"/>
+  <caseSensitive value="true"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-mtus-cd"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <concept>
+    <code value="0"/>
+    <display value="Values reported as zero (no allowed activities)"/>
+    <definition value="Values reported as zero (no allowed activities)"/>
+  </concept>
+  <concept>
+    <code value="1"/>
+    <display value="Transportation (ambulance) miles"/>
+    <definition value="Transportation (ambulance) miles"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Anesthesia time units"/>
+    <definition value="Anesthesia time units"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Services"/>
+    <definition value="Services"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="Oxygen units"/>
+    <definition value="Oxygen units"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="Units of blood"/>
+    <definition value="Units of blood"/>
+  </concept>
+</CodeSystem>

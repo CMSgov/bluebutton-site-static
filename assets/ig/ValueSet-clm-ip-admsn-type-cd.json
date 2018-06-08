@@ -1,0 +1,21 @@
+{
+  "resourceType": "ValueSet",
+  "id": "clm-ip-admsn-type-cd",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Inpatient Admission Type Code</h2><div><p>The code indicating the type and priority of an inpatient admission associated with the service on an intermediary submitted claim. Source: https://bluebutton.cms.gov/resources/variables/clm<em>ip</em>admsn<em>type</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-ip-admsn-type-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-ip-admsn-type-cd</code></a></li></ul></div>"
+  },
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-ip-admsn-type-cd",
+  "version": "1.1.0",
+  "name": "Claim Inpatient Admission Type Code",
+  "status": "draft",
+  "date": "2018-05-31T14:39:32+00:00",
+  "description": "The code indicating the type and priority of an inpatient admission associated with the service on an intermediary submitted claim. Source: https://bluebutton.cms.gov/resources/variables/clm_ip_admsn_type_cd",
+  "compose": {
+    "include": [
+      {
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-ip-admsn-type-cd"
+      }
+    ]
+  }
+}

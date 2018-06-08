@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-nch-ptnt-stus-ind-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "nch-ptnt-stus-ind-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>NCH Patient Status Indicator Code</h2><div><p>This variable is a recoded version of the discharge status code (variable called PTNT<em>DSCHRG</em>STUS<em>CD). Source: https://bluebutton.cms.gov/resources/variables/nch</em>ptnt<em>stus</em>ind_cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-nch-ptnt-stus-ind-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name=\"nch-ptnt-stus-ind-cd-A\"> </a></td><td>Discharged</td><td>Discharged</td></tr><tr><td>B<a name=\"nch-ptnt-stus-ind-cd-B\"> </a></td><td>Died</td><td>Died</td></tr><tr><td>C<a name=\"nch-ptnt-stus-ind-cd-C\"> </a></td><td>Still a patient</td><td>Still a patient</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-nch-ptnt-stus-ind-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-nch-ptnt-stus-ind-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "NCH Patient Status Indicator Code"];
+  fhir:CodeSystem.title [ fhir:value "NCH Patient Status Indicator Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "This variable is a recoded version of the discharge status code (variable called PTNT_DSCHRG_STUS_CD). Source: https://bluebutton.cms.gov/resources/variables/nch_ptnt_stus_ind_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-nch-ptnt-stus-ind-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "A" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Discharged" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Discharged" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "B" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Died" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Died" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "C" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Still a patient" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Still a patient" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-nch-ptnt-stus-ind-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/nch-ptnt-stus-ind-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

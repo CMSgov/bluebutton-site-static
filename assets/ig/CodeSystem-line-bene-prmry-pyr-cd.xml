@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="line-bene-prmry-pyr-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Line Primary Payer Code (if not Medicare)</h2><div><p>The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's medical bills relating to the line item service on the non-institutional claim. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/line<em>bene</em>prmry<em>pyr</em>cd</p>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-line-bene-prmry-pyr-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>A<a name="line-bene-prmry-pyr-cd-A"> </a></td><td>Working aged bene/spouse with employer group health plan (EGHP)</td><td>Working aged bene/spouse with employer group health plan (EGHP)</td></tr><tr><td>B<a name="line-bene-prmry-pyr-cd-B"> </a></td><td>End stage renal disease (ESRD) beneficiary in the 18 month coordination period with an employer group health plan</td><td>End stage renal disease (ESRD) beneficiary in the 18 month coordination period with an employer group health plan</td></tr><tr><td>C<a name="line-bene-prmry-pyr-cd-C"> </a></td><td>Conditional payment by Medicare; future reimbursement expected</td><td>Conditional payment by Medicare; future reimbursement expected</td></tr><tr><td>D<a name="line-bene-prmry-pyr-cd-D"> </a></td><td>Automobile no-fault</td><td>Automobile no-fault</td></tr><tr><td>E<a name="line-bene-prmry-pyr-cd-E"> </a></td><td>Workers' compensation</td><td>Workers' compensation</td></tr><tr><td>F<a name="line-bene-prmry-pyr-cd-F"> </a></td><td>Public Health Service or other federal agency (other than Dept. of Veterans Affairs)</td><td>Public Health Service or other federal agency (other than Dept. of Veterans Affairs)</td></tr><tr><td>G<a name="line-bene-prmry-pyr-cd-G"> </a></td><td>Working disabled bene (under age 65 with LGHP)</td><td>Working disabled bene (under age 65 with LGHP)</td></tr><tr><td>H<a name="line-bene-prmry-pyr-cd-H"> </a></td><td>Black Lung</td><td>Black Lung</td></tr><tr><td>I<a name="line-bene-prmry-pyr-cd-I"> </a></td><td>Dept. of Veterans Affairs</td><td>Dept. of Veterans Affairs</td></tr><tr><td>L<a name="line-bene-prmry-pyr-cd-L"> </a></td><td>Any liability insurance</td><td>Any liability insurance</td></tr><tr><td>M<a name="line-bene-prmry-pyr-cd-M"> </a></td><td>Override code: EGHP services involved</td><td>Override code: EGHP services involved</td></tr><tr><td>N<a name="line-bene-prmry-pyr-cd-N"> </a></td><td>Override code: non-EGHP services involved</td><td>Override code: non-EGHP services involved</td></tr><tr><td>W<a name="line-bene-prmry-pyr-cd-W"> </a></td><td>Workers’ Compensation Medicare Set-Aside Arrangement (WCMSA) Null/missing= Medicare is primary payer</td><td>Workers’ Compensation Medicare Set-Aside Arrangement (WCMSA) Null/missing= Medicare is primary payer</td></tr></table></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-line-bene-prmry-pyr-cd"/>
+  <identifier>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-line-bene-prmry-pyr-cd"/>
+  </identifier>
+  <version value="1.1.0"/>
+  <name value="Line Primary Payer Code (if not Medicare)"/>
+  <title value="Line Primary Payer Code (if not Medicare)"/>
+  <status value="active"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary&#39;s medical bills relating to the line item service on the non-institutional claim. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/line_bene_prmry_pyr_cd"/>
+  <caseSensitive value="true"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-line-bene-prmry-pyr-cd"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <concept>
+    <code value="A"/>
+    <display value="Working aged bene/spouse with employer group health plan (EGHP)"/>
+    <definition value="Working aged bene/spouse with employer group health plan (EGHP)"/>
+  </concept>
+  <concept>
+    <code value="B"/>
+    <display value="End stage renal disease (ESRD) beneficiary in the 18 month coordination period with an employer group health plan"/>
+    <definition value="End stage renal disease (ESRD) beneficiary in the 18 month coordination period with an employer group health plan"/>
+  </concept>
+  <concept>
+    <code value="C"/>
+    <display value="Conditional payment by Medicare; future reimbursement expected"/>
+    <definition value="Conditional payment by Medicare; future reimbursement expected"/>
+  </concept>
+  <concept>
+    <code value="D"/>
+    <display value="Automobile no-fault"/>
+    <definition value="Automobile no-fault"/>
+  </concept>
+  <concept>
+    <code value="E"/>
+    <display value="Workers&#39; compensation"/>
+    <definition value="Workers&#39; compensation"/>
+  </concept>
+  <concept>
+    <code value="F"/>
+    <display value="Public Health Service or other federal agency (other than Dept. of Veterans Affairs)"/>
+    <definition value="Public Health Service or other federal agency (other than Dept. of Veterans Affairs)"/>
+  </concept>
+  <concept>
+    <code value="G"/>
+    <display value="Working disabled bene (under age 65 with LGHP)"/>
+    <definition value="Working disabled bene (under age 65 with LGHP)"/>
+  </concept>
+  <concept>
+    <code value="H"/>
+    <display value="Black Lung"/>
+    <definition value="Black Lung"/>
+  </concept>
+  <concept>
+    <code value="I"/>
+    <display value="Dept. of Veterans Affairs"/>
+    <definition value="Dept. of Veterans Affairs"/>
+  </concept>
+  <concept>
+    <code value="L"/>
+    <display value="Any liability insurance"/>
+    <definition value="Any liability insurance"/>
+  </concept>
+  <concept>
+    <code value="M"/>
+    <display value="Override code: EGHP services involved"/>
+    <definition value="Override code: EGHP services involved"/>
+  </concept>
+  <concept>
+    <code value="N"/>
+    <display value="Override code: non-EGHP services involved"/>
+    <definition value="Override code: non-EGHP services involved"/>
+  </concept>
+  <concept>
+    <code value="W"/>
+    <display value="Workers&#x2019; Compensation Medicare Set-Aside Arrangement (WCMSA) Null/missing= Medicare is primary payer"/>
+    <definition value="Workers&#x2019; Compensation Medicare Set-Aside Arrangement (WCMSA) Null/missing= Medicare is primary payer"/>
+  </concept>
+</CodeSystem>

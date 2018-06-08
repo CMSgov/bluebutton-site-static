@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="prcng-excptn-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/prcng-excptn-cd"/>
+    <name value="Pricing Exception Code"/>
+    <description value="This variable indicates if the PDE was processed by the Part D plan using pricing rules that differ from the plan's negotiated price. Most PDEs have missing values, indicating that they were obtained from in-network pharmacies. Source: https://bluebutton.cms.gov/resources/variables/prcng_excptn_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/prcng-excptn-cd"/>
+        </include>
+    </compose>
+</ValueSet>

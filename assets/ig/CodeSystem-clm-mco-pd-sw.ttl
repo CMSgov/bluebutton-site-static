@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mco-pd-sw> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "clm-mco-pd-sw"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim MCO Paid Switch</h2><div><p>A switch indicating whether or not a Managed Care Organization (MCO) has paid the provider for an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm<em>mco</em>pd_sw</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mco-pd-sw defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"clm-mco-pd-sw-Blank\"> </a></td><td>No managed care organization (MCO) payment</td><td>No managed care organization (MCO) payment</td></tr><tr><td>0<a name=\"clm-mco-pd-sw-0\"> </a></td><td>No managed care organization (MCO) payment</td><td>No managed care organization (MCO) payment</td></tr><tr><td>1<a name=\"clm-mco-pd-sw-1\"> </a></td><td>MCO paid provider for the claim</td><td>MCO paid provider for the claim</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mco-pd-sw"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mco-pd-sw" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Claim MCO Paid Switch"];
+  fhir:CodeSystem.title [ fhir:value "Claim MCO Paid Switch"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "A switch indicating whether or not a Managed Care Organization (MCO) has paid the provider for an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm_mco_pd_sw"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-mco-pd-sw"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "Blank" ];
+     fhir:CodeSystem.concept.display [ fhir:value "No managed care organization (MCO) payment" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "No managed care organization (MCO) payment" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "0" ];
+     fhir:CodeSystem.concept.display [ fhir:value "No managed care organization (MCO) payment" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "No managed care organization (MCO) payment" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ];
+     fhir:CodeSystem.concept.display [ fhir:value "MCO paid provider for the claim" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "MCO paid provider for the claim" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mco-pd-sw.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/clm-mco-pd-sw.ttl> .
+
+# -------------------------------------------------------------------------------------
+

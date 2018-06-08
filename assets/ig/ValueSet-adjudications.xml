@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="adjudications"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Blue Button Adjudications Amounts</h2><div><p>Blue Button Adjudication amounts.</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudications</code></li></ul></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-adjudications"/>
+  <version value="1.1.0"/>
+  <name value="Blue Button Adjudications Amounts"/>
+  <status value="draft"/>
+  <date value="2018-02-14"/>
+  <description value="Blue Button Adjudication amounts."/>
+  <compose>
+    <include>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudications"/>
+    </include>
+  </compose>
+</ValueSet>

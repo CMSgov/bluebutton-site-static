@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="brnd-gnrc-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/brnd-gnrc-cd"/>
+    <name value="Brand-Generic Code Reported by Submitting Plan"/>
+    <description value="Plan reported value indicating whether the plan adjudicated the claim as a brand or generic drug. Applies to covered drugs only. Source: https://bluebutton.cms.gov/resources/variables/brnd_gnrc_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/brnd-gnrc-cd"/>
+        </include>
+    </compose>
+</ValueSet>

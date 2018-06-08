@@ -1,0 +1,478 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carr-line-prcng-lclty-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Pricing Locality Code</h2><div><p>Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>prcng<em>lclty</em>cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name=\"carr-line-prcng-lclty-cd-1\"> </a></td><td>ALABAMA</td><td>ALABAMA</td></tr><tr><td>2<a name=\"carr-line-prcng-lclty-cd-2\"> </a></td><td>ALASKA</td><td>ALASKA</td></tr><tr><td>3<a name=\"carr-line-prcng-lclty-cd-3\"> </a></td><td>ARIZONA</td><td>ARIZONA</td></tr><tr><td>4<a name=\"carr-line-prcng-lclty-cd-4\"> </a></td><td>ARKANSAS</td><td>ARKANSAS</td></tr><tr><td>5<a name=\"carr-line-prcng-lclty-cd-5\"> </a></td><td>ANAHEIM/SANTA ANA, CA</td><td>ANAHEIM/SANTA ANA, CA</td></tr><tr><td>6<a name=\"carr-line-prcng-lclty-cd-6\"> </a></td><td>LOS ANGELES, CA</td><td>LOS ANGELES, CA</td></tr><tr><td>7<a name=\"carr-line-prcng-lclty-cd-7\"> </a></td><td>MARIN/NAPA/SOLANO, CA</td><td>MARIN/NAPA/SOLANO, CA</td></tr><tr><td>8<a name=\"carr-line-prcng-lclty-cd-8\"> </a></td><td>OAKLAND/BERKELEY, CA</td><td>OAKLAND/BERKELEY, CA</td></tr><tr><td>9<a name=\"carr-line-prcng-lclty-cd-9\"> </a></td><td>REST OF CALIFORNIA</td><td>REST OF CALIFORNIA</td></tr><tr><td>10<a name=\"carr-line-prcng-lclty-cd-10\"> </a></td><td>SAN FRANCISCO, CA</td><td>SAN FRANCISCO, CA</td></tr><tr><td>11<a name=\"carr-line-prcng-lclty-cd-11\"> </a></td><td>SAN MATEO, CA</td><td>SAN MATEO, CA</td></tr><tr><td>12<a name=\"carr-line-prcng-lclty-cd-12\"> </a></td><td>SANTA CLARA, CA</td><td>SANTA CLARA, CA</td></tr><tr><td>13<a name=\"carr-line-prcng-lclty-cd-13\"> </a></td><td>VENTURA, CA</td><td>VENTURA, CA</td></tr><tr><td>14<a name=\"carr-line-prcng-lclty-cd-14\"> </a></td><td>COLORADO</td><td>COLORADO</td></tr><tr><td>15<a name=\"carr-line-prcng-lclty-cd-15\"> </a></td><td>CONNECTICUT</td><td>CONNECTICUT</td></tr><tr><td>16<a name=\"carr-line-prcng-lclty-cd-16\"> </a></td><td>DC + MD/VA SUBURBS</td><td>DC + MD/VA SUBURBS</td></tr><tr><td>17<a name=\"carr-line-prcng-lclty-cd-17\"> </a></td><td>DELAWARE</td><td>DELAWARE</td></tr><tr><td>18<a name=\"carr-line-prcng-lclty-cd-18\"> </a></td><td>FORT LAUDERDALE, FL</td><td>FORT LAUDERDALE, FL</td></tr><tr><td>19<a name=\"carr-line-prcng-lclty-cd-19\"> </a></td><td>MIAMI, FL</td><td>MIAMI, FL</td></tr><tr><td>20<a name=\"carr-line-prcng-lclty-cd-20\"> </a></td><td>REST OF FLORIDA</td><td>REST OF FLORIDA</td></tr><tr><td>21<a name=\"carr-line-prcng-lclty-cd-21\"> </a></td><td>ATLANTA, GA</td><td>ATLANTA, GA</td></tr><tr><td>22<a name=\"carr-line-prcng-lclty-cd-22\"> </a></td><td>REST OF GEORGIA</td><td>REST OF GEORGIA</td></tr><tr><td>23<a name=\"carr-line-prcng-lclty-cd-23\"> </a></td><td>HAWAII</td><td>HAWAII</td></tr><tr><td>24<a name=\"carr-line-prcng-lclty-cd-24\"> </a></td><td>IDAHO</td><td>IDAHO</td></tr><tr><td>25<a name=\"carr-line-prcng-lclty-cd-25\"> </a></td><td>CHICAGO, IL</td><td>CHICAGO, IL</td></tr><tr><td>26<a name=\"carr-line-prcng-lclty-cd-26\"> </a></td><td>EAST ST. LOUIS, IL</td><td>EAST ST. LOUIS, IL</td></tr><tr><td>27<a name=\"carr-line-prcng-lclty-cd-27\"> </a></td><td>REST OF ILLINOIS</td><td>REST OF ILLINOIS</td></tr><tr><td>28<a name=\"carr-line-prcng-lclty-cd-28\"> </a></td><td>SUBURBAN CHICAGO, IL</td><td>SUBURBAN CHICAGO, IL</td></tr><tr><td>29<a name=\"carr-line-prcng-lclty-cd-29\"> </a></td><td>INDIANA</td><td>INDIANA</td></tr><tr><td>30<a name=\"carr-line-prcng-lclty-cd-30\"> </a></td><td>IOWA</td><td>IOWA</td></tr><tr><td>31<a name=\"carr-line-prcng-lclty-cd-31\"> </a></td><td>KANSAS</td><td>KANSAS</td></tr><tr><td>32<a name=\"carr-line-prcng-lclty-cd-32\"> </a></td><td>KENTUCKY</td><td>KENTUCKY</td></tr><tr><td>33<a name=\"carr-line-prcng-lclty-cd-33\"> </a></td><td>NEW ORLEANS, LA</td><td>NEW ORLEANS, LA</td></tr><tr><td>34<a name=\"carr-line-prcng-lclty-cd-34\"> </a></td><td>REST OF LOUISIANA</td><td>REST OF LOUISIANA</td></tr><tr><td>35<a name=\"carr-line-prcng-lclty-cd-35\"> </a></td><td>REST OF MAINE</td><td>REST OF MAINE</td></tr><tr><td>36<a name=\"carr-line-prcng-lclty-cd-36\"> </a></td><td>SOUTHERN MAINE</td><td>SOUTHERN MAINE</td></tr><tr><td>37<a name=\"carr-line-prcng-lclty-cd-37\"> </a></td><td>BALTIMORE/SURR. CNTYS, MD</td><td>BALTIMORE/SURR. CNTYS, MD</td></tr><tr><td>38<a name=\"carr-line-prcng-lclty-cd-38\"> </a></td><td>REST OF MARYLAND</td><td>REST OF MARYLAND</td></tr><tr><td>39<a name=\"carr-line-prcng-lclty-cd-39\"> </a></td><td>METROPOLITAN BOSTON</td><td>METROPOLITAN BOSTON</td></tr><tr><td>40<a name=\"carr-line-prcng-lclty-cd-40\"> </a></td><td>REST OF MASSACHUSETTS</td><td>REST OF MASSACHUSETTS</td></tr><tr><td>41<a name=\"carr-line-prcng-lclty-cd-41\"> </a></td><td>DETROIT, MI</td><td>DETROIT, MI</td></tr><tr><td>42<a name=\"carr-line-prcng-lclty-cd-42\"> </a></td><td>REST OF MICHIGAN</td><td>REST OF MICHIGAN</td></tr><tr><td>43<a name=\"carr-line-prcng-lclty-cd-43\"> </a></td><td>MINNESOTA</td><td>MINNESOTA</td></tr><tr><td>44<a name=\"carr-line-prcng-lclty-cd-44\"> </a></td><td>MISSISSIPPI</td><td>MISSISSIPPI</td></tr><tr><td>45<a name=\"carr-line-prcng-lclty-cd-45\"> </a></td><td>METROPOLITAN KANSAS CITY, MO</td><td>METROPOLITAN KANSAS CITY, MO</td></tr><tr><td>46<a name=\"carr-line-prcng-lclty-cd-46\"> </a></td><td>METROPOLITAN ST. LOUIS, MO</td><td>METROPOLITAN ST. LOUIS, MO</td></tr><tr><td>47<a name=\"carr-line-prcng-lclty-cd-47\"> </a></td><td>REST OF MISSOURI</td><td>REST OF MISSOURI</td></tr><tr><td>48<a name=\"carr-line-prcng-lclty-cd-48\"> </a></td><td>MONTANA</td><td>MONTANA</td></tr><tr><td>49<a name=\"carr-line-prcng-lclty-cd-49\"> </a></td><td>NEBRASKA</td><td>NEBRASKA</td></tr><tr><td>50<a name=\"carr-line-prcng-lclty-cd-50\"> </a></td><td>NEVADA</td><td>NEVADA</td></tr><tr><td>51<a name=\"carr-line-prcng-lclty-cd-51\"> </a></td><td>NEW HAMPSHIRE</td><td>NEW HAMPSHIRE</td></tr><tr><td>52<a name=\"carr-line-prcng-lclty-cd-52\"> </a></td><td>NORTHERN NJ</td><td>NORTHERN NJ</td></tr><tr><td>53<a name=\"carr-line-prcng-lclty-cd-53\"> </a></td><td>REST OF NEW JERSEY</td><td>REST OF NEW JERSEY</td></tr><tr><td>54<a name=\"carr-line-prcng-lclty-cd-54\"> </a></td><td>NEW MEXICO</td><td>NEW MEXICO</td></tr><tr><td>55<a name=\"carr-line-prcng-lclty-cd-55\"> </a></td><td>MANHATTAN, NY</td><td>MANHATTAN, NY</td></tr><tr><td>56<a name=\"carr-line-prcng-lclty-cd-56\"> </a></td><td>NYC SUBURBS/LONG I., NY</td><td>NYC SUBURBS/LONG I., NY</td></tr><tr><td>57<a name=\"carr-line-prcng-lclty-cd-57\"> </a></td><td>POUGHKPSIE/N NYC SUBURBS, NY</td><td>POUGHKPSIE/N NYC SUBURBS, NY</td></tr><tr><td>58<a name=\"carr-line-prcng-lclty-cd-58\"> </a></td><td>QUEENS, NY</td><td>QUEENS, NY</td></tr><tr><td>59<a name=\"carr-line-prcng-lclty-cd-59\"> </a></td><td>REST OF NEW YORK</td><td>REST OF NEW YORK</td></tr><tr><td>60<a name=\"carr-line-prcng-lclty-cd-60\"> </a></td><td>NORTH CAROLINA</td><td>NORTH CAROLINA</td></tr><tr><td>61<a name=\"carr-line-prcng-lclty-cd-61\"> </a></td><td>NORTH DAKOTA</td><td>NORTH DAKOTA</td></tr><tr><td>62<a name=\"carr-line-prcng-lclty-cd-62\"> </a></td><td>OHIO</td><td>OHIO</td></tr><tr><td>63<a name=\"carr-line-prcng-lclty-cd-63\"> </a></td><td>OKLAHOMA</td><td>OKLAHOMA</td></tr><tr><td>64<a name=\"carr-line-prcng-lclty-cd-64\"> </a></td><td>PORTLAND, OR</td><td>PORTLAND, OR</td></tr><tr><td>65<a name=\"carr-line-prcng-lclty-cd-65\"> </a></td><td>REST OF OREGON</td><td>REST OF OREGON</td></tr><tr><td>66<a name=\"carr-line-prcng-lclty-cd-66\"> </a></td><td>METROPOLITAN PHILADELPHIA, PA</td><td>METROPOLITAN PHILADELPHIA, PA</td></tr><tr><td>67<a name=\"carr-line-prcng-lclty-cd-67\"> </a></td><td>REST OF PENNSYLVANIA</td><td>REST OF PENNSYLVANIA</td></tr><tr><td>68<a name=\"carr-line-prcng-lclty-cd-68\"> </a></td><td>PUERTO RICO</td><td>PUERTO RICO</td></tr><tr><td>69<a name=\"carr-line-prcng-lclty-cd-69\"> </a></td><td>RHODE ISLAND</td><td>RHODE ISLAND</td></tr><tr><td>70<a name=\"carr-line-prcng-lclty-cd-70\"> </a></td><td>SOUTH CAROLINA</td><td>SOUTH CAROLINA</td></tr><tr><td>71<a name=\"carr-line-prcng-lclty-cd-71\"> </a></td><td>SOUTH DAKOTA</td><td>SOUTH DAKOTA</td></tr><tr><td>72<a name=\"carr-line-prcng-lclty-cd-72\"> </a></td><td>TENNESSEE</td><td>TENNESSEE</td></tr><tr><td>73<a name=\"carr-line-prcng-lclty-cd-73\"> </a></td><td>AUSTIN, TX</td><td>AUSTIN, TX</td></tr><tr><td>74<a name=\"carr-line-prcng-lclty-cd-74\"> </a></td><td>BEAUMONT, TX</td><td>BEAUMONT, TX</td></tr><tr><td>75<a name=\"carr-line-prcng-lclty-cd-75\"> </a></td><td>BRAZORIA, TX</td><td>BRAZORIA, TX</td></tr><tr><td>76<a name=\"carr-line-prcng-lclty-cd-76\"> </a></td><td>DALLAS, TX</td><td>DALLAS, TX</td></tr><tr><td>77<a name=\"carr-line-prcng-lclty-cd-77\"> </a></td><td>FORT WORTH, TX</td><td>FORT WORTH, TX</td></tr><tr><td>78<a name=\"carr-line-prcng-lclty-cd-78\"> </a></td><td>GALVESTON, TX</td><td>GALVESTON, TX</td></tr><tr><td>79<a name=\"carr-line-prcng-lclty-cd-79\"> </a></td><td>HOUSTON, TX</td><td>HOUSTON, TX</td></tr><tr><td>80<a name=\"carr-line-prcng-lclty-cd-80\"> </a></td><td>REST OF TEXAS</td><td>REST OF TEXAS</td></tr><tr><td>81<a name=\"carr-line-prcng-lclty-cd-81\"> </a></td><td>UTAH</td><td>UTAH</td></tr><tr><td>82<a name=\"carr-line-prcng-lclty-cd-82\"> </a></td><td>VERMONT</td><td>VERMONT</td></tr><tr><td>83<a name=\"carr-line-prcng-lclty-cd-83\"> </a></td><td>VIRGIN ISLANDS</td><td>VIRGIN ISLANDS</td></tr><tr><td>84<a name=\"carr-line-prcng-lclty-cd-84\"> </a></td><td>VIRGINIA</td><td>VIRGINIA</td></tr><tr><td>85<a name=\"carr-line-prcng-lclty-cd-85\"> </a></td><td>REST OF WASHINGTON</td><td>REST OF WASHINGTON</td></tr><tr><td>86<a name=\"carr-line-prcng-lclty-cd-86\"> </a></td><td>SEATTLE (KING CNTY), WA</td><td>SEATTLE (KING CNTY), WA</td></tr><tr><td>87<a name=\"carr-line-prcng-lclty-cd-87\"> </a></td><td>WEST VIRGINIA</td><td>WEST VIRGINIA</td></tr><tr><td>88<a name=\"carr-line-prcng-lclty-cd-88\"> </a></td><td>WISCONSIN 89 WYOMING</td><td>WISCONSIN 89 WYOMING</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Carrier Line Pricing Locality Code"];
+  fhir:CodeSystem.title [ fhir:value "Carrier Line Pricing Locality Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr_line_prcng_lclty_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-prcng-lclty-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ];
+     fhir:CodeSystem.concept.display [ fhir:value "ALABAMA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "ALABAMA" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ];
+     fhir:CodeSystem.concept.display [ fhir:value "ALASKA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "ALASKA" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ];
+     fhir:CodeSystem.concept.display [ fhir:value "ARIZONA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "ARIZONA" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "4" ];
+     fhir:CodeSystem.concept.display [ fhir:value "ARKANSAS" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "ARKANSAS" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "5" ];
+     fhir:CodeSystem.concept.display [ fhir:value "ANAHEIM/SANTA ANA, CA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "ANAHEIM/SANTA ANA, CA" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "6" ];
+     fhir:CodeSystem.concept.display [ fhir:value "LOS ANGELES, CA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "LOS ANGELES, CA" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "7" ];
+     fhir:CodeSystem.concept.display [ fhir:value "MARIN/NAPA/SOLANO, CA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "MARIN/NAPA/SOLANO, CA" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "8" ];
+     fhir:CodeSystem.concept.display [ fhir:value "OAKLAND/BERKELEY, CA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "OAKLAND/BERKELEY, CA" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "9" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF CALIFORNIA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF CALIFORNIA" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "10" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SAN FRANCISCO, CA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "SAN FRANCISCO, CA" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "11" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SAN MATEO, CA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "SAN MATEO, CA" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "12" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SANTA CLARA, CA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "SANTA CLARA, CA" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "13" ];
+     fhir:CodeSystem.concept.display [ fhir:value "VENTURA, CA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "VENTURA, CA" ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value "14" ];
+     fhir:CodeSystem.concept.display [ fhir:value "COLORADO" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "COLORADO" ]
+  ], [
+     fhir:index 14;
+     fhir:CodeSystem.concept.code [ fhir:value "15" ];
+     fhir:CodeSystem.concept.display [ fhir:value "CONNECTICUT" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "CONNECTICUT" ]
+  ], [
+     fhir:index 15;
+     fhir:CodeSystem.concept.code [ fhir:value "16" ];
+     fhir:CodeSystem.concept.display [ fhir:value "DC + MD/VA SUBURBS" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "DC + MD/VA SUBURBS" ]
+  ], [
+     fhir:index 16;
+     fhir:CodeSystem.concept.code [ fhir:value "17" ];
+     fhir:CodeSystem.concept.display [ fhir:value "DELAWARE" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "DELAWARE" ]
+  ], [
+     fhir:index 17;
+     fhir:CodeSystem.concept.code [ fhir:value "18" ];
+     fhir:CodeSystem.concept.display [ fhir:value "FORT LAUDERDALE, FL" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "FORT LAUDERDALE, FL" ]
+  ], [
+     fhir:index 18;
+     fhir:CodeSystem.concept.code [ fhir:value "19" ];
+     fhir:CodeSystem.concept.display [ fhir:value "MIAMI, FL" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "MIAMI, FL" ]
+  ], [
+     fhir:index 19;
+     fhir:CodeSystem.concept.code [ fhir:value "20" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF FLORIDA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF FLORIDA" ]
+  ], [
+     fhir:index 20;
+     fhir:CodeSystem.concept.code [ fhir:value "21" ];
+     fhir:CodeSystem.concept.display [ fhir:value "ATLANTA, GA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "ATLANTA, GA" ]
+  ], [
+     fhir:index 21;
+     fhir:CodeSystem.concept.code [ fhir:value "22" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF GEORGIA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF GEORGIA" ]
+  ], [
+     fhir:index 22;
+     fhir:CodeSystem.concept.code [ fhir:value "23" ];
+     fhir:CodeSystem.concept.display [ fhir:value "HAWAII" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "HAWAII" ]
+  ], [
+     fhir:index 23;
+     fhir:CodeSystem.concept.code [ fhir:value "24" ];
+     fhir:CodeSystem.concept.display [ fhir:value "IDAHO" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "IDAHO" ]
+  ], [
+     fhir:index 24;
+     fhir:CodeSystem.concept.code [ fhir:value "25" ];
+     fhir:CodeSystem.concept.display [ fhir:value "CHICAGO, IL" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "CHICAGO, IL" ]
+  ], [
+     fhir:index 25;
+     fhir:CodeSystem.concept.code [ fhir:value "26" ];
+     fhir:CodeSystem.concept.display [ fhir:value "EAST ST. LOUIS, IL" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "EAST ST. LOUIS, IL" ]
+  ], [
+     fhir:index 26;
+     fhir:CodeSystem.concept.code [ fhir:value "27" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF ILLINOIS" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF ILLINOIS" ]
+  ], [
+     fhir:index 27;
+     fhir:CodeSystem.concept.code [ fhir:value "28" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SUBURBAN CHICAGO, IL" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "SUBURBAN CHICAGO, IL" ]
+  ], [
+     fhir:index 28;
+     fhir:CodeSystem.concept.code [ fhir:value "29" ];
+     fhir:CodeSystem.concept.display [ fhir:value "INDIANA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "INDIANA" ]
+  ], [
+     fhir:index 29;
+     fhir:CodeSystem.concept.code [ fhir:value "30" ];
+     fhir:CodeSystem.concept.display [ fhir:value "IOWA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "IOWA" ]
+  ], [
+     fhir:index 30;
+     fhir:CodeSystem.concept.code [ fhir:value "31" ];
+     fhir:CodeSystem.concept.display [ fhir:value "KANSAS" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "KANSAS" ]
+  ], [
+     fhir:index 31;
+     fhir:CodeSystem.concept.code [ fhir:value "32" ];
+     fhir:CodeSystem.concept.display [ fhir:value "KENTUCKY" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "KENTUCKY" ]
+  ], [
+     fhir:index 32;
+     fhir:CodeSystem.concept.code [ fhir:value "33" ];
+     fhir:CodeSystem.concept.display [ fhir:value "NEW ORLEANS, LA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "NEW ORLEANS, LA" ]
+  ], [
+     fhir:index 33;
+     fhir:CodeSystem.concept.code [ fhir:value "34" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF LOUISIANA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF LOUISIANA" ]
+  ], [
+     fhir:index 34;
+     fhir:CodeSystem.concept.code [ fhir:value "35" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF MAINE" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF MAINE" ]
+  ], [
+     fhir:index 35;
+     fhir:CodeSystem.concept.code [ fhir:value "36" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SOUTHERN MAINE" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "SOUTHERN MAINE" ]
+  ], [
+     fhir:index 36;
+     fhir:CodeSystem.concept.code [ fhir:value "37" ];
+     fhir:CodeSystem.concept.display [ fhir:value "BALTIMORE/SURR. CNTYS, MD" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "BALTIMORE/SURR. CNTYS, MD" ]
+  ], [
+     fhir:index 37;
+     fhir:CodeSystem.concept.code [ fhir:value "38" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF MARYLAND" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF MARYLAND" ]
+  ], [
+     fhir:index 38;
+     fhir:CodeSystem.concept.code [ fhir:value "39" ];
+     fhir:CodeSystem.concept.display [ fhir:value "METROPOLITAN BOSTON" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "METROPOLITAN BOSTON" ]
+  ], [
+     fhir:index 39;
+     fhir:CodeSystem.concept.code [ fhir:value "40" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF MASSACHUSETTS" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF MASSACHUSETTS" ]
+  ], [
+     fhir:index 40;
+     fhir:CodeSystem.concept.code [ fhir:value "41" ];
+     fhir:CodeSystem.concept.display [ fhir:value "DETROIT, MI" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "DETROIT, MI" ]
+  ], [
+     fhir:index 41;
+     fhir:CodeSystem.concept.code [ fhir:value "42" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF MICHIGAN" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF MICHIGAN" ]
+  ], [
+     fhir:index 42;
+     fhir:CodeSystem.concept.code [ fhir:value "43" ];
+     fhir:CodeSystem.concept.display [ fhir:value "MINNESOTA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "MINNESOTA" ]
+  ], [
+     fhir:index 43;
+     fhir:CodeSystem.concept.code [ fhir:value "44" ];
+     fhir:CodeSystem.concept.display [ fhir:value "MISSISSIPPI" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "MISSISSIPPI" ]
+  ], [
+     fhir:index 44;
+     fhir:CodeSystem.concept.code [ fhir:value "45" ];
+     fhir:CodeSystem.concept.display [ fhir:value "METROPOLITAN KANSAS CITY, MO" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "METROPOLITAN KANSAS CITY, MO" ]
+  ], [
+     fhir:index 45;
+     fhir:CodeSystem.concept.code [ fhir:value "46" ];
+     fhir:CodeSystem.concept.display [ fhir:value "METROPOLITAN ST. LOUIS, MO" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "METROPOLITAN ST. LOUIS, MO" ]
+  ], [
+     fhir:index 46;
+     fhir:CodeSystem.concept.code [ fhir:value "47" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF MISSOURI" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF MISSOURI" ]
+  ], [
+     fhir:index 47;
+     fhir:CodeSystem.concept.code [ fhir:value "48" ];
+     fhir:CodeSystem.concept.display [ fhir:value "MONTANA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "MONTANA" ]
+  ], [
+     fhir:index 48;
+     fhir:CodeSystem.concept.code [ fhir:value "49" ];
+     fhir:CodeSystem.concept.display [ fhir:value "NEBRASKA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "NEBRASKA" ]
+  ], [
+     fhir:index 49;
+     fhir:CodeSystem.concept.code [ fhir:value "50" ];
+     fhir:CodeSystem.concept.display [ fhir:value "NEVADA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "NEVADA" ]
+  ], [
+     fhir:index 50;
+     fhir:CodeSystem.concept.code [ fhir:value "51" ];
+     fhir:CodeSystem.concept.display [ fhir:value "NEW HAMPSHIRE" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "NEW HAMPSHIRE" ]
+  ], [
+     fhir:index 51;
+     fhir:CodeSystem.concept.code [ fhir:value "52" ];
+     fhir:CodeSystem.concept.display [ fhir:value "NORTHERN NJ" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "NORTHERN NJ" ]
+  ], [
+     fhir:index 52;
+     fhir:CodeSystem.concept.code [ fhir:value "53" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF NEW JERSEY" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF NEW JERSEY" ]
+  ], [
+     fhir:index 53;
+     fhir:CodeSystem.concept.code [ fhir:value "54" ];
+     fhir:CodeSystem.concept.display [ fhir:value "NEW MEXICO" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "NEW MEXICO" ]
+  ], [
+     fhir:index 54;
+     fhir:CodeSystem.concept.code [ fhir:value "55" ];
+     fhir:CodeSystem.concept.display [ fhir:value "MANHATTAN, NY" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "MANHATTAN, NY" ]
+  ], [
+     fhir:index 55;
+     fhir:CodeSystem.concept.code [ fhir:value "56" ];
+     fhir:CodeSystem.concept.display [ fhir:value "NYC SUBURBS/LONG I., NY" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "NYC SUBURBS/LONG I., NY" ]
+  ], [
+     fhir:index 56;
+     fhir:CodeSystem.concept.code [ fhir:value "57" ];
+     fhir:CodeSystem.concept.display [ fhir:value "POUGHKPSIE/N NYC SUBURBS, NY" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "POUGHKPSIE/N NYC SUBURBS, NY" ]
+  ], [
+     fhir:index 57;
+     fhir:CodeSystem.concept.code [ fhir:value "58" ];
+     fhir:CodeSystem.concept.display [ fhir:value "QUEENS, NY" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "QUEENS, NY" ]
+  ], [
+     fhir:index 58;
+     fhir:CodeSystem.concept.code [ fhir:value "59" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF NEW YORK" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF NEW YORK" ]
+  ], [
+     fhir:index 59;
+     fhir:CodeSystem.concept.code [ fhir:value "60" ];
+     fhir:CodeSystem.concept.display [ fhir:value "NORTH CAROLINA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "NORTH CAROLINA" ]
+  ], [
+     fhir:index 60;
+     fhir:CodeSystem.concept.code [ fhir:value "61" ];
+     fhir:CodeSystem.concept.display [ fhir:value "NORTH DAKOTA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "NORTH DAKOTA" ]
+  ], [
+     fhir:index 61;
+     fhir:CodeSystem.concept.code [ fhir:value "62" ];
+     fhir:CodeSystem.concept.display [ fhir:value "OHIO" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "OHIO" ]
+  ], [
+     fhir:index 62;
+     fhir:CodeSystem.concept.code [ fhir:value "63" ];
+     fhir:CodeSystem.concept.display [ fhir:value "OKLAHOMA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "OKLAHOMA" ]
+  ], [
+     fhir:index 63;
+     fhir:CodeSystem.concept.code [ fhir:value "64" ];
+     fhir:CodeSystem.concept.display [ fhir:value "PORTLAND, OR" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "PORTLAND, OR" ]
+  ], [
+     fhir:index 64;
+     fhir:CodeSystem.concept.code [ fhir:value "65" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF OREGON" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF OREGON" ]
+  ], [
+     fhir:index 65;
+     fhir:CodeSystem.concept.code [ fhir:value "66" ];
+     fhir:CodeSystem.concept.display [ fhir:value "METROPOLITAN PHILADELPHIA, PA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "METROPOLITAN PHILADELPHIA, PA" ]
+  ], [
+     fhir:index 66;
+     fhir:CodeSystem.concept.code [ fhir:value "67" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF PENNSYLVANIA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF PENNSYLVANIA" ]
+  ], [
+     fhir:index 67;
+     fhir:CodeSystem.concept.code [ fhir:value "68" ];
+     fhir:CodeSystem.concept.display [ fhir:value "PUERTO RICO" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "PUERTO RICO" ]
+  ], [
+     fhir:index 68;
+     fhir:CodeSystem.concept.code [ fhir:value "69" ];
+     fhir:CodeSystem.concept.display [ fhir:value "RHODE ISLAND" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "RHODE ISLAND" ]
+  ], [
+     fhir:index 69;
+     fhir:CodeSystem.concept.code [ fhir:value "70" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SOUTH CAROLINA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "SOUTH CAROLINA" ]
+  ], [
+     fhir:index 70;
+     fhir:CodeSystem.concept.code [ fhir:value "71" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SOUTH DAKOTA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "SOUTH DAKOTA" ]
+  ], [
+     fhir:index 71;
+     fhir:CodeSystem.concept.code [ fhir:value "72" ];
+     fhir:CodeSystem.concept.display [ fhir:value "TENNESSEE" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "TENNESSEE" ]
+  ], [
+     fhir:index 72;
+     fhir:CodeSystem.concept.code [ fhir:value "73" ];
+     fhir:CodeSystem.concept.display [ fhir:value "AUSTIN, TX" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "AUSTIN, TX" ]
+  ], [
+     fhir:index 73;
+     fhir:CodeSystem.concept.code [ fhir:value "74" ];
+     fhir:CodeSystem.concept.display [ fhir:value "BEAUMONT, TX" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "BEAUMONT, TX" ]
+  ], [
+     fhir:index 74;
+     fhir:CodeSystem.concept.code [ fhir:value "75" ];
+     fhir:CodeSystem.concept.display [ fhir:value "BRAZORIA, TX" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "BRAZORIA, TX" ]
+  ], [
+     fhir:index 75;
+     fhir:CodeSystem.concept.code [ fhir:value "76" ];
+     fhir:CodeSystem.concept.display [ fhir:value "DALLAS, TX" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "DALLAS, TX" ]
+  ], [
+     fhir:index 76;
+     fhir:CodeSystem.concept.code [ fhir:value "77" ];
+     fhir:CodeSystem.concept.display [ fhir:value "FORT WORTH, TX" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "FORT WORTH, TX" ]
+  ], [
+     fhir:index 77;
+     fhir:CodeSystem.concept.code [ fhir:value "78" ];
+     fhir:CodeSystem.concept.display [ fhir:value "GALVESTON, TX" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "GALVESTON, TX" ]
+  ], [
+     fhir:index 78;
+     fhir:CodeSystem.concept.code [ fhir:value "79" ];
+     fhir:CodeSystem.concept.display [ fhir:value "HOUSTON, TX" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "HOUSTON, TX" ]
+  ], [
+     fhir:index 79;
+     fhir:CodeSystem.concept.code [ fhir:value "80" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF TEXAS" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF TEXAS" ]
+  ], [
+     fhir:index 80;
+     fhir:CodeSystem.concept.code [ fhir:value "81" ];
+     fhir:CodeSystem.concept.display [ fhir:value "UTAH" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "UTAH" ]
+  ], [
+     fhir:index 81;
+     fhir:CodeSystem.concept.code [ fhir:value "82" ];
+     fhir:CodeSystem.concept.display [ fhir:value "VERMONT" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "VERMONT" ]
+  ], [
+     fhir:index 82;
+     fhir:CodeSystem.concept.code [ fhir:value "83" ];
+     fhir:CodeSystem.concept.display [ fhir:value "VIRGIN ISLANDS" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "VIRGIN ISLANDS" ]
+  ], [
+     fhir:index 83;
+     fhir:CodeSystem.concept.code [ fhir:value "84" ];
+     fhir:CodeSystem.concept.display [ fhir:value "VIRGINIA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "VIRGINIA" ]
+  ], [
+     fhir:index 84;
+     fhir:CodeSystem.concept.code [ fhir:value "85" ];
+     fhir:CodeSystem.concept.display [ fhir:value "REST OF WASHINGTON" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "REST OF WASHINGTON" ]
+  ], [
+     fhir:index 85;
+     fhir:CodeSystem.concept.code [ fhir:value "86" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SEATTLE (KING CNTY), WA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "SEATTLE (KING CNTY), WA" ]
+  ], [
+     fhir:index 86;
+     fhir:CodeSystem.concept.code [ fhir:value "87" ];
+     fhir:CodeSystem.concept.display [ fhir:value "WEST VIRGINIA" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "WEST VIRGINIA" ]
+  ], [
+     fhir:index 87;
+     fhir:CodeSystem.concept.code [ fhir:value "88" ];
+     fhir:CodeSystem.concept.display [ fhir:value "WISCONSIN 89 WYOMING" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "WISCONSIN 89 WYOMING" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/carr-line-prcng-lclty-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

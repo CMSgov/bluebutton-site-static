@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-line-pmt-80-100-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "line-pmt-80-100-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Payment 80% / 100% Code</h2><div><p>The code indicating that the amount shown in the payment field on the non-institutional line item represents either 80% or 100% of the allowed charges less any deductible, or 100% limitation of liability only. Source: https://bluebutton.cms.gov/resources/variables/line<em>pmt</em>80<em>100</em>cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-line-pmt-80-100-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"line-pmt-80-100-cd-0\"> </a></td><td>80%</td><td>80%</td></tr><tr><td>1<a name=\"line-pmt-80-100-cd-1\"> </a></td><td>100%</td><td>100%</td></tr><tr><td>3<a name=\"line-pmt-80-100-cd-3\"> </a></td><td>100% Limitation of liability only</td><td>100% Limitation of liability only</td></tr><tr><td>4<a name=\"line-pmt-80-100-cd-4\"> </a></td><td>75% Reimbursement</td><td>75% Reimbursement</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-line-pmt-80-100-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-line-pmt-80-100-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Line Payment 80% / 100% Code"];
+  fhir:CodeSystem.title [ fhir:value "Line Payment 80% / 100% Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "The code indicating that the amount shown in the payment field on the non-institutional line item represents either 80% or 100% of the allowed charges less any deductible, or 100% limitation of liability only. Source: https://bluebutton.cms.gov/resources/variables/line_pmt_80_100_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-line-pmt-80-100-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "0" ];
+     fhir:CodeSystem.concept.display [ fhir:value "80%" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "80%" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ];
+     fhir:CodeSystem.concept.display [ fhir:value "100%" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "100%" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ];
+     fhir:CodeSystem.concept.display [ fhir:value "100% Limitation of liability only" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "100% Limitation of liability only" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "4" ];
+     fhir:CodeSystem.concept.display [ fhir:value "75% Reimbursement" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "75% Reimbursement" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-line-pmt-80-100-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/line-pmt-80-100-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

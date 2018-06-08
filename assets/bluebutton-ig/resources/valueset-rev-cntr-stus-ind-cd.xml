@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="rev-cntr-stus-ind-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/rev-cntr-stus-ind-cd"/>
+    <name value="Revenue Center Status Indicator Code"/>
+    <description value="This variable indicates how the service listed on the revenue center record was priced for payment purposes. The revenue center status indicator code is most useful with outpatient hospital claims, where multiple methods may be used to determine the payment amount for the various revenue center records on the claim (for example, some lines may be bundled into an APC and paid under the outpatient PPS, while other lines may be paid under other fee schedules). Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_stus_ind_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/rev-cntr-stus-ind-cd"/>
+        </include>
+    </compose>
+</ValueSet>

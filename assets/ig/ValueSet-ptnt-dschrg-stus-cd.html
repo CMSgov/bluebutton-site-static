@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+<!-- ============BreadCrumbs=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<!--
+<h2>Patient Discharge Status Code</h2>
+
+<p>
+Formats: <a href="ValueSet-ptnt-dschrg-stus-cd.xml.html">XML</a>, <a href="ValueSet-ptnt-dschrg-stus-cd.json.html">JSON</a>, <a href="ValueSet-ptnt-dschrg-stus-cd.ttl.html">Turtle</a>
+</p>
+
+-->
+
+<!-- include ValueSet-ptnt-dschrg-stus-cd-html.xhtml   -->
+
+<table class="grid">
+ <tbody><tr><td>Defining URL:</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-dschrg-stus-cd</td></tr>
+ <tr><td>Name:</td><td>Patient Discharge Status Code</td></tr>
+ <tr><td>Definition:</td><td><p>The code used to identify the status of the patient as of the CLM<em>THRU</em>DT. Source: https://bluebutton.cms.gov/resources/variables/ptnt<em>dschrg</em>stus_cd</p>
+</td></tr>
+ <tr><td>Source Resource</td><td><a href="ValueSet-ptnt-dschrg-stus-cd.xml.html">XML</a> / <a href="ValueSet-ptnt-dschrg-stus-cd.json.html">JSON</a> / <a href="ValueSet-ptnt-dschrg-stus-cd.ttl.html">Turtle</a></td></tr>
+</tbody></table>
+
+
+This value set is used by:
+
+
+<p>This value set is not used</p>
+
+
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Patient Discharge Status Code</h2><div><p>The code used to identify the status of the patient as of the CLM<em>THRU</em>DT. Source: https://bluebutton.cms.gov/resources/variables/ptnt<em>dschrg</em>stus_cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-ptnt-dschrg-stus-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd</code></a></li></ul></div>
+
+<h3>Expansion</h3>
+
+<div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 44 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd version 1.1.0</p><p>All codes from system <a href="CodeSystem-ptnt-dschrg-stus-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd</code></a></p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-0"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-0">0</a></td><td>Unknown Value (but present in data)</td><td>Unknown Value (but present in data)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-01"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-01">01</a></td><td>Discharged to home/self-care (routine charge).</td><td>Discharged to home/self-care (routine charge).</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-02"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-02">02</a></td><td>Discharged/transferred to other short term general hospital for inpatient care.</td><td>Discharged/transferred to other short term general hospital for inpatient care.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-03"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-03">03</a></td><td>Discharged/transferred to skilled nursing facility (SNF) with Medicare certification in anticipation of covered skilled care -- (For hospitals with an approved swing bed arrangement, use Code 61 - swing bed. For reporting discharges/transfers to a non-certified SNF, the hospital must use Code 04 - ICF.</td><td>Discharged/transferred to skilled nursing facility (SNF) with Medicare certification in anticipation of covered skilled care -- (For hospitals with an approved swing bed arrangement, use Code 61 - swing bed. For reporting discharges/transfers to a non-certified SNF, the hospital must use Code 04 - ICF.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-04"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-04">04</a></td><td>Discharged/transferred to intermediate care facility (ICF).</td><td>Discharged/transferred to intermediate care facility (ICF).</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-05"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-05">05</a></td><td>Discharged/transferred to another type of institution for inpatient care (including distinct parts). NOTE: Effective 1/2005, psychiatric hospital or psychiatric distinct part unit of a hospital will no longer be identified by this code. New code is '65'.</td><td>Discharged/transferred to another type of institution for inpatient care (including distinct parts). NOTE: Effective 1/2005, psychiatric hospital or psychiatric distinct part unit of a hospital will no longer be identified by this code. New code is '65'.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-06"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-06">06</a></td><td>Discharged/transferred to home care of organized home health service organization.</td><td>Discharged/transferred to home care of organized home health service organization.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-07"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-07">07</a></td><td>Left against medical advice or discontinued care.</td><td>Left against medical advice or discontinued care.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-08"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-08">08</a></td><td>Discharged/transferred to home under care of a home IV drug therapy provider. (discontinued effective 10/1/05)</td><td>Discharged/transferred to home under care of a home IV drug therapy provider. (discontinued effective 10/1/05)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-09"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-09">09</a></td><td>Admitted as an inpatient to this hospital (effective 3/1/91). In situations where a patient is admitted before midnight of the third day following the day of an outpatient service, the outpatient services are considered inpatient.</td><td>Admitted as an inpatient to this hospital (effective 3/1/91). In situations where a patient is admitted before midnight of the third day following the day of an outpatient service, the outpatient services are considered inpatient.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-20"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-20">20</a></td><td>Expired (patient did not recover).</td><td>Expired (patient did not recover).</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-21"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-21">21</a></td><td>Discharged/transferred to court/law enforcement.</td><td>Discharged/transferred to court/law enforcement.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-30"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-30">30</a></td><td>Still patient.</td><td>Still patient.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-40"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-40">40</a></td><td>Expired at home (hospice claims only)</td><td>Expired at home (hospice claims only)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-41"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-41">41</a></td><td>Expired in a medical facility such as hospital, SNF, ICF, or freestanding hospice. (Hospice claims only)</td><td>Expired in a medical facility such as hospital, SNF, ICF, or freestanding hospice. (Hospice claims only)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-42"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-42">42</a></td><td>Expired - place unknown (Hospice claims only)</td><td>Expired - place unknown (Hospice claims only)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-43"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-43">43</a></td><td>Discharged/transferred to a federal hospital (eff. 10/1/03)</td><td>Discharged/transferred to a federal hospital (eff. 10/1/03)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-50"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-50">50</a></td><td>Discharged/transferred to a Hospice – home.</td><td>Discharged/transferred to a Hospice – home.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-51"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-51">51</a></td><td>Discharged/transferred to a Hospice – medical facility.</td><td>Discharged/transferred to a Hospice – medical facility.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-61"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-61">61</a></td><td>Discharged/transferred within this institution to a hospital-based Medicare approved swing bed (eff. 9/01)</td><td>Discharged/transferred within this institution to a hospital-based Medicare approved swing bed (eff. 9/01)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-62"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-62">62</a></td><td>Discharged/transferred to an inpatient rehabilitation facility including distinct parts units of a hospital. (eff. 1/2002)</td><td>Discharged/transferred to an inpatient rehabilitation facility including distinct parts units of a hospital. (eff. 1/2002)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-63"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-63">63</a></td><td>Discharged/transferred to a long term care hospitals. (eff. 1/2002)</td><td>Discharged/transferred to a long term care hospitals. (eff. 1/2002)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-64"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-64">64</a></td><td>Discharged/transferred to a nursing facility certified under Medicaid but not under Medicare (eff. 10/2002)</td><td>Discharged/transferred to a nursing facility certified under Medicaid but not under Medicare (eff. 10/2002)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-65"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-65">65</a></td><td>Discharged/Transferred to a psychiatric hospital or psychiatric distinct unit of a hospital (these types of hospitals were pulled from patient/discharge status code '05' and given their own code). (eff. 1/2005).</td><td>Discharged/Transferred to a psychiatric hospital or psychiatric distinct unit of a hospital (these types of hospitals were pulled from patient/discharge status code '05' and given their own code). (eff. 1/2005).</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-66"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-66">66</a></td><td>Discharged/transferred to a Critical Access Hospital (CAH) (eff. 1/1/06)</td><td>Discharged/transferred to a Critical Access Hospital (CAH) (eff. 1/1/06)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-69"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-69">69</a></td><td>Discharged/transferred to a designated disaster alternative care site (starting 10/2013; applies only to particular MS-DRGs*)</td><td>Discharged/transferred to a designated disaster alternative care site (starting 10/2013; applies only to particular MS-DRGs*)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-70"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-70">70</a></td><td>Discharged/transferred to another type of health care institution not defined elsewhere in code list.</td><td>Discharged/transferred to another type of health care institution not defined elsewhere in code list.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-71"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-71">71</a></td><td>Discharged/transferred/referred to another institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05)</td><td>Discharged/transferred/referred to another institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-72"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-72">72</a></td><td>Discharged/transferred/referred to this institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05) The following codes apply only to particular MS-DRGs*, and were new in 10/2013:</td><td>Discharged/transferred/referred to this institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05) The following codes apply only to particular MS-DRGs*, and were new in 10/2013:</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-81"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-81">81</a></td><td>Discharged to home or self-care with a planned acute care hospital inpatient readmission.</td><td>Discharged to home or self-care with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-82"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-82">82</a></td><td>Discharged/transferred to a short term general hospital for inpatient care with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to a short term general hospital for inpatient care with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-83"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-83">83</a></td><td>Discharged/transferred to a skilled nursing facility (SNF) with Medicare certification with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to a skilled nursing facility (SNF) with Medicare certification with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-84"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-84">84</a></td><td>Discharged/transferred to a facility that provides custodial or supportive care with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to a facility that provides custodial or supportive care with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-85"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-85">85</a></td><td>Discharged/transferred to a designated cancer center or children’s hospital with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to a designated cancer center or children’s hospital with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-86"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-86">86</a></td><td>Discharged/transferred to home under care of organized home health service organization with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to home under care of organized home health service organization with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-87"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-87">87</a></td><td>Discharged/transferred to court/law enforcement with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to court/law enforcement with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-88"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-88">88</a></td><td>Discharged/transferred to a federal health care facility with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to a federal health care facility with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-89"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-89">89</a></td><td>Discharged/transferred to a hospital-based Medicare approved swing bed with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to a hospital-based Medicare approved swing bed with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-90"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-90">90</a></td><td>Discharged/transferred to an inpatient rehabilitation facility (IRF) including rehabilitation distinct part units of a hospital with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to an inpatient rehabilitation facility (IRF) including rehabilitation distinct part units of a hospital with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-91"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-91">91</a></td><td>Discharged/transferred to a Medicare certified long term care hospital (LTCH) with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to a Medicare certified long term care hospital (LTCH) with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-92"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-92">92</a></td><td>Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-93"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-93">93</a></td><td>Discharged/transferred to a psychiatric distinct part unit of a hospital with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to a psychiatric distinct part unit of a hospital with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-94"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-94">94</a></td><td>Discharged/transferred to a critical access hospital (CAH) with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to a critical access hospital (CAH) with a planned acute care hospital inpatient readmission.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-ptnt-dschrg-stus-cd-95"> </a><a href="CodeSystem-ptnt-dschrg-stus-cd.html#ptnt-dschrg-stus-cd-95">95</a></td><td>Discharged/transferred to another type of health care institution not defined elsewhere in this code list with a planned acute care hospital inpatient readmission.</td><td>Discharged/transferred to another type of health care institution not defined elsewhere in this code list with a planned acute care hospital inpatient readmission.</td></tr></table></div>
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+

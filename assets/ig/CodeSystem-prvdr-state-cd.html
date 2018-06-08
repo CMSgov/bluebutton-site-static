@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+
+<h2>CodeSystem: prvdr-state-cd</h2>
+
+<p>
+Formats: <a href="CodeSystem-prvdr-state-cd.xml.html">XML</a>, <a href="CodeSystem-prvdr-state-cd.json.html">JSON</a>, <a href="CodeSystem-prvdr-state-cd.ttl.html">Turtle</a>
+</p>
+
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>NCH Provider SSA State Code</h2><div><p>The two -digit numeric social security administration (SSA) state code where provider or facility is located. Source: https://bluebutton.cms.gov/resources/variables/prvdr<em>state</em>cd</p>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-prvdr-state-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>00<a name="prvdr-state-cd-00"> </a></td><td>Unknown/other</td><td>Unknown/other</td></tr><tr><td>01<a name="prvdr-state-cd-01"> </a></td><td>Alabama</td><td>Alabama</td></tr><tr><td>02<a name="prvdr-state-cd-02"> </a></td><td>Alaska</td><td>Alaska</td></tr><tr><td>03<a name="prvdr-state-cd-03"> </a></td><td>Arizona</td><td>Arizona</td></tr><tr><td>04<a name="prvdr-state-cd-04"> </a></td><td>Arkansas</td><td>Arkansas</td></tr><tr><td>05<a name="prvdr-state-cd-05"> </a></td><td>California</td><td>California</td></tr><tr><td>06<a name="prvdr-state-cd-06"> </a></td><td>Colorado</td><td>Colorado</td></tr><tr><td>07<a name="prvdr-state-cd-07"> </a></td><td>Connecticut</td><td>Connecticut</td></tr><tr><td>08<a name="prvdr-state-cd-08"> </a></td><td>Delaware</td><td>Delaware</td></tr><tr><td>09<a name="prvdr-state-cd-09"> </a></td><td>District of Columbia</td><td>District of Columbia</td></tr><tr><td>10<a name="prvdr-state-cd-10"> </a></td><td>Florida</td><td>Florida</td></tr><tr><td>11<a name="prvdr-state-cd-11"> </a></td><td>Georgia</td><td>Georgia</td></tr><tr><td>12<a name="prvdr-state-cd-12"> </a></td><td>Hawaii</td><td>Hawaii</td></tr><tr><td>13<a name="prvdr-state-cd-13"> </a></td><td>Idaho</td><td>Idaho</td></tr><tr><td>14<a name="prvdr-state-cd-14"> </a></td><td>Illinois</td><td>Illinois</td></tr><tr><td>15<a name="prvdr-state-cd-15"> </a></td><td>Indiana</td><td>Indiana</td></tr><tr><td>16<a name="prvdr-state-cd-16"> </a></td><td>Iowa</td><td>Iowa</td></tr><tr><td>17<a name="prvdr-state-cd-17"> </a></td><td>Kansas</td><td>Kansas</td></tr><tr><td>18<a name="prvdr-state-cd-18"> </a></td><td>Kentucky</td><td>Kentucky</td></tr><tr><td>19<a name="prvdr-state-cd-19"> </a></td><td>Louisiana</td><td>Louisiana</td></tr><tr><td>20<a name="prvdr-state-cd-20"> </a></td><td>Maine</td><td>Maine</td></tr><tr><td>21<a name="prvdr-state-cd-21"> </a></td><td>Maryland</td><td>Maryland</td></tr><tr><td>22<a name="prvdr-state-cd-22"> </a></td><td>Massachusetts</td><td>Massachusetts</td></tr><tr><td>23<a name="prvdr-state-cd-23"> </a></td><td>Michigan</td><td>Michigan</td></tr><tr><td>24<a name="prvdr-state-cd-24"> </a></td><td>Minnesota</td><td>Minnesota</td></tr><tr><td>25<a name="prvdr-state-cd-25"> </a></td><td>Mississippi</td><td>Mississippi</td></tr><tr><td>26<a name="prvdr-state-cd-26"> </a></td><td>Missouri</td><td>Missouri</td></tr><tr><td>27<a name="prvdr-state-cd-27"> </a></td><td>Montana</td><td>Montana</td></tr><tr><td>28<a name="prvdr-state-cd-28"> </a></td><td>Nebraska</td><td>Nebraska</td></tr><tr><td>29<a name="prvdr-state-cd-29"> </a></td><td>Nevada</td><td>Nevada</td></tr><tr><td>30<a name="prvdr-state-cd-30"> </a></td><td>New Hampshire</td><td>New Hampshire</td></tr><tr><td>31<a name="prvdr-state-cd-31"> </a></td><td>New Jersey</td><td>New Jersey</td></tr><tr><td>32<a name="prvdr-state-cd-32"> </a></td><td>New Mexico</td><td>New Mexico</td></tr><tr><td>33<a name="prvdr-state-cd-33"> </a></td><td>New York</td><td>New York</td></tr><tr><td>34<a name="prvdr-state-cd-34"> </a></td><td>North Carolina</td><td>North Carolina</td></tr><tr><td>35<a name="prvdr-state-cd-35"> </a></td><td>North Dakota</td><td>North Dakota</td></tr><tr><td>36<a name="prvdr-state-cd-36"> </a></td><td>Ohio</td><td>Ohio</td></tr><tr><td>37<a name="prvdr-state-cd-37"> </a></td><td>Oklahoma</td><td>Oklahoma</td></tr><tr><td>38<a name="prvdr-state-cd-38"> </a></td><td>Oregon</td><td>Oregon</td></tr><tr><td>39<a name="prvdr-state-cd-39"> </a></td><td>Pennsylvania</td><td>Pennsylvania</td></tr><tr><td>40<a name="prvdr-state-cd-40"> </a></td><td>Puerto Rico</td><td>Puerto Rico</td></tr><tr><td>41<a name="prvdr-state-cd-41"> </a></td><td>Rhode Island</td><td>Rhode Island</td></tr><tr><td>42<a name="prvdr-state-cd-42"> </a></td><td>South Carolina</td><td>South Carolina</td></tr><tr><td>43<a name="prvdr-state-cd-43"> </a></td><td>South Dakota</td><td>South Dakota</td></tr><tr><td>44<a name="prvdr-state-cd-44"> </a></td><td>Tennessee</td><td>Tennessee</td></tr><tr><td>45<a name="prvdr-state-cd-45"> </a></td><td>Texas</td><td>Texas</td></tr><tr><td>46<a name="prvdr-state-cd-46"> </a></td><td>Utah</td><td>Utah</td></tr><tr><td>47<a name="prvdr-state-cd-47"> </a></td><td>Vermont</td><td>Vermont</td></tr><tr><td>48<a name="prvdr-state-cd-48"> </a></td><td>Virgin Islands</td><td>Virgin Islands</td></tr><tr><td>49<a name="prvdr-state-cd-49"> </a></td><td>Virginia</td><td>Virginia</td></tr><tr><td>50<a name="prvdr-state-cd-50"> </a></td><td>Washington</td><td>Washington</td></tr><tr><td>51<a name="prvdr-state-cd-51"> </a></td><td>West Virginia</td><td>West Virginia</td></tr><tr><td>52<a name="prvdr-state-cd-52"> </a></td><td>Wisconsin</td><td>Wisconsin</td></tr><tr><td>53<a name="prvdr-state-cd-53"> </a></td><td>Wyoming</td><td>Wyoming</td></tr><tr><td>54<a name="prvdr-state-cd-54"> </a></td><td>Africa</td><td>Africa</td></tr><tr><td>55<a name="prvdr-state-cd-55"> </a></td><td>California</td><td>California</td></tr><tr><td>56<a name="prvdr-state-cd-56"> </a></td><td>Canada &amp; Islands</td><td>Canada &amp; Islands</td></tr><tr><td>57<a name="prvdr-state-cd-57"> </a></td><td>Central America and West Indies</td><td>Central America and West Indies</td></tr><tr><td>58<a name="prvdr-state-cd-58"> </a></td><td>Europe</td><td>Europe</td></tr><tr><td>59<a name="prvdr-state-cd-59"> </a></td><td>Mexico</td><td>Mexico</td></tr><tr><td>60<a name="prvdr-state-cd-60"> </a></td><td>Oceania</td><td>Oceania</td></tr><tr><td>61<a name="prvdr-state-cd-61"> </a></td><td>Philippines</td><td>Philippines</td></tr><tr><td>62<a name="prvdr-state-cd-62"> </a></td><td>South America</td><td>South America</td></tr><tr><td>63<a name="prvdr-state-cd-63"> </a></td><td>U.S. Possessions</td><td>U.S. Possessions</td></tr><tr><td>64<a name="prvdr-state-cd-64"> </a></td><td>American Samoa</td><td>American Samoa</td></tr><tr><td>65<a name="prvdr-state-cd-65"> </a></td><td>Guam</td><td>Guam</td></tr><tr><td>66<a name="prvdr-state-cd-66"> </a></td><td>Commonwealth of the Northern Marianas Islands</td><td>Commonwealth of the Northern Marianas Islands</td></tr><tr><td>67<a name="prvdr-state-cd-67"> </a></td><td>Texas</td><td>Texas</td></tr><tr><td>68<a name="prvdr-state-cd-68"> </a></td><td>Florida (eff. 10/2005)</td><td>Florida (eff. 10/2005)</td></tr><tr><td>69<a name="prvdr-state-cd-69"> </a></td><td>Florida (eff. 10/2005)</td><td>Florida (eff. 10/2005)</td></tr><tr><td>70<a name="prvdr-state-cd-70"> </a></td><td>Kansas (eff. 10/2005)</td><td>Kansas (eff. 10/2005)</td></tr><tr><td>71<a name="prvdr-state-cd-71"> </a></td><td>Louisiana (eff. 10/2005)</td><td>Louisiana (eff. 10/2005)</td></tr><tr><td>72<a name="prvdr-state-cd-72"> </a></td><td>Ohio (eff. 10/2005)</td><td>Ohio (eff. 10/2005)</td></tr><tr><td>73<a name="prvdr-state-cd-73"> </a></td><td>Pennsylvania (eff. 10/2005)</td><td>Pennsylvania (eff. 10/2005)</td></tr><tr><td>74<a name="prvdr-state-cd-74"> </a></td><td>Texas (eff. 10/2005)</td><td>Texas (eff. 10/2005)</td></tr><tr><td>80<a name="prvdr-state-cd-80"> </a></td><td>Maryland (eff. 8/2000)</td><td>Maryland (eff. 8/2000)</td></tr><tr><td>97<a name="prvdr-state-cd-97"> </a></td><td>Northern Marianas</td><td>Northern Marianas</td></tr><tr><td>98<a name="prvdr-state-cd-98"> </a></td><td>Guam</td><td>Guam</td></tr><tr><td>99<a name="prvdr-state-cd-99"> </a></td><td>With 000 county code is American Samoa; otherwise unknown</td><td>With 000 county code is American Samoa; otherwise unknown</td></tr></table></div>
+
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+

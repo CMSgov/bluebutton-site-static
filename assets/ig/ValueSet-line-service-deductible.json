@@ -1,0 +1,21 @@
+{
+  "resourceType": "ValueSet",
+  "id": "line-service-deductible",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Service Deductible Indicator Switch</h2><div><p>Switch indicating whether or not the line item service on the non-institutional claim is subject to a deductible. Source: https://bluebutton.cms.gov/resources/variables/line<em>service</em>deductible</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/line-service-deductible.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-line-service-deductible</code></a></li></ul></div>"
+  },
+  "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-line-service-deductible",
+  "version": "1.1.0",
+  "name": "Line Service Deductible Indicator Switch",
+  "status": "draft",
+  "date": "2018-05-31T14:39:32+00:00",
+  "description": "Switch indicating whether or not the line item service on the non-institutional claim is subject to a deductible. Source: https://bluebutton.cms.gov/resources/variables/line_service_deductible",
+  "compose": {
+    "include": [
+      {
+        "system": "https://bluebutton.cms.gov/assets/ig/CodeSystem-line-service-deductible"
+      }
+    ]
+  }
+}

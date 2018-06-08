@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="nch-ptnt-stus-ind-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/nch-ptnt-stus-ind-cd"/>
+    <name value="NCH Patient Status Indicator Code"/>
+    <description value="This variable is a recoded version of the discharge status code (variable called PTNT_DSCHRG_STUS_CD). Source: https://bluebutton.cms.gov/resources/variables/nch_ptnt_stus_ind_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd"/>
+        </include>
+    </compose>
+</ValueSet>

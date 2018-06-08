@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="clm-mdcr-non-pmt-rsn-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Medicare Non Payment Reason Code</h2><div><p>The reason that no Medicare payment is made for services on an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm<em>mdcr</em>non<em>pmt</em>rsn_cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-clm-mdcr-non-pmt-rsn-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd</code></a></li></ul></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-clm-mdcr-non-pmt-rsn-cd"/>
+  <version value="1.1.0"/>
+  <name value="Claim Medicare Non Payment Reason Code"/>
+  <status value="draft"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="The reason that no Medicare payment is made for services on an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm_mdcr_non_pmt_rsn_cd"/>
+  <compose>
+    <include>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd"/>
+    </include>
+  </compose>
+</ValueSet>

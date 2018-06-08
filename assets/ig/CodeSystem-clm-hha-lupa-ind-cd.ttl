@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-lupa-ind-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "clm-hha-lupa-ind-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code</h2><div><p>The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode. If an HHA provides 4 visits or less, they will be reimbursed based on a national standardized per visit rate instead of Home Health resource groups (HHRGs). Source: https://bluebutton.cms.gov/resources/variables/clm<em>hha</em>lupa<em>ind</em>cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-lupa-ind-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>L<a name=\"clm-hha-lupa-ind-cd-L\"> </a></td><td>Low utilization payment adjustment (LUPA) claim</td><td>Low utilization payment adjustment (LUPA) claim</td></tr><tr><td>Blank<a name=\"clm-hha-lupa-ind-cd-Blank\"> </a></td><td>Not a LUPA claim; process using Home Health resource groups (HHRG)</td><td>Not a LUPA claim; process using Home Health resource groups (HHRG)</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-lupa-ind-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-lupa-ind-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code"];
+  fhir:CodeSystem.title [ fhir:value "Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode. If an HHA provides 4 visits or less, they will be reimbursed based on a national standardized per visit rate instead of Home Health resource groups (HHRGs). Source: https://bluebutton.cms.gov/resources/variables/clm_hha_lupa_ind_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-lupa-ind-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "L" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Low utilization payment adjustment (LUPA) claim" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Low utilization payment adjustment (LUPA) claim" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "Blank" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Not a LUPA claim; process using Home Health resource groups (HHRG)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Not a LUPA claim; process using Home Health resource groups (HHRG)" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-lupa-ind-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/clm-hha-lupa-ind-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

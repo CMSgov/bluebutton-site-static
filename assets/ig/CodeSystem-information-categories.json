@@ -1,0 +1,126 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "information-categories",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2></h2><div/><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>daw-prod-slctn-cd<a name=\"information-categories-daw-prod-slctn-cd\"> </a></td><td>Dispense as Written (DAW) Product Selection Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-daw-prod-slctn-cd</td></tr><tr><td>dspnsng-stus-cd<a name=\"information-categories-dspnsng-stus-cd\"> </a></td><td>Dispensing Status Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-dspnsng-stus-cd</td></tr><tr><td>drug-cvrg-stus-cd<a name=\"information-categories-drug-cvrg-stus-cd\"> </a></td><td>Drug Coverage Status Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-drug-cvrg-stus-cd</td></tr><tr><td>adjstmt-dltn-cd<a name=\"information-categories-adjstmt-dltn-cd\"> </a></td><td>Adjustment Deletion Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-adjstmt-dltn-cd</td></tr><tr><td>nstd-frmt-cd<a name=\"information-categories-nstd-frmt-cd\"> </a></td><td>Non-Standard Format Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-nstd-frmt-cd</td></tr><tr><td>prcng-excptn-cd<a name=\"information-categories-prcng-excptn-cd\"> </a></td><td>Pricing Exception Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-prcng-excptn-cd</td></tr><tr><td>ctstrphc-cvrg-cd<a name=\"information-categories-ctstrphc-cvrg-cd\"> </a></td><td>Catastrophic Coverage Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-ctstrphc-cvrg-cd</td></tr><tr><td>rx-orgn-cd<a name=\"information-categories-rx-orgn-cd\"> </a></td><td>Prescription Origination Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-rx-orgn-cd</td></tr><tr><td>brnd-gnrc-cd<a name=\"information-categories-brnd-gnrc-cd\"> </a></td><td>Brand-Generic Code Reported by Submitting Plan</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-brnd-gnrc-cd</td></tr><tr><td>phrmcy-srvc-type-cd<a name=\"information-categories-phrmcy-srvc-type-cd\"> </a></td><td>Pharmacy service type code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-phrmcy-srvc-type-cd</td></tr><tr><td>ptnt-rsdnc-cd<a name=\"information-categories-ptnt-rsdnc-cd\"> </a></td><td>Patient Residence Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-rsdnc-cd</td></tr><tr><td>submsn-clr-cd<a name=\"information-categories-submsn-clr-cd\"> </a></td><td>Submission clarification code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-submsn-clr-cd</td></tr><tr><td>nch-ptnt-stus-ind-cd<a name=\"information-categories-nch-ptnt-stus-ind-cd\"> </a></td><td>NCH Patient Status Indicator Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-nch-ptnt-stus-ind-cd</td></tr><tr><td>clm-ip-admsn-type-cd<a name=\"information-categories-clm-ip-admsn-type-cd\"> </a></td><td>Claim Inpatient Admission Type Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-clm-ip-admsn-type-cd</td></tr><tr><td>clm-src-ip-admsn-cd<a name=\"information-categories-clm-src-ip-admsn-cd\"> </a></td><td>Claim Source Inpatient Admission Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-clm-src-ip-admsn-cd</td></tr><tr><td>clm-mco-pd-sw<a name=\"information-categories-clm-mco-pd-sw\"> </a></td><td>Claim MCO Paid Switch</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-clm-mco-pd-sw</td></tr><tr><td>clm-freq-cd<a name=\"information-categories-clm-freq-cd\"> </a></td><td>Claim Frequency Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-clm-freq-cd</td></tr><tr><td>ptnt-dschrg-stus-cd<a name=\"information-categories-ptnt-dschrg-stus-cd\"> </a></td><td>Patient Discharge Status Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-dschrg-stus-cd</td></tr><tr><td>nch-prmry-pyr-cd<a name=\"information-categories-nch-prmry-pyr-cd\"> </a></td><td>NCH Primary Payer Code (if not Medicare)</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-nch-prmry-pyr-cd</td></tr><tr><td>clm-hha-lupa-ind-cd<a name=\"information-categories-clm-hha-lupa-ind-cd\"> </a></td><td>Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-lupa-ind-cd</td></tr><tr><td>clm-hha-rfrl-cd<a name=\"information-categories-clm-hha-rfrl-cd\"> </a></td><td>Physician referral - The patient was admitted upon the recommendation of a personal physician</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-rfrl-cd</td></tr></table></div>"
+  },
+  "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories",
+  "identifier": {
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories"
+  },
+  "version": "1.1.0",
+  "status": "active",
+  "date": "2018-05-31T14:39:32+00:00",
+  "caseSensitive": true,
+  "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-information-categories",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "daw-prod-slctn-cd",
+      "display": "Dispense as Written (DAW) Product Selection Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-daw-prod-slctn-cd"
+    },
+    {
+      "code": "dspnsng-stus-cd",
+      "display": "Dispensing Status Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-dspnsng-stus-cd"
+    },
+    {
+      "code": "drug-cvrg-stus-cd",
+      "display": "Drug Coverage Status Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-drug-cvrg-stus-cd"
+    },
+    {
+      "code": "adjstmt-dltn-cd",
+      "display": "Adjustment Deletion Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-adjstmt-dltn-cd"
+    },
+    {
+      "code": "nstd-frmt-cd",
+      "display": "Non-Standard Format Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-nstd-frmt-cd"
+    },
+    {
+      "code": "prcng-excptn-cd",
+      "display": "Pricing Exception Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-prcng-excptn-cd"
+    },
+    {
+      "code": "ctstrphc-cvrg-cd",
+      "display": "Catastrophic Coverage Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-ctstrphc-cvrg-cd"
+    },
+    {
+      "code": "rx-orgn-cd",
+      "display": "Prescription Origination Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-rx-orgn-cd"
+    },
+    {
+      "code": "brnd-gnrc-cd",
+      "display": "Brand-Generic Code Reported by Submitting Plan",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-brnd-gnrc-cd"
+    },
+    {
+      "code": "phrmcy-srvc-type-cd",
+      "display": "Pharmacy service type code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-phrmcy-srvc-type-cd"
+    },
+    {
+      "code": "ptnt-rsdnc-cd",
+      "display": "Patient Residence Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-rsdnc-cd"
+    },
+    {
+      "code": "submsn-clr-cd",
+      "display": "Submission clarification code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-submsn-clr-cd"
+    },
+    {
+      "code": "nch-ptnt-stus-ind-cd",
+      "display": "NCH Patient Status Indicator Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-nch-ptnt-stus-ind-cd"
+    },
+    {
+      "code": "clm-ip-admsn-type-cd",
+      "display": "Claim Inpatient Admission Type Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-ip-admsn-type-cd"
+    },
+    {
+      "code": "clm-src-ip-admsn-cd",
+      "display": "Claim Source Inpatient Admission Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-src-ip-admsn-cd"
+    },
+    {
+      "code": "clm-mco-pd-sw",
+      "display": "Claim MCO Paid Switch",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-mco-pd-sw"
+    },
+    {
+      "code": "clm-freq-cd",
+      "display": "Claim Frequency Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-freq-cd"
+    },
+    {
+      "code": "ptnt-dschrg-stus-cd",
+      "display": "Patient Discharge Status Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-dschrg-stus-cd"
+    },
+    {
+      "code": "nch-prmry-pyr-cd",
+      "display": "NCH Primary Payer Code (if not Medicare)",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-nch-prmry-pyr-cd"
+    },
+    {
+      "code": "clm-hha-lupa-ind-cd",
+      "display": "Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-lupa-ind-cd"
+    },
+    {
+      "code": "clm-hha-rfrl-cd",
+      "display": "Physician referral - The patient was admitted upon the recommendation of a personal physician",
+      "definition": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-rfrl-cd"
+    }
+  ]
+}

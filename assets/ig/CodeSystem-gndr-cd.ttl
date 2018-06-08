@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "gndr-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient Gender</h2><div><p>Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Blank<a name=\"gndr-cd-Blank\"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td>1<a name=\"gndr-cd-1\"> </a></td><td>Male</td><td>Male</td></tr><tr><td>2<a name=\"gndr-cd-2\"> </a></td><td>Female</td><td>Female</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Patient Gender"];
+  fhir:CodeSystem.title [ fhir:value "Patient Gender"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-gndr-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "Blank" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Unknown" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Unknown" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Male" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Male" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Female" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Female" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/gndr-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

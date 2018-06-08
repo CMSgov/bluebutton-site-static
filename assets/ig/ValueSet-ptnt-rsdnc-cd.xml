@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ptnt-rsdnc-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Patient Residence Code</h2><div><p>This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt<em>rsdnc</em>cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-ptnt-rsdnc-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd</code></a></li></ul></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-rsdnc-cd"/>
+  <version value="1.1.0"/>
+  <name value="Patient Residence Code"/>
+  <status value="draft"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt_rsdnc_cd"/>
+  <compose>
+    <include>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd"/>
+    </include>
+  </compose>
+</ValueSet>

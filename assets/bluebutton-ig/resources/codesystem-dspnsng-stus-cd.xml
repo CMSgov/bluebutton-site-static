@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="dspnsng-stus-cd"/>
+    <url value="http://hl7.org/fhir/CodeSystem/dspnsng-stus-cd"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/dspnsng-stus-cd"/>
+    </identifier>
+    <name value="Dispensing Status Code"/>
+    <title value="Dispensing Status Code"/>
+    <status value="active"/>
+    <description value="This field indicates how the pharmacy dispensed the complete quantity of the prescription. When the pharmacy partially fills a prescription, this field indicates a partial fill. When the full quantity is dispensed at one time, this field is blank. Source: https://bluebutton.cms.gov/resources/variables/dspnsng_stus_cd"/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/dspnsng-stus-cd"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="Blank"/>
+        <display value="Not specified or presumably full quantity of prescription"/>
+        <definition value="Not specified or presumably full quantity of prescription"/>
+    </concept>
+    <concept>
+        <code value="P"/>
+        <display value="Partial fill"/>
+        <definition value="Partial fill"/>
+    </concept>
+    <concept>
+        <code value="C"/>
+        <display value="Completion of partial fill"/>
+        <definition value="Completion of partial fill"/>
+    </concept>
+</CodeSystem>

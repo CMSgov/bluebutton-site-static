@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2>Submission clarification code</h2>
+
+<p>
+Formats: <a href="CodeSystem-submsn-clr-cd.html">Narrative</a>,
+ <a href="CodeSystem-submsn-clr-cd.xml.html">XML</a>,
+  <a href="CodeSystem-submsn-clr-cd.json.html">JSON</a>,
+   <a href="CodeSystem-submsn-clr-cd.ttl.html">Turtle</a>
+</p>
+<p>
+Raw <a href="CodeSystem-submsn-clr-cd.json" download>json</a>
+</p>
+
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "submsn-clr-cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Submission clarification code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT&lt;em&gt;RSDNC&lt;/em&gt;CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn&lt;em&gt;clr&lt;/em&gt;cd&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;a name=&quot;submsn-clr-cd-00&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05&lt;a name=&quot;submsn-clr-cd-05&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.&lt;/td&gt;&lt;td&gt;Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07&lt;a name=&quot;submsn-clr-cd-07&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.&lt;/td&gt;&lt;td&gt;Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08&lt;a name=&quot;submsn-clr-cd-08&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Process compound for approved ingredients&lt;/td&gt;&lt;td&gt;Process compound for approved ingredients&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;a name=&quot;submsn-clr-cd-14&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC leave of absence – short fill required for take-home use&lt;/td&gt;&lt;td&gt;LTC leave of absence – short fill required for take-home use&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;a name=&quot;submsn-clr-cd-16&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC emergency box (e box) /automated dispensing machine&lt;/td&gt;&lt;td&gt;LTC emergency box (e box) /automated dispensing machine&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;a name=&quot;submsn-clr-cd-17&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC emergency supply remainder (remainder of drug from the emergency supply)&lt;/td&gt;&lt;td&gt;LTC emergency supply remainder (remainder of drug from the emergency supply)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;a name=&quot;submsn-clr-cd-18&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC patient admit/readmission indicator. This status required new dispensing of medication.&lt;/td&gt;&lt;td&gt;LTC patient admit/readmission indicator. This status required new dispensing of medication.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;a name=&quot;submsn-clr-cd-19&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).&lt;/td&gt;&lt;td&gt;Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;a name=&quot;submsn-clr-cd-21&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing rule for &amp;lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing&lt;/td&gt;&lt;td&gt;LTC dispensing rule for &amp;lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;a name=&quot;submsn-clr-cd-22&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 7-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 7-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23&lt;a name=&quot;submsn-clr-cd-23&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24&lt;a name=&quot;submsn-clr-cd-24&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 3-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 3-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;a name=&quot;submsn-clr-cd-25&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;a name=&quot;submsn-clr-cd-26&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 1-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 1-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27&lt;a name=&quot;submsn-clr-cd-27&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply, then 3-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 4-day supply, then 3-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28&lt;a name=&quot;submsn-clr-cd-28&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29&lt;a name=&quot;submsn-clr-cd-29&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, daily during the week then multiple days (3) for weekend&lt;/td&gt;&lt;td&gt;LTC dispensing, daily during the week then multiple days (3) for weekend&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;a name=&quot;submsn-clr-cd-30&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, per shift (multiple medication passes)&lt;/td&gt;&lt;td&gt;LTC dispensing, per shift (multiple medication passes)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;31&lt;a name=&quot;submsn-clr-cd-31&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, per medication pass&lt;/td&gt;&lt;td&gt;LTC dispensing, per medication pass&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32&lt;a name=&quot;submsn-clr-cd-32&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, PRN on demand&lt;/td&gt;&lt;td&gt;LTC dispensing, PRN on demand&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;33&lt;a name=&quot;submsn-clr-cd-33&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, other &amp;lt;=7 day cycle&lt;/td&gt;&lt;td&gt;LTC dispensing, other &amp;lt;=7 day cycle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;34&lt;a name=&quot;submsn-clr-cd-34&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, 14-day supply&lt;/td&gt;&lt;td&gt;LTC dispensing, 14-day supply&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;35&lt;a name=&quot;submsn-clr-cd-35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, other 8-14 day dispensing not listed above&lt;/td&gt;&lt;td&gt;LTC dispensing, other 8-14 day dispensing not listed above&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;36&lt;a name=&quot;submsn-clr-cd-36&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer&lt;/td&gt;&lt;td&gt;LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;42&lt;a name=&quot;submsn-clr-cd-42&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;The prescriber ID submitted has been validated and is active (rarely populated)&lt;/td&gt;&lt;td&gt;The prescriber ID submitted has been validated and is active (rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;43&lt;a name=&quot;submsn-clr-cd-43&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;44&lt;a name=&quot;submsn-clr-cd-44&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;td&gt;(Unknown value – rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;45&lt;a name=&quot;submsn-clr-cd-45&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)&lt;/td&gt;&lt;td&gt;For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Null&lt;a name=&quot;submsn-clr-cd-Null&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)&lt;/td&gt;&lt;td&gt;Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd"
+  },
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.0",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Submission clarification code",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Submission clarification code",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-05-31T14:39:32+00:00",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT_RSDNC_CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn_clr_cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "https://bluebutton.cms.gov/assets/ig/ValueSet-submsn-clr-cd",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "00",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "(Unknown value – rarely populated)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "(Unknown value – rarely populated)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "05",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed.",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed."
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "07",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary.",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Emergency supply of non-formulary drugs (or formulary drugs which typically require step therapy or prior authorization). Medication has been determined by the physician to be medically necessary."
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "08",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Process compound for approved ingredients",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Process compound for approved ingredients"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "14",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC leave of absence – short fill required for take-home use",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC leave of absence – short fill required for take-home use"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "16",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC emergency box (e box) /automated dispensing machine",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC emergency box (e box) /automated dispensing machine"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "17",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC emergency supply remainder (remainder of drug from the emergency supply)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC emergency supply remainder (remainder of drug from the emergency supply)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "18",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC patient admit/readmission indicator. This status required new dispensing of medication.",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC patient admit/readmission indicator. This status required new dispensing of medication."
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "19",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A).",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A)."
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "21",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing rule for &lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing rule for &lt;=14 day supply is not applicable due to CMS exclusion or the fact that the manufacturer’s packaging does not allow for special dispensing"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "22",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, 7-day supply",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, 7-day supply"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "23",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, 4-day supply",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, 4-day supply"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "24",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, 3-day supply",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, 3-day supply"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "25",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, 2-day supply",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, 2-day supply"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "26",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, 1-day supply",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, 1-day supply"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "27",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, 4-day supply, then 3-day supply",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, 4-day supply, then 3-day supply"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "28",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, 2-day supply, then 2-day supply, then 3-day supply"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "29",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, daily during the week then multiple days (3) for weekend",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, daily during the week then multiple days (3) for weekend"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "30",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, per shift (multiple medication passes)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, per shift (multiple medication passes)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "31",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, per medication pass",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, per medication pass"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "32",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, PRN on demand",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, PRN on demand"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "33",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, other &lt;=7 day cycle",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, other &lt;=7 day cycle"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "34",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, 14-day supply",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, 14-day supply"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "35",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, other 8-14 day dispensing not listed above",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, other 8-14 day dispensing not listed above"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "36",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "LTC dispensing, outside short cycle, determined to be Part D after originally submitted to another payer"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "42",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "The prescriber ID submitted has been validated and is active (rarely populated)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The prescriber ID submitted has been validated and is active (rarely populated)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "43",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "For the prescriber ID submitted, the associated DEA number has been renewed or the renewal is in progress (rarely populated)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "44",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "(Unknown value – rarely populated)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "(Unknown value – rarely populated)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "45",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Null",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)",
+      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Not applicable, beneficiary not in an LTC setting (or in the first two months of 2013, the presumption is there was greater than a 14-day supply)"
+    }
+  ]
+}</pre>
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carr-line-mtus-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code</h2><div><p>Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr<em>line</em>mtus_cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"carr-line-mtus-cd-0\"> </a></td><td>Values reported as zero (no allowed activities)</td><td>Values reported as zero (no allowed activities)</td></tr><tr><td>1<a name=\"carr-line-mtus-cd-1\"> </a></td><td>Transportation (ambulance) miles</td><td>Transportation (ambulance) miles</td></tr><tr><td>2<a name=\"carr-line-mtus-cd-2\"> </a></td><td>Anesthesia time units</td><td>Anesthesia time units</td></tr><tr><td>3<a name=\"carr-line-mtus-cd-3\"> </a></td><td>Services</td><td>Services</td></tr><tr><td>4<a name=\"carr-line-mtus-cd-4\"> </a></td><td>Oxygen units</td><td>Oxygen units</td></tr><tr><td>5<a name=\"carr-line-mtus-cd-5\"> </a></td><td>Units of blood</td><td>Units of blood</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code"];
+  fhir:CodeSystem.title [ fhir:value "Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr_line_mtus_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-mtus-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "0" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Values reported as zero (no allowed activities)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Values reported as zero (no allowed activities)" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Transportation (ambulance) miles" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Transportation (ambulance) miles" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Anesthesia time units" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Anesthesia time units" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Services" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Services" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "4" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Oxygen units" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Oxygen units" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "5" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Units of blood" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Units of blood" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/carr-line-mtus-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

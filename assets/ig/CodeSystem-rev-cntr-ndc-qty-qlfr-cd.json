@@ -1,0 +1,44 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "rev-cntr-ndc-qty-qlfr-cd",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Revenue Center NDC Quantity Qualifier Code</h2><div><p>Effective with Version 'J', the code used to indicate the unit of measurement for the drug that was administered. Source: https://bluebutton.cms.gov/resources/variables/rev<em>cntr</em>ndc<em>qty</em>qlfr_cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ndc-qty-qlfr-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>F2<a name=\"rev-cntr-ndc-qty-qlfr-cd-F2\"> </a></td><td>International Unit</td><td>International Unit</td></tr><tr><td>GR<a name=\"rev-cntr-ndc-qty-qlfr-cd-GR\"> </a></td><td>Gram</td><td>Gram</td></tr><tr><td>ML<a name=\"rev-cntr-ndc-qty-qlfr-cd-ML\"> </a></td><td>Milliliter</td><td>Milliliter</td></tr><tr><td>UN<a name=\"rev-cntr-ndc-qty-qlfr-cd-UN\"> </a></td><td>Unit</td><td>Unit</td></tr></table></div>"
+  },
+  "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ndc-qty-qlfr-cd",
+  "identifier": {
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ndc-qty-qlfr-cd"
+  },
+  "version": "1.1.0",
+  "name": "Revenue Center NDC Quantity Qualifier Code",
+  "title": "Revenue Center NDC Quantity Qualifier Code",
+  "status": "active",
+  "date": "2018-05-31T14:39:32+00:00",
+  "description": "Effective with Version 'J', the code used to indicate the unit of measurement for the drug that was administered. Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_ndc_qty_qlfr_cd",
+  "caseSensitive": true,
+  "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-ndc-qty-qlfr-cd",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "F2",
+      "display": "International Unit",
+      "definition": "International Unit"
+    },
+    {
+      "code": "GR",
+      "display": "Gram",
+      "definition": "Gram"
+    },
+    {
+      "code": "ML",
+      "display": "Milliliter",
+      "definition": "Milliliter"
+    },
+    {
+      "code": "UN",
+      "display": "Unit",
+      "definition": "Unit"
+    }
+  ]
+}

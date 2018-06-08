@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="clm-hha-rfrl-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim HHA Referral Code</h2><div><p>Effective with Version 'I', the code used to identify the means by which the beneficiary was referred for Home Health services. Source: https://bluebutton.cms.gov/resources/variables/clm<em>hha</em>rfrl_cd</p>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-rfrl-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name="clm-hha-rfrl-cd-1"> </a></td><td>Physician referral - The patient was admitted upon the recommendation of a personal physician.</td><td>Physician referral - The patient was admitted upon the recommendation of a personal physician.</td></tr><tr><td>2<a name="clm-hha-rfrl-cd-2"> </a></td><td>Clinic referral - The patient was admitted upon the recommendation of this facility's clinic physician.</td><td>Clinic referral - The patient was admitted upon the recommendation of this facility's clinic physician.</td></tr><tr><td>3<a name="clm-hha-rfrl-cd-3"> </a></td><td>HMO referral - The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.</td><td>HMO referral - The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician.</td></tr><tr><td>4<a name="clm-hha-rfrl-cd-4"> </a></td><td>Transfer from hospital - The patient was admitted as an inpatient transfer from an acute care facility.</td><td>Transfer from hospital - The patient was admitted as an inpatient transfer from an acute care facility.</td></tr><tr><td>5<a name="clm-hha-rfrl-cd-5"> </a></td><td>Transfer from a skilled nursing facility (SNF) - The patient was admitted as an inpatient transfer from a SNF.</td><td>Transfer from a skilled nursing facility (SNF) - The patient was admitted as an inpatient transfer from a SNF.</td></tr><tr><td>6<a name="clm-hha-rfrl-cd-6"> </a></td><td>Transfer from another health care facility - The patient was admitted as a transfer from a health care facility other than an acute care facility or SNF.</td><td>Transfer from another health care facility - The patient was admitted as a transfer from a health care facility other than an acute care facility or SNF.</td></tr><tr><td>7<a name="clm-hha-rfrl-cd-7"> </a></td><td>Emergency room - The patient was admitted upon the recommendation of this facility's emergency room physician.</td><td>Emergency room - The patient was admitted upon the recommendation of this facility's emergency room physician.</td></tr><tr><td>8<a name="clm-hha-rfrl-cd-8"> </a></td><td>Court/law enforcement - The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency's representative.</td><td>Court/law enforcement - The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency's representative.</td></tr><tr><td>9<a name="clm-hha-rfrl-cd-9"> </a></td><td>Information not available - The means by which the patient was admitted is not known.</td><td>Information not available - The means by which the patient was admitted is not known.</td></tr><tr><td>A<a name="clm-hha-rfrl-cd-A"> </a></td><td>Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital</td><td>Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital</td></tr><tr><td>B<a name="clm-hha-rfrl-cd-B"> </a></td><td>Transfer from another HHA – Beneficiaries are permitted to transfer from one HHA to another unrelated HHA under HH PPS. (eff.10/00)</td><td>Transfer from another HHA – Beneficiaries are permitted to transfer from one HHA to another unrelated HHA under HH PPS. (eff.10/00)</td></tr><tr><td>C<a name="clm-hha-rfrl-cd-C"> </a></td><td>Readmission to same HHA - If a beneficiary is discharged from an HHA and then readmitted within the original 60-day episode, the original episode must be closed early and a new one created.</td><td>Readmission to same HHA - If a beneficiary is discharged from an HHA and then readmitted within the original 60-day episode, the original episode must be closed early and a new one created.</td></tr></table></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-rfrl-cd"/>
+  <identifier>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-rfrl-cd"/>
+  </identifier>
+  <version value="1.1.0"/>
+  <name value="Claim HHA Referral Code"/>
+  <title value="Claim HHA Referral Code"/>
+  <status value="active"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="Effective with Version &#39;I&#39;, the code used to identify the means by which the beneficiary was referred for Home Health services. Source: https://bluebutton.cms.gov/resources/variables/clm_hha_rfrl_cd"/>
+  <caseSensitive value="true"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-rfrl-cd"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <concept>
+    <code value="1"/>
+    <display value="Physician referral - The patient was admitted upon the recommendation of a personal physician."/>
+    <definition value="Physician referral - The patient was admitted upon the recommendation of a personal physician."/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Clinic referral - The patient was admitted upon the recommendation of this facility&#39;s clinic physician."/>
+    <definition value="Clinic referral - The patient was admitted upon the recommendation of this facility&#39;s clinic physician."/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="HMO referral - The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician."/>
+    <definition value="HMO referral - The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician."/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="Transfer from hospital - The patient was admitted as an inpatient transfer from an acute care facility."/>
+    <definition value="Transfer from hospital - The patient was admitted as an inpatient transfer from an acute care facility."/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="Transfer from a skilled nursing facility (SNF) - The patient was admitted as an inpatient transfer from a SNF."/>
+    <definition value="Transfer from a skilled nursing facility (SNF) - The patient was admitted as an inpatient transfer from a SNF."/>
+  </concept>
+  <concept>
+    <code value="6"/>
+    <display value="Transfer from another health care facility - The patient was admitted as a transfer from a health care facility other than an acute care facility or SNF."/>
+    <definition value="Transfer from another health care facility - The patient was admitted as a transfer from a health care facility other than an acute care facility or SNF."/>
+  </concept>
+  <concept>
+    <code value="7"/>
+    <display value="Emergency room - The patient was admitted upon the recommendation of this facility&#39;s emergency room physician."/>
+    <definition value="Emergency room - The patient was admitted upon the recommendation of this facility&#39;s emergency room physician."/>
+  </concept>
+  <concept>
+    <code value="8"/>
+    <display value="Court/law enforcement - The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency&#39;s representative."/>
+    <definition value="Court/law enforcement - The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency&#39;s representative."/>
+  </concept>
+  <concept>
+    <code value="9"/>
+    <display value="Information not available - The means by which the patient was admitted is not known."/>
+    <definition value="Information not available - The means by which the patient was admitted is not known."/>
+  </concept>
+  <concept>
+    <code value="A"/>
+    <display value="Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital"/>
+    <definition value="Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital"/>
+  </concept>
+  <concept>
+    <code value="B"/>
+    <display value="Transfer from another HHA &#x2013; Beneficiaries are permitted to transfer from one HHA to another unrelated HHA under HH PPS. (eff.10/00)"/>
+    <definition value="Transfer from another HHA &#x2013; Beneficiaries are permitted to transfer from one HHA to another unrelated HHA under HH PPS. (eff.10/00)"/>
+  </concept>
+  <concept>
+    <code value="C"/>
+    <display value="Readmission to same HHA - If a beneficiary is discharged from an HHA and then readmitted within the original 60-day episode, the original episode must be closed early and a new one created."/>
+    <definition value="Readmission to same HHA - If a beneficiary is discharged from an HHA and then readmitted within the original 60-day episode, the original episode must be closed early and a new one created."/>
+  </concept>
+</CodeSystem>

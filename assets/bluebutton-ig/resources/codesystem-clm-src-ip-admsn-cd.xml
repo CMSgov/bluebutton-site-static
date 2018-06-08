@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="clm-src-ip-admsn-cd"/>
+    <url value="http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd"/>
+    </identifier>
+    <name value="Claim Source Inpatient Admission Code"/>
+    <title value="Claim Source Inpatient Admission Code"/>
+    <status value="active"/>
+    <description value="The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm_src_ip_admsn_cd"/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/clm-src-ip-admsn-cd"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="0"/>
+        <display value="ANOMALY: invalid value, if present, translate to '9'"/>
+        <definition value="ANOMALY: invalid value, if present, translate to '9'"/>
+    </concept>
+    <concept>
+        <code value="1"/>
+        <display value="Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician."/>
+        <definition value="Non-Health Care Facility Point of Origin (Physician Referral) – The patient was admitted to this facility upon an order of a physician."/>
+    </concept>
+    <concept>
+        <code value="2"/>
+        <display value="Clinic referral – The patient was admitted upon the recommendation of this facility's clinic physician."/>
+        <definition value="Clinic referral – The patient was admitted upon the recommendation of this facility's clinic physician."/>
+    </concept>
+    <concept>
+        <code value="3"/>
+        <display value="HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician."/>
+        <definition value="HMO referral - Reserved for national Prior to 3/08, HMO referral – The patient was admitted upon the recommendation of an health maintenance organization (HMO) physician."/>
+    </concept>
+    <concept>
+        <code value="4"/>
+        <display value="Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient."/>
+        <definition value="Transfer from hospital (Different Facility) – The patient was admitted to this facility as a hospital transfer from an acute care facility where he or she was an inpatient."/>
+    </concept>
+    <concept>
+        <code value="5"/>
+        <display value="Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident."/>
+        <definition value="Transfer from a skilled nursing facility (SNF) or Intermediate Care Facility (ICF) – The patient was admitted to this facility as a transfer from a SNF or ICF where he or she was a resident."/>
+    </concept>
+    <concept>
+        <code value="6"/>
+        <display value="Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient."/>
+        <definition value="Transfer from another health care facility – The patient was admitted to this facility as a transfer from another type of health care facility not defined elsewhere in this code list where he or she was an inpatient."/>
+    </concept>
+    <concept>
+        <code value="7"/>
+        <display value="Emergency room – The patient was admitted to this facility after receiving services in this facility's emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time)."/>
+        <definition value="Emergency room – The patient was admitted to this facility after receiving services in this facility's emergency room department (CMS discontinued this code 07/2010, although a small number of claims with this code appear after that time)."/>
+    </concept>
+    <concept>
+        <code value="8"/>
+        <display value="Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency's representative."/>
+        <definition value="Court/law enforcement – The patient was admitted upon the direction of a court of law or upon the request of a law enforcement agency's representative."/>
+    </concept>
+    <concept>
+        <code value="9"/>
+        <display value="Information not available – The means by which the patient was admitted is not known."/>
+        <definition value="Information not available – The means by which the patient was admitted is not known."/>
+    </concept>
+    <concept>
+        <code value="A"/>
+        <display value="Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital."/>
+        <definition value="Reserved for National Assignment. (eff. 3/08) Prior to 3/08 defined as: Transfer from a Critical Access Hospital - patient was admitted/referred to this facility as a transfer from a Critical Access Hospital."/>
+    </concept>
+    <concept>
+        <code value="B"/>
+        <display value="Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)"/>
+        <definition value="Transfer from Another Home Health Agency – The patient was admitted to this home health agency as a transfer from another home health agency. (Discontinued July 1, 2010- See Condition Code 47)"/>
+    </concept>
+    <concept>
+        <code value="C"/>
+        <display value="Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)"/>
+        <definition value="Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)"/>
+    </concept>
+    <concept>
+        <code value="D"/>
+        <display value="Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer."/>
+        <definition value="Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer."/>
+    </concept>
+    <concept>
+        <code value="E"/>
+        <display value="Transfer from Ambulatory Surgical Center"/>
+        <definition value="Transfer from Ambulatory Surgical Center"/>
+    </concept>
+    <concept>
+        <code value="F"/>
+        <display value="Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission"/>
+        <definition value="Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission"/>
+    </concept>
+    <concept>
+        <code value="1"/>
+        <display value="Normal delivery – A baby delivered without complications."/>
+        <definition value="Normal delivery – A baby delivered without complications."/>
+    </concept>
+    <concept>
+        <code value="2"/>
+        <display value="Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status."/>
+        <definition value="Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status."/>
+    </concept>
+    <concept>
+        <code value="3"/>
+        <display value="Sick baby – A baby delivered with medical complications, other than those relating to premature status."/>
+        <definition value="Sick baby – A baby delivered with medical complications, other than those relating to premature status."/>
+    </concept>
+    <concept>
+        <code value="4"/>
+        <display value="Extramural birth – A baby delivered in a nonsterile environment."/>
+        <definition value="Extramural birth – A baby delivered in a nonsterile environment."/>
+    </concept>
+    <concept>
+        <code value="5"/>
+        <display value="Reserved for national assignment."/>
+        <definition value="Reserved for national assignment."/>
+    </concept>
+    <concept>
+        <code value="6"/>
+        <display value="Reserved for national assignment."/>
+        <definition value="Reserved for national assignment."/>
+    </concept>
+    <concept>
+        <code value="7"/>
+        <display value="Reserved for national assignment."/>
+        <definition value="Reserved for national assignment."/>
+    </concept>
+    <concept>
+        <code value="8"/>
+        <display value="Reserved for national assignment."/>
+        <definition value="Reserved for national assignment."/>
+    </concept>
+    <concept>
+        <code value="9"/>
+        <display value="Information not available."/>
+        <definition value="Information not available."/>
+    </concept>
+</CodeSystem>

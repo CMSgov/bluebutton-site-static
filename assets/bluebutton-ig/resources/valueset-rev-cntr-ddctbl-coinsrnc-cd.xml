@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="rev-cntr-ddctbl-coinsrnc-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/rev-cntr-ddctbl-coinsrnc-cd"/>
+    <name value="Revenue Center Deductible Coinsurance Code"/>
+    <description value="Code indicating whether the revenue center charges are subject to deductible and/or coinsurance. Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_ddctbl_coinsrnc_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/rev-cntr-ddctbl-coinsrnc-cd"/>
+        </include>
+    </compose>
+</ValueSet>

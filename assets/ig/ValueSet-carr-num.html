@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Blue Button 2.0</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="author" content="http://www.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+  <script>
+  window.tealiumEnvironment = "prod";
+  </script>
+  <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
+  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0075/2251.js" async="async"></script>
+</head>
+<body>
+
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
+<div>
+<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
+     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
+    </a>
+   </div>
+   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
+<b>Blue Button 2.0 Implementation Guide</b>
+<!-- (Release 1.1.0 ) -->
+<!-- (Release 1.1.0 Ballot ) -->
+</div>
+ </div>
+<!--
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+  </div>
+-->
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profiles.html">Blue Button Profiles</a></li>
+              <li><a href="extensions.html">Extensions</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+<!-- ============BreadCrumbs=============== -->
+
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-breadcrumb -->
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<!--
+<h2>Carrier or MAC Number</h2>
+
+<p>
+Formats: <a href="ValueSet-carr-num.xml.html">XML</a>, <a href="ValueSet-carr-num.json.html">JSON</a>, <a href="ValueSet-carr-num.ttl.html">Turtle</a>
+</p>
+
+-->
+
+<!-- include ValueSet-carr-num-html.xhtml   -->
+
+<table class="grid">
+ <tbody><tr><td>Defining URL:</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-carr-num</td></tr>
+ <tr><td>Name:</td><td>Carrier or MAC Number</td></tr>
+ <tr><td>Definition:</td><td><p>The identification number assigned by CMS to a carrier authorized to process claims from a physician or supplier. Effective July 2006, the Medicare Administrative Contractors (MACs) began replacing the existing carriers and started processing physician or supplier claim records for states assigned to its jurisdiction. Source: https://bluebutton.cms.gov/resources/variables/carr_num</p>
+</td></tr>
+ <tr><td>Source Resource</td><td><a href="ValueSet-carr-num.xml.html">XML</a> / <a href="ValueSet-carr-num.json.html">JSON</a> / <a href="ValueSet-carr-num.ttl.html">Turtle</a></td></tr>
+</tbody></table>
+
+
+This value set is used by:
+
+
+<ul>
+ <li><a href="StructureDefinition-bluebutton-carrier-claim.html">BluebuttonCarrierClaim</a></li>
+ <li><a href="StructureDefinition-bluebutton-dme-claim.html">BluebuttonDMEClaim</a></li>
+</ul>
+
+
+<div xmlns="http://www.w3.org/1999/xhtml"><h2>Carrier or MAC Number</h2><div><p>The identification number assigned by CMS to a carrier authorized to process claims from a physician or supplier. Effective July 2006, the Medicare Administrative Contractors (MACs) began replacing the existing carriers and started processing physician or supplier claim records for states assigned to its jurisdiction. Source: https://bluebutton.cms.gov/resources/variables/carr_num</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-carr-num.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-num</code></a></li></ul></div>
+
+<h3>Expansion</h3>
+
+<div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 95 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-num version 1.1.0</p><p>All codes from system <a href="CodeSystem-carr-num.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-num</code></a></p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00510"> </a><a href="CodeSystem-carr-num.html#carr-num-00510">00510</a></td><td>Alabama - CAHABA</td><td>Alabama - CAHABA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00511"> </a><a href="CodeSystem-carr-num.html#carr-num-00511">00511</a></td><td>Georgia - CAHABA</td><td>Georgia - CAHABA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00512"> </a><a href="CodeSystem-carr-num.html#carr-num-00512">00512</a></td><td>Mississippi - CAHABA (eff. 2000)</td><td>Mississippi - CAHABA (eff. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00520"> </a><a href="CodeSystem-carr-num.html#carr-num-00520">00520</a></td><td>Arkansas BC/BS</td><td>Arkansas BC/BS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00521"> </a><a href="CodeSystem-carr-num.html#carr-num-00521">00521</a></td><td>New Mexico - Arkansas BC/BS (term. 2008) (replaced by MAC #04202)</td><td>New Mexico - Arkansas BC/BS (term. 2008) (replaced by MAC #04202)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00522"> </a><a href="CodeSystem-carr-num.html#carr-num-00522">00522</a></td><td>Oklahoma - Arkansas BC/BS (term. 2008) (replaced by MAC #04302)</td><td>Oklahoma - Arkansas BC/BS (term. 2008) (replaced by MAC #04302)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00523"> </a><a href="CodeSystem-carr-num.html#carr-num-00523">00523</a></td><td>Missouri East - Arkansas BC/BS (term. 2008) (replaced by MAC #05392)</td><td>Missouri East - Arkansas BC/BS (term. 2008) (replaced by MAC #05392)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00524"> </a><a href="CodeSystem-carr-num.html#carr-num-00524">00524</a></td><td>Rhode Island - Arkansas BC/BS (eff. 2004)</td><td>Rhode Island - Arkansas BC/BS (eff. 2004)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00528"> </a><a href="CodeSystem-carr-num.html#carr-num-00528">00528</a></td><td>Louisiana - Arkansas BS</td><td>Louisiana - Arkansas BS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00590"> </a><a href="CodeSystem-carr-num.html#carr-num-00590">00590</a></td><td>Florida - First Coast</td><td>Florida - First Coast</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00591"> </a><a href="CodeSystem-carr-num.html#carr-num-00591">00591</a></td><td>Connecticut - First Coast (eff. 2000)</td><td>Connecticut - First Coast (eff. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00630"> </a><a href="CodeSystem-carr-num.html#carr-num-00630">00630</a></td><td>Indiana - Administar</td><td>Indiana - Administar</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00635"> </a><a href="CodeSystem-carr-num.html#carr-num-00635">00635</a></td><td>DMERC-B - Administar (replaced by MAC #17003)</td><td>DMERC-B - Administar (replaced by MAC #17003)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00640"> </a><a href="CodeSystem-carr-num.html#carr-num-00640">00640</a></td><td>Iowa - Wellmark, Inc.</td><td>Iowa - Wellmark, Inc.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00645"> </a><a href="CodeSystem-carr-num.html#carr-num-00645">00645</a></td><td>Nebraska - Iowa BS</td><td>Nebraska - Iowa BS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00650"> </a><a href="CodeSystem-carr-num.html#carr-num-00650">00650</a></td><td>Kansas BCBS (term. 2008) (replaced by MAC #05202)</td><td>Kansas BCBS (term. 2008) (replaced by MAC #05202)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00655"> </a><a href="CodeSystem-carr-num.html#carr-num-00655">00655</a></td><td>Nebraska - Kansas BC/BS (term. 2008) (replaced by MAC #05402)</td><td>Nebraska - Kansas BC/BS (term. 2008) (replaced by MAC #05402)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00660"> </a><a href="CodeSystem-carr-num.html#carr-num-00660">00660</a></td><td>Kentucky - Administar</td><td>Kentucky - Administar</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00740"> </a><a href="CodeSystem-carr-num.html#carr-num-00740">00740</a></td><td>Western Missouri - Kansas BS (term.2008) (replaced by MAC #05302)</td><td>Western Missouri - Kansas BS (term.2008) (replaced by MAC #05302)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00751"> </a><a href="CodeSystem-carr-num.html#carr-num-00751">00751</a></td><td>Montana BC/BS (replaced by MAC # 03202)</td><td>Montana BC/BS (replaced by MAC # 03202)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00801"> </a><a href="CodeSystem-carr-num.html#carr-num-00801">00801</a></td><td>New York - Healthnow</td><td>New York - Healthnow</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00803"> </a><a href="CodeSystem-carr-num.html#carr-num-00803">00803</a></td><td>New York - Empire BS</td><td>New York - Empire BS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00805"> </a><a href="CodeSystem-carr-num.html#carr-num-00805">00805</a></td><td>New Jersey - Empire BS</td><td>New Jersey - Empire BS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00811"> </a><a href="CodeSystem-carr-num.html#carr-num-00811">00811</a></td><td>DMERC (A) - Healthnow (eff. 2000) (replaced by MAC #16003)</td><td>DMERC (A) - Healthnow (eff. 2000) (replaced by MAC #16003)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00820"> </a><a href="CodeSystem-carr-num.html#carr-num-00820">00820</a></td><td>North Dakota - Noridian (replaced by MAC #03302)</td><td>North Dakota - Noridian (replaced by MAC #03302)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00823"> </a><a href="CodeSystem-carr-num.html#carr-num-00823">00823</a></td><td>Utah - Noridian (eff. 12/1/2005) (replaced by MAC #03502)</td><td>Utah - Noridian (eff. 12/1/2005) (replaced by MAC #03502)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00824"> </a><a href="CodeSystem-carr-num.html#carr-num-00824">00824</a></td><td>Colorado - Noridian (term. 2008) (replaced by MAC #04102)</td><td>Colorado - Noridian (term. 2008) (replaced by MAC #04102)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00825"> </a><a href="CodeSystem-carr-num.html#carr-num-00825">00825</a></td><td>Wyoming - Noridian (replaced by MAC #03602)</td><td>Wyoming - Noridian (replaced by MAC #03602)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00826"> </a><a href="CodeSystem-carr-num.html#carr-num-00826">00826</a></td><td>Iowa - Noridian (term. 2008) (replaced by MAC #05102)</td><td>Iowa - Noridian (term. 2008) (replaced by MAC #05102)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00831"> </a><a href="CodeSystem-carr-num.html#carr-num-00831">00831</a></td><td>Alaska - Noridian</td><td>Alaska - Noridian</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00832"> </a><a href="CodeSystem-carr-num.html#carr-num-00832">00832</a></td><td>Arizona - Noridian (replaced by MAC # 03102)</td><td>Arizona - Noridian (replaced by MAC # 03102)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00833"> </a><a href="CodeSystem-carr-num.html#carr-num-00833">00833</a></td><td>Hawaii - Noridian</td><td>Hawaii - Noridian</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00834"> </a><a href="CodeSystem-carr-num.html#carr-num-00834">00834</a></td><td>Nevada - Noridian</td><td>Nevada - Noridian</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00835"> </a><a href="CodeSystem-carr-num.html#carr-num-00835">00835</a></td><td>Oregon - Noridian</td><td>Oregon - Noridian</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00836"> </a><a href="CodeSystem-carr-num.html#carr-num-00836">00836</a></td><td>Washington - Noridian</td><td>Washington - Noridian</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00865"> </a><a href="CodeSystem-carr-num.html#carr-num-00865">00865</a></td><td>Pennsylvania - Highmark</td><td>Pennsylvania - Highmark</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00870"> </a><a href="CodeSystem-carr-num.html#carr-num-00870">00870</a></td><td>Rhode Island BS (term. 2004)</td><td>Rhode Island BS (term. 2004)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00880"> </a><a href="CodeSystem-carr-num.html#carr-num-00880">00880</a></td><td>South Carolina - Palmetto</td><td>South Carolina - Palmetto</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00882"> </a><a href="CodeSystem-carr-num.html#carr-num-00882">00882</a></td><td>RRB - South Carolina PGBA (eff. 2000)</td><td>RRB - South Carolina PGBA (eff. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00883"> </a><a href="CodeSystem-carr-num.html#carr-num-00883">00883</a></td><td>Ohio - Palmetto (eff. 2002)</td><td>Ohio - Palmetto (eff. 2002)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00884"> </a><a href="CodeSystem-carr-num.html#carr-num-00884">00884</a></td><td>West Virginia - Palmetto (eff. 2002)</td><td>West Virginia - Palmetto (eff. 2002)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00885"> </a><a href="CodeSystem-carr-num.html#carr-num-00885">00885</a></td><td>DMERC C - Palmetto (replaced by MAC #18003)</td><td>DMERC C - Palmetto (replaced by MAC #18003)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00889"> </a><a href="CodeSystem-carr-num.html#carr-num-00889">00889</a></td><td>South Dakota - Noridian (eff. 4/1/2006) (replaced by MAC # 03402)</td><td>South Dakota - Noridian (eff. 4/1/2006) (replaced by MAC # 03402)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00900"> </a><a href="CodeSystem-carr-num.html#carr-num-00900">00900</a></td><td>Texas - Trailblazer (term. 2008) (replaced by MAC # 04402)</td><td>Texas - Trailblazer (term. 2008) (replaced by MAC # 04402)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00901"> </a><a href="CodeSystem-carr-num.html#carr-num-00901">00901</a></td><td>Maryland - Trailblazer</td><td>Maryland - Trailblazer</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00902"> </a><a href="CodeSystem-carr-num.html#carr-num-00902">00902</a></td><td>Delaware - Trailblazer</td><td>Delaware - Trailblazer</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00903"> </a><a href="CodeSystem-carr-num.html#carr-num-00903">00903</a></td><td>District of Columbia - Trailblazer</td><td>District of Columbia - Trailblazer</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00904"> </a><a href="CodeSystem-carr-num.html#carr-num-00904">00904</a></td><td>Virginia - Trailblazer (eff. 2000)</td><td>Virginia - Trailblazer (eff. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00910"> </a><a href="CodeSystem-carr-num.html#carr-num-00910">00910</a></td><td>Utah BS</td><td>Utah BS</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00951"> </a><a href="CodeSystem-carr-num.html#carr-num-00951">00951</a></td><td>Wisconsin - Wisconsin Phy Svc</td><td>Wisconsin - Wisconsin Phy Svc</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00952"> </a><a href="CodeSystem-carr-num.html#carr-num-00952">00952</a></td><td>Illinois - Wisconsin Phy Svc</td><td>Illinois - Wisconsin Phy Svc</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00953"> </a><a href="CodeSystem-carr-num.html#carr-num-00953">00953</a></td><td>Michigan - Wisconsin Phy Svc</td><td>Michigan - Wisconsin Phy Svc</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00954"> </a><a href="CodeSystem-carr-num.html#carr-num-00954">00954</a></td><td>Minnesota - Wisconsin Phy Svc (eff. 2000)</td><td>Minnesota - Wisconsin Phy Svc (eff. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00973"> </a><a href="CodeSystem-carr-num.html#carr-num-00973">00973</a></td><td>Puerto Rico - Triple S, Inc.</td><td>Puerto Rico - Triple S, Inc.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-00974"> </a><a href="CodeSystem-carr-num.html#carr-num-00974">00974</a></td><td>Triple-S, Inc. - Virgin Islands</td><td>Triple-S, Inc. - Virgin Islands</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-02050"> </a><a href="CodeSystem-carr-num.html#carr-num-02050">02050</a></td><td>California - TOLIC (term. 2000)</td><td>California - TOLIC (term. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-05130"> </a><a href="CodeSystem-carr-num.html#carr-num-05130">05130</a></td><td>Idaho - CIGNA</td><td>Idaho - CIGNA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-05302"> </a><a href="CodeSystem-carr-num.html#carr-num-05302">05302</a></td><td>Western Missouri (eff. 3/2008)</td><td>Western Missouri (eff. 3/2008)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-05440"> </a><a href="CodeSystem-carr-num.html#carr-num-05440">05440</a></td><td>Tennessee - CIGNA</td><td>Tennessee - CIGNA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-05535"> </a><a href="CodeSystem-carr-num.html#carr-num-05535">05535</a></td><td>North Carolina - CIGNA</td><td>North Carolina - CIGNA</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-05655"> </a><a href="CodeSystem-carr-num.html#carr-num-05655">05655</a></td><td>DMERC-D Alaska - CIGNA (replaced by MAC #19003)</td><td>DMERC-D Alaska - CIGNA (replaced by MAC #19003)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-10071"> </a><a href="CodeSystem-carr-num.html#carr-num-10071">10071</a></td><td>Railroad Board Travelers (term. 2000)</td><td>Railroad Board Travelers (term. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-10230"> </a><a href="CodeSystem-carr-num.html#carr-num-10230">10230</a></td><td>Connecticut - Metra Health (term. 2000)</td><td>Connecticut - Metra Health (term. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-10240"> </a><a href="CodeSystem-carr-num.html#carr-num-10240">10240</a></td><td>Minnesota - Metra Health (term. 2000)</td><td>Minnesota - Metra Health (term. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-10250"> </a><a href="CodeSystem-carr-num.html#carr-num-10250">10250</a></td><td>Mississippi - Metra Health (term. 2000)</td><td>Mississippi - Metra Health (term. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-10490"> </a><a href="CodeSystem-carr-num.html#carr-num-10490">10490</a></td><td>Virginia - Metra Health (term. 2000)</td><td>Virginia - Metra Health (term. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-10555"> </a><a href="CodeSystem-carr-num.html#carr-num-10555">10555</a></td><td>DMERC A - Travelers Insurance Co. (term. 2000)</td><td>DMERC A - Travelers Insurance Co. (term. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-14330"> </a><a href="CodeSystem-carr-num.html#carr-num-14330">14330</a></td><td>New York - GHI</td><td>New York - GHI</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-16360"> </a><a href="CodeSystem-carr-num.html#carr-num-16360">16360</a></td><td>Ohio - Nationwide Insurance Co. (term. 2002)</td><td>Ohio - Nationwide Insurance Co. (term. 2002)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-16510"> </a><a href="CodeSystem-carr-num.html#carr-num-16510">16510</a></td><td>West Virginia - Nationwide Insur Co. (term. 2002)</td><td>West Virginia - Nationwide Insur Co. (term. 2002)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-31140"> </a><a href="CodeSystem-carr-num.html#carr-num-31140">31140</a></td><td>N. California - National Heritage Ins.</td><td>N. California - National Heritage Ins.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-31142"> </a><a href="CodeSystem-carr-num.html#carr-num-31142">31142</a></td><td>Maine - National Heritage Ins.</td><td>Maine - National Heritage Ins.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-31143"> </a><a href="CodeSystem-carr-num.html#carr-num-31143">31143</a></td><td>Massachusetts - National Heritage Ins.</td><td>Massachusetts - National Heritage Ins.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-31144"> </a><a href="CodeSystem-carr-num.html#carr-num-31144">31144</a></td><td>New Hampshire - National Heritage Ins.</td><td>New Hampshire - National Heritage Ins.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-31145"> </a><a href="CodeSystem-carr-num.html#carr-num-31145">31145</a></td><td>Vermont - National Heritage Ins.</td><td>Vermont - National Heritage Ins.</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-31146"> </a><a href="CodeSystem-carr-num.html#carr-num-31146">31146</a></td><td>So. California - NHIC (eff. 2000)</td><td>So. California - NHIC (eff. 2000)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-80884"> </a><a href="CodeSystem-carr-num.html#carr-num-80884">80884</a></td><td>Contractor ID for Physician Risk Adjustment Data (data not sent through NCH, but through Palmetto) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Medicare Administrative Contractors (MACs) JURISDICTION 3 -- Part B MACs</td><td>Contractor ID for Physician Risk Adjustment Data (data not sent through NCH, but through Palmetto) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Medicare Administrative Contractors (MACs) JURISDICTION 3 -- Part B MACs</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-03102"> </a><a href="CodeSystem-carr-num.html#carr-num-03102">03102</a></td><td>Arizona (eff. 12/1/06) (replaces carrier #00832)</td><td>Arizona (eff. 12/1/06) (replaces carrier #00832)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-03202"> </a><a href="CodeSystem-carr-num.html#carr-num-03202">03202</a></td><td>Montana (eff. 12/1/06) (replaces carrier #00751)</td><td>Montana (eff. 12/1/06) (replaces carrier #00751)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-03302"> </a><a href="CodeSystem-carr-num.html#carr-num-03302">03302</a></td><td>N. Dakota (eff. 12/1/06) (replaces carrier #00820)</td><td>N. Dakota (eff. 12/1/06) (replaces carrier #00820)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-03402"> </a><a href="CodeSystem-carr-num.html#carr-num-03402">03402</a></td><td>S. Dakota (eff. 12/1/06) (replaces carrier #00889)</td><td>S. Dakota (eff. 12/1/06) (replaces carrier #00889)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-03502"> </a><a href="CodeSystem-carr-num.html#carr-num-03502">03502</a></td><td>Utah (eff. 12/1/06) (replaces carrier #00823)</td><td>Utah (eff. 12/1/06) (replaces carrier #00823)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-03602"> </a><a href="CodeSystem-carr-num.html#carr-num-03602">03602</a></td><td>Wyoming (eff. 12/1/06) (replaces carrier #00825) JURISDICTION 4 -- Part B MACs</td><td>Wyoming (eff. 12/1/06) (replaces carrier #00825) JURISDICTION 4 -- Part B MACs</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-04102"> </a><a href="CodeSystem-carr-num.html#carr-num-04102">04102</a></td><td>Colorado (eff. 3/24/08) (replaces carrier #00824)</td><td>Colorado (eff. 3/24/08) (replaces carrier #00824)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-04202"> </a><a href="CodeSystem-carr-num.html#carr-num-04202">04202</a></td><td>New Mexico (eff. 3/1/08 (replaces carrier #00521)</td><td>New Mexico (eff. 3/1/08 (replaces carrier #00521)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-04302"> </a><a href="CodeSystem-carr-num.html#carr-num-04302">04302</a></td><td>Oklahoma (eff. 3/1/08) (replaces carrier #00522)</td><td>Oklahoma (eff. 3/1/08) (replaces carrier #00522)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-04402"> </a><a href="CodeSystem-carr-num.html#carr-num-04402">04402</a></td><td>Texas (eff. 6/13/08) (replaces carrier #00900) JURISDICTION 5 -- Part B MACs</td><td>Texas (eff. 6/13/08) (replaces carrier #00900) JURISDICTION 5 -- Part B MACs</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-05102"> </a><a href="CodeSystem-carr-num.html#carr-num-05102">05102</a></td><td>Iowa (eff.2/1/08) (replaces carrier #00826)</td><td>Iowa (eff.2/1/08) (replaces carrier #00826)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-05202"> </a><a href="CodeSystem-carr-num.html#carr-num-05202">05202</a></td><td>Kansas (eff. 3/1/08) (replaces carrier #00650)</td><td>Kansas (eff. 3/1/08) (replaces carrier #00650)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-05392"> </a><a href="CodeSystem-carr-num.html#carr-num-05392">05392</a></td><td>E. Missouri (eff. 6/1/08) (replaces carrier #00523)</td><td>E. Missouri (eff. 6/1/08) (replaces carrier #00523)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-05402"> </a><a href="CodeSystem-carr-num.html#carr-num-05402">05402</a></td><td>Nebraska (eff. 3/1/08) (replaces carrier #00655) Durable Medical Equipment (DME) MACs</td><td>Nebraska (eff. 3/1/08) (replaces carrier #00655) Durable Medical Equipment (DME) MACs</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-16003"> </a><a href="CodeSystem-carr-num.html#carr-num-16003">16003</a></td><td>National Heritage Insur Co (NHIC) (eff. 7/1/06) (replaces carrier #00811)</td><td>National Heritage Insur Co (NHIC) (eff. 7/1/06) (replaces carrier #00811)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-17003"> </a><a href="CodeSystem-carr-num.html#carr-num-17003">17003</a></td><td>Administar Federal, Inc. (eff. 7/1/06) (replaces carrier # 00635)</td><td>Administar Federal, Inc. (eff. 7/1/06) (replaces carrier # 00635)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-18003"> </a><a href="CodeSystem-carr-num.html#carr-num-18003">18003</a></td><td>Palmetto GBA, LLC (eff. 6/1/07) (replaces carrier #00885)</td><td>Palmetto GBA, LLC (eff. 6/1/07) (replaces carrier #00885)</td></tr><tr><td><a name="http---hl7.org-fhir-CodeSystem-carr-num-19003"> </a><a href="CodeSystem-carr-num.html#carr-num-19003">19003</a></td><td>Noridan Administrative Services (eff. 10/1/06) (replaces carrier #05655)</td><td>Noridan Administrative Services (eff. 10/1/06) (replaces carrier #05655)</td></tr></table></div>
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+<p></p>
+ </div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+  <div class="container">  <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+             <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+        </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!-- add acnhors before the closing body tag. -->
+<script> anchors.add()</script>
+</body>
+</html>
+

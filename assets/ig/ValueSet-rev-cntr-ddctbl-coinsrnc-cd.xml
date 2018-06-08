@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="rev-cntr-ddctbl-coinsrnc-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Revenue Center Deductible Coinsurance Code</h2><div><p>Code indicating whether the revenue center charges are subject to deductible and/or coinsurance. Source: https://bluebutton.cms.gov/resources/variables/rev<em>cntr</em>ddctbl<em>coinsrnc</em>cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-rev-cntr-ddctbl-coinsrnc-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ddctbl-coinsrnc-cd</code></a></li></ul></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-ddctbl-coinsrnc-cd"/>
+  <version value="1.1.0"/>
+  <name value="Revenue Center Deductible Coinsurance Code"/>
+  <status value="draft"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="Code indicating whether the revenue center charges are subject to deductible and/or coinsurance. Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_ddctbl_coinsrnc_cd"/>
+  <compose>
+    <include>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ddctbl-coinsrnc-cd"/>
+    </include>
+  </compose>
+</ValueSet>

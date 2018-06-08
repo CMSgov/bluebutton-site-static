@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ptnt-dschrg-stus-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Patient Discharge Status Code</h2><div><p>The code used to identify the status of the patient as of the CLM<em>THRU</em>DT. Source: https://bluebutton.cms.gov/resources/variables/ptnt<em>dschrg</em>stus_cd</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-ptnt-dschrg-stus-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd</code></a></li></ul></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-dschrg-stus-cd"/>
+  <version value="1.1.0"/>
+  <name value="Patient Discharge Status Code"/>
+  <status value="draft"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="The code used to identify the status of the patient as of the CLM_THRU_DT. Source: https://bluebutton.cms.gov/resources/variables/ptnt_dschrg_stus_cd"/>
+  <compose>
+    <include>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd"/>
+    </include>
+  </compose>
+</ValueSet>

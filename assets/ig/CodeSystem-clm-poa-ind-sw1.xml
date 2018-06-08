@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="clm-poa-ind-sw1"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code</h2><div><p>The present on admission (POA) indicator code associated with the diagnosis codes (principal and secondary). In response to the Deficit Reduction Act of 2005, CMS began to distinguish between hospitalization diagnoses that occurred prior to versus during the admission. The objective was to eventually not pay hospitals more if the patient acquired a condition (e.g., infection) during the admission. This present on admission (POA) field is used to indicate whether the diagnosis was present on admission. Medicare claims did not indicate whether a diagnosis was POA until 2011. Source: https://bluebutton.cms.gov/resources/variables/clm<em>poa</em>ind_sw1</p>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-poa-ind-sw1 defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Y<a name="clm-poa-ind-sw1-Y"> </a></td><td>Diagnosis was present at the time of admission (POA)</td><td>Diagnosis was present at the time of admission (POA)</td></tr><tr><td>N<a name="clm-poa-ind-sw1-N"> </a></td><td>Diagnosis was not present at the time of admission</td><td>Diagnosis was not present at the time of admission</td></tr><tr><td>U<a name="clm-poa-ind-sw1-U"> </a></td><td>Documentation is insufficient to determine if condition was present on admission</td><td>Documentation is insufficient to determine if condition was present on admission</td></tr><tr><td>W<a name="clm-poa-ind-sw1-W"> </a></td><td>Provider is unable to clinically determine whether condition was present on admission</td><td>Provider is unable to clinically determine whether condition was present on admission</td></tr><tr><td>1<a name="clm-poa-ind-sw1-1"> </a></td><td>Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data</td><td>Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data</td></tr><tr><td>Z<a name="clm-poa-ind-sw1-Z"> </a></td><td>Denotes the end of the POA indicators</td><td>Denotes the end of the POA indicators</td></tr><tr><td>X<a name="clm-poa-ind-sw1-X"> </a></td><td>Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future</td><td>Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future</td></tr></table></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-poa-ind-sw1"/>
+  <identifier>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-poa-ind-sw1"/>
+  </identifier>
+  <version value="1.1.0"/>
+  <name value="Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code"/>
+  <title value="Claim Diagnosis Code I Diagnosis Present on Admission (POA) Indicator Code"/>
+  <status value="active"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="The present on admission (POA) indicator code associated with the diagnosis codes (principal and secondary). In response to the Deficit Reduction Act of 2005, CMS began to distinguish between hospitalization diagnoses that occurred prior to versus during the admission. The objective was to eventually not pay hospitals more if the patient acquired a condition (e.g., infection) during the admission. This present on admission (POA) field is used to indicate whether the diagnosis was present on admission. Medicare claims did not indicate whether a diagnosis was POA until 2011. Source: https://bluebutton.cms.gov/resources/variables/clm_poa_ind_sw1"/>
+  <caseSensitive value="true"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-clm-poa-ind-sw1"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <concept>
+    <code value="Y"/>
+    <display value="Diagnosis was present at the time of admission (POA)"/>
+    <definition value="Diagnosis was present at the time of admission (POA)"/>
+  </concept>
+  <concept>
+    <code value="N"/>
+    <display value="Diagnosis was not present at the time of admission"/>
+    <definition value="Diagnosis was not present at the time of admission"/>
+  </concept>
+  <concept>
+    <code value="U"/>
+    <display value="Documentation is insufficient to determine if condition was present on admission"/>
+    <definition value="Documentation is insufficient to determine if condition was present on admission"/>
+  </concept>
+  <concept>
+    <code value="W"/>
+    <display value="Provider is unable to clinically determine whether condition was present on admission"/>
+    <definition value="Provider is unable to clinically determine whether condition was present on admission"/>
+  </concept>
+  <concept>
+    <code value="1"/>
+    <display value="Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data"/>
+    <definition value="Unreported/not used - exempt from POA reporting - this code is the equivalent code of a blank, however, it was determined that blanks were undesirable when submitting the data"/>
+  </concept>
+  <concept>
+    <code value="Z"/>
+    <display value="Denotes the end of the POA indicators"/>
+    <definition value="Denotes the end of the POA indicators"/>
+  </concept>
+  <concept>
+    <code value="X"/>
+    <display value="Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future"/>
+    <definition value="Denotes the end of the POA indicators in special data processing situations that may be identified by CMS in the future"/>
+  </concept>
+</CodeSystem>

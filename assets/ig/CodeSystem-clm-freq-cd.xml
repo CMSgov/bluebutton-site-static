@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="clm-freq-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Frequency Code</h2><div><p>The third digit of the type of bill (TOB3) submitted on an institutional claim record to indicate the sequence of a claim in the beneficiary's current episode of care. Source: https://bluebutton.cms.gov/resources/variables/clm<em>freq</em>cd</p>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-freq-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name="clm-freq-cd-0"> </a></td><td>Non-payment/zero claims</td><td>Non-payment/zero claims</td></tr><tr><td>1<a name="clm-freq-cd-1"> </a></td><td>Admit thru discharge claim</td><td>Admit thru discharge claim</td></tr><tr><td>2<a name="clm-freq-cd-2"> </a></td><td>Interim – first claim</td><td>Interim – first claim</td></tr><tr><td>3<a name="clm-freq-cd-3"> </a></td><td>Interim – continuing claim</td><td>Interim – continuing claim</td></tr><tr><td>4<a name="clm-freq-cd-4"> </a></td><td>Interim – last claim</td><td>Interim – last claim</td></tr><tr><td>5<a name="clm-freq-cd-5"> </a></td><td>Late charge(s) only claim</td><td>Late charge(s) only claim</td></tr><tr><td>7<a name="clm-freq-cd-7"> </a></td><td>Replacement of prior claim</td><td>Replacement of prior claim</td></tr><tr><td>8<a name="clm-freq-cd-8"> </a></td><td>Void/cancel prior claim</td><td>Void/cancel prior claim</td></tr><tr><td>9<a name="clm-freq-cd-9"> </a></td><td>Final claim (for HH PPS = process as a debit/credit to RAP claim)</td><td>Final claim (for HH PPS = process as a debit/credit to RAP claim)</td></tr><tr><td>G<a name="clm-freq-cd-G"> </a></td><td>Common Working File (NCH) generated adjustment claim</td><td>Common Working File (NCH) generated adjustment claim</td></tr><tr><td>H<a name="clm-freq-cd-H"> </a></td><td>CMS generated adjustment claim</td><td>CMS generated adjustment claim</td></tr><tr><td>I<a name="clm-freq-cd-I"> </a></td><td>Misc. adjustment claim (e.g., initiated by intermediary or QIO)</td><td>Misc. adjustment claim (e.g., initiated by intermediary or QIO)</td></tr><tr><td>J<a name="clm-freq-cd-J"> </a></td><td>Other adjustment request</td><td>Other adjustment request</td></tr><tr><td>M<a name="clm-freq-cd-M"> </a></td><td>Medicare secondary payer (MSP) adjustment</td><td>Medicare secondary payer (MSP) adjustment</td></tr><tr><td>P<a name="clm-freq-cd-P"> </a></td><td>Adjustment required by QIO</td><td>Adjustment required by QIO</td></tr></table></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-freq-cd"/>
+  <identifier>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-freq-cd"/>
+  </identifier>
+  <version value="1.1.0"/>
+  <name value="Claim Frequency Code"/>
+  <title value="Claim Frequency Code"/>
+  <status value="active"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="The third digit of the type of bill (TOB3) submitted on an institutional claim record to indicate the sequence of a claim in the beneficiary&#39;s current episode of care. Source: https://bluebutton.cms.gov/resources/variables/clm_freq_cd"/>
+  <caseSensitive value="true"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-clm-freq-cd"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <concept>
+    <code value="0"/>
+    <display value="Non-payment/zero claims"/>
+    <definition value="Non-payment/zero claims"/>
+  </concept>
+  <concept>
+    <code value="1"/>
+    <display value="Admit thru discharge claim"/>
+    <definition value="Admit thru discharge claim"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Interim &#x2013; first claim"/>
+    <definition value="Interim &#x2013; first claim"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Interim &#x2013; continuing claim"/>
+    <definition value="Interim &#x2013; continuing claim"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="Interim &#x2013; last claim"/>
+    <definition value="Interim &#x2013; last claim"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="Late charge(s) only claim"/>
+    <definition value="Late charge(s) only claim"/>
+  </concept>
+  <concept>
+    <code value="7"/>
+    <display value="Replacement of prior claim"/>
+    <definition value="Replacement of prior claim"/>
+  </concept>
+  <concept>
+    <code value="8"/>
+    <display value="Void/cancel prior claim"/>
+    <definition value="Void/cancel prior claim"/>
+  </concept>
+  <concept>
+    <code value="9"/>
+    <display value="Final claim (for HH PPS = process as a debit/credit to RAP claim)"/>
+    <definition value="Final claim (for HH PPS = process as a debit/credit to RAP claim)"/>
+  </concept>
+  <concept>
+    <code value="G"/>
+    <display value="Common Working File (NCH) generated adjustment claim"/>
+    <definition value="Common Working File (NCH) generated adjustment claim"/>
+  </concept>
+  <concept>
+    <code value="H"/>
+    <display value="CMS generated adjustment claim"/>
+    <definition value="CMS generated adjustment claim"/>
+  </concept>
+  <concept>
+    <code value="I"/>
+    <display value="Misc. adjustment claim (e.g., initiated by intermediary or QIO)"/>
+    <definition value="Misc. adjustment claim (e.g., initiated by intermediary or QIO)"/>
+  </concept>
+  <concept>
+    <code value="J"/>
+    <display value="Other adjustment request"/>
+    <definition value="Other adjustment request"/>
+  </concept>
+  <concept>
+    <code value="M"/>
+    <display value="Medicare secondary payer (MSP) adjustment"/>
+    <definition value="Medicare secondary payer (MSP) adjustment"/>
+  </concept>
+  <concept>
+    <code value="P"/>
+    <display value="Adjustment required by QIO"/>
+    <definition value="Adjustment required by QIO"/>
+  </concept>
+</CodeSystem>

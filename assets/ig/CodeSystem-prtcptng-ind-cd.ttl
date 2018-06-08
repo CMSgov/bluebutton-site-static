@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "prtcptng-ind-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Line Provider Participating Indicator Code</h2><div><p>Code indicating whether or not a provider is participating (accepting assignment) for this line item service on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/prtcptng<em>ind</em>cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1<a name=\"prtcptng-ind-cd-1\"> </a></td><td>Participating</td><td>Participating</td></tr><tr><td>2<a name=\"prtcptng-ind-cd-2\"> </a></td><td>All or some covered and allowed expenses applied to deductible Participating</td><td>All or some covered and allowed expenses applied to deductible Participating</td></tr><tr><td>3<a name=\"prtcptng-ind-cd-3\"> </a></td><td>Assignment accepted/non-participating</td><td>Assignment accepted/non-participating</td></tr><tr><td>4<a name=\"prtcptng-ind-cd-4\"> </a></td><td>Assignment not accepted/non-participating</td><td>Assignment not accepted/non-participating</td></tr><tr><td>5<a name=\"prtcptng-ind-cd-5\"> </a></td><td>Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating.</td><td>Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating.</td></tr><tr><td>6<a name=\"prtcptng-ind-cd-6\"> </a></td><td>Assignment not accepted and all covered and allowed expenses applied to deductible non- participating.</td><td>Assignment not accepted and all covered and allowed expenses applied to deductible non- participating.</td></tr><tr><td>7<a name=\"prtcptng-ind-cd-7\"> </a></td><td>Participating provider not accepting assignment</td><td>Participating provider not accepting assignment</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.name [ fhir:value "Line Provider Participating Indicator Code"];
+  fhir:CodeSystem.title [ fhir:value "Line Provider Participating Indicator Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.description [ fhir:value "Code indicating whether or not a provider is participating (accepting assignment) for this line item service on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/prtcptng_ind_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-prtcptng-ind-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Participating" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Participating" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ];
+     fhir:CodeSystem.concept.display [ fhir:value "All or some covered and allowed expenses applied to deductible Participating" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "All or some covered and allowed expenses applied to deductible Participating" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Assignment accepted/non-participating" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Assignment accepted/non-participating" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "4" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Assignment not accepted/non-participating" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Assignment not accepted/non-participating" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "5" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating." ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating." ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "6" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Assignment not accepted and all covered and allowed expenses applied to deductible non- participating." ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Assignment not accepted and all covered and allowed expenses applied to deductible non- participating." ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "7" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Participating provider not accepting assignment" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Participating provider not accepting assignment" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/prtcptng-ind-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

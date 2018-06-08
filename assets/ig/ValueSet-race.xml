@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="race"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Blue Button Race Codes</h2><div><p>Blue Button race codes found at https://bluebutton.cms.gov/resources/variables/race/</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-race.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-race</code></a></li></ul></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-race"/>
+  <version value="1.1.0"/>
+  <name value="Blue Button Race Codes"/>
+  <status value="draft"/>
+  <date value="2018-05-31T14:39:32+00:00"/>
+  <description value="Blue Button race codes found at https://bluebutton.cms.gov/resources/variables/race/"/>
+  <compose>
+    <include>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-race"/>
+    </include>
+  </compose>
+</ValueSet>
