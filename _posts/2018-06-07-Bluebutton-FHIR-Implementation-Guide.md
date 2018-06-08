@@ -20,7 +20,7 @@ healthcare industry, such as insurers and Medicaid agencies. For the latter cate
 interest in how The Blue Button team built the Fast Healthcare Interoperability Resource (FHIR) records that hold the 
 beneficiaries' data.
 
-## The FHIR Implementation Guide
+## FHIR Implementation Guides
 
 FHIR is as much a community as it is a specification. The community shares information about how a solution has been
 built by creating an **Implementation Guide**. The Blue Button Team has created a FHIR Implementation Guide to 
@@ -40,7 +40,7 @@ A draft of the Blue Button 2.0 Implementation Guide (BB2IG) is now available as 
 [Blue Button Developer Documentation](https://bluebutton.cms.gov) site.
 
 We are integrating the Implementation Guide into the documentation. If you want to get a preview of the guide check 
-this link: [Blue Button 2.0 FHIR Implementation Guide](/assets/ig/index.html).
+this link: [Blue Button 2.0 Implementation Guide](/assets/ig/index.html).
 
 ## What is in the Implementation Guide?
 

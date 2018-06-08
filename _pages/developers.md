@@ -17,7 +17,7 @@ sections:
   - Sample Beneficiaries
   - Production API Access
   - Developer Guidelines
-  - FHIR Implementation Guide
+  - Blue Button 2.0 Implementation Guide
 ctas:
   -
     title: Blue Button Home
@@ -626,10 +626,10 @@ A beneficiary may revoke access to your application via the MyMedicare.gov websi
 
 ---
 
-## FHIR Implementation Guide
+## Blue Button 2.0 Implementation Guide
 
-The Blue Button team have created a Blue Button 2.0 FHIR Implementation Guide (BB2IG). 
-You can access the guide here: [Blue Button 2.0 FHIR Implementation Guide](/assets/ig/index.html).
+The Blue Button team have created a Blue Button 2.0 Implementation Guide (BB2IG). 
+You can access the guide here: [Blue Button 2.0 Implementation Guide](/assets/ig/index.html).
 
 The BB2IG features nine profiles in this version of the guide:
 
