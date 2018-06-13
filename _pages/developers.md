@@ -17,7 +17,7 @@ sections:
   - Sample Beneficiaries
   - Production API Access
   - Developer Guidelines
-  - FHIR Implementation Guide
+  - Blue Button 2.0 Implementation Guide
 ctas:
   -
     title: Blue Button Home
@@ -355,7 +355,10 @@ To activate compression add the following to the header:
 Accept-Encoding: gzip
 </pre>
 
-The minimum payload size we will gzip is 1 kilobyte. 
+The minimum payload size we will gzip is 1 kilobyte. If the original uncompressed size of the payload is less than 1 kb, 
+we will not apply gzip compression to our response. Therefore, developers should ensure their applications handle 
+this scenario gracefully by checking for the **Content-Encoding: gzip** response header before trying to 
+decompress.
 
 [Download a sample Coverage FHIR Resource](/sample-coverage-entry.json)
 
@@ -626,10 +629,10 @@ A beneficiary may revoke access to your application via the MyMedicare.gov websi
 
 ---
 
-## FHIR Implementation Guide
+## Blue Button 2.0 Implementation Guide
 
-The Blue Button team have created a Blue Button 2.0 FHIR Implementation Guide (BB2IG). 
-You can access the guide here: [Blue Button 2.0 FHIR Implementation Guide](/assets/ig/index.html).
+The Blue Button team have created a Blue Button 2.0 Implementation Guide (BB2IG). 
+You can access the guide here: [Blue Button 2.0 Implementation Guide](/assets/ig/index.html).
 
 The BB2IG features nine profiles in this version of the guide:
 
