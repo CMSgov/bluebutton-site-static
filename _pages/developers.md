@@ -646,4 +646,6 @@ The BB2IG features nine profiles in this version of the guide:
 <li><a href="/assets/ig/StructureDefinition-bluebutton-pde-claim.html" target="_blank">Blue Button Part D Event Profile</a></li>
 <li><a href="/assets/ig/StructureDefinition-bluebutton-snf-claim.html" target="_blank">Blue Button SNF Claim Profile</a></li>
 
+
+=======
 ---
