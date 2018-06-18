@@ -13,8 +13,9 @@ ctas:
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
 ---
-On June 19th, 2018 the Blue Button 2.0 API is being featured in one of the break-out sessions at the FHIR DevDays
-conference in Boston, MA.
+On June 19th, 2018 the Blue Button 2.0 API is being featured in one of the 
+[tutorial sessions](https://www.fhirdevdays.com/boston/schedule/#event-145) 
+at the HL7 [FHIR DevDays conference](https://www.fhirdevdays.com/boston/) in Boston, MA.
 
 The break-out session and the hands-on practice areas feature exercises to work with different aspects of FHIR. 
 For Blue Button we are taking developers through interacting with our FHIR API through the OAuth2.0 Interface. 
