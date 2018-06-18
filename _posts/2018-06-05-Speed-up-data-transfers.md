@@ -18,8 +18,6 @@ The Blue Button Team continues to look at performance improvements for the Blue 
 ExplanationOfBenefit resource can involve a large amount of data being transferred. To improve performance
 in this area we are introducing the ability to apply gzip compression. 
 
-The following data types can be enabled for compression:
-
 This enables gzip compression for a few content types:
 
 - text/html
