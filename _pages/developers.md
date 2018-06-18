@@ -17,7 +17,7 @@ sections:
   - Sample Beneficiaries
   - Production API Access
   - Developer Guidelines
-  - Blue Button 2.0 Implementation Guide
+  - Blue Button Implementation Guide
 ctas:
   -
     title: Blue Button Home
@@ -629,7 +629,7 @@ A beneficiary may revoke access to your application via the MyMedicare.gov websi
 
 ---
 
-## Blue Button 2.0 Implementation Guide
+## Blue Button Implementation Guide
 
 The Blue Button team have created a Blue Button 2.0 Implementation Guide (BB2IG). 
 You can access the guide here: [Blue Button 2.0 Implementation Guide](/assets/ig/index.html).
@@ -647,5 +647,5 @@ The BB2IG features nine profiles in this version of the guide:
 <li><a href="/assets/ig/StructureDefinition-bluebutton-snf-claim.html" target="_blank">Blue Button SNF Claim Profile</a></li>
 
 
-
+=======
 ---
