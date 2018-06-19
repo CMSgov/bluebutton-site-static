@@ -5,6 +5,11 @@ date:   2018-06-05 09:19 PM -0600
 categories: latest code
 permalink: /blog/:title
 badge: blog
+sections:
+  - Earlier Blog Posts
+  - Latest
+  - General
+  - Code
 ctas:
   - 
     title: Home
@@ -39,3 +44,17 @@ implement, or not.
 
 The change has been implemented in Release r17 that went live on 2018-06-05.
 
+---
+## Earlier Blog Posts
+
+[Blog Index](/blog/)
+
+## Latest
+
+[Category:Latest](/blog/category/latest.html)
+
+## General
+[Category:General](/blog/category/general.html)
+
+## Code
+[Category:Code](/blog/category/code.html)

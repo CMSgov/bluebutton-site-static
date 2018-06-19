@@ -5,6 +5,11 @@ date:   2018-06-07 09:00:00 -0500
 categories: latest
 permalink: /blog/:title
 badge: blog
+sections:
+  - Earlier Blog Posts
+  - Latest
+  - General
+  - Code
 ctas:
   - 
     title: Home
@@ -59,4 +64,17 @@ The BB2IG documents structure definitions for the following resources:
 We welcome feedback on this guide. As always head over to the [Google Developer Group for Blue Button 2.0 API](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api) and 
 leave us your comments.   
 
+---
+## Earlier Blog Posts
 
+[Blog Index](/blog/)
+
+## Latest
+
+[Category:Latest](/blog/category/latest.html)
+
+## General
+[Category:General](/blog/category/general.html)
+
+## Code
+[Category:Code](/blog/category/code.html)
