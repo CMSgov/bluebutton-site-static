@@ -25,7 +25,7 @@ ctas:
 </p></td>
 <td>
 <h2 style="text-align:center"><b>Speakers</b></h2>
-<p style="text-align:center">Hear from CMS Administrator Seema Verma and other Administrator Leadership about Blue Button 2.0 and the MyHealthEData initiative.</p></td>
+<p style="text-align:center">Hear from CMS Administrator Seema Verma and other CMS Leadership about Blue Button 2.0 and the MyHealthEData initiative.</p></td>
 </tr>
 <tr>
 <td>
