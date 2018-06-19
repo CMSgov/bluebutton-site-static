@@ -7,7 +7,7 @@ landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
 badge: api
-permalink: "/bb2dc18/"
+permalink: "/bb2dc18v1/"
 sections:
   - What is Blue Button 2.0?
   - Blue Button Developer Conference
