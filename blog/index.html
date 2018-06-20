@@ -16,7 +16,7 @@ ctas:
         {% if site.posts.first.url == post.url %}
 
           <h3 class="ds-u-display--inline-block ds-u-display--block blueberry-lime-link"><a href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" class="ds-u-display--block blueberry-lime-link" >{{ post.title | capitalize | escape }}</a></h3>
-          <p>{{ post.content }}</p>
+          <h4>{{ post.title }}</h4>
           <h3 class="ds-u-display--block">Earlier posts...</h3>
 
         {% else %}
@@ -26,7 +26,6 @@ ctas:
             <div class="ds-u-fill--primary-alt ds-u-padding--2">
                 <h4 class="ds-u-margin--0 ds-u-color--white ds-u-text-align--left"><a href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" class="ds-u-color--white ds-u-text-align--left blueberry-lime-link" >{{ post.title | capitalize | escape }}</a></h4>
             </div>
-            <span class="ds-u-display--block ds-u-display--inline-block">{{ post.excerpt }}<a href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}">[more...]</a></span>
 
         {% endif %}
       {% endfor %}

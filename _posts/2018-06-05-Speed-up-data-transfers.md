@@ -5,6 +5,11 @@ date:   2018-06-05 09:19 PM -0600
 categories: latest code
 permalink: /blog/:title
 badge: blog
+sections:
+  - Earlier Blog Posts
+  - Latest
+  - General
+  - Code
 ctas:
   - 
     title: Home
@@ -18,7 +23,7 @@ The Blue Button Team continues to look at performance improvements for the Blue 
 ExplanationOfBenefit resource can involve a large amount of data being transferred. To improve performance
 in this area we are introducing the ability to apply gzip compression. 
 
-This enables gzip compression for a few content types:
+The following data types can be enabled for compression:
 
 - text/html
 - text/plain
@@ -39,3 +44,17 @@ implement, or not.
 
 The change has been implemented in Release r17 that went live on 2018-06-05.
 
+---
+## Earlier Blog Posts
+
+[Blog Index](/blog/)
+
+## Latest
+
+[Category:Latest](/blog/category/latest.html)
+
+## General
+[Category:General](/blog/category/general.html)
+
+## Code
+[Category:Code](/blog/category/code.html)
