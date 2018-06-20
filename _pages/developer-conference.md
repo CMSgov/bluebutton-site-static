@@ -7,7 +7,11 @@ landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
 badge: api
+<<<<<<< HEAD
+permalink: "/bb2dc18/"
+=======
 permalink: "/bb2dc18v1/"
+>>>>>>> bf8453b4692845312bf1cca5e11d5513d0109728
 sections:
   - What is Blue Button 2.0?
   - Blue Button Developer Conference
@@ -30,6 +34,10 @@ Medicare beneficiaries control the release of their data to the applications, se
 Join us on **August 13th, 2018** in Washington, D.C. and work alongside other teams that are using Blue Button 2.0 to leverage claims data in their products.
 
 During this event attendees will have the opportunity to:
+<<<<<<< HEAD
+- Hear from CMS Administrator Seema Verma and White House Special Advisor on Innovation Policy Matt Lira about the MyHealthEData initiative.
+=======
+>>>>>>> bf8453b4692845312bf1cca5e11d5513d0109728
 - Meet the Blue Button 2.0 engineering team, work through your questions, and get real-time feedback from the team.
 - See demonstrations from applications with production access to the Blue Button 2.0 API.
 - Learn from venture capital leaders in the health technology space.
@@ -40,5 +48,9 @@ Follow news about the Blue Button 2.0 Developer Conference at the twitter hashta
 We recommend attending if you are working on a product that will leverage the Blue Button API and helps Medicare beneficiaries. 
 This is a free event.
 
+<<<<<<< HEAD
+<h2><a href="https://airtable.com/shryxh4YvtGO09MDc" target="_blank">Sign up for more details</a></h2>
+=======
 <h2><a href="https://airtable.com/shrLS7U3yAdl3JMut" target="_blank">Sign up for more details</a></h2>
+>>>>>>> bf8453b4692845312bf1cca5e11d5513d0109728
 <p></p>
