@@ -39,11 +39,11 @@ ctas:
 </tr>
 </table>
 
-<h2 style="text-align:center"><b>Registration</b></h2>
-<p style="text-align:center">Registration for the Blue Button 2.0 Developer Conference is now open. This free event will be held at the General Services Administration building located at 1800 F St. NW in Washington, DC.
+<h2 style="text-align:center"><b>Interested?</b></h2>
+<p style="text-align:center">This free event will be held on Monday August 13, 2018 at the General Services Administration building located at <br/>1800 F St. NW in Washington, DC.
 </p>
 
-<h2 style="text-align:center"><a href="https://www.cvent.com/events/blue-button-2-0-developer-conference-bbdc-/registration-72c410fbc8d941889feb7ad3d1dd5d17.aspx?tw=AF-11-0A-66-6B-62-2E-E8-F9-16-B4-9D-61-24-C9-C7&fqp=true" target="_blank">Register for Blue Button 2.0 Developer Conference</a></h2>
+<h2 style="text-align:center"><a href="https://www.cvent.com/events/blue-button-2-0-developer-conference-bbdc-/registration-72c410fbc8d941889feb7ad3d1dd5d17.aspx?tw=AF-11-0A-66-6B-62-2E-E8-F9-16-B4-9D-61-24-C9-C7&fqp=true" target="_blank">Submit Notification of Interest for BB2DC18</a></h2>
 
 <hr/>
 <h1 style="text-align:center">Blue Button 2.0 Snapshot</h1>
