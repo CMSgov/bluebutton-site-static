@@ -190,4 +190,8 @@ Sample data:
 [Category:General](/blog/category/general.html)
 
 ## Code
+<<<<<<< HEAD
 [Category:Code](/blog/category/code.html)
+=======
+[Category:Code](/blog/category/code.html)
+>>>>>>> bf8453b4692845312bf1cca5e11d5513d0109728
