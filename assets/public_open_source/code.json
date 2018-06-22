@@ -70,9 +70,9 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
@@ -81,7 +81,9 @@
       "homepageURL": "https://bluebutton.cms.gov/",
       "downloadURL": "https://github.com/CMSgov/bluebutton-site-static/archive/master.zip",
       "languages": [
-		"HTML"
+		"HTML",
+        "markdown",
+        "CSS"
       ],
       "laborHours": 0,
       
@@ -115,15 +117,15 @@
 		"django"
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
       "vcs": "git",
       "repositoryURL": "https://github.com/CMSgov/bluebutton-web-server",
-      "homepageURL": "https://sandbox.bluebutton.cms.gov/",
+      "homepageURL": "https://bluebutton.cms.gov/",
       "downloadURL": "https://github.com/CMSgov/bluebutton-web-server/archive/r17.tar.gz",
       "languages": [
 		"Python",
@@ -166,15 +168,15 @@
 		"django"
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
       "vcs": "git",
       "repositoryURL": "https://github.com/CMSgov/bluebutton-web-deployment",
-      "homepageURL": "",
+      "homepageURL": "https://bluebutton.cms.gov",
       "downloadURL": "https://github.com/CMSgov/bluebutton-web-deployment/archive/master.zip",
       "languages": [
 		"HCL",
@@ -209,9 +211,9 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
@@ -249,9 +251,9 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
@@ -290,9 +292,9 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
@@ -331,9 +333,9 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
@@ -371,9 +373,9 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
@@ -415,7 +417,7 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
         "URL": "http://www.cms.gov/",
         "phone": ""
@@ -457,7 +459,7 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
         "URL": "http://www.cms.gov/",
         "phone": ""
@@ -498,7 +500,7 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
         "URL": "http://www.cms.gov/",
         "phone": ""
@@ -538,9 +540,9 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
@@ -578,9 +580,9 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
@@ -619,7 +621,7 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
         "URL": "http://www.cms.gov/",
         "phone": ""
@@ -660,9 +662,9 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
-        "URL": "http://www.cms.gov/",
+        "URL": "https://bluebutton.cms.gov/",
         "phone": ""
       },
       "status": "Production",
@@ -701,7 +703,7 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
         "URL": "http://www.cms.gov/",
         "phone": ""
@@ -741,7 +743,7 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
         "URL": "http://www.cms.gov/",
         "phone": ""
@@ -782,7 +784,7 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
         "URL": "http://www.cms.gov/",
         "phone": ""
@@ -822,7 +824,7 @@
       "tags": [
       ],
       "contact": {
-        "email": "newmedia@cms.hhs.gov",
+        "email": "bluebuttonapi@cms.hhs.gov",
         "name": "",
         "URL": "http://www.cms.gov/",
         "phone": ""
