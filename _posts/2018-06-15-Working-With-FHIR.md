@@ -5,11 +5,6 @@ date:  2018-06-17 5:30 PM -0600
 categories: latest code
 permalink: /blog/:title
 badge: blog
-sections:
-  - Earlier Blog Posts
-  - Latest
-  - General
-  - Code
 ctas:
   - 
     title: Home
@@ -177,17 +172,3 @@ Sample data:
 -	Python 3 (download from https://www.python.org/downloads/)
 -	Github.com/ekivemark/bluebutton-callback-handler
 
----
-## Earlier Blog Posts
-
-[Blog Index](/blog/)
-
-## Latest
-
-[Category:Latest](/blog/category/latest.html)
-
-## General
-[Category:General](/blog/category/general.html)
-
-## Code
-[Category:Code](/blog/category/code.html)
