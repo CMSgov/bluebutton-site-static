@@ -1,0 +1,849 @@
+{
+  "version": "2.0.0",
+  "measurementType": {
+    "method": "modules"
+  },
+  "agency": "CMS",
+  "releases": [
+    {
+      "name": "Design System",
+      "version": "1.21.0",
+      "organization": "Office of Communications",
+      "description": "The design system is a set of open source design and front-end development resources for creating Section 508 compliant, responsive, and consistent websites. It builds on the U.S. Web Design Standards and extends it to support additional CSS and React components, utility classes, and a grid framework to allow teams to quickly prototype and build accessible, responsive, production-ready websites.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+        "Utility-classes",
+        "React JS",        
+        "CSS",
+        "Section 508",
+        "US Web Design Standards"
+      ],
+      "contact": {
+        "email": "newmedia@cms.hhs.gov",
+        "name": "",
+        "URL": "http://www.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/design-system",
+      "homepageURL": "https://developer.cms.gov/design-system/",
+      "downloadURL": "https://github.com/CMSgov/design-system/archive/v1.21.0.tar.gz",
+      "languages": [
+        "JavaScript",
+        "CSS"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "2018-04-25",
+        "lastModified": "2018-04-25",
+        "metadataLastUpdated": "2018-04-25"
+      }
+    },
+	{
+      "name": "bluebutton-site-static",
+      "version": "",
+      "organization": "OEDA",
+      "description": "A static Jekyll site for the Blue Button API splash page: https://bluebutton.cms.gov",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-site-static",
+      "homepageURL": "https://bluebutton.cms.gov/",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-site-static/archive/master.zip",
+      "languages": [
+		"HTML",
+        "markdown",
+        "CSS"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-web-server",
+      "version": "17",
+      "organization": "OEDA",
+      "description": "This server serves as a data provider for sharing Medicare claims data with third parties. The server connects to MyMedicare.gov for authentication, and uses OAuth2 to confirm permission grants to external app developers. The data itself comes from a back end FHIR server (https://github.com/CMSgov/bluebutton-data-server), which in turn pulls data from the CMS Chronic Conditions Warehouse (https://www.ccwdata.org) For more information on how to connect to the API implemented here, check out our developer documentation at https://cmsgov.github.io/bluebutton-developer-help/. Our most recent deployment is at https://sandbox.bluebutton.cms.gov, and you can also check out our Google Group at https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api for more details. The information below outlines setting up the server for development or your own environment. For general information on deploying Django see https://docs.djangoproject.com/en/1.11/howto/deployment/.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+		"fhir-server",
+		"oauth-server",
+		"oauth2-server",
+		"oauth-provider",
+		"django"
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-web-server",
+      "homepageURL": "https://bluebutton.cms.gov/",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-web-server/archive/r17.tar.gz",
+      "languages": [
+		"Python",
+		"CSS",
+		"JavaScript",
+		"HTML"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "2018-06-04",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-web-deployment",
+      "version": "",
+      "organization": "OEDA",
+      "description": "Ansible Configuration and Playbooks for Blue Button API.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+		"ansible",
+		"bluebutton",
+		"aws",
+		"ec2",
+		"postgresql",
+		"python",
+		"python3",
+		"django"
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-web-deployment",
+      "homepageURL": "https://bluebutton.cms.gov",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-web-deployment/archive/master.zip",
+      "languages": [
+		"HCL",
+		"Python",
+		"Smarty",
+		"Shell"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-data-model",
+      "version": "",
+      "organization": "OEDA",
+      "description": "Provides a data model and other related utilities for the Blue Button API, which uses RIF data from CMS' Chronic Conditions data warehouse (CCW) to provide a FHIR API for that beneficiary and claims data.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-data-model",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-data-model/archive/master.zip",
+      "languages": [
+		"Java"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-data-pipeline",
+      "version": "",
+      "organization": "OEDA",
+      "description": "Provides an Extract-Transform-Load (ETL) data pipeline, which moves data from CMS' Chronic Conditions data warehouse (CCW) into the CMS Blue Button FHIR Server.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-data-pipeline",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-data-pipeline/archive/master.zip",
+      "languages": [
+		"Java",
+		"Shell"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "2016-11-15",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-data-server",
+      "version": "",
+      "organization": "OEDA",
+      "description": "The CMS Blue Button project provides Medicare beneficiaries with access to their health care data, and supports an ecosystem of third-party applications that can leverage that data. This project provides the FHIR server used as part of Blue Button.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-data-server",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-data-server/archive/master.zip",
+      "languages": [
+		"Java",
+		"Shell"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "2016-11-07",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-parent-pom",
+      "version": "",
+      "organization": "OEDA",
+      "description": "This repo just contains a Maven parent POM and some other build/dev resources that are shared by the CMS/MyMedicare.gov Java projects.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-parent-pom",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-parent-pom/archive/master.zip",
+      "languages": [
+		"Python"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "2016-05-18",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-sample-client-django",
+      "version": "",
+      "organization": "OEDA",
+      "description": "This client demonstrates authenticating to the Blue Buttom API and subsequent FHIR API calls. It demonstrates the OAuth2 Server Side web application flow where a client_secret is used.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-sample-client-django",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-sample-client-django/archive/master.zip",
+      "languages": [
+		"CSS",
+		"JavaScript",
+		"Python",
+		"HTML",
+		"PHP"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-ansible-playbooks-data",
+      "version": "",
+      "organization": "OEDA",
+      "description": "This repository contains the Ansible provisioning, roles, etc. used to setup and manage the Blue Button API's backend systems.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "http://www.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-ansible-playbooks-data",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-ansible-playbooks-data/archive/master.zip",
+      "languages": [
+		"Python",
+		"Shell",
+		"HTML"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-data-server-perf-tests",
+      "version": "",
+      "organization": "OEDA",
+      "description": "This is a test suite that utilizes jmeter, ansible and AWS to make a scalable set of load and performance tests for the FHIR backend test server.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "http://www.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-data-server-perf-tests",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-data-server-perf-tests/archive/master.zip",
+      "languages": [
+		"Java",
+		"Python"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-data-ccw-db-extract",
+      "version": "",
+      "organization": "OEDA",
+      "description": "",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "http://www.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-data-ccw-db-extract",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-data-ccw-db-extract/archive/master.zip",
+      "languages": [
+		"PLSQL"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+    },
+	{
+      "name": "bluebutton-csv-codesets",
+      "version": "",
+      "organization": "OEDA",
+      "description": "This repo contains the codesets and variable metadata that may be found in BlueButton API responses.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-csv-codesets",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-csv-codesets/archive/master.zip",
+      "languages": [
+		"Python"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+	},
+	{
+      "name": "bluebutton-sample-client-nodejs",
+      "version": "",
+      "organization": "OEDA",
+      "description": "This application demonstrates how to connect to the BlueButton Sandbox using an OAuth client token and retrieve patient data from the server using a secured connection.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-sample-client-nodejs",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-sample-client-nodejs/archive/master.zip",
+      "languages": [
+		"JavaScript",
+		"HTML"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+	},
+	{
+      "name": "bluebutton-sample-playbooks-data-sandbox",
+      "version": "",
+      "organization": "OEDA",
+      "description": "Contains the scripts, etc. that setup and manage the Blue Button API's developer sandbox.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "http://www.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-ansible-playbooks-data-sandbox",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-ansible-playbooks-data-sandbox/archive/master.zip",
+      "languages": [
+		"Python",
+		"Shell"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+	},
+	{
+      "name": "bluebutton-developer-help",
+      "version": "",
+      "organization": "OEDA",
+      "description": "Blue Button API Developer Documentation",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "https://bluebutton.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-developer-help",
+      "homepageURL": "https://cmsgov.github.io/bluebutton-developer-help/",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-developer-help/archive/master.zip",
+      "languages": [
+		"CSS",
+		"HTML"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+	},
+	{
+      "name": "bluebutton-functional-tests",
+      "version": "",
+      "organization": "OEDA",
+      "description": "A set of function/integration/system tests for the CMS Blue Button API.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "http://www.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-functional-tests",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-functional-tests/archive/master.zip",
+      "languages": [
+		"Java"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+	},
+	{
+      "name": "bluebutton-text-to-fhir",
+      "version": "",
+      "organization": "OEDA",
+      "description": "Provides a simple utility for parsing CMS/MyMedicare.gov BlueButton files, converting them, and pushing them to a (DSTU 2.1 compliant) FHIR server.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "http://www.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/bluebutton-text-to-fhir",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/bluebutton-text-to-fhir/archive/master.zip",
+      "languages": [
+		"Java",
+		"ANTLR"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+	},
+	{
+      "name": "ansible-role-bluebutton-data-server",
+      "version": "",
+      "organization": "OEDA",
+      "description": "This Ansible role can be used to install and configure the bluebutton-server application on a system.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "http://www.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/ansible-role-bluebutton-data-server",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/ansible-role-bluebutton-data-server/archive/master.zip",
+      "languages": [
+		"Shell"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+	},
+	{
+      "name": "ansible-role-bluebutton-data-pipeline",
+      "version": "",
+      "organization": "OEDA",
+      "description": "This Ansible role can be used to install and configure the bluebutton-data-pipeline application on a system.",
+      
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://github.com/CMSgov/cms-open-source-policy/blob/master/LICENSE",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "governmentWideReuse",
+        "exemptionText": null
+      },
+      "tags": [
+      ],
+      "contact": {
+        "email": "bluebuttonapi@cms.hhs.gov",
+        "name": "",
+        "URL": "http://www.cms.gov/",
+        "phone": ""
+      },
+      "status": "Production",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/CMSgov/ansible-role-bluebutton-data-pipeline",
+      "homepageURL": "",
+      "downloadURL": "https://github.com/CMSgov/ansible-role-bluebutton-data-pipeline/archive/master.zip",
+      "languages": [
+		"Shell"
+      ],
+      "laborHours": 0,
+      
+      "date": {
+        "created": "",
+        "lastModified": "",
+        "metadataLastUpdated": ""
+      }
+	}
+  ]
+}

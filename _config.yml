@@ -47,6 +47,7 @@ exclude:
 include: ["_pages"]
 
 exclude: ["assets/bluebutton-ig/"]
+exclude: ["assets/public_open_source/"]
 
 # Settings for RSS Feed for Blog
 name: Blue Button 2.0 Blog
