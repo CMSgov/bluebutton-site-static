@@ -22,11 +22,6 @@ ctas:
 The Blue Button Team continues to look at performance improvements for the Blue Button 2.0 API. The 
 ExplanationOfBenefit resource can involve a large amount of data being transferred. To improve performance
 in this area we are introducing the ability to apply gzip compression. 
-<<<<<<< HEAD:_posts/2018-06-05-Speed-up-data-transfers.md
-
-The following data types can be enabled for compression:
-=======
->>>>>>> bf8453b4692845312bf1cca5e11d5513d0109728:_posts/2018-06-05-Speed-up-data-transfers.md
 
 The following data types can be enabled for compression:
 
@@ -48,8 +43,6 @@ The change is an opt-in enhancement and will not create any backward compatibili
 implement, or not. 
 
 The change has been implemented in Release r17 that went live on 2018-06-05.
-<<<<<<< HEAD:_posts/2018-06-05-Speed-up-data-transfers.md
-=======
 
 ---
 ## Earlier Blog Posts
@@ -62,7 +55,6 @@ The change has been implemented in Release r17 that went live on 2018-06-05.
 
 ## General
 [Category:General](/blog/category/general.html)
->>>>>>> bf8453b4692845312bf1cca5e11d5513d0109728:_posts/2018-06-05-Speed-up-data-transfers.md
 
 ## Code
 [Category:Code](/blog/category/code.html)
