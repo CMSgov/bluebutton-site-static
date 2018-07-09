@@ -15,16 +15,20 @@
   <div class="ds-l-container">
     <nav class="mobile-nav">
       <ul class="ds-c-list--bare">
+      	<li class="ds-u-padding--2">
+          <a href="{{ 'https://bluebutton.cms.gov/developer/' }}" >Documentation</a>
+        </li>
         <li class="ds-u-padding--2">
           <a href="{{ 'https://bluebutton.cms.gov/bb2dc18/' }}" >Developer Conference</a>
         </li>
         <li class="ds-u-padding--2">
-          <a href="{{ 'https://bluebutton.cms.gov/developer/' }}" >Documentation</a>
-        </li>
-        <li class="ds-u-padding--2">
           <a href="{{ 'https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api' }}" >Support</a>
         </li>
-
+        {% if site.posts.size > 0 %}
+        <li class="ds-u-padding--2">
+          <a href="{{site.posts.first.url}}{% if site.use_dot_html %}.html{% endif %}">Blog</a>
+        </li>
+        {% endif %}
         <li class="ds-u-padding--2">
 
           <a href="{{ 'https://bluebutton.cms.gov/blog' }}" >Blog</a>
