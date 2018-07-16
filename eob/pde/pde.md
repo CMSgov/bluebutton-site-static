@@ -435,6 +435,8 @@ covered by the Medicare Part D benefit.
 						"code": "USD"
 					}
 				}, {
+				
+				
 $10 USD is the portion of the gross drug cost for the prescription drug fill that was not covered by Part D’s catastrophic coverage.
 `gdc_abv_oopt_amt` is 10.0.
 
@@ -452,6 +454,8 @@ $10 USD is the portion of the gross drug cost for the prescription drug fill tha
 						"code": "USD"
 					}
 				}, {
+				
+				
 This prescription was filled when a beneficiary was below the out-of-pocket threshold (OOPT).
 The `dc_abv_oopt_amt` value is 0.
 
@@ -470,7 +474,9 @@ The `dc_abv_oopt_amt` value is 0.
 					}
 				}, {
 
+
 0.0 USD was amount the beneficiary paid for the PDE without being reimbursed by a third party.
+
 
 
 					"category": {
@@ -486,6 +492,8 @@ The `dc_abv_oopt_amt` value is 0.
 						"code": "USD"
 					}
 				}, {
+				
+				
 0.0 USD is the amount of any payment made by other third-party payers that reduces the beneficiary’s liability for the PDE and counts towards Part D’s true out-of-pocket (TrOOP) requirement.
 
 
@@ -503,7 +511,9 @@ The `dc_abv_oopt_amt` value is 0.
 					}
 				}, {
 
+
 0.0 USD was paid for the PDE by Part D low income subsidy.
+
 
 
 					"category": {
@@ -540,6 +550,8 @@ The `dc_abv_oopt_amt` value is 0.
 
 
 10.0 USD is the total cost of the prescription drug event and is taken directly from the original PDE.
+
+
 					"category": {
 						"coding": [{
 							"system": "https://bluebutton.cms.gov/resources/codesystem/adjudication",
