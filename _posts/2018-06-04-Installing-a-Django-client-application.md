@@ -2,7 +2,7 @@
 layout: post_with_category
 title: Install a Django Client
 date:   2018-06-01 09:00:00 -0500
-categories: code latest
+categories: code
 permalink: /blog/:title
 badge: blog
 ctas:

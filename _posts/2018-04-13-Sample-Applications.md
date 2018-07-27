@@ -2,7 +2,7 @@
 layout: post_with_category2
 title: Sample client applications 
 date:   2018-03-26 23:22:00 -0600
-categories: latest code
+categories: code
 badge: api
 permalink: /blog/:title
 ctas:
