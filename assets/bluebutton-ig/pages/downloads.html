@@ -1,22 +1,22 @@
 ---
 # jekyll header
 ---
-{% include header.html %}
+{% include bluebutton-ig/header.html %}
 
   <!-- ============BreadCrumb=============== -->
 
-{% include container-start.html %}
+{% include bluebutton-ig/container-start.html %}
 
   <!-- ============CONTENT CONTENT=============== -->
 
 
-  {% capture my-include %}{% include downloads.md %}{% endcapture %}
+  {% capture my-include %}{% include_relative _includes/downloads.md %}{% endcapture %}
   {{ my-include | markdownify }}
 
 
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
-{% include container-end.html %}
+{% include bluebutton-ig/container-end.html %}
 
-    {% include footer.html %}
+    {% include bluebutton-ig/footer.html %}

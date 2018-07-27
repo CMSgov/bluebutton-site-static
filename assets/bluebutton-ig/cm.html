@@ -2,30 +2,30 @@
 # jekyll header
 ---
 
-{% include header.html %}
+{% include bluebutton-ig/header.html %}
 
 <!-- ============BreadCrumbs=============== -->
 
-{% include container-start.html %}
+{% include bluebutton-ig/container-start.html %}
 
   <!-- ============CONTENT CONTENT=============== -->
 
 <p>
-Formats: <a href="{{[type]}}-{{[id]}}.xml.html">XML</a>, <a href="{{[type]}}-{{[id]}}.json.html">JSON</a>, <a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a>
+Formats: <a href="{{ ig_type }}-{{ ig_id }}.xml.html">XML</a>, <a href="{{ ig_type }}-{{ ig_id }}.json.html">JSON</a>, <a href="{{ ig_type }}-{{ ig_id }}.ttl.html">Turtle</a>
 </p>
 
 
 
-{% include {{[type]}}-{{[name]}}.xhtml %}
+{% include_relative resources/{{ ig_type }}-{{ ig_name }}.xhtml %}
 
 <!--
-{% include {{[type]}}-{{[id]}}-summary.xhtml %}
-{% include {{[type]}}-{{[id]}}-xref.xhtml %}
-{% include {{[type]}}-{{[id]}}-content.xhtml %}
+{% include_relative resources/{{ ig_type }}-{{ ig_id }}-summary.xhtml %}
+{% include_relative resources/{{ ig_type }}-{{ ig_id }}-xref.xhtml %}
+{% include_relative resources/{{ ig_type }}-{{ ig_id }}-content.xhtml %}
 -->
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
-{% include container-end.html %}
+{% include bluebutton-ig/container-end.html %}
 
-{% include footer.html %}
+{% include bluebutton-ig/footer.html %}
