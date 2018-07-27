@@ -186,7 +186,6 @@ Sample data:
 [Blog Index](/blog/)
 
 ## Latest
-
 [Category:Latest](/blog/category/latest.html)
 
 ## General
