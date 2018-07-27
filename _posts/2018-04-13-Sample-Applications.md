@@ -12,6 +12,9 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+extra_links:
+ - title: Blog Index
+   link: /blog/index.html
 ---
 It is often easier to take a sample application and modify 
 it to meet the needs of a project, rather than building something from scratch. 

@@ -12,6 +12,9 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+extra_links:
+ - title: Blog Index
+   link: /blog/index.html
 ---
 In a previous blog post we covered how to 
 [install a Node.js client application](https://bluebutton.cms.gov/blog/Installing-a-Nodejs-client-application.html). 

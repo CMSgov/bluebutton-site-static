@@ -12,6 +12,9 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+extra_links:
+ - title: Blog Index
+   link: /blog/index.html
 ---
 As we prepared to launch our Production Blue Button 2.0 API we wanted to test the API 
 from the perspective of a third-party client application. 
