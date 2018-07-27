@@ -189,7 +189,7 @@ Each one can be thousands of lines long.
 
 That API call will return an Explanation of Benefit that contains many FHIR resources and is typically thousands of lines long.  
 
-[Learn more about the Explanation of Benefits FHIR resource in Blue Button](/eob)
+[Learn more about the Explanation of Benefits FHIR resource in Blue Button](/eob/)
 
 <pre>
 {
@@ -478,11 +478,16 @@ In the API response for Patient 20140000008325 you will find:
 In order to access the full synthetic dataset, you can do the following:
 1. Set up your sandbox application
 2. Log out of [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov).
-3. Access the authorization url at [https://sandbox.bluebutton.cms.gov/v1/o/authorize/](https://sandbox.bluebutton.cms.gov/v1/o/authorize/) - *Note: The last backslash is important*.
+3. Access the authorization url at [https://sandbox.bluebutton.cms.gov/v1/o/authorize/](https://sandbox.bluebutton.cms.gov/v1/o/authorize/) 
+
+    *Note: The last backslash is important*.
+
 4. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY. 
 5. Use one of thirty thousand provided usernames and passwords. 
 
-    The first user is BBUser00000, with password PW00000!, and these sample users continue all the way to BBUser29999, with password PW29999!. *Note: the ! at the end of the password is required*.
+    The first user is BBUser00000, with password PW00000!, and these sample users continue all the way to BBUser29999, with password PW29999!. 
+    
+    *Note: the ! at the end of the password is required*.
 
 6. Approve access for your application, which will now have receive an access token, which can be used in the requests described above.
 
@@ -620,7 +625,7 @@ Medicare Part A and B claims data will be refreshed weekly, Part D data monthly.
 
 Our schedules may vary depending on many things like maintenance, delayed delivery of claims to the CCW data warehouse, or additional data quality processing that's needed.
 
-We recommend you have a daily or weekly job to fetch new claims data for your users.  Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the [Blue Button API Terms of Service](/terms).
+We recommend you have a daily or weekly job to fetch new claims data for your users.  Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the [Blue Button API Terms of Service](/terms/).
 
 **Use of the Blue Button Logo**
 
