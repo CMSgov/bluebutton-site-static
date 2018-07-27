@@ -12,6 +12,9 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+extra_links:
+ - title: Blog Index
+   link: /blog/index.html
 ---
 # Delving into Blue Button 2.0 Data
 The Blue Button 2.0 API publishes detailed claims information for a beneficiary. As a developer I want to be able to understand the data and be able to easily delve into the data that the API returns.

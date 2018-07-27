@@ -53,8 +53,15 @@ layout: default
                     </li>
                   {% endfor %}
               </ul>
-              <p></p>
+              <hr/>
 
+              <ul class="ds-c-list ds-c-list--bare" id="mainNav" aria-labelledby="category-sub-nav">
+                  {% for el in page.extra_links %}
+                  <li><a href="{{ el.link }}" name="{{ el.title }}" class="ds-u-display--block blueberry-lime-link" >
+                      {{ el.title }}</a>
+                  </li>
+                  {% endfor %}
+              </ul>
           </nav>
         </aside>
 
