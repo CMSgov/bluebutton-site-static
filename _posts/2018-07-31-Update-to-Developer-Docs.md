@@ -1,7 +1,7 @@
 ---
 layout: post_with_category
 title: Update to Developer Documentation
-date:  2018-07-31 2:30 PM -0600
+date:  2018-07-30 2:30 PM -0600
 categories: latest general
 permalink: /blog/:title
 badge: blog
@@ -39,14 +39,21 @@ let us know if we can make the steps more bulletproof.
 In order to access the full synthetic dataset, you can do the following:
 1. Set up your sandbox application
 2. Log out of [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov).
-3. Access the authorization url at [https://sandbox.bluebutton.cms.gov/v1/o/authorize/](https://sandbox.bluebutton.cms.gov/v1/o/authorize/) - *Note: The last backslash is important*.
+3. Access the authorization url at [https://sandbox.bluebutton.cms.gov/v1/o/authorize/](https://sandbox.bluebutton.cms.gov/v1/o/authorize/) 
+
+    *Note: The last backslash is important*.
+    *Also remember to append ?client_id={your client_id asigned to the application you registered}*
+
 4. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY. 
 5. Use one of thirty thousand provided usernames and passwords. 
 
-    The first user is BBUser00000, with password PW00000!, and these sample users continue all the way to BBUser29999, with password PW29999!. *Note: the ! at the end of the password is required*.
+    The first user is BBUser00000, with password PW00000!, and these sample users continue all the way to BBUser29999, with password PW29999!. 
+    
+    *Note: the ! at the end of the password is required*.
 
-6. Approve access for your application, which will now have receive an access token, which can be used in the requests described above.
+6. Approve access for your application, which will now receive an access token, which can be used in the requests described above.
 
+7. The authorization completes when you are redirected back to the Redirect_URI you specified when you registered your application.
 
 If you have questions, or comments, head over to the 
 [Google Support Forum](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api) and post it there.
