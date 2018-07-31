@@ -322,3 +322,15 @@ The advantage of jsonpath is the ability to pass wildcards to the query without 
 I have found that the flattened view provided by get_fhir_jdict() is helpful for drilling down through a resource. I can then use  the get_jpath() function to query the data quickly and easily.
 
 ---
+## Earlier Blog Posts
+
+[Blog Index](/blog/)
+
+## Latest
+[Category:Latest](/blog/category/latest.html)
+
+## General
+[Category:General](/blog/category/general.html)
+
+## Code
+[Category:Code](/blog/category/code.html)
