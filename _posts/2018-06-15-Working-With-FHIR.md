@@ -17,6 +17,9 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+extra_links:
+  - title: Blog Index
+    link: /blog/index.html
 ---
 On June 19th, 2018 the Blue Button 2.0 API is being featured in one of the 
 [tutorial sessions](https://www.fhirdevdays.com/boston/schedule/#event-145) 

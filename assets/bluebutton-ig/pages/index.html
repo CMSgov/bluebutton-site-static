@@ -2,18 +2,18 @@
 # jekyll header
 title: Blue Button 2.0 Implementation Guide
 ---
-{% include header.html %}
+{% include bluebutton-ig/header.html %}
 
   <!-- ============BreadCrumb=============== -->
 
-{% include container-start.html %}
+{% include bluebutton-ig/container-start.html %}
 
   <!-- ============CONTENT CONTENT=============== -->
 
-{% capture my-include %}{% include index.md %}{% endcapture %}{{ my-include | markdownify }}
+{% capture my-include %}{% include_relative _includes/index.md %}{% endcapture %}{{ my-include | markdownify }}
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
-{% include container-end.html %}
+{% include bluebutton-ig/container-end.html %}
 
-    {% include footer.html %}
+    {% include bluebutton-ig/footer.html %}

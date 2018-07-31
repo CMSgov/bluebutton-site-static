@@ -1,7 +1,7 @@
 ## {{site.data.fhir.igName}} Implementation Guide
 {:.no_toc}
 
-{% include ci-publish-box.html %}
+{% include_relative _includes/ci-publish-box.html %}
 
 
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
@@ -48,7 +48,7 @@ and guidance are given in a simple narrative summary. A formal hierarchical tabl
 references to appropriate terminologies and examples. In addition each profile has a "Quick Start" section which is intended as an implementer friendly overview of the required search and read
 operations.
 
-{% include list-ballot-profiles.xhtml %}
+{% include_relative _includes/list-ballot-profiles.xhtml %}
 
 [HL7 FHIR]:https://www.hl7.org/fhir/
 [OAuth 2.0]:https://oauth.net/2/

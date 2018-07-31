@@ -3,27 +3,27 @@
 ---
 
 
-  {% include header.html %}
+  {% include bluebutton-ig/header.html %}
 
 
 <!-- ============BreadCrumb=============== -->
 
-{% include container-start.html %}
+{% include bluebutton-ig/container-start.html %}
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<ul class="nav nav-tabs"><li><a href="{{[type]}}-{{[id]}}.html">Content</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a></li><li><a href="{{[type]}}-{{[id]}}.xml.html">XML</a></li><li><a href="{{[type]}}-{{[id]}}.json.html">JSON</a></li></ul>
+<ul class="nav nav-tabs"><li><a href="{{ ig_type }}-{{ ig_id }}.html">Content</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="{{ ig_type }}-{{ ig_id }}-mappings.html">Mappings</a></li><li><a href="{{ ig_type }}-{{ ig_id }}.xml.html">XML</a></li><li><a href="{{ ig_type }}-{{ ig_id }}.json.html">JSON</a></li></ul>
 
-<h4><span class="sectioncount">D.4.1.4<a name="D.4.1.4"> </a></span> StructureDefinition:{{page.type}} - Detailed Descriptions <a title="link to here" class="self-link" href="{{[type]}}-{{[id]}}-definitions.html#D.4.1.4"><img src="target.png"/></a></h4>
+<h4><span class="sectioncount">D.4.1.4<a name="D.4.1.4"> </a></span> StructureDefinition:{{page.type}} - Detailed Descriptions <a title="link to here" class="self-link" href="{{ ig_type }}-{{ ig_id }}-definitions.html#D.4.1.4"><img src="target.png"/></a></h4>
 
-<p>Definitions for the {{[type]}}-{{[id]}} Profile.</p>
+<p>Definitions for the {{ ig_type }}-{{ ig_id }} Profile.</p>
 
-{%include {{[type]}}-{{[id]}}-dict.xhtml%}
+{%include_relative resources/{{ ig_type }}-{{ ig_id }}-dict.xhtml%}
 
 
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
-{% include container-end.html %}
+{% include bluebutton-ig/container-end.html %}
 
-{% include footer.html %}
+{% include bluebutton-ig/footer.html %}

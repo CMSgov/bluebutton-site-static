@@ -12,6 +12,9 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+extra_links:
+ - title: Blog Index
+   link: /blog/index.html
 ---
 **Welcome!** You have found the Blue Button 2.0 Blog. We hope you find the content useful.
 

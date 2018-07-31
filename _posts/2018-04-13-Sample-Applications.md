@@ -2,7 +2,7 @@
 layout: post_with_category2
 title: Sample client applications 
 date:   2018-03-26 23:22:00 -0600
-categories: latest code
+categories: code
 badge: api
 permalink: /blog/:title
 ctas:
@@ -12,6 +12,9 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+extra_links:
+ - title: Blog Index
+   link: /blog/index.html
 ---
 It is often easier to take a sample application and modify 
 it to meet the needs of a project, rather than building something from scratch. 

@@ -17,6 +17,9 @@ ctas:
   -
     title: Sign up for the Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
+extra_links:
+ - title: Blog Index
+   link: /blog/index.html
 ---
 The Blue Button team is continually working to improve the Blue Button 2.0 API and the supporting documentation. When
 the API was announced at HIMSS in March 2018 it created a lot of interest. That interest came not just from developers
