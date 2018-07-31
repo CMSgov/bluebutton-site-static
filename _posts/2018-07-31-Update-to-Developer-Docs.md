@@ -1,7 +1,7 @@
 ---
 layout: post_with_category
 title: Update to Developer Documentation
-date:  2018-07-30 2:30 PM -0600
+date:  2018-07-31 2:30 PM -0600
 categories: latest general
 permalink: /blog/:title
 badge: blog
