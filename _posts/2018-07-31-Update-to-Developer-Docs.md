@@ -21,9 +21,10 @@ extra_links:
 The Google Support forum is a vibrant place. 
 We are always monitoring comments and questions there. 
 
-A question that has come up on a number of occasions has been when developers first 
-start working with the Blue Button 2.0 API because it requires authentication and
-authorization using the OAuth2.0 protocol.
+A question that has come up on a number of occasions has been how to 
+authenticate to the API when a developer first starts working with the 
+Blue Button 2.0 API because it requires authentication and
+authorization using the OAuth2.0 protocol. 
 
 We have updated the [Developer Documentation](https://bluebutton.cms.gov/developers/) to
 make **Step 5** - Accessing Synthetic Data easier to understand.
