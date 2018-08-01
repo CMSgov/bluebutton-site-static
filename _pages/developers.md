@@ -481,6 +481,7 @@ In order to access the full synthetic dataset, you can do the following:
 3. Access the authorization url at [https://sandbox.bluebutton.cms.gov/v1/o/authorize/](https://sandbox.bluebutton.cms.gov/v1/o/authorize/) 
 
     *Note: The last backslash is important*.
+    *Also remember to append ?client_id={your client_id asigned to the application you registered}*
 
 4. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY. 
 5. Use one of thirty thousand provided usernames and passwords. 
@@ -489,7 +490,9 @@ In order to access the full synthetic dataset, you can do the following:
     
     *Note: the ! at the end of the password is required*.
 
-6. Approve access for your application, which will now have receive an access token, which can be used in the requests described above.
+6. Approve access for your application, which will now receive an access token, which can be used in the requests described above.
+
+7. The authorization completes when you are redirected back to the Redirect_URI you specified when you registered your application.
 
 ---
 

@@ -21,7 +21,8 @@ The Blue Button 2.0 API publishes detailed claims information for a beneficiary.
 
 The challenge is that the data we may be looking for can be buried many layers deep inside FHIR resources in a json data structure.
 
-Digging into the data can take some effort.  There must be an easy way to work with this data without having to build complex custom code.  I tend to work with Python as my primary computer language. So I went looking for a library that would work on Python 3 and enable the equivalent of XML's XPath. What i found was the jsonpath_rw_ext library. It can be installed with pip install.
+Digging into the data can take some effort.  There must be an easy way to work with this data without having to build complex custom code.  I tend to work with Python as my primary computer language. So I went looking for a library that would work on Python 3 and enable the equivalent of XML's XPath. 
+What I found was the jsonpath_rw_ext library. It can be installed with pip install.
 
 I also added some code to the BlueButton-sample-client-django app. Check out the "fhir-probe-viewer-v2" code branch. The "probe" app has a file fhirpath.py. There is a function in this file: get_fhir_jdict(). 
 
