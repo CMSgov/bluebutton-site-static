@@ -602,7 +602,7 @@ Next, the following criteria needs to be met and verified by the CMS Blue Button
 - You are a US based company
 - You have a working app or website that can be demoed to the CMS Blue Button API team
 - Your app links to a Privacy statement or Terms of Use that explains to a beneficiary in plain language how you will use their data and how they can cancel their account
-- Your app must serve a Medicare population except in certain general research scenarios (obviously)
+- Your app must serve a Medicare population except in certain general research scenarios 
 - You must articulate your business model and describe the value your app provides a beneficiary
 - You must demonstrate how beneficiary data will be protected within your app
 
