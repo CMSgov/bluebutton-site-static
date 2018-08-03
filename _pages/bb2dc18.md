@@ -1,9 +1,9 @@
 ---
 layout: bbdcv2
 title:  "Blue Button 2.0 Developer Conference"
-subtitle: "August 13, 2018 | Washington, D.C."
+subtitle: "August 13, 2018 - 1pm | Washington, D.C."
 date:   2018-06-20 07:00:00 -0500
-description: "The Blue Button 2.0 Developer Conference will bring together developers to learn, build software, and share insights on how we can leverage claims data to serve the Medicare population."
+description: "The Blue Button 2.0 Developer Conference will bring together developers to learn and share insights on how we can leverage claims data to serve the Medicare population."
 landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
@@ -17,33 +17,67 @@ ctas:
 ---
 
 <h1 style="text-align:center">Blue Button 2.0 Developer Conference 2018</h1>
+
+<h2 style="text-align:center"><b>Speakers</b></h2>
+  <p style="text-align:center">Hear from CMS Administrator Seema Verma and other Administrator Leadership about Blue Button 2.0 and the MyHealthEData initiative.
+  </p>
+
 <table>
 <tr>
-<td>
-<h2 style="text-align:center"><b>Hands-On Sessions</b></h2>
-<p style="text-align:center">Create or build upon your Blue Button 2.0 application, with guidance and real-time feedback from the Blue Button 2.0 team, patient advocates, and other experts.
-</p></td>
-<td>
-<h2 style="text-align:center"><b>Speakers</b></h2>
-<p style="text-align:center">Hear from CMS Administrator Seema Verma and other Administrator Leadership about Blue Button 2.0 and the MyHealthEData initiative.</p></td>
+  <td style="width:50%;vertical-align:text-top;">
+     <h2 style="text-align:center"><b>Lightning Talks</b></h2>
+       <p style="text-align:center">Join discussions on topics such as FHIR, OAuth 2.0, and more.
+       </p>
+  </td>
+  <td style="width:50%;vertical-align:text-top;">
+     <h2 style="text-align:center"><b>Demos</b></h2>
+       <p style="text-align:center">See the many ways in which organizations are integrating with Blue Button 2.0 to improve health outcomes for Medicare beneficiaries.
+       </p>
+  </td>
 </tr>
+</table>
+<table>
+  <h2 style="text-align:center"><b>Breakout Sessions</b></h2>
+
 <tr>
-<td>
-<h2 style="text-align:center"><b>Lightning Talks</b></h2>
-<p style="text-align:center">Join discussions on topics such as FHIR, OAuth 2.0, and more.
-</p></td>
-<td>
-<h2 style="text-align:center"><b>Demos</b></h2>
-<p style="text-align:center">See the many ways in which organizations are integrating with Blue Button 2.0 to improve health outcomes for Medicare beneficiaries.</p>
-</td>
+  <td style="width:33%;vertical-align:text-top;">
+    <p style="text-align:center;vertical-align:text-top;">
+      <ul>
+        <li><b>Blue Button 2.0 and FHIR (where it's all heading)</b> with Mark Scrimshire and Cat Greim
+        </li>
+        <li><b>MyHealthEData and Interoperability</b> with Alex Mugge and Joy Day
+        </li>
+      </ul>  
+    </p>
+  </td>
+  <td style="width:33%;vertical-align:text-top;">
+    <p style="text-align:center;vertical-align:text-top;">
+      <ul>
+        <li><b>Overview of Medicare Claims Data</b> with Karl Davis
+        </li>
+        <li><b>Medicare Beneficiary User Research</b> with Allyssa Allen<br/>
+        </li>
+      </ul>    
+    </p>  
+  </td>
+  <td style="width:33%;vertical-align:text-top;">
+    <p style="text-align:center;vertical-align:text-top;">
+      <ul>
+        <li><b>Sync for Science</b> with Josh Mandel and Andrew Bjonnes
+        </li>
+        <li><b>API Design</b> with Kin Lane<br/>
+        </li>
+      </ul>        
+    </p>  
+  </td>
 </tr>
 </table>
 
-<h2 style="text-align:center"><b>Registration</b></h2>
-<p style="text-align:center">Registration for the Blue Button 2.0 Developer Conference is now open. This free event will be held at the General Services Administration building located at 1800 F St. NW in Washington, DC.
+<h2 style="text-align:center"><b>Venue</b></h2>
+<p style="text-align:center">
+The event is being held at the Eisenhower Executive Office Building, 1650 Pennsylvania Ave NW, Washington, DC 20502 
 </p>
-
-<h2 style="text-align:center"><a href="https://www.cvent.com/events/blue-button-2-0-developer-conference-bbdc-/registration-72c410fbc8d941889feb7ad3d1dd5d17.aspx?tw=AF-11-0A-66-6B-62-2E-E8-F9-16-B4-9D-61-24-C9-C7&fqp=true" target="_blank">Register for Blue Button 2.0 Developer Conference</a></h2>
+<p style="text-align:center"><b>Registration for the Blue Button 2.0 Developer Conference is now closed.</b></p>
 
 <hr/>
 <h1 style="text-align:center">Blue Button 2.0 Snapshot</h1>
