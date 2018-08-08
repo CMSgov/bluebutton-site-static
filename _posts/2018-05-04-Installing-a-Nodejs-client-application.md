@@ -150,7 +150,7 @@ Save the file.
 After updating serverAuth.js  you can run the application:
 
 ```
-node app.js -t localhost -p 8001
+node app.js -t http://localhost -p 8001
 ```
 
 ## Get a Beneficiary Record
