@@ -43,7 +43,7 @@ ctas:
   <td style="width:33%;vertical-align:text-top;">
     <p style="text-align:center;vertical-align:text-top;">
       <ul>
-        <li><b>Blue Button 2.0 and FHIR (where it's all heading)</b> with Mark Scrimshire and Cat Greim
+        <li><b>Blue Button 2.0 and FHIR (where it's all heading)</b>  with Mark Scrimshire and Cat Greim
         </li>
         <li><b>MyHealthEData and Interoperability</b> with Alex Mugge and Joy Day
         </li>
@@ -55,7 +55,7 @@ ctas:
       <ul>
         <li><b>Overview of Medicare Claims Data</b> with Karl Davis
         </li>
-        <li><b>Medicare Beneficiary User Research</b> with Allyssa Allen<br/>
+        <li><b>Medicare Beneficiary User Research</b>  with Allyssa Allen<br/>
         </li>
       </ul>    
     </p>  
@@ -111,4 +111,4 @@ The event is being held at the Eisenhower Executive Office Building, 1650 Pennsy
 
 <p></p>
 <p style="text-align:center">Follow news about the Blue Button 2.0 Developer Conference at the twitter hashtag: 
-<a href="https://twitter.com/search?q=%23bb2dc18&src=typd" target="_blank">#BB2DC18</a>.</p>
+<a href="https://twitter.com/search?q=%23bbdc18&src=typd" target="_blank">#BBDC18</a>.</p>
