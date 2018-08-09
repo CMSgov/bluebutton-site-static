@@ -65,7 +65,7 @@ ctas:
       <ul>
         <li><b>Sync for Science</b> with Josh Mandel and Andrew Bjonnes
         </li>
-        <li><b>API Design</b><br/> with Kin Lane
+        <li><b>API Design</b> with Kin Lane<br/>
         </li>
       </ul>        
     </p>  
