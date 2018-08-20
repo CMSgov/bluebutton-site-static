@@ -1,5 +1,5 @@
 
-#  Welcome to the Blue Button Implemenation Guide Repository
+#  Welcome to the Blue Button Implementation Guide Repository
 
 ### Updating
 
