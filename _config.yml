@@ -28,6 +28,7 @@ plugins:
   - jekyll-feed
 
 sass:
+  style: compressed
   load_paths:
       - _sass
       - node_modules
