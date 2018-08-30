@@ -17,8 +17,9 @@ extra_links:
    link: /blog/index.html
 ---
 # Roadmap Q&A
-On August 13th the First ever Blue Button Developer Conference took place at the White House. 
-One of the sessions was a Roadmap session where the Blue Button 2.0 Team laid out some of 
+On August 13th the inaugural Blue Button Developer Conference took place at the White House
+Eisenhower Executive Office Building (EEOB). One of the sessions was a Roadmap session 
+where the Blue Button 2.0 Team laid-out some of 
 the near term objectives for improvements to the Blue Button 2.0 API.  
 However, the more important part of the session was an opportunity to hear from our 
 developer community about the features that you all would like to see in the API.
@@ -34,10 +35,10 @@ In this blog post we will answer many of the questions raised at the Blue Button
 Conference Roadmap session.
 
 ## Q: Will test accounts be added to the Production API so I don't have to bug my In-laws to help me with testing?
-A: Yes - We are adding the pool of synthetic beneficiaries and their claims from the 
+A: Yes - We are adding a pool of synthetic beneficiaries and their claims from the 
 sandbox environment to our production API. This means that when your app is approved 
 for production access you can use the synthetic beneficiary accounts to validate your 
-app in production. 
+app in production. Stay tuned, this will be announced in a future blog post.
 
 ## Q: Will we add Medicaid data to the Blue Button 2.0 API? 
 A: At this time we have no plans to add Medicaid data to the Blue Button 2.0 API. 
