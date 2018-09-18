@@ -1,5 +1,5 @@
 ---
-layout: post_with_category
+layout: post
 title: Blue Button 2.0 Implementation Guide
 date:   2018-06-07 09:00:00 -0500
 categories: latest
