@@ -1,5 +1,5 @@
 ---
-layout: post_with_category2
+layout: post
 title: How Beneficiaries Authorize an App
 date:   2018-05-19 23:00:00 -0600
 categories: latest general

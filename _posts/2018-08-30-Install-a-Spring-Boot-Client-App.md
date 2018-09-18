@@ -1,5 +1,5 @@
 ---
-layout: post_with_category
+layout: post
 title: Install a Spring Boot Client App
 date:  2018-08-30 6:30 AM -0600
 categories: latest code
