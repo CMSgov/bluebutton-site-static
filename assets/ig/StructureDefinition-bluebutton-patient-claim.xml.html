@@ -21,13 +21,7 @@
   <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
 	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
-  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
-  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
-
+<!-- Favicons -->    <link rel="shortcut icon" href="assets/ico/favicon.ico"/>
   <script>
   window.tealiumEnvironment = "prod";
   </script>
@@ -37,18 +31,21 @@
 <body>
 
  <div id="segment-header" class="segment">  <!-- segment-header -->
-  <div class="container">  <!-- container -->
-   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets/images/fhir-logo-www.png"/></a>
-<div>
-<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
-     <img alt="visit the hl7 website" width="42" height="50" src="assets/images/hl7-logo.png"/>
-    </a>
-   </div>
-   <div id="ig-status" style="font-size:24px;padding-top: 20px;">
-<b>Blue Button 2.0 Implementation Guide</b>
-<!-- (Release 1.1.0 ) -->
-<!-- (Release 1.1.0 Ballot ) -->
-</div>
+     <div class="container">  <!-- container -->
+         <div class="col-3">
+             <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
+         </div>
+         <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
+             <b>Blue Button 2.0 Implementation Guide</b>
+             <!-- (Release 1.1.0 ) -->
+             <!-- (Release 1.1.0 Ballot ) -->
+         </div>
+         <div class="col-3" style="margin-right:0;float:right">
+             <a id="cms-logo" no-external="true" href="http://www.cms.gov">
+                 <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
+             </a>
+         </div>
+     </div>
  </div>
 <!--
    <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
