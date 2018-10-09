@@ -21,11 +21,7 @@ layout: default
               {% if page.badge %}<span class="ds-c-badge ds-u-text-transform--uppercase">{{ page.badge | escape }}</span>{% endif %}
               <h3 class="ds-display">{{ page.title | escape }}</h3>
               {% if page.description %}<p class="ds-text--lead">{{ page.description | escape }}</p>{% endif %}
-              {% if page.excerpt %}<div class="ds-l-row">
-                      <div class="ds-l-col--1 ds-u-color--white ds-u-font-size--title"><img height="54" src='{{ "/assets/img/blog/quotes-open.png" | absolute_url }}'></div>
-                      <div class="ds-l-col--6 ds-u-display--white ds-u-sm-display--white ds-u-color--white" role="complementary"><i>{{page.excerpt}}</i></div>
-                      <div class="ds-l-col--1 ds-u-color--white ds-u-font-size--title"><img height="54" src='{{ "/assets/img/blog/quotes-close.png" | absolute_url }}'></div>
-                  </div>{% endif %}
+
           </div>
         </div>
       </div>
