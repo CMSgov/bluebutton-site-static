@@ -36,7 +36,7 @@ The Blue Button API uses the [HL7 FHIR standard](https://www.hl7.org/fhir/) for 
 **Wed Mar 7th:**
 
 Blue Button API Technical Experts. Location: CMS Booth #10110. Wed., March 7, 10:30 a.m.–11:30 a.m. Presented by: Mark Scrimshire, Karl Davis
-
+on
 Blue Button API. Location: CMS Booth #10110. Wed., March 7, 2:30 p.m.–3:30 p.m. Presented by: Blue Button API Team
 
 Blue Button API. Location: Connected Health Theatre, Level 2, Bellini meeting room 8700. Wed., March 7, 4:00 p.m.–4:30 p.m. Presented by: Mark Scrimshire

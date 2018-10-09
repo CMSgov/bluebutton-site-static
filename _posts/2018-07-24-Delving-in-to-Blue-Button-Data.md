@@ -1,5 +1,5 @@
 ---
-layout: post_with_category
+layout: post
 title: Delving in to Blue Button Data
 date:  2018-07-24 2:30 PM -0600
 categories: latest code

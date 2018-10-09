@@ -1,5 +1,5 @@
 ---
-layout: post_with_category
+layout: post
 title: Blue Button at HL7 FHIR DevDays
 date:  2018-06-17 5:30 PM -0600
 categories: latest code

@@ -1,5 +1,5 @@
 ---
-layout: post_with_category2
+layout: post
 title: Welcome to the Blue Button Blog 
 date:   2018-03-26 23:22:00 -0600
 categories: general
