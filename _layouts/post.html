@@ -2,126 +2,45 @@
 layout: default
 ---
 <div class="ds-base">
-	<header class="main-header ds-u-margin-bottom--2 ds-u-lg-margin-bottom--5">
-		<div class="solid-container ds-u-padding-y--2 ds-u-lg-padding-y--5">
-			<div class="ds-l-container">
-				<div class="ds-l-row">
-					<div class="ds-u-color--white ds-l-sm-cold--12 ds-l-xl-col--10 ds-u-margin-left--auto ds-u-padding-x--4">
-						
-						<!-- Site Section: Blog Title -->
-						<h1 class="ds-display">{{ "Blue Button Blog" | escape }}</h1>
+  <header class="main-header">
+    <div class="solid-container ds-u-padding-y--1 ds-u-lg-padding-y--1">
+      <div class="ds-l-container">
+        <div class="ds-l-row">
+          <div class="ds-u-color--white ds-l-sm-cold--12 ds-l-xl-col--10 ds-u-margin-left--auto">
+              <div class="ctas">
+                  {% for item in page.ctas limit:3 %}
+                      {% if item.link contains '://' %}<a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_blank">{{ item.title }}</a>
+                      {% else %}<a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self" >{{ item.title }}</a>{% endif %}
+                  {% endfor %}
+                  <p class="ds-u-l-display--white">
+                      {% if post %}{% assign categories = post.categories %}{% else %}{% assign categories = page.categories %}{% endif %}
+                      {% if categories %}Categories:&nbsp;{% endif %}
+                      {% for category in categories %}<a href="{{site.baseurl}}/categories.html/#{{category|slugize}}" class="ds-u-color--white">[{{ category }}]</a>&nbsp;
+                      {% endfor %}</p>
+              </div>
+              {% if page.badge %}<span class="ds-c-badge ds-u-text-transform--uppercase">{{ page.badge | escape }}</span>{% endif %}
+              <h3 class="ds-display">{{ page.title | escape }}</h3>
+              {% if page.description %}<p class="ds-text--lead">{{ page.description | escape }}</p>{% endif %}
 
-						<!-- Site Section Description -->
-						<p class="ds-text--lead">
-							{{ page.description | escape }}
-						</p>
-
-						<div class="ctas">
-							{% for item in page.ctas limit:2 %}
-							<a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self">{{ item.title }} &rarr;</a>
-							{% endfor %}
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="gradient-container ds-u-padding-y--2 ds-u-lg-padding-y--5 ds-u-display--none ds-u-md-display--block">
-		</div>
-	</header>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gradient-container ds-u-padding-y--1 ds-u-lg-padding-y--1 ds-u-display--none ds-u-md-display--block">
+    </div>
+  </header>
 </div>
 
-<section class="ds-l-container ds-base">
-	<div class="ds-l-row">
+  <section class="ds-l-container ds-base">
+      <div class="ds-l-row">
 
-		<aside class="ds-l-col--3 ds-u-margin-left--right ds-u-display--none ds-u-sm-display--block" role="complementary">
+        <article class="ds-l-col--12 ds-l-sm-col--10 {{ page.badge | slugify }}" id="main" role="main">
+          {{ content }}
+          <a href="#site-top" class="ds-c-button ds-u-margin-top--4">Back to top</a>
+          <a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self" >Subscribe to RSS Feed</a>
+          <a class="ds-c-button" href="https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" aria-label="Comments via Google Group" target="_self" >Comments via Google Group</a>
 
-            <nav class="subnav">
-              <h5 class="sr-only" id="page-sub-nav">Page navigation links</h5>
-              {% if post %}{% assign blogcats = post.categories %}{% else %}{% assign blogcats = page.categories %}{% endif %}
-              <ul class="ds-c-list ds-c-list--bare" id="mainNav" aria-labelledby="category-sub-nav">
-                  {% for category in site.categories %}
-                    {% assign flagcat = "False" %}
-                    {% capture category_name %}{{ category | first }}{% endcapture %}
-                    {% for blogcat in blogcats %}
-                        {% if blogcat == category_name %}
-                            {% assign flagcat = "True" %}
-                        {% endif %}
-                    {% endfor %}
-                    <li><a href="/blog/category/{{ category_name }}{% if site.use_dot_html %}.html{% endif %}" name="{{ category_name }}" class="ds-u-display--block blueberry-lime-link" >
-                        {% if flagcat == "True" %}
-                            <b>◉&nbsp;{{ category_name | capitalize }}&nbsp;</b>
-                        {% else %}
-                            ◎&nbsp;{{ category_name | capitalize }}&nbsp;
-                        {% endif %}
-                        </a>
-                    </li>
-                  {% endfor %}
-              </ul>
-              <hr/>
+        </article>
 
-              <ul class="ds-c-list ds-c-list--bare" id="mainNav" aria-labelledby="category-sub-nav">
-                  {% for el in page.extra_links %}
-                  <li><a href="{{ el.link }}" name="{{ el.title }}" class="ds-u-display--block blueberry-lime-link" >
-                      {{ el.title }}</a>
-                  </li>
-                  {% endfor %}
-              </ul>
-          </nav>
-
-		</aside>
-		
-		<article class="ds-l-col--12 ds-l-sm-col--7 {{ page.badge | slugify }}" id="main" role="main" itemscope itemtype="http://schema.org/blogPosting">
-			<!-- Blog Post Title -->
-			<h2 class="ds-title ds-u-leading--reset" itemprop="headline">{{ page.title | escape }}</h2>
-
-			<!-- Blog Post Date -->
-			<div class="ds-u-margin-y--2 ds-u-display--none" itemprop="datePublished" content="{{ page.date }}">
-				{{ page.date | date: '%B %d, %Y' }}
-			</div>
-
-			<!-- Blog Post Date Modified (Keeping as the same as date for now, just hidden) -->
-			<div class="ds-u-display--none" itemprop="dateModified" content="{{ page.date }}">
-				{{ page.date | date: '%B %d, %Y' }}
-			</div>
-
-			<!-- Blog Post Image -->
-			<div class="ds-u-display--none">
-				<img itemprop="image" src="/assets/img/default-share-image.jpg" alt="Blue Button Placeholder Logo" />
-			</div>
-			
-			<!-- Blog Author (Currently Hidden From Page) -->
-			<div class="ds-u-display--none" itemtype="http://schema.org/Person" itemprop="author">
-				Mark Scrimshire
-			</div>
-
-			<!-- Blog Publisher -->
-			<div class="ds-u-display--none" itemscope itemtype="http://schema.org/Organization" itemprop="publisher">
-				<div itemprop="name">
-					Blue Button
-				</div>
-				<div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-					<span itemprop="url">https://www.bluebutton.cms.gov/assets/img/default-share-image.jpg</span>
-				</div>
-			</div>
-
-			<!-- Main Entity of Page: Used to describe the main topic to Google -->
-			<div class="ds-u-display--none" itemprop="mainEntityOfPage">
-				CMS Blue Button 2.0 API
-			</div>
-
-			<hr/>
-
-			<!-- Blog Post Content -->
-			<div itemprop="articleBody">
-				{{ content }}
-			</div>
-
-			<div class="ds-l-col--9 ds-l-sm-col--8 {{ page.badge | slugify }}" id="bottom" role="bottom">
-				<a href="#site-top" class="ds-c-button ds-u-margin-top--4">Back to top</a>
-				<a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self" >Subscribe to RSS Feed</a>
-				<a class="ds-c-button" href="https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" aria-label="Comments via Google Group" target="_self" >Comments via Google Group</a>
-			</div>
-		</article>
-	</div>
-</section>
+      </div>
+  </section>
