@@ -1,7 +1,7 @@
 ---
-layout: post_with_category
+layout: post
 title: Install a Ruby on Rails Client App
-date:  2018-09-10 6:30 AM -0600
+date:  2018-10-24 6:30 AM -0600
 categories: latest code
 permalink: /blog/:title
 badge: blog
@@ -17,13 +17,12 @@ extra_links:
    link: /blog/index.html
 ---
 ## Installing a Client App using Docker
-As we prepared for our inaugural Blue Button 2.0 Developer Conference we wanted to add to our 
-portfolio of sample client applications.  
-Check out our new sample applications. 
-The links to the GitHub repositories are in an earlier blog post here: 
+We’ve added to our portfolio of sample client applications. 
+Check out our new sample applications. The links to the GitHub 
+repositories are in an earlier blog post here 
 [https://bluebutton.cms.gov/blog/More-Sample-Applications.html](https://bluebutton.cms.gov/blog/More-Sample-Applications.html)
 
-As promised in that post, this is the third of a series of posts where we work step-by-step 
+As promised in that post, this is the third in a series of posts where we work step-by-step 
 through installing and configuring each sample application.
 
 Today we will focus on the Ruby on Rails client. This post is slightly different from the
@@ -137,7 +136,7 @@ docker-compose up
 ``` 
 
 When you build the docker image for the first time it will run through an 8 step build
-process. This can take a about 5 minutes. Time to make a cup of tea...
+process. This can take about 5 minutes. Time to make a cup of tea...
 
 The process will be complete when you see messages that look something like this:
 
@@ -177,9 +176,10 @@ The emphasis was *not* on creating a slick user interface.
 We leave that to you as developers. However, if you are interested in 
 implementing an interface that is accessible for people with disabilities, 
 what is often referred to as "508-compliant", then check out the 
-Open Source CMS Design System ( [https://design.cms.gov](https://design.cms.gov) ). 
-It is an equivalent to Twitter's Bootstrap that provides User Interface resources 
-for creating 508-compliant web sites.
+CMS Design System ( [https://design.cms.gov](https://design.cms.gov) ). 
+It is a set of open source design and front-end development resources 
+for creating Section 508 compliant, responsive, and consistent websites, 
+building on the U.S. Web Design Standards.
 
 As always, we welcome your comments and feedback. Just head over to the 
 [Google Support Forum](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api) 

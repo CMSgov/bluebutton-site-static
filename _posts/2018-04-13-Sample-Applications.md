@@ -1,5 +1,5 @@
 ---
-layout: post_with_category2
+layout: post
 title: Sample client applications 
 date:   2018-03-26 23:22:00 -0600
 categories: code
