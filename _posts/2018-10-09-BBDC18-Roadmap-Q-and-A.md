@@ -29,7 +29,7 @@ information as soon as possible.
 
 In this blog post we will answer questions raised thus far.
 
-## Q: Will test accounts be added to the Production API so I don't have to bug my In-laws to help me with testing?
+## Q: Will test accounts be added to the Production API?
 **A: Yes**.  We are adding a pool of synthetic beneficiaries and their claims from the 
 sandbox environment to our production API. This means that when your app is approved 
 for production access you can use the synthetic beneficiary accounts to validate your 
