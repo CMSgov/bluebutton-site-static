@@ -2,7 +2,7 @@
 layout: post
 title: Speed up data transfers
 date:   2018-06-05 09:19 PM -0600
-categories: latest code
+categories: code
 permalink: /blog/:title
 badge: blog
 sections:
