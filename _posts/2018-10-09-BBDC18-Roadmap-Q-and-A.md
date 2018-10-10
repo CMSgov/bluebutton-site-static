@@ -39,20 +39,17 @@ app in production. Stay tuned, this will be announced in a future blog post.
 **A:**  At this time we have no plans to add Medicaid data to the Blue Button 2.0 API.
  
 ## Q: Blue Button currently only includes the National Drug Code for a drug. Will descriptions be added to explain these codes?
-**A: Yes**.  We are in the process of adding drug code descriptions to the Blue Button 2.0 API.
-
-## Q: Will descriptions for HCPC and CPT be added to the Blue Button 2.0 API?
-**A: Yes**.  We are in the process of adding NDC code descriptions to the 
-Blue Button 2.0 API.  These descriptions will be located in each FHIR 
-Coding element’s “display” field and will include the drug’s proprietary
-name and its substance name.
+**A: Yes**.  We are in the process of adding drug code descriptions to the 
+Blue Button 2.0 API. These descriptions will be located in each FHIR Coding 
+element’s “display” field and will include the drug’s proprietary name 
+and its substance name.
 
 ## Q: Will descriptions for other coding systems be added to the Blue Button 2.0 API?
-**A: Yes**.  Once we complete work on adding the National Drug Code we plan 
-to move on to add brief human-readable descriptions for some of the other 
-coding systems used in the Blue Button API’s claims data. This includes: 
-ICD diagnosis and procedure codes, HCPCS Level I and Level II codes, 
-and perhaps others.
+**A: Yes**.  Once we complete work on adding the National Drug Code we 
+plan to move on to add brief human-readable descriptions for some of the 
+other coding systems used in the Blue Button API’s claims data. 
+This includes: ICD diagnosis and procedure codes, HCPCS Level I 
+and Level II codes, and perhaps others.
 
 ## Q: How can provenance of data transferred by the Blue Button API be assured?
 **A:**  The Blue Button Team is committed to building a Developer-friendly, standards-based API. 
