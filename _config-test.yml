@@ -4,3 +4,7 @@ url: "http://test.bluebutton.cms.gov.s3-website-us-east-1.amazonaws.com"
 # Define "use_dot_html" = true in environment _config file
 # default should be false i.e. not defined
 use_dot_html: true
+
+# CSS REPO TRIGGER
+# This is the test URL for the CSS repo on AWS
+cssurl: https://s3.amazonaws.com/test.bluebutton.cms.gov/assets/css/static-main.css
