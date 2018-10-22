@@ -19,6 +19,10 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+# CSS REPO TRIGGER
+# By default, this will look for CSS files locally here. For Test and Prod, this URL is updated to point to AWS
+cssurl: bluebutton-css/dist/static-main.css
+
 # permalink: /blog/:title/
 permalink: /blog/:title
 # Build settings
