@@ -7,4 +7,4 @@ use_dot_html: true
 
 # CSS REPO TRIGGER
 # This is the prod URL for the CSS repo on AWS
-cssurl: assets/main.css
+cssurl: assets/css/static-main.css
