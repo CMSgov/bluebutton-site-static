@@ -7,4 +7,4 @@ use_dot_html: true
 
 # CSS REPO TRIGGER
 # This is the prod URL for the CSS repo on AWS
-cssurl: https://s3.amazonaws.com/content-prod-bluebutton-cms-gov/static/statsite/assets/main.css
+cssurl: assets/main.css

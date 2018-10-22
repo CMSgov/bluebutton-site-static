@@ -7,4 +7,4 @@ use_dot_html: true
 
 # CSS REPO TRIGGER
 # This is the test URL for the CSS repo on AWS
-cssurl: https://s3.amazonaws.com/test.bluebutton.cms.gov/assets/css/static-main.css
+cssurl: assets/css/static-main.css
