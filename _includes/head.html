@@ -22,11 +22,11 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
   <link href='https://bluebutton.cms.gov/feed.xml' rel='alternate' type='application/atom+xml'>
 
-  <link rel="stylesheet" href="{{ site.cssurl }}" />
+  <link rel="stylesheet" href="{{ site.cssurl | relative_url }}" />
 
   <script>
     window.tealiumEnvironment = "{{ site.tealium_env }}";
   </script>
-  
+
   <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
 </head>
