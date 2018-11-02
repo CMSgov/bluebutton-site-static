@@ -6,21 +6,47 @@ layout: default
     <div class="solid-container ds-u-padding-y--1 ds-u-lg-padding-y--1">
       <div class="ds-l-container">
         <div class="ds-l-row">
-          <div class="ds-u-color--white ds-l-sm-cold--12 ds-l-xl-col--10 ds-u-margin-left--auto">
-              <div class="ctas">
-                  {% for item in page.ctas limit:3 %}
-                      {% if item.link contains '://' %}<a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_blank">{{ item.title }}</a>
-                      {% else %}<a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self" >{{ item.title }}</a>{% endif %}
-                  {% endfor %}
-                  <p class="ds-u-l-display--white">
-                      {% if post %}{% assign categories = post.categories %}{% else %}{% assign categories = page.categories %}{% endif %}
-                      {% if categories %}Categories:&nbsp;{% endif %}
-                      {% for category in categories %}<a href="{{site.baseurl}}/categories.html#{{category|slugize}}" class="ds-u-color--white">[{{ category }}]</a>&nbsp;
-                      {% endfor %}</p>
-              </div>
-              {% if page.badge %}<span class="ds-c-badge ds-u-text-transform--uppercase">{{ page.badge | escape }}</span>{% endif %}
-              <h3 class="ds-display">{{ page.title | escape }}</h3>
+          <div class="ds-u-color--white ds-l-sm-col--12 ds-l-xl-col--10 ds-u-margin-left--auto">
+
+              <!-- Page Badge -->
+              {% if page.badge %}
+                <span class="ds-c-badge ds-u-text-transform--uppercase ds-u-margin-y--2">
+                  {{ page.badge | escape }}
+                </span>
+              {% endif %}
+
+              <!-- Page Title -->
+              <h1 class="ds-display ds-u-leading--reset">{{ page.title | escape }}</h1>
+
+              <!-- Page Description -->
               {% if page.description %}<p class="ds-text--lead">{{ page.description | escape }}</p>{% endif %}
+
+              <!-- Call to Action Buttons -->
+              <div class="ctas ds-u-margin-y--4">
+                {% for item in page.ctas limit:3 %}
+                  {% if item.link contains '://' %}
+                    <a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_blank">{{ item.title }}</a>
+                  {% else %}
+                    <a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self" >{{ item.title }}</a>
+                  {% endif %}
+                {% endfor %}
+
+                <!-- Post Categories -->
+                <!-- <div class="ds-u-l-display--white ds-u-margin-y--2">
+                  {% if post %}
+                    {% assign categories = post.categories %}
+                  {% else %}
+                    {% assign categories = page.categories %}
+                  {% endif %}
+                  {% if categories %}
+                    Post Categories:&nbsp;
+                  {% endif %}
+                  {% for category in categories %}
+                    <a href="{{site.baseurl}}/categories.html#{{category|slugize}}" class="ds-u-color--white">{{ category }}</a>&nbsp;
+                  {% endfor %}
+                </div> -->
+
+              </div>
            </div>
         </div>
       </div>
