@@ -6,7 +6,7 @@ categories: code
 permalink: /blog/:title
 badge: blog
 ctas:
-  - 
+  -
     title: Home
     link: /
   -
@@ -16,15 +16,15 @@ extra_links:
  - title: Blog Index
    link: /blog/index.html
 ---
-# Delving into Blue Button 2.0 Data
+
 The Blue Button 2.0 API publishes detailed claims information for a beneficiary. As a developer I want to be able to understand the data and be able to easily delve into the data that the API returns.
 
 The challenge is that the data we may be looking for can be buried many layers deep inside FHIR resources in a json data structure.
 
-Digging into the data can take some effort.  There must be an easy way to work with this data without having to build complex custom code.  I tend to work with Python as my primary computer language. So I went looking for a library that would work on Python 3 and enable the equivalent of XML's XPath. 
+Digging into the data can take some effort.  There must be an easy way to work with this data without having to build complex custom code.  I tend to work with Python as my primary computer language. So I went looking for a library that would work on Python 3 and enable the equivalent of XML's XPath.
 What I found was the jsonpath_rw_ext library. It can be installed with pip install.
 
-I also added some code to the BlueButton-sample-client-django app. Check out the "fhir-probe-viewer-v2" code branch. The "probe" app has a file fhirpath.py. There is a function in this file: get_fhir_jdict(). 
+I also added some code to the BlueButton-sample-client-django app. Check out the "fhir-probe-viewer-v2" code branch. The "probe" app has a file fhirpath.py. There is a function in this file: get_fhir_jdict().
 
 ## get_fhir_jdict()
 If you pass a FHIR resource as a json dictionary to this function it will drill down through the resource and return a list of dictionary entries that describes each element in the FHIR resource.
@@ -303,7 +303,7 @@ Each dictionary entry in the list has the following attributes:
 
 We could browse this code but an alternative is to use the pathName information to construct  a query into the json data and get results back.
 
-One advantage of jsonpath is the ability to do wildcard searches. 
+One advantage of jsonpath is the ability to do wildcard searches.
 Let's try an example:
 ```python
 from apps.probie.fhirpath import get_jpath
