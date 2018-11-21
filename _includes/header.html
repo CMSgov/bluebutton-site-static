@@ -1,45 +1,47 @@
-
-<header class="ds-base ds-u-fill--gray-lightest ds-u-padding-y--2" id="site-top">
-  <div class="ds-l-container ds-u-display--flex ds-u-justify-content--between ds-u-align-items--center">
-    <div class="ds-u-justify-content--start ds-u-display--flex">
-      <nav class="other-main-nav ds-u-font-weight--bold">
-        <ul>
-          <li aria-label="Blue Button 2.0 logo">
-            {% include blue-button-logo.svg %}
-            <a href="{{ '/blue button 2.0' | relative_url }}" > </a>
-          </li>
-        </ul>
-    </div>
-    <div class="ds-u-justify-content--end ds-u-display--flex">
-      <nav class="main-nav ds-u-font-weight--bold">
-        <h5 class="sr-only" id="desktop-nav">Main site navigation</h5>
-        <ul aria-labelledby="desktop-nav">
-          <li>
-            <a href="{{ '/bb2dc18' }}" >Developer Conference</a>
-          </li>
-          <li>
-            <a href="{{ '/developers' }}" >Documentation</a>
-          </li>
-          <li>
-            <a href="{{ 'https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api' }}" >Support</a>
-          </li>
-          {% if site.posts.size > 0 %}
-            <li>
-              <a href="{{site.posts.first.url}}{% if site.use_dot_html %}.html{% endif %}">Blog</a>
-            </li>
-          {% endif %}
-          <li aria-label="icon for login link">
-            {% include avatar-mini.svg %}
-            <a href="{{ 'https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login' }}" >Login</a>
-          </li>
-
-          <li aria-label="icon for sign up link">
-            {% include login-icon.svg %}
-            <a href="{{ 'https://sandbox.bluebutton.cms.gov/v1/accounts/create' }}" >Sign up</a>
-          </li>
-
-        </ul>
-      </nav>
-    </div>
+<!-- Header -->
+<header id="site-top">
+  <!-- Desktop Navigation -->
+  <div class="ds-c-desktop-nav">
+    <!-- Logo Link Container -->
+    <a class="logo-link-container" href="/">
+      <!-- Arrow Icon -->
+      <svg fill="none" height="35" viewBox="0 0 35 35" width="35" xmlns="http://www.w3.org/2000/svg"><circle cx="17.5" cy="17.5" r="17" stroke="#323a45"/><circle cx="17.5" cy="17.5" fill="#323a45" r="15.1667"/><path d="m11.5 18.5h-1.5v6h14.5v-6h-1.5v4h-11.5z" fill="#f7f7f7"/><path d="m17.5 19-5-5h3.5v-7h3.5v7h3z" fill="#f7f7f7"/><g stroke="#f7f7f7"><path d="m11.5 18.5h-1.5v6h14.5v-6h-1.5v4h-11.5z"/><path d="m17.5 19-5-5h3.5v-7h3.5v7h3z"/></g></svg>
+      <!-- Logo Text -->
+      <div class="site-title">
+        CMS Blue Button 2.0
+      </div>
+    </a>
+    <!-- Desktop navigation -->
+    <nav class="desktop-nav-items">
+      <a href="#">Documentation</a>
+      <a href="#">Support</a>
+      <a href="#">Blog</a>
+      <a class="button" href="#"><i data-feather="terminal"></i>Developer Sandbox</a>
+    </nav>
   </div>
+
+  <!-- Mobile Navigation -->
+  <div class="ds-c-mobile-nav">
+    <!-- Logo Link Container -->
+    <a class="logo-link-container" href="/">
+      <!-- Arrow Icon -->
+      <svg fill="none" height="35" viewBox="0 0 35 35" width="35" xmlns="http://www.w3.org/2000/svg"><circle cx="17.5" cy="17.5" r="17" stroke="#323a45"/><circle cx="17.5" cy="17.5" fill="#323a45" r="15.1667"/><path d="m11.5 18.5h-1.5v6h14.5v-6h-1.5v4h-11.5z" fill="#f7f7f7"/><path d="m17.5 19-5-5h3.5v-7h3.5v7h3z" fill="#f7f7f7"/><g stroke="#f7f7f7"><path d="m11.5 18.5h-1.5v6h14.5v-6h-1.5v4h-11.5z"/><path d="m17.5 19-5-5h3.5v-7h3.5v7h3z"/></g></svg>
+      <!-- Logo Text -->
+      <div class="site-title">
+        CMS Blue Button 2.0
+      </div>
+    </a>
+    <!-- Mobile Nav Trigger Button -->
+    <a class="mobile-nav-trigger-button" href="#">
+      Menu
+      <i data-feather="menu"></i>
+    </a>
+  </div>
+  <!-- Mobile Nav Items -->
+  <nav class="mobile-nav-items">
+    <a href="#">Documentation</a>
+    <a href="#">Support</a>
+    <a href="#">Blog</a>
+    <a class="button" href="#"><i data-feather="terminal"></i>Developer Sandbox</a>
+  </nav>
 </header>
