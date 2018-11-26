@@ -13,10 +13,10 @@
     </a>
     <!-- Desktop navigation -->
     <nav class="desktop-nav-items">
-      <a href="#">Documentation</a>
-      <a href="#">Support</a>
-      <a href="#">Blog</a>
-      <a class="button" href="#"><i data-feather="terminal"></i>Developer Sandbox</a>
+      <a href="{{ '/developers' }}">Documentation</a>
+      <a href="{{ 'https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api' }}">Support</a>
+      <a href="{{site.posts.first.url}}{% if site.use_dot_html %}.html{% endif %}">Blog</a>
+      <a class="button" href="{{ 'https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login' }}"><i data-feather="terminal"></i>Developer Sandbox</a>
     </nav>
   </div>
 
@@ -33,8 +33,8 @@
     </a>
     <!-- Mobile Nav Trigger Button -->
     <a class="mobile-nav-trigger-button" href="#">
-      Menu
-      <i data-feather="menu"></i>
+      <span class="mobile-nav-trigger-text">Menu</span>
+      <i class="mobile-nav-icon" data-feather="menu"></i>
     </a>
   </div>
   <!-- Mobile Nav Items -->
