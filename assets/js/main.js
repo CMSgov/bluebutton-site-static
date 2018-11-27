@@ -20,28 +20,26 @@ const mobileNavIcon = mobileNavTriggerButton.querySelector('.mobile-nav-icon');
 
 // Define the resize event listener to close the mobile nav on window resize
 const closeNavOnResize = function(e) {
+  if (mobileNavContainer.classList.contains('is-visible') === false) { return }
   // Close and reset the nav
   mobileNavTriggerText.innerHTML = 'Menu'
   mobileNavIcon.innerHTML = feather.icons['menu'].toSvg();
   mobileNavContainer.classList.remove('is-visible');
   mobileNavTriggerButton.classList.remove('trigger-active');
   console.log('Resize Call Active');
-  for (var i=1;i<=5;i++){
-    window.removeEventListener('resize', closeNavOnResize);
-  }
 };
+
+// Add an event listenter to close the nav if the window is resized
+window.addEventListener('resize', closeNavOnResize);
 
 // Add the click ation to the mobile nav trigger
 mobileNavTriggerButton.addEventListener('click', () => {
   mobileNavContainer.classList.toggle('is-visible');
   mobileNavTriggerButton.classList.toggle('trigger-active');
-
   // Set up toggle for the menu icon and text
   if (mobileNavContainer.classList.contains('is-visible') === true) {
     mobileNavTriggerText.innerHTML = 'Close';
     mobileNavIcon.innerHTML = feather.icons['x'].toSvg();
-    // Add an event listenter to close the nav if the window is resized
-    window.addEventListener('resize', closeNavOnResize);
   } else {
     mobileNavTriggerText.innerHTML = 'Menu'
     mobileNavIcon.innerHTML = feather.icons['menu'].toSvg();
