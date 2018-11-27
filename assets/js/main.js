@@ -13,28 +13,35 @@ mobileNavContainer.innerHTML += mobileNavContent;
 // Define the mobile nav trigger button - this opens and closes the mobile nav
 const mobileNavTriggerButton = document.querySelector('.mobile-nav-trigger-button');
 
+// Define the text for the mobile nav trigger button
+const mobileNavTriggerText = document.querySelector('.mobile-nav-trigger-text');
+
+const mobileNavIcon = mobileNavTriggerButton.querySelector('.mobile-nav-icon');
+
+// Define the resize event listener to close the mobile nav on window resize
+const closeNavOnResize = function(e) {
+  // Close and reset the nav
+  mobileNavTriggerText.innerHTML = 'Menu'
+  mobileNavIcon.innerHTML = feather.icons['menu'].toSvg();
+  mobileNavContainer.classList.remove('is-visible');
+  mobileNavTriggerButton.classList.remove('trigger-active');
+  console.log('Resize Call Active');
+  for (var i=1;i<=5;i++){
+    window.removeEventListener('resize', closeNavOnResize);
+  }
+};
+
 // Add the click ation to the mobile nav trigger
 mobileNavTriggerButton.addEventListener('click', () => {
   mobileNavContainer.classList.toggle('is-visible');
   mobileNavTriggerButton.classList.toggle('trigger-active');
-  // Define the mobile nav icon
-  let mobileNavIcon = document.querySelector('.mobile-nav-icon');
-
-  // Define the text for the mobile nav trigger button
-  let mobileNavTriggerText = document.querySelector('.mobile-nav-trigger-text');
 
   // Set up toggle for the menu icon and text
   if (mobileNavContainer.classList.contains('is-visible') === true) {
     mobileNavTriggerText.innerHTML = 'Close';
     mobileNavIcon.innerHTML = feather.icons['x'].toSvg();
     // Add an event listenter to close the nav if the window is resized
-    window.addEventListener('resize', () => {
-      // Close and reset the nav
-      mobileNavTriggerText.innerHTML = 'Menu'
-      mobileNavIcon.innerHTML = feather.icons['menu'].toSvg();
-      mobileNavContainer.classList.remove('is-visible');
-      mobileNavTriggerButton.classList.remove('trigger-active');
-    });
+    window.addEventListener('resize', closeNavOnResize);
   } else {
     mobileNavTriggerText.innerHTML = 'Menu'
     mobileNavIcon.innerHTML = feather.icons['menu'].toSvg();
