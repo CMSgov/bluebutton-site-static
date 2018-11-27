@@ -1,38 +1,47 @@
-$( ".mobile-nav-trigger" ).click(function(event) {
-  event.preventDefault();
-  $( ".mobile-nav-tray" ).toggleClass( "mobile-nav-tray-expanded" );
-});
+// Mobile Navigation Logic
+// -----------------------
 
-$( ".mobile-nav-trigger-2" ).click(function(event) {
-  $( ".mobile-nav-tray" ).toggleClass( "mobile-nav-tray-expanded" );
-});
+// Get all nav items from desktop menu to append to the mobile nav
+const mobileNavContent = document.querySelector('.desktop-nav-items').innerHTML;
 
+// Define the Mobile Nav Container - this is where we will append the mobileNavContent
+const mobileNavContainer = document.querySelector('.mobile-nav-items');
 
-var lastId,
- topMenu = $("#mainNav"),
- topMenuHeight = topMenu.outerHeight()+1,
- menuItems = topMenu.find("a"),
- scrollItems = menuItems.map(function(){
-   var item = $($(this).attr("href"));
-    if (item.length) { return item; }
- });
+// Apend nav items to mobile nav container
+mobileNavContainer.innerHTML += mobileNavContent;
 
+// Define the mobile nav trigger button - this opens and closes the mobile nav
+const mobileNavTriggerButton = document.querySelector('.mobile-nav-trigger-button');
 
-$(window).scroll(function(){
-   var fromTop = $(this).scrollTop()+topMenuHeight;
+// Define the text for the mobile nav trigger button
+const mobileNavTriggerText = document.querySelector('.mobile-nav-trigger-text');
 
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
+const mobileNavIcon = mobileNavTriggerButton.querySelector('.mobile-nav-icon');
 
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
+// Define the resize event listener to close the mobile nav on window resize
+const closeNavOnResize = function(e) {
+  if (mobileNavContainer.classList.contains('is-visible') === false) { return }
+  // Close and reset the nav
+  mobileNavTriggerText.innerHTML = 'Menu'
+  mobileNavIcon.innerHTML = feather.icons['menu'].toSvg();
+  mobileNavContainer.classList.remove('is-visible');
+  mobileNavTriggerButton.classList.remove('trigger-active');
+  console.log('Resize Call Active');
+};
 
-   if (lastId !== id) {
-       lastId = id;
-       menuItems
-         .parent().removeClass("active")
-         .end().filter("[href='#"+id+"']").parent().addClass("active");
-   }
+// Add an event listenter to close the nav if the window is resized
+window.addEventListener('resize', closeNavOnResize);
+
+// Add the click ation to the mobile nav trigger
+mobileNavTriggerButton.addEventListener('click', () => {
+  mobileNavContainer.classList.toggle('is-visible');
+  mobileNavTriggerButton.classList.toggle('trigger-active');
+  // Set up toggle for the menu icon and text
+  if (mobileNavContainer.classList.contains('is-visible') === true) {
+    mobileNavTriggerText.innerHTML = 'Close';
+    mobileNavIcon.innerHTML = feather.icons['x'].toSvg();
+  } else {
+    mobileNavTriggerText.innerHTML = 'Menu'
+    mobileNavIcon.innerHTML = feather.icons['menu'].toSvg();
+  }
 });
