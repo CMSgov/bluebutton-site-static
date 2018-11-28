@@ -3,11 +3,12 @@
     <id value="carr-num"/>
     <url value="http://hl7.org/fhir/CodeSystem/carr-num"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/carr-num"/>
+        <value value="http://hl7.org/fhir/CodeSystem/carr-num.html"/>
     </identifier>
     <name value="Carrier or MAC Number"/>
     <title value="Carrier or MAC Number"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="The identification number assigned by CMS to a carrier authorized to process claims from a physician or supplier. Effective July 2006, the Medicare Administrative Contractors (MACs) began replacing the existing carriers and started processing physician or supplier claim records for states assigned to its jurisdiction. Source: https://bluebutton.cms.gov/resources/variables/carr_num"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/carr-num"/>

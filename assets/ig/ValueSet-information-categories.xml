@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ValueSet xmlns="http://hl7.org/fhir">
+<ValueSet xmlns="https://bluebutton.cms.gov/assets/ig">
   <id value="information-categories"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Information Categories</h2><div><p>Information Categories</p>
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-information-categories.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories</code></a></li></ul></div>
   </text>
   <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-information-categories"/>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Information Categories"/>
   <status value="draft"/>
-  <date value="2018-05-31T14:39:32+00:00"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
   <description value="Information Categories"/>
   <compose>
     <include>

@@ -1,0 +1,59 @@
+@prefix fhir: <https://bluebutton.cms.gov/assets/ig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-crec> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "crec"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Current Reason for Entitlement Code</h2><div><p>Current reason for Medicare entitlement. Source: https://bluebutton.cms.gov/resources/variables/crec</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-crec defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>0<a name=\"crec-0\"> </a></td><td>Old age and survivor's insurance (OASI)</td><td>Old age and survivor's insurance (OASI)</td></tr><tr><td>1<a name=\"crec-1\"> </a></td><td>Disability insurance benefits (DIB)</td><td>Disability insurance benefits (DIB)</td></tr><tr><td>2<a name=\"crec-2\"> </a></td><td>End-stage renal disease (ESRD)</td><td>End-stage renal disease (ESRD)</td></tr><tr><td>3<a name=\"crec-3\"> </a></td><td>Both DIB and ESRD</td><td>Both DIB and ESRD</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-crec"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-crec.html" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.1"];
+  fhir:CodeSystem.name [ fhir:value "Current Reason for Entitlement Code"];
+  fhir:CodeSystem.title [ fhir:value "Current Reason for Entitlement Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-11-27T15:56:35+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CMS Blue Button 2.0 Team"];
+  fhir:CodeSystem.description [ fhir:value "Current reason for Medicare entitlement. Source: https://bluebutton.cms.gov/resources/variables/crec"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-crec"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "0" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Old age and survivor's insurance (OASI)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Old age and survivor's insurance (OASI)" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "1" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Disability insurance benefits (DIB)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Disability insurance benefits (DIB)" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "2" ];
+     fhir:CodeSystem.concept.display [ fhir:value "End-stage renal disease (ESRD)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "End-stage renal disease (ESRD)" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "3" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Both DIB and ESRD" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Both DIB and ESRD" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-crec.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <https://bluebutton.cms.gov/assets/ig/STU3/CodeSystem-crec.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -6,7 +6,7 @@
   <title>Blue Button 2.0</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="description" content="Blue Button 2.0 Implementation Guide" />
 <meta name="author" content="http://www.hl7.org"/>
 
   <link href="fhir.css" rel="stylesheet"/>
@@ -28,29 +28,26 @@
   window.tealiumEnvironment = "prod";
   </script>
   <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
-
 </head>
 <body>
 
- <div id="segment-header" class="segment">  <!-- segment-header -->
-     <div class="container">  <!-- container -->
-         <div class="col-3">
-             <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
-         </div>
-         <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
-             <b>Blue Button 2.0 Implementation Guide</b>
-             <!-- (Release 1.1.0 ) -->
-             <!-- (Release 1.1.0 Ballot ) -->
-         </div>
-         <div class="col-3" style="margin-right:0;float:right">
-             <a id="cms-logo" no-external="true" href="http://www.cms.gov">
-                 <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
-             </a>
-         </div>
-     </div>
-
+<div class="container">  <!-- container -->
+    <div class="col-3">
+        <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
+    </div>
+    <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
+        <b>Blue Button 2.0 Implementation Guide</b>
+        <!-- (Release 1.1.1 ) -->
+        <!-- (Release 1.1.1 Ballot ) -->
+    </div>
+    <div class="col-3" style="margin-right:0;float:right">
+        <a id="cms-logo" no-external="true" href="http://www.cms.gov">
+            <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
+        </a>
+    </div>
+</div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="https://bluebutton.cms.gov/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -68,7 +65,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="https://hl7.org/fhir/STU3/index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -115,313 +112,314 @@ Raw <a href="CodeSystem-ptnt-dschrg-stus-cd.xml" download>xml</a>
 
 <pre class="xml">
 
-&lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;ptnt-dschrg-stus-cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+&lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;https://bluebutton.cms.gov/assets/ig&quot;&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;ptnt-dschrg-stus-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Patient Discharge Status Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The code used to identify the status of the patient as of the CLM&lt;em&gt;THRU&lt;/em&gt;DT. Source: https://bluebutton.cms.gov/resources/variables/ptnt&lt;em&gt;dschrg&lt;/em&gt;stus_cd&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0&lt;a name=&quot;ptnt-dschrg-stus-cd-0&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unknown Value (but present in data)&lt;/td&gt;&lt;td&gt;Unknown Value (but present in data)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;01&lt;a name=&quot;ptnt-dschrg-stus-cd-01&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged to home/self-care (routine charge).&lt;/td&gt;&lt;td&gt;Discharged to home/self-care (routine charge).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02&lt;a name=&quot;ptnt-dschrg-stus-cd-02&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to other short term general hospital for inpatient care.&lt;/td&gt;&lt;td&gt;Discharged/transferred to other short term general hospital for inpatient care.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03&lt;a name=&quot;ptnt-dschrg-stus-cd-03&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to skilled nursing facility (SNF) with Medicare certification in anticipation of covered skilled care -- (For hospitals with an approved swing bed arrangement, use Code 61 - swing bed. For reporting discharges/transfers to a non-certified SNF, the hospital must use Code 04 - ICF.&lt;/td&gt;&lt;td&gt;Discharged/transferred to skilled nursing facility (SNF) with Medicare certification in anticipation of covered skilled care -- (For hospitals with an approved swing bed arrangement, use Code 61 - swing bed. For reporting discharges/transfers to a non-certified SNF, the hospital must use Code 04 - ICF.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04&lt;a name=&quot;ptnt-dschrg-stus-cd-04&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to intermediate care facility (ICF).&lt;/td&gt;&lt;td&gt;Discharged/transferred to intermediate care facility (ICF).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05&lt;a name=&quot;ptnt-dschrg-stus-cd-05&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to another type of institution for inpatient care (including distinct parts). NOTE: Effective 1/2005, psychiatric hospital or psychiatric distinct part unit of a hospital will no longer be identified by this code. New code is '65'.&lt;/td&gt;&lt;td&gt;Discharged/transferred to another type of institution for inpatient care (including distinct parts). NOTE: Effective 1/2005, psychiatric hospital or psychiatric distinct part unit of a hospital will no longer be identified by this code. New code is '65'.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06&lt;a name=&quot;ptnt-dschrg-stus-cd-06&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to home care of organized home health service organization.&lt;/td&gt;&lt;td&gt;Discharged/transferred to home care of organized home health service organization.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07&lt;a name=&quot;ptnt-dschrg-stus-cd-07&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Left against medical advice or discontinued care.&lt;/td&gt;&lt;td&gt;Left against medical advice or discontinued care.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08&lt;a name=&quot;ptnt-dschrg-stus-cd-08&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to home under care of a home IV drug therapy provider. (discontinued effective 10/1/05)&lt;/td&gt;&lt;td&gt;Discharged/transferred to home under care of a home IV drug therapy provider. (discontinued effective 10/1/05)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09&lt;a name=&quot;ptnt-dschrg-stus-cd-09&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Admitted as an inpatient to this hospital (effective 3/1/91). In situations where a patient is admitted before midnight of the third day following the day of an outpatient service, the outpatient services are considered inpatient.&lt;/td&gt;&lt;td&gt;Admitted as an inpatient to this hospital (effective 3/1/91). In situations where a patient is admitted before midnight of the third day following the day of an outpatient service, the outpatient services are considered inpatient.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20&lt;a name=&quot;ptnt-dschrg-stus-cd-20&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Expired (patient did not recover).&lt;/td&gt;&lt;td&gt;Expired (patient did not recover).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;a name=&quot;ptnt-dschrg-stus-cd-21&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to court/law enforcement.&lt;/td&gt;&lt;td&gt;Discharged/transferred to court/law enforcement.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;a name=&quot;ptnt-dschrg-stus-cd-30&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Still patient.&lt;/td&gt;&lt;td&gt;Still patient.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;40&lt;a name=&quot;ptnt-dschrg-stus-cd-40&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Expired at home (hospice claims only)&lt;/td&gt;&lt;td&gt;Expired at home (hospice claims only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;41&lt;a name=&quot;ptnt-dschrg-stus-cd-41&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Expired in a medical facility such as hospital, SNF, ICF, or freestanding hospice. (Hospice claims only)&lt;/td&gt;&lt;td&gt;Expired in a medical facility such as hospital, SNF, ICF, or freestanding hospice. (Hospice claims only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;42&lt;a name=&quot;ptnt-dschrg-stus-cd-42&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Expired - place unknown (Hospice claims only)&lt;/td&gt;&lt;td&gt;Expired - place unknown (Hospice claims only)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;43&lt;a name=&quot;ptnt-dschrg-stus-cd-43&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a federal hospital (eff. 10/1/03)&lt;/td&gt;&lt;td&gt;Discharged/transferred to a federal hospital (eff. 10/1/03)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;50&lt;a name=&quot;ptnt-dschrg-stus-cd-50&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a Hospice – home.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a Hospice – home.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;51&lt;a name=&quot;ptnt-dschrg-stus-cd-51&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a Hospice – medical facility.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a Hospice – medical facility.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;61&lt;a name=&quot;ptnt-dschrg-stus-cd-61&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred within this institution to a hospital-based Medicare approved swing bed (eff. 9/01)&lt;/td&gt;&lt;td&gt;Discharged/transferred within this institution to a hospital-based Medicare approved swing bed (eff. 9/01)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;62&lt;a name=&quot;ptnt-dschrg-stus-cd-62&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to an inpatient rehabilitation facility including distinct parts units of a hospital. (eff. 1/2002)&lt;/td&gt;&lt;td&gt;Discharged/transferred to an inpatient rehabilitation facility including distinct parts units of a hospital. (eff. 1/2002)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;63&lt;a name=&quot;ptnt-dschrg-stus-cd-63&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a long term care hospitals. (eff. 1/2002)&lt;/td&gt;&lt;td&gt;Discharged/transferred to a long term care hospitals. (eff. 1/2002)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;64&lt;a name=&quot;ptnt-dschrg-stus-cd-64&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a nursing facility certified under Medicaid but not under Medicare (eff. 10/2002)&lt;/td&gt;&lt;td&gt;Discharged/transferred to a nursing facility certified under Medicaid but not under Medicare (eff. 10/2002)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;65&lt;a name=&quot;ptnt-dschrg-stus-cd-65&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/Transferred to a psychiatric hospital or psychiatric distinct unit of a hospital (these types of hospitals were pulled from patient/discharge status code '05' and given their own code). (eff. 1/2005).&lt;/td&gt;&lt;td&gt;Discharged/Transferred to a psychiatric hospital or psychiatric distinct unit of a hospital (these types of hospitals were pulled from patient/discharge status code '05' and given their own code). (eff. 1/2005).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;66&lt;a name=&quot;ptnt-dschrg-stus-cd-66&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a Critical Access Hospital (CAH) (eff. 1/1/06)&lt;/td&gt;&lt;td&gt;Discharged/transferred to a Critical Access Hospital (CAH) (eff. 1/1/06)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;69&lt;a name=&quot;ptnt-dschrg-stus-cd-69&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a designated disaster alternative care site (starting 10/2013; applies only to particular MS-DRGs*)&lt;/td&gt;&lt;td&gt;Discharged/transferred to a designated disaster alternative care site (starting 10/2013; applies only to particular MS-DRGs*)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;70&lt;a name=&quot;ptnt-dschrg-stus-cd-70&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to another type of health care institution not defined elsewhere in code list.&lt;/td&gt;&lt;td&gt;Discharged/transferred to another type of health care institution not defined elsewhere in code list.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;71&lt;a name=&quot;ptnt-dschrg-stus-cd-71&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred/referred to another institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05)&lt;/td&gt;&lt;td&gt;Discharged/transferred/referred to another institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;72&lt;a name=&quot;ptnt-dschrg-stus-cd-72&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred/referred to this institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05) The following codes apply only to particular MS-DRGs*, and were new in 10/2013:&lt;/td&gt;&lt;td&gt;Discharged/transferred/referred to this institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05) The following codes apply only to particular MS-DRGs*, and were new in 10/2013:&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;81&lt;a name=&quot;ptnt-dschrg-stus-cd-81&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged to home or self-care with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged to home or self-care with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;82&lt;a name=&quot;ptnt-dschrg-stus-cd-82&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a short term general hospital for inpatient care with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a short term general hospital for inpatient care with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;83&lt;a name=&quot;ptnt-dschrg-stus-cd-83&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a skilled nursing facility (SNF) with Medicare certification with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a skilled nursing facility (SNF) with Medicare certification with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;84&lt;a name=&quot;ptnt-dschrg-stus-cd-84&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a facility that provides custodial or supportive care with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a facility that provides custodial or supportive care with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;85&lt;a name=&quot;ptnt-dschrg-stus-cd-85&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a designated cancer center or children’s hospital with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a designated cancer center or children’s hospital with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;86&lt;a name=&quot;ptnt-dschrg-stus-cd-86&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to home under care of organized home health service organization with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to home under care of organized home health service organization with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;87&lt;a name=&quot;ptnt-dschrg-stus-cd-87&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to court/law enforcement with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to court/law enforcement with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;88&lt;a name=&quot;ptnt-dschrg-stus-cd-88&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a federal health care facility with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a federal health care facility with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;89&lt;a name=&quot;ptnt-dschrg-stus-cd-89&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a hospital-based Medicare approved swing bed with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a hospital-based Medicare approved swing bed with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;90&lt;a name=&quot;ptnt-dschrg-stus-cd-90&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to an inpatient rehabilitation facility (IRF) including rehabilitation distinct part units of a hospital with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to an inpatient rehabilitation facility (IRF) including rehabilitation distinct part units of a hospital with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;91&lt;a name=&quot;ptnt-dschrg-stus-cd-91&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a Medicare certified long term care hospital (LTCH) with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a Medicare certified long term care hospital (LTCH) with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;92&lt;a name=&quot;ptnt-dschrg-stus-cd-92&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;93&lt;a name=&quot;ptnt-dschrg-stus-cd-93&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a psychiatric distinct part unit of a hospital with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a psychiatric distinct part unit of a hospital with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;94&lt;a name=&quot;ptnt-dschrg-stus-cd-94&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to a critical access hospital (CAH) with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to a critical access hospital (CAH) with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;95&lt;a name=&quot;ptnt-dschrg-stus-cd-95&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Discharged/transferred to another type of health care institution not defined elsewhere in this code list with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;td&gt;Discharged/transferred to another type of health care institution not defined elsewhere in this code list with a planned acute care hospital inpatient readmission.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
   &lt;/text&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd.html&quot;/&gt;
   &lt;/identifier&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.0&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Discharge Status Code&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Discharge Status Code&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-31T14:39:32+00:00&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;The code used to identify the status of the patient as of the CLM_THRU_DT. Source: https://bluebutton.cms.gov/resources/variables/ptnt_dschrg_stus_cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-dschrg-stus-cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;is-a&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;0&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Unknown Value (but present in data)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Unknown Value (but present in data)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.1&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Discharge Status Code&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Discharge Status Code&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-11-27T15:56:35+00:00&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.publisher">publisher</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;CMS Blue Button 2.0 Team&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>
+               <a href="https://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;The code used to identify the status of the patient as of the CLM_THRU_DT. Source: https://bluebutton.cms.gov/resources/variables/ptnt_dschrg_stus_cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-dschrg-stus-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;is-a&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;0&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Unknown Value (but present in data)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Unknown Value (but present in data)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;01&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged to home/self-care (routine charge).&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged to home/self-care (routine charge).&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;01&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged to home/self-care (routine charge).&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged to home/self-care (routine charge).&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;02&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to other short term general hospital for inpatient care.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to other short term general hospital for inpatient care.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;02&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to other short term general hospital for inpatient care.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to other short term general hospital for inpatient care.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;03&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to skilled nursing facility (SNF) with Medicare certification in anticipation of covered skilled care -- (For hospitals with an approved swing bed arrangement, use Code 61 - swing bed. For reporting discharges/transfers to a non-certified SNF, the hospital must use Code 04 - ICF.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to skilled nursing facility (SNF) with Medicare certification in anticipation of covered skilled care -- (For hospitals with an approved swing bed arrangement, use Code 61 - swing bed. For reporting discharges/transfers to a non-certified SNF, the hospital must use Code 04 - ICF.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;03&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to skilled nursing facility (SNF) with Medicare certification in anticipation of covered skilled care -- (For hospitals with an approved swing bed arrangement, use Code 61 - swing bed. For reporting discharges/transfers to a non-certified SNF, the hospital must use Code 04 - ICF.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to skilled nursing facility (SNF) with Medicare certification in anticipation of covered skilled care -- (For hospitals with an approved swing bed arrangement, use Code 61 - swing bed. For reporting discharges/transfers to a non-certified SNF, the hospital must use Code 04 - ICF.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;04&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to intermediate care facility (ICF).&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to intermediate care facility (ICF).&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;04&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to intermediate care facility (ICF).&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to intermediate care facility (ICF).&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;05&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of institution for inpatient care (including distinct parts). NOTE: Effective 1/2005, psychiatric hospital or psychiatric distinct part unit of a hospital will no longer be identified by this code. New code is &amp;#39;65&amp;#39;.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of institution for inpatient care (including distinct parts). NOTE: Effective 1/2005, psychiatric hospital or psychiatric distinct part unit of a hospital will no longer be identified by this code. New code is &amp;#39;65&amp;#39;.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;05&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of institution for inpatient care (including distinct parts). NOTE: Effective 1/2005, psychiatric hospital or psychiatric distinct part unit of a hospital will no longer be identified by this code. New code is &amp;#39;65&amp;#39;.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of institution for inpatient care (including distinct parts). NOTE: Effective 1/2005, psychiatric hospital or psychiatric distinct part unit of a hospital will no longer be identified by this code. New code is &amp;#39;65&amp;#39;.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;06&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home care of organized home health service organization.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home care of organized home health service organization.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;06&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home care of organized home health service organization.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home care of organized home health service organization.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;07&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Left against medical advice or discontinued care.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Left against medical advice or discontinued care.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;07&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Left against medical advice or discontinued care.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Left against medical advice or discontinued care.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;08&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home under care of a home IV drug therapy provider. (discontinued effective 10/1/05)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home under care of a home IV drug therapy provider. (discontinued effective 10/1/05)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;08&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home under care of a home IV drug therapy provider. (discontinued effective 10/1/05)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home under care of a home IV drug therapy provider. (discontinued effective 10/1/05)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;09&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Admitted as an inpatient to this hospital (effective 3/1/91). In situations where a patient is admitted before midnight of the third day following the day of an outpatient service, the outpatient services are considered inpatient.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Admitted as an inpatient to this hospital (effective 3/1/91). In situations where a patient is admitted before midnight of the third day following the day of an outpatient service, the outpatient services are considered inpatient.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;09&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Admitted as an inpatient to this hospital (effective 3/1/91). In situations where a patient is admitted before midnight of the third day following the day of an outpatient service, the outpatient services are considered inpatient.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Admitted as an inpatient to this hospital (effective 3/1/91). In situations where a patient is admitted before midnight of the third day following the day of an outpatient service, the outpatient services are considered inpatient.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;20&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired (patient did not recover).&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired (patient did not recover).&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;20&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired (patient did not recover).&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired (patient did not recover).&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;21&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to court/law enforcement.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to court/law enforcement.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;21&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to court/law enforcement.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to court/law enforcement.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;30&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Still patient.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Still patient.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;30&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Still patient.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Still patient.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;40&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired at home (hospice claims only)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired at home (hospice claims only)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;40&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired at home (hospice claims only)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired at home (hospice claims only)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;41&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired in a medical facility such as hospital, SNF, ICF, or freestanding hospice. (Hospice claims only)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired in a medical facility such as hospital, SNF, ICF, or freestanding hospice. (Hospice claims only)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;41&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired in a medical facility such as hospital, SNF, ICF, or freestanding hospice. (Hospice claims only)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired in a medical facility such as hospital, SNF, ICF, or freestanding hospice. (Hospice claims only)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;42&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired - place unknown (Hospice claims only)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired - place unknown (Hospice claims only)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;42&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired - place unknown (Hospice claims only)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Expired - place unknown (Hospice claims only)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;43&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a federal hospital (eff. 10/1/03)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a federal hospital (eff. 10/1/03)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;43&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a federal hospital (eff. 10/1/03)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a federal hospital (eff. 10/1/03)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;50&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Hospice – home.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Hospice – home.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;50&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Hospice – home.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Hospice – home.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;51&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Hospice – medical facility.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Hospice – medical facility.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;51&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Hospice – medical facility.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Hospice – medical facility.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;61&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred within this institution to a hospital-based Medicare approved swing bed (eff. 9/01)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred within this institution to a hospital-based Medicare approved swing bed (eff. 9/01)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;61&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred within this institution to a hospital-based Medicare approved swing bed (eff. 9/01)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred within this institution to a hospital-based Medicare approved swing bed (eff. 9/01)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;62&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to an inpatient rehabilitation facility including distinct parts units of a hospital. (eff. 1/2002)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to an inpatient rehabilitation facility including distinct parts units of a hospital. (eff. 1/2002)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;62&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to an inpatient rehabilitation facility including distinct parts units of a hospital. (eff. 1/2002)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to an inpatient rehabilitation facility including distinct parts units of a hospital. (eff. 1/2002)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;63&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a long term care hospitals. (eff. 1/2002)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a long term care hospitals. (eff. 1/2002)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;63&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a long term care hospitals. (eff. 1/2002)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a long term care hospitals. (eff. 1/2002)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;64&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a nursing facility certified under Medicaid but not under Medicare (eff. 10/2002)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a nursing facility certified under Medicaid but not under Medicare (eff. 10/2002)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;64&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a nursing facility certified under Medicaid but not under Medicare (eff. 10/2002)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a nursing facility certified under Medicaid but not under Medicare (eff. 10/2002)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;65&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/Transferred to a psychiatric hospital or psychiatric distinct unit of a hospital (these types of hospitals were pulled from patient/discharge status code &amp;#39;05&amp;#39; and given their own code). (eff. 1/2005).&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/Transferred to a psychiatric hospital or psychiatric distinct unit of a hospital (these types of hospitals were pulled from patient/discharge status code &amp;#39;05&amp;#39; and given their own code). (eff. 1/2005).&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;65&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/Transferred to a psychiatric hospital or psychiatric distinct unit of a hospital (these types of hospitals were pulled from patient/discharge status code &amp;#39;05&amp;#39; and given their own code). (eff. 1/2005).&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/Transferred to a psychiatric hospital or psychiatric distinct unit of a hospital (these types of hospitals were pulled from patient/discharge status code &amp;#39;05&amp;#39; and given their own code). (eff. 1/2005).&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;66&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Critical Access Hospital (CAH) (eff. 1/1/06)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Critical Access Hospital (CAH) (eff. 1/1/06)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;66&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Critical Access Hospital (CAH) (eff. 1/1/06)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Critical Access Hospital (CAH) (eff. 1/1/06)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;69&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a designated disaster alternative care site (starting 10/2013; applies only to particular MS-DRGs*)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a designated disaster alternative care site (starting 10/2013; applies only to particular MS-DRGs*)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;69&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a designated disaster alternative care site (starting 10/2013; applies only to particular MS-DRGs*)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a designated disaster alternative care site (starting 10/2013; applies only to particular MS-DRGs*)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;70&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of health care institution not defined elsewhere in code list.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of health care institution not defined elsewhere in code list.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;70&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of health care institution not defined elsewhere in code list.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of health care institution not defined elsewhere in code list.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;71&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred/referred to another institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred/referred to another institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;71&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred/referred to another institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred/referred to another institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;72&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred/referred to this institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05) The following codes apply only to particular MS-DRGs*, and were new in 10/2013:&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred/referred to this institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05) The following codes apply only to particular MS-DRGs*, and were new in 10/2013:&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;72&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred/referred to this institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05) The following codes apply only to particular MS-DRGs*, and were new in 10/2013:&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred/referred to this institution for outpatient services as specified by the discharge plan of care (eff. 9/01) (discontinued effective 10/1/05) The following codes apply only to particular MS-DRGs*, and were new in 10/2013:&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;81&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged to home or self-care with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged to home or self-care with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;81&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged to home or self-care with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged to home or self-care with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;82&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a short term general hospital for inpatient care with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a short term general hospital for inpatient care with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;82&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a short term general hospital for inpatient care with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a short term general hospital for inpatient care with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;83&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a skilled nursing facility (SNF) with Medicare certification with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a skilled nursing facility (SNF) with Medicare certification with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;83&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a skilled nursing facility (SNF) with Medicare certification with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a skilled nursing facility (SNF) with Medicare certification with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;84&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a facility that provides custodial or supportive care with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a facility that provides custodial or supportive care with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;84&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a facility that provides custodial or supportive care with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a facility that provides custodial or supportive care with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;85&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a designated cancer center or children’s hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a designated cancer center or children’s hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;85&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a designated cancer center or children’s hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a designated cancer center or children’s hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;86&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home under care of organized home health service organization with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home under care of organized home health service organization with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;86&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home under care of organized home health service organization with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to home under care of organized home health service organization with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;87&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to court/law enforcement with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to court/law enforcement with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;87&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to court/law enforcement with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to court/law enforcement with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;88&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a federal health care facility with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a federal health care facility with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;88&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a federal health care facility with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a federal health care facility with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;89&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a hospital-based Medicare approved swing bed with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a hospital-based Medicare approved swing bed with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;89&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a hospital-based Medicare approved swing bed with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a hospital-based Medicare approved swing bed with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;90&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to an inpatient rehabilitation facility (IRF) including rehabilitation distinct part units of a hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to an inpatient rehabilitation facility (IRF) including rehabilitation distinct part units of a hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;90&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to an inpatient rehabilitation facility (IRF) including rehabilitation distinct part units of a hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to an inpatient rehabilitation facility (IRF) including rehabilitation distinct part units of a hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;91&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Medicare certified long term care hospital (LTCH) with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Medicare certified long term care hospital (LTCH) with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;91&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Medicare certified long term care hospital (LTCH) with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a Medicare certified long term care hospital (LTCH) with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;92&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;92&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;93&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a psychiatric distinct part unit of a hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a psychiatric distinct part unit of a hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;93&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a psychiatric distinct part unit of a hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a psychiatric distinct part unit of a hospital with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;94&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a critical access hospital (CAH) with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a critical access hospital (CAH) with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;94&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a critical access hospital (CAH) with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to a critical access hospital (CAH) with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;95&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of health care institution not defined elsewhere in this code list with a planned acute care hospital inpatient readmission.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of health care institution not defined elsewhere in this code list with a planned acute care hospital inpatient readmission.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;95&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of health care institution not defined elsewhere in this code list with a planned acute care hospital inpatient readmission.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Discharged/transferred to another type of health care institution not defined elsewhere in this code list with a planned acute care hospital inpatient readmission.&quot;/&gt;
   &lt;/concept&gt;
 &lt;/CodeSystem&gt;</pre>
 
@@ -454,9 +452,9 @@ Raw <a href="CodeSystem-ptnt-dschrg-stus-cd.xml" download>xml</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+            Blue Button 2.0 Version: 1.1.1  &reg;&copy; <a style="color: #81BEF7" href="https://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Tue, Nov 27, 2018 15:56+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="https://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

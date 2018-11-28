@@ -5,6 +5,7 @@
   <name value="BluebuttonOutpatientClaim" />
   <title value="Blue Button Generic Claim Profile" />
   <status value="draft" />
+  <publisher value="CMS Blue Button 2.0 Team" />
   <date value="2018-03-21T11:11:24.819-05:00" />
   <description value="Outpatient Claim profile for the Blue Button 2.0 Service" />
   <fhirVersion value="3.0.1" />

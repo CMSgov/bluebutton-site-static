@@ -3,13 +3,13 @@
   "id": "clm-hha-lupa-ind-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code</h2><div><p>The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode. If an HHA provides 4 visits or less, they will be reimbursed based on a national standardized per visit rate instead of Home Health resource groups (HHRGs). Source: https://bluebutton.cms.gov/resources/variables/clm<em>hha</em>lupa<em>ind</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-hha-lupa-ind-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-lupa-ind-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code</h2><div><p>The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode. If an HHA provides 4 visits or less, they will be reimbursed based on a national standardized per visit rate instead of Home Health resource groups (HHRGs). Source: https://bluebutton.cms.gov/resources/variables/clm<em>hha</em>lupa<em>ind</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-clm-hha-lupa-ind-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-lupa-ind-cd</code></a></li></ul></div>"
   },
   "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-lupa-ind-cd",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Claim HHA Low Utilization Payment Adjustment (LUPA) Indicator Code",
   "status": "draft",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
   "description": "The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode. If an HHA provides 4 visits or less, they will be reimbursed based on a national standardized per visit rate instead of Home Health resource groups (HHRGs). Source: https://bluebutton.cms.gov/resources/variables/clm_hha_lupa_ind_cd",
   "compose": {
     "include": [

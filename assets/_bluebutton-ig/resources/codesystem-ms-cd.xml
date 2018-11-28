@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="ms-cd"/>
+    <url value="http://hl7.org/fhir/CodeSystem/ms-cd"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/ms-cd.html"/>
+    </identifier>
+    <name value="Medicare Status Code"/>
+    <title value="Medicare Status Code"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
+    <description value="This variable indicates how a beneficiary currently qualifies for Medicare.. Source: https://bluebutton.cms.gov/resources/variables/ms_cd"/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/ms-cd"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="10"/>
+        <display value="Aged without end-stage renal disease (ESRD)"/>
+        <definition value="Aged without end-stage renal disease (ESRD)"/>
+    </concept>
+    <concept>
+        <code value="11"/>
+        <display value="Aged with ESRD"/>
+        <definition value="Aged with ESRD"/>
+    </concept>
+    <concept>
+        <code value="20"/>
+        <display value="Disabled without ESRD"/>
+        <definition value="Disabled without ESRD"/>
+    </concept>
+    <concept>
+        <code value="21"/>
+        <display value="Disabled with ESRD"/>
+        <definition value="Disabled with ESRD"/>
+    </concept>
+    <concept>
+        <code value="31"/>
+        <display value="ESRD only"/>
+        <definition value="ESRD only"/>
+    </concept>
+</CodeSystem>

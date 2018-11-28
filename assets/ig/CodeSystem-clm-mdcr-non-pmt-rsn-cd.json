@@ -7,13 +7,14 @@
   },
   "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd",
   "identifier": {
-    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd"
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd.html"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Claim Medicare Non Payment Reason Code",
   "title": "Claim Medicare Non Payment Reason Code",
   "status": "active",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
   "description": "The reason that no Medicare payment is made for services on an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm_mdcr_non_pmt_rsn_cd",
   "caseSensitive": true,
   "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-mdcr-non-pmt-rsn-cd",

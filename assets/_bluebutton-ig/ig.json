@@ -44,7 +44,7 @@
   "extraTemplates": [
     "mappings"
   ],
-  "fixed-business-version": "1.1.0",
+  "fixed-business-version": "1.1.1",
   "gen-examples": "false",
   "html-template": "html-template.html",
   "igtemplate-dir": null,
@@ -60,7 +60,7 @@
       "resources",
       "examples"
     ],
-    "specification": "http://hl7.org/fhir/STU3",
+    "specification": "https://hl7.org/fhir/STU3/",
     "temp": "temp",
     "txCache": "txCache"
   },
@@ -69,47 +69,52 @@
       "base": "part-d-event-example.html",
       "source": "part-d-event-example.xml"
     },  	
-    "StructureDefinition/bluebutton-profile-patient-claim": {
+    "StructureDefinition/bluebutton-profile-patient-claim.html": {
       "base": "StructureDefinition-bluebutton-patient-claim.html",
       "defns": "StructureDefinition-bluebutton-patient-claim.html",
       "source": "bluebutton-profile-patient-claim.xml"
     },
-    "StructureDefinition/bluebutton-profile-pde-claim": {
+    "StructureDefinition/bluebutton-profile-pde-claim.html": {
       "base": "StructureDefinition-bluebutton-pde-claim.html",
       "defns": "StructureDefinition-bluebutton-pde-claim-definitions.html",
       "source": "bluebutton-profile-pde-claim.xml"
     },
-    "StructureDefinition/bluebutton-profile-carrier-claim": {
+    "StructureDefinition/bluebutton-profile-carrier-claim.html": {
       "base": "StructureDefinition-bluebutton-carrier-claim.html",
       "defns": "StructureDefinition-bluebutton-carrier-claim-definitions.html",
       "source": "bluebutton-profile-carrier-claim.xml"
     },
-	"StructureDefinition/bluebutton-profile-inpatient-claim": {
+    "StructureDefinition/bluebutton-profile-coverage.html": {
+      "base": "StructureDefinition-bluebutton-coverage.html",
+      "defns": "StructureDefinition-bluebutton-coverage-definitions.html",
+      "source": "bluebutton-profile-coverage.xml"
+    },
+	"StructureDefinition/bluebutton-profile-inpatient-claim.html": {
       "base": "StructureDefinition-bluebutton-inpatient-claim.html",
       "defns": "StructureDefinition-bluebutton-inpatient-claim-definitions.html",
       "source": "bluebutton-profile-inpatient-claim.xml"
     },
-	"StructureDefinition/bluebutton-profile-outpatient-claim": {
+	"StructureDefinition/bluebutton-profile-outpatient-claim.html": {
       "base": "StructureDefinition-bluebutton-outpatient-claim.html",
       "defns": "StructureDefinition-bluebutton-outpatient-claim-definitions.html",
       "source": "bluebutton-profile-outpatient-claim.xml"
     },
-	"StructureDefinition/bluebutton-profile-snf-claim": {
+	"StructureDefinition/bluebutton-profile-snf-claim.html": {
       "base": "StructureDefinition-bluebutton-snf-claim.html",
       "defns": "StructureDefinition-bluebutton-snf-claim-definitions.html",
       "source": "bluebutton-profile-snf-claim.xml"
     },
-	"StructureDefinition/bluebutton-profile-dme-claim": {
+	"StructureDefinition/bluebutton-profile-dme-claim.html": {
       "base": "StructureDefinition-bluebutton-dme-claim.html",
       "defns": "StructureDefinition-bluebutton-dme-claim-definitions.html",
       "source": "bluebutton-profile-dme-claim.xml"
     },
-	"StructureDefinition/bluebutton-profile-hha-claim": {
+	"StructureDefinition/bluebutton-profile-hha-claim.html": {
       "base": "StructureDefinition-bluebutton-hha-claim.html",
       "defns": "StructureDefinition-bluebutton-hha-claim-definitions.html",
       "source": "bluebutton-profile-hha-claim.xml"
     },
-	"StructureDefinition/bluebutton-profile-hospice-claim": {
+	"StructureDefinition/bluebutton-profile-hospice-claim.html": {
       "base": "StructureDefinition-bluebutton-hospice-claim.html",
       "defns": "StructureDefinition-bluebutton-hospice-claim-definitions.html",
       "source": "bluebutton-profile-hospice-claim.xml"

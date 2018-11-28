@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="https://bluebutton.cms.gov/assets/ig">
+  <id value="ms-cd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Medicare Status Code</h2><div><p>This variable indicates how a beneficiary currently qualifies for Medicare.. Source: https://bluebutton.cms.gov/resources/variables/ms_cd</p>
+</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd defines the following codes:</p><table class="codes"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>10<a name="ms-cd-10"> </a></td><td>Aged without end-stage renal disease (ESRD)</td><td>Aged without end-stage renal disease (ESRD)</td></tr><tr><td>11<a name="ms-cd-11"> </a></td><td>Aged with ESRD</td><td>Aged with ESRD</td></tr><tr><td>20<a name="ms-cd-20"> </a></td><td>Disabled without ESRD</td><td>Disabled without ESRD</td></tr><tr><td>21<a name="ms-cd-21"> </a></td><td>Disabled with ESRD</td><td>Disabled with ESRD</td></tr><tr><td>31<a name="ms-cd-31"> </a></td><td>ESRD only</td><td>ESRD only</td></tr></table></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd"/>
+  <identifier>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd.html"/>
+  </identifier>
+  <version value="1.1.1"/>
+  <name value="Medicare Status Code"/>
+  <title value="Medicare Status Code"/>
+  <status value="active"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
+  <publisher value="CMS Blue Button 2.0 Team"/>
+  <description value="This variable indicates how a beneficiary currently qualifies for Medicare.. Source: https://bluebutton.cms.gov/resources/variables/ms_cd"/>
+  <caseSensitive value="true"/>
+  <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-ms-cd"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <concept>
+    <code value="10"/>
+    <display value="Aged without end-stage renal disease (ESRD)"/>
+    <definition value="Aged without end-stage renal disease (ESRD)"/>
+  </concept>
+  <concept>
+    <code value="11"/>
+    <display value="Aged with ESRD"/>
+    <definition value="Aged with ESRD"/>
+  </concept>
+  <concept>
+    <code value="20"/>
+    <display value="Disabled without ESRD"/>
+    <definition value="Disabled without ESRD"/>
+  </concept>
+  <concept>
+    <code value="21"/>
+    <display value="Disabled with ESRD"/>
+    <definition value="Disabled with ESRD"/>
+  </concept>
+  <concept>
+    <code value="31"/>
+    <display value="ESRD only"/>
+    <definition value="ESRD only"/>
+  </concept>
+</CodeSystem>

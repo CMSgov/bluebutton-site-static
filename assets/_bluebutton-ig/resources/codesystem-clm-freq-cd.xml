@@ -3,11 +3,12 @@
     <id value="clm-freq-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/clm-freq-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/clm-freq-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/clm-freq-cd.html"/>
     </identifier>
     <name value="Claim Frequency Code"/>
     <title value="Claim Frequency Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="The third digit of the type of bill (TOB3) submitted on an institutional claim record to indicate the sequence of a claim in the beneficiary's current episode of care. Source: https://bluebutton.cms.gov/resources/variables/clm_freq_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/clm-freq-cd"/>

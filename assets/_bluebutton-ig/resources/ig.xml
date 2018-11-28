@@ -11,13 +11,19 @@
 		<resource>
 			<example value="false"/>
 			<sourceReference>
-				<reference value="StructureDefinition/bluebutton-profile-pde-claim"/>
+				<reference value="StructureDefinition/bluebutton-profile-pde-claim.html"/>
 			</sourceReference>
 		</resource>
 		<resource>
 			<example value="false"/>
 			<sourceReference>
 				<reference value="StructureDefinition/bluebutton-profile-carrier-claim"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/bluebutton-profile-coverage"/>
 			</sourceReference>
 		</resource>
 		<resource>
@@ -881,6 +887,78 @@
 		<resource>
 			<example value="false"/>
 			<sourceReference>
+				<reference value="ValueSet/ms-cd"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/orec"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/crec"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/esrd-ind"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/a-trm-cd"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/b-trm-cd"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/b-trm-cd"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/a-trm-cd"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/esrd-ind"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/crec"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/orec"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="CodeSystem/ms-cd"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
 				<reference value="CodeSystem/adjudications"/>
 			</sourceReference>
 		</resource>
@@ -1380,6 +1458,42 @@
 			<example value="false"/>
 			<sourceReference>
 				<reference value="StructureDefinition/bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension"/>
+			</sourceReference>		
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/bluebutton-coverage-ms-cd-extension"/>
+			</sourceReference>		
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/bluebutton-coverage-orec-extension"/>
+			</sourceReference>		
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/bluebutton-coverage-crec-extension"/>
+			</sourceReference>		
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/bluebutton-coverage-esrd-ind-extension"/>
+			</sourceReference>		
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/bluebutton-coverage-a-trm-cd-extension"/>
+			</sourceReference>		
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="StructureDefinition/bluebutton-coverage-b-trm-cd-extension"/>
 			</sourceReference>		
 		</resource>
 	</package>

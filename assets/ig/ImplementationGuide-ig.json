@@ -3,9 +3,9 @@
   "id": "ig",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Blue Button 2.0</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/ImplementationGuide/ig</pre></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Blue Button 2.0</h2><p>The official URL for this implementation guide is: </p><pre>https://bluebutton.cms.gov/assets/ig/ImplementationGuide/ig</pre></div>"
   },
-  "url": "http://hl7.org/fhir/ImplementationGuide/ig",
+  "url": "https://bluebutton.cms.gov/assets/ig/ImplementationGuide/ig",
   "name": "Blue Button 2.0",
   "status": "draft",
   "experimental": true,
@@ -16,55 +16,61 @@
         {
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-profile-pde-claim"
+            "reference": "StructureDefinition-bluebutton-profile-pde-claim.html"
           }
         },
         {
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-profile-carrier-claim"
+            "reference": "StructureDefinition-bluebutton-profile-carrier-claim"
           }
         },
         {
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-profile-inpatient-claim"
+            "reference": "StructureDefinition-bluebutton-profile-coverage"
           }
         },
         {
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-profile-outpatient-claim"
+            "reference": "StructureDefinition-bluebutton-profile-inpatient-claim"
           }
         },
         {
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-profile-snf-claim"
+            "reference": "StructureDefinition-bluebutton-profile-outpatient-claim"
           }
         },
         {
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-profile-patient-claim"
+            "reference": "StructureDefinition-bluebutton-profile-snf-claim"
           }
         },
         {
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-profile-dme-claim"
+            "reference": "StructureDefinition-bluebutton-profile-patient-claim"
           }
         },
         {
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-profile-hha-claim"
+            "reference": "StructureDefinition-bluebutton-profile-dme-claim"
           }
         },
         {
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-profile-hospice-claim"
+            "reference": "StructureDefinition-bluebutton-profile-hha-claim"
+          }
+        },
+        {
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition-bluebutton-profile-hospice-claim"
           }
         },
         {
@@ -76,7 +82,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-pde-benefit-package-id-extension"
+            "reference": "StructureDefinition-bluebutton-pde-benefit-package-id-extension"
           }
         },
         {
@@ -88,7 +94,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-pde-days-supply-num-extension"
+            "reference": "StructureDefinition-bluebutton-pde-days-supply-num-extension"
           }
         },
         {
@@ -100,7 +106,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-pde-fill-num-extension"
+            "reference": "StructureDefinition-bluebutton-pde-fill-num-extension"
           }
         },
         {
@@ -112,7 +118,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-pde-plan-cntrct-rec-id-extension"
+            "reference": "StructureDefinition-bluebutton-pde-plan-cntrct-rec-id-extension"
           }
         },
         {
@@ -124,7 +130,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-pde-phrmcy-srvc-type-cd-extension"
+            "reference": "StructureDefinition-bluebutton-pde-phrmcy-srvc-type-cd-extension"
           }
         },
         {
@@ -136,7 +142,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-patient-race-extension"
+            "reference": "StructureDefinition-bluebutton-patient-race-extension"
           }
         },
         {
@@ -148,7 +154,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-prpayamt-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-prpayamt-extension"
           }
         },
         {
@@ -160,7 +166,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-carr-num-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-carr-num-extension"
           }
         },
         {
@@ -172,7 +178,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-asgmntcd-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-asgmntcd-extension"
           }
         },
         {
@@ -184,7 +190,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-clm-clncl-tril-num-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-clm-clncl-tril-num-extension"
           }
         },
         {
@@ -196,7 +202,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-carr-clm-cash-ddctbl-apld-amt-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-carr-clm-cash-ddctbl-apld-amt-extension"
           }
         },
         {
@@ -208,7 +214,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-carr-clm-pmt-dnl-cd-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-carr-clm-pmt-dnl-cd-extension"
           }
         },
         {
@@ -220,7 +226,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-nch-carr-clm-alowd-amt-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-nch-carr-clm-alowd-amt-extension"
           }
         },
         {
@@ -232,7 +238,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-nch-carr-clm-sbmtd-chrg-amt-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-nch-carr-clm-sbmtd-chrg-amt-extension"
           }
         },
         {
@@ -244,7 +250,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-nch-clm-bene-pmt-amt-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-nch-clm-bene-pmt-amt-extension"
           }
         },
         {
@@ -256,7 +262,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-nch-clm-prvdr-pmt-amt-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-nch-clm-prvdr-pmt-amt-extension"
           }
         },
         {
@@ -268,7 +274,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-carr-line-prvdr-type-cd-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-carr-line-prvdr-type-cd-extension"
           }
         },
         {
@@ -280,7 +286,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-prtcptng-ind-cd-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-prtcptng-ind-cd-extension"
           }
         },
         {
@@ -292,7 +298,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-us-npi-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-us-npi-extension"
           }
         },
         {
@@ -304,7 +310,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-carr-line-mtus-cd-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-carr-line-mtus-cd-extension"
           }
         },
         {
@@ -316,7 +322,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-carr-line-mtus-cnt-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-carr-line-mtus-cnt-extension"
           }
         },
         {
@@ -328,7 +334,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-betos-cd-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-betos-cd-extension"
           }
         },
         {
@@ -340,7 +346,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-line-bene-prmry-pyr-cd-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-line-bene-prmry-pyr-cd-extension"
           }
         },
         {
@@ -352,7 +358,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-line-service-deductible-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-line-service-deductible-extension"
           }
         },
         {
@@ -364,7 +370,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-line-hct-hgb-rslt-num-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-line-hct-hgb-rslt-num-extension"
           }
         },
         {
@@ -376,7 +382,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-ndc-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-ndc-extension"
           }
         },
         {
@@ -388,7 +394,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-carr-line-ansthsa-unit-cnt-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-carr-line-ansthsa-unit-cnt-extension"
           }
         },
         {
@@ -400,7 +406,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-prvdr-state-cd-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-prvdr-state-cd-extension"
           }
         },
         {
@@ -412,7 +418,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-prvdr-zip-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-prvdr-zip-extension"
           }
         },
         {
@@ -424,7 +430,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-carr-line-prcng-lclty-cd-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-carr-line-prcng-lclty-cd-extension"
           }
         },
         {
@@ -436,7 +442,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-carr-line-clia-lab-num-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-carr-line-clia-lab-num-extension"
           }
         },
         {
@@ -448,7 +454,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-carrier-line-pmt-80-100-cd-extension"
+            "reference": "StructureDefinition-bluebutton-carrier-line-pmt-80-100-cd-extension"
           }
         },
         {
@@ -460,7 +466,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-ime-op-clm-val-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-ime-op-clm-val-amt-extension"
           }
         },
         {
@@ -472,7 +478,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-dsh-op-clm-val-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-dsh-op-clm-val-amt-extension"
           }
         },
         {
@@ -484,7 +490,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-pass-thru-per-diem-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-pass-thru-per-diem-amt-extension"
           }
         },
         {
@@ -496,7 +502,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-nch-profnl-cmpnt-chrg-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-nch-profnl-cmpnt-chrg-amt-extension"
           }
         },
         {
@@ -508,7 +514,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-tot-pps-cptl-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-tot-pps-cptl-amt-extension"
           }
         },
         {
@@ -520,7 +526,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-nch-bene-ip-ddctbl-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-nch-bene-ip-ddctbl-amt-extension"
           }
         },
         {
@@ -532,7 +538,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-nch-bene-pta-coinsrnc-lblty-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-nch-bene-pta-coinsrnc-lblty-amt-extension"
           }
         },
         {
@@ -544,7 +550,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-nch-ip-ncvrd-chrg-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-nch-ip-ncvrd-chrg-amt-extension"
           }
         },
         {
@@ -556,7 +562,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-nch-ip-tot-ddctn-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-nch-ip-tot-ddctn-amt-extension"
           }
         },
         {
@@ -568,7 +574,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-pps-cptl-dsprprtnt-shr-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-pps-cptl-dsprprtnt-shr-amt-extension"
           }
         },
         {
@@ -580,7 +586,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-pps-cptl-excptn-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-pps-cptl-excptn-amt-extension"
           }
         },
         {
@@ -592,7 +598,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-pps-cptl-fsp-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-pps-cptl-fsp-amt-extension"
           }
         },
         {
@@ -604,7 +610,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-pps-cptl-ime-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-pps-cptl-ime-amt-extension"
           }
         },
         {
@@ -616,7 +622,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-pps-cptl-outlier-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-pps-cptl-outlier-amt-extension"
           }
         },
         {
@@ -628,7 +634,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-pps-old-cptl-hld-hrmls-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-pps-old-cptl-hld-hrmls-amt-extension"
           }
         },
         {
@@ -640,7 +646,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-nch-drg-outlier-aprvd-pmt-amt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-nch-drg-outlier-aprvd-pmt-amt-extension"
           }
         },
         {
@@ -652,7 +658,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-nch-bene-blood-ddctbl-lblty-am-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-nch-bene-blood-ddctbl-lblty-am-extension"
           }
         },
         {
@@ -664,7 +670,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-mdcr-non-pmt-rsn-cd-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-mdcr-non-pmt-rsn-cd-extension"
           }
         },
         {
@@ -676,7 +682,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-prpayamt-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-prpayamt-extension"
           }
         },
         {
@@ -688,7 +694,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-fi-num-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-fi-num-extension"
           }
         },
         {
@@ -700,7 +706,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-claim-query-cd-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-claim-query-cd-extension"
           }
         },
         {
@@ -712,7 +718,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-fac-type-cd-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-fac-type-cd-extension"
           }
         },
         {
@@ -724,7 +730,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-clm-poa-ind-sw1-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-clm-poa-ind-sw1-extension"
           }
         },
         {
@@ -736,7 +742,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-rev-cntr-ndc-qty-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-rev-cntr-ndc-qty-extension"
           }
         },
         {
@@ -748,7 +754,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-inpatient-rev-cntr-ddctbl-coinsrnc-cd-extension"
+            "reference": "StructureDefinition-bluebutton-inpatient-rev-cntr-ddctbl-coinsrnc-cd-extension"
           }
         },
         {
@@ -760,7 +766,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-nch-profnl-cmpnt-chrg-amt-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-nch-profnl-cmpnt-chrg-amt-extension"
           }
         },
         {
@@ -772,7 +778,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-nch-bene-ptb-ddctbl-amt-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-nch-bene-ptb-ddctbl-amt-extension"
           }
         },
         {
@@ -784,7 +790,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-nch-bene-ptb-coinsrnc-amt-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-nch-bene-ptb-coinsrnc-amt-extension"
           }
         },
         {
@@ -796,7 +802,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension"
           }
         },
         {
@@ -808,7 +814,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-clm-op-bene-pmt-amt-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-clm-op-bene-pmt-amt-extension"
           }
         },
         {
@@ -820,7 +826,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-nch-bene-blood-ddctbl-lblty-am-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-nch-bene-blood-ddctbl-lblty-am-extension"
           }
         },
         {
@@ -832,7 +838,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-clm-mdcr-non-pmt-rsn-cd-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-clm-mdcr-non-pmt-rsn-cd-extension"
           }
         },
         {
@@ -844,7 +850,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-prpayamt-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-prpayamt-extension"
           }
         },
         {
@@ -856,7 +862,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-fi-num-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-fi-num-extension"
           }
         },
         {
@@ -868,7 +874,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-claim-query-cd-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-claim-query-cd-extension"
           }
         },
         {
@@ -880,7 +886,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-clm-fac-type-cd-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-clm-fac-type-cd-extension"
           }
         },
         {
@@ -892,7 +898,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-rev-cntr-ndc-qty-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-rev-cntr-ndc-qty-extension"
           }
         },
         {
@@ -904,7 +910,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-rev-cntr-stus-ind-cd-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-rev-cntr-stus-ind-cd-extension"
           }
         },
         {
@@ -916,7 +922,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-outpatient-rev-cntr-ide-ndc-upc-num-extension"
+            "reference": "StructureDefinition-bluebutton-outpatient-rev-cntr-ide-ndc-upc-num-extension"
           }
         },
         {
@@ -928,7 +934,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-nch-bene-ip-ddctbl-amt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-nch-bene-ip-ddctbl-amt-extension"
           }
         },
         {
@@ -940,7 +946,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-nch-bene-pta-coinsrnc-lblty-amt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-nch-bene-pta-coinsrnc-lblty-amt-extension"
           }
         },
         {
@@ -952,7 +958,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-nch-ip-ncvrd-chrg-amt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-nch-ip-ncvrd-chrg-amt-extension"
           }
         },
         {
@@ -964,7 +970,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-nch-ip-tot-ddctn-amt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-nch-ip-tot-ddctn-amt-extension"
           }
         },
         {
@@ -976,7 +982,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-clm-pps-cptl-dsprprtnt-shr-amt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-clm-pps-cptl-dsprprtnt-shr-amt-extension"
           }
         },
         {
@@ -988,7 +994,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-clm-pps-cptl-excptn-amt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-clm-pps-cptl-excptn-amt-extension"
           }
         },
         {
@@ -1000,7 +1006,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-clm-pps-cptl-fsp-amt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-clm-pps-cptl-fsp-amt-extension"
           }
         },
         {
@@ -1012,7 +1018,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-clm-pps-cptl-ime-amt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-clm-pps-cptl-ime-amt-extension"
           }
         },
         {
@@ -1024,7 +1030,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-clm-pps-cptl-outlier-amt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-clm-pps-cptl-outlier-amt-extension"
           }
         },
         {
@@ -1036,7 +1042,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-clm-pps-old-cptl-hld-hrmls-amt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-clm-pps-old-cptl-hld-hrmls-amt-extension"
           }
         },
         {
@@ -1048,7 +1054,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-nch-bene-blood-ddctbl-lblty-am-extension"
+            "reference": "StructureDefinition-bluebutton-snf-nch-bene-blood-ddctbl-lblty-am-extension"
           }
         },
         {
@@ -1060,7 +1066,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-clm-mdcr-non-pmt-rsn-cd-extension"
+            "reference": "StructureDefinition-bluebutton-snf-clm-mdcr-non-pmt-rsn-cd-extension"
           }
         },
         {
@@ -1072,7 +1078,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-prpayamt-extension"
+            "reference": "StructureDefinition-bluebutton-snf-prpayamt-extension"
           }
         },
         {
@@ -1084,7 +1090,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-fi-num-extension"
+            "reference": "StructureDefinition-bluebutton-snf-fi-num-extension"
           }
         },
         {
@@ -1096,7 +1102,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-claim-query-cd-extension"
+            "reference": "StructureDefinition-bluebutton-snf-claim-query-cd-extension"
           }
         },
         {
@@ -1108,7 +1114,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-clm-fac-type-cd-extension"
+            "reference": "StructureDefinition-bluebutton-snf-clm-fac-type-cd-extension"
           }
         },
         {
@@ -1120,7 +1126,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-snf-rev-cntr-ddctbl-coinsrnc-cd-extension"
+            "reference": "StructureDefinition-bluebutton-snf-rev-cntr-ddctbl-coinsrnc-cd-extension"
           }
         },
         {
@@ -1132,7 +1138,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/race"
+            "reference": "ValueSet-race"
           }
         },
         {
@@ -1144,7 +1150,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/gndr-cd"
+            "reference": "ValueSet-gndr-cd"
           }
         },
         {
@@ -1156,7 +1162,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/adjudications"
+            "reference": "ValueSet-adjudications"
           }
         },
         {
@@ -1168,7 +1174,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/plan-cntrct-rec-id"
+            "reference": "ValueSet-plan-cntrct-rec-id"
           }
         },
         {
@@ -1180,7 +1186,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/information-categories"
+            "reference": "ValueSet-information-categories"
           }
         },
         {
@@ -1192,7 +1198,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/clm-mdcr-non-pmt-rsn-cd"
+            "reference": "ValueSet-clm-mdcr-non-pmt-rsn-cd"
           }
         },
         {
@@ -1204,7 +1210,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/claim-query-cd"
+            "reference": "ValueSet-claim-query-cd"
           }
         },
         {
@@ -1216,7 +1222,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/clm-fac-type-cd"
+            "reference": "ValueSet-clm-fac-type-cd"
           }
         },
         {
@@ -1228,7 +1234,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/rev-cntr-stus-ind-cd"
+            "reference": "ValueSet-rev-cntr-stus-ind-cd"
           }
         },
         {
@@ -1240,7 +1246,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/clm-poa-ind-sw1"
+            "reference": "ValueSet-clm-poa-ind-sw1"
           }
         },
         {
@@ -1252,7 +1258,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/rev-cntr-ddctbl-coinsrnc-cd"
+            "reference": "ValueSet-rev-cntr-ddctbl-coinsrnc-cd"
           }
         },
         {
@@ -1264,7 +1270,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/carr-num"
+            "reference": "ValueSet-carr-num"
           }
         },
         {
@@ -1276,7 +1282,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/carr-clm-pmt-dnl-cd"
+            "reference": "ValueSet-carr-clm-pmt-dnl-cd"
           }
         },
         {
@@ -1288,7 +1294,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/asgmntcd"
+            "reference": "ValueSet-asgmntcd"
           }
         },
         {
@@ -1300,7 +1306,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/carr-line-prvdr-type-cd"
+            "reference": "ValueSet-carr-line-prvdr-type-cd"
           }
         },
         {
@@ -1312,7 +1318,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/prtcptng-ind-cd"
+            "reference": "ValueSet-prtcptng-ind-cd"
           }
         },
         {
@@ -1324,7 +1330,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/carr-line-mtus-cd"
+            "reference": "ValueSet-carr-line-mtus-cd"
           }
         },
         {
@@ -1336,7 +1342,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/betos-cd"
+            "reference": "ValueSet-betos-cd"
           }
         },
         {
@@ -1348,7 +1354,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/line-bene-prmry-pyr-cd"
+            "reference": "ValueSet-line-bene-prmry-pyr-cd"
           }
         },
         {
@@ -1360,7 +1366,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/line-service-deductible"
+            "reference": "ValueSet-line-service-deductible"
           }
         },
         {
@@ -1372,7 +1378,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/prvdr-state-cd"
+            "reference": "ValueSet-prvdr-state-cd"
           }
         },
         {
@@ -1384,7 +1390,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/carr-line-prcng-lclty-cd"
+            "reference": "ValueSet-carr-line-prcng-lclty-cd"
           }
         },
         {
@@ -1396,7 +1402,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/line-pmt-80-100-cd"
+            "reference": "ValueSet-line-pmt-80-100-cd"
           }
         },
         {
@@ -1408,7 +1414,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/dmerc-line-prcng-state-cd"
+            "reference": "ValueSet-dmerc-line-prcng-state-cd"
           }
         },
         {
@@ -1420,7 +1426,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/dmerc-line-supplr-type-cd"
+            "reference": "ValueSet-dmerc-line-supplr-type-cd"
           }
         },
         {
@@ -1432,7 +1438,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/phrmcy-srvc-type-cd"
+            "reference": "ValueSet-phrmcy-srvc-type-cd"
           }
         },
         {
@@ -1444,7 +1450,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/adjstmt-dltn-cd"
+            "reference": "ValueSet-adjstmt-dltn-cd"
           }
         },
         {
@@ -1456,7 +1462,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/daw-prod-slctn-cd"
+            "reference": "ValueSet-daw-prod-slctn-cd"
           }
         },
         {
@@ -1468,7 +1474,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/dspnsng-stus-cd"
+            "reference": "ValueSet-dspnsng-stus-cd"
           }
         },
         {
@@ -1480,7 +1486,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/drug-cvrg-stus-cd"
+            "reference": "ValueSet-drug-cvrg-stus-cd"
           }
         },
         {
@@ -1492,7 +1498,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/nstd-frmt-cd"
+            "reference": "ValueSet-nstd-frmt-cd"
           }
         },
         {
@@ -1504,7 +1510,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/prcng-excptn-cd"
+            "reference": "ValueSet-prcng-excptn-cd"
           }
         },
         {
@@ -1516,7 +1522,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/ctstrphc-cvrg-cd"
+            "reference": "ValueSet-ctstrphc-cvrg-cd"
           }
         },
         {
@@ -1528,7 +1534,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/rx-orgn-cd"
+            "reference": "ValueSet-rx-orgn-cd"
           }
         },
         {
@@ -1540,7 +1546,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/brnd-gnrc-cd"
+            "reference": "ValueSet-brnd-gnrc-cd"
           }
         },
         {
@@ -1552,7 +1558,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/ptnt-rsdnc-cd"
+            "reference": "ValueSet-ptnt-rsdnc-cd"
           }
         },
         {
@@ -1564,7 +1570,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/submsn-clr-cd"
+            "reference": "ValueSet-submsn-clr-cd"
           }
         },
         {
@@ -1576,7 +1582,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/rev-cntr-ndc-qty-qlfr-cd"
+            "reference": "ValueSet-rev-cntr-ndc-qty-qlfr-cd"
           }
         },
         {
@@ -1588,7 +1594,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/nch-ptnt-stus-ind-cd"
+            "reference": "ValueSet-nch-ptnt-stus-ind-cd"
           }
         },
         {
@@ -1600,7 +1606,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/clm-ip-admsn-type-cd"
+            "reference": "ValueSet-clm-ip-admsn-type-cd"
           }
         },
         {
@@ -1612,7 +1618,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/clm-src-ip-admsn-cd"
+            "reference": "ValueSet-clm-src-ip-admsn-cd"
           }
         },
         {
@@ -1624,7 +1630,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/clm-mco-pd-sw"
+            "reference": "ValueSet-clm-mco-pd-sw"
           }
         },
         {
@@ -1636,7 +1642,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/clm-freq-cd"
+            "reference": "ValueSet-clm-freq-cd"
           }
         },
         {
@@ -1648,7 +1654,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/ptnt-dschrg-stus-cd"
+            "reference": "ValueSet-ptnt-dschrg-stus-cd"
           }
         },
         {
@@ -1660,7 +1666,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/nch-prmry-pyr-cd"
+            "reference": "ValueSet-nch-prmry-pyr-cd"
           }
         },
         {
@@ -1672,7 +1678,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/nch-prmry-pyr-cd"
+            "reference": "CodeSystem-nch-prmry-pyr-cd"
           }
         },
         {
@@ -1684,7 +1690,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/clm-hha-lupa-ind-cd"
+            "reference": "ValueSet-clm-hha-lupa-ind-cd"
           }
         },
         {
@@ -1696,13 +1702,151 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "ValueSet/clm-hha-rfrl-cd"
+            "reference": "ValueSet-clm-hha-rfrl-cd"
           }
         },
         {
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/adjudications"
+            "reference": "ValueSet-ms-cd"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "ValueSet-orec.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet-orec"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "ValueSet-crec.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet-crec"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "ValueSet-esrd-ind.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet-esrd-ind"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "ValueSet-a-trm-cd.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet-a-trm-cd"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "ValueSet-b-trm-cd.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet-b-trm-cd"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "CodeSystem-b-trm-cd.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CodeSystem-b-trm-cd"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "CodeSystem-a-trm-cd.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CodeSystem-a-trm-cd"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "CodeSystem-esrd-ind.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CodeSystem-esrd-ind"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "CodeSystem-crec.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CodeSystem-crec"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "CodeSystem-orec.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CodeSystem-orec"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "CodeSystem-ms-cd.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CodeSystem-ms-cd"
+          }
+        },
+        {
+          "example": false,
+          "sourceReference": {
+            "reference": "CodeSystem-adjudications"
           }
         },
         {
@@ -1714,7 +1858,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/clm-hha-rfrl-cd"
+            "reference": "CodeSystem-clm-hha-rfrl-cd"
           }
         },
         {
@@ -1726,7 +1870,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/clm-hha-lupa-ind-cd"
+            "reference": "CodeSystem-clm-hha-lupa-ind-cd"
           }
         },
         {
@@ -1738,7 +1882,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/ptnt-dschrg-stus-cd"
+            "reference": "CodeSystem-ptnt-dschrg-stus-cd"
           }
         },
         {
@@ -1750,7 +1894,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/clm-freq-cd"
+            "reference": "CodeSystem-clm-freq-cd"
           }
         },
         {
@@ -1762,7 +1906,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/clm-mco-pd-sw"
+            "reference": "CodeSystem-clm-mco-pd-sw"
           }
         },
         {
@@ -1774,7 +1918,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/clm-src-ip-admsn-cd"
+            "reference": "CodeSystem-clm-src-ip-admsn-cd"
           }
         },
         {
@@ -1786,7 +1930,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/clm-ip-admsn-type-cd"
+            "reference": "CodeSystem-clm-ip-admsn-type-cd"
           }
         },
         {
@@ -1798,7 +1942,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/nch-ptnt-stus-ind-cd"
+            "reference": "CodeSystem-nch-ptnt-stus-ind-cd"
           }
         },
         {
@@ -1810,7 +1954,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/rev-cntr-ndc-qty-qlfr-cd"
+            "reference": "CodeSystem-rev-cntr-ndc-qty-qlfr-cd"
           }
         },
         {
@@ -1822,7 +1966,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/submsn-clr-cd"
+            "reference": "CodeSystem-submsn-clr-cd"
           }
         },
         {
@@ -1834,7 +1978,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/ptnt-rsdnc-cd"
+            "reference": "CodeSystem-ptnt-rsdnc-cd"
           }
         },
         {
@@ -1846,7 +1990,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/brnd-gnrc-cd"
+            "reference": "CodeSystem-brnd-gnrc-cd"
           }
         },
         {
@@ -1858,7 +2002,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/rx-orgn-cd"
+            "reference": "CodeSystem-rx-orgn-cd"
           }
         },
         {
@@ -1870,7 +2014,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/ctstrphc-cvrg-cd"
+            "reference": "CodeSystem-ctstrphc-cvrg-cd"
           }
         },
         {
@@ -1882,7 +2026,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/prcng-excptn-cd"
+            "reference": "CodeSystem-prcng-excptn-cd"
           }
         },
         {
@@ -1894,7 +2038,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/nstd-frmt-cd"
+            "reference": "CodeSystem-nstd-frmt-cd"
           }
         },
         {
@@ -1906,7 +2050,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/drug-cvrg-stus-cd"
+            "reference": "CodeSystem-drug-cvrg-stus-cd"
           }
         },
         {
@@ -1918,7 +2062,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/dspnsng-stus-cd"
+            "reference": "CodeSystem-dspnsng-stus-cd"
           }
         },
         {
@@ -1930,7 +2074,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/daw-prod-slctn-cd"
+            "reference": "CodeSystem-daw-prod-slctn-cd"
           }
         },
         {
@@ -1942,7 +2086,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/adjstmt-dltn-cd"
+            "reference": "CodeSystem-adjstmt-dltn-cd"
           }
         },
         {
@@ -1954,7 +2098,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/phrmcy-srvc-type-cd"
+            "reference": "CodeSystem-phrmcy-srvc-type-cd"
           }
         },
         {
@@ -1966,7 +2110,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/dmerc-line-supplr-type-cd"
+            "reference": "CodeSystem-dmerc-line-supplr-type-cd"
           }
         },
         {
@@ -1978,7 +2122,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/dmerc-line-prcng-state-cd"
+            "reference": "CodeSystem-dmerc-line-prcng-state-cd"
           }
         },
         {
@@ -1990,7 +2134,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/line-pmt-80-100-cd"
+            "reference": "CodeSystem-line-pmt-80-100-cd"
           }
         },
         {
@@ -2002,7 +2146,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/carr-line-prcng-lclty-cd"
+            "reference": "CodeSystem-carr-line-prcng-lclty-cd"
           }
         },
         {
@@ -2014,7 +2158,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/prvdr-state-cd"
+            "reference": "CodeSystem-prvdr-state-cd"
           }
         },
         {
@@ -2026,7 +2170,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/line-service-deductible"
+            "reference": "CodeSystem-line-service-deductible"
           }
         },
         {
@@ -2038,7 +2182,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/line-bene-prmry-pyr-cd"
+            "reference": "CodeSystem-line-bene-prmry-pyr-cd"
           }
         },
         {
@@ -2050,7 +2194,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/betos-cd"
+            "reference": "CodeSystem-betos-cd"
           }
         },
         {
@@ -2062,7 +2206,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/carr-line-mtus-cd"
+            "reference": "CodeSystem-carr-line-mtus-cd"
           }
         },
         {
@@ -2074,7 +2218,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/prtcptng-ind-cd"
+            "reference": "CodeSystem-prtcptng-ind-cd"
           }
         },
         {
@@ -2086,7 +2230,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/carr-line-prvdr-type-cd"
+            "reference": "CodeSystem-carr-line-prvdr-type-cd"
           }
         },
         {
@@ -2098,7 +2242,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/asgmntcd"
+            "reference": "CodeSystem-asgmntcd"
           }
         },
         {
@@ -2110,7 +2254,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/carr-clm-pmt-dnl-cd"
+            "reference": "CodeSystem-carr-clm-pmt-dnl-cd"
           }
         },
         {
@@ -2122,7 +2266,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/carr-num"
+            "reference": "CodeSystem-carr-num"
           }
         },
         {
@@ -2134,7 +2278,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/rev-cntr-ddctbl-coinsrnc-cd"
+            "reference": "CodeSystem-rev-cntr-ddctbl-coinsrnc-cd"
           }
         },
         {
@@ -2146,7 +2290,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/clm-poa-ind-sw1"
+            "reference": "CodeSystem-clm-poa-ind-sw1"
           }
         },
         {
@@ -2158,7 +2302,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/rev-cntr-stus-ind-cd"
+            "reference": "CodeSystem-rev-cntr-stus-ind-cd"
           }
         },
         {
@@ -2170,7 +2314,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/clm-fac-type-cd"
+            "reference": "CodeSystem-clm-fac-type-cd"
           }
         },
         {
@@ -2182,7 +2326,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/claim-query-cd"
+            "reference": "CodeSystem-claim-query-cd"
           }
         },
         {
@@ -2194,7 +2338,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/clm-mdcr-non-pmt-rsn-cd"
+            "reference": "CodeSystem-clm-mdcr-non-pmt-rsn-cd"
           }
         },
         {
@@ -2206,7 +2350,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/information-categories"
+            "reference": "CodeSystem-information-categories"
           }
         },
         {
@@ -2218,7 +2362,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/plan-cntrct-rec-id"
+            "reference": "CodeSystem-plan-cntrct-rec-id"
           }
         },
         {
@@ -2230,7 +2374,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/race"
+            "reference": "CodeSystem-race"
           }
         },
         {
@@ -2242,7 +2386,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "CodeSystem/gndr-cd"
+            "reference": "CodeSystem-gndr-cd"
           }
         },
         {
@@ -2260,7 +2404,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-prpayamt-extension"
+            "reference": "StructureDefinition-bluebutton-dme-prpayamt-extension"
           }
         },
         {
@@ -2272,7 +2416,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-carr-num-extension"
+            "reference": "StructureDefinition-bluebutton-dme-carr-num-extension"
           }
         },
         {
@@ -2284,7 +2428,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-carr-clm-pmt-dnl-cd-extension"
+            "reference": "StructureDefinition-bluebutton-dme-carr-clm-pmt-dnl-cd-extension"
           }
         },
         {
@@ -2296,7 +2440,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-asgmntcd-extension"
+            "reference": "StructureDefinition-bluebutton-dme-asgmntcd-extension"
           }
         },
         {
@@ -2308,7 +2452,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-clm-clncl-tril-num-extension"
+            "reference": "StructureDefinition-bluebutton-dme-clm-clncl-tril-num-extension"
           }
         },
         {
@@ -2320,7 +2464,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-carr-clm-cash-ddctbl-apld-amt-extension"
+            "reference": "StructureDefinition-bluebutton-dme-carr-clm-cash-ddctbl-apld-amt-extension"
           }
         },
         {
@@ -2332,7 +2476,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-nch-clm-prvdr-pmt-amt-extension"
+            "reference": "StructureDefinition-bluebutton-dme-nch-clm-prvdr-pmt-amt-extension"
           }
         },
         {
@@ -2344,7 +2488,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-nch-clm-bene-pmt-amt-extension"
+            "reference": "StructureDefinition-bluebutton-dme-nch-clm-bene-pmt-amt-extension"
           }
         },
         {
@@ -2356,7 +2500,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-nch-carr-clm-sbmtd-chrg-amt-extension"
+            "reference": "StructureDefinition-bluebutton-dme-nch-carr-clm-sbmtd-chrg-amt-extension"
           }
         },
         {
@@ -2368,7 +2512,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-nch-carr-clm-alowd-amt-extension"
+            "reference": "StructureDefinition-bluebutton-dme-nch-carr-clm-alowd-amt-extension"
           }
         },
         {
@@ -2380,7 +2524,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-prtcptng-ind-cd-extension"
+            "reference": "StructureDefinition-bluebutton-dme-prtcptng-ind-cd-extension"
           }
         },
         {
@@ -2392,7 +2536,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-suplrnum-extension"
+            "reference": "StructureDefinition-bluebutton-dme-suplrnum-extension"
           }
         },
         {
@@ -2404,7 +2548,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-dmerc-line-scrn-svgs-amt-extension"
+            "reference": "StructureDefinition-bluebutton-dme-dmerc-line-scrn-svgs-amt-extension"
           }
         },
         {
@@ -2416,7 +2560,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-dmerc-line-mtus-cnt-extension"
+            "reference": "StructureDefinition-bluebutton-dme-dmerc-line-mtus-cnt-extension"
           }
         },
         {
@@ -2428,7 +2572,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-betos-cd-extension"
+            "reference": "StructureDefinition-bluebutton-dme-betos-cd-extension"
           }
         },
         {
@@ -2440,7 +2584,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-line-bene-prmry-pyr-cd-extension"
+            "reference": "StructureDefinition-bluebutton-dme-line-bene-prmry-pyr-cd-extension"
           }
         },
         {
@@ -2452,7 +2596,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-line-service-deductible-extension"
+            "reference": "StructureDefinition-bluebutton-dme-line-service-deductible-extension"
           }
         },
         {
@@ -2464,7 +2608,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-line-hct-hgb-rslt-num-extension"
+            "reference": "StructureDefinition-bluebutton-dme-line-hct-hgb-rslt-num-extension"
           }
         },
         {
@@ -2476,7 +2620,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-ndc-extension"
+            "reference": "StructureDefinition-bluebutton-dme-ndc-extension"
           }
         },
         {
@@ -2488,7 +2632,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-prvdr-state-cd-extension"
+            "reference": "StructureDefinition-bluebutton-dme-prvdr-state-cd-extension"
           }
         },
         {
@@ -2500,7 +2644,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-dmerc-line-prcng-state-cd-extension"
+            "reference": "StructureDefinition-bluebutton-dme-dmerc-line-prcng-state-cd-extension"
           }
         },
         {
@@ -2512,7 +2656,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-dmerc-line-supplr-type-cd-extension"
+            "reference": "StructureDefinition-bluebutton-dme-dmerc-line-supplr-type-cd-extension"
           }
         },
         {
@@ -2524,7 +2668,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-dme-line-pmt-80-100-cd-extension"
+            "reference": "StructureDefinition-bluebutton-dme-line-pmt-80-100-cd-extension"
           }
         },
         {
@@ -2536,7 +2680,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hospice-clm-mdcr-non-pmt-rsn-cd-extension"
+            "reference": "StructureDefinition-bluebutton-hospice-clm-mdcr-non-pmt-rsn-cd-extension"
           }
         },
         {
@@ -2548,7 +2692,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hospice-prpayamt-extension"
+            "reference": "StructureDefinition-bluebutton-hospice-prpayamt-extension"
           }
         },
         {
@@ -2560,7 +2704,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hospice-fi-num-extension"
+            "reference": "StructureDefinition-bluebutton-hospice-fi-num-extension"
           }
         },
         {
@@ -2572,7 +2716,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hospice-clm-fac-type-cd-extension"
+            "reference": "StructureDefinition-bluebutton-hospice-clm-fac-type-cd-extension"
           }
         },
         {
@@ -2584,7 +2728,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hospice-bene-hospc-prd-cnt-extension"
+            "reference": "StructureDefinition-bluebutton-hospice-bene-hospc-prd-cnt-extension"
           }
         },
         {
@@ -2596,7 +2740,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hospice-rev-cntr-ndc-qty-extension"
+            "reference": "StructureDefinition-bluebutton-hospice-rev-cntr-ndc-qty-extension"
           }
         },
         {
@@ -2608,7 +2752,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hospice-rev-cntr-ddctbl-coinsrnc-cd-extension"
+            "reference": "StructureDefinition-bluebutton-hospice-rev-cntr-ddctbl-coinsrnc-cd-extension"
           }
         },
         {
@@ -2620,7 +2764,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension"
+            "reference": "StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension"
           }
         },
         {
@@ -2632,7 +2776,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hha-prpayamt-extension"
+            "reference": "StructureDefinition-bluebutton-hha-prpayamt-extension"
           }
         },
         {
@@ -2644,7 +2788,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hha-fi-num-extension"
+            "reference": "StructureDefinition-bluebutton-hha-fi-num-extension"
           }
         },
         {
@@ -2656,7 +2800,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hha-clm-fac-type-cd-extension"
+            "reference": "StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension"
           }
         },
         {
@@ -2668,7 +2812,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hha-rev-cntr-stus-ind-cd-extension"
+            "reference": "StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension"
           }
         },
         {
@@ -2680,7 +2824,7 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hha-rev-cntr-ndc-qty-extension"
+            "reference": "StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension"
           }
         },
         {
@@ -2692,7 +2836,79 @@
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension"
+            "reference": "StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "StructureDefinition-bluebutton-coverage-ms-cd-extension.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition-bluebutton-coverage-ms-cd-extension"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "StructureDefinition-bluebutton-coverage-orec-extension.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition-bluebutton-coverage-orec-extension"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "StructureDefinition-bluebutton-coverage-crec-extension.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition-bluebutton-coverage-crec-extension"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "StructureDefinition-bluebutton-coverage-esrd-ind-extension.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition-bluebutton-coverage-esrd-ind-extension"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "StructureDefinition-bluebutton-coverage-a-trm-cd-extension.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition-bluebutton-coverage-a-trm-cd-extension"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page",
+              "valueUri": "StructureDefinition-bluebutton-coverage-b-trm-cd-extension.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition-bluebutton-coverage-b-trm-cd-extension"
           }
         }
       ]

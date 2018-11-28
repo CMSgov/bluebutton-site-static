@@ -7,13 +7,14 @@
   },
   "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-ip-admsn-type-cd",
   "identifier": {
-    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-ip-admsn-type-cd"
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-ip-admsn-type-cd.html"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Claim Inpatient Admission Type Code",
   "title": "Claim Inpatient Admission Type Code",
   "status": "active",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
   "description": "The code indicating the type and priority of an inpatient admission associated with the service on an intermediary submitted claim. Source: https://bluebutton.cms.gov/resources/variables/clm_ip_admsn_type_cd",
   "caseSensitive": true,
   "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-ip-admsn-type-cd",

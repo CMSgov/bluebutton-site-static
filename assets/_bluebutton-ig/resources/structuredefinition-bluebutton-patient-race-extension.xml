@@ -4,7 +4,7 @@
   <url value="http://hl7.org/fhir/StructureDefinition/bluebutton-patient-race-extension" />
   <name value="Race for patient" />
   <status value="draft" />
-  <date value="2018-02-20" />
+  <publisher value="CMS Blue Button 2.0 Team" /> value="2018-02-20" />
   <description value="Race as an extension of item.quantity for patient." />
   <fhirVersion value="3.0.1" />
   <mapping>

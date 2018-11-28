@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "esrd-ind",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>End-stage Renal Disease (ESRD) Indicator</h2><div><p>This field specifies whether a beneficiary is entitled to Medicare benefits due to end stage renal disease (ESRD). Source: https://bluebutton.cms.gov/resources/variables/esrd_ind</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-esrd-ind defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>Y<a name=\"esrd-ind-Y\"> </a></td><td>the beneficiary has ESRD</td><td>the beneficiary has ESRD</td></tr><tr><td>0<a name=\"esrd-ind-0\"> </a></td><td>the beneficiary does not have ESRDm</td><td>the beneficiary does not have ESRD</td></tr></table></div>"
+  },
+  "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-esrd-ind",
+  "identifier": {
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-esrd-ind.html"
+  },
+  "version": "1.1.1",
+  "name": "End-stage Renal Disease (ESRD) Indicator",
+  "title": "End-stage Renal Disease (ESRD) Indicator",
+  "status": "active",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
+  "description": "This field specifies whether a beneficiary is entitled to Medicare benefits due to end stage renal disease (ESRD). Source: https://bluebutton.cms.gov/resources/variables/esrd_ind",
+  "caseSensitive": true,
+  "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-esrd-ind",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Y",
+      "display": "the beneficiary has ESRD",
+      "definition": "the beneficiary has ESRD"
+    },
+    {
+      "code": "0",
+      "display": "the beneficiary does not have ESRDm",
+      "definition": "the beneficiary does not have ESRD"
+    }
+  ]
+}

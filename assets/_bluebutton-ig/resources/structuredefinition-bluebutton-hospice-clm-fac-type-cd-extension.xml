@@ -4,6 +4,7 @@
   <url value="http://hl7.org/fhir/StructureDefinition/bluebutton-hospice-clm-fac-type-cd-extension" />
   <name value="bluebutton-hospice-clm-fac-type-cd-extension" />
   <status value="draft" />
+  <publisher value="CMS Blue Button 2.0 Team" />
   <date value="2018-03-20T12:41:24.648-05:00" />
   <fhirVersion value="3.0.1" />
   <mapping>

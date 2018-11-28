@@ -7,13 +7,14 @@
   },
   "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-ctstrphc-cvrg-cd",
   "identifier": {
-    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-ctstrphc-cvrg-cd"
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-ctstrphc-cvrg-cd.html"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Catastrophic Coverage Code",
   "title": "Catastrophic Coverage Code",
   "status": "active",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
   "description": "This variable indicates whether the PDE occurred within the catastrophic benefit phase of the Medicare Part D benefit, according to the source PDE. When the value equals C (above attachment point), then the PDE is in the catastrophic phase. When the value equals A (attachment point), the PDE has caused the beneficiary to move into the catastrophic phase (i.e., this is the “triggering” PDE). Source: https://bluebutton.cms.gov/resources/variables/ctstrphc_cvrg_cd",
   "caseSensitive": true,
   "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-ctstrphc-cvrg-cd",

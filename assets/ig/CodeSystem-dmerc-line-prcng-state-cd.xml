@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<CodeSystem xmlns="http://hl7.org/fhir">
+<CodeSystem xmlns="https://bluebutton.cms.gov/assets/ig">
   <id value="dmerc-line-prcng-state-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>DMERC Line Pricing State Code (SSA)</h2><div><p>The 2-digit SSA state code where the durable medical equipment (DME) supplier was located; used by the Medicare Administrative Contractor (MAC) for pricing the service. Source: https://bluebutton.cms.gov/resources/variables/dmerc<em>line</em>prcng<em>state</em>cd</p>
@@ -8,13 +8,14 @@
   </text>
   <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-dmerc-line-prcng-state-cd"/>
   <identifier>
-    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-dmerc-line-prcng-state-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-dmerc-line-prcng-state-cd.html"/>
   </identifier>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="DMERC Line Pricing State Code (SSA)"/>
   <title value="DMERC Line Pricing State Code (SSA)"/>
   <status value="active"/>
-  <date value="2018-05-31T14:39:32+00:00"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
+  <publisher value="CMS Blue Button 2.0 Team"/>
   <description value="The 2-digit SSA state code where the durable medical equipment (DME) supplier was located; used by the Medicare Administrative Contractor (MAC) for pricing the service. Source: https://bluebutton.cms.gov/resources/variables/dmerc_line_prcng_state_cd"/>
   <caseSensitive value="true"/>
   <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-dmerc-line-prcng-state-cd"/>

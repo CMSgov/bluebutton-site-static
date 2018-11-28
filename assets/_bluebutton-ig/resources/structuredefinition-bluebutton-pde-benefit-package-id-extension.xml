@@ -4,7 +4,7 @@
   <url value="http://hl7.org/fhir/StructureDefinition/bluebutton-pde-benefit-package-id-extension" />
   <name value="Benefit Package Id for part D event" />
   <status value="draft" />
-  <date value="2018-02-27T09:21:37.665-06:00" />
+  <publisher value="CMS Blue Button 2.0 Team" /> value="2018-02-27T09:21:37.665-06:00" />
   <description value="Plan Benefit Package Id as an extension of coverage for part D event." />
   <fhirVersion value="3.0.1" />
   <mapping>

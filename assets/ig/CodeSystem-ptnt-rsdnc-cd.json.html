@@ -6,7 +6,7 @@
   <title>Blue Button 2.0</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="description" content="Blue Button 2.0 Implementation Guide" />
 <meta name="author" content="http://www.hl7.org"/>
 
   <link href="fhir.css" rel="stylesheet"/>
@@ -28,29 +28,26 @@
   window.tealiumEnvironment = "prod";
   </script>
   <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
-
 </head>
 <body>
 
- <div id="segment-header" class="segment">  <!-- segment-header -->
-     <div class="container">  <!-- container -->
-         <div class="col-3">
-             <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
-         </div>
-         <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
-             <b>Blue Button 2.0 Implementation Guide</b>
-             <!-- (Release 1.1.0 ) -->
-             <!-- (Release 1.1.0 Ballot ) -->
-         </div>
-         <div class="col-3" style="margin-right:0;float:right">
-             <a id="cms-logo" no-external="true" href="http://www.cms.gov">
-                 <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
-             </a>
-         </div>
-     </div>
-
+<div class="container">  <!-- container -->
+    <div class="col-3">
+        <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
+    </div>
+    <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
+        <b>Blue Button 2.0 Implementation Guide</b>
+        <!-- (Release 1.1.1 ) -->
+        <!-- (Release 1.1.1 Ballot ) -->
+    </div>
+    <div class="col-3" style="margin-right:0;float:right">
+        <a id="cms-logo" no-external="true" href="http://www.cms.gov">
+            <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
+        </a>
+    </div>
+</div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="https://bluebutton.cms.gov/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -68,7 +65,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="https://hl7.org/fhir/STU3/index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -115,107 +112,108 @@ Raw <a href="CodeSystem-ptnt-rsdnc-cd.json" download>json</a>
 
 <pre class="json">
 {
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "ptnt-rsdnc-cd",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Patient Residence Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt&lt;em&gt;rsdnc&lt;/em&gt;cd&lt;/p&gt;
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "ptnt-rsdnc-cd",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
+    "<a href="https://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="https://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Patient Residence Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt&lt;em&gt;rsdnc&lt;/em&gt;cd&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;a name=&quot;ptnt-rsdnc-cd-00&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Not specified, other patient residence not identified below&lt;/td&gt;&lt;td&gt;Not specified, other patient residence not identified below&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;01&lt;a name=&quot;ptnt-rsdnc-cd-01&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Home&lt;/td&gt;&lt;td&gt;Home&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02&lt;a name=&quot;ptnt-rsdnc-cd-02&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Skilled Nursing Facility&lt;/td&gt;&lt;td&gt;Skilled Nursing Facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03&lt;a name=&quot;ptnt-rsdnc-cd-03&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nursing facility (long-term care facility)&lt;/td&gt;&lt;td&gt;Nursing facility (long-term care facility)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04&lt;a name=&quot;ptnt-rsdnc-cd-04&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Assisted living facility&lt;/td&gt;&lt;td&gt;Assisted living facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05&lt;a name=&quot;ptnt-rsdnc-cd-05&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Custodial Care Facility (residential but not medical care)&lt;/td&gt;&lt;td&gt;Custodial Care Facility (residential but not medical care)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06&lt;a name=&quot;ptnt-rsdnc-cd-06&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Group home (e.g., congregate residential foster care)&lt;/td&gt;&lt;td&gt;Group home (e.g., congregate residential foster care)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07&lt;a name=&quot;ptnt-rsdnc-cd-07&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inpatient Psychiatric Facility&lt;/td&gt;&lt;td&gt;Inpatient Psychiatric Facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08&lt;a name=&quot;ptnt-rsdnc-cd-08&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Psychiatric Facility – Partial Hospitalization&lt;/td&gt;&lt;td&gt;Psychiatric Facility – Partial Hospitalization&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09&lt;a name=&quot;ptnt-rsdnc-cd-09&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Intermediate care facility for the mentally retarded (ICF/MR)&lt;/td&gt;&lt;td&gt;Intermediate care facility for the mentally retarded (ICF/MR)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;a name=&quot;ptnt-rsdnc-cd-10&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Residential Substance Abuse Treatment Facility&lt;/td&gt;&lt;td&gt;Residential Substance Abuse Treatment Facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11&lt;a name=&quot;ptnt-rsdnc-cd-11&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospice&lt;/td&gt;&lt;td&gt;Hospice&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;a name=&quot;ptnt-rsdnc-cd-12&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Psychiatric Residential Treatment Facility&lt;/td&gt;&lt;td&gt;Psychiatric Residential Treatment Facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;a name=&quot;ptnt-rsdnc-cd-13&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Comprehensive Inpatient Rehabilitation Facility&lt;/td&gt;&lt;td&gt;Comprehensive Inpatient Rehabilitation Facility&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;a name=&quot;ptnt-rsdnc-cd-14&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Homeless Shelter&lt;/td&gt;&lt;td&gt;Homeless Shelter&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;a name=&quot;ptnt-rsdnc-cd-15&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Correctional Institution&lt;/td&gt;&lt;td&gt;Correctional Institution&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd"
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
+    "<a href="https://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd.html"
   },
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.0",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Patient Residence Code",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Patient Residence Code",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-05-31T14:39:32+00:00",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt_rsdnc_cd",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-rsdnc-cd",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.1",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Patient Residence Code",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Patient Residence Code",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-11-27T15:56:35+00:00",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.publisher">publisher</a>" : "CMS Blue Button 2.0 Team",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt_rsdnc_cd",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-rsdnc-cd",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "00",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Not specified, other patient residence not identified below",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Not specified, other patient residence not identified below"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "00",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Not specified, other patient residence not identified below",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Not specified, other patient residence not identified below"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "01",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Home",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Home"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "01",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Home",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Home"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "02",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Skilled Nursing Facility",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Skilled Nursing Facility"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "02",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Skilled Nursing Facility",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Skilled Nursing Facility"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "03",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Nursing facility (long-term care facility)",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Nursing facility (long-term care facility)"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "03",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Nursing facility (long-term care facility)",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Nursing facility (long-term care facility)"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "04",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Assisted living facility",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Assisted living facility"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "04",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Assisted living facility",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Assisted living facility"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "05",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Custodial Care Facility (residential but not medical care)",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Custodial Care Facility (residential but not medical care)"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "05",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Custodial Care Facility (residential but not medical care)",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Custodial Care Facility (residential but not medical care)"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "06",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Group home (e.g., congregate residential foster care)",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Group home (e.g., congregate residential foster care)"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "06",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Group home (e.g., congregate residential foster care)",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Group home (e.g., congregate residential foster care)"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "07",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Inpatient Psychiatric Facility",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Inpatient Psychiatric Facility"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "07",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Inpatient Psychiatric Facility",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Inpatient Psychiatric Facility"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "08",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Psychiatric Facility – Partial Hospitalization",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Psychiatric Facility – Partial Hospitalization"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "08",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Psychiatric Facility – Partial Hospitalization",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Psychiatric Facility – Partial Hospitalization"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "09",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Intermediate care facility for the mentally retarded (ICF/MR)",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate care facility for the mentally retarded (ICF/MR)"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "09",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Intermediate care facility for the mentally retarded (ICF/MR)",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Intermediate care facility for the mentally retarded (ICF/MR)"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "10",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Residential Substance Abuse Treatment Facility",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Residential Substance Abuse Treatment Facility"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "10",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Residential Substance Abuse Treatment Facility",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Residential Substance Abuse Treatment Facility"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "11",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hospice",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hospice"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "11",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Hospice",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Hospice"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "12",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Psychiatric Residential Treatment Facility",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Psychiatric Residential Treatment Facility"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "12",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Psychiatric Residential Treatment Facility",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Psychiatric Residential Treatment Facility"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "13",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Comprehensive Inpatient Rehabilitation Facility",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Comprehensive Inpatient Rehabilitation Facility"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "13",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Comprehensive Inpatient Rehabilitation Facility",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Comprehensive Inpatient Rehabilitation Facility"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "14",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Homeless Shelter",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Homeless Shelter"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "14",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Homeless Shelter",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Homeless Shelter"
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "15",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Correctional Institution",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Correctional Institution"
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "15",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Correctional Institution",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Correctional Institution"
     }
   ]
 }</pre>
@@ -249,9 +247,9 @@ Raw <a href="CodeSystem-ptnt-rsdnc-cd.json" download>json</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+            Blue Button 2.0 Version: 1.1.1  &reg;&copy; <a style="color: #81BEF7" href="https://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Tue, Nov 27, 2018 15:56+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="https://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

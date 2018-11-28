@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ValueSet xmlns="http://hl7.org/fhir">
+<ValueSet xmlns="https://bluebutton.cms.gov/assets/ig">
   <id value="drug-cvrg-stus-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Drug Coverage Status Code</h2><div><p>This field indicates whether or not the drug is covered by Medicare Part D. The Part D benefit does not cover all FDA-approved drugs. However, plan sponsors can offer an “enhanced” benefit package that covers non-Part D drugs, such as over-the-counter medications. Source: https://bluebutton.cms.gov/resources/variables/drug<em>cvrg</em>stus_cd</p>
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-drug-cvrg-stus-cd.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-drug-cvrg-stus-cd</code></a></li></ul></div>
   </text>
   <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-drug-cvrg-stus-cd"/>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Drug Coverage Status Code"/>
   <status value="draft"/>
-  <date value="2018-05-31T14:39:32+00:00"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
   <description value="This field indicates whether or not the drug is covered by Medicare Part D. The Part D benefit does not cover all FDA-approved drugs. However, plan sponsors can offer an &#x201C;enhanced&#x201D; benefit package that covers non-Part D drugs, such as over-the-counter medications. Source: https://bluebutton.cms.gov/resources/variables/drug_cvrg_stus_cd"/>
   <compose>
     <include>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="orec"/>
+    <url value="http://hl7.org/fhir/ValueSet/orec"/>
+    <name value="Original Reason for Entitlement Code"/>
+    <description value="Original reason for Medicare entitlement. Source: https://bluebutton.cms.gov/resources/variables/orec"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/orec"/>
+        </include>
+    </compose>
+</ValueSet>

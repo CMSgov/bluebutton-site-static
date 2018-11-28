@@ -7,11 +7,12 @@
   },
   "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories",
   "identifier": {
-    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories"
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories.html"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "status": "active",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
   "caseSensitive": true,
   "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-information-categories",
   "hierarchyMeaning": "is-a",

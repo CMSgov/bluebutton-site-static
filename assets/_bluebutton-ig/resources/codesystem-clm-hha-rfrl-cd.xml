@@ -3,11 +3,12 @@
     <id value="clm-hha-rfrl-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/clm-hha-rfrl-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/clm-hha-rfrl-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/clm-hha-rfrl-cd.html"/>
     </identifier>
     <name value="Claim HHA Referral Code"/>
     <title value="Claim HHA Referral Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="Effective with Version 'I', the code used to identify the means by which the beneficiary was referred for Home Health services. Source: https://bluebutton.cms.gov/resources/variables/clm_hha_rfrl_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/clm-hha-rfrl-cd"/>

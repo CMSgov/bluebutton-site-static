@@ -5,6 +5,7 @@
   <name value="BluebuttonPartDEvent" />
   <title value="BluebuttonPartDEvent" />
   <status value="draft" />
+  <publisher value="CMS Blue Button 2.0 Team" />
   <date value="2018-02-20" />
   <description value="Part D Event Claim profile for the Blue Button project." />
   <fhirVersion value="3.0.1" />

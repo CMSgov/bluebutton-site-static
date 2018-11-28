@@ -3,11 +3,12 @@
     <id value="line-bene-prmry-pyr-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/line-bene-prmry-pyr-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/line-bene-prmry-pyr-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/line-bene-prmry-pyr-cd.html"/>
     </identifier>
     <name value="Line Primary Payer Code (if not Medicare)"/>
     <title value="Line Primary Payer Code (if not Medicare)"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's medical bills relating to the line item service on the non-institutional claim. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/line_bene_prmry_pyr_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/line-bene-prmry-pyr-cd"/>
