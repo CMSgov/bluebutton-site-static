@@ -33,7 +33,7 @@ const closeNavOnResize = function(e) {
 window.addEventListener('resize', closeNavOnResize);
 
 // Add the click ation to the mobile nav trigger
-mobileNavTriggerButton.addEventListener('click', () => {
+mobileNavTriggerButton.addEventListener('click', function () {
   mobileNavContainer.classList.toggle('is-visible');
   mobileNavTriggerButton.classList.toggle('trigger-active');
   // Set up toggle for the menu icon and text
