@@ -60,7 +60,7 @@ pipeline {
     stage('Install') {
       steps {
         sh '''
-          rbenv local 2.3.0
+          rbenv local 2.4.5
           gem install  --no-ri --no-rdoc bundler
           bundle install
           '''
