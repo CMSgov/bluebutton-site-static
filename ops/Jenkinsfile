@@ -22,8 +22,8 @@ pipeline {
     )
   }
 
-/*  stages {
-    stage('Notify HipChat') {
+  stages {
+/*    stage('Notify HipChat') {
       steps {
         withCredentials([
           string(credentialsId: 'hipchat-room', variable: 'room'),
