@@ -6,7 +6,12 @@ pipeline {
 
   parameters {
     string(
-      name: 'GIT_VERSION',
+      name: 'Static_GIT_VERSION',
+      defaultValue: '*/master',
+      description: 'The branch, tag or commit to deploy.'
+    )
+    string(
+      name: 'CSS_GIT_VERSION',
       defaultValue: '*/master',
       description: 'The branch, tag or commit to deploy.'
     )
@@ -17,7 +22,7 @@ pipeline {
     )
   }
 
-  stages {
+/*  stages {
     stage('Notify HipChat') {
       steps {
         withCredentials([
@@ -37,7 +42,7 @@ pipeline {
           )
         }
       }
-    }
+    }*/
 
     stage('Clear') {
       steps {
@@ -45,11 +50,11 @@ pipeline {
       }
     }
 
-    stage('Checkout') {
+    stage('Checkout Static Site') {
       steps {
         checkout([
             $class: 'GitSCM',
-            branches: [[name: "${params.GIT_VERSION}"]],
+            branches: [[name: "${params.Static_GIT_VERSION}"]],
             userRemoteConfigs: [[
               url: 'https://github.com/CMSgov/bluebutton-site-static.git'
             ]]
@@ -60,6 +65,7 @@ pipeline {
     stage('Install') {
       steps {
         sh '''
+          rbenv install 2.4.5
           rbenv local 2.4.5
           gem install  --no-ri --no-rdoc bundler
           bundle install
@@ -90,7 +96,19 @@ pipeline {
       }
     }
 
-    stage('Deploy to Test') {
+    stage('Checkout CSS') {
+      steps {
+        checkout([
+            $class: 'GitSCM',
+            branches: [[name: "${params.CSS_GIT_VERSION}"]],
+            userRemoteConfigs: [[
+              url: 'https://github.com/CMSgov/bluebutton-css.git'
+            ]]
+        ])
+      }
+    }
+
+    stage('Deploy Static to TEST') {
       steps {
         withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
           sh """
@@ -100,7 +118,17 @@ pipeline {
       }
     }
 
-    stage('Deploy to Prod') {
+    stage('Deploy CSS To TEST') {
+      steps {
+        withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
+          sh """
+            aws s3 cp ./dist/static-main.css s3://test.bluebutton.cms.gov/assets/css/
+          """
+        }
+      }
+    }
+
+    stage('Deploy Static to PROD') {
       steps {
         withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
           sh """
@@ -114,10 +142,25 @@ pipeline {
         }
       }
     }
+
+    stage('Deploy CSS To PROD') {
+      steps {
+        withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
+          sh """
+            aws s3 cp ./dist/static-main.css s3://bluebutton.cms.gov/assets/css/
+          """
+        }
+      }
+      when {
+        expression {
+          params.DEPLOY_PROD == true
+        }
+      }
+    }
   }
 
 
-  post {
+/*  post {
     success {
       withCredentials([
         string(credentialsId: 'hipchat-room', variable: 'room'),
@@ -156,4 +199,4 @@ pipeline {
       }
     }
   }
-}
+}*/
