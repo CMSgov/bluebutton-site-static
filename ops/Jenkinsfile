@@ -23,7 +23,7 @@ pipeline {
   }
 
   stages {
-/*    stage('Notify HipChat') {
+    stage('Notify HipChat') {
       steps {
         withCredentials([
           string(credentialsId: 'hipchat-room', variable: 'room'),
@@ -42,7 +42,7 @@ pipeline {
           )
         }
       }
-    }*/
+    }
 
     stage('Clear') {
       steps {
@@ -160,7 +160,7 @@ pipeline {
   }
 
 
-/*  post {
+  post {
     success {
       withCredentials([
         string(credentialsId: 'hipchat-room', variable: 'room'),
@@ -198,5 +198,5 @@ pipeline {
         )
       }
     }
-  }*/
+  }
 }
