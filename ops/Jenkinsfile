@@ -16,8 +16,18 @@ pipeline {
       description: 'The branch, tag or commit to deploy.'
     )
     booleanParam(
+      defaultValue: true,
+      description: 'When true, deploy to both TEST and STAGING environments.',
+      name: 'DEPLOY_TEST'
+    )
+    booleanParam(
       defaultValue: false,
-      description: 'When true, deploy to both TEST and PROD environments.',
+      description: 'When true, deploy to both TEST and STAGING environments.',
+      name: 'DEPLOY_STAGING'
+    )
+    booleanParam(
+      defaultValue: false,
+      description: 'When true, deploy to PROD environments.',
       name: 'DEPLOY_PROD'
     )
   }
@@ -33,7 +43,7 @@ pipeline {
           hipchatSend(
             color: 'GRAY',
             notify: true,
-            message: "STARTED: ${env.JOB_NAME} [prod: ${params.DEPLOY_PROD}]",
+            message: "SUCCESS: ${env.JOB_NAME} [staging: ${params.DEPLOY_STAGING}] [prod: ${params.DEPLOY_PROD}]",
             room: room,
             sendAs: '',
             server: server,
@@ -65,6 +75,9 @@ pipeline {
     stage('Install') {
       steps {
         sh '''
+          if ! rbenv versions | grep -qw 2.4.5; then
+          rbenv install 2.4.5
+          fi
           rbenv local 2.4.5
           gem install  --no-ri --no-rdoc bundler
           bundle install
@@ -72,26 +85,54 @@ pipeline {
       }
     }
 
-    stage('Build') {
+    stage('Build TEST') {
+      when {
+        expression {
+          params.DEPLOY_TEST == true
+        }
+      }
       steps {
-        parallel (
-          "build test": {
-            script {
-              def site_folder = "_site-test"
-              sh """
-                bundle exec jekyll build --config _config.yml,_config-test.yml -d ./${site_folder}
-              """
-            }
-          },
-          "build prod": {
-            script {
-              def site_folder = "_site"
-              sh """
-                bundle exec jekyll build --config _config.yml,_config-prod.yml -d ./${site_folder}
-              """
-            }
-          }
-        )
+        echo 'Building TEST'
+        script {
+          def site_folder = "_site-test"
+          sh """
+            bundle exec jekyll build --config _config.yml,_config-test.yml -d ./${site_folder}
+          """
+        }
+      }
+    }
+
+    stage('Build STAGING') {
+      when {
+        expression {
+          params.DEPLOY_STAGING == true
+        }
+      }
+      steps {
+        echo 'Building STAGING'
+        script {
+          def site_folder = "_site-staging"
+          sh """
+            bundle exec jekyll build --config _config.yml,_config-staging.yml -d ./${site_folder}
+          """
+        }
+      }
+    }
+
+    stage('Build PROD') {
+      when {
+        expression {
+          params.DEPLOY_PROD == true
+        }
+      }
+      steps {
+        echo 'Building PROD'
+        script {
+          def site_folder = "_site-prod"
+          sh """
+            bundle exec jekyll build --config _config.yml,_config-prod.yml -d ./${site_folder}
+          """
+        }
       }
     }
 
@@ -115,6 +156,11 @@ pipeline {
           """
         }
       }
+      when {
+        expression {
+          params.DEPLOY_TEST == true
+        }
+      }
     }
 
     stage('Deploy CSS To TEST') {
@@ -125,13 +171,48 @@ pipeline {
           """
         }
       }
+      when {
+        expression {
+          params.DEPLOY_TEST == true
+        }
+      }
+    }
+
+    stage('Deploy Static to STAGING') {
+      steps {
+        withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
+          sh """
+            aws s3 sync --delete ./_site-staging/ s3://staging.bluebutton.cms.gov
+          """
+        }
+      }
+      when {
+        expression {
+          params.DEPLOY_STAGING == true
+        }
+      }
+    }
+
+    stage('Deploy CSS To STAGING') {
+      steps {
+        withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
+          sh """
+            aws s3 cp ./dist/static-main.css s3://staging.bluebutton.cms.gov/assets/css/
+          """
+        }
+      }
+      when {
+        expression {
+          params.DEPLOY_STAGING == true
+        }
+      }
     }
 
     stage('Deploy Static to PROD') {
       steps {
         withAwsCli(credentialsId: aws_creds, defaultRegion: 'us-east-1') {
           sh """
-            aws s3 sync --delete ./_site/ s3://bluebutton.cms.gov
+            aws s3 sync --delete ./_site-prod/ s3://bluebutton.cms.gov
           """
         }
       }
@@ -169,7 +250,7 @@ pipeline {
         hipchatSend(
             color: 'GREEN',
             notify: true,
-            message: "SUCCESS: ${env.JOB_NAME} [prod: ${params.DEPLOY_PROD}]",
+            message: "SUCCESS: ${env.JOB_NAME} [staging: ${params.DEPLOY_STAGING}] [prod: ${params.DEPLOY_PROD}]",
             room: room,
             sendAs: '',
             server: server,
