@@ -1,0 +1,103 @@
+{
+  "resourceType" : "StructureDefinition",
+  "url" : "https://bluebutton.cms.gov/resources/structuredefinition/oauth-uris",
+
+  "identifier" : [
+    {
+      "system" : "https://bluebutton.cms.gov",
+      "value" : "OAuth2.0-security"
+    }
+  ],
+  "version" : "1",
+  "name" : "oauth-uris",
+  "title" : "OAuth 2.0 uri security definitions",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2018-11-29",
+  "publisher" : "CMS Blue Button 2.0 API",
+  "contact" : [
+    {
+      "name" : "Mark Scrimshire",
+      "telecom" : [
+        "system" : "email",
+        "value" : "mark@ekivemark.com"
+      ]
+    }
+  ],
+  "description" : "Describes the OAuth2.0 endpoints that are provided for authorization, token exchange, revocation and management",
+  "purpose" : "Document API endpoints for OAuth2.0 functions",
+  "copyright": "Creative Commons 0, per FHIR specification",
+  "kind" : "resource",
+  "abstract" : false,
+  "contextType" : "resource",
+  "context": [
+    "Conformance.rest.security"
+  ],
+  "base": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "differential": {
+    "element": [ {
+      "path": "Extension",
+      "short": "OAuth URIs",
+      "definition": "Identifies OAuth 2.0 URIs associated with a FHIR server",
+      "comments": "Some individuals may have more than two parents (e.g. genetic vs. adoptive parents).  Even non-genetic relationships can be relevant in terms of genetic exposure.",
+      "min": 0,
+      "max": "1",
+      "type": [ { "code": "Extension" } ],
+      "isModifier": false
+    },
+      {
+        "path": "Extension.extension",
+        "short": "OAuth 'authorize' uri",
+        "definition": "OAuth 2.0 'authorize' endpoint for this FHIR server",
+        "min": 1,
+        "max": "1",
+        "type": [ { "code": "Extension" } ],
+        "isModifier": false,
+      },
+      {
+        "path": "Extension.extension.url",
+        "type": [ { "code": "uri" } ],
+        "fixedUri": "authorize"
+      },
+      {
+        "path": "Extension.extension.value[x]",
+        "type": [ { "code": "uri" } ]
+      },
+      {
+        "path": "Extension.extension",
+        "short": "OAuth 'token' uri",
+        "definition": "OAuth 2.0 'token' endpoint for this FHIR server",
+        "min": 1,
+        "max": "1",
+        "type": [ { "code": "Extension" } ],
+        "isModifier": false,
+      },
+      {
+        "path": "Extension.extension.url",
+        "type": [ { "code": "uri" } ],
+        "fixedUri": "token"
+      },
+      {
+        "path": "Extension.extension.value[x]",
+        "type": [ { "code": "uri" } ]
+      },
+      {
+        "path": "Extension.extension",
+        "short": "OAuth dynamic registration uri",
+        "definition": "OAuth 2.0 dynamic client registration endpoit for this FHIR server, if supported",
+        "min": 0,
+        "max": "1",
+        "type": [ { "code": "Extension" } ],
+        "isModifier": false,
+      },
+      {
+        "path": "Extension.extension.url",
+        "type": [ { "code": "uri" } ],
+        "fixedUri": "register"
+      },
+      {
+        "path": "Extension.extension.value[x]",
+        "type": [ { "code": "uri" } ]
+      }]
+  }
+}
