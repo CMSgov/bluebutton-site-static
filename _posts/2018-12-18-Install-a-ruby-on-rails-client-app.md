@@ -24,7 +24,7 @@ Today we will focus on the Ruby on Rails client. This post is slightly different
 You can get the code for the Ruby on Rails client app here:
 [https://github.com/CMSgov/bluebutton-sample-client-rails](https://github.com/CMSgov/bluebutton-sample-client-rails)
 
-Installing the application on your own desktop is a quick and easy process and is well documented in the [README.md](Installing the application on your own desktop is a quick and easy process and is well documented in the README.md file.) file.
+Installing the application on your own desktop is a quick and easy process and is well documented in the [README.md](https://github.com/CMSgov/bluebutton-sample-client-rails/blob/master/README.md) file.
 
 However, the installation does have a series of prerequisites: Docker, Docker-compose, and Virtualbox.
 
