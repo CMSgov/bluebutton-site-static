@@ -7,13 +7,14 @@
   },
   "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd",
   "identifier": {
-    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd"
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd.html"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Brand-Generic Code Reported by Submitting Plan",
   "title": "Brand-Generic Code Reported by Submitting Plan",
   "status": "active",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
   "description": "Plan reported value indicating whether the plan adjudicated the claim as a brand or generic drug. Applies to covered drugs only. Source: https://bluebutton.cms.gov/resources/variables/brnd_gnrc_cd",
   "caseSensitive": true,
   "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-brnd-gnrc-cd",

@@ -4,7 +4,7 @@
   <url value="http://hl7.org/fhir/StructureDefinition/bluebutton-pde-phrmcy-srvc-type-cd-extension" />
   <name value="Service Type for part D event" />
   <status value="draft" />
-  <date value="2018-02-27" />
+  <publisher value="CMS Blue Button 2.0 Team" /> value="2018-02-27" />
   <description value="Pharmacy Service Type Code as an extension of facility for part D event." />
   <fhirVersion value="3.0.1" />
   <mapping>

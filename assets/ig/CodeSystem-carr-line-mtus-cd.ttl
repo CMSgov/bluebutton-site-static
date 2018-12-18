@@ -1,4 +1,4 @@
-@prefix fhir: <http://hl7.org/fhir/> .
+@prefix fhir: <https://bluebutton.cms.gov/assets/ig/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -14,13 +14,14 @@
   ];
   fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd"];
   fhir:CodeSystem.identifier [
-     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd" ]
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd.html" ]
   ];
-  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.version [ fhir:value "1.1.1"];
   fhir:CodeSystem.name [ fhir:value "Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code"];
   fhir:CodeSystem.title [ fhir:value "Carrier Line Miles/Time/Units/Services (MTUS) Indicator Code"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2018-11-27T15:56:35+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CMS Blue Button 2.0 Team"];
   fhir:CodeSystem.description [ fhir:value "Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr_line_mtus_cd"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
   fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-mtus-cd"];
@@ -62,7 +63,7 @@
 
 <https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/carr-line-mtus-cd.ttl> .
+  owl:versionIRI <https://bluebutton.cms.gov/assets/ig/STU3/CodeSystem-carr-line-mtus-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 

@@ -6,7 +6,7 @@
   <title>Blue Button 2.0</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="description" content="Blue Button 2.0 Implementation Guide" />
 <meta name="author" content="http://www.hl7.org"/>
 
   <link href="fhir.css" rel="stylesheet"/>
@@ -28,29 +28,26 @@
   window.tealiumEnvironment = "prod";
   </script>
   <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
-
 </head>
 <body>
 
- <div id="segment-header" class="segment">  <!-- segment-header -->
-     <div class="container">  <!-- container -->
-         <div class="col-3">
-             <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
-         </div>
-         <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
-             <b>Blue Button 2.0 Implementation Guide</b>
-             <!-- (Release 1.1.0 ) -->
-             <!-- (Release 1.1.0 Ballot ) -->
-         </div>
-         <div class="col-3" style="margin-right:0;float:right">
-             <a id="cms-logo" no-external="true" href="http://www.cms.gov">
-                 <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
-             </a>
-         </div>
-     </div>
-
+<div class="container">  <!-- container -->
+    <div class="col-3">
+        <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
+    </div>
+    <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
+        <b>Blue Button 2.0 Implementation Guide</b>
+        <!-- (Release 1.1.1 ) -->
+        <!-- (Release 1.1.1 Ballot ) -->
+    </div>
+    <div class="col-3" style="margin-right:0;float:right">
+        <a id="cms-logo" no-external="true" href="http://www.cms.gov">
+            <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
+        </a>
+    </div>
+</div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="https://bluebutton.cms.gov/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -68,7 +65,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="https://hl7.org/fhir/STU3/index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -115,72 +112,73 @@ Raw <a href="CodeSystem-adjudication-categories.json" download>json</a>
 
 <pre class="json">
 {
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "adjudication-categories",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Adjudication Categories&lt;/h2&gt;&lt;div&gt;&lt;p&gt;Blue Button Adjudication Categories.&lt;/p&gt;
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "adjudication-categories",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
+    "<a href="https://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="https://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Adjudication Categories&lt;/h2&gt;&lt;div&gt;&lt;p&gt;Blue Button Adjudication Categories.&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudication-categories defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Part D Covered&lt;a name=&quot;adjudication-categories-PartDCovered&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Problem List Item&lt;/td&gt;&lt;td&gt;This is the net amount that the Part D plan paid for a        PDE that was covered by the Medicare Part D benefit.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Gross Drug Cost Below Out-of-Pocket Threshold (GDCB)&lt;a name=&quot;adjudication-categories-GrossDrugCostBelowOut-of-PocketThreshold.40GDCB.41&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter Diagnosis&lt;/td&gt;&lt;td&gt;This variable is the portion of the gross drug cost        for the prescription drug fill that was not covered by Part        D’s catastrophic coverage.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Gross Drug Cost Above Out-of-Pocket Threshold (GDCA)&lt;a name=&quot;adjudication-categories-GrossDrugCostAboveOut-of-PocketThreshold.40GDCA.41&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Problem&lt;/td&gt;&lt;td&gt;This variable is the portion of the gross drug cost        for the prescription drug fill that was covered by Part D’s        catastrophic coverage.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Patient Pay Amount&lt;a name=&quot;adjudication-categories-PatientPayAmount&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Health Concern&lt;/td&gt;&lt;td&gt;This variable is the dollar amount that the        beneficiary paid for the PDE without being reimbursed by a        third party.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Other True Out-of-Pocket (TrOOP) Amount&lt;a name=&quot;adjudication-categories-OtherTrueOut-of-Pocket.40TrOOP.41Amount&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;td&gt;This is the amount of any payment made by other        third-party payers that reduces the beneficiary’s liability        for the PDE and counts towards Part D’s true out-of-pocket        (TrOOP) requirement.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Part D Low Income Subsidy (LICS) Amount&lt;a name=&quot;adjudication-categories-PartDLowIncomeSubsidy.40LICS.41Amount&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;td&gt;This is the amount of cost sharing for the drug that was paid        by the Part D low-income subsidy (LICS).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Reduction in patient liability due to payments by other payers (PLRO) Amount&lt;a name=&quot;adjudication-categories-Reductioninpatientliabilityduetopaymentsbyotherpayers.40PLRO.41Amount&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;td&gt;This is the amount of any payment by other third-party payers        that reduces the beneficiary’s liability for the PDE but         does not count towards Part D’s true out-of-pocket (TrOOP)        requirement.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Total Prescription Cost&lt;a name=&quot;adjudication-categories-TotalPrescriptionCost&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;td&gt;This is the price paid for the drug at the point of sale        (i.e., the pharmacy counter), and it does not include any        rebates or discounts that the drug manufacturer provides        directly to the Part D plan sponsor.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Medicare Coverage Gap Discount Amount&lt;a name=&quot;adjudication-categories-MedicareCoverageGapDiscountAmount&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;td&gt;This variable indicates the amount of the discount provided        by the drug’s manufacturer under the Medicare Coverage Gap        Discount Program, as calculated by CMS based on data reported        in the PDE.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudication-categories",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudication-categories"
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudication-categories",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>" : {
+    "<a href="https://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudication-categories.html"
   },
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.0",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Adjudication Categories",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Adjudication Categories",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-05-31T14:39:32+00:00",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "Blue Button Adjudication Categories.",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "http://hl7.org/fhir/us/core/ValueSet/adjudications",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
-  "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "1.1.1",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a>" : "Adjudication Categories",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a>" : "Adjudication Categories",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a>" : "2018-11-27T15:56:35+00:00",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.publisher">publisher</a>" : "CMS Blue Button 2.0 Team",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>" : "Blue Button Adjudication Categories.",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "https://bluebutton.cms.gov/assets/ig/us/core/ValueSet-adjudications.html",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a>" : "is-a",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>" : [
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Part D Covered",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Problem List Item",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This is the net amount that the Part D plan paid for a        PDE that was covered by the Medicare Part D benefit."
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Part D Covered",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Problem List Item",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This is the net amount that the Part D plan paid for a        PDE that was covered by the Medicare Part D benefit."
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Gross Drug Cost Below Out-of-Pocket Threshold (GDCB)",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Encounter Diagnosis",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This variable is the portion of the gross drug cost        for the prescription drug fill that was not covered by Part        D’s catastrophic coverage."
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Gross Drug Cost Below Out-of-Pocket Threshold (GDCB)",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Encounter Diagnosis",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This variable is the portion of the gross drug cost        for the prescription drug fill that was not covered by Part        D’s catastrophic coverage."
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Gross Drug Cost Above Out-of-Pocket Threshold (GDCA)",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Problem",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This variable is the portion of the gross drug cost        for the prescription drug fill that was covered by Part D’s        catastrophic coverage."
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Gross Drug Cost Above Out-of-Pocket Threshold (GDCA)",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Problem",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This variable is the portion of the gross drug cost        for the prescription drug fill that was covered by Part D’s        catastrophic coverage."
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Patient Pay Amount",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Health Concern",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This variable is the dollar amount that the        beneficiary paid for the PDE without being reimbursed by a        third party."
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Patient Pay Amount",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Health Concern",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This variable is the dollar amount that the        beneficiary paid for the PDE without being reimbursed by a        third party."
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Other True Out-of-Pocket (TrOOP) Amount",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Cell",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This is the amount of any payment made by other        third-party payers that reduces the beneficiary’s liability        for the PDE and counts towards Part D’s true out-of-pocket        (TrOOP) requirement."
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Other True Out-of-Pocket (TrOOP) Amount",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Cell",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This is the amount of any payment made by other        third-party payers that reduces the beneficiary’s liability        for the PDE and counts towards Part D’s true out-of-pocket        (TrOOP) requirement."
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Part D Low Income Subsidy (LICS) Amount",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Cell",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This is the amount of cost sharing for the drug that was paid        by the Part D low-income subsidy (LICS)."
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Part D Low Income Subsidy (LICS) Amount",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Cell",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This is the amount of cost sharing for the drug that was paid        by the Part D low-income subsidy (LICS)."
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Reduction in patient liability due to payments by other payers (PLRO) Amount",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Cell",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This is the amount of any payment by other third-party payers        that reduces the beneficiary’s liability for the PDE but         does not count towards Part D’s true out-of-pocket (TrOOP)        requirement."
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Reduction in patient liability due to payments by other payers (PLRO) Amount",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Cell",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This is the amount of any payment by other third-party payers        that reduces the beneficiary’s liability for the PDE but         does not count towards Part D’s true out-of-pocket (TrOOP)        requirement."
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Total Prescription Cost",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Cell",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This is the price paid for the drug at the point of sale        (i.e., the pharmacy counter), and it does not include any        rebates or discounts that the drug manufacturer provides        directly to the Part D plan sponsor."
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Total Prescription Cost",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Cell",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This is the price paid for the drug at the point of sale        (i.e., the pharmacy counter), and it does not include any        rebates or discounts that the drug manufacturer provides        directly to the Part D plan sponsor."
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Medicare Coverage Gap Discount Amount",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Cell",
-      "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This variable indicates the amount of the discount provided        by the drug’s manufacturer under the Medicare Coverage Gap        Discount Program, as calculated by CMS based on data reported        in the PDE."
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a>" : "Medicare Coverage Gap Discount Amount",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>" : "Cell",
+      "<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>" : "This variable indicates the amount of the discount provided        by the drug’s manufacturer under the Medicare Coverage Gap        Discount Program, as calculated by CMS based on data reported        in the PDE."
     }
   ]
 }</pre>
@@ -214,9 +212,9 @@ Raw <a href="CodeSystem-adjudication-categories.json" download>json</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+            Blue Button 2.0 Version: 1.1.1  &reg;&copy; <a style="color: #81BEF7" href="https://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Tue, Nov 27, 2018 15:56+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="https://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

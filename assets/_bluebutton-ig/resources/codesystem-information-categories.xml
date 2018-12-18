@@ -3,11 +3,12 @@
     <id value="information-categories"/>
     <url value="http://hl7.org/fhir/CodeSystem/information-categories"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/information-categories"/>
+        <value value="http://hl7.org/fhir/CodeSystem/information-categories.html"/>
     </identifier>
     <name value=""/>
     <title value=""/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value=""/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/information-categories"/>

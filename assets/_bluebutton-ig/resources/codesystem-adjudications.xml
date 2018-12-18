@@ -3,14 +3,15 @@
 	<id value="adjudication-categories"/>
 	<url value="http://hl7.org/fhir/CodeSystem/adjudication-categories"/>
 	<identifier>
-		<value value="http://hl7.org/fhir/CodeSystem/adjudication-categories"/>
+		<value value="http://hl7.org/fhir/CodeSystem/adjudication-categories.html"/>
 	</identifier>
 	<name value="Adjudication Categories"/>
 	<title value="Adjudication Categories"/>
-	<status value="active"/>
+	<status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
 	<description value="Blue Button Adjudication Categories."/>
 	<caseSensitive value="true"/>
-	<valueSet value="http://hl7.org/fhir/us/core/ValueSet/adjudications"/>
+	<valueSet value="http://hl7.org/fhir/us/core/ValueSet/adjudications.html"/>
 	<hierarchyMeaning value="is-a"/>
 	<content value="complete"/>
 	<concept>

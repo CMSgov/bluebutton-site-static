@@ -7,13 +7,14 @@
   },
   "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd",
   "identifier": {
-    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd"
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd.html"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Line Berenson-Eggers Type of Service (BETOS) Code",
   "title": "Line Berenson-Eggers Type of Service (BETOS) Code",
   "status": "active",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
   "description": "The Berenson-Eggers type of service (BETOS) for the procedure code based on generally agreed upon clinically meaningful groupings of procedures and services. This field is included as a line item on the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/betos_cd",
   "caseSensitive": true,
   "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-betos-cd",

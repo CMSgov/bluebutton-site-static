@@ -4,7 +4,7 @@
   <url value="http://hl7.org/fhir/StructureDefinition/bluebutton-pde-plan-cntrct-rec-id-extension" />
   <name value="Plan Contract Id for part D event" />
   <status value="draft" />
-  <date value="2018-02-27" />
+  <publisher value="CMS Blue Button 2.0 Team" /> value="2018-02-27" />
   <description value="Plan Contract Id as an extension of coverage for part D event." />
   <fhirVersion value="3.0.1" />
   <mapping>

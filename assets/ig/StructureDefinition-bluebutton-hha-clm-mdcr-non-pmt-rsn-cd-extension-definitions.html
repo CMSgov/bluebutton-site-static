@@ -6,7 +6,7 @@
   <title>Blue Button 2.0</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="description" content="Blue Button 2.0 Implementation Guide" />
 <meta name="author" content="http://www.hl7.org"/>
 
   <link href="fhir.css" rel="stylesheet"/>
@@ -28,29 +28,26 @@
   window.tealiumEnvironment = "prod";
   </script>
   <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
-
 </head>
 <body>
 
- <div id="segment-header" class="segment">  <!-- segment-header -->
-     <div class="container">  <!-- container -->
-         <div class="col-3">
-             <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
-         </div>
-         <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
-             <b>Blue Button 2.0 Implementation Guide</b>
-             <!-- (Release 1.1.0 ) -->
-             <!-- (Release 1.1.0 Ballot ) -->
-         </div>
-         <div class="col-3" style="margin-right:0;float:right">
-             <a id="cms-logo" no-external="true" href="http://www.cms.gov">
-                 <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
-             </a>
-         </div>
-     </div>
-
+<div class="container">  <!-- container -->
+    <div class="col-3">
+        <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
+    </div>
+    <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
+        <b>Blue Button 2.0 Implementation Guide</b>
+        <!-- (Release 1.1.1 ) -->
+        <!-- (Release 1.1.1 Ballot ) -->
+    </div>
+    <div class="col-3" style="margin-right:0;float:right">
+        <a id="cms-logo" no-external="true" href="http://www.cms.gov">
+            <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
+        </a>
+    </div>
+</div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="https://bluebutton.cms.gov/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -68,7 +65,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="https://hl7.org/fhir/STU3/index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -114,14 +111,14 @@
   <tr><td colspan="2" class="structure"><a name="Extension"> </a><b>Extension</b></td></tr>
   <tr><td>Definition</td><td><p>Optional Extension Element - found in all resources.</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() | (children().count() &gt; id.count()))<br/><b title="Formal Invariant Identifier">ext-1</b>: Must have either extensions or value[x], not both (: extension.exists() != value.exists())</td></tr>
   <tr><td colspan="2" class="structure"><a name="Extension.id"> </a><b>Extension.id</b></td></tr>
   <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr>
   <tr><td>Comments</td><td><p>Note that FHIR strings may not exceed 1MB in size</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
@@ -129,8 +126,8 @@
   <tr><td colspan="2" class="structure"><a name="Extension.extension"> </a><b>Extension.extension</b></td></tr>
   <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#Extension">Extension</a></td></tr>
   <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
   <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
 </td></tr>
@@ -139,8 +136,8 @@
   <tr><td colspan="2" class="structure"><a name="Extension.url"> </a><b>Extension.url</b></td></tr>
   <tr><td>Definition</td><td><p>Source of the definition for the extension code - a logical name or a URL.</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></td></tr>
   <tr><td>Comments</td><td><p>The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.</p>
 </td></tr>
   <tr><td>Fixed Value</td><td>https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension</td></tr>
@@ -149,8 +146,8 @@
   <tr><td colspan="2" class="structure"><a name="Extension.valueCoding:valueCoding"> </a><a name="Extension.value[x]"> </a><a name="Extension.value[x]"> </a><b>Extension.valueCoding(valueCoding)</b></td></tr>
   <tr><td>Definition</td><td><p>Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#Coding">Coding</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#Coding">Coding</a></td></tr>
   <tr><td>Comments</td><td><p>A stream of bytes, base64 encoded</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
@@ -158,8 +155,8 @@
   <tr><td colspan="2" class="structure"><a name="Extension.valueCoding:valueCoding.id"> </a><a name="Extension.valueCoding.id"> </a><a name="Extension.value[x].id"> </a><b>Extension.valueCoding.id</b></td></tr>
   <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0 This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0 This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr>
   <tr><td>Comments</td><td><p>Note that FHIR strings may not exceed 1MB in size</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
@@ -167,8 +164,8 @@
   <tr><td colspan="2" class="structure"><a name="Extension.value[x]:valueCoding.extension"> </a><a name="Extension.valueCoding.extension"> </a><b>Extension.valueCoding.extension</b></td></tr>
   <tr><td>Definition</td><td><p>May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#Extension">Extension</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#Extension">Extension</a></td></tr>
   <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
   <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
 </td></tr>
@@ -177,8 +174,8 @@
   <tr><td colspan="2" class="structure"><a name="Extension.valueCoding:valueCoding.system"> </a><a name="Extension.valueCoding.system"> </a><a name="Extension.value[x].system"> </a><b>Extension.valueCoding.system</b></td></tr>
   <tr><td>Definition</td><td><p>The identification of the code system that defines the meaning of the symbol in the code.</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></td></tr>
   <tr><td>Requirements</td><td><p>Need to be unambiguous about the source of the definition of the symbol.</p>
 </td></tr>
   <tr><td>Comments</td><td><p>The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.</p>
@@ -188,9 +185,9 @@
   <tr><td colspan="2" class="structure"><a name="Extension.valueCoding:valueCoding.version"> </a><a name="Extension.valueCoding.version"> </a><a name="Extension.value[x].version"> </a><b>Extension.valueCoding.version</b></td></tr>
   <tr><td>Definition</td><td><p>The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.</p>
 </td></tr>
-  <tr><td>Note</td><td>This is a business versionId, not a resource version id (see <a href="http://hl7.org/fhir/STU3/resource.html#versions">discussion</a>)</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0 This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr>
+  <tr><td>Note</td><td>This is a business versionId, not a resource version id (see <a href="https://hl7.org/fhir/STU3/resource.html#versions">discussion</a>)</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0 This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr>
   <tr><td>Comments</td><td><p>Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
@@ -198,8 +195,8 @@
   <tr><td colspan="2" class="structure"><a name="Extension.valueCoding:valueCoding.code"> </a><a name="Extension.valueCoding.code"> </a><a name="Extension.value[x].code"> </a><b>Extension.valueCoding.code</b></td></tr>
   <tr><td>Definition</td><td><p>A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#code">code</a></td></tr>
   <tr><td>Requirements</td><td><p>Need to refer to a particular code in the system.</p>
 </td></tr>
   <tr><td>Comments</td><td><p>Note that FHIR strings may not exceed 1MB in size</p>
@@ -209,8 +206,8 @@
   <tr><td colspan="2" class="structure"><a name="Extension.valueCoding:valueCoding.display"> </a><a name="Extension.valueCoding.display"> </a><a name="Extension.value[x].display"> </a><b>Extension.valueCoding.display</b></td></tr>
   <tr><td>Definition</td><td><p>A representation of the meaning of the code in the system, following the rules of the system.</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr>
   <tr><td>Requirements</td><td><p>Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.</p>
 </td></tr>
   <tr><td>Comments</td><td><p>Note that FHIR strings may not exceed 1MB in size</p>
@@ -220,8 +217,8 @@
   <tr><td colspan="2" class="structure"><a name="Extension.valueCoding:valueCoding.userSelected"> </a><a name="Extension.valueCoding.userSelected"> </a><a name="Extension.value[x].userSelected"> </a><b>Extension.valueCoding.userSelected</b></td></tr>
   <tr><td>Definition</td><td><p>Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).</p>
 </td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0 This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0 This element is affected by the following invariants: ele-1</td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></td></tr>
   <tr><td>Requirements</td><td><p>This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.</p>
 </td></tr>
   <tr><td>Comments</td><td><p>Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.</p>
@@ -259,9 +256,9 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+            Blue Button 2.0 Version: 1.1.1  &reg;&copy; <a style="color: #81BEF7" href="https://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Tue, Nov 27, 2018 15:56+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="https://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

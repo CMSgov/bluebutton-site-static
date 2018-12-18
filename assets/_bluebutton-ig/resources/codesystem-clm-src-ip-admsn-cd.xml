@@ -3,11 +3,12 @@
     <id value="clm-src-ip-admsn-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/clm-src-ip-admsn-cd.html"/>
     </identifier>
     <name value="Claim Source Inpatient Admission Code"/>
     <title value="Claim Source Inpatient Admission Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="The code indicating the source of the referral for the admission or visit. Source: https://bluebutton.cms.gov/resources/variables/clm_src_ip_admsn_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/clm-src-ip-admsn-cd"/>

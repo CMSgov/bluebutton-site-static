@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<CodeSystem xmlns="http://hl7.org/fhir">
+<CodeSystem xmlns="https://bluebutton.cms.gov/assets/ig">
   <id value="clm-freq-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Claim Frequency Code</h2><div><p>The third digit of the type of bill (TOB3) submitted on an institutional claim record to indicate the sequence of a claim in the beneficiary's current episode of care. Source: https://bluebutton.cms.gov/resources/variables/clm<em>freq</em>cd</p>
@@ -8,13 +8,14 @@
   </text>
   <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-freq-cd"/>
   <identifier>
-    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-freq-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-freq-cd.html"/>
   </identifier>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Claim Frequency Code"/>
   <title value="Claim Frequency Code"/>
   <status value="active"/>
-  <date value="2018-05-31T14:39:32+00:00"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
+  <publisher value="CMS Blue Button 2.0 Team"/>
   <description value="The third digit of the type of bill (TOB3) submitted on an institutional claim record to indicate the sequence of a claim in the beneficiary&#39;s current episode of care. Source: https://bluebutton.cms.gov/resources/variables/clm_freq_cd"/>
   <caseSensitive value="true"/>
   <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-clm-freq-cd"/>

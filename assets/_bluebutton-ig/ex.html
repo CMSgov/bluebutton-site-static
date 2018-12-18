@@ -6,7 +6,7 @@
 <!-- =============BreadCrumbs============= -->
 
 
-{% include bluebutton-ig/container-start.html %}
+{% include container-start.html %}
 
   <!-- ============CONTENT CONTENT=============== -->
 
@@ -19,10 +19,10 @@ Formats: <a href="{{[type]}}-{{ ig_id }}.html">Narrative</a>,
 <a href="{{ ig_type }}-{{ ig_id }}.ttl.html">Turtle</a>
 </p>
 
-{% include_relative resources/{{ ig_type }}-{{ ig_name }}.xhtml %}
+{% include_relative {{ ig_type }}-{{ ig_name }}.xhtml %}
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
-{% include bluebutton-ig/container-end.html %}
+{% include container-end.html %}
 
-{% include bluebutton-ig/footer.html %}
+{% include footer.html %}

@@ -37,7 +37,7 @@ For Example:
 
 * [National Drug Code Directory]
 * [HL7 v3 Code System ActCode]
-* [ICD-10]
+* [Icd - FHIR v3.0.1]
 
 [View the full list of Blue Button API FHIR Data Model Coding Systems and Identifiers]
 
@@ -55,6 +55,6 @@ operations.
 [CMS Blue Button 2.0]:https://bluebutton.cms.gov/
 [National Drug Code Directory]:https://www.accessdata.fda.gov/scripts/cder/ndc/
 [HL7 v3 Code System ActCode]:http://hl7.org/fhir/v3/ActCode/cs.html
-[ICD-10]:http://hl7.org/fhir/terminologies-systems.html#http://hl7.html
+[Icd - FHIR v3.0.1]:https://hl7.org/fhir/icd.html
 [View the full list of Blue Button API FHIR Data Model Coding Systems and Identifiers]:https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md
 [logical view]:http://hl7.org/fhir/formats.html#table

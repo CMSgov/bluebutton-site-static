@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="a-trm-cd"/>
+    <url value="http://hl7.org/fhir/ValueSet/a-trm-cd"/>
+    <name value="Part A Termination Code"/>
+    <description value="This code specifies the reason Part A entitlement was terminated. Source: https://bluebutton.cms.gov/resources/variables/a_trm_cd"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/a-trm-cd"/>
+        </include>
+    </compose>
+</ValueSet>

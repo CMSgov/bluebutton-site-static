@@ -3,11 +3,12 @@
     <id value="adjstmt-dltn-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/adjstmt-dltn-cd.html"/>
     </identifier>
     <name value="Adjustment Deletion Code"/>
     <title value="Adjustment Deletion Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="This field distinguishes original from adjusted or deleted PDE records so CMS can adjust claims and make accurate payment for revised PDE records. Source: https://bluebutton.cms.gov/resources/variables/adjstmt_dltn_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/adjstmt-dltn-cd"/>

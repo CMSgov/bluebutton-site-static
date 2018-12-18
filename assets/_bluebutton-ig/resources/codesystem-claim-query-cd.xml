@@ -3,11 +3,12 @@
     <id value="claim-query-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/claim-query-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/claim-query-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/claim-query-cd.html"/>
     </identifier>
     <name value="Claim Query Code"/>
     <title value="Claim Query Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="Code indicating the type of claim record being processed with respect to payment (debit/credit indicator; interim/final indicator). Source: https://bluebutton.cms.gov/resources/variables/claim_query_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/claim-query-cd"/>

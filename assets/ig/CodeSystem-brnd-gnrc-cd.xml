@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<CodeSystem xmlns="http://hl7.org/fhir">
+<CodeSystem xmlns="https://bluebutton.cms.gov/assets/ig">
   <id value="brnd-gnrc-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Brand-Generic Code Reported by Submitting Plan</h2><div><p>Plan reported value indicating whether the plan adjudicated the claim as a brand or generic drug. Applies to covered drugs only. Source: https://bluebutton.cms.gov/resources/variables/brnd<em>gnrc</em>cd</p>
@@ -8,13 +8,14 @@
   </text>
   <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd"/>
   <identifier>
-    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd.html"/>
   </identifier>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Brand-Generic Code Reported by Submitting Plan"/>
   <title value="Brand-Generic Code Reported by Submitting Plan"/>
   <status value="active"/>
-  <date value="2018-05-31T14:39:32+00:00"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
+  <publisher value="CMS Blue Button 2.0 Team"/>
   <description value="Plan reported value indicating whether the plan adjudicated the claim as a brand or generic drug. Applies to covered drugs only. Source: https://bluebutton.cms.gov/resources/variables/brnd_gnrc_cd"/>
   <caseSensitive value="true"/>
   <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-brnd-gnrc-cd"/>

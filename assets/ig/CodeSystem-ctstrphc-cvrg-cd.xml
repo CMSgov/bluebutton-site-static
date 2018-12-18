@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<CodeSystem xmlns="http://hl7.org/fhir">
+<CodeSystem xmlns="https://bluebutton.cms.gov/assets/ig">
   <id value="ctstrphc-cvrg-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Catastrophic Coverage Code</h2><div><p>This variable indicates whether the PDE occurred within the catastrophic benefit phase of the Medicare Part D benefit, according to the source PDE. When the value equals C (above attachment point), then the PDE is in the catastrophic phase. When the value equals A (attachment point), the PDE has caused the beneficiary to move into the catastrophic phase (i.e., this is the “triggering” PDE). Source: https://bluebutton.cms.gov/resources/variables/ctstrphc<em>cvrg</em>cd</p>
@@ -8,13 +8,14 @@
   </text>
   <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-ctstrphc-cvrg-cd"/>
   <identifier>
-    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-ctstrphc-cvrg-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-ctstrphc-cvrg-cd.html"/>
   </identifier>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Catastrophic Coverage Code"/>
   <title value="Catastrophic Coverage Code"/>
   <status value="active"/>
-  <date value="2018-05-31T14:39:32+00:00"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
+  <publisher value="CMS Blue Button 2.0 Team"/>
   <description value="This variable indicates whether the PDE occurred within the catastrophic benefit phase of the Medicare Part D benefit, according to the source PDE. When the value equals C (above attachment point), then the PDE is in the catastrophic phase. When the value equals A (attachment point), the PDE has caused the beneficiary to move into the catastrophic phase (i.e., this is the &#x201C;triggering&#x201D; PDE). Source: https://bluebutton.cms.gov/resources/variables/ctstrphc_cvrg_cd"/>
   <caseSensitive value="true"/>
   <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-ctstrphc-cvrg-cd"/>

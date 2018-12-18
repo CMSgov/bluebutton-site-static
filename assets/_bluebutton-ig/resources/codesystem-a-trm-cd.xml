@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="a-trm-cd"/>
+    <url value="http://hl7.org/fhir/CodeSystem/a-trm-cd"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/a-trm-cd.html"/>
+    </identifier>
+    <name value="Part A Termination Code"/>
+    <title value="Part A Termination Code"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
+    <description value="This code specifies the reason Part A entitlement was terminated. Source: https://bluebutton.cms.gov/resources/variables/a_trm_cd"/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/a-trm-cd"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="0"/>
+        <display value="Not Terminated"/>
+        <definition value="Not Terminated"/>
+    </concept>
+    <concept>
+        <code value="1"/>
+        <display value="Dead"/>
+        <definition value="Dead"/>
+    </concept>
+    <concept>
+        <code value="2"/>
+        <display value="Non-Payment of Premium"/>
+        <definition value="Non-Payment of Premium"/>
+    </concept>
+    <concept>
+        <code value="3"/>
+        <display value="Voluntary Withdrawal"/>
+        <definition value="Voluntary Withdrawal"/>
+    </concept>
+    <concept>
+        <code value="9"/>
+        <display value="Other Termination"/>
+        <definition value="Other Termination"/>
+    </concept>
+</CodeSystem>

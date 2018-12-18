@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="orec"/>
+    <url value="http://hl7.org/fhir/CodeSystem/orec"/>
+    <identifier>
+        <value value="http://hl7.org/fhir/CodeSystem/orec.html"/>
+    </identifier>
+    <name value="Original Reason for Entitlement Code"/>
+    <title value="Original Reason for Entitlement Code"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
+    <description value="Original reason for Medicare entitlement. Source: https://bluebutton.cms.gov/resources/variables/orec"/>
+    <caseSensitive value="true"/>
+    <valueSet value="http://hl7.org/fhir/ValueSet/orec"/>
+    <hierarchyMeaning value="is-a"/>
+    <content value="complete"/>
+    <concept>
+        <code value="0"/>
+        <display value="Old age and survivor's insurance (OASI)"/>
+        <definition value="Old age and survivor's insurance (OASI)"/>
+    </concept>
+    <concept>
+        <code value="1"/>
+        <display value="Disability insurance benefits (DIB)"/>
+        <definition value="Disability insurance benefits (DIB)"/>
+    </concept>
+    <concept>
+        <code value="2"/>
+        <display value="End-stage renal disease (ESRD)"/>
+        <definition value="End-stage renal disease (ESRD)"/>
+    </concept>
+    <concept>
+        <code value="3"/>
+        <display value="Both DIB and ESRD"/>
+        <definition value="Both DIB and ESRD"/>
+    </concept>
+</CodeSystem>
