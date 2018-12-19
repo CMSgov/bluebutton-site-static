@@ -17,6 +17,8 @@ extra_links:
    link: /blog/index.html
 ---
 
+## Installing a Client App Using Docker
+
 We’ve added to our portfolio of sample client applications. This is the third in a [series of posts](https://bluebutton.cms.gov/blog/More-Sample-Applications.html) in which we work step-by-step through installing, configuring, and running our new sample applications.
 
 Today we will focus on the Ruby on Rails client. This post is slightly different from the previous posts because it takes you through installing the Ruby on Rails app in a Docker Container.
@@ -39,7 +41,7 @@ The steps we will go through are:
 6. Open your web browser and access the client application
 
 ## 1. Get Your Sandbox Credentials
-Anyone can register for an account in the Blue Button 2.0 Developer Sandbox. Go to [https://bluebutton.cms.gov](https://bluebutton.cms.gov) and click on the “Sign up for the Developer Sandbox” link to create an account. You will receive an email notification that your account has been created. Click on the link in the email to validate and activate your account. Then you can log in at [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov).
+Anyone can register for an account in the Blue Button 2.0 Developer Sandbox. Go to [https://bluebutton.cms.gov](https://bluebutton.cms.gov) and click on the “Sign up for the Developer Sandbox” link to create an account. You will receive an email notification that your account has been created. **Click on the link in the email to validate and activate your account.** Then you can log in at [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login).
 
 Once you log into your Developer Sandbox account, you can create an application. Click on “[Application Registration](https://sandbox.bluebutton.cms.gov/v1/o/applications/)” and "[Register a New Application](https://sandbox.bluebutton.cms.gov/v1/o/applications/register/)". Give your application a descriptive name. For example: “My Organization’s Claims Analyzer.”
 
@@ -75,14 +77,14 @@ git clone https://github.com/CMSgov/bluebutton-sample-client-rails.git
 cd bluebutton-sample-client-rails
 ```
 
-## 4. Configure the application credentials
+## 4. Configure the Application Credentials
 Copy a sample configuration file and then edit the file:
 ``` bash
 cp config/local_env_sample.yml config/local_env.yml
 ```
 Open the `config/local_env.yml` file in the editor of your choice.
 
-update the following entries in the development section of `config/local_env.yml` with your application's client id and secret:
+Update the following entries in the development section of `config/local_env.yml` with your application's client id and secret:
 
 ``` bash
     BB_CLIENT_ID: "<enter client id here>"
@@ -121,9 +123,6 @@ If your application loaded successfully, you will see this screen:
 
 Click on the “Click here to authorize!” link and log into the Blue Button 2.0 sandbox using one of the synthetic beneficiary accounts. For example:
 
-User: BBUser12345
-Password: PW12345!
-
 * User: **BBUser12345**
 * Password: **PW12345!**
 
@@ -137,7 +136,7 @@ From this page you can click on links to various Blue Button 2.0 resources such 
 - ExplanationOfBenefit
 
 
-The sample application provides sample code for the behind-the-scenes tasks involved in interacting with the secure Blue Button 2.0 FHIR-based API, not a slick user interface. We leave that to you as developers.
+The sample application provides sample code for the behind-the-scenes tasks involved in interacting with the secure Blue Button 2.0 FHIR-based API, _not_ a slick user interface. We leave that to you as developers.
 
 However, if you are interested in implementing an interface that is accessible for people with disabilities, what is often referred to as “508-compliant,” then check out the [CMS Design System](https://www.design.cms.gov). This site offers a set of open source design and front-end development resources for creating Section 508 compliant, responsive, and consistent websites, building on the U.S. Web Design Standards.
 
