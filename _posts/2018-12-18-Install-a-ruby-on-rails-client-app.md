@@ -36,7 +36,7 @@ The steps we will go through are:
 1. Get your Blue Button Developer Sandbox credentials
 2. Prepare your environment
 3. Get the Ruby on Rails code from GitHub
-4. Configure the Application Credentials
+4. Configure the application credentials
 5. Launch the virtual machine
 6. Open your web browser and access the client application
 
