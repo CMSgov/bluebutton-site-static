@@ -138,7 +138,7 @@ From this page you can click on links to various Blue Button 2.0 resources such 
 
 The sample application provides sample code for the behind-the-scenes tasks involved in interacting with the secure Blue Button 2.0 FHIR-based API, _not_ a slick user interface. We leave that to you as developers.
 
-However, if you are interested in implementing an interface that is accessible for people with disabilities, what is often referred to as “508-compliant,” then check out the [CMS Design System](https://www.design.cms.gov). This site offers a set of open source design and front-end development resources for creating Section 508 compliant, responsive, and consistent websites, building on the U.S. Web Design Standards.
+However, if you are interested in implementing an interface that is accessible for people with disabilities, what is often referred to as “508-compliant,” then check out the [CMS Design System](https://design.cms.gov). This site offers a set of open source design and front-end development resources for creating Section 508 compliant, responsive, and consistent websites, building on the U.S. Web Design Standards.
 
 As always, we welcome your comments and feedback. Just head over to the
 [Google Support Forum](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api) and post a message there.
