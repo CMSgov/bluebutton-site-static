@@ -7,13 +7,14 @@
   },
   "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-line-service-deductible",
   "identifier": {
-    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-line-service-deductible"
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-line-service-deductible.html"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Line Service Deductible Indicator Switch",
   "title": "Line Service Deductible Indicator Switch",
   "status": "active",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
   "description": "Switch indicating whether or not the line item service on the non-institutional claim is subject to a deductible. Source: https://bluebutton.cms.gov/resources/variables/line_service_deductible",
   "caseSensitive": true,
   "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-line-service-deductible",

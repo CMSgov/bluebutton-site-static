@@ -7,13 +7,14 @@
   },
   "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-race",
   "identifier": {
-    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-race"
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-race.html"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Race Codes",
   "title": "Race Codes",
   "status": "active",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
   "description": "Blue Button Race Codes. Source: (https://bluebutton.cms.gov/resources/variables/race/)",
   "caseSensitive": true,
   "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-race",

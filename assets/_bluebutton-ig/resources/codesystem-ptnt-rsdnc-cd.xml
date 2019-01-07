@@ -3,11 +3,12 @@
     <id value="ptnt-rsdnc-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/ptnt-rsdnc-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/ptnt-rsdnc-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/ptnt-rsdnc-cd.html"/>
     </identifier>
     <name value="Patient Residence Code"/>
     <title value="Patient Residence Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. Source: https://bluebutton.cms.gov/resources/variables/ptnt_rsdnc_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/ptnt-rsdnc-cd"/>

@@ -3,13 +3,13 @@
   "id": "clm-freq-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Frequency Code</h2><div><p>The third digit of the type of bill (TOB3) submitted on an institutional claim record to indicate the sequence of a claim in the beneficiary's current episode of care. Source: https://bluebutton.cms.gov/resources/variables/clm<em>freq</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/clm-freq-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-freq-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Claim Frequency Code</h2><div><p>The third digit of the type of bill (TOB3) submitted on an institutional claim record to indicate the sequence of a claim in the beneficiary's current episode of care. Source: https://bluebutton.cms.gov/resources/variables/clm<em>freq</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-clm-freq-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-freq-cd</code></a></li></ul></div>"
   },
   "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-clm-freq-cd",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Claim Frequency Code",
   "status": "draft",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
   "description": "The third digit of the type of bill (TOB3) submitted on an institutional claim record to indicate the sequence of a claim in the beneficiary's current episode of care. Source: https://bluebutton.cms.gov/resources/variables/clm_freq_cd",
   "compose": {
     "include": [

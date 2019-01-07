@@ -3,11 +3,12 @@
     <id value="asgmntcd"/>
     <url value="http://hl7.org/fhir/CodeSystem/asgmntcd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/asgmntcd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/asgmntcd.html"/>
     </identifier>
     <name value="Carrier Claim Provider Assignment Indicator Switch"/>
     <title value="Carrier Claim Provider Assignment Indicator Switch"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="Variable indicates whether or not the provider accepts assignment for the non-institutional claim. Source: https://bluebutton.cms.gov/resources/variables/asgmntcd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/asgmntcd"/>

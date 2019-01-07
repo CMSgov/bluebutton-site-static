@@ -7,13 +7,14 @@
   },
   "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-daw-prod-slctn-cd",
   "identifier": {
-    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-daw-prod-slctn-cd"
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-daw-prod-slctn-cd.html"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Dispense as Written (DAW) Product Selection Code",
   "title": "Dispense as Written (DAW) Product Selection Code",
   "status": "active",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
   "description": "This field indicates the prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication. Part D plans generally require pharmacies to use generics or the least expensive version of the prescribed drug. However, there are times when a prescriber intends for the beneficiary to receive the drug exactly as it is written on the prescription (e.g., to get the brand-name version of a drug). When there are specific instructions from the prescriber, it is indicated in this variable with a value of 1 or greater. Source: https://bluebutton.cms.gov/resources/variables/daw_prod_slctn_cd",
   "caseSensitive": true,
   "valueSet": "https://bluebutton.cms.gov/assets/ig/ValueSet-daw-prod-slctn-cd",

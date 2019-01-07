@@ -3,11 +3,12 @@
 	<id value="race"/>
 	<url value="http://hl7.org/fhir/CodeSystem/race"/>
 	<identifier>
-		<value value="http://hl7.org/fhir/CodeSystem/race"/>
+		<value value="http://hl7.org/fhir/CodeSystem/race.html"/>
 	</identifier>
 	<name value="Race Codes"/>
 	<title value="Race Codes"/>
-	<status value="active"/>
+	<status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
 	<description value="Blue Button Race Codes. Source: (https://bluebutton.cms.gov/resources/variables/race/)"/>
 	<caseSensitive value="true"/>
 	<valueSet value="http://hl7.org/fhir/ValueSet/race"/>

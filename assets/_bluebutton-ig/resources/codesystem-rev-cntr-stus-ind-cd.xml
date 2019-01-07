@@ -3,11 +3,12 @@
     <id value="rev-cntr-stus-ind-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/rev-cntr-stus-ind-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/rev-cntr-stus-ind-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/rev-cntr-stus-ind-cd.html"/>
     </identifier>
     <name value="Revenue Center Status Indicator Code"/>
     <title value="Revenue Center Status Indicator Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="This variable indicates how the service listed on the revenue center record was priced for payment purposes. The revenue center status indicator code is most useful with outpatient hospital claims, where multiple methods may be used to determine the payment amount for the various revenue center records on the claim (for example, some lines may be bundled into an APC and paid under the outpatient PPS, while other lines may be paid under other fee schedules). Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_stus_ind_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/rev-cntr-stus-ind-cd"/>

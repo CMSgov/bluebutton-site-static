@@ -7,16 +7,17 @@
   },
   "url": "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudication-categories",
   "identifier": {
-    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudication-categories"
+    "value": "https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudication-categories.html"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Adjudication Categories",
   "title": "Adjudication Categories",
   "status": "active",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
+  "publisher": "CMS Blue Button 2.0 Team",
   "description": "Blue Button Adjudication Categories.",
   "caseSensitive": true,
-  "valueSet": "http://hl7.org/fhir/us/core/ValueSet/adjudications",
+  "valueSet": "https://bluebutton.cms.gov/assets/ig/us/core/ValueSet-adjudications.html",
   "hierarchyMeaning": "is-a",
   "content": "complete",
   "concept": [

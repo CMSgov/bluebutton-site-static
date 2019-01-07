@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="esrd-ind"/>
+    <url value="http://hl7.org/fhir/ValueSet/esrd-ind"/>
+    <name value="End-stage Renal Disease (ESRD) Indicator"/>
+    <description value="This field specifies whether a beneficiary is entitled to Medicare benefits due to end stage renal disease (ESRD). Source: https://bluebutton.cms.gov/resources/variables/esrd_ind"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/esrd-ind"/>
+        </include>
+    </compose>
+</ValueSet>

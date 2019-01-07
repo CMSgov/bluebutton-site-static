@@ -3,11 +3,12 @@
     <id value="submsn-clr-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/submsn-clr-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/submsn-clr-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/submsn-clr-cd.html"/>
     </identifier>
     <name value="Submission clarification code"/>
     <title value="Submission clarification code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT_RSDNC_CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn_clr_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/submsn-clr-cd"/>

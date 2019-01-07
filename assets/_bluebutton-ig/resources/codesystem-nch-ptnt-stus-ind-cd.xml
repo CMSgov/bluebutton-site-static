@@ -3,11 +3,12 @@
     <id value="nch-ptnt-stus-ind-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/nch-ptnt-stus-ind-cd.html"/>
     </identifier>
     <name value="NCH Patient Status Indicator Code"/>
     <title value="NCH Patient Status Indicator Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="This variable is a recoded version of the discharge status code (variable called PTNT_DSCHRG_STUS_CD). Source: https://bluebutton.cms.gov/resources/variables/nch_ptnt_stus_ind_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/nch-ptnt-stus-ind-cd"/>

@@ -3,11 +3,12 @@
     <id value="carr-line-prvdr-type-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/carr-line-prvdr-type-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/carr-line-prvdr-type-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/carr-line-prvdr-type-cd.html"/>
     </identifier>
     <name value="Carrier Line Provider Type Code"/>
     <title value="Carrier Line Provider Type Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="Code identifying the type of provider furnishing the service for this line item on the carrier claim. Source: https://bluebutton.cms.gov/resources/variables/carr_line_prvdr_type_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/carr-line-prvdr-type-cd"/>

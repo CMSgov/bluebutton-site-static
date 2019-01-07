@@ -1,18 +1,18 @@
-@prefix fhir: <http://hl7.org/fhir/> .
+@prefix fhir: <https://bluebutton.cms.gov/assets/ig/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/ImplementationGuide/ig> a fhir:ImplementationGuide;
+<https://bluebutton.cms.gov/assets/ig/ImplementationGuide/ig> a fhir:ImplementationGuide;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "ig"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Blue Button 2.0</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/ImplementationGuide/ig</pre></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Blue Button 2.0</h2><p>The official URL for this implementation guide is: </p><pre>https://bluebutton.cms.gov/assets/ig/ImplementationGuide/ig</pre></div>"
   ];
-  fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/ImplementationGuide/ig"];
+  fhir:ImplementationGuide.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ImplementationGuide/ig"];
   fhir:ImplementationGuide.name [ fhir:value "Blue Button 2.0"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "true"^^xsd:boolean];
@@ -23,67 +23,74 @@
        fhir:index 0;
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-pde-claim>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-profile-pde-claim" ]
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-pde-claim.html>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-profile-pde-claim.html" ]
        ]
      ], [
        fhir:index 1;
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-carrier-claim>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-profile-carrier-claim" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-profile-carrier-claim" ]
        ]
      ], [
        fhir:index 2;
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-inpatient-claim>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-profile-inpatient-claim" ]
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-coverage>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-profile-coverage" ]
        ]
      ], [
        fhir:index 3;
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-outpatient-claim>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-profile-outpatient-claim" ]
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-inpatient-claim>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-profile-inpatient-claim" ]
        ]
      ], [
        fhir:index 4;
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-snf-claim>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-profile-snf-claim" ]
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-outpatient-claim>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-profile-outpatient-claim" ]
        ]
      ], [
        fhir:index 5;
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-patient-claim>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-profile-patient-claim" ]
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-snf-claim>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-profile-snf-claim" ]
        ]
      ], [
        fhir:index 6;
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-dme-claim>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-profile-dme-claim" ]
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-patient-claim>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-profile-patient-claim" ]
        ]
      ], [
        fhir:index 7;
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-hha-claim>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-profile-hha-claim" ]
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-dme-claim>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-profile-dme-claim" ]
        ]
      ], [
        fhir:index 8;
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-hospice-claim>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-profile-hospice-claim" ]
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-hha-claim>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-profile-hha-claim" ]
        ]
      ], [
        fhir:index 9;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-hospice-claim>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-profile-hospice-claim" ]
+       ]
+     ], [
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -92,10 +99,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-pde-benefit-package-id-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-pde-benefit-package-id-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-pde-benefit-package-id-extension" ]
        ]
      ], [
-       fhir:index 10;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -104,10 +111,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-pde-days-supply-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-pde-days-supply-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-pde-days-supply-num-extension" ]
        ]
      ], [
-       fhir:index 11;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -116,10 +123,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-pde-fill-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-pde-fill-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-pde-fill-num-extension" ]
        ]
      ], [
-       fhir:index 12;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -128,10 +135,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-pde-plan-cntrct-rec-id-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-pde-plan-cntrct-rec-id-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-pde-plan-cntrct-rec-id-extension" ]
        ]
      ], [
-       fhir:index 13;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -140,10 +147,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-pde-phrmcy-srvc-type-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-pde-phrmcy-srvc-type-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-pde-phrmcy-srvc-type-cd-extension" ]
        ]
      ], [
-       fhir:index 14;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -152,10 +159,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-patient-race-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-patient-race-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-patient-race-extension" ]
        ]
      ], [
-       fhir:index 15;
+       fhir:index 16;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -164,10 +171,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-prpayamt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-prpayamt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-prpayamt-extension" ]
        ]
      ], [
-       fhir:index 16;
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -176,10 +183,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-carr-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-carr-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-carr-num-extension" ]
        ]
      ], [
-       fhir:index 17;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -188,10 +195,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-asgmntcd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-asgmntcd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-asgmntcd-extension" ]
        ]
      ], [
-       fhir:index 18;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -200,10 +207,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-clm-clncl-tril-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-clm-clncl-tril-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-clm-clncl-tril-num-extension" ]
        ]
      ], [
-       fhir:index 19;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -212,10 +219,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-carr-clm-cash-ddctbl-apld-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-carr-clm-cash-ddctbl-apld-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-carr-clm-cash-ddctbl-apld-amt-extension" ]
        ]
      ], [
-       fhir:index 20;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -224,10 +231,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-carr-clm-pmt-dnl-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-carr-clm-pmt-dnl-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-carr-clm-pmt-dnl-cd-extension" ]
        ]
      ], [
-       fhir:index 21;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -236,10 +243,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-nch-carr-clm-alowd-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-nch-carr-clm-alowd-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-nch-carr-clm-alowd-amt-extension" ]
        ]
      ], [
-       fhir:index 22;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -248,10 +255,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-nch-carr-clm-sbmtd-chrg-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-nch-carr-clm-sbmtd-chrg-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-nch-carr-clm-sbmtd-chrg-amt-extension" ]
        ]
      ], [
-       fhir:index 23;
+       fhir:index 24;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -260,10 +267,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-nch-clm-bene-pmt-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-nch-clm-bene-pmt-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-nch-clm-bene-pmt-amt-extension" ]
        ]
      ], [
-       fhir:index 24;
+       fhir:index 25;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -272,10 +279,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-nch-clm-prvdr-pmt-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-nch-clm-prvdr-pmt-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-nch-clm-prvdr-pmt-amt-extension" ]
        ]
      ], [
-       fhir:index 25;
+       fhir:index 26;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -284,10 +291,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-carr-line-prvdr-type-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-carr-line-prvdr-type-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-carr-line-prvdr-type-cd-extension" ]
        ]
      ], [
-       fhir:index 26;
+       fhir:index 27;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -296,10 +303,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-prtcptng-ind-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-prtcptng-ind-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-prtcptng-ind-cd-extension" ]
        ]
      ], [
-       fhir:index 27;
+       fhir:index 28;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -308,10 +315,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-us-npi-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-us-npi-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-us-npi-extension" ]
        ]
      ], [
-       fhir:index 28;
+       fhir:index 29;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -320,10 +327,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-carr-line-mtus-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-carr-line-mtus-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-carr-line-mtus-cd-extension" ]
        ]
      ], [
-       fhir:index 29;
+       fhir:index 30;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -332,10 +339,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-carr-line-mtus-cnt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-carr-line-mtus-cnt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-carr-line-mtus-cnt-extension" ]
        ]
      ], [
-       fhir:index 30;
+       fhir:index 31;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -344,10 +351,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-betos-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-betos-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-betos-cd-extension" ]
        ]
      ], [
-       fhir:index 31;
+       fhir:index 32;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -356,10 +363,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-line-bene-prmry-pyr-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-line-bene-prmry-pyr-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-line-bene-prmry-pyr-cd-extension" ]
        ]
      ], [
-       fhir:index 32;
+       fhir:index 33;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -368,10 +375,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-line-service-deductible-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-line-service-deductible-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-line-service-deductible-extension" ]
        ]
      ], [
-       fhir:index 33;
+       fhir:index 34;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -380,10 +387,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-line-hct-hgb-rslt-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-line-hct-hgb-rslt-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-line-hct-hgb-rslt-num-extension" ]
        ]
      ], [
-       fhir:index 34;
+       fhir:index 35;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -392,10 +399,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-ndc-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-ndc-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-ndc-extension" ]
        ]
      ], [
-       fhir:index 35;
+       fhir:index 36;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -404,10 +411,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-carr-line-ansthsa-unit-cnt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-carr-line-ansthsa-unit-cnt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-carr-line-ansthsa-unit-cnt-extension" ]
        ]
      ], [
-       fhir:index 36;
+       fhir:index 37;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -416,10 +423,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-prvdr-state-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-prvdr-state-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-prvdr-state-cd-extension" ]
        ]
      ], [
-       fhir:index 37;
+       fhir:index 38;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -428,10 +435,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-prvdr-zip-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-prvdr-zip-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-prvdr-zip-extension" ]
        ]
      ], [
-       fhir:index 38;
+       fhir:index 39;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -440,10 +447,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-carr-line-prcng-lclty-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-carr-line-prcng-lclty-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-carr-line-prcng-lclty-cd-extension" ]
        ]
      ], [
-       fhir:index 39;
+       fhir:index 40;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -452,10 +459,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-carr-line-clia-lab-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-carr-line-clia-lab-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-carr-line-clia-lab-num-extension" ]
        ]
      ], [
-       fhir:index 40;
+       fhir:index 41;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -464,10 +471,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-line-pmt-80-100-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-carrier-line-pmt-80-100-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-carrier-line-pmt-80-100-cd-extension" ]
        ]
      ], [
-       fhir:index 41;
+       fhir:index 42;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -476,10 +483,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-ime-op-clm-val-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-ime-op-clm-val-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-ime-op-clm-val-amt-extension" ]
        ]
      ], [
-       fhir:index 42;
+       fhir:index 43;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -488,10 +495,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-dsh-op-clm-val-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-dsh-op-clm-val-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-dsh-op-clm-val-amt-extension" ]
        ]
      ], [
-       fhir:index 43;
+       fhir:index 44;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -500,10 +507,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-pass-thru-per-diem-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-pass-thru-per-diem-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-pass-thru-per-diem-amt-extension" ]
        ]
      ], [
-       fhir:index 44;
+       fhir:index 45;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -512,10 +519,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-nch-profnl-cmpnt-chrg-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-nch-profnl-cmpnt-chrg-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-nch-profnl-cmpnt-chrg-amt-extension" ]
        ]
      ], [
-       fhir:index 45;
+       fhir:index 46;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -524,10 +531,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-tot-pps-cptl-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-tot-pps-cptl-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-tot-pps-cptl-amt-extension" ]
        ]
      ], [
-       fhir:index 46;
+       fhir:index 47;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -536,10 +543,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-nch-bene-ip-ddctbl-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-nch-bene-ip-ddctbl-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-nch-bene-ip-ddctbl-amt-extension" ]
        ]
      ], [
-       fhir:index 47;
+       fhir:index 48;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -548,10 +555,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-nch-bene-pta-coinsrnc-lblty-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-nch-bene-pta-coinsrnc-lblty-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-nch-bene-pta-coinsrnc-lblty-amt-extension" ]
        ]
      ], [
-       fhir:index 48;
+       fhir:index 49;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -560,10 +567,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-nch-ip-ncvrd-chrg-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-nch-ip-ncvrd-chrg-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-nch-ip-ncvrd-chrg-amt-extension" ]
        ]
      ], [
-       fhir:index 49;
+       fhir:index 50;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -572,10 +579,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-nch-ip-tot-ddctn-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-nch-ip-tot-ddctn-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-nch-ip-tot-ddctn-amt-extension" ]
        ]
      ], [
-       fhir:index 50;
+       fhir:index 51;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -584,10 +591,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-pps-cptl-dsprprtnt-shr-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-pps-cptl-dsprprtnt-shr-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-pps-cptl-dsprprtnt-shr-amt-extension" ]
        ]
      ], [
-       fhir:index 51;
+       fhir:index 52;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -596,10 +603,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-pps-cptl-excptn-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-pps-cptl-excptn-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-pps-cptl-excptn-amt-extension" ]
        ]
      ], [
-       fhir:index 52;
+       fhir:index 53;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -608,10 +615,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-pps-cptl-fsp-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-pps-cptl-fsp-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-pps-cptl-fsp-amt-extension" ]
        ]
      ], [
-       fhir:index 53;
+       fhir:index 54;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -620,10 +627,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-pps-cptl-ime-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-pps-cptl-ime-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-pps-cptl-ime-amt-extension" ]
        ]
      ], [
-       fhir:index 54;
+       fhir:index 55;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -632,10 +639,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-pps-cptl-outlier-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-pps-cptl-outlier-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-pps-cptl-outlier-amt-extension" ]
        ]
      ], [
-       fhir:index 55;
+       fhir:index 56;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -644,10 +651,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-pps-old-cptl-hld-hrmls-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-pps-old-cptl-hld-hrmls-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-pps-old-cptl-hld-hrmls-amt-extension" ]
        ]
      ], [
-       fhir:index 56;
+       fhir:index 57;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -656,10 +663,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-nch-drg-outlier-aprvd-pmt-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-nch-drg-outlier-aprvd-pmt-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-nch-drg-outlier-aprvd-pmt-amt-extension" ]
        ]
      ], [
-       fhir:index 57;
+       fhir:index 58;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -668,10 +675,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-nch-bene-blood-ddctbl-lblty-am-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-nch-bene-blood-ddctbl-lblty-am-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-nch-bene-blood-ddctbl-lblty-am-extension" ]
        ]
      ], [
-       fhir:index 58;
+       fhir:index 59;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -680,10 +687,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-mdcr-non-pmt-rsn-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-mdcr-non-pmt-rsn-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-mdcr-non-pmt-rsn-cd-extension" ]
        ]
      ], [
-       fhir:index 59;
+       fhir:index 60;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -692,10 +699,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-prpayamt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-prpayamt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-prpayamt-extension" ]
        ]
      ], [
-       fhir:index 60;
+       fhir:index 61;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -704,10 +711,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-fi-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-fi-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-fi-num-extension" ]
        ]
      ], [
-       fhir:index 61;
+       fhir:index 62;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -716,10 +723,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-claim-query-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-claim-query-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-claim-query-cd-extension" ]
        ]
      ], [
-       fhir:index 62;
+       fhir:index 63;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -728,10 +735,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-fac-type-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-fac-type-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-fac-type-cd-extension" ]
        ]
      ], [
-       fhir:index 63;
+       fhir:index 64;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -740,10 +747,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-clm-poa-ind-sw1-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-clm-poa-ind-sw1-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-clm-poa-ind-sw1-extension" ]
        ]
      ], [
-       fhir:index 64;
+       fhir:index 65;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -752,10 +759,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-rev-cntr-ndc-qty-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-rev-cntr-ndc-qty-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-rev-cntr-ndc-qty-extension" ]
        ]
      ], [
-       fhir:index 65;
+       fhir:index 66;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -764,10 +771,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-rev-cntr-ddctbl-coinsrnc-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-inpatient-rev-cntr-ddctbl-coinsrnc-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-inpatient-rev-cntr-ddctbl-coinsrnc-cd-extension" ]
        ]
      ], [
-       fhir:index 66;
+       fhir:index 67;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -776,10 +783,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-nch-profnl-cmpnt-chrg-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-nch-profnl-cmpnt-chrg-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-nch-profnl-cmpnt-chrg-amt-extension" ]
        ]
      ], [
-       fhir:index 67;
+       fhir:index 68;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -788,10 +795,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-nch-bene-ptb-ddctbl-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-nch-bene-ptb-ddctbl-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-nch-bene-ptb-ddctbl-amt-extension" ]
        ]
      ], [
-       fhir:index 68;
+       fhir:index 69;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -800,10 +807,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-nch-bene-ptb-coinsrnc-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-nch-bene-ptb-coinsrnc-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-nch-bene-ptb-coinsrnc-amt-extension" ]
        ]
      ], [
-       fhir:index 69;
+       fhir:index 70;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -812,10 +819,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension" ]
        ]
      ], [
-       fhir:index 70;
+       fhir:index 71;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -824,10 +831,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-clm-op-bene-pmt-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-clm-op-bene-pmt-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-clm-op-bene-pmt-amt-extension" ]
        ]
      ], [
-       fhir:index 71;
+       fhir:index 72;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -836,10 +843,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-nch-bene-blood-ddctbl-lblty-am-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-nch-bene-blood-ddctbl-lblty-am-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-nch-bene-blood-ddctbl-lblty-am-extension" ]
        ]
      ], [
-       fhir:index 72;
+       fhir:index 73;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -848,10 +855,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-clm-mdcr-non-pmt-rsn-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-clm-mdcr-non-pmt-rsn-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-clm-mdcr-non-pmt-rsn-cd-extension" ]
        ]
      ], [
-       fhir:index 73;
+       fhir:index 74;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -860,10 +867,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-prpayamt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-prpayamt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-prpayamt-extension" ]
        ]
      ], [
-       fhir:index 74;
+       fhir:index 75;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -872,10 +879,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-fi-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-fi-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-fi-num-extension" ]
        ]
      ], [
-       fhir:index 75;
+       fhir:index 76;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -884,10 +891,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-claim-query-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-claim-query-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-claim-query-cd-extension" ]
        ]
      ], [
-       fhir:index 76;
+       fhir:index 77;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -896,10 +903,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-clm-fac-type-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-clm-fac-type-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-clm-fac-type-cd-extension" ]
        ]
      ], [
-       fhir:index 77;
+       fhir:index 78;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -908,10 +915,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-rev-cntr-ndc-qty-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-rev-cntr-ndc-qty-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-rev-cntr-ndc-qty-extension" ]
        ]
      ], [
-       fhir:index 78;
+       fhir:index 79;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -920,10 +927,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-rev-cntr-stus-ind-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-rev-cntr-stus-ind-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-rev-cntr-stus-ind-cd-extension" ]
        ]
      ], [
-       fhir:index 79;
+       fhir:index 80;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -932,10 +939,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-rev-cntr-ide-ndc-upc-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-outpatient-rev-cntr-ide-ndc-upc-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-outpatient-rev-cntr-ide-ndc-upc-num-extension" ]
        ]
      ], [
-       fhir:index 80;
+       fhir:index 81;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -944,10 +951,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-nch-bene-ip-ddctbl-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-nch-bene-ip-ddctbl-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-nch-bene-ip-ddctbl-amt-extension" ]
        ]
      ], [
-       fhir:index 81;
+       fhir:index 82;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -956,10 +963,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-nch-bene-pta-coinsrnc-lblty-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-nch-bene-pta-coinsrnc-lblty-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-nch-bene-pta-coinsrnc-lblty-amt-extension" ]
        ]
      ], [
-       fhir:index 82;
+       fhir:index 83;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -968,10 +975,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-nch-ip-ncvrd-chrg-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-nch-ip-ncvrd-chrg-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-nch-ip-ncvrd-chrg-amt-extension" ]
        ]
      ], [
-       fhir:index 83;
+       fhir:index 84;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -980,10 +987,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-nch-ip-tot-ddctn-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-nch-ip-tot-ddctn-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-nch-ip-tot-ddctn-amt-extension" ]
        ]
      ], [
-       fhir:index 84;
+       fhir:index 85;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -992,10 +999,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-clm-pps-cptl-dsprprtnt-shr-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-clm-pps-cptl-dsprprtnt-shr-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-clm-pps-cptl-dsprprtnt-shr-amt-extension" ]
        ]
      ], [
-       fhir:index 85;
+       fhir:index 86;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1004,10 +1011,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-clm-pps-cptl-excptn-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-clm-pps-cptl-excptn-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-clm-pps-cptl-excptn-amt-extension" ]
        ]
      ], [
-       fhir:index 86;
+       fhir:index 87;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1016,10 +1023,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-clm-pps-cptl-fsp-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-clm-pps-cptl-fsp-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-clm-pps-cptl-fsp-amt-extension" ]
        ]
      ], [
-       fhir:index 87;
+       fhir:index 88;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1028,10 +1035,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-clm-pps-cptl-ime-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-clm-pps-cptl-ime-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-clm-pps-cptl-ime-amt-extension" ]
        ]
      ], [
-       fhir:index 88;
+       fhir:index 89;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1040,10 +1047,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-clm-pps-cptl-outlier-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-clm-pps-cptl-outlier-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-clm-pps-cptl-outlier-amt-extension" ]
        ]
      ], [
-       fhir:index 89;
+       fhir:index 90;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1052,10 +1059,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-clm-pps-old-cptl-hld-hrmls-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-clm-pps-old-cptl-hld-hrmls-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-clm-pps-old-cptl-hld-hrmls-amt-extension" ]
        ]
      ], [
-       fhir:index 90;
+       fhir:index 91;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1064,10 +1071,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-nch-bene-blood-ddctbl-lblty-am-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-nch-bene-blood-ddctbl-lblty-am-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-nch-bene-blood-ddctbl-lblty-am-extension" ]
        ]
      ], [
-       fhir:index 91;
+       fhir:index 92;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1076,10 +1083,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-clm-mdcr-non-pmt-rsn-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-clm-mdcr-non-pmt-rsn-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-clm-mdcr-non-pmt-rsn-cd-extension" ]
        ]
      ], [
-       fhir:index 92;
+       fhir:index 93;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1088,10 +1095,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-prpayamt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-prpayamt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-prpayamt-extension" ]
        ]
      ], [
-       fhir:index 93;
+       fhir:index 94;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1100,10 +1107,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-fi-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-fi-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-fi-num-extension" ]
        ]
      ], [
-       fhir:index 94;
+       fhir:index 95;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1112,10 +1119,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-claim-query-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-claim-query-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-claim-query-cd-extension" ]
        ]
      ], [
-       fhir:index 95;
+       fhir:index 96;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1124,10 +1131,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-clm-fac-type-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-clm-fac-type-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-clm-fac-type-cd-extension" ]
        ]
      ], [
-       fhir:index 96;
+       fhir:index 97;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1136,10 +1143,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-rev-cntr-ddctbl-coinsrnc-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-snf-rev-cntr-ddctbl-coinsrnc-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-snf-rev-cntr-ddctbl-coinsrnc-cd-extension" ]
        ]
      ], [
-       fhir:index 97;
+       fhir:index 98;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1148,10 +1155,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-race>;
-         fhir:Reference.reference [ fhir:value "ValueSet/race" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-race" ]
        ]
      ], [
-       fhir:index 98;
+       fhir:index 99;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1160,10 +1167,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-gndr-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/gndr-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-gndr-cd" ]
        ]
      ], [
-       fhir:index 99;
+       fhir:index 100;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1172,10 +1179,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-adjudications>;
-         fhir:Reference.reference [ fhir:value "ValueSet/adjudications" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-adjudications" ]
        ]
      ], [
-       fhir:index 100;
+       fhir:index 101;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1184,10 +1191,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-plan-cntrct-rec-id>;
-         fhir:Reference.reference [ fhir:value "ValueSet/plan-cntrct-rec-id" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-plan-cntrct-rec-id" ]
        ]
      ], [
-       fhir:index 101;
+       fhir:index 102;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1196,10 +1203,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-information-categories>;
-         fhir:Reference.reference [ fhir:value "ValueSet/information-categories" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-information-categories" ]
        ]
      ], [
-       fhir:index 102;
+       fhir:index 103;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1208,10 +1215,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-clm-mdcr-non-pmt-rsn-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/clm-mdcr-non-pmt-rsn-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-clm-mdcr-non-pmt-rsn-cd" ]
        ]
      ], [
-       fhir:index 103;
+       fhir:index 104;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1220,10 +1227,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-claim-query-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/claim-query-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-claim-query-cd" ]
        ]
      ], [
-       fhir:index 104;
+       fhir:index 105;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1232,10 +1239,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-clm-fac-type-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/clm-fac-type-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-clm-fac-type-cd" ]
        ]
      ], [
-       fhir:index 105;
+       fhir:index 106;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1244,10 +1251,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-stus-ind-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/rev-cntr-stus-ind-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-rev-cntr-stus-ind-cd" ]
        ]
      ], [
-       fhir:index 106;
+       fhir:index 107;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1256,10 +1263,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-clm-poa-ind-sw1>;
-         fhir:Reference.reference [ fhir:value "ValueSet/clm-poa-ind-sw1" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-clm-poa-ind-sw1" ]
        ]
      ], [
-       fhir:index 107;
+       fhir:index 108;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1268,10 +1275,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-ddctbl-coinsrnc-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/rev-cntr-ddctbl-coinsrnc-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-rev-cntr-ddctbl-coinsrnc-cd" ]
        ]
      ], [
-       fhir:index 108;
+       fhir:index 109;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1280,10 +1287,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-carr-num>;
-         fhir:Reference.reference [ fhir:value "ValueSet/carr-num" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-carr-num" ]
        ]
      ], [
-       fhir:index 109;
+       fhir:index 110;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1292,10 +1299,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-carr-clm-pmt-dnl-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/carr-clm-pmt-dnl-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-carr-clm-pmt-dnl-cd" ]
        ]
      ], [
-       fhir:index 110;
+       fhir:index 111;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1304,10 +1311,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-asgmntcd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/asgmntcd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-asgmntcd" ]
        ]
      ], [
-       fhir:index 111;
+       fhir:index 112;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1316,10 +1323,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-prvdr-type-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/carr-line-prvdr-type-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-carr-line-prvdr-type-cd" ]
        ]
      ], [
-       fhir:index 112;
+       fhir:index 113;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1328,10 +1335,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-prtcptng-ind-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/prtcptng-ind-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-prtcptng-ind-cd" ]
        ]
      ], [
-       fhir:index 113;
+       fhir:index 114;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1340,10 +1347,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-mtus-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/carr-line-mtus-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-carr-line-mtus-cd" ]
        ]
      ], [
-       fhir:index 114;
+       fhir:index 115;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1352,10 +1359,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-betos-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/betos-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-betos-cd" ]
        ]
      ], [
-       fhir:index 115;
+       fhir:index 116;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1364,10 +1371,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-line-bene-prmry-pyr-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/line-bene-prmry-pyr-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-line-bene-prmry-pyr-cd" ]
        ]
      ], [
-       fhir:index 116;
+       fhir:index 117;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1376,10 +1383,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-line-service-deductible>;
-         fhir:Reference.reference [ fhir:value "ValueSet/line-service-deductible" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-line-service-deductible" ]
        ]
      ], [
-       fhir:index 117;
+       fhir:index 118;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1388,10 +1395,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-prvdr-state-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/prvdr-state-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-prvdr-state-cd" ]
        ]
      ], [
-       fhir:index 118;
+       fhir:index 119;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1400,10 +1407,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-carr-line-prcng-lclty-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/carr-line-prcng-lclty-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-carr-line-prcng-lclty-cd" ]
        ]
      ], [
-       fhir:index 119;
+       fhir:index 120;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1412,10 +1419,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-line-pmt-80-100-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/line-pmt-80-100-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-line-pmt-80-100-cd" ]
        ]
      ], [
-       fhir:index 120;
+       fhir:index 121;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1424,10 +1431,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-dmerc-line-prcng-state-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/dmerc-line-prcng-state-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-dmerc-line-prcng-state-cd" ]
        ]
      ], [
-       fhir:index 121;
+       fhir:index 122;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1436,10 +1443,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-dmerc-line-supplr-type-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/dmerc-line-supplr-type-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-dmerc-line-supplr-type-cd" ]
        ]
      ], [
-       fhir:index 122;
+       fhir:index 123;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1448,10 +1455,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-phrmcy-srvc-type-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/phrmcy-srvc-type-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-phrmcy-srvc-type-cd" ]
        ]
      ], [
-       fhir:index 123;
+       fhir:index 124;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1460,10 +1467,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-adjstmt-dltn-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/adjstmt-dltn-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-adjstmt-dltn-cd" ]
        ]
      ], [
-       fhir:index 124;
+       fhir:index 125;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1472,10 +1479,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-daw-prod-slctn-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/daw-prod-slctn-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-daw-prod-slctn-cd" ]
        ]
      ], [
-       fhir:index 125;
+       fhir:index 126;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1484,10 +1491,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-dspnsng-stus-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/dspnsng-stus-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-dspnsng-stus-cd" ]
        ]
      ], [
-       fhir:index 126;
+       fhir:index 127;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1496,10 +1503,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-drug-cvrg-stus-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/drug-cvrg-stus-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-drug-cvrg-stus-cd" ]
        ]
      ], [
-       fhir:index 127;
+       fhir:index 128;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1508,10 +1515,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-nstd-frmt-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/nstd-frmt-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-nstd-frmt-cd" ]
        ]
      ], [
-       fhir:index 128;
+       fhir:index 129;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1520,10 +1527,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-prcng-excptn-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/prcng-excptn-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-prcng-excptn-cd" ]
        ]
      ], [
-       fhir:index 129;
+       fhir:index 130;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1532,10 +1539,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-ctstrphc-cvrg-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/ctstrphc-cvrg-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-ctstrphc-cvrg-cd" ]
        ]
      ], [
-       fhir:index 130;
+       fhir:index 131;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1544,10 +1551,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-rx-orgn-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/rx-orgn-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-rx-orgn-cd" ]
        ]
      ], [
-       fhir:index 131;
+       fhir:index 132;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1556,10 +1563,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-brnd-gnrc-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/brnd-gnrc-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-brnd-gnrc-cd" ]
        ]
      ], [
-       fhir:index 132;
+       fhir:index 133;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1568,10 +1575,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-rsdnc-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/ptnt-rsdnc-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-ptnt-rsdnc-cd" ]
        ]
      ], [
-       fhir:index 133;
+       fhir:index 134;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1580,10 +1587,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-submsn-clr-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/submsn-clr-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-submsn-clr-cd" ]
        ]
      ], [
-       fhir:index 134;
+       fhir:index 135;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1592,10 +1599,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-ndc-qty-qlfr-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/rev-cntr-ndc-qty-qlfr-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-rev-cntr-ndc-qty-qlfr-cd" ]
        ]
      ], [
-       fhir:index 135;
+       fhir:index 136;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1604,10 +1611,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-nch-ptnt-stus-ind-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/nch-ptnt-stus-ind-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-nch-ptnt-stus-ind-cd" ]
        ]
      ], [
-       fhir:index 136;
+       fhir:index 137;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1616,10 +1623,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-clm-ip-admsn-type-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/clm-ip-admsn-type-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-clm-ip-admsn-type-cd" ]
        ]
      ], [
-       fhir:index 137;
+       fhir:index 138;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1628,10 +1635,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-clm-src-ip-admsn-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/clm-src-ip-admsn-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-clm-src-ip-admsn-cd" ]
        ]
      ], [
-       fhir:index 138;
+       fhir:index 139;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1640,10 +1647,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-clm-mco-pd-sw>;
-         fhir:Reference.reference [ fhir:value "ValueSet/clm-mco-pd-sw" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-clm-mco-pd-sw" ]
        ]
      ], [
-       fhir:index 139;
+       fhir:index 140;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1652,10 +1659,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-clm-freq-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/clm-freq-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-clm-freq-cd" ]
        ]
      ], [
-       fhir:index 140;
+       fhir:index 141;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1664,10 +1671,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-ptnt-dschrg-stus-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/ptnt-dschrg-stus-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-ptnt-dschrg-stus-cd" ]
        ]
      ], [
-       fhir:index 141;
+       fhir:index 142;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1676,10 +1683,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-nch-prmry-pyr-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/nch-prmry-pyr-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-nch-prmry-pyr-cd" ]
        ]
      ], [
-       fhir:index 142;
+       fhir:index 143;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1688,10 +1695,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-nch-prmry-pyr-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/nch-prmry-pyr-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-nch-prmry-pyr-cd" ]
        ]
      ], [
-       fhir:index 143;
+       fhir:index 144;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1700,10 +1707,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-lupa-ind-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/clm-hha-lupa-ind-cd" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-clm-hha-lupa-ind-cd" ]
        ]
      ], [
-       fhir:index 144;
+       fhir:index 145;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1712,17 +1719,156 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-rfrl-cd>;
-         fhir:Reference.reference [ fhir:value "ValueSet/clm-hha-rfrl-cd" ]
-       ]
-     ], [
-       fhir:index 145;
-       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudications>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/adjudications" ]
+         fhir:Reference.reference [ fhir:value "ValueSet-clm-hha-rfrl-cd" ]
        ]
      ], [
        fhir:index 146;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-ms-cd>;
+         fhir:Reference.reference [ fhir:value "ValueSet-ms-cd" ]
+       ]
+     ], [
+       fhir:index 147;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-orec.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-orec>;
+         fhir:Reference.reference [ fhir:value "ValueSet-orec" ]
+       ]
+     ], [
+       fhir:index 148;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-crec.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-crec>;
+         fhir:Reference.reference [ fhir:value "ValueSet-crec" ]
+       ]
+     ], [
+       fhir:index 149;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-esrd-ind.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-esrd-ind>;
+         fhir:Reference.reference [ fhir:value "ValueSet-esrd-ind" ]
+       ]
+     ], [
+       fhir:index 150;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-a-trm-cd.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-a-trm-cd>;
+         fhir:Reference.reference [ fhir:value "ValueSet-a-trm-cd" ]
+       ]
+     ], [
+       fhir:index 151;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-b-trm-cd.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/ValueSet-b-trm-cd>;
+         fhir:Reference.reference [ fhir:value "ValueSet-b-trm-cd" ]
+       ]
+     ], [
+       fhir:index 152;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-b-trm-cd.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-b-trm-cd>;
+         fhir:Reference.reference [ fhir:value "CodeSystem-b-trm-cd" ]
+       ]
+     ], [
+       fhir:index 153;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-a-trm-cd.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-a-trm-cd>;
+         fhir:Reference.reference [ fhir:value "CodeSystem-a-trm-cd" ]
+       ]
+     ], [
+       fhir:index 154;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-esrd-ind.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-esrd-ind>;
+         fhir:Reference.reference [ fhir:value "CodeSystem-esrd-ind" ]
+       ]
+     ], [
+       fhir:index 155;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-crec.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-crec>;
+         fhir:Reference.reference [ fhir:value "CodeSystem-crec" ]
+       ]
+     ], [
+       fhir:index 156;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-orec.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-orec>;
+         fhir:Reference.reference [ fhir:value "CodeSystem-orec" ]
+       ]
+     ], [
+       fhir:index 157;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-ms-cd.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd>;
+         fhir:Reference.reference [ fhir:value "CodeSystem-ms-cd" ]
+       ]
+     ], [
+       fhir:index 158;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudications>;
+         fhir:Reference.reference [ fhir:value "CodeSystem-adjudications" ]
+       ]
+     ], [
+       fhir:index 159;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1731,10 +1877,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-rfrl-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/clm-hha-rfrl-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-clm-hha-rfrl-cd" ]
        ]
      ], [
-       fhir:index 147;
+       fhir:index 160;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1743,10 +1889,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-lupa-ind-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/clm-hha-lupa-ind-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-clm-hha-lupa-ind-cd" ]
        ]
      ], [
-       fhir:index 148;
+       fhir:index 161;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1755,10 +1901,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-dschrg-stus-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/ptnt-dschrg-stus-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-ptnt-dschrg-stus-cd" ]
        ]
      ], [
-       fhir:index 149;
+       fhir:index 162;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1767,10 +1913,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-freq-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/clm-freq-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-clm-freq-cd" ]
        ]
      ], [
-       fhir:index 150;
+       fhir:index 163;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1779,10 +1925,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mco-pd-sw>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/clm-mco-pd-sw" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-clm-mco-pd-sw" ]
        ]
      ], [
-       fhir:index 151;
+       fhir:index 164;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1791,10 +1937,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-src-ip-admsn-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/clm-src-ip-admsn-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-clm-src-ip-admsn-cd" ]
        ]
      ], [
-       fhir:index 152;
+       fhir:index 165;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1803,10 +1949,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-ip-admsn-type-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/clm-ip-admsn-type-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-clm-ip-admsn-type-cd" ]
        ]
      ], [
-       fhir:index 153;
+       fhir:index 166;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1815,10 +1961,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-nch-ptnt-stus-ind-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/nch-ptnt-stus-ind-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-nch-ptnt-stus-ind-cd" ]
        ]
      ], [
-       fhir:index 154;
+       fhir:index 167;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1827,10 +1973,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ndc-qty-qlfr-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/rev-cntr-ndc-qty-qlfr-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-rev-cntr-ndc-qty-qlfr-cd" ]
        ]
      ], [
-       fhir:index 155;
+       fhir:index 168;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1839,10 +1985,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/submsn-clr-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-submsn-clr-cd" ]
        ]
      ], [
-       fhir:index 156;
+       fhir:index 169;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1851,10 +1997,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-ptnt-rsdnc-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/ptnt-rsdnc-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-ptnt-rsdnc-cd" ]
        ]
      ], [
-       fhir:index 157;
+       fhir:index 170;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1863,10 +2009,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-brnd-gnrc-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/brnd-gnrc-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-brnd-gnrc-cd" ]
        ]
      ], [
-       fhir:index 158;
+       fhir:index 171;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1875,10 +2021,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-rx-orgn-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/rx-orgn-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-rx-orgn-cd" ]
        ]
      ], [
-       fhir:index 159;
+       fhir:index 172;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1887,10 +2033,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-ctstrphc-cvrg-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/ctstrphc-cvrg-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-ctstrphc-cvrg-cd" ]
        ]
      ], [
-       fhir:index 160;
+       fhir:index 173;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1899,10 +2045,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-prcng-excptn-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/prcng-excptn-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-prcng-excptn-cd" ]
        ]
      ], [
-       fhir:index 161;
+       fhir:index 174;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1911,10 +2057,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-nstd-frmt-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/nstd-frmt-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-nstd-frmt-cd" ]
        ]
      ], [
-       fhir:index 162;
+       fhir:index 175;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1923,10 +2069,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-drug-cvrg-stus-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/drug-cvrg-stus-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-drug-cvrg-stus-cd" ]
        ]
      ], [
-       fhir:index 163;
+       fhir:index 176;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1935,10 +2081,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-dspnsng-stus-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/dspnsng-stus-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-dspnsng-stus-cd" ]
        ]
      ], [
-       fhir:index 164;
+       fhir:index 177;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1947,10 +2093,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-daw-prod-slctn-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/daw-prod-slctn-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-daw-prod-slctn-cd" ]
        ]
      ], [
-       fhir:index 165;
+       fhir:index 178;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1959,10 +2105,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-adjstmt-dltn-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/adjstmt-dltn-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-adjstmt-dltn-cd" ]
        ]
      ], [
-       fhir:index 166;
+       fhir:index 179;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1971,10 +2117,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-phrmcy-srvc-type-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/phrmcy-srvc-type-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-phrmcy-srvc-type-cd" ]
        ]
      ], [
-       fhir:index 167;
+       fhir:index 180;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1983,10 +2129,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-dmerc-line-supplr-type-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/dmerc-line-supplr-type-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-dmerc-line-supplr-type-cd" ]
        ]
      ], [
-       fhir:index 168;
+       fhir:index 181;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -1995,10 +2141,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-dmerc-line-prcng-state-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/dmerc-line-prcng-state-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-dmerc-line-prcng-state-cd" ]
        ]
      ], [
-       fhir:index 169;
+       fhir:index 182;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2007,10 +2153,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-line-pmt-80-100-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/line-pmt-80-100-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-line-pmt-80-100-cd" ]
        ]
      ], [
-       fhir:index 170;
+       fhir:index 183;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2019,10 +2165,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prcng-lclty-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/carr-line-prcng-lclty-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-carr-line-prcng-lclty-cd" ]
        ]
      ], [
-       fhir:index 171;
+       fhir:index 184;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2031,10 +2177,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-prvdr-state-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/prvdr-state-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-prvdr-state-cd" ]
        ]
      ], [
-       fhir:index 172;
+       fhir:index 185;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2043,10 +2189,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-line-service-deductible>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/line-service-deductible" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-line-service-deductible" ]
        ]
      ], [
-       fhir:index 173;
+       fhir:index 186;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2055,10 +2201,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-line-bene-prmry-pyr-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/line-bene-prmry-pyr-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-line-bene-prmry-pyr-cd" ]
        ]
      ], [
-       fhir:index 174;
+       fhir:index 187;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2067,10 +2213,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-betos-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/betos-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-betos-cd" ]
        ]
      ], [
-       fhir:index 175;
+       fhir:index 188;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2079,10 +2225,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-mtus-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/carr-line-mtus-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-carr-line-mtus-cd" ]
        ]
      ], [
-       fhir:index 176;
+       fhir:index 189;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2091,10 +2237,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-prtcptng-ind-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/prtcptng-ind-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-prtcptng-ind-cd" ]
        ]
      ], [
-       fhir:index 177;
+       fhir:index 190;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2103,10 +2249,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-line-prvdr-type-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/carr-line-prvdr-type-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-carr-line-prvdr-type-cd" ]
        ]
      ], [
-       fhir:index 178;
+       fhir:index 191;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2115,10 +2261,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-asgmntcd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/asgmntcd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-asgmntcd" ]
        ]
      ], [
-       fhir:index 179;
+       fhir:index 192;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2127,10 +2273,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-clm-pmt-dnl-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/carr-clm-pmt-dnl-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-carr-clm-pmt-dnl-cd" ]
        ]
      ], [
-       fhir:index 180;
+       fhir:index 193;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2139,10 +2285,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-num>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/carr-num" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-carr-num" ]
        ]
      ], [
-       fhir:index 181;
+       fhir:index 194;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2151,10 +2297,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ddctbl-coinsrnc-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/rev-cntr-ddctbl-coinsrnc-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-rev-cntr-ddctbl-coinsrnc-cd" ]
        ]
      ], [
-       fhir:index 182;
+       fhir:index 195;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2163,10 +2309,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-poa-ind-sw1>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/clm-poa-ind-sw1" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-clm-poa-ind-sw1" ]
        ]
      ], [
-       fhir:index 183;
+       fhir:index 196;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2175,10 +2321,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-stus-ind-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/rev-cntr-stus-ind-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-rev-cntr-stus-ind-cd" ]
        ]
      ], [
-       fhir:index 184;
+       fhir:index 197;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2187,10 +2333,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-fac-type-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/clm-fac-type-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-clm-fac-type-cd" ]
        ]
      ], [
-       fhir:index 185;
+       fhir:index 198;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2199,10 +2345,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-claim-query-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/claim-query-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-claim-query-cd" ]
        ]
      ], [
-       fhir:index 186;
+       fhir:index 199;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2211,10 +2357,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/clm-mdcr-non-pmt-rsn-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-clm-mdcr-non-pmt-rsn-cd" ]
        ]
      ], [
-       fhir:index 187;
+       fhir:index 200;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2223,10 +2369,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-information-categories>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/information-categories" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-information-categories" ]
        ]
      ], [
-       fhir:index 188;
+       fhir:index 201;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2235,10 +2381,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-plan-cntrct-rec-id>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/plan-cntrct-rec-id" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-plan-cntrct-rec-id" ]
        ]
      ], [
-       fhir:index 189;
+       fhir:index 202;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2247,10 +2393,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-race>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/race" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-race" ]
        ]
      ], [
-       fhir:index 190;
+       fhir:index 203;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2259,17 +2405,17 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/gndr-cd" ]
+         fhir:Reference.reference [ fhir:value "CodeSystem-gndr-cd" ]
        ]
      ], [
-       fhir:index 191;
+       fhir:index 204;
        fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://hl7.org/fhir/ExplanationOfBenefit/part-d-event-example>;
+         fhir:link <https://bluebutton.cms.gov/assets/ig/ExplanationOfBenefit/part-d-event-example>;
          fhir:Reference.reference [ fhir:value "ExplanationOfBenefit/part-d-event-example" ]
        ]
      ], [
-       fhir:index 192;
+       fhir:index 205;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2278,10 +2424,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-prpayamt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-prpayamt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-prpayamt-extension" ]
        ]
      ], [
-       fhir:index 193;
+       fhir:index 206;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2290,10 +2436,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-carr-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-carr-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-carr-num-extension" ]
        ]
      ], [
-       fhir:index 194;
+       fhir:index 207;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2302,10 +2448,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-carr-clm-pmt-dnl-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-carr-clm-pmt-dnl-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-carr-clm-pmt-dnl-cd-extension" ]
        ]
      ], [
-       fhir:index 195;
+       fhir:index 208;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2314,10 +2460,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-asgmntcd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-asgmntcd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-asgmntcd-extension" ]
        ]
      ], [
-       fhir:index 196;
+       fhir:index 209;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2326,10 +2472,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-clm-clncl-tril-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-clm-clncl-tril-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-clm-clncl-tril-num-extension" ]
        ]
      ], [
-       fhir:index 197;
+       fhir:index 210;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2338,10 +2484,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-carr-clm-cash-ddctbl-apld-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-carr-clm-cash-ddctbl-apld-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-carr-clm-cash-ddctbl-apld-amt-extension" ]
        ]
      ], [
-       fhir:index 198;
+       fhir:index 211;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2350,10 +2496,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-nch-clm-prvdr-pmt-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-nch-clm-prvdr-pmt-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-nch-clm-prvdr-pmt-amt-extension" ]
        ]
      ], [
-       fhir:index 199;
+       fhir:index 212;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2362,10 +2508,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-nch-clm-bene-pmt-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-nch-clm-bene-pmt-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-nch-clm-bene-pmt-amt-extension" ]
        ]
      ], [
-       fhir:index 200;
+       fhir:index 213;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2374,10 +2520,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-nch-carr-clm-sbmtd-chrg-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-nch-carr-clm-sbmtd-chrg-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-nch-carr-clm-sbmtd-chrg-amt-extension" ]
        ]
      ], [
-       fhir:index 201;
+       fhir:index 214;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2386,10 +2532,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-nch-carr-clm-alowd-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-nch-carr-clm-alowd-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-nch-carr-clm-alowd-amt-extension" ]
        ]
      ], [
-       fhir:index 202;
+       fhir:index 215;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2398,10 +2544,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-prtcptng-ind-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-prtcptng-ind-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-prtcptng-ind-cd-extension" ]
        ]
      ], [
-       fhir:index 203;
+       fhir:index 216;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2410,10 +2556,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-suplrnum-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-suplrnum-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-suplrnum-extension" ]
        ]
      ], [
-       fhir:index 204;
+       fhir:index 217;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2422,10 +2568,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-dmerc-line-scrn-svgs-amt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-dmerc-line-scrn-svgs-amt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-dmerc-line-scrn-svgs-amt-extension" ]
        ]
      ], [
-       fhir:index 205;
+       fhir:index 218;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2434,10 +2580,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-dmerc-line-mtus-cnt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-dmerc-line-mtus-cnt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-dmerc-line-mtus-cnt-extension" ]
        ]
      ], [
-       fhir:index 206;
+       fhir:index 219;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2446,10 +2592,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-betos-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-betos-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-betos-cd-extension" ]
        ]
      ], [
-       fhir:index 207;
+       fhir:index 220;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2458,10 +2604,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-line-bene-prmry-pyr-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-line-bene-prmry-pyr-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-line-bene-prmry-pyr-cd-extension" ]
        ]
      ], [
-       fhir:index 208;
+       fhir:index 221;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2470,10 +2616,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-line-service-deductible-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-line-service-deductible-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-line-service-deductible-extension" ]
        ]
      ], [
-       fhir:index 209;
+       fhir:index 222;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2482,10 +2628,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-line-hct-hgb-rslt-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-line-hct-hgb-rslt-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-line-hct-hgb-rslt-num-extension" ]
        ]
      ], [
-       fhir:index 210;
+       fhir:index 223;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2494,10 +2640,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-ndc-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-ndc-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-ndc-extension" ]
        ]
      ], [
-       fhir:index 211;
+       fhir:index 224;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2506,10 +2652,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-prvdr-state-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-prvdr-state-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-prvdr-state-cd-extension" ]
        ]
      ], [
-       fhir:index 212;
+       fhir:index 225;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2518,10 +2664,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-dmerc-line-prcng-state-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-dmerc-line-prcng-state-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-dmerc-line-prcng-state-cd-extension" ]
        ]
      ], [
-       fhir:index 213;
+       fhir:index 226;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2530,10 +2676,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-dmerc-line-supplr-type-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-dmerc-line-supplr-type-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-dmerc-line-supplr-type-cd-extension" ]
        ]
      ], [
-       fhir:index 214;
+       fhir:index 227;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2542,10 +2688,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-line-pmt-80-100-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-dme-line-pmt-80-100-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-dme-line-pmt-80-100-cd-extension" ]
        ]
      ], [
-       fhir:index 215;
+       fhir:index 228;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2554,10 +2700,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hospice-clm-mdcr-non-pmt-rsn-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hospice-clm-mdcr-non-pmt-rsn-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hospice-clm-mdcr-non-pmt-rsn-cd-extension" ]
        ]
      ], [
-       fhir:index 216;
+       fhir:index 229;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2566,10 +2712,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hospice-prpayamt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hospice-prpayamt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hospice-prpayamt-extension" ]
        ]
      ], [
-       fhir:index 217;
+       fhir:index 230;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2578,10 +2724,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hospice-fi-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hospice-fi-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hospice-fi-num-extension" ]
        ]
      ], [
-       fhir:index 218;
+       fhir:index 231;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2590,10 +2736,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hospice-clm-fac-type-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hospice-clm-fac-type-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hospice-clm-fac-type-cd-extension" ]
        ]
      ], [
-       fhir:index 219;
+       fhir:index 232;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2602,10 +2748,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hospice-bene-hospc-prd-cnt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hospice-bene-hospc-prd-cnt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hospice-bene-hospc-prd-cnt-extension" ]
        ]
      ], [
-       fhir:index 220;
+       fhir:index 233;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2614,10 +2760,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hospice-rev-cntr-ndc-qty-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hospice-rev-cntr-ndc-qty-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hospice-rev-cntr-ndc-qty-extension" ]
        ]
      ], [
-       fhir:index 221;
+       fhir:index 234;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2626,10 +2772,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hospice-rev-cntr-ddctbl-coinsrnc-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hospice-rev-cntr-ddctbl-coinsrnc-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hospice-rev-cntr-ddctbl-coinsrnc-cd-extension" ]
        ]
      ], [
-       fhir:index 222;
+       fhir:index 235;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2638,10 +2784,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension" ]
        ]
      ], [
-       fhir:index 223;
+       fhir:index 236;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2650,10 +2796,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-prpayamt-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hha-prpayamt-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hha-prpayamt-extension" ]
        ]
      ], [
-       fhir:index 224;
+       fhir:index 237;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2662,10 +2808,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-fi-num-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hha-fi-num-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hha-fi-num-extension" ]
        ]
      ], [
-       fhir:index 225;
+       fhir:index 238;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2674,10 +2820,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hha-clm-fac-type-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension" ]
        ]
      ], [
-       fhir:index 226;
+       fhir:index 239;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2686,10 +2832,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hha-rev-cntr-stus-ind-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension" ]
        ]
      ], [
-       fhir:index 227;
+       fhir:index 240;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2698,10 +2844,10 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hha-rev-cntr-ndc-qty-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension" ]
        ]
      ], [
-       fhir:index 228;
+       fhir:index 241;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
@@ -2710,7 +2856,79 @@
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension" ]
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension" ]
+       ]
+     ], [
+       fhir:index 242;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-bluebutton-coverage-ms-cd-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-ms-cd-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-coverage-ms-cd-extension" ]
+       ]
+     ], [
+       fhir:index 243;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-bluebutton-coverage-orec-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-orec-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-coverage-orec-extension" ]
+       ]
+     ], [
+       fhir:index 244;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-bluebutton-coverage-crec-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-crec-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-coverage-crec-extension" ]
+       ]
+     ], [
+       fhir:index 245;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-bluebutton-coverage-esrd-ind-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-esrd-ind-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-coverage-esrd-ind-extension" ]
+       ]
+     ], [
+       fhir:index 246;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-bluebutton-coverage-a-trm-cd-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-a-trm-cd-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-coverage-a-trm-cd-extension" ]
+       ]
+     ], [
+       fhir:index 247;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-bluebutton-coverage-b-trm-cd-extension.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-b-trm-cd-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition-bluebutton-coverage-b-trm-cd-extension" ]
        ]
      ]
   ];
@@ -2726,9 +2944,11 @@
      ]
   ] .
 
-<https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-pde-claim> a fhir:StructureDefinition .
+<https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-pde-claim.html> a fhir:StructureDefinition .
 
 <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-carrier-claim> a fhir:StructureDefinition .
+
+<https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-coverage> a fhir:StructureDefinition .
 
 <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-profile-inpatient-claim> a fhir:StructureDefinition .
 
@@ -3016,6 +3236,30 @@
 
 <https://bluebutton.cms.gov/assets/ig/ValueSet-clm-hha-rfrl-cd> a fhir:ValueSet .
 
+<https://bluebutton.cms.gov/assets/ig/ValueSet-ms-cd> a fhir:ValueSet .
+
+<https://bluebutton.cms.gov/assets/ig/ValueSet-orec> a fhir:ValueSet .
+
+<https://bluebutton.cms.gov/assets/ig/ValueSet-crec> a fhir:ValueSet .
+
+<https://bluebutton.cms.gov/assets/ig/ValueSet-esrd-ind> a fhir:ValueSet .
+
+<https://bluebutton.cms.gov/assets/ig/ValueSet-a-trm-cd> a fhir:ValueSet .
+
+<https://bluebutton.cms.gov/assets/ig/ValueSet-b-trm-cd> a fhir:ValueSet .
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-b-trm-cd> a fhir:CodeSystem .
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-a-trm-cd> a fhir:CodeSystem .
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-esrd-ind> a fhir:CodeSystem .
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-crec> a fhir:CodeSystem .
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-orec> a fhir:CodeSystem .
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd> a fhir:CodeSystem .
+
 <https://bluebutton.cms.gov/assets/ig/CodeSystem-adjudications> a fhir:CodeSystem .
 
 <https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-hha-rfrl-cd> a fhir:CodeSystem .
@@ -3108,7 +3352,7 @@
 
 <https://bluebutton.cms.gov/assets/ig/CodeSystem-gndr-cd> a fhir:CodeSystem .
 
-<http://hl7.org/fhir/ExplanationOfBenefit/part-d-event-example> a fhir:ExplanationOfBenefit .
+<https://bluebutton.cms.gov/assets/ig/ExplanationOfBenefit/part-d-event-example> a fhir:ExplanationOfBenefit .
 
 <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-prpayamt-extension> a fhir:StructureDefinition .
 
@@ -3184,11 +3428,23 @@
 
 <https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension> a fhir:StructureDefinition .
 
+<https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-ms-cd-extension> a fhir:StructureDefinition .
+
+<https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-orec-extension> a fhir:StructureDefinition .
+
+<https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-crec-extension> a fhir:StructureDefinition .
+
+<https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-esrd-ind-extension> a fhir:StructureDefinition .
+
+<https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-a-trm-cd-extension> a fhir:StructureDefinition .
+
+<https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-coverage-b-trm-cd-extension> a fhir:StructureDefinition .
+
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/ImplementationGuide/ig.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/ImplementationGuide/ig.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://hl7.org/fhir/STU3/ImplementationGuide/ig.ttl> .
+  owl:versionIRI <https://bluebutton.cms.gov/assets/ig/STU3/ImplementationGuide/ig.ttl> .
 
 # -------------------------------------------------------------------------------------
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<CodeSystem xmlns="http://hl7.org/fhir">
+<CodeSystem xmlns="https://bluebutton.cms.gov/assets/ig">
   <id value="daw-prod-slctn-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Dispense as Written (DAW) Product Selection Code</h2><div><p>This field indicates the prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication. Part D plans generally require pharmacies to use generics or the least expensive version of the prescribed drug. However, there are times when a prescriber intends for the beneficiary to receive the drug exactly as it is written on the prescription (e.g., to get the brand-name version of a drug). When there are specific instructions from the prescriber, it is indicated in this variable with a value of 1 or greater. Source: https://bluebutton.cms.gov/resources/variables/daw<em>prod</em>slctn_cd</p>
@@ -8,13 +8,14 @@
   </text>
   <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-daw-prod-slctn-cd"/>
   <identifier>
-    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-daw-prod-slctn-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-daw-prod-slctn-cd.html"/>
   </identifier>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Dispense as Written (DAW) Product Selection Code"/>
   <title value="Dispense as Written (DAW) Product Selection Code"/>
   <status value="active"/>
-  <date value="2018-05-31T14:39:32+00:00"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
+  <publisher value="CMS Blue Button 2.0 Team"/>
   <description value="This field indicates the prescriber&#39;s instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication. Part D plans generally require pharmacies to use generics or the least expensive version of the prescribed drug. However, there are times when a prescriber intends for the beneficiary to receive the drug exactly as it is written on the prescription (e.g., to get the brand-name version of a drug). When there are specific instructions from the prescriber, it is indicated in this variable with a value of 1 or greater. Source: https://bluebutton.cms.gov/resources/variables/daw_prod_slctn_cd"/>
   <caseSensitive value="true"/>
   <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-daw-prod-slctn-cd"/>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="https://bluebutton.cms.gov/assets/ig">
+  <id value="esrd-ind"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>End-stage Renal Disease (ESRD) Indicator</h2><div><p>This field specifies whether a beneficiary is entitled to Medicare benefits due to end stage renal disease (ESRD). Source: https://bluebutton.cms.gov/resources/variables/esrd_ind</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-esrd-ind.html"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-esrd-ind</code></a></li></ul></div>
+  </text>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-esrd-ind"/>
+  <version value="1.1.1"/>
+  <name value="End-stage Renal Disease (ESRD) Indicator"/>
+  <status value="draft"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
+  <description value="This field specifies whether a beneficiary is entitled to Medicare benefits due to end stage renal disease (ESRD). Source: https://bluebutton.cms.gov/resources/variables/esrd_ind"/>
+  <compose>
+    <include>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-esrd-ind"/>
+    </include>
+  </compose>
+</ValueSet>

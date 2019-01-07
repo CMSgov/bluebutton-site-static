@@ -3,11 +3,12 @@
     <id value="clm-fac-type-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/clm-fac-type-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/clm-fac-type-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/clm-fac-type-cd.html"/>
     </identifier>
     <name value="Claim Facility Type Code"/>
     <title value="Claim Facility Type Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="The type of facility. Source: https://bluebutton.cms.gov/resources/variables/clm_fac_type_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/clm-fac-type-cd"/>

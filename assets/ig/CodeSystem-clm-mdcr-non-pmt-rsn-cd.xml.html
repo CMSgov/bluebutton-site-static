@@ -6,7 +6,7 @@
   <title>Blue Button 2.0</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="description" content="Blue Button 2.0 Implementation Guide" />
 <meta name="author" content="http://www.hl7.org"/>
 
   <link href="fhir.css" rel="stylesheet"/>
@@ -28,29 +28,26 @@
   window.tealiumEnvironment = "prod";
   </script>
   <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
-
 </head>
 <body>
 
- <div id="segment-header" class="segment">  <!-- segment-header -->
-     <div class="container">  <!-- container -->
-         <div class="col-3">
-             <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
-         </div>
-         <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
-             <b>Blue Button 2.0 Implementation Guide</b>
-             <!-- (Release 1.1.0 ) -->
-             <!-- (Release 1.1.0 Ballot ) -->
-         </div>
-         <div class="col-3" style="margin-right:0;float:right">
-             <a id="cms-logo" no-external="true" href="http://www.cms.gov">
-                 <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
-             </a>
-         </div>
-     </div>
-
+<div class="container">  <!-- container -->
+    <div class="col-3">
+        <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
+    </div>
+    <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
+        <b>Blue Button 2.0 Implementation Guide</b>
+        <!-- (Release 1.1.1 ) -->
+        <!-- (Release 1.1.1 Ballot ) -->
+    </div>
+    <div class="col-3" style="margin-right:0;float:right">
+        <a id="cms-logo" no-external="true" href="http://www.cms.gov">
+            <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
+        </a>
+    </div>
+</div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="https://bluebutton.cms.gov/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -68,7 +65,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="https://hl7.org/fhir/STU3/index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -115,324 +112,325 @@ Raw <a href="CodeSystem-clm-mdcr-non-pmt-rsn-cd.xml" download>xml</a>
 
 <pre class="xml">
 
-&lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;clm-mdcr-non-pmt-rsn-cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+&lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;https://bluebutton.cms.gov/assets/ig&quot;&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;clm-mdcr-non-pmt-rsn-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Claim Medicare Non Payment Reason Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The reason that no Medicare payment is made for services on an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm&lt;em&gt;mdcr&lt;/em&gt;non&lt;em&gt;pmt&lt;/em&gt;rsn_cd&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-A&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Covered worker's compensation (Obsolete)&lt;/td&gt;&lt;td&gt;Covered worker's compensation (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-B&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Benefit exhausted&lt;/td&gt;&lt;td&gt;Benefit exhausted&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Custodial care – non-covered care (includes all 'beneficiary at fault' waiver cases) (Obsolete)&lt;/td&gt;&lt;td&gt;Custodial care – non-covered care (includes all 'beneficiary at fault' waiver cases) (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HMO out-of-plan services not emergency or urgently needed (Obsolete)&lt;/td&gt;&lt;td&gt;HMO out-of-plan services not emergency or urgently needed (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-E&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-F&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoid HMO Rate Cell (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoid HMO Rate Cell (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;G&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided Litigation Settlement (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided Litigation Settlement (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;H&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-H&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided Employer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided Employer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-J&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-K&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-N&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;All other reasons for non-payment&lt;/td&gt;&lt;td&gt;All other reasons for non-payment&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-P&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Payment requested&lt;/td&gt;&lt;td&gt;Payment requested&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Q&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-Q&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided Voluntary Agreement (eff. 7/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided Voluntary Agreement (eff. 7/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;R&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-R&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Benefits refused, or evidence not submitted&lt;/td&gt;&lt;td&gt;Benefits refused, or evidence not submitted&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-T&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;U&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-U&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;V&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-V&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;W&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-W&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Worker's compensation (Obsolete)&lt;/td&gt;&lt;td&gt;Worker's compensation (Obsolete)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;X&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-X&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - generic&lt;/td&gt;&lt;td&gt;MSP cost avoided - generic&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Y&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-Y&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)&lt;/td&gt;&lt;td&gt;MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-Z&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)&lt;/td&gt;&lt;td&gt;Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-00&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-12&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - BCBS Voluntary Agreements&lt;/td&gt;&lt;td&gt;MSP cost avoided - BCBS Voluntary Agreements&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-13&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-14&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-15&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-16&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-17&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-18&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-19&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-21&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-22&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-25&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-26&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;42&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-42&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;43&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-43&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp;amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.&lt;/td&gt;&lt;td&gt;SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp;amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;!&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.33&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor ('00' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - COB Contractor ('00' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;@&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.64&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - BC/BS Voluntary Agreements ('12' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - BC/BS Voluntary Agreements ('12' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;#&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management ('13' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Office of Personnel Management ('13' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;$&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.36&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch ('14' 2-byte code)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation (WC) Datamatch ('14' 2-byte code)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.42&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) ('15' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) ('15' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;(&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.40&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA ('16' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Liability Insurer VDSA ('16' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;)&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.41&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA ('17' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - No-Fault Insurer VDSA ('17' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;+&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.43&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement ('18' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement ('18' 2-byte code) (eff. 4/2006)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;lt;&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.60&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan ('21' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR Group Health Plan ('21' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;gt;&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.62&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan ('22' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;td&gt;MSP cost avoided - MIR non-Group Health Plan ('22' 2-byte code) (eff. 1/2009)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.37&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California ('25' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - California ('25' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;amp;&lt;a name=&quot;clm-mdcr-non-pmt-rsn-cd-.38&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida ('26' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;td&gt;MSP cost avoided - Recovery Audit Contractor - Florida ('26' 2-byte code) (eff. 10/2005)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
   &lt;/text&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.identifier">identifier</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd.html&quot;/&gt;
   &lt;/identifier&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.0&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Claim Medicare Non Payment Reason Code&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Claim Medicare Non Payment Reason Code&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-31T14:39:32+00:00&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;The reason that no Medicare payment is made for services on an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm_mdcr_non_pmt_rsn_cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/ValueSet-clm-mdcr-non-pmt-rsn-cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;is-a&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;A&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Covered worker&amp;#39;s compensation (Obsolete)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Covered worker&amp;#39;s compensation (Obsolete)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.1&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Claim Medicare Non Payment Reason Code&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Claim Medicare Non Payment Reason Code&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-11-27T15:56:35+00:00&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.publisher">publisher</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;CMS Blue Button 2.0 Team&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>
+               <a href="https://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;The reason that no Medicare payment is made for services on an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm_mdcr_non_pmt_rsn_cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/ValueSet-clm-mdcr-non-pmt-rsn-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.hierarchyMeaning">hierarchyMeaning</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;is-a&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;A&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Covered worker&amp;#39;s compensation (Obsolete)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Covered worker&amp;#39;s compensation (Obsolete)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;B&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Benefit exhausted&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Benefit exhausted&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;B&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Benefit exhausted&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Benefit exhausted&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;C&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Custodial care – non-covered care (includes all &amp;#39;beneficiary at fault&amp;#39; waiver cases) (Obsolete)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Custodial care – non-covered care (includes all &amp;#39;beneficiary at fault&amp;#39; waiver cases) (Obsolete)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;C&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Custodial care – non-covered care (includes all &amp;#39;beneficiary at fault&amp;#39; waiver cases) (Obsolete)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Custodial care – non-covered care (includes all &amp;#39;beneficiary at fault&amp;#39; waiver cases) (Obsolete)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;E&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;HMO out-of-plan services not emergency or urgently needed (Obsolete)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;HMO out-of-plan services not emergency or urgently needed (Obsolete)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;E&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;HMO out-of-plan services not emergency or urgently needed (Obsolete)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;HMO out-of-plan services not emergency or urgently needed (Obsolete)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;E&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;E&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IRS/SSA/HCFA Data Match (eff. 7/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;F&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid HMO Rate Cell (eff. 7/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid HMO Rate Cell (eff. 7/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;F&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid HMO Rate Cell (eff. 7/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid HMO Rate Cell (eff. 7/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;G&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Litigation Settlement (eff. 7/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Litigation Settlement (eff. 7/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;G&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Litigation Settlement (eff. 7/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Litigation Settlement (eff. 7/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;H&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Employer Voluntary Reporting (eff. 7/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Employer Voluntary Reporting (eff. 7/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;H&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Employer Voluntary Reporting (eff. 7/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Employer Voluntary Reporting (eff. 7/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;J&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;J&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid Insurer Voluntary Reporting (eff. 7/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;K&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;K&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoid Initial Enrollment Questionnaire (eff. 7/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;N&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;All other reasons for non-payment&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;All other reasons for non-payment&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;N&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;All other reasons for non-payment&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;All other reasons for non-payment&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;P&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Payment requested&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Payment requested&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;P&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Payment requested&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Payment requested&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Q&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Voluntary Agreement (eff. 7/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Voluntary Agreement (eff. 7/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Q&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Voluntary Agreement (eff. 7/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided Voluntary Agreement (eff. 7/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;R&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Benefits refused, or evidence not submitted&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Benefits refused, or evidence not submitted&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;R&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Benefits refused, or evidence not submitted&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Benefits refused, or evidence not submitted&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;T&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;T&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IEQ contractor (eff. 9/76) (obsolete 6/30/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;U&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;U&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - HMO rate cell adjustment (eff. 9/76) (Obsolete 6/30/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;V&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;V&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - litigation settlement (eff. 9/76) (Obsolete 6/30/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;W&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Worker&amp;#39;s compensation (Obsolete)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Worker&amp;#39;s compensation (Obsolete)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;W&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Worker&amp;#39;s compensation (Obsolete)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Worker&amp;#39;s compensation (Obsolete)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;X&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - generic&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - generic&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;X&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - generic&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - generic&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Y&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Y&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - IRS/SSA data match project (obsolete 6/30/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Z&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Z&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Zero reimbursement RAPs -- zero reimbursement made due to medical review intervention or where provider specific zero payment has been determined. (effective with HHPPS - 10/00)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;00&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - COB Contractor&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - COB Contractor&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;00&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - COB Contractor&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - COB Contractor&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;12&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - BCBS Voluntary Agreements&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - BCBS Voluntary Agreements&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;12&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - BCBS Voluntary Agreements&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - BCBS Voluntary Agreements&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;13&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Office of Personnel Management&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Office of Personnel Management&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;13&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Office of Personnel Management&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Office of Personnel Management&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;14&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation (WC) Datamatch&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation (WC) Datamatch&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;14&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation (WC) Datamatch&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation (WC) Datamatch&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;15&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;15&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;16&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;16&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Liability Insurer VDSA (eff. 4/2006)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;17&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;17&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - No-Fault Insurer VDSA (eff. 4/2006)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;18&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;18&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (eff. 4/2006)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;19&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;19&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11119 (see CMS Change Request 7906 for identification of the contractor.)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;21&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR Group Health Plan (eff. 1/2009)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR Group Health Plan (eff. 1/2009)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;21&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR Group Health Plan (eff. 1/2009)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR Group Health Plan (eff. 1/2009)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;22&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;22&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR non-Group Health Plan (eff. 1/2009)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;25&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;25&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - California (eff. 10/2005)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;26&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;26&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - Florida (eff. 10/2005)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;42&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;42&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11142 (see CMS Change Request 7906 for identification of the contractor.)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;43&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp;amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp;amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;43&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp;amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SEE NOTE4: Coordination of Benefits Contractor 11143 (see CMS Change Request 7906 for identification of the contractor.) Effective 4/1/02, the Medicare nonpayment reason code was expanded to a 2-byte field. The NCH instituted a crosswalk from the 2-byte code to a 1-byte character code. Below are the character codes (found in NCH &amp;amp; NMUD). At some point, NMUD will carry the 2-byte code but NCH will continue to have the 1-byte character code.&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;!&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - COB Contractor (&amp;#39;00&amp;#39; 2-byte code)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - COB Contractor (&amp;#39;00&amp;#39; 2-byte code)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;!&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - COB Contractor (&amp;#39;00&amp;#39; 2-byte code)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - COB Contractor (&amp;#39;00&amp;#39; 2-byte code)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;@&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - BC/BS Voluntary Agreements (&amp;#39;12&amp;#39; 2-byte code)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - BC/BS Voluntary Agreements (&amp;#39;12&amp;#39; 2-byte code)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;@&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - BC/BS Voluntary Agreements (&amp;#39;12&amp;#39; 2-byte code)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - BC/BS Voluntary Agreements (&amp;#39;12&amp;#39; 2-byte code)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;#&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Office of Personnel Management (&amp;#39;13&amp;#39; 2-byte code)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Office of Personnel Management (&amp;#39;13&amp;#39; 2-byte code)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;#&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Office of Personnel Management (&amp;#39;13&amp;#39; 2-byte code)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Office of Personnel Management (&amp;#39;13&amp;#39; 2-byte code)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;$&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation (WC) Datamatch (&amp;#39;14&amp;#39; 2-byte code)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation (WC) Datamatch (&amp;#39;14&amp;#39; 2-byte code)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;$&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation (WC) Datamatch (&amp;#39;14&amp;#39; 2-byte code)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation (WC) Datamatch (&amp;#39;14&amp;#39; 2-byte code)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;*&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (&amp;#39;15&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (&amp;#39;15&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;*&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (&amp;#39;15&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Workman&amp;#39;s Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (&amp;#39;15&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;(&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Liability Insurer VDSA (&amp;#39;16&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Liability Insurer VDSA (&amp;#39;16&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;(&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Liability Insurer VDSA (&amp;#39;16&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Liability Insurer VDSA (&amp;#39;16&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - No-Fault Insurer VDSA (&amp;#39;17&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - No-Fault Insurer VDSA (&amp;#39;17&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - No-Fault Insurer VDSA (&amp;#39;17&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - No-Fault Insurer VDSA (&amp;#39;17&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;+&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (&amp;#39;18&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (&amp;#39;18&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;+&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (&amp;#39;18&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Pharmacy Benefit Manager Data Sharing Agreement (&amp;#39;18&amp;#39; 2-byte code) (eff. 4/2006)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;&amp;lt;&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR Group Health Plan (&amp;#39;21&amp;#39; 2-byte code) (eff. 1/2009)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR Group Health Plan (&amp;#39;21&amp;#39; 2-byte code) (eff. 1/2009)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;&amp;lt;&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR Group Health Plan (&amp;#39;21&amp;#39; 2-byte code) (eff. 1/2009)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR Group Health Plan (&amp;#39;21&amp;#39; 2-byte code) (eff. 1/2009)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;&amp;gt;&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR non-Group Health Plan (&amp;#39;22&amp;#39; 2-byte code) (eff. 1/2009)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR non-Group Health Plan (&amp;#39;22&amp;#39; 2-byte code) (eff. 1/2009)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;&amp;gt;&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR non-Group Health Plan (&amp;#39;22&amp;#39; 2-byte code) (eff. 1/2009)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - MIR non-Group Health Plan (&amp;#39;22&amp;#39; 2-byte code) (eff. 1/2009)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;%&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - California (&amp;#39;25&amp;#39; 2-byte code) (eff. 10/2005)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - California (&amp;#39;25&amp;#39; 2-byte code) (eff. 10/2005)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;%&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - California (&amp;#39;25&amp;#39; 2-byte code) (eff. 10/2005)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - California (&amp;#39;25&amp;#39; 2-byte code) (eff. 10/2005)&quot;/&gt;
   &lt;/concept&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;&amp;amp;&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - Florida (&amp;#39;26&amp;#39; 2-byte code) (eff. 10/2005)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
-                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - Florida (&amp;#39;26&amp;#39; 2-byte code) (eff. 10/2005)&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;&amp;amp;&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a>
+             <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - Florida (&amp;#39;26&amp;#39; 2-byte code) (eff. 10/2005)&quot;/&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MSP cost avoided - Recovery Audit Contractor - Florida (&amp;#39;26&amp;#39; 2-byte code) (eff. 10/2005)&quot;/&gt;
   &lt;/concept&gt;
 &lt;/CodeSystem&gt;</pre>
 
@@ -465,9 +463,9 @@ Raw <a href="CodeSystem-clm-mdcr-non-pmt-rsn-cd.xml" download>xml</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+            Blue Button 2.0 Version: 1.1.1  &reg;&copy; <a style="color: #81BEF7" href="https://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Tue, Nov 27, 2018 15:56+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="https://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

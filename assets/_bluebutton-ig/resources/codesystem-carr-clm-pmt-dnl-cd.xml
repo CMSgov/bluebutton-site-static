@@ -3,11 +3,12 @@
     <id value="carr-clm-pmt-dnl-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/carr-clm-pmt-dnl-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/carr-clm-pmt-dnl-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/carr-clm-pmt-dnl-cd.html"/>
     </identifier>
     <name value="Carrier Claim Payment Denial Code"/>
     <title value="Carrier Claim Payment Denial Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="The code on a non-institutional claim indicating to whom payment was made or if the claim was denied. Source: https://bluebutton.cms.gov/resources/variables/carr_clm_pmt_dnl_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/carr-clm-pmt-dnl-cd"/>

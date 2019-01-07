@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<CodeSystem xmlns="http://hl7.org/fhir">
+<CodeSystem xmlns="https://bluebutton.cms.gov/assets/ig">
   <id value="carr-num"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Carrier or MAC Number</h2><div><p>The identification number assigned by CMS to a carrier authorized to process claims from a physician or supplier. Effective July 2006, the Medicare Administrative Contractors (MACs) began replacing the existing carriers and started processing physician or supplier claim records for states assigned to its jurisdiction. Source: https://bluebutton.cms.gov/resources/variables/carr_num</p>
@@ -8,13 +8,14 @@
   </text>
   <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-num"/>
   <identifier>
-    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-num"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-num.html"/>
   </identifier>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Carrier or MAC Number"/>
   <title value="Carrier or MAC Number"/>
   <status value="active"/>
-  <date value="2018-05-31T14:39:32+00:00"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
+  <publisher value="CMS Blue Button 2.0 Team"/>
   <description value="The identification number assigned by CMS to a carrier authorized to process claims from a physician or supplier. Effective July 2006, the Medicare Administrative Contractors (MACs) began replacing the existing carriers and started processing physician or supplier claim records for states assigned to its jurisdiction. Source: https://bluebutton.cms.gov/resources/variables/carr_num"/>
   <caseSensitive value="true"/>
   <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-carr-num"/>

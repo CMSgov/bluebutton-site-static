@@ -3,13 +3,13 @@
   "id": "carr-clm-pmt-dnl-cd",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Claim Payment Denial Code</h2><div><p>The code on a non-institutional claim indicating to whom payment was made or if the claim was denied. Source: https://bluebutton.cms.gov/resources/variables/carr<em>clm</em>pmt<em>dnl</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem/carr-clm-pmt-dnl-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-clm-pmt-dnl-cd</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Carrier Claim Payment Denial Code</h2><div><p>The code on a non-institutional claim indicating to whom payment was made or if the claim was denied. Source: https://bluebutton.cms.gov/resources/variables/carr<em>clm</em>pmt<em>dnl</em>cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-carr-clm-pmt-dnl-cd.html\"><code>https://bluebutton.cms.gov/assets/ig/CodeSystem-carr-clm-pmt-dnl-cd</code></a></li></ul></div>"
   },
   "url": "https://bluebutton.cms.gov/assets/ig/ValueSet-carr-clm-pmt-dnl-cd",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Carrier Claim Payment Denial Code",
   "status": "draft",
-  "date": "2018-05-31T14:39:32+00:00",
+  "date": "2018-11-27T15:56:35+00:00",
   "description": "The code on a non-institutional claim indicating to whom payment was made or if the claim was denied. Source: https://bluebutton.cms.gov/resources/variables/carr_clm_pmt_dnl_cd",
   "compose": {
     "include": [

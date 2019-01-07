@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<CodeSystem xmlns="http://hl7.org/fhir">
+<CodeSystem xmlns="https://bluebutton.cms.gov/assets/ig">
   <id value="rev-cntr-ndc-qty-qlfr-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Revenue Center NDC Quantity Qualifier Code</h2><div><p>Effective with Version 'J', the code used to indicate the unit of measurement for the drug that was administered. Source: https://bluebutton.cms.gov/resources/variables/rev<em>cntr</em>ndc<em>qty</em>qlfr_cd</p>
@@ -8,13 +8,14 @@
   </text>
   <url value="https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ndc-qty-qlfr-cd"/>
   <identifier>
-    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ndc-qty-qlfr-cd"/>
+    <value value="https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ndc-qty-qlfr-cd.html"/>
   </identifier>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Revenue Center NDC Quantity Qualifier Code"/>
   <title value="Revenue Center NDC Quantity Qualifier Code"/>
   <status value="active"/>
-  <date value="2018-05-31T14:39:32+00:00"/>
+  <date value="2018-11-27T15:56:35+00:00"/>
+  <publisher value="CMS Blue Button 2.0 Team"/>
   <description value="Effective with Version &#39;J&#39;, the code used to indicate the unit of measurement for the drug that was administered. Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_ndc_qty_qlfr_cd"/>
   <caseSensitive value="true"/>
   <valueSet value="https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-ndc-qty-qlfr-cd"/>

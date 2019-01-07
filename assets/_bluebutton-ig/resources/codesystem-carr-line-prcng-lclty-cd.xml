@@ -3,11 +3,12 @@
     <id value="carr-line-prcng-lclty-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/carr-line-prcng-lclty-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/carr-line-prcng-lclty-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/carr-line-prcng-lclty-cd.html"/>
     </identifier>
     <name value="Carrier Line Pricing Locality Code"/>
     <title value="Carrier Line Pricing Locality Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). Source: https://bluebutton.cms.gov/resources/variables/carr_line_prcng_lclty_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/carr-line-prcng-lclty-cd"/>

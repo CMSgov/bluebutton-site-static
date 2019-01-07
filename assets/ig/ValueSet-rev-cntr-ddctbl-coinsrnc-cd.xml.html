@@ -6,7 +6,7 @@
   <title>Blue Button 2.0</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Blue Button 2.0 Implemenation Guide" />
+<meta name="description" content="Blue Button 2.0 Implementation Guide" />
 <meta name="author" content="http://www.hl7.org"/>
 
   <link href="fhir.css" rel="stylesheet"/>
@@ -21,33 +21,33 @@
   <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
 	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
 
-<!-- Favicons -->    <link rel="shortcut icon" href="assets/ico/favicon.ico"/>
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="assets/ico/favicon.ico"/>
+
   <script>
   window.tealiumEnvironment = "prod";
   </script>
   <script src="//tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"></script>
-
 </head>
 <body>
 
- <div id="segment-header" class="segment">  <!-- segment-header -->
-     <div class="container">  <!-- container -->
-         <div class="col-3">
-             <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
-         </div>
-         <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
-             <b>Blue Button 2.0 Implementation Guide</b>
-             <!-- (Release 1.1.0 ) -->
-             <!-- (Release 1.1.0 Ballot ) -->
-         </div>
-         <div class="col-3" style="margin-right:0;float:right">
-             <a id="cms-logo" no-external="true" href="http://www.cms.gov">
-                 <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
-             </a>
-         </div>
-     </div>
+<div class="container">  <!-- container -->
+    <div class="col-3">
+        <a id="logo" no-external="true" href="https://bluebutton.cms.gov"><img alt="logo blue button" src="assets/images/bluebutton-100x100.png"/></a>
+    </div>
+    <div class="col-6" id="ig-status" style="font-size:24px;padding-top: 20px;text-align:center">
+        <b>Blue Button 2.0 Implementation Guide</b>
+        <!-- (Release 1.1.1 ) -->
+        <!-- (Release 1.1.1 Ballot ) -->
+    </div>
+    <div class="col-3" style="margin-right:0;float:right">
+        <a id="cms-logo" no-external="true" href="http://www.cms.gov">
+            <img alt="visit the CMS website" height="80"  src="assets/images/cms-152x100.png"/>
+        </a>
+    </div>
+</div>
 <!--
-   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
+   <div id="hl7-nav"><a id="hl7-logo" no-external="true" href="https://bluebutton.cms.gov/assets/ig/search.cfm"><img height="50"  alt="Blue Button" src="assets/images/usbanner.png"/></a></div>
   </div>
 -->
   <div class="container">  <!-- container -->
@@ -65,7 +65,7 @@
       <span class="icon-bar"> </span>
       <span class="icon-bar"> </span>
      </button>
-     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3index.html">FHIR</a>
+     <a class="navbar-brand hidden" href="https://hl7.org/fhir/STU3/index.html">FHIR</a>
      <div class="nav-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
@@ -112,23 +112,23 @@ Raw <a href="ValueSet-rev-cntr-ddctbl-coinsrnc-cd.xml" download>xml</a>
 
 <pre class="xml">
 
-&lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet">ValueSet</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;rev-cntr-ddctbl-coinsrnc-cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.text">text</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+&lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet">ValueSet</a> xmlns=&quot;https://bluebutton.cms.gov/assets/ig&quot;&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.id">id</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;rev-cntr-ddctbl-coinsrnc-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.text">text</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Revenue Center Deductible Coinsurance Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;Code indicating whether the revenue center charges are subject to deductible and/or coinsurance. Source: https://bluebutton.cms.gov/resources/variables/rev&lt;em&gt;cntr&lt;/em&gt;ddctbl&lt;em&gt;coinsrnc&lt;/em&gt;cd&lt;/p&gt;
-&lt;/div&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=&quot;CodeSystem/rev-cntr-ddctbl-coinsrnc-cd.html&quot;&gt;&lt;code&gt;https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ddctbl-coinsrnc-cd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=&quot;CodeSystem-rev-cntr-ddctbl-coinsrnc-cd.html&quot;&gt;&lt;code&gt;https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ddctbl-coinsrnc-cd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
   &lt;/text&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">url</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-ddctbl-coinsrnc-cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.0&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Revenue Center Deductible Coinsurance Code&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-31T14:39:32+00:00&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.description">description</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;Code indicating whether the revenue center charges are subject to deductible and/or coinsurance. Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_ddctbl_coinsrnc_cd&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.compose">compose</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include">include</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ddctbl-coinsrnc-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.url">url</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/ValueSet-rev-cntr-ddctbl-coinsrnc-cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.version">version</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.1.1&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.name">name</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Revenue Center Deductible Coinsurance Code&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.status">status</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.date">date</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-11-27T15:56:35+00:00&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.description">description</a>
+               <a href="https://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;Code indicating whether the revenue center charges are subject to deductible and/or coinsurance. Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_ddctbl_coinsrnc_cd&quot;/&gt;
+  &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.compose">compose</a>&gt;
+    &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include">include</a>&gt;
+      &lt;<a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include.system">system</a> <a href="https://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-rev-cntr-ddctbl-coinsrnc-cd&quot;/&gt;
     &lt;/include&gt;
   &lt;/compose&gt;
 &lt;/ValueSet&gt;</pre>
@@ -162,9 +162,9 @@ Raw <a href="ValueSet-rev-cntr-ddctbl-coinsrnc-cd.xml" download>xml</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Blue Button 2.0 Version: 1.1.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Thu, May 31, 2018 14:39+0000. |
+            Blue Button 2.0 Version: 1.1.1  &reg;&copy; <a style="color: #81BEF7" href="https://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11916) generated on Tue, Nov 27, 2018 15:56+0000. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                <a style="color: #81BEF7" rel="license" href="https://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

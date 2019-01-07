@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ImplementationGuide xmlns="http://hl7.org/fhir">
+<ImplementationGuide xmlns="https://bluebutton.cms.gov/assets/ig">
   <id value="ig"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Blue Button 2.0</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/ImplementationGuide/ig</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Blue Button 2.0</h2><p>The official URL for this implementation guide is: </p><pre>https://bluebutton.cms.gov/assets/ig/ImplementationGuide/ig</pre></div>
   </text>
-  <url value="http://hl7.org/fhir/ImplementationGuide/ig"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/ImplementationGuide/ig"/>
   <name value="Blue Button 2.0"/>
   <status value="draft"/>
   <experimental value="true"/>
@@ -14,55 +14,61 @@
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-profile-pde-claim"/>
+        <reference value="StructureDefinition-bluebutton-profile-pde-claim.html"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-profile-carrier-claim"/>
+        <reference value="StructureDefinition-bluebutton-profile-carrier-claim"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-profile-inpatient-claim"/>
+        <reference value="StructureDefinition-bluebutton-profile-coverage"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-profile-outpatient-claim"/>
+        <reference value="StructureDefinition-bluebutton-profile-inpatient-claim"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-profile-snf-claim"/>
+        <reference value="StructureDefinition-bluebutton-profile-outpatient-claim"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-profile-patient-claim"/>
+        <reference value="StructureDefinition-bluebutton-profile-snf-claim"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-profile-dme-claim"/>
+        <reference value="StructureDefinition-bluebutton-profile-patient-claim"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-profile-hha-claim"/>
+        <reference value="StructureDefinition-bluebutton-profile-dme-claim"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-profile-hospice-claim"/>
+        <reference value="StructureDefinition-bluebutton-profile-hha-claim"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition-bluebutton-profile-hospice-claim"/>
       </sourceReference>
     </resource>
     <resource>
@@ -71,7 +77,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-pde-benefit-package-id-extension"/>
+        <reference value="StructureDefinition-bluebutton-pde-benefit-package-id-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -80,7 +86,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-pde-days-supply-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-pde-days-supply-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -89,7 +95,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-pde-fill-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-pde-fill-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -98,7 +104,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-pde-plan-cntrct-rec-id-extension"/>
+        <reference value="StructureDefinition-bluebutton-pde-plan-cntrct-rec-id-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -107,7 +113,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-pde-phrmcy-srvc-type-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-pde-phrmcy-srvc-type-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -116,7 +122,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-patient-race-extension"/>
+        <reference value="StructureDefinition-bluebutton-patient-race-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -125,7 +131,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-prpayamt-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-prpayamt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -134,7 +140,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-carr-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-carr-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -143,7 +149,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-asgmntcd-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-asgmntcd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -152,7 +158,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-clm-clncl-tril-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-clm-clncl-tril-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -161,7 +167,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-carr-clm-cash-ddctbl-apld-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-carr-clm-cash-ddctbl-apld-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -170,7 +176,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-carr-clm-pmt-dnl-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-carr-clm-pmt-dnl-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -179,7 +185,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-nch-carr-clm-alowd-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-nch-carr-clm-alowd-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -188,7 +194,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-nch-carr-clm-sbmtd-chrg-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-nch-carr-clm-sbmtd-chrg-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -197,7 +203,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-nch-clm-bene-pmt-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-nch-clm-bene-pmt-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -206,7 +212,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-nch-clm-prvdr-pmt-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-nch-clm-prvdr-pmt-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -215,7 +221,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-carr-line-prvdr-type-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-carr-line-prvdr-type-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -224,7 +230,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-prtcptng-ind-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-prtcptng-ind-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -233,7 +239,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-us-npi-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-us-npi-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -242,7 +248,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-carr-line-mtus-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-carr-line-mtus-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -251,7 +257,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-carr-line-mtus-cnt-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-carr-line-mtus-cnt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -260,7 +266,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-betos-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-betos-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -269,7 +275,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-line-bene-prmry-pyr-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-line-bene-prmry-pyr-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -278,7 +284,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-line-service-deductible-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-line-service-deductible-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -287,7 +293,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-line-hct-hgb-rslt-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-line-hct-hgb-rslt-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -296,7 +302,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-ndc-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-ndc-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -305,7 +311,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-carr-line-ansthsa-unit-cnt-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-carr-line-ansthsa-unit-cnt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -314,7 +320,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-prvdr-state-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-prvdr-state-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -323,7 +329,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-prvdr-zip-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-prvdr-zip-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -332,7 +338,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-carr-line-prcng-lclty-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-carr-line-prcng-lclty-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -341,7 +347,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-carr-line-clia-lab-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-carr-line-clia-lab-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -350,7 +356,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-carrier-line-pmt-80-100-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-carrier-line-pmt-80-100-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -359,7 +365,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-ime-op-clm-val-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-ime-op-clm-val-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -368,7 +374,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-dsh-op-clm-val-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-dsh-op-clm-val-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -377,7 +383,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-pass-thru-per-diem-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-pass-thru-per-diem-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -386,7 +392,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-nch-profnl-cmpnt-chrg-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-nch-profnl-cmpnt-chrg-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -395,7 +401,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-tot-pps-cptl-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-tot-pps-cptl-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -404,7 +410,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-nch-bene-ip-ddctbl-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-nch-bene-ip-ddctbl-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -413,7 +419,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-nch-bene-pta-coinsrnc-lblty-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-nch-bene-pta-coinsrnc-lblty-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -422,7 +428,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-nch-ip-ncvrd-chrg-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-nch-ip-ncvrd-chrg-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -431,7 +437,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-nch-ip-tot-ddctn-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-nch-ip-tot-ddctn-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -440,7 +446,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-pps-cptl-dsprprtnt-shr-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-pps-cptl-dsprprtnt-shr-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -449,7 +455,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-pps-cptl-excptn-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-pps-cptl-excptn-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -458,7 +464,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-pps-cptl-fsp-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-pps-cptl-fsp-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -467,7 +473,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-pps-cptl-ime-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-pps-cptl-ime-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -476,7 +482,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-pps-cptl-outlier-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-pps-cptl-outlier-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -485,7 +491,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-pps-old-cptl-hld-hrmls-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-pps-old-cptl-hld-hrmls-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -494,7 +500,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-nch-drg-outlier-aprvd-pmt-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-nch-drg-outlier-aprvd-pmt-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -503,7 +509,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-nch-bene-blood-ddctbl-lblty-am-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-nch-bene-blood-ddctbl-lblty-am-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -512,7 +518,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-mdcr-non-pmt-rsn-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-mdcr-non-pmt-rsn-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -521,7 +527,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-prpayamt-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-prpayamt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -530,7 +536,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-fi-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-fi-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -539,7 +545,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-claim-query-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-claim-query-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -548,7 +554,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-fac-type-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-fac-type-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -557,7 +563,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-clm-poa-ind-sw1-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-clm-poa-ind-sw1-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -566,7 +572,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-rev-cntr-ndc-qty-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-rev-cntr-ndc-qty-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -575,7 +581,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-inpatient-rev-cntr-ddctbl-coinsrnc-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-inpatient-rev-cntr-ddctbl-coinsrnc-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -584,7 +590,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-nch-profnl-cmpnt-chrg-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-nch-profnl-cmpnt-chrg-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -593,7 +599,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-nch-bene-ptb-ddctbl-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-nch-bene-ptb-ddctbl-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -602,7 +608,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-nch-bene-ptb-coinsrnc-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-nch-bene-ptb-coinsrnc-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -611,7 +617,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-clm-op-prvdr-pmt-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -620,7 +626,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-clm-op-bene-pmt-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-clm-op-bene-pmt-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -629,7 +635,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-nch-bene-blood-ddctbl-lblty-am-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-nch-bene-blood-ddctbl-lblty-am-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -638,7 +644,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-clm-mdcr-non-pmt-rsn-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-clm-mdcr-non-pmt-rsn-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -647,7 +653,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-prpayamt-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-prpayamt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -656,7 +662,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-fi-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-fi-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -665,7 +671,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-claim-query-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-claim-query-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -674,7 +680,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-clm-fac-type-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-clm-fac-type-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -683,7 +689,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-rev-cntr-ndc-qty-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-rev-cntr-ndc-qty-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -692,7 +698,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-rev-cntr-stus-ind-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-rev-cntr-stus-ind-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -701,7 +707,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-outpatient-rev-cntr-ide-ndc-upc-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-outpatient-rev-cntr-ide-ndc-upc-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -710,7 +716,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-nch-bene-ip-ddctbl-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-nch-bene-ip-ddctbl-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -719,7 +725,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-nch-bene-pta-coinsrnc-lblty-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-nch-bene-pta-coinsrnc-lblty-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -728,7 +734,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-nch-ip-ncvrd-chrg-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-nch-ip-ncvrd-chrg-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -737,7 +743,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-nch-ip-tot-ddctn-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-nch-ip-tot-ddctn-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -746,7 +752,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-clm-pps-cptl-dsprprtnt-shr-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-clm-pps-cptl-dsprprtnt-shr-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -755,7 +761,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-clm-pps-cptl-excptn-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-clm-pps-cptl-excptn-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -764,7 +770,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-clm-pps-cptl-fsp-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-clm-pps-cptl-fsp-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -773,7 +779,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-clm-pps-cptl-ime-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-clm-pps-cptl-ime-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -782,7 +788,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-clm-pps-cptl-outlier-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-clm-pps-cptl-outlier-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -791,7 +797,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-clm-pps-old-cptl-hld-hrmls-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-clm-pps-old-cptl-hld-hrmls-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -800,7 +806,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-nch-bene-blood-ddctbl-lblty-am-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-nch-bene-blood-ddctbl-lblty-am-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -809,7 +815,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-clm-mdcr-non-pmt-rsn-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-clm-mdcr-non-pmt-rsn-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -818,7 +824,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-prpayamt-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-prpayamt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -827,7 +833,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-fi-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-fi-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -836,7 +842,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-claim-query-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-claim-query-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -845,7 +851,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-clm-fac-type-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-clm-fac-type-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -854,7 +860,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-snf-rev-cntr-ddctbl-coinsrnc-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-snf-rev-cntr-ddctbl-coinsrnc-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -863,7 +869,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/race"/>
+        <reference value="ValueSet-race"/>
       </sourceReference>
     </resource>
     <resource>
@@ -872,7 +878,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/gndr-cd"/>
+        <reference value="ValueSet-gndr-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -881,7 +887,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/adjudications"/>
+        <reference value="ValueSet-adjudications"/>
       </sourceReference>
     </resource>
     <resource>
@@ -890,7 +896,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/plan-cntrct-rec-id"/>
+        <reference value="ValueSet-plan-cntrct-rec-id"/>
       </sourceReference>
     </resource>
     <resource>
@@ -899,7 +905,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/information-categories"/>
+        <reference value="ValueSet-information-categories"/>
       </sourceReference>
     </resource>
     <resource>
@@ -908,7 +914,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/clm-mdcr-non-pmt-rsn-cd"/>
+        <reference value="ValueSet-clm-mdcr-non-pmt-rsn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -917,7 +923,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/claim-query-cd"/>
+        <reference value="ValueSet-claim-query-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -926,7 +932,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/clm-fac-type-cd"/>
+        <reference value="ValueSet-clm-fac-type-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -935,7 +941,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/rev-cntr-stus-ind-cd"/>
+        <reference value="ValueSet-rev-cntr-stus-ind-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -944,7 +950,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/clm-poa-ind-sw1"/>
+        <reference value="ValueSet-clm-poa-ind-sw1"/>
       </sourceReference>
     </resource>
     <resource>
@@ -953,7 +959,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/rev-cntr-ddctbl-coinsrnc-cd"/>
+        <reference value="ValueSet-rev-cntr-ddctbl-coinsrnc-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -962,7 +968,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/carr-num"/>
+        <reference value="ValueSet-carr-num"/>
       </sourceReference>
     </resource>
     <resource>
@@ -971,7 +977,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/carr-clm-pmt-dnl-cd"/>
+        <reference value="ValueSet-carr-clm-pmt-dnl-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -980,7 +986,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/asgmntcd"/>
+        <reference value="ValueSet-asgmntcd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -989,7 +995,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/carr-line-prvdr-type-cd"/>
+        <reference value="ValueSet-carr-line-prvdr-type-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -998,7 +1004,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/prtcptng-ind-cd"/>
+        <reference value="ValueSet-prtcptng-ind-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1007,7 +1013,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/carr-line-mtus-cd"/>
+        <reference value="ValueSet-carr-line-mtus-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1016,7 +1022,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/betos-cd"/>
+        <reference value="ValueSet-betos-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1025,7 +1031,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/line-bene-prmry-pyr-cd"/>
+        <reference value="ValueSet-line-bene-prmry-pyr-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1034,7 +1040,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/line-service-deductible"/>
+        <reference value="ValueSet-line-service-deductible"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1043,7 +1049,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/prvdr-state-cd"/>
+        <reference value="ValueSet-prvdr-state-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1052,7 +1058,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/carr-line-prcng-lclty-cd"/>
+        <reference value="ValueSet-carr-line-prcng-lclty-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1061,7 +1067,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/line-pmt-80-100-cd"/>
+        <reference value="ValueSet-line-pmt-80-100-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1070,7 +1076,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/dmerc-line-prcng-state-cd"/>
+        <reference value="ValueSet-dmerc-line-prcng-state-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1079,7 +1085,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/dmerc-line-supplr-type-cd"/>
+        <reference value="ValueSet-dmerc-line-supplr-type-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1088,7 +1094,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/phrmcy-srvc-type-cd"/>
+        <reference value="ValueSet-phrmcy-srvc-type-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1097,7 +1103,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/adjstmt-dltn-cd"/>
+        <reference value="ValueSet-adjstmt-dltn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1106,7 +1112,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/daw-prod-slctn-cd"/>
+        <reference value="ValueSet-daw-prod-slctn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1115,7 +1121,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/dspnsng-stus-cd"/>
+        <reference value="ValueSet-dspnsng-stus-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1124,7 +1130,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/drug-cvrg-stus-cd"/>
+        <reference value="ValueSet-drug-cvrg-stus-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1133,7 +1139,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/nstd-frmt-cd"/>
+        <reference value="ValueSet-nstd-frmt-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1142,7 +1148,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/prcng-excptn-cd"/>
+        <reference value="ValueSet-prcng-excptn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1151,7 +1157,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/ctstrphc-cvrg-cd"/>
+        <reference value="ValueSet-ctstrphc-cvrg-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1160,7 +1166,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/rx-orgn-cd"/>
+        <reference value="ValueSet-rx-orgn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1169,7 +1175,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/brnd-gnrc-cd"/>
+        <reference value="ValueSet-brnd-gnrc-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1178,7 +1184,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/ptnt-rsdnc-cd"/>
+        <reference value="ValueSet-ptnt-rsdnc-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1187,7 +1193,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/submsn-clr-cd"/>
+        <reference value="ValueSet-submsn-clr-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1196,7 +1202,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/rev-cntr-ndc-qty-qlfr-cd"/>
+        <reference value="ValueSet-rev-cntr-ndc-qty-qlfr-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1205,7 +1211,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/nch-ptnt-stus-ind-cd"/>
+        <reference value="ValueSet-nch-ptnt-stus-ind-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1214,7 +1220,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/clm-ip-admsn-type-cd"/>
+        <reference value="ValueSet-clm-ip-admsn-type-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1223,7 +1229,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/clm-src-ip-admsn-cd"/>
+        <reference value="ValueSet-clm-src-ip-admsn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1232,7 +1238,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/clm-mco-pd-sw"/>
+        <reference value="ValueSet-clm-mco-pd-sw"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1241,7 +1247,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/clm-freq-cd"/>
+        <reference value="ValueSet-clm-freq-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1250,7 +1256,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/ptnt-dschrg-stus-cd"/>
+        <reference value="ValueSet-ptnt-dschrg-stus-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1259,7 +1265,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/nch-prmry-pyr-cd"/>
+        <reference value="ValueSet-nch-prmry-pyr-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1268,7 +1274,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/nch-prmry-pyr-cd"/>
+        <reference value="CodeSystem-nch-prmry-pyr-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1277,7 +1283,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/clm-hha-lupa-ind-cd"/>
+        <reference value="ValueSet-clm-hha-lupa-ind-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1286,13 +1292,118 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/clm-hha-rfrl-cd"/>
+        <reference value="ValueSet-clm-hha-rfrl-cd"/>
       </sourceReference>
     </resource>
     <resource>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/adjudications"/>
+        <reference value="ValueSet-ms-cd"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="ValueSet-orec.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet-orec"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="ValueSet-crec.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet-crec"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="ValueSet-esrd-ind.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet-esrd-ind"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="ValueSet-a-trm-cd.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet-a-trm-cd"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="ValueSet-b-trm-cd.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet-b-trm-cd"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="CodeSystem-b-trm-cd.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem-b-trm-cd"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="CodeSystem-a-trm-cd.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem-a-trm-cd"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="CodeSystem-esrd-ind.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem-esrd-ind"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="CodeSystem-crec.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem-crec"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="CodeSystem-orec.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem-orec"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="CodeSystem-ms-cd.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem-ms-cd"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem-adjudications"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1301,7 +1412,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/clm-hha-rfrl-cd"/>
+        <reference value="CodeSystem-clm-hha-rfrl-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1310,7 +1421,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/clm-hha-lupa-ind-cd"/>
+        <reference value="CodeSystem-clm-hha-lupa-ind-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1319,7 +1430,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/ptnt-dschrg-stus-cd"/>
+        <reference value="CodeSystem-ptnt-dschrg-stus-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1328,7 +1439,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/clm-freq-cd"/>
+        <reference value="CodeSystem-clm-freq-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1337,7 +1448,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/clm-mco-pd-sw"/>
+        <reference value="CodeSystem-clm-mco-pd-sw"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1346,7 +1457,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/clm-src-ip-admsn-cd"/>
+        <reference value="CodeSystem-clm-src-ip-admsn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1355,7 +1466,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/clm-ip-admsn-type-cd"/>
+        <reference value="CodeSystem-clm-ip-admsn-type-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1364,7 +1475,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/nch-ptnt-stus-ind-cd"/>
+        <reference value="CodeSystem-nch-ptnt-stus-ind-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1373,7 +1484,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/rev-cntr-ndc-qty-qlfr-cd"/>
+        <reference value="CodeSystem-rev-cntr-ndc-qty-qlfr-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1382,7 +1493,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/submsn-clr-cd"/>
+        <reference value="CodeSystem-submsn-clr-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1391,7 +1502,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/ptnt-rsdnc-cd"/>
+        <reference value="CodeSystem-ptnt-rsdnc-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1400,7 +1511,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/brnd-gnrc-cd"/>
+        <reference value="CodeSystem-brnd-gnrc-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1409,7 +1520,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/rx-orgn-cd"/>
+        <reference value="CodeSystem-rx-orgn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1418,7 +1529,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/ctstrphc-cvrg-cd"/>
+        <reference value="CodeSystem-ctstrphc-cvrg-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1427,7 +1538,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/prcng-excptn-cd"/>
+        <reference value="CodeSystem-prcng-excptn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1436,7 +1547,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/nstd-frmt-cd"/>
+        <reference value="CodeSystem-nstd-frmt-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1445,7 +1556,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/drug-cvrg-stus-cd"/>
+        <reference value="CodeSystem-drug-cvrg-stus-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1454,7 +1565,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/dspnsng-stus-cd"/>
+        <reference value="CodeSystem-dspnsng-stus-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1463,7 +1574,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/daw-prod-slctn-cd"/>
+        <reference value="CodeSystem-daw-prod-slctn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1472,7 +1583,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/adjstmt-dltn-cd"/>
+        <reference value="CodeSystem-adjstmt-dltn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1481,7 +1592,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/phrmcy-srvc-type-cd"/>
+        <reference value="CodeSystem-phrmcy-srvc-type-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1490,7 +1601,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/dmerc-line-supplr-type-cd"/>
+        <reference value="CodeSystem-dmerc-line-supplr-type-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1499,7 +1610,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/dmerc-line-prcng-state-cd"/>
+        <reference value="CodeSystem-dmerc-line-prcng-state-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1508,7 +1619,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/line-pmt-80-100-cd"/>
+        <reference value="CodeSystem-line-pmt-80-100-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1517,7 +1628,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/carr-line-prcng-lclty-cd"/>
+        <reference value="CodeSystem-carr-line-prcng-lclty-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1526,7 +1637,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/prvdr-state-cd"/>
+        <reference value="CodeSystem-prvdr-state-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1535,7 +1646,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/line-service-deductible"/>
+        <reference value="CodeSystem-line-service-deductible"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1544,7 +1655,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/line-bene-prmry-pyr-cd"/>
+        <reference value="CodeSystem-line-bene-prmry-pyr-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1553,7 +1664,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/betos-cd"/>
+        <reference value="CodeSystem-betos-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1562,7 +1673,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/carr-line-mtus-cd"/>
+        <reference value="CodeSystem-carr-line-mtus-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1571,7 +1682,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/prtcptng-ind-cd"/>
+        <reference value="CodeSystem-prtcptng-ind-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1580,7 +1691,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/carr-line-prvdr-type-cd"/>
+        <reference value="CodeSystem-carr-line-prvdr-type-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1589,7 +1700,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/asgmntcd"/>
+        <reference value="CodeSystem-asgmntcd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1598,7 +1709,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/carr-clm-pmt-dnl-cd"/>
+        <reference value="CodeSystem-carr-clm-pmt-dnl-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1607,7 +1718,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/carr-num"/>
+        <reference value="CodeSystem-carr-num"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1616,7 +1727,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/rev-cntr-ddctbl-coinsrnc-cd"/>
+        <reference value="CodeSystem-rev-cntr-ddctbl-coinsrnc-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1625,7 +1736,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/clm-poa-ind-sw1"/>
+        <reference value="CodeSystem-clm-poa-ind-sw1"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1634,7 +1745,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/rev-cntr-stus-ind-cd"/>
+        <reference value="CodeSystem-rev-cntr-stus-ind-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1643,7 +1754,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/clm-fac-type-cd"/>
+        <reference value="CodeSystem-clm-fac-type-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1652,7 +1763,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/claim-query-cd"/>
+        <reference value="CodeSystem-claim-query-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1661,7 +1772,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/clm-mdcr-non-pmt-rsn-cd"/>
+        <reference value="CodeSystem-clm-mdcr-non-pmt-rsn-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1670,7 +1781,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/information-categories"/>
+        <reference value="CodeSystem-information-categories"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1679,7 +1790,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/plan-cntrct-rec-id"/>
+        <reference value="CodeSystem-plan-cntrct-rec-id"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1688,7 +1799,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/race"/>
+        <reference value="CodeSystem-race"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1697,7 +1808,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="CodeSystem/gndr-cd"/>
+        <reference value="CodeSystem-gndr-cd"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1712,7 +1823,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-prpayamt-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-prpayamt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1721,7 +1832,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-carr-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-carr-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1730,7 +1841,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-carr-clm-pmt-dnl-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-carr-clm-pmt-dnl-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1739,7 +1850,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-asgmntcd-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-asgmntcd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1748,7 +1859,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-clm-clncl-tril-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-clm-clncl-tril-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1757,7 +1868,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-carr-clm-cash-ddctbl-apld-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-carr-clm-cash-ddctbl-apld-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1766,7 +1877,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-nch-clm-prvdr-pmt-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-nch-clm-prvdr-pmt-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1775,7 +1886,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-nch-clm-bene-pmt-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-nch-clm-bene-pmt-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1784,7 +1895,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-nch-carr-clm-sbmtd-chrg-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-nch-carr-clm-sbmtd-chrg-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1793,7 +1904,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-nch-carr-clm-alowd-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-nch-carr-clm-alowd-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1802,7 +1913,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-prtcptng-ind-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-prtcptng-ind-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1811,7 +1922,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-suplrnum-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-suplrnum-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1820,7 +1931,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-dmerc-line-scrn-svgs-amt-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-dmerc-line-scrn-svgs-amt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1829,7 +1940,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-dmerc-line-mtus-cnt-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-dmerc-line-mtus-cnt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1838,7 +1949,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-betos-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-betos-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1847,7 +1958,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-line-bene-prmry-pyr-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-line-bene-prmry-pyr-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1856,7 +1967,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-line-service-deductible-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-line-service-deductible-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1865,7 +1976,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-line-hct-hgb-rslt-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-line-hct-hgb-rslt-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1874,7 +1985,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-ndc-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-ndc-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1883,7 +1994,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-prvdr-state-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-prvdr-state-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1892,7 +2003,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-dmerc-line-prcng-state-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-dmerc-line-prcng-state-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1901,7 +2012,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-dmerc-line-supplr-type-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-dmerc-line-supplr-type-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1910,7 +2021,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-dme-line-pmt-80-100-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-dme-line-pmt-80-100-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1919,7 +2030,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hospice-clm-mdcr-non-pmt-rsn-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-hospice-clm-mdcr-non-pmt-rsn-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1928,7 +2039,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hospice-prpayamt-extension"/>
+        <reference value="StructureDefinition-bluebutton-hospice-prpayamt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1937,7 +2048,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hospice-fi-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-hospice-fi-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1946,7 +2057,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hospice-clm-fac-type-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-hospice-clm-fac-type-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1955,7 +2066,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hospice-bene-hospc-prd-cnt-extension"/>
+        <reference value="StructureDefinition-bluebutton-hospice-bene-hospc-prd-cnt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1964,7 +2075,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hospice-rev-cntr-ndc-qty-extension"/>
+        <reference value="StructureDefinition-bluebutton-hospice-rev-cntr-ndc-qty-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1973,7 +2084,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hospice-rev-cntr-ddctbl-coinsrnc-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-hospice-rev-cntr-ddctbl-coinsrnc-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1982,7 +2093,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-hha-clm-mdcr-non-pmt-rsn-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -1991,7 +2102,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hha-prpayamt-extension"/>
+        <reference value="StructureDefinition-bluebutton-hha-prpayamt-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -2000,7 +2111,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hha-fi-num-extension"/>
+        <reference value="StructureDefinition-bluebutton-hha-fi-num-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -2009,7 +2120,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hha-clm-fac-type-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-hha-clm-fac-type-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -2018,7 +2129,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hha-rev-cntr-stus-ind-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-hha-rev-cntr-stus-ind-cd-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -2027,7 +2138,7 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hha-rev-cntr-ndc-qty-extension"/>
+        <reference value="StructureDefinition-bluebutton-hha-rev-cntr-ndc-qty-extension"/>
       </sourceReference>
     </resource>
     <resource>
@@ -2036,7 +2147,61 @@
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension"/>
+        <reference value="StructureDefinition-bluebutton-hha-rev-cntr-ddctbl-coinsrnc-cd-extension"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="StructureDefinition-bluebutton-coverage-ms-cd-extension.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition-bluebutton-coverage-ms-cd-extension"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="StructureDefinition-bluebutton-coverage-orec-extension.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition-bluebutton-coverage-orec-extension"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="StructureDefinition-bluebutton-coverage-crec-extension.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition-bluebutton-coverage-crec-extension"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="StructureDefinition-bluebutton-coverage-esrd-ind-extension.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition-bluebutton-coverage-esrd-ind-extension"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="StructureDefinition-bluebutton-coverage-a-trm-cd-extension.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition-bluebutton-coverage-a-trm-cd-extension"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-implementationguide-page">
+        <valueUri value="StructureDefinition-bluebutton-coverage-b-trm-cd-extension.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition-bluebutton-coverage-b-trm-cd-extension"/>
       </sourceReference>
     </resource>
   </package>

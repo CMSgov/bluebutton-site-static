@@ -3,11 +3,12 @@
     <id value="clm-mco-pd-sw"/>
     <url value="http://hl7.org/fhir/CodeSystem/clm-mco-pd-sw"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/clm-mco-pd-sw"/>
+        <value value="http://hl7.org/fhir/CodeSystem/clm-mco-pd-sw.html"/>
     </identifier>
     <name value="Claim MCO Paid Switch"/>
     <title value="Claim MCO Paid Switch"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="A switch indicating whether or not a Managed Care Organization (MCO) has paid the provider for an institutional claim. Source: https://bluebutton.cms.gov/resources/variables/clm_mco_pd_sw"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/clm-mco-pd-sw"/>

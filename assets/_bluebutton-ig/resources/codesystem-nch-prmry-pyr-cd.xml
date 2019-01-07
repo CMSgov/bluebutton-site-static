@@ -3,11 +3,12 @@
     <id value="nch-prmry-pyr-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/nch-prmry-pyr-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/nch-prmry-pyr-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/nch-prmry-pyr-cd.html"/>
     </identifier>
     <name value="NCH Primary Payer Code (if not Medicare)"/>
     <title value="NCH Primary Payer Code (if not Medicare)"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="The code, on an institutional claim, specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's health insurance bills. The presence of a primary payer code indicates that some other payer besides Medicare covered at least some portion of the charges. Source: https://bluebutton.cms.gov/resources/variables/nch_prmry_pyr_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/nch-prmry-pyr-cd"/>

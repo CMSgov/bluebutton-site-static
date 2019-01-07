@@ -3,11 +3,12 @@
     <id value="prcng-excptn-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/prcng-excptn-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/prcng-excptn-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/prcng-excptn-cd.html"/>
     </identifier>
     <name value="Pricing Exception Code"/>
     <title value="Pricing Exception Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="This variable indicates if the PDE was processed by the Part D plan using pricing rules that differ from the plan's negotiated price. Most PDEs have missing values, indicating that they were obtained from in-network pharmacies. Source: https://bluebutton.cms.gov/resources/variables/prcng_excptn_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/prcng-excptn-cd"/>

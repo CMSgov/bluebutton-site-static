@@ -3,11 +3,12 @@
     <id value="brnd-gnrc-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/brnd-gnrc-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/brnd-gnrc-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/brnd-gnrc-cd.html"/>
     </identifier>
     <name value="Brand-Generic Code Reported by Submitting Plan"/>
     <title value="Brand-Generic Code Reported by Submitting Plan"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="Plan reported value indicating whether the plan adjudicated the claim as a brand or generic drug. Applies to covered drugs only. Source: https://bluebutton.cms.gov/resources/variables/brnd_gnrc_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/brnd-gnrc-cd"/>

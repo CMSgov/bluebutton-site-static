@@ -1,0 +1,64 @@
+@prefix fhir: <https://bluebutton.cms.gov/assets/ig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ms-cd"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Medicare Status Code</h2><div><p>This variable indicates how a beneficiary currently qualifies for Medicare.. Source: https://bluebutton.cms.gov/resources/variables/ms_cd</p>\n</div><p>This code system https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd defines the following codes:</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>10<a name=\"ms-cd-10\"> </a></td><td>Aged without end-stage renal disease (ESRD)</td><td>Aged without end-stage renal disease (ESRD)</td></tr><tr><td>11<a name=\"ms-cd-11\"> </a></td><td>Aged with ESRD</td><td>Aged with ESRD</td></tr><tr><td>20<a name=\"ms-cd-20\"> </a></td><td>Disabled without ESRD</td><td>Disabled without ESRD</td></tr><tr><td>21<a name=\"ms-cd-21\"> </a></td><td>Disabled with ESRD</td><td>Disabled with ESRD</td></tr><tr><td>31<a name=\"ms-cd-31\"> </a></td><td>ESRD only</td><td>ESRD only</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd"];
+  fhir:CodeSystem.identifier [
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd.html" ]
+  ];
+  fhir:CodeSystem.version [ fhir:value "1.1.1"];
+  fhir:CodeSystem.name [ fhir:value "Medicare Status Code"];
+  fhir:CodeSystem.title [ fhir:value "Medicare Status Code"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2018-11-27T15:56:35+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CMS Blue Button 2.0 Team"];
+  fhir:CodeSystem.description [ fhir:value "This variable indicates how a beneficiary currently qualifies for Medicare.. Source: https://bluebutton.cms.gov/resources/variables/ms_cd"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-ms-cd"];
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "10" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Aged without end-stage renal disease (ESRD)" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Aged without end-stage renal disease (ESRD)" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "11" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Aged with ESRD" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Aged with ESRD" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "20" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Disabled without ESRD" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Disabled without ESRD" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "21" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Disabled with ESRD" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Disabled with ESRD" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "31" ];
+     fhir:CodeSystem.concept.display [ fhir:value "ESRD only" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "ESRD only" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <https://bluebutton.cms.gov/assets/ig/STU3/CodeSystem-ms-cd.ttl> .
+
+# -------------------------------------------------------------------------------------
+

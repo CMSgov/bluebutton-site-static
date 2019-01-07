@@ -3,11 +3,12 @@
     <id value="clm-ip-admsn-type-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/clm-ip-admsn-type-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/clm-ip-admsn-type-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/clm-ip-admsn-type-cd.html"/>
     </identifier>
     <name value="Claim Inpatient Admission Type Code"/>
     <title value="Claim Inpatient Admission Type Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="The code indicating the type and priority of an inpatient admission associated with the service on an intermediary submitted claim. Source: https://bluebutton.cms.gov/resources/variables/clm_ip_admsn_type_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/clm-ip-admsn-type-cd"/>

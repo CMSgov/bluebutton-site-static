@@ -3,11 +3,12 @@
     <id value="gndr-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/gndr-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/gndr-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/gndr-cd.html"/>
     </identifier>
     <name value="Patient Gender"/>
     <title value="Patient Gender"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="Gender of the patient as indicated on the event record. Source: https://bluebutton.cms.gov/resources/variables/gndr_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/gndr-cd"/>

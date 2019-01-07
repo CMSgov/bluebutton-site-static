@@ -1,6 +1,6 @@
 Configuration Parameter,Configuration Value ( use '|' for lists)
 broken-links,warning
-canonicalBase,https://bluebutton.cms.gov/resources/ig
+canonicalBase,https://bluebutton.cms.gov/assets/ig
 codesystems,
 dependencyList.location,http://www.fhir.org/guides/argonaut/pd/release1/
 dependencyList.name,argopd
@@ -15,7 +15,7 @@ paths.output,output
 paths.pages,pages
 paths.qa,qa
 paths.resources,resources|examples
-paths.specification,http://hl7.org/fhir/STU3
+paths.specification,https://hl7.org/fhir/STU3/
 paths.temp,temp
 paths.txCache,txCache
 sct-edition,http://snomed.info/sct/731000124108

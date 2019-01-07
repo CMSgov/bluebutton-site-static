@@ -3,11 +3,12 @@
     <id value="rev-cntr-ddctbl-coinsrnc-cd"/>
     <url value="http://hl7.org/fhir/CodeSystem/rev-cntr-ddctbl-coinsrnc-cd"/>
     <identifier>
-        <value value="http://hl7.org/fhir/CodeSystem/rev-cntr-ddctbl-coinsrnc-cd"/>
+        <value value="http://hl7.org/fhir/CodeSystem/rev-cntr-ddctbl-coinsrnc-cd.html"/>
     </identifier>
     <name value="Revenue Center Deductible Coinsurance Code"/>
     <title value="Revenue Center Deductible Coinsurance Code"/>
-    <status value="active"/>
+    <status value="active" />
+    <publisher value="CMS Blue Button 2.0 Team" />
     <description value="Code indicating whether the revenue center charges are subject to deductible and/or coinsurance. Source: https://bluebutton.cms.gov/resources/variables/rev_cntr_ddctbl_coinsrnc_cd"/>
     <caseSensitive value="true"/>
     <valueSet value="http://hl7.org/fhir/ValueSet/rev-cntr-ddctbl-coinsrnc-cd"/>

@@ -1,4 +1,4 @@
-@prefix fhir: <http://hl7.org/fhir/> .
+@prefix fhir: <https://bluebutton.cms.gov/assets/ig/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -14,13 +14,14 @@
   ];
   fhir:CodeSystem.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd"];
   fhir:CodeSystem.identifier [
-     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd" ]
+     fhir:Identifier.value [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd.html" ]
   ];
-  fhir:CodeSystem.version [ fhir:value "1.1.0"];
+  fhir:CodeSystem.version [ fhir:value "1.1.1"];
   fhir:CodeSystem.name [ fhir:value "Submission clarification code"];
   fhir:CodeSystem.title [ fhir:value "Submission clarification code"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2018-05-31T14:39:32+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2018-11-27T15:56:35+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CMS Blue Button 2.0 Team"];
   fhir:CodeSystem.description [ fhir:value "For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days’ supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event. This variable is only populated when beneficiary lives in an LTC facility (i.e., when the PTNT_RSDNC_CD variable equals 03). Source: https://bluebutton.cms.gov/resources/variables/submsn_clr_cd"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
   fhir:CodeSystem.valueSet [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-submsn-clr-cd"];
@@ -182,7 +183,7 @@
 
 <https://bluebutton.cms.gov/assets/ig/CodeSystem-submsn-clr-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://hl7.org/fhir/STU3/CodeSystem/submsn-clr-cd.ttl> .
+  owl:versionIRI <https://bluebutton.cms.gov/assets/ig/STU3/CodeSystem-submsn-clr-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 
