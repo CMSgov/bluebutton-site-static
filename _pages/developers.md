@@ -2,11 +2,11 @@
 layout: developers
 title:  "Blue Button API Docs"
 date:   2017-10-30 09:21:12 -0500
-description: A developer-friendly, standards-based API that enables Medicare beneficiaries to connect their claims data to the applications, services and research programs they trust.
+description: Instructions for understanding and using the CMS Blue Button 2.0 API to get you up and running quickly.
 landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
-badge: api
+badge: documentation
 permalink: "/developers/"
 sections:
   - Overview
@@ -20,11 +20,11 @@ sections:
   - Blue Button Implementation Guide
 ctas:
   -
-    title: Blue Button Home
-    link: /
-  -
-    title: Register your application
+    title: Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login
+  -
+    title: Blue Button Blog
+    link: /blog
 ---
 
 ## Overview
@@ -180,8 +180,8 @@ We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension) 
 
 <pre>/v1/fhir/ExplanationOfBenefit/?patient=[fhir_id]</pre>
 
-The above URL returns all of the beneficiary's Explanation of Benefit (sometimes referred to as an episode of care) 
-records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html). 
+The above URL returns all of the beneficiary's Explanation of Benefit (sometimes referred to as an episode of care)
+records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html).
 The bulk of a beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.  
 Each one can be thousands of lines long.
 
@@ -341,7 +341,7 @@ The above URL returns the beneficiary's Coverage information as an [Coverage FHI
 
 **Compress Resources for more efficient data transfers**
 
-To improve the performance when transferring large data resources it is possible to turn on compression. Gzip 
+To improve the performance when transferring large data resources it is possible to turn on compression. Gzip
 compression is turned off by default. Compression can be activated for the following content types:
 
 - text/html
@@ -355,9 +355,9 @@ To activate compression add the following to the header:
 Accept-Encoding: gzip
 </pre>
 
-The minimum payload size we will gzip is 1 kilobyte. If the original uncompressed size of the payload is less than 1 kb, 
-we will not apply gzip compression to our response. Therefore, developers should ensure their applications handle 
-this scenario gracefully by checking for the **Content-Encoding: gzip** response header before trying to 
+The minimum payload size we will gzip is 1 kilobyte. If the original uncompressed size of the payload is less than 1 kb,
+we will not apply gzip compression to our response. Therefore, developers should ensure their applications handle
+this scenario gracefully by checking for the **Content-Encoding: gzip** response header before trying to
 decompress.
 
 [Download a sample Coverage FHIR Resource](/sample-coverage-entry.json)
@@ -478,16 +478,16 @@ In the API response for Patient 20140000008325 you will find:
 In order to access the full synthetic dataset, you can do the following:
 1. Set up your sandbox application
 2. Log out of [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov).
-3. Access the authorization url at [https://sandbox.bluebutton.cms.gov/v1/o/authorize/](https://sandbox.bluebutton.cms.gov/v1/o/authorize/) 
+3. Access the authorization url at [https://sandbox.bluebutton.cms.gov/v1/o/authorize/](https://sandbox.bluebutton.cms.gov/v1/o/authorize/)
 
     *Note: The last backslash is important*.
     *Also remember to append ?client_id={your client_id asigned to the application you registered}*
 
-4. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY. 
-5. Use one of thirty thousand provided usernames and passwords. 
+4. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY.
+5. Use one of thirty thousand provided usernames and passwords.
 
-    The first user is BBUser00000, with password PW00000!, and these sample users continue all the way to BBUser29999, with password PW29999!. 
-    
+    The first user is BBUser00000, with password PW00000!, and these sample users continue all the way to BBUser29999, with password PW29999!.
+
     *Note: the ! at the end of the password is required*.
 
 6. Approve access for your application, which will now receive an access token, which can be used in the requests described above.
@@ -602,7 +602,7 @@ Next, the following criteria needs to be met and verified by the CMS Blue Button
 - You are a US based company
 - You have a working app or website that can be demoed to the CMS Blue Button API team
 - Your app links to a Privacy statement or Terms of Use that explains to a beneficiary in plain language how you will use their data and how they can cancel their account
-- Your app must serve a Medicare population except in certain general research scenarios 
+- Your app must serve a Medicare population except in certain general research scenarios
 - You must articulate your business model and describe the value your app provides a beneficiary
 - You must demonstrate how beneficiary data will be protected within your app
 
@@ -642,7 +642,7 @@ A beneficiary may revoke access to your application via the MyMedicare.gov websi
 
 ## Blue Button Implementation Guide
 
-The Blue Button team have created a Blue Button 2.0 Implementation Guide (BB2IG). 
+The Blue Button team have created a Blue Button 2.0 Implementation Guide (BB2IG).
 You can access the guide here: [Blue Button 2.0 Implementation Guide](/assets/ig/index.html).
 
 The BB2IG features nine profiles in this version of the guide:

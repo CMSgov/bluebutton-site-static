@@ -2,32 +2,10 @@
 layout: default
 ---
 
-<!-- NOTE: THIS TEMPLATE IS NO LONGER IN USE. IT IS CURRENTLY HERE FOR REFERENCE BUT WILL BE REMOVED ONCE WE ARE CONFIDENT WE NO LONGER NEED IT -->
+<!-- NOTE: THIS TEMPLATE IS ONLY IN USE WHEN SORTING BLOG POSTS, NOT TO PUBLISH BLOG POSTS. -->
 
 <!-- post_with_category: start -->
-<div class="ds-base">
-  <header class="main-header">
-    <div class="solid-container">
-      <div class="ds-l-container">
-        <div class="ds-l-row">
-          <div class="ds-u-color--white ds-l-sm-cold--12 ds-l-xl-col--10 ds-u-margin-left--auto">
-
-              <h3 class="ds-display">{{ page.badge | capitalize | escape  }}</h3>
-              {% if page.description %}<p class="ds-text--lead">{{ page.description | escape }}</p>{% endif %}
-              <div class="ctas">
-                  {% for item in page.ctas limit:4 %}
-                  {% if item.link contains '://' %}<a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_blank">{{ item.title }}</a>
-                  {% else %}<a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self" >{{ item.title }}</a>{% endif %}
-                  {% endfor %}
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="gradient-container ds-u-padding-y--1 ds-u-lg-padding-y--1 ds-u-display--none ds-u-md-display--block">
-    </div>
-  </header>
-</div>
+{% include banner.html %}
 
 <section class="ds-l-container ds-base">
     <div class="ds-l-row">

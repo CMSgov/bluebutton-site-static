@@ -1,0 +1,33 @@
+<!-- Banner (Custom Component) -->
+<div class="ds-c-banner ds-u-margin-bottom--4">
+  <!-- Solid Container -->
+  <div class="solid">
+
+    <!-- Badge -->
+    {% if page.badge %}
+    <span class="ds-c-badge ds-u-text-transform--uppercase">{{ page.badge | escape }}</span>
+    {% endif %}
+
+    <!-- Page Title -->
+    <h1 class="ds-display">{{ page.title | escape }}</h1>
+
+    <!-- Page Description -->
+    <p class="page-description">
+      {{ page.description | escape }}
+    </p>
+
+    <!-- Call To Action Buttons -->
+    <div class="ctas">
+      {% for item in page.ctas limit:2 %}
+      <a class="cta-button ds-u-margin-y--1" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self">
+        {{ item.title }}
+        <i data-feather="arrow-right"></i>
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+
+  <!-- Gradient Container -->
+  <div class="gradient"></div>
+</div>
