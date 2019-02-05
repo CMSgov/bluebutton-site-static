@@ -3,31 +3,21 @@ layout: default
 ---
 {% include banner.html %}
 
-<!-- Post Categories - Removed for Now -->
-<!-- <div class="ds-u-l-display--white ds-u-margin-y--2">
-  {% if post %}
-    {% assign categories = post.categories %}
-  {% else %}
-    {% assign categories = page.categories %}
-  {% endif %}
-  {% if categories %}
-    Post Categories:&nbsp;
-  {% endif %}
-  {% for category in categories %}
-    <a href="{{site.baseurl}}/categories.html#{{category|slugize}}" class="ds-u-color--white">{{ category }}</a>&nbsp;
-  {% endfor %}
-</div> -->
+<section class="ds-l-container ds-base">
+	<div class="ds-l-row">
 
-  <section class="ds-l-container ds-base">
-      <div class="ds-l-row">
+		<article class="ds-l-col--12 ds-l-sm-col--10 {{ page.badge | slugify }}" id="main" role="main">
+			{{ content }}
+			<a href="#site-top" class="ds-c-button ds-u-margin-top--4">
+				Back to top
+			</a>
+			<a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self">
+				Subscribe to RSS Feed
+			</a>
+			<a class="ds-c-button" href="https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" aria-label="Comments via Google Group" target="_self" >
+				Comments via Google Group
+			</a>
+		</article>
 
-        <article class="ds-l-col--12 ds-l-sm-col--10 {{ page.badge | slugify }}" id="main" role="main">
-          {{ content }}
-          <a href="#site-top" class="ds-c-button ds-u-margin-top--4">Back to top</a>
-          <a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self" >Subscribe to RSS Feed</a>
-          <a class="ds-c-button" href="https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" aria-label="Comments via Google Group" target="_self" >Comments via Google Group</a>
-
-        </article>
-
-      </div>
-  </section>
+	</div>
+</section>
