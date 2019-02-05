@@ -16,50 +16,32 @@ ctas:
     link: /blog/categories.html
 ---
 <!-- _layouts/category.html:start -->
+{% include banner.html %}
+
 <div class="ds-base">
-    <header class="main-header ds-u-margin-bottom--2 ds-u-lg-margin-bottom--5">
-        <div class="solid-container ds-u-padding-y--2 ds-u-lg-padding-y--5">
-            <div class="ds-l-container">
-                <div class="ds-l-row">
-                    <div class="ds-u-color--white ds-l-sm-cold--12 ds-l-xl-col--10 ds-u-margin-left--auto ds-u-padding-x--4">
+  <section class="ds-l-container ds-base">
+    {% for post in site.categories[page.category] %}
+    <div class="ds-l-row">
+      <ul>
+        <li class="ds-c-list ds-c-list--bare">
+          <a href="{{ post.url | absolute_url }}{% if site.use_dot_html %}.html{% endif %}">
+            {{ post.title }}
+          </a>&nbsp;
+        </li>
+      </ul>
+    </div>
+    {% endfor %}
 
-                        <h1 class="ds-display">{{ page.badge | capitalize | escape }}: {{ page.title | escape }}</h1>
-                        <p class="ds-text--lead">
-                            {{ page.description | escape }}
-                        </p>
-
-                        <div class="ctas">
-                            {% for item in page.ctas limit:4 %}
-                            <a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self">{{ item.title }} &rarr;</a>
-                            {% endfor %}
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gradient-container ds-u-padding-y--2 ds-u-lg-padding-y--5 ds-u-display--none ds-u-md-display--block">
-        </div>
-
-    </header>
-
-    <section class="ds-l-container ds-base">
-        <p></p>
-
-        {% for post in site.categories[page.category] %}
-            <div class="ds-l-row">
-                <ul>
-                    <li class="ds-c-list ds-c-list--bare">
-                        <a href="{{ post.url | absolute_url }}{% if site.use_dot_html %}.html{% endif %}" >{{ post.title }}</a>&nbsp;</li>
-                </ul>
-            </div>
-        {% endfor %}
-
-        <p></p>
-        <a href="#site-top" class="ds-c-button ds-u-margin-top--4">Back to top</a>
-        <a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self" >Subscribe to RSS Feed</a>
-        <a class="ds-c-button" href="https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" aria-label="Comments via Google Group" target="_self" >Comments via Google Group</a>
-
-    </section>
+    <p></p>
+    <a href="#site-top" class="ds-c-button ds-u-margin-top--4">
+      Back to top
+    </a>
+    <a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self" >
+      Subscribe to RSS Feed
+    </a>
+    <a class="ds-c-button" href="https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" aria-label="Comments via Google Group" target="_self">
+      Comments via Google Group
+    </a>
+  </section>
 </div>
 <!-- _layouts/category.html:end -->

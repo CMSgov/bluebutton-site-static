@@ -15,33 +15,8 @@ ctas:
     link: /categories/
 ---
 <!-- blog/categories.html:start -->
-<div class="ds-base">
-    <header class="main-header ds-u-margin-bottom--2 ds-u-lg-margin-bottom--5">
-        <div class="solid-container ds-u-padding-y--2 ds-u-lg-padding-y--5">
-            <div class="ds-l-container">
-                <div class="ds-l-row">
-                    <div class="ds-u-color--white ds-l-sm-cold--12 ds-l-xl-col--10 ds-u-margin-left--auto ds-u-padding-x--4">
+{% include banner.html %}
 
-                        <h1 class="ds-title">{{ page.badge | capitalize | escape }}:{{ page.title | escape }}</h1>
-                        <p class="ds-text--lead">
-                            {{ page.description | escape }}
-                        </p>
-
-                        <div class="ctas">
-                            {% for item in page.ctas limit:3 %}
-                            <a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self">{{ item.title }} &rarr;</a>
-                            {% endfor %}
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gradient-container ds-u-padding-y--2 ds-u-lg-padding-y--5 ds-u-display--none ds-u-md-display--block">
-        </div>
-
-    </header>
-</div>
 <section class="ds-l-container ds-base">
     <div class="ds-l-row">
         {% for category in site.categories %}
@@ -70,5 +45,3 @@ ctas:
     </div>
 </section>
 <!-- blog/categories.html:end -->
-
-

@@ -1,71 +1,23 @@
 ---
 layout: default
 ---
-<div class="ds-base">
-  <header class="main-header">
-    <div class="solid-container ds-u-padding-y--1 ds-u-lg-padding-y--1">
-      <div class="ds-l-container">
-        <div class="ds-l-row">
-          <div class="ds-u-color--white ds-l-sm-col--12 ds-l-xl-col--10 ds-u-margin-left--auto">
+{% include banner.html %}
 
-              <!-- Page Badge -->
-              {% if page.badge %}
-                <span class="ds-c-badge ds-u-text-transform--uppercase ds-u-margin-y--2">
-                  {{ page.badge | escape }}
-                </span>
-              {% endif %}
+<section class="ds-l-container ds-base">
+	<div class="ds-l-row">
 
-              <!-- Page Title -->
-              <h1 class="ds-display ds-u-leading--reset">{{ page.title | escape }}</h1>
+		<article class="ds-l-col--12 ds-l-sm-col--10 {{ page.badge | slugify }}" id="main" role="main">
+			{{ content }}
+			<a href="#site-top" class="ds-c-button ds-u-margin-top--4">
+				Back to top
+			</a>
+			<a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self">
+				Subscribe to RSS Feed
+			</a>
+			<a class="ds-c-button" href="https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" aria-label="Comments via Google Group" target="_self" >
+				Comments via Google Group
+			</a>
+		</article>
 
-              <!-- Page Description -->
-              {% if page.description %}<p class="ds-text--lead">{{ page.description | escape }}</p>{% endif %}
-
-              <!-- Call to Action Buttons -->
-              <div class="ctas ds-u-margin-y--4">
-                {% for item in page.ctas limit:3 %}
-                  {% if item.link contains '://' %}
-                    <a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_blank">{{ item.title }}</a>
-                  {% else %}
-                    <a class="ds-c-button button--white" href="{{ item.link }}" aria-label="{{ item.title }}" target="_self" >{{ item.title }}</a>
-                  {% endif %}
-                {% endfor %}
-
-                <!-- Post Categories - Removed for Now -->
-                <!-- <div class="ds-u-l-display--white ds-u-margin-y--2">
-                  {% if post %}
-                    {% assign categories = post.categories %}
-                  {% else %}
-                    {% assign categories = page.categories %}
-                  {% endif %}
-                  {% if categories %}
-                    Post Categories:&nbsp;
-                  {% endif %}
-                  {% for category in categories %}
-                    <a href="{{site.baseurl}}/categories.html#{{category|slugize}}" class="ds-u-color--white">{{ category }}</a>&nbsp;
-                  {% endfor %}
-                </div> -->
-
-              </div>
-           </div>
-        </div>
-      </div>
-    </div>
-    <div class="gradient-container ds-u-padding-y--1 ds-u-lg-padding-y--1 ds-u-display--none ds-u-md-display--block">
-    </div>
-  </header>
-</div>
-
-  <section class="ds-l-container ds-base">
-      <div class="ds-l-row">
-
-        <article class="ds-l-col--12 ds-l-sm-col--10 {{ page.badge | slugify }}" id="main" role="main">
-          {{ content }}
-          <a href="#site-top" class="ds-c-button ds-u-margin-top--4">Back to top</a>
-          <a class="ds-c-button" href="{{ site.url}}/feed.xml" aria-label="RSS Feed" target="_self" >Subscribe to RSS Feed</a>
-          <a class="ds-c-button" href="https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api" aria-label="Comments via Google Group" target="_self" >Comments via Google Group</a>
-
-        </article>
-
-      </div>
-  </section>
+	</div>
+</section>
