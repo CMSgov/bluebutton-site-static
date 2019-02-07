@@ -45,6 +45,101 @@ To use the Blue Button OAuth 2 a developer must [register their application](htt
 
 A registered application is given a client ID and a client secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button API. Otherwise the [Client Application Flow](#client-application-flow) may be used.
 
+### Native Mobile App Support
+
+Native Mobile App Support follows the [RFC 8252 - OAuth 2.0 for Native Apps](https://tools.ietf.org/html/rfc8252) authentication flow utilizing the [PKCE](https://tools.ietf.org/html/rfc7636) extension and enables a custom URI scheme redirect.
+
+The implementation of the [RFC 8252](https://tools.ietf.org/html/rfc8252) specification enables developers to build mobile applications without requiring a proxy server to route redirect calls to their mobile app.
+
+The [PKCE](https://tools.ietf.org/html/rfc7636) extension provides a technique for public clients to mitigate the threat of a “man-in-the-middle” attack. This involves creating a secret that is used when exchanging the authorization code to obtain an access token.
+
+[PKCE](https://tools.ietf.org/html/rfc7636) uses a code challenge that is derived from a code-verifier. The standard supports two styles of code challenge:
+- plain
+- S256
+
+However, Blue Button 2.0 only supports the “S256” style code challenge.
+
+Where the:  
+``` python
+codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))
+```
+
+The following additional parameters and values are sent as part of the OAuth2.0 Authorization Request:
+- `code_challenge`
+- `codechallengemethod = “S256”`
+
+More details can be found about this flow on [OAuth.com](https://www.oauth.com/). Check out this link: [Protecting Mobile Apps with PKCE - OAuth 2.0 Servers](https://www.oauth.com/oauth2-servers/pkce/)
+
+### Registering Your App for Mobile App Support
+
+When you register your application in the Blue Button 2.0 Developer Sandbox, you will want to specify a unique custom URI scheme. This should be a unique value that will not conflict with other custom URI schemes implemented on a user’s mobile device.
+
+We recommend that you define your custom URI scheme using a reverse domain name notation. As we developed our own testing application, we implemented a custom URI scheme of:
+- `gov.cms.bluebutton.oauthtester`
+
+This equated to an `oauthtester` subdomain for the [bluebutton.cms.gov](bluebutton.cms.gov) domain.
+
+The reverse DNS style custom URI scheme should then be coupled with the re-direct path on the mobile device that will handle the call back from the Blue Button 2.0 API.
+
+For example:
+``` python
+tld.app.subdomain[.subsubdomain]:/callback/path/endpoint
+```
+
+A coding example of an OAuth 2.0 and PKCE flow is available here: [Authorization Code with PKCE Flow - OAuth 2.0 Playground](https://www.oauth.com/playground/authorization-code-with-pkce.html)
+
+The Blue Button 2.0 engineering team has also created a sample Android application. You can review or fork the code here: [https://github.com/CMSgov/bluebutton-sample-client-android](https://github.com/CMSgov/bluebutton-sample-client-android)
+
+### Redirect_URI
+
+When creating an Application in the sandbox a redirect URI is required. This is the API endpoint on *your* system that receives the callback from the Blue Button 2.0 API after a beneficiary is passed to the Blue Button 2.0 API to authorize your application. 
+
+Multiple redirect URIs can be entered in the Redirect_URI field. Each entry should be separated by a space or newline.
+
+A `Redirect_URI` follows this format:
+``` python
+URLprotocol://[sub-domain.]domain_name[:port]/path
+```
+
+#### URL Protocol
+
+Three URL protocols are supported, depending on the purpose:
+- `http:// protocol`
+- `https:// protocol`
+- `custom_url:// protocol`
+
+***`http:// protocol`***
+
+(Works in: Sandbox only)
+
+The `http://` format is only accepted in the sandbox environment. It is typically used by developers for local testing by using `http://localhost/` however, any domain name can be used.  
+
+***`https://protocol`***
+
+(Works in: Sandbox | Production)
+
+The `https://` format is used for secure communication and is required for all applications in the production environment unless the application is using the Mobile OAuth method for handling callbacks.
+
+***`custom_url:// protocol`***
+
+(Works in: Sandbox | Production)
+
+The `custom_url` protocol is used by mobile applications to handle communications directly with your application on a mobile device.
+
+If you are using Mobile OAuth support for communication directly with a mobile device the `custom_url` should follow this format:
+``` python
+Top-level.domain(TLD).domain-name[.sub-domain][.app_name]
+```
+
+For example, if the Blue Button 2.0 team created an application we might create a custom_url of:
+``` python
+gov.cms.bluebutton.oauthtester
+```
+This would then be incorporated into a redirect URI entry. Here is an example:
+``` python
+gov.cms.bluebutton.oauthtester:8080//bluebutton_app/callback.html
+```
+
 ### Web Application Flow
 
 To use this flow your application should be registered with `Client Type` set to `confidential` and
