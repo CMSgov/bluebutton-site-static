@@ -53,13 +53,13 @@ For mobile app developers this allows integration with the Blue Button 2.0 API t
 
 ## How to Get Started with Native Mobile App Support
 
-Find documentation on Native Mobile App Support in the [Blue Button documentation](https://bluebutton.cms.gov/developers/).
+Find documentation on Native Mobile App Support in the [Blue Button documentation](https://bluebutton.cms.gov/developers/#nativeMobileApp).
 
 A coding example of an OAuth 2.0 and PKCE flow is available here: [Authorization Code with PKCE Flow - OAuth 2.0 Playground](https://www.oauth.com/playground/authorization-code-with-pkce.html)
 
 The Blue Button 2.0 engineering team has also created a sample Android application. You can review or fork the code here: [https://github.com/CMSgov/bluebutton-sample-client-android](https://github.com/CMSgov/bluebutton-sample-client-android)
 
-We are excited to release this new capability and look forward to seeing the exciting things you create. You can share what you’re working on and any feedback you have on the [Google Group](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api). 
+We are excited to release this new capability and look forward to seeing the exciting things you create. You can share what you’re working on and any feedback you have on the [Google Group](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api).
 
 
 ---

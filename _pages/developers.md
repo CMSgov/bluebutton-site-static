@@ -45,7 +45,7 @@ To use the Blue Button OAuth 2 a developer must [register their application](htt
 
 A registered application is given a client ID and a client secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button API. Otherwise the [Client Application Flow](#client-application-flow) may be used.
 
-### Native Mobile App Support
+### Native Mobile App Support {#nativeMobileApp}
 
 Native Mobile App Support follows the [RFC 8252 - OAuth 2.0 for Native Apps](https://tools.ietf.org/html/rfc8252) authentication flow utilizing the [PKCE](https://tools.ietf.org/html/rfc7636) extension and enables a custom URI scheme redirect.
 
