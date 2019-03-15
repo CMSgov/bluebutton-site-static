@@ -18,9 +18,6 @@ We look forward to our developer community taking advantage of this improvement 
 
 As always, we welcome your feedback - just head over to the Google Group and leave us a message.
 
-<!-- Whitespace -->
-<div style="height: 300px"></div>
-
 ---
 ## Earlier Blog Posts
 
