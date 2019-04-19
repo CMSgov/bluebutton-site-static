@@ -1,8 +1,38 @@
 ---
-layout: newest_blog
+layout: default-full
 title: Blue Button 2.0 Blog
+description: Get the latest news, updates, and more from the Blue Button 2.0 API.
 badge: blog
 ---
+
+<div class="ds-l-row">
+  <div class="ds-l-col--12">
+    <!-- Featured Blog Card -->
+    <div class="ds-c-blog-card--featured">
+        <!-- Blog Card Image -->
+        <a class="blog-card-image" href="#"><img src="{{site.baseurl}}/assets/img/blog/BBDC18.png" /></a>
+        <!-- Blog Card Content Container -->
+        <div class="blog-card-content">
+          <!-- Blog Card Date -->
+          <div class="blog-card-content-date">
+            Date
+          </div>
+          <!-- Blog Card Title -->
+          <div class="blog-card-content-title">
+            Title
+          </div>
+          <!-- Blog Card Description -->
+          <div class="blog-card-content-description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure vero officia, neque non ex rerum cumque quaerat vitae eum mollitia at, dolores voluptates veritatis pariatur minus aspernatur deserunt? Eligendi, tempora?
+          </div>
+          <!-- Blog Card "Read More" Button -->
+          <a class="blog-card-content-button" href="#" >
+            Read More
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
 <!-- blog/index.html:start -->
 <div class="ds-l-col--12 ds-l-sm-col--8" id="main" role="main">
       {% for post in site.posts %}
