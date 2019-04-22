@@ -5,6 +5,7 @@ date:  2019-04-12 6:30 AM -0600
 categories: latest
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/list-of-production-applications.jpg
 extra_links:
  - title: Blog Index
    link: /blog/index.html

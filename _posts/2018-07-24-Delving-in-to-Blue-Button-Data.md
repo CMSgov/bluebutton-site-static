@@ -5,6 +5,7 @@ date:  2018-07-24 2:30 PM -0600
 categories: code
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/delving-into-blue-button-data.jpg
 ctas:
   -
     title: Home

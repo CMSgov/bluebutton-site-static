@@ -5,6 +5,7 @@ date:   2018-06-05 09:19 PM -0600
 categories: code
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/speed-up-data-transfers.jpg
 sections:
   - Earlier Blog Posts
   - Latest

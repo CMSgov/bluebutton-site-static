@@ -5,6 +5,7 @@ date:   2018-05-19 23:00:00 -0600
 categories: latest general
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/how-beneficiaries-authorize-an-app.jpg
 ctas:
   -
     title: Home

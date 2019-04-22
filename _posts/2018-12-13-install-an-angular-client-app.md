@@ -6,6 +6,7 @@ published: true
 categories: latest code
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/install-an-angular-client-app.jpg
 ctas:
   -
     title: Home

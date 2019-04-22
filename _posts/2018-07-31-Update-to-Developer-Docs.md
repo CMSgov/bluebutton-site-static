@@ -5,6 +5,7 @@ date:  2018-07-30 2:30 PM -0600
 categories: latest general
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/updates-to-developer-documentation.jpg
 ctas:
   -
     title: Home

@@ -5,6 +5,7 @@ date:  2018-08-30 6:30 AM -0600
 categories: latest code
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/install-a-springboot-client-app.jpg
 ctas:
   -
     title: Home

@@ -5,6 +5,7 @@ date:  2018-06-17 5:30 PM -0600
 categories: code
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/hl7-fhir-dev-days.jpg
 sections:
   - Earlier Blog Posts
   - Latest

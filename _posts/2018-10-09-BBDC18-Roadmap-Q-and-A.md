@@ -5,6 +5,7 @@ date:  2018-10-09 10:30 AM -0600
 categories: latest general
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/bbdc-2018-roadmap-q&a.jpg_large
 ctas:
   -
     title: Home

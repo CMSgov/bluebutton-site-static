@@ -7,87 +7,76 @@ badge: blog
 
 <div class="ds-l-row">
   <div class="ds-l-col--12">
+
+  {% for post in site.posts %}
+    {% if site.posts.first.url == post.url %}
+
     <!-- Featured Blog Card -->
     <div class="ds-c-blog-card featured">
-        <!-- Blog Card Image -->
-        <a class="blog-card-image" href="#">
-          <img src="{{site.baseurl}}/assets/img/blog/BBDC18.png" />
-        </a>
-        <!-- Mobile Featured Blog Card Image -->
-        <a class="blog-card-image blog-card-image--featured-mobile" href="#" style="background: url('{{site.baseurl}}/assets/img/blog/BBDC18.png')"></a>
-        <!-- Blog Card Content Container -->
-        <div class="blog-card-content">
-          <!-- Blog Card Date -->
-          <div class="blog-card-content-date">
-            Date
-          </div>
-          <!-- Blog Card Title -->
-          <div class="blog-card-content-title">
-            Title
-          </div>
-          <!-- Blog Card Description -->
-          <div class="blog-card-content-description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure vero officia, neque non ex rerum cumque quaerat vitae eum mollitia at, dolores voluptates veritatis pariatur minus aspernatur deserunt? Eligendi, tempora?
-          </div>
-          <!-- Blog Card "Read More" Button -->
-          <a class="blog-card-content-button" href="#" >
-            Read More
-          </a>
-        </div>
-    </div>
-    <!-- Blog Post Grid -->
-    <div class="ds-c-blog-post-grid">
-
-      <!-- Blog Card -->
-      <div class="ds-c-blog-card">
-        <div class="blog-card-content">
-          <!-- Blog Card Date -->
+      <!-- Blog Card Image -->
+      <a class="blog-card-image" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}">
+        <img src="{{ post.hero-image }}" />
+      </a>
+      <!-- Mobile Featured Blog Card Image -->
+      <a class="blog-card-image blog-card-image--featured-mobile" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" style="background: url('{{ post.hero-image }}')"></a>
+      <!-- Blog Card Content Container -->
+      <div class="blog-card-content">
+        <!-- Blog Card Date -->
         <div class="blog-card-content-date">
-            Date
-          </div>
-          <!-- Blog Card Title -->
-          <div class="blog-card-content-title">
-            Title
-          </div>
+          {{ post.date | date: "%m/%d/%Y" }}
         </div>
-        <!-- Blog Card Image -->
-        <a class="blog-card-image" href="#" style="background: url('{{site.baseurl}}/assets/img/blog/BBDC18.png')"></a>
-        <div class="blog-card-content">
-          <!-- Blog Card Description -->
-          <div class="blog-card-content-description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure vero officia, neque non ex rerum cumque quaerat vitae eum mollitia at, dolores voluptates veritatis pariatur minus aspernatur deserunt? Eligendi, tempora?
-            </div>
-            <!-- Blog Card "Read More" Button -->
-            <a class="blog-card-content-link" href="#" >
-              Read More
-              <i data-feather="arrow-right"></i>
-            </a>
+        <!-- Blog Card Title -->
+        <div class="blog-card-content-title">
+          {{ post.title }}
+        </div>
+        <!-- Blog Card Description -->
+        <div class="blog-card-content-description">
+          {{ post.content | strip_html | truncatewords: 25 }}
+        </div>
+        <!-- Blog Card "Read More" Button -->
+        <a class="blog-card-content-button" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" >
+          Read More
+        </a>
+      </div>
+    </div>
+
+    {% endif %}  
+  {% endfor %}
+
+  <!-- Blog Post Grid -->
+  <div class="ds-c-blog-post-grid">
+  {% for post in site.posts %}
+    {% if site.posts.first.url != post.url %}
+
+    <!-- Blog Card -->
+    <div class="ds-c-blog-card">
+      <div class="blog-card-content">
+        <!-- Blog Card Date -->
+      <div class="blog-card-content-date">
+          {{ post.date | date: "%m/%d/%Y" }}
+        </div>
+        <!-- Blog Card Title -->
+        <div class="blog-card-content-title">
+          {{ post.title }}
         </div>
       </div>
-
+      <!-- Blog Card Image -->
+      <a class="blog-card-image" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" style="background: url('{{ post.hero-image }}')"></a>
+      <div class="blog-card-content">
+        <!-- Blog Card Description -->
+        <div class="blog-card-content-description">
+            {{ post.content | strip_html | truncatewords: 25 }}
+          </div>
+          <!-- Blog Card "Read More" Button -->
+          <a class="blog-card-content-link" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" >
+            Read More
+            <i data-feather="arrow-right"></i>
+          </a>
+      </div>
     </div>
+    
+    {% endif %}  
+  {% endfor %}
+  </div>
   </div>
 </div>
-<!-- blog/index.html:start -->
-<div class="ds-l-col--12 ds-l-sm-col--8" id="main" role="main">
-      {% for post in site.posts %}
-        {% if site.posts.first.url == post.url %}
-
-          <h3 class="ds-u-display--inline-block ds-u-display--block blueberry-lime-link"><a href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" class="ds-u-display--block blueberry-lime-link" >{{ post.title | capitalize | escape }}</a></h3>
-          <h4>{{ post.title }}</h4>
-          <h3 class="ds-u-display--block">Earlier posts...</h3>
-
-        {% else %}
-            <div class="ds-u-border--inverse">
-                <p></p>
-            </div>
-            <div class="ds-u-fill--primary-alt ds-u-padding--2">
-                <h4 class="ds-u-margin--0 ds-u-color--white ds-u-text-align--left"><a href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" class="ds-u-color--white ds-u-text-align--left blueberry-lime-link" >{{ post.title | capitalize | escape }}</a></h4>
-            </div>
-
-        {% endif %}
-      {% endfor %}
-
-</div>
-<!-- blog/index.html:end -->
-
