@@ -12,13 +12,13 @@ badge: blog
     {% if site.posts.first.url == post.url %}
 
     <!-- Featured Blog Card -->
-    <div class="ds-c-blog-card featured">
+    <a class="ds-c-blog-card featured" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" aria-label="{{ post.title }}">
       <!-- Blog Card Image -->
-      <a class="blog-card-image" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}">
-        <img src="{{ post.hero-thumb }}" />
-      </a>
+      <div class="blog-card-image" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" aria-label="Read {{ post.title }}">
+        <img src="{{ post.hero-thumb }}" alt="" role="presentation" />
+      </div>
       <!-- Mobile Featured Blog Card Image -->
-      <a class="blog-card-image blog-card-image--featured-mobile" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" style="background: url('{{ post.hero-thumb }}')"></a>
+      <div class="blog-card-image blog-card-image--featured-mobile" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" style="background: url('{{ post.hero-thumb }}')" aria-label="Read {{ post.title }}"></div>
       <!-- Blog Card Content Container -->
       <div class="blog-card-content">
         <!-- Blog Card Date -->
@@ -33,12 +33,8 @@ badge: blog
         <div class="blog-card-content-description">
           {{ post.content | strip_html | truncatewords: 25 }}
         </div>
-        <!-- Blog Card "Read More" Button -->
-        <a class="blog-card-content-button" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" >
-          Read More
-        </a>
       </div>
-    </div>
+    </a>
 
     {% endif %}  
   {% endfor %}
@@ -49,31 +45,26 @@ badge: blog
     {% if site.posts.first.url != post.url %}
 
     <!-- Blog Card -->
-    <div class="ds-c-blog-card">
+    <a class="ds-c-blog-card" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" aria-label="{{ post.title }}">
       <div class="blog-card-content">
         <!-- Blog Card Date -->
       <div class="blog-card-content-date">
           {{ post.date | date: "%m/%d/%Y" }}
         </div>
         <!-- Blog Card Title -->
-        <div class="blog-card-content-title">
+        <div class="blog-card-content-title" href="#">
           {{ post.title }}
         </div>
       </div>
       <!-- Blog Card Image -->
-      <a class="blog-card-image" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" style="background: url('{{ post.hero-thumb }}')"></a>
+      <div class="blog-card-image" style="background: url('{{ post.hero-thumb }}')"></div>
       <div class="blog-card-content">
         <!-- Blog Card Description -->
         <div class="blog-card-content-description">
             {{ post.content | strip_html | truncatewords: 25 }}
           </div>
-          <!-- Blog Card "Read More" Button -->
-          <a class="blog-card-content-link" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" >
-            Read More
-            <i data-feather="arrow-right"></i>
-          </a>
       </div>
-    </div>
+    </a>
     
     {% endif %}  
   {% endfor %}
