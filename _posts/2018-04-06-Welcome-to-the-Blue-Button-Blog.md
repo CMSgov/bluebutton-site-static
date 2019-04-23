@@ -5,6 +5,7 @@ date:   2018-03-26 23:22:00 -0600
 categories: general
 badge: blog
 hero-image: /assets/img/blog/hero-images/welcome-to-the-blue-button-blog.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/welcome-to-the-blue-button-blog.jpg
 permalink: /blog/:title
 ctas:
   -

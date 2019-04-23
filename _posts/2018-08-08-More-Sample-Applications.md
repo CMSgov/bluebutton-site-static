@@ -6,6 +6,7 @@ categories: code
 badge: blog
 permalink: /blog/:title
 hero-image: /assets/img/blog/hero-images/more-sample-client-applications.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/more-sample-client-applications.jpg 
 ctas:
   -
     title: Home

@@ -6,6 +6,7 @@ categories: code
 permalink: /blog/:title
 badge: blog
 hero-image: /assets/img/blog/hero-images/hl7-fhir-dev-days.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/hl7-fhir-dev-days.jpg
 sections:
   - Earlier Blog Posts
   - Latest

@@ -6,6 +6,7 @@ categories: latest code
 permalink: /blog/:title
 badge: blog
 hero-image: /assets/img/blog/hero-images/install-a-springboot-client-app.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/install-a-springboot-client-app.jpg
 ctas:
   -
     title: Home

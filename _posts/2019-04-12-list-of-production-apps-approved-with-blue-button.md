@@ -6,6 +6,7 @@ categories: latest
 permalink: /blog/:title
 badge: blog
 hero-image: /assets/img/blog/hero-images/list-of-production-applications.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/list-of-production-applications.jpg
 extra_links:
  - title: Blog Index
    link: /blog/index.html

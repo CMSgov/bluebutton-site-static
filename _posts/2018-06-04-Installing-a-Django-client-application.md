@@ -6,6 +6,7 @@ categories: code
 permalink: /blog/:title
 badge: blog
 hero-image: /assets/img/blog/hero-images/install-a-django-client.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/install-a-django-client.jpg
 ctas:
   -
     title: Home

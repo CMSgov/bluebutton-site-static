@@ -6,6 +6,7 @@ categories: latest general
 permalink: /blog/:title
 badge: blog
 hero-image: /assets/img/blog/hero-images/updates-to-developer-documentation.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/updates-to-developer-documentation.jpg
 ctas:
   -
     title: Home

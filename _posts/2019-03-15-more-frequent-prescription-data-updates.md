@@ -6,6 +6,7 @@ categories: latest
 permalink: /blog/:title
 badge: blog
 hero-image: /assets/img/blog/hero-images/more-frequent-prescription-drug-updates.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/more-frequent-prescription-drug-updates.jpg
 extra_links:
  - title: Blog Index
    link: /blog/index.html

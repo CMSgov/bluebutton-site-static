@@ -15,10 +15,10 @@ badge: blog
     <div class="ds-c-blog-card featured">
       <!-- Blog Card Image -->
       <a class="blog-card-image" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}">
-        <img src="{{ post.hero-image }}" />
+        <img src="{{ post.hero-thumb }}" />
       </a>
       <!-- Mobile Featured Blog Card Image -->
-      <a class="blog-card-image blog-card-image--featured-mobile" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" style="background: url('{{ post.hero-image }}')"></a>
+      <a class="blog-card-image blog-card-image--featured-mobile" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" style="background: url('{{ post.hero-thumb }}')"></a>
       <!-- Blog Card Content Container -->
       <div class="blog-card-content">
         <!-- Blog Card Date -->
@@ -61,7 +61,7 @@ badge: blog
         </div>
       </div>
       <!-- Blog Card Image -->
-      <a class="blog-card-image" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" style="background: url('{{ post.hero-image }}')"></a>
+      <a class="blog-card-image" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" style="background: url('{{ post.hero-thumb }}')"></a>
       <div class="blog-card-content">
         <!-- Blog Card Description -->
         <div class="blog-card-content-description">

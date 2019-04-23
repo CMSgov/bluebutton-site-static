@@ -6,6 +6,7 @@ categories: code
 permalink: /blog/:title
 badge: blog
 hero-image: /assets/img/blog/hero-images/speed-up-data-transfers.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/speed-up-data-transfers.jpg
 sections:
   - Earlier Blog Posts
   - Latest

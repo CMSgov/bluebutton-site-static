@@ -6,6 +6,7 @@ categories: latest general
 permalink: /blog/:title
 badge: blog
 hero-image: /assets/img/blog/hero-images/how-beneficiaries-authorize-an-app.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/how-beneficiaries-authorize-an-app.jpg
 ctas:
   -
     title: Home
