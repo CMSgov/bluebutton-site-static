@@ -5,6 +5,8 @@ date:   2018-06-01 09:00:00 -0500
 categories: code
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/install-a-django-client.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/install-a-django-client.jpg
 ctas:
   -
     title: Home

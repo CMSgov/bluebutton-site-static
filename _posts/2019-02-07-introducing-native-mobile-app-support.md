@@ -5,6 +5,8 @@ date:  2019-02-07 6:30 AM -0600
 categories: latest code
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/introducing-native-mobile-app-support.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/introducing-native-mobile-app-support.jpg
 extra_links:
  - title: Blog Index
    link: /blog/index.html

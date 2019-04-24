@@ -1,28 +1,73 @@
 ---
-layout: newest_blog
+layout: default-full
 title: Blue Button 2.0 Blog
+description: Get the latest news, updates, and more from the Blue Button 2.0 API.
 badge: blog
 ---
-<!-- blog/index.html:start -->
-<div class="ds-l-col--12 ds-l-sm-col--8" id="main" role="main">
-      {% for post in site.posts %}
-        {% if site.posts.first.url == post.url %}
 
-          <h3 class="ds-u-display--inline-block ds-u-display--block blueberry-lime-link"><a href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" class="ds-u-display--block blueberry-lime-link" >{{ post.title | capitalize | escape }}</a></h3>
-          <h4>{{ post.title }}</h4>
-          <h3 class="ds-u-display--block">Earlier posts...</h3>
+<div class="ds-l-row">
+  <div class="ds-l-col--12">
 
-        {% else %}
-            <div class="ds-u-border--inverse">
-                <p></p>
-            </div>
-            <div class="ds-u-fill--primary-alt ds-u-padding--2">
-                <h4 class="ds-u-margin--0 ds-u-color--white ds-u-text-align--left"><a href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" class="ds-u-color--white ds-u-text-align--left blueberry-lime-link" >{{ post.title | capitalize | escape }}</a></h4>
-            </div>
+  {% for post in site.posts %}
+    {% if site.posts.first.url == post.url %}
 
-        {% endif %}
-      {% endfor %}
+    <!-- Featured Blog Card -->
+    <a class="ds-c-blog-card featured" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" aria-label="{{ post.title }}">
+      <!-- Blog Card Image -->
+      <div class="blog-card-image" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" aria-label="Read {{ post.title }}">
+        <img src="{{ post.hero-thumb }}" alt="" role="presentation" />
+      </div>
+      <!-- Mobile Featured Blog Card Image -->
+      <div class="blog-card-image blog-card-image--featured-mobile" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" style="background: url('{{ post.hero-thumb }}')" aria-label="Read {{ post.title }}"></div>
+      <!-- Blog Card Content Container -->
+      <div class="blog-card-content">
+        <!-- Blog Card Date -->
+        <div class="blog-card-content-date">
+          {{ post.date | date: "%m/%d/%Y" }}
+        </div>
+        <!-- Blog Card Title -->
+        <div class="blog-card-content-title">
+          {{ post.title }}
+        </div>
+        <!-- Blog Card Description -->
+        <div class="blog-card-content-description">
+          {{ post.content | strip_html | truncatewords: 25 }}
+        </div>
+      </div>
+    </a>
 
+    {% endif %}  
+  {% endfor %}
+
+  <!-- Blog Post Grid -->
+  <div class="ds-c-blog-post-grid">
+  {% for post in site.posts %}
+    {% if site.posts.first.url != post.url %}
+
+    <!-- Blog Card -->
+    <a class="ds-c-blog-card" href="{{ post.url }}{% if site.use_dot_html %}.html{% endif %}" aria-label="{{ post.title }}">
+      <div class="blog-card-content">
+        <!-- Blog Card Date -->
+      <div class="blog-card-content-date">
+          {{ post.date | date: "%m/%d/%Y" }}
+        </div>
+        <!-- Blog Card Title -->
+        <div class="blog-card-content-title" href="#">
+          {{ post.title }}
+        </div>
+      </div>
+      <!-- Blog Card Image -->
+      <div class="blog-card-image" style="background: url('{{ post.hero-thumb }}')"></div>
+      <div class="blog-card-content">
+        <!-- Blog Card Description -->
+        <div class="blog-card-content-description">
+            {{ post.content | strip_html | truncatewords: 25 }}
+          </div>
+      </div>
+    </a>
+    
+    {% endif %}  
+  {% endfor %}
+  </div>
+  </div>
 </div>
-<!-- blog/index.html:end -->
-

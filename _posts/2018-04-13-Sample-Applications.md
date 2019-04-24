@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Sample client applications
+title: Sample Client Applications
 date:   2018-03-26 23:22:00 -0600
 categories: code
 badge: blog
+hero-image: /assets/img/blog/hero-images/sample-client-applications.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/sample-client-applications.jpg
 permalink: /blog/:title
 ctas:
   -

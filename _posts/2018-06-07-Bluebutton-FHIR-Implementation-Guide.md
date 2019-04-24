@@ -5,6 +5,8 @@ date:   2018-06-07 09:00:00 -0500
 categories: latest
 permalink: /blog/:title
 badge: blog
+hero-image: /assets/img/blog/hero-images/blue-button-implementation-guide.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/blue-button-implementation-guide.jpg
 sections:
   - Earlier Blog Posts
   - Latest

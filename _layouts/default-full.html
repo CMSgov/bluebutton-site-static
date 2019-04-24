@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <!-- 
+    This is a default template with no sidebar.
+    It is being used to replace default.html without messing up other pages that still depend on that template. 
+  -->
+
+  {% include head.html %}
+
+  <body class="ds-u-fill--gray-lightest">
+    <a class="ds-c-skip-nav" href="#main">Skip to main content</a>
+
+    {% include header.html %}
+    {% include banner.html %}
+    <div class="ds-l-container">
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+    <!-- Crazy Egg Script -->
+    <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0078/9905.js" async="async"></script>
+  </body>
+
+</html>
