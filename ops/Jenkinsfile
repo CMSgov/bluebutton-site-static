@@ -1,5 +1,6 @@
 #!groovy
 def aws_creds = 'cbj-deploy'
+def helpers
 
 pipeline {
   agent any
@@ -36,7 +37,7 @@ pipeline {
     stage('Notify') {
       steps {
         script {
-          helpers = load "Jenkinsfiles/helpers.groovy"
+          helpers = load "ops/helpers.groovy"
           helpers.slackNotify "STARTING"
         }
       }
