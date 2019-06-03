@@ -34,7 +34,7 @@ pipeline {
   }
 
   stages {
-    stage('Notify') {
+/*    stage('Notify') {
       steps {
         script {
           helpers = load "ops/helpers.groovy"
@@ -47,7 +47,7 @@ pipeline {
       steps {
         deleteDir()
       }
-    }
+    }*/
 
     stage('Checkout Static Site') {
       steps {
@@ -229,7 +229,7 @@ pipeline {
   }
 
 
-  post {
+/*  post {
       success {
         script {
           helpers.slackNotify("SUCESS", 'good')
@@ -250,5 +250,5 @@ pipeline {
         // Cleanup the workspace
         deleteDir()
       }
-  }
+  }*/
 }
