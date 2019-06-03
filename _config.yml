@@ -51,12 +51,12 @@ blog_url: https://bluebutton.cms.gov
 
 # Configure the `_plugins/api_codings.rb` plugin. Note that you can run
 # `bundle exec jekyll serve --verbose` to get debug output from that plugin.
-# codebooks:
-#   layout: variable.html
-#   xml_files:
-#     # These files are produced by the
-#     # `bluebutton-data-model.git/bluebutton-data-model-codebook-extractor`
-#     # project, and copied by hand to this project, as needed.
-#     - _codebooks/codebook-mbsf-abd.xml
-#     - _codebooks/codebook-ffs-claims.xml
-#     - _codebooks/codebook-pde.xml
+codebooks:
+  layout: variable.html
+  xml_files:
+    # These files are produced by the
+    # `bluebutton-data-model.git/bluebutton-data-model-codebook-extractor`
+    # project, and copied by hand to this project, as needed.
+    - _codebooks/codebook-mbsf-abd.xml
+    - _codebooks/codebook-ffs-claims.xml
+    - _codebooks/codebook-pde.xml
