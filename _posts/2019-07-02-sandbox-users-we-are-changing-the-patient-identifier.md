@@ -12,7 +12,7 @@ extra_links:
    link: /blog/index.html
 ---
 
-On July 22 nd , the Blue Button 2.0 team will make a change to apply a minus sign prefix to the Patient Identifier, the FHIR ID, in the patient records in our sandbox environment. This change will ensure that synthetic records are formatted the same way in both the sandbox and production environments.
+On July 22nd, the Blue Button 2.0 team will make a change to apply a minus sign prefix to the Patient Identifier, the FHIR ID, in the patient records in our sandbox environment. This change will ensure that synthetic records are formatted the same way in both the sandbox and production environments.
 
 When we added synthetic beneficiaries and their claims to the production environment last year, we added a minus sign prefix to the FHIR ID to avoid any possibility of a collision between synthetic and real beneficiary records. **Now, we are applying the same minus prefix to the FHIR ID in our sandbox environment.**
 
