@@ -53,7 +53,7 @@ badge: blog
         </div>
         <!-- Blog Card Title -->
         <div class="blog-card-content-title" href="#">
-          {{ post.title }}
+          {{ post.title | truncatewords: 8 }}
         </div>
       </div>
       <!-- Blog Card Image -->
