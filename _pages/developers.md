@@ -504,7 +504,7 @@ For Example:
 
 **How Often Will New/Updated Data Be Available?**
 
-Medicare Part A and B claims data will be refreshed weekly, Part D data is refreshed monthly.
+Medicare Part A, B, and D claims data will be refreshed weekly.
 
 Our schedules may vary depending on many things like maintenance, delayed delivery of claims to the CCW data warehouse, or additional data quality processing that's needed.
 
@@ -719,7 +719,7 @@ You will be asked to provide a URL to your privacy policy and terms and conditio
 
 **Rate Limiting and Data Refresh**
 
-Medicare Part A and B claims data will be refreshed weekly, Part D data monthly.
+Medicare Part A, B, and D claims data will be refreshed weekly.
 
 Our schedules may vary depending on many things like maintenance, delayed delivery of claims to the CCW data warehouse, or additional data quality processing that's needed.
 
