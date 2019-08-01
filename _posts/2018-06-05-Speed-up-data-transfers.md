@@ -28,12 +28,12 @@ The Blue Button Team continues to look at performance improvements for the Blue 
 ExplanationOfBenefit resource can involve a large amount of data being transferred. To improve performance
 in this area we are introducing the ability to apply gzip compression.
 
-The following data types can be enabled for compression:
+The following content types can be enabled for compression:
 
 - text/html
 - text/plain
 - application/json
-- application/json+fhir
+- application/fhir+json
 
 The minimum payload size we will gzip is 1 kilobyte.
 
@@ -41,6 +41,13 @@ The minimum payload size we will gzip is 1 kilobyte.
 
 In order to see the benefit of gzip compression, the client must send the **Accept-Encoding: gzip** header as part of
 their request. Otherwise, the server will respond with the unmodified content type and encoding.
+
+## Example Header
+
+The header items to activate gzip compression should include the following:
+
+     Content-Type: application/fhir+json
+     Accept-Encoding: gzip
 
 ## An Opt-in enhancement
 

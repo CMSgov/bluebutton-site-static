@@ -442,7 +442,7 @@ compression is turned off by default. Compression can be activated for the follo
 - text/html
 - text/plain
 - application/json
-- application/json+fhir
+- application/fhir+json
 
 To activate compression add the following to the header:
 
