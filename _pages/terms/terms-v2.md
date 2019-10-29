@@ -1,19 +1,13 @@
 ---
 layout: terms
-title:  "API Terms of Service"
+title:  "API Terms of Service v2"
 date:   2018-02-22 09:21:12 -0500
 description:
 landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
 badge: documentation
-permalink: "/terms/"
-sections:
-  - Overview
-  - Data Rights and Usage
-  - Attribution
-  - Service Management
-  - Liability
+permalink: "/terms/v2"
 ctas:
   -
     title: View the documentation
