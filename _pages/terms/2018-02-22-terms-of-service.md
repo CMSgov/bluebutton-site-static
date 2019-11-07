@@ -1,11 +1,9 @@
 ---
 layout: terms
-title:  "API Terms of Service v1"
+title:  "API Terms of Service"
 date:   2018-02-22 09:21:12 -0500
-description:
+description: "Previous Version (v1), published 02/22/2018"
 landing-page: live
-gradient: "blueberry-lime-background"
-subnav-link-gradient: "blueberry-lime-link"
 badge: documentation
 permalink: "/terms/v1"
 sections:
@@ -14,20 +12,12 @@ sections:
   - Attribution
   - Service Management
   - Liability
-ctas:
-  -
-    title: View the documentation
-    link: /developers
-  -
-    title: Sign up for the Developer Sandbox
-    link: https://sandbox.bluebutton.cms.gov/v1/accounts/create
-
 ---
 
 <div class="ds-c-alert ds-c-alert--error">
 	<div class="ds-c-alert__body">
-		<h2 class="ds-c-alert__heading">This Terms of Service has been deprecated</h2>
-		<p class="ds-c-alert__text">You can <a href="/terms/v2">view the current terms of service here</a>. This document is intended for reference only as applications transition to our new terms of service.</p>
+		<h2 class="ds-c-alert__heading">These Terms of Service has been deprecated</h2>
+		<p class="ds-c-alert__text">You can <a href="/terms">view the current terms of service here</a>. This document is intended for reference only as applications transition to our new terms of service.</p>
 	</div>
 </div>
 

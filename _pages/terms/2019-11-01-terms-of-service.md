@@ -1,10 +1,10 @@
 ---
 layout: terms
-title:  "API Terms of Service v2"
-date:   2018-02-22 09:21:12 -0500
-description:
+title:  "API Terms of Service"
+date:   2019-11-01 09:21:12 -0500
+description: "Current Version (v2), published 11/01/2019"
 badge: documentation
-permalink: "/terms/v2"
+permalink: "/terms/"
 sections:
   - Overview
   - Scope
@@ -13,6 +13,15 @@ sections:
   - Service Management
   - Liability
 ---
+
+<div class="ds-c-alert">
+	<div class="ds-c-alert__body">
+		<h2 class="ds-c-alert__heading">This is the current, active Terms of Service</h2>
+		<p class="ds-c-alert__text">
+			You can <a href="/terms/terms-index">review past versions of our Terms of Service here</a>. 
+		</p>
+	</div>
+</div>
 
 ## Overview
 
