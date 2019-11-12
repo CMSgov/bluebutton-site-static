@@ -12,6 +12,7 @@ sections:
   - Attribution
   - Service Management
   - Liability
+  - Resources
 ---
 
 <div class="ds-c-alert">
@@ -107,3 +108,7 @@ You agree to use the Blue Button 2.0 APIs in a manner consistent with the follow
 - Security:  Personal data should be protected by reasonable security safeguards against such risks as loss, unauthorized access, destruction, use, modification, or disclosure.
 - Data Quality: Personal data should be relevant to the purposes for which they are to be used, and should be accurate, complete, and timely.
 - Accountability: Record keepers should be accountable for complying with fair information practices.
+
+## Resources
+
+For more context on these terms of service and information around these requirements, we've created a [production access user guide](/guide) and a [production access checklist](/checklist).
