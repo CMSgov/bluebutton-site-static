@@ -14,5 +14,5 @@ permalink: "/terms/terms-index/"
 </div>
 
 <div class="bb-c-card ds-u-padding--2 ds-u-margin-bottom--2">
-	<a href="{{ site.baseurl }}/terms/v1">Blue Button 2.0 API Terms of Service, Published 02/22/2018 (v1)</a>
+	<a href="{{ site.baseurl }}/terms/v1/">Blue Button 2.0 API Terms of Service, Published 02/22/2018 (v1)</a>
 </div>

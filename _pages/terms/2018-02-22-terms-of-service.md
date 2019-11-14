@@ -5,7 +5,7 @@ date:   2018-02-22 09:21:12 -0500
 description: "Previous Version (v1), published 02/22/2018"
 landing-page: live
 badge: documentation
-permalink: "/terms/v1"
+permalink: "/terms/v1/"
 sections:
   - Overview
   - Data Rights and Usage

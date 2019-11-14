@@ -23,7 +23,7 @@ Beginning March 31st, 2020, the application authorization process will allow ben
 
 Beneficiary demographic information like name, race, gender, birthday, and address is stored in the patient resource. This change will allow beneficiaries to elect not to share that demographic data. Developers of applications that rely on demographic data for their application will need to collect that information elsewhere in the user flow should the beneficiary not allow it to be shared through Blue Button 2.0.
 
-To allow developers to test this new functionality, CMS will introduce the new choice feature into [sandbox.bluebutton.cms.gov](sandbox.bluebutton.cms.gov) in two phases over the coming months:
+To allow developers to test this new functionality, CMS will introduce the new choice feature into [sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov) in two phases over the coming months:
 
 - Phase 1: The beneficiary authorization screen will be modified to enable a choice to share beneficiary demographic data.
 - Phase 2: Applications will be able to define the scopes they want to request in their application configuration. If they don’t require demographic information, the beneficiary authorization screen will not prompt for a choice to be made. 
