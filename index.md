@@ -25,6 +25,19 @@ ctas:
 
 ---
 
+<div>
+	<a class="bb-c-card default-card" href="/blog/ensuring-beneficiary-privacy-and-security-through-new-application-onboarding-requirements">
+		<div class="card-title">
+			We've got exciting updates to share.
+		</div>
+		<div class="card-image" style="background-image: url('/assets/img/home/terms-announcement-graphic.svg')">
+		</div>
+		<div class="card-description">
+			We’ve made some updates to our production access process and Terms of Service. These updates are designed to make our process more clear and understandable, while also doing more to ensure Medicare beneficiaries are protected.
+		</div>
+	</a>
+</div>
+ 
 ## Overview
 
 Blue Button 2.0 from CMS is an API that contains four years of Medicare Part A, B and D data for 53 million Medicare beneficiaries.
