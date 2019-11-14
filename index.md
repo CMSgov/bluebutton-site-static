@@ -26,7 +26,7 @@ ctas:
 ---
 
 <div>
-	<a class="bb-c-card default-card" href="/blog/ensuring-beneficiary-privacy-and-security-through-new-application-onboarding-requirements">
+	<a class="bb-c-card default-card" href="{{ site.baseurl }}/blog/ensuring-beneficiary-privacy-and-security-through-new-application-onboarding-requirements.html">
 		<div class="card-title">
 			We've got exciting updates to share.
 		</div>

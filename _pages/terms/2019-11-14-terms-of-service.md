@@ -1,8 +1,8 @@
 ---
 layout: terms
 title:  "API Terms of Service"
-date:   2019-11-01 09:21:12 -0500
-description: "Current Version (v2), published 11/01/2019"
+date:   2019-11-14 09:21:12 -0500
+description: "Current Version (v2), published 11/14/2019"
 badge: documentation
 permalink: "/terms/"
 sections:
@@ -13,13 +13,20 @@ sections:
   - Service Management
   - Liability
   - Resources
+ctas:
+  -
+    title: Production Access User Guide
+    link: /guide/
+  -
+    title: Production Access Checklist
+    link: /checklist/
 ---
 
 <div class="ds-c-alert">
 	<div class="ds-c-alert__body">
 		<h2 class="ds-c-alert__heading">This is the current, active Terms of Service</h2>
 		<p class="ds-c-alert__text">
-			You can <a href="/terms/terms-index">review past versions of our Terms of Service here</a>. 
+			You can <a href="/terms/terms-index/">review the previous version here</a>. 
 		</p>
 	</div>
 </div>
