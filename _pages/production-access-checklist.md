@@ -2,9 +2,9 @@
 layout: default-full
 title:  "Production Access Checklist"
 date:   2018-02-22 09:21:12 -0500
-description: "This is the description for the production access checklist"
+description: "A checklist to help your organization prepare to apply for production access to the Blue Button 2.0 API."
 badge: documentation
-permalink: /checklist
+permalink: /checklist/
 ---
 
 ## What is this Checklist?

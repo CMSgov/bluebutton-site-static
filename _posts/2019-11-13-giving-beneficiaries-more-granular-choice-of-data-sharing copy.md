@@ -15,7 +15,7 @@ extra_links:
 As adoption of the Blue Button 2.0 API (BB2.0 API) grows, the CMS Blue Button team continues to look at ways to improve the API and stay current with evolving standards. A primary goal for CMS with the BB2.0 API is to help beneficiaries make informed choices about the applications they use and the data they share. To enhance the security and privacy posture for Medicare beneficiaries using the BB2.0 API, we are pleased to announce two changes to the API:
 
 1.	A feature enhancement to enable beneficiaries to choose whether they want to share their demographic information with a given application. This change is described in more detail below. 
-2.	Updates to the BB2.0 API Terms of Service, described in more detail here.
+2.	[Updates to the BB2.0 API Terms of Service, described in more detail here](/blog/ensuring-beneficiary-privacy-and-security-through-new-application-onboarding-requirements.html).
 
 ## What does this new choice mean?
 
@@ -44,7 +44,7 @@ If a beneficiary chooses to NOT share their demographic information, an applicat
 
 ## Enabling Apps to request data scopes
 
-Behind the scenes of the Blue Button 2.0 API we have implemented HL7 FHIR scopes to manage access to beneficiary data. These scopes look like this:
+Behind the scenes of the Blue Button 2.0 API, we have implemented HL7 FHIR scopes to manage access to beneficiary data. These scopes look like this:
 
 ```
 patient/Patient.read
@@ -66,7 +66,7 @@ profile
 
 This gives access to the `/v1/connect/UserInfo` Endpoint.
 
-In phase two, CMS will enable applications to select the scopes they require for their application. If an application does not require the beneficiary demographic information the `patient/Patient.read` and `profile` scopes can be excluded from the application’s profile.
+In phase two, CMS will enable applications to select the scopes they require for their application. If an application does not require the beneficiary demographic information, the `patient/Patient.read` and `profile` scopes can be excluded from the application’s profile.
 
 
 ---

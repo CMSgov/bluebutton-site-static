@@ -4,7 +4,7 @@ title:  "Production Access User Guide"
 date:   2018-02-22 09:21:12 -0500
 description: "A guide to help you prepare for and understand our requirements for production access to the Blue Button 2.0 API"
 badge: documentation
-permalink: /guide
+permalink: /guide/
 sections:
 - Understanding Blue Button's Mission
 - Our Requirements for Production Access
@@ -19,7 +19,7 @@ Another core element of our mission is making sure that Medicare beneficiaries (
 
 This guide will help make sure you understand the requirements outlined in our terms of service, but you should always treat the terms of service as our official policy.
 
-<a classs="ds-c-button ds-c-button--primary" href="/terms">Read Our Terms of Service</a>
+<a classs="ds-c-button ds-c-button--primary" href="{{ site.baseurl }}/terms/">Read Our Terms of Service</a>
 
 ## Our Requirements for Production Access
 
@@ -49,7 +49,7 @@ In cases where it may be difficult to write or update your privacy policy to be 
 
 ### What We Expect From Your Privacy Policy
 
-In general, we are looking for your privacy policy to clearly demonstrate to Medicare beneficiaries how you use, store, and potentially share their healthcare data. When you are applying for production access, you will need to attest that your privacy policy covers all of the requirements listed in the [Blue Button 2.0 API terms of service](/terms), so be sure you have read it and checked your privacy policy against those requirements.
+In general, we are looking for your privacy policy to clearly demonstrate to Medicare beneficiaries how you use, store, and potentially share their healthcare data. When you are applying for production access, you will need to attest that your privacy policy covers all of the requirements listed in the [Blue Button 2.0 API terms of service](/terms/), so be sure you have read it and checked your privacy policy against those requirements.
 
 Here are other topics/items we'll need to see indicated in your privacy policy:
 
@@ -77,7 +77,7 @@ We like to think of it like this: "A Medicare beneficiary should never be surpri
 
 ### User Interface and Security Practices
 
-It is important that we understand how a Medicare beneficiary will actually interact with your application. Since Medicare beneficiaries are sharing incredibly sensitive information, we want to make sure that they are given opportunities to opt-in to service or revoke service, request that their data be deleted, etc. Please be sure to [refer to the Production Access Checklist](/checklist) for a full list of requirements.
+It is important that we understand how a Medicare beneficiary will actually interact with your application. Since Medicare beneficiaries are sharing incredibly sensitive information, we want to make sure that they are given opportunities to opt-in to service or revoke service, request that their data be deleted, etc. Please be sure to [refer to the Production Access Checklist](/checklist/) for a full list of requirements.
 
 Here are some examples of the kinds of questions we'd like to see you answer:
 
@@ -93,7 +93,7 @@ And similarly from the security perspective:
 
 ### Review the Production Access Checklist
 
-After you've read the [Blue Button 2.0 API Terms of Service](/terms), take a moment to look over our [Production Access Checklist](/checklist). Going over this document will help ensure that your application is ready for approval.
+After you've read the [Blue Button 2.0 API Terms of Service](/terms/), take a moment to look over our [Production Access Checklist](/checklist/). Going over this document will help ensure that your application is ready for approval.
 
 ### Email Our Team
 
