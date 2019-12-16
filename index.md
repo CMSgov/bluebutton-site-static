@@ -25,7 +25,7 @@ ctas:
 
 ---
 
-<div>
+<!-- <div>
 	<a class="bb-c-card default-card" href="{{ site.baseurl }}/blog/ensuring-beneficiary-privacy-and-security-through-new-application-onboarding-requirements.html">
 		<div class="card-title">
 			We've got exciting updates to share.
@@ -36,7 +36,19 @@ ctas:
 			We’ve made some updates to our production access process and Terms of Service. These updates are designed to make our process more clear and understandable, while also doing more to ensure Medicare beneficiaries are protected.
 		</div>
 	</a>
-</div>
+</div> -->
+
+<div class="ds-c-alert ds-c-alert--warn">
+    <div class="ds-c-alert__body">
+      <h3 class="ds-c-alert__heading">Important Announcement</h3>
+      <p class="ds-c-alert__text">
+			We have disabled access to the Blue Button 2.0 API temporarily while we investigate a technical issue. A limited number of people who use Blue Button 2.0 apps might have had their private Medicare information shared with the wrong user or app. You can <a href="{{ site.baseurl }}/blog/bbapi-update.html">find more information on the technical issue</a>. CMS will be reaching out to all applications with production access to Blue Button 2.0 individually with more information. 
+			<br />
+			<br />
+			CMS will be sending a letter to all affected Medicare beneficiaries with more information and actions to take. Medicare beneficiaries can also call CMS at 1-800-MEDICARE to learn more.
+      </p>
+    </div>
+  </div>
  
 ## Overview
 
