@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blue Button 2.0 API Update
-date:  2019-12-13 6:30 AM -0600
+date:  2019-12-16 5:30 PM -0600
 categories: latest
 permalink: /blog/:title
 badge: blog
