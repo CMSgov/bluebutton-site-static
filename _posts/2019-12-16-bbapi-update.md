@@ -33,7 +33,7 @@ CMS is taking several steps to address these takeaways. The BB2.0 team has imple
 
 CMS is updating BB2.0 code to store the full user ID instead of a truncated version. All users will be asked to re-authenticate with BB2.0 to allow the system to generate a new user ID. In addition, the team is conducting a full code review and implementing any necessary changes to protect against this type of error in the future. 
 
-This technical issue potentially affected less than 10,000 beneficiaries and 50 apps.  It was contained to Blue Button 2.0 API authorized users and developers – not Medicare beneficiaries more broadly or outside entities. CMS will communicate directly with affected beneficiaries in the coming weeks through a letter. After the agency completes an in-depth analysis of the impact to affected beneficiaries, CMS will determine necessary additional protections to offer affected beneficiaries (e.g., credit monitoring, a Special Enrollment Period).
+This technical issue potentially affected less than 10,000 beneficiaries and 30 apps. It was contained to Blue Button 2.0 API authorized users and developers – not Medicare beneficiaries more broadly or outside entities. CMS will communicate directly with affected beneficiaries in the coming weeks through a letter. After the agency completes an in-depth analysis of the impact to affected beneficiaries, CMS will determine necessary additional protections to offer affected beneficiaries (e.g., credit monitoring, a Special Enrollment Period).
 
 CMS will be contacting production apps directly in the next two weeks to provide more information about specific next steps for them to take.   
 
@@ -51,6 +51,37 @@ Before restoring the BB2.0 API, the team will be implementing a layered approach
 
 A timeline is not yet available for when service will be restored, but we will continue to provide updates as they are available.
 
+**Impacted Applications:**
+- 1upHealth
+- Achievement
+- Advise delivered by Ascend Quote & Enrollment
+- Allwell - Absolute Total Care delivered by Ascend Quote & Enrollment
+- Allwell - Arizona Complete Health delivered by Ascend Quote & Enrollment
+- Allwell - Arkansas Health & Wellness delivered by Ascend Quote & Enrollment
+- Allwell - Buckeye Health Plan delivered by Ascend Quote & Enrollment
+- Allwell - Home State Health delivered by Ascend Quote & Enrollment
+- Allwell - Louisiana Healthcare Connections delivered by Ascend Quote & Enrollment
+- Allwell - Magnolia Healthplan delivered by Ascend Quote & Enrollment
+- Allwell - Sunflower Health Plan delivered by Ascend Quote & Enrollment
+- Allwell - Superior Health Plan delivered by Ascend Quote & Enrollment
+- Ascension Complete - Florida
+- Ascension Complete - Kansas delivered by Ascend Quote & Enrollment
+- BlueButtonPro
+- DocSpera
+- Enroll Hero
+- Evidation on behalf of Heartline
+- Get Your Health Record
+- Human API
+- Humana
+- iBlueButton
+- Medicare Suggest
+- MedRecordsConnect
+- myFHR
+- Project Baseline
+- Project Seamless
+- Prominence Health Plan delivered by Ascend Quote & Enrollment
+- Rush University Medical Center
+- Trusty.care
 
 ---
 ## Earlier Blog Posts
