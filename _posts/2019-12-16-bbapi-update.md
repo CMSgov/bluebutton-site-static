@@ -69,7 +69,7 @@ A timeline is not yet available for when service will be restored, but we will c
 - BlueButtonPro
 - DocSpera
 - Enroll Hero
-- Evidation on behalf of Heartline
+- Evidation
 - Get Your Health Record
 - Human API
 - Humana
