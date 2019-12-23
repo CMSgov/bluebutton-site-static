@@ -12,6 +12,18 @@ extra_links:
    link: /blog/index.html
 ---
 
+<div class="ds-c-alert ds-c-alert--warn">
+    <div class="ds-c-alert__body">
+      <h3 class="ds-c-alert__heading">12/23/2019 Update</h3>
+      <p class="ds-c-alert__text">
+			CMS has conducted a full review of Blue Button 2.0, corrected the faulty coding, and implemented additional protections in the system. We are resuming normal operations of Blue Button 2.0. 
+			<br />
+			<br />
+			Affected apps will only be permitted to reconnect to the Blue Button 2.0 API after sending written confirmation to CMS indicating they have implemented a plan to address incorrect data in their app. CMS has been working closely with app developers and appreciates their cooperation in resolving the matter as quickly as possible to ensure patient privacy is protected.  If you have any questions, please reach out to your CMS contact.
+      </p>
+    </div>
+  </div>
+
 On December 4th, a third-party application partner reported a data anomaly with the Blue Button 2.0 API (BB2.0). CMS verified the anomaly and immediately suspended access to the production environment. We discovered a bug in the BB2.0 codebase which may be causing certain beneficiary protected health information to be inadvertently shared with another beneficiary or the wrong BB2.0 application. 
 
 The privacy and security of beneficiary health information is our top priority. CMS is contacting affected beneficiaries and third-party applications directly. Access to BB2.0 remains closed while we conduct a full review. Restoration of service is pending resolution of the issue. 
