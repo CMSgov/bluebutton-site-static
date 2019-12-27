@@ -42,10 +42,10 @@ ctas:
     <div class="ds-c-alert__body">
       <h3 class="ds-c-alert__heading">Important Announcement</h3>
       <p class="ds-c-alert__text">
-			CMS has conducted a full review of Blue Button 2.0, corrected the faulty coding, and implemented additional protections in the system. We are resuming normal operations of Blue Button 2.0. You can find more information on the technical issue that was addressed on the <a href="{{ site.baseurl }}/blog/bbapi-update.html">Blue Button 2.0 API Update</a> blog post. 
+			CMS has conducted a full review of Blue Button 2.0, corrected the faulty code, implemented additional protections, and is resuming normal operations of the system. You can find more information on the technical issue that was addressed on the <a href="{{ site.baseurl }}/blog/bbapi-update.html">Blue Button 2.0 API Update</a> blog post.  
 			<br />
 			<br />
-			CMS will be sending a letter to all affected Medicare beneficiaries with more information and actions to take. Medicare beneficiaries can also call CMS at 1-800-MEDICARE to learn more.
+			CMS is mailing letters to all affected beneficiaries in the coming weeks. Beneficiaries who have questions can contact 1-800-MEDICARE at any time.
       </p>
     </div>
   </div>
