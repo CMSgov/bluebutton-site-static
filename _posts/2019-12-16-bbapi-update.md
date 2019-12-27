@@ -14,7 +14,7 @@ extra_links:
 
 <div class="ds-c-alert ds-c-alert--warn">
     <div class="ds-c-alert__body">
-      <h3 class="ds-c-alert__heading">12/23/2019 Update</h3>
+      <h3 class="ds-c-alert__heading">12/27/2019 Update</h3>
       <p class="ds-c-alert__text">
 			Update – December 27, 2019: The Centers for Medicare & Medicaid Services (CMS) has conducted a full review of Blue Button 2.0, corrected the faulty code, implemented additional protections, and is resuming normal operations of the system. 
 			<br />
