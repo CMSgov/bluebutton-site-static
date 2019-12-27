@@ -16,10 +16,10 @@ extra_links:
     <div class="ds-c-alert__body">
       <h3 class="ds-c-alert__heading">12/23/2019 Update</h3>
       <p class="ds-c-alert__text">
-			The Centers for Medicare & Medicaid Services (CMS) has conducted a full review of Blue Button 2.0, corrected the faulty code, implemented additional protections, and is resuming normal operations of the system.  
+			Update – December 27, 2019: The Centers for Medicare & Medicaid Services (CMS) has conducted a full review of Blue Button 2.0, corrected the faulty code, implemented additional protections, and is resuming normal operations of the system. 
 			<br />
 			<br />
-			The technical issue discovered on December 4th was contained to 30 authorized Blue Button 2.0 applications (apps). These apps will only be permitted to reconnect to the Blue Button 2.0 API after providing CMS with written confirmation that they have implemented a plan to address and remove any incorrect data in their app.  CMS has been working closely with app developers and appreciates their cooperation in resolving the matter as quickly as possible to ensure patient privacy is protected.  If you have any questions, please reach out to <a href="mailto:BlueButtonAPI@cms.hhs.gov">BlueButtonAPI@cms.hhs.gov,</a>.  
+			The technical issue discovered on December 4th only impacted 30 authorized Blue Button 2.0 applications (apps). These apps will be able to reconnect to the Blue Button 2.0 API after providing CMS with written confirmation that they have implemented a plan to address incorrect data in their app. CMS has been working closely with app developers and appreciates their cooperation in resolving the matter as quickly as possible to ensure patient privacy is protected.  If you have any questions, please reach out to <a href="mailto:BlueButtonAPI@cms.hhs.gov">BlueButtonAPI@cms.hhs.gov</a>.  
       </p>
     </div>
   </div>
