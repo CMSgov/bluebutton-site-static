@@ -1,5 +1,6 @@
 #!groovy
 def aws_creds = 'cbj-deploy'
+def helpers
 
 pipeline {
   agent any
@@ -33,23 +34,11 @@ pipeline {
   }
 
   stages {
-    stage('Notify HipChat') {
+    stage('Notify') {
       steps {
-        withCredentials([
-          string(credentialsId: 'hipchat-room', variable: 'room'),
-          string(credentialsId: 'hipchat-server', variable: 'server'),
-          string(credentialsId: 'hipchat-token', variable: 'token')
-        ]) {
-          hipchatSend(
-            color: 'GRAY',
-            notify: true,
-            message: "SUCCESS: ${env.JOB_NAME} [staging: ${params.DEPLOY_STAGING}] [prod: ${params.DEPLOY_PROD}]",
-            room: room,
-            sendAs: '',
-            server: server,
-            token: token,
-            v2enabled: true
-          )
+        script {
+          helpers = load "ops/helpers.groovy"
+          helpers.slackNotify "STARTING"
         }
       }
     }
@@ -239,44 +228,26 @@ pipeline {
     }
   }
 
-
   post {
     success {
-      withCredentials([
-        string(credentialsId: 'hipchat-room', variable: 'room'),
-        string(credentialsId: 'hipchat-server', variable: 'server'),
-        string(credentialsId: 'hipchat-token', variable: 'token')
-      ]) {
-        hipchatSend(
-            color: 'GREEN',
-            notify: true,
-            message: "SUCCESS: ${env.JOB_NAME} [staging: ${params.DEPLOY_STAGING}] [prod: ${params.DEPLOY_PROD}]",
-            room: room,
-            sendAs: '',
-            server: server,
-            token: token,
-            v2enabled: true
-        )
+      script {
+        helpers.slackNotify("SUCCESS", 'good')
       }
     }
 
     failure {
-      withCredentials([
-        string(credentialsId: 'hipchat-room', variable: 'room'),
-        string(credentialsId: 'hipchat-server', variable: 'server'),
-        string(credentialsId: 'hipchat-token', variable: 'token')
-      ]) {
-        hipchatSend(
-          color: 'RED',
-          notify: true,
-          message: "FAILED: ${env.JOB_NAME} [prod: ${params.DEPLOY_PROD}]",
-          room: room,
-          sendAs: '',
-          server: server,
-          token: token,
-          v2enabled: true
-        )
+      script {
+        try {
+          helpers.slackNotify("FAILED!", 'bad')
+        } catch (err) {
+          emailext body: "A CBJ job failed and we couldn't notify Slack.\n${BUILD_URL}", subject: 'CBJ Build Failure', to: 'bluebutton-dev-alert@fearsol.com'
+        }
       }
+    }
+
+    always {
+      // Cleanup the workspace
+      deleteDir()
     }
   }
 }

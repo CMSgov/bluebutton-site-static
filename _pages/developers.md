@@ -674,38 +674,7 @@ Chemo
 
 ## Production API Access
 
-Once you have successfully integrated with the CMS Blue Button API and are ready to go live, you can request access to the CMS Blue Button Production API by emailing bluebuttonapi@cms.hhs.gov.
-
-**How long does it take to get my app approved?**
-
-Typically this will take 1-2 weeks and involves a phone call and demo to the CMS Blue Button API team.
-
-**What is the criteria I must meet to be considered for Production API access?**
-
-First, you must register an application in the Blue Button Developer Sandbox and provide some basic information including:
-
-- Your Name
-- Email address
-- Website
-- Organization name
-- Phone number
-
-You also need to agree to the CMS Blue Button API Terms of Use when registering your app.
-
-Next, the following criteria needs to be met and verified by the CMS Blue Button API team in a meeting with your organization:
-
-- You are a US based company
-- You have a working app or website that can be demoed to the CMS Blue Button API team
-- Your app links to a Privacy statement or Terms of Use that explains to a beneficiary in plain language how you will use their data and how they can cancel their account
-- Your app must serve a Medicare population except in certain general research scenarios
-- You must articulate your business model and describe the value your app provides a beneficiary
-- You must demonstrate how beneficiary data will be protected within your app
-
-**What happens after I am approved?**
-
-You will receive an email from the CMS Blue Button API team notifying you of approval.  You will then receive a new Client ID and Secret for your app in production.  You will use the base URL api.bluebutton.cms.gov instead of sandbox.bluebutton.cms.gov.
-
-You will also agree to a future audit as part of a Production API access renewal process as your app versions update and the Blue Button API evolves.
+In order to gain production access, an organization should start by reviewing the [Terms of Service](/terms/), [production access user guide](/guide/), and [checklist](/checklist/). Once an organization believes it is fulfilling all the requirements detailed in the checklist and is adherent to the terms of service, they should email [bluebuttonapi@cms.hhs.gov](bluebuttonapi@cms.hhs.gov) to set up a production access demonstration meeting with the CMS team. 
 
 ---
 
@@ -732,6 +701,10 @@ The Blue Button logo and usage guidelines is detailed [here](https://www.healthi
 **Beneficiary Revokes Access**
 
 A beneficiary may revoke access to your application via the MyMedicare.gov website.  When you encounter an invalid token indicating a beneficiary has revoked access, you should make a reasonable attempt to handle that case making it easy for the beneficiary to understand what is happening with their Medicare data.
+
+**"Blue Button doesn't have any claims data for you just yet. Please try again later."**
+
+If Blue Button does not have data for a beneficiary, they will not be able to authorize access to the API, and will see the error message above.
 
 ---
 
