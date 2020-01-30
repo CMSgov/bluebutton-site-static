@@ -532,7 +532,7 @@ To join the Developer Sandbox, register a sample application and retrieve synthe
 
 **Step 1:** [Join the Developer Sandbox](https://sandbox.bluebutton.cms.gov/v1/accounts/create) and register a sample application
 
-Click "Application Registration" to register a new sample application and get a Client ID and Secret
+Click "Add an Application" to register a new sample application and get a Client ID and Secret
 
 **Step 2:** Generate a sample token
 
@@ -541,15 +541,22 @@ To test out the Blue Button API, you must first generate a sample token that rep
 To see a sample of Blue Button data you can access the Test Client. 
 
 1.  If you are already logged in to the Developer portal Log out
-2.  In the navigation bar on [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov) click on "Test Client"
+2.  In the navigation bar on [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov) click on "Test Client"]
 3.  Click "sample Authorization flow"
 4.	Click the Authorization Link to authorize. 
 5.  You will be redirected to MyMedicare.gov. Login with one of the synthetic beneficiary accounts
 
-        **Synthetic Beneficiary Accounts**
-    
-        The first user is **BBUser00000** with password **PW00000!** and these sample users continue all the way to **BBUser29999** with password **PW29999!**.
-        *Note: the ! at the end of the password is required*.
+	<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
+    <div class="ds-c-alert__body">
+      <h3 class="ds-c-alert__heading">Synthetic Beneficiary Accounts</h3>
+      <p class="ds-c-alert__text">
+			The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>.
+
+				<i>Note: the ! at the end of the password is required</i>
+      </p>
+    </div>
+	</div>
+
 6.  Click "Allow" to Authorize sharing
 7.  Review the details returned from the Authorization flow
 8.  Make some API calls for the beneficiary account you used to authorize access.
@@ -560,28 +567,61 @@ To see a sample of Blue Button data you can access the Test Client.
 Try this out in Postman:
 
 1. 	From the Postman app, open a new tab
-2. 	Paste the Request URL: https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325
+2. 	Paste the Request URL: 
+	```
+	https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325
+	```
 3. 	Click "Authorization", select type "OAuth 2.0"
 4.  Click on "Get New Access Token"
 5.  Enter the following parameters:
 
-    - Token Name: {The name of your app}
-    - Grant Type: Authorization Code (unless you have chosen an alternate value for your app)
-    - Callback URL: {One of the redirect uris you registered for your app}
-    - Auth URL: https://sandbox.bluebutton.cms.gov/v1/o/authorize/
-    - Access Token URL: https://sandbox.bluebutton.cms.gov/v1/o/token/
-    - Client ID: {The Client ID assigned to your App in the sandbox}
-    - Client Secret: {The Client Secret assigned to your App in the sandbox}
-    - Scope: patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read profile
-    - State: An optional value that you may use in your app
-    - Client Authentication: Send as Basic Auth header
+	**Token Name:** {The name of your app}
+
+	**Grant Type:** Authorization Code (unless you have chosen an alternate value for your app)
+
+	**Callback URL:** One of the redirect uris you registered for your app, for example:
+
+	```
+	http://localhost:3000
+	```
+
+	**Auth URL:** 
+
+	```
+	https://sandbox.bluebutton.cms.gov/v1/o/authorize/
+	```
+
+	**Access Token URL:** 
+
+	```
+	https://sandbox.bluebutton.cms.gov/v1/o/token/
+	```
+
+	**Client ID:** {The Client ID assigned to your App in the sandbox}
+
+	**Client Secret:** {The Client Secret assigned to your App in the sandbox}
+
+	**Scope:** 
+	```
+	patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read profile
+	```
+  
+	**State:** An optional value that you may use in your app
+
+	**Client Authentication:** Select "Send as Basic Auth header"
 
 6.  Click Request Token. You should see a pop up for the MyMedicare.gov. Login using one of the synthetic beneficiary accounts.
 
-    **Synthetic Beneficiary Accounts**
-    
-    The first user is **BBUser00000** with password **PW00000!** and these sample users continue all the way to **BBUser29999** with password **PW29999!**.
-    *Note: the ! at the end of the password is required*.
+	<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
+    <div class="ds-c-alert__body">
+      <h3 class="ds-c-alert__heading">Synthetic Beneficiary Accounts</h3>
+      <p class="ds-c-alert__text">
+			The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>.
+
+				<i>Note: the ! at the end of the password is required</i>
+      </p>
+    </div>
+	</div>
 
 7.  Authorize sharing by clicking "Allow" on the authorization screen.
 8.  When you return to the Postman workspace you should now be able to make requests to the API using the Bearer Token that will have been placed in the Header.
