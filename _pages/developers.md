@@ -97,7 +97,7 @@ When creating an Application in the sandbox a redirect URI is required. This is 
 Multiple redirect URIs can be entered in the Redirect_URI field. Each entry should be separated by a space or newline.
 
 A `Redirect_URI` follows this format:
-``` python
+``` 
 URLprotocol://[sub-domain.]domain_name[:port]/path
 ```
 
@@ -127,16 +127,16 @@ The `https://` format is used for secure communication and is required for all a
 The `custom_url` protocol is used by mobile applications to handle communications directly with your application on a mobile device.
 
 If you are using Mobile OAuth support for communication directly with a mobile device the `custom_url` should follow this format:
-``` python
+``` 
 Top-level.domain(TLD).domain-name[.sub-domain][.app_name]
 ```
 
 For example, if the Blue Button 2.0 team created an application we might create a custom_url of:
-``` python
+``` 
 gov.cms.bluebutton.oauthtester
 ```
 This would then be incorporated into a redirect URI entry. Here is an example:
-``` python
+``` 
 gov.cms.bluebutton.oauthtester:8080//bluebutton_app/callback.html
 ```
 
@@ -280,7 +280,7 @@ records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/expl
 The bulk of a beneficiary's data is contained within these ExplanationOfBenefit FHIR resources.  
 Each one can be thousands of lines long.
 
-<pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=20140000008325"</pre>
+<pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=-20140000008325"</pre>
 
 That API call will return an Explanation of Benefit that contains many FHIR resources and is typically thousands of lines long.  
 
@@ -298,7 +298,7 @@ That API call will return an Explanation of Benefit that contains many FHIR reso
                 "id": "1",
                 "status": "completed",
                 "subject": {
-                    "reference": "Patient/20140000008325"
+                    "reference": "Patient/-20140000008325"
                 },
                 "requester": {
                     "agent": {
@@ -328,12 +328,12 @@ That API call will return an Explanation of Benefit that contains many FHIR reso
 
 The above URL returns the beneficiary's demographics and other administrative information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html).  This information is mostly contact information, not medical data.
 
-<pre><code>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/20140000008325"</code></pre>
+<pre><code>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325"</code></pre>
 
 <pre>
     {
         "resourceType": "Patient",
-        "id": "20140000008325",
+        "id": "-20140000008325",
         "extension": [
             {
                 "url": "https://bluebutton.cms.gov/resources/variables/race",
@@ -347,7 +347,7 @@ The above URL returns the beneficiary's demographics and other administrative in
         "identifier": [
             {
                 "system": "http://bluebutton.cms.hhs.gov/identifier#bene_id",
-                "value": "20140000008325"
+                "value": "-20140000008325"
             },
             {
                 "system": "http://bluebutton.cms.hhs.gov/identifier#hicnHash",
@@ -384,7 +384,7 @@ The above URL returns the beneficiary's demographics and other administrative in
 
 The above URL returns the beneficiary's Coverage information as an [Coverage FHIR Resource.](http://hl7.org/fhir/coverage.html)
 
-<pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?beneficiary=20140000008325"
+<pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?beneficiary=-20140000008325"
 </pre>
 
 <pre>
@@ -532,56 +532,131 @@ To join the Developer Sandbox, register a sample application and retrieve synthe
 
 **Step 1:** [Join the Developer Sandbox](https://sandbox.bluebutton.cms.gov/v1/accounts/create) and register a sample application
 
-Click "Application Registration" to register a new sample application and get a Client ID and Secret
+Click "Add an Application" to register a new sample application and get a Client ID and Secret
 
 **Step 2:** Generate a sample token
 
 To test out the Blue Button API, you must first generate a sample token that represents a beneficiary granting consent.
 
-You can generate an access token for synthetic Patient 20140000008325 and sample Application TestApp by following these steps:
+To see a sample of Blue Button data you can access the Test Client. 
 
-1.  Login to the developer portal, click "Test Client" to begin and click "sample Authorization flow"
-2.	Click the link to authorize. This will start the authorization flow to TestApp
-3.	Login to your Blue Button Developer Sandbox Account (click [here](https://sandbox.bluebutton.cms.gov/v1/accounts/create) if you need to Join the Developer Sandbox) and you will see a JSON document containing your access token and other information
+1.  If you are already logged in to the Developer portal Log out
+2.  In the navigation bar on [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov) click on "Test Client"]
+3.  Click "sample Authorization flow"
+4.	Click the Authorization Link to authorize. 
+5.  You will be redirected to MyMedicare.gov. Login with one of the synthetic beneficiary accounts
 
-You can now use your access token wherever "YOUR TOKEN HERE" is referenced below.
+	<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
+    <div class="ds-c-alert__body">
+      <h3 class="ds-c-alert__heading">Synthetic Beneficiary Accounts</h3>
+      <p class="ds-c-alert__text">
+			The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>.
+
+				<i>Note: the ! at the end of the password is required</i>
+      </p>
+    </div>
+	</div>
+
+6.  Click "Allow" to Authorize sharing
+7.  Review the details returned from the Authorization flow
+8.  Make some API calls for the beneficiary account you used to authorize access.
+
 
 **Step 3:** Call the API
 
+Try this out in Postman:
+
+1. 	From the Postman app, open a new tab
+2. 	Paste the Request URL: 
+	```
+	https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325
+	```
+3. 	Click "Authorization", select type "OAuth 2.0"
+4.  Click on "Get New Access Token"
+5.  Enter the following parameters:
+
+	**Token Name:** {The name of your app}
+
+	**Grant Type:** Authorization Code (unless you have chosen an alternate value for your app)
+
+	**Callback URL:** One of the redirect uris you registered for your app, for example:
+
+	```
+	http://localhost:3000
+	```
+
+	**Auth URL:** 
+
+	```
+	https://sandbox.bluebutton.cms.gov/v1/o/authorize/
+	```
+
+	**Access Token URL:** 
+
+	```
+	https://sandbox.bluebutton.cms.gov/v1/o/token/
+	```
+
+	**Client ID:** {The Client ID assigned to your App in the sandbox}
+
+	**Client Secret:** {The Client Secret assigned to your App in the sandbox}
+
+	**Scope:** 
+	```
+	patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read profile
+	```
+  
+	**State:** An optional value that you may use in your app
+
+	**Client Authentication:** Select "Send as Basic Auth header"
+
+6.  Click Request Token. You should see a pop up for the MyMedicare.gov. Login using one of the synthetic beneficiary accounts.
+
+	<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
+    <div class="ds-c-alert__body">
+      <h3 class="ds-c-alert__heading">Synthetic Beneficiary Accounts</h3>
+      <p class="ds-c-alert__text">
+			The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>.
+
+				<i>Note: the ! at the end of the password is required</i>
+      </p>
+    </div>
+	</div>
+
+7.  Authorize sharing by clicking "Allow" on the authorization screen.
+8.  When you return to the Postman workspace you should now be able to make requests to the API using the Bearer Token that will have been placed in the Header.
+7. 	Click "Send" and see the synthetic beneficiary's personal health information as a Patient FHIR Resource display under "Body" in Postman.
+
+Once you have the Bearer Token you can also use Curl to make queries as follows:
+
 <pre>
-curl --header "Authorization: Bearer YOUR TOKEN HERE" https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/20140000008325
+curl --header "Authorization: Bearer YOUR TOKEN HERE" https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325
 </pre>
 
-Or, try this out in Postman:
-
-1. 	From Postman, open a new tab
-2. 	Paste the Request URL: https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/20140000008325
-3. 	Click "Authorization", select type "Bearer Token" and paste your token in the Token field
-4. 	Click "Preview Request" and see a success message "Request headers were successfully updated with authorization data for preview."
-5. 	Click "Send" and see the synthetic beneficiary's personal health information as a Patient FHIR Resource display under "Body" in Postman.
 
 **Step 4:** View the API Response
 
-In the API response for Patient 20140000008325 you will find:
-- 32 total claims (140 total claim lines)
+In the API response for Patient -20140000008325 you will find:
+uests- 32 total claims (140 total claim lines)
 - 25 carrier claims (110 carrier claim lines)
 - 2 inpatient claims (25 inpatient claim lines)
 - 5 Part D events
 
 
 **Step 5:** Accessing Synthetic Data
-In order to access the full synthetic dataset, you can do the following:
+In order to access the full synthetic dataset for an individual synthetic beneficiary, 
+you can do the following:
 1. Set up your sandbox application
 2. Log out of [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov).
 3. Access the authorization url at [https://sandbox.bluebutton.cms.gov/v1/o/authorize/](https://sandbox.bluebutton.cms.gov/v1/o/authorize/)
 
     *Note: The last backslash is important*.
-    *Also remember to append ?client_id={your client_id asigned to the application you registered}*
+    *Also remember to append ?client_id={your client_id assigned to the application you registered}*
 
 4. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY.
 5. Use one of thirty thousand provided usernames and passwords.
 
-    The first user is BBUser00000, with password PW00000!, and these sample users continue all the way to BBUser29999, with password PW29999!.
+    The first user is **BBUser00000** with password **PW00000!**, and these sample users continue all the way to **BBUser29999**, with password **PW29999!**.
 
     *Note: the ! at the end of the password is required*.
 
