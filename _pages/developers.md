@@ -541,7 +541,7 @@ To test out the Blue Button API, you must first generate a sample token that rep
 To see a sample of Blue Button data you can access the Test Client. 
 
 1.  If you are already logged in to the Developer portal Log out
-2.  In the navigation bar on [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov) click on "Test Client"]
+2.  In the navigation bar on [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov) click on "Test Client"
 3.  Click "sample Authorization flow"
 4.	Click the Authorization Link to authorize. 
 5.  You will be redirected to MyMedicare.gov. Login with one of the synthetic beneficiary accounts
@@ -571,7 +571,7 @@ Try this out in Postman:
 	```
 	https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325
 	```
-3. 	Click "Authorization", select type "OAuth 2.0"
+3. 	Click "Authorization" and select type "OAuth 2.0"
 4.  Click on "Get New Access Token"
 5.  Enter the following parameters:
 
