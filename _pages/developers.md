@@ -540,17 +540,17 @@ To test out the Blue Button API, you must first generate a sample token that rep
 
 To see a sample of Blue Button data you can access the Test Client. 
 
-1.  If you are already logged in to the Developer portal Log out
+1.  If you are already logged in to the Developer portal, log out
 2.  In the navigation bar on [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov) click on "Test Client"
 3.  Click "sample Authorization flow"
-4.	Click the Authorization Link to authorize. 
+4.	Click the Authorization Link to authorize
 5.  You will be redirected to MyMedicare.gov. Login with one of the synthetic beneficiary accounts
 
 	<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
     <div class="ds-c-alert__body">
       <h3 class="ds-c-alert__heading">Synthetic Beneficiary Accounts</h3>
       <p class="ds-c-alert__text">
-			The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>.
+			The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>
 
 				<i>Note: the ! at the end of the password is required</i>
       </p>
@@ -559,7 +559,7 @@ To see a sample of Blue Button data you can access the Test Client.
 
 6.  Click "Allow" to Authorize sharing
 7.  Review the details returned from the Authorization flow
-8.  Make some API calls for the beneficiary account you used to authorize access.
+8.  Make some API calls for the beneficiary account you used to authorize access
 
 
 **Step 3:** Call the API
@@ -610,22 +610,22 @@ Try this out in Postman:
 
 	**Client Authentication:** Select "Send as Basic Auth header"
 
-6.  Click Request Token. You should see a pop up for the MyMedicare.gov. Login using one of the synthetic beneficiary accounts.
+6.  Click Request Token. You should see a pop up for the MyMedicare.gov. Login using one of the synthetic beneficiary accounts
 
 	<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
     <div class="ds-c-alert__body">
       <h3 class="ds-c-alert__heading">Synthetic Beneficiary Accounts</h3>
       <p class="ds-c-alert__text">
-			The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>.
+			The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>
 
 				<i>Note: the ! at the end of the password is required</i>
       </p>
     </div>
 	</div>
 
-7.  Authorize sharing by clicking "Allow" on the authorization screen.
-8.  When you return to the Postman workspace you should now be able to make requests to the API using the Bearer Token that will have been placed in the Header.
-7. 	Click "Send" and see the synthetic beneficiary's personal health information as a Patient FHIR Resource display under "Body" in Postman.
+7.  Authorize sharing by clicking "Allow" on the authorization screen
+8.  When you return to the Postman workspace you should now be able to make requests to the API using the Bearer Token that will have been placed in the Header
+7. 	Click "Send" and see the synthetic beneficiary's personal health information as a Patient FHIR Resource display under "Body" in Postman
 
 Once you have the Bearer Token you can also use Curl to make queries as follows:
 
