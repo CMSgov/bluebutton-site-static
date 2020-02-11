@@ -26,13 +26,13 @@ The [Test Client](https://sandbox.bluebutton.cms.gov/testclient/) was originally
 
 ## Changes to the “Try the API” documentation
 
-While diagnosing the 500 error on the [Test Client](https://sandbox.bluebutton.cms.gov/testclient/), we discovered that the clarity of our documentation for first-time users of the Blue Button 2.0 API was unclear and needed improvement.
+While diagnosing the 500 error on the [Test Client](https://sandbox.bluebutton.cms.gov/testclient/), we discovered that our documentation for first-time users of the Blue Button 2.0 API was unclear and needed improvement.
 
 Instructions for users of the popular Postman developer tool have been provided in step 3 of the “[Try the API](https://bluebutton.cms.gov/developers/#try-the-api)” section of the documentation. These instructions are also easy to follow for developers who prefer to use the Insomnia app on Mac OS.
 
-In the “[Try the API](https://bluebutton.cms.gov/developers/#try-the-api)” section, we have highlighted the [Medicare.gov](http://medicare.gov/) synthetic beneficiary user ids and passwords in each section where you might need to use them to authenticate.
+In the “[Try the API](https://bluebutton.cms.gov/developers/#try-the-api)” section, we have highlighted the [Medicare.gov](http://medicare.gov/) synthetic beneficiary user IDs and passwords in each section where you might need to use them to authenticate.
 
-The documentation also reflects the switch to using minus sign prefix to the FHIR Patient IDs for the Blue Button 2.0 synthetic records. When we added the synthetic beneficiaries and their claims to the production environment, we added a minus sign prefix to the FHIR ID to avoid any possibility of a collision between synthetic and real beneficiary records.
+The documentation also reflects the switch to using a minus sign prefix to the FHIR Patient IDs for the Blue Button 2.0 synthetic records. When we added the synthetic beneficiaries and their claims to the production environment, we added a minus sign prefix to the FHIR ID to avoid any possibility of a collision between synthetic and real beneficiary records.
 
 Check out the documentation and let us know if there are other improvements we can make. As always, we welcome your feedback via the [Google Group](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api).
 
