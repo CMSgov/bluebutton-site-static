@@ -547,14 +547,13 @@ To see a sample of Blue Button data you can access the Test Client.
 5.  You will be redirected to MyMedicare.gov. Login with one of the synthetic beneficiary accounts
 
 	<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
-    <div class="ds-c-alert__body">
-      <h3 class="ds-c-alert__heading">Synthetic Beneficiary Accounts</h3>
-      <p class="ds-c-alert__text">
-			The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>
-
-				<i>Note: the ! at the end of the password is required</i>
-      </p>
-    </div>
+      <div class="ds-c-alert__body">
+        <h3 class="ds-c-alert__heading">Synthetic Beneficiary Accounts</h3>
+        <p class="ds-c-alert__text">
+          The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>
+          <i>Note: the ! at the end of the password is required</i>
+        </p>
+      </div>
 	</div>
 
 6.  Click "Allow" to Authorize sharing
@@ -656,9 +655,15 @@ you can do the following:
 4. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY.
 5. Use one of thirty thousand provided usernames and passwords.
 
-    The first user is **BBUser00000** with password **PW00000!**, and these sample users continue all the way to **BBUser29999**, with password **PW29999!**.
-
-    *Note: the ! at the end of the password is required*.
+    <div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
+      <div class="ds-c-alert__body">
+        <h3 class="ds-c-alert__heading">Synthetic Beneficiary Accounts</h3>
+        <p class="ds-c-alert__text">
+          The first user is <strong>BBUser00000</strong> with password <strong>PW00000!</strong> and these sample users continue all the way to <strong>BBUser29999</strong> with password <strong>PW29999!</strong>
+          <i>Note: the ! at the end of the password is required</i>
+        </p>
+      </div>
+	</div>
 
 6. Approve access for your application, which will now receive an access token, which can be used in the requests described above.
 
