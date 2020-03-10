@@ -45,6 +45,12 @@ To use the Blue Button OAuth 2 a developer must [register their application](htt
 
 A registered application is given a client ID and a client secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button API. Otherwise the [Client Application Flow](#client-application-flow) may be used.
 
+### Scopes
+
+Our OAuth screen gives beneficiaries the ability to choose whether or not to share theirdemographic information. Your application will need to handle the return of a 403 status codefrom the ​`/v1/fhir/Patient​` and `​/v1/connect/userinfo​` endpoints.
+
+If the beneficiary declines to share information that your application needs in order to function, you may display a message explaining why that information is needed and request reauthorization. **We encourage you to only request data that your application actually needs.**
+
 ### Native Mobile App Support {#nativeMobileApp}
 
 Native Mobile App Support follows the [RFC 8252 - OAuth 2.0 for Native Apps](https://tools.ietf.org/html/rfc8252) authentication flow utilizing the [PKCE](https://tools.ietf.org/html/rfc7636) extension and enables a custom URI scheme redirect.
@@ -604,6 +610,8 @@ Try this out in Postman:
 	```
 	patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read profile
 	```
+	
+	*NOTE:* When a beneficiary is authorizing your application, they will have the ability to omit the `patient/Patient.read` scope. **Be sure that you build your application accordingly to handle a 403 error if a beneficiary decides to filter their demographic information.**
   
 	**State:** An optional value that you may use in your app
 
