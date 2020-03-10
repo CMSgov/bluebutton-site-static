@@ -47,9 +47,9 @@ A registered application is given a client ID and a client secret. The secret sh
 
 ### Scopes
 
-Our OAuth screen gives beneficiaries the ability to choose whether or not to share theirdemographic information. Your application will need to handle the return of a 403 status codefrom the ​`/v1/fhir/Patient​` and `​/v1/connect/userinfo​` endpoints.
+Our OAuth screen gives beneficiaries the ability to choose whether or not to share their demographic information. Your application will need to handle the return of a 403 status codefrom the ​`/v1/fhir/Patient​` and `​/v1/connect/userinfo​` endpoints.
 
-If the beneficiary declines to share information that your application needs in order to function, you may display a message explaining why that information is needed and request reauthorization. **We encourage you to only request data that your application actually needs.**
+If the beneficiary declines to share information that your application needs in order to function, you may display a message explaining why that information is needed and request reauthorization, or, better yet, handle the collection of that information elsewhere within your application
 
 ### Native Mobile App Support {#nativeMobileApp}
 
