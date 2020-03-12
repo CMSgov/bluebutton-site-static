@@ -47,9 +47,45 @@ A registered application is given a client ID and a client secret. The secret sh
 
 ### Scopes
 
-Our OAuth screen gives beneficiaries the ability to choose whether or not to share their demographic information. Your application will need to handle the return of a 403 status codefrom the ​`/v1/fhir/Patient​` and `​/v1/connect/userinfo​` endpoints.
+Access tokens have a scope, which defines what the access token can do and what resources it can access. For our purposes, scopes are primarily utilized to give Medicare beneficiaries more granular choice over what data they would like to share with applications. The Blue Button 2.0 API has implemented [HL7 FHIR Scopes](http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context/) to manage access to beneficiary data. They look like this:
 
-If the beneficiary declines to share information that your application needs in order to function, you may display a message explaining why that information is needed and request reauthorization, or, better yet, handle the collection of that information elsewhere within your application
+```
+patient/Patient.read
+```
+
+```
+patient/Coverage.read
+```
+
+```
+patient/ExplanationOfBenefit.read
+```
+
+From the OpenID Connect specification we support:
+
+```
+profile
+```
+
+This gives access to the `/v1/connect/UserInfo` Endpoint.
+
+Our OAuth screen gives beneficiaries the ability to choose whether or not to share their demographic information. **Your application will need to handle the return of a 403 status code** from the `/v1/fhir/Patient` and `/v1/connect/userinfo` endpoints.
+
+<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/bene-auth-screen.png" alt="The OAuth screen with a choice for benes to share or withhold certain demographic information" />
+
+If the beneficiary declines to share information that your application needs to function, you may display a message explaining why that information is needed and request reauthorization, or, better yet, handle the collection of that information elsewhere within your application.
+
+#### Ensuring you still get the data you need
+
+Take the time to ensure that you have fallbacks in place if you are unable to access the `patient` or `userinfo` endpoints.
+
+For example, if you are getting the `patient_ID` from the `v1/fhir/Patient` endpoint, we recommend getting that identifier from the initial authorization response, or another resource like `ExplanationOfBenefit` or `Coverage`.
+
+#### Explanation of needed data to Medicare Beneficiaries
+
+If information limited by a scope is required for your application to properly function and it is not possible to get the information in another endpoint, we recommend providing some sort of explanation about why certain data is needed in your user flow.
+
+For example, if you use demographic information to help beneficiaries autofill tedious data-entry, you might want to explain that benefit before they reach the authorization screen. **It is essential, however, that you give beneficiaries the full picture.** If they do share that data with you for one-time data entry, they should know how long you keep it and if it is used for any other purposes.
 
 ### Native Mobile App Support {#nativeMobileApp}
 
