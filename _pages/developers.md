@@ -73,7 +73,9 @@ Our OAuth screen gives beneficiaries the ability to choose whether or not to sha
 
 <img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/bene-auth-screen.png" alt="The OAuth screen with a choice for benes to share or withhold certain demographic information" />
 
-If the beneficiary declines to share information that your application needs to function, you may display a message explaining why that information is needed and request reauthorization, or, better yet, handle the collection of that information elsewhere within your application.
+If the beneficiary declines to share information that your application needs to function, you may display a message explaining why that information is needed and request reauthorization, or handle the collection of that information elsewhere within your application.
+
+The default selection when a beneficiary reaches the authorization screen will be to share all data, including demographic data, with your application. If a beneficiary makes a selection as to whether or not they want to share demographic data with your application and later decides they want to change that selection, they'll need to be taken through the authorization flow again to make a different choice from the OAuth screen.
 
 #### Ensuring you still get the data you need
 
@@ -83,7 +85,7 @@ For example, if you are getting the `patient_ID` from the `v1/fhir/Patient` endp
 
 #### Explanation of needed data to Medicare Beneficiaries
 
-If information limited by a scope is required for your application to properly function and it is not possible to get the information in another endpoint, we recommend providing some sort of explanation about why certain data is needed in your user flow.
+If information limited by a scope is required for your application to properly function and it is not possible to get the information in another endpoint, we recommend providing an explanation about why certain data is needed in your user flow.
 
 For example, if you use demographic information to help beneficiaries autofill tedious data-entry, you might want to explain that benefit before they reach the authorization screen. **It is essential, however, that you give beneficiaries the full picture.** If they do share that data with you for one-time data entry, they should know how long you keep it and if it is used for any other purposes.
 
