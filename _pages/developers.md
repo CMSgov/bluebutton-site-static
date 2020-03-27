@@ -828,9 +828,9 @@ The Blue Button logo and usage guidelines is detailed [here](https://www.healthi
 
 A beneficiary may revoke access to your application via the MyMedicare.gov website.  When you encounter an invalid token indicating a beneficiary has revoked access, you should make a reasonable attempt to handle that case making it easy for the beneficiary to understand what is happening with their Medicare data.
 
-**"Blue Button doesn't have any data for you just yet. Please try again later."**
+**"Medicare is unable to retrieve your data at this time due to an internal issue. Our team is aware of the issue and is working to resolve it. Please try again at a later time. We apologize for any inconvenience."**
 
-If Blue Button does not have data for a beneficiary, they will not be able to authorize access to the API, and will see the error message above.
+If you or your users encounters this error message, know that our team is aware of the issue and is working to resolve it as quickly as possible.
 
 ---
 
