@@ -522,7 +522,7 @@ The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches t
 }
 </pre>
 
-### More Effecient Data Queries
+### More Efficient Data Queries
 
 #### Query by Type
 
@@ -547,9 +547,9 @@ For example, to request only Part D drug claims, add the query parameter:
 ?type=pde
 ```
 
-**To request multiple claim types, a list of comma separated values can be given for the TYPE parameter.**
+**To request multiple claim types, a list of comma-separated values can be given for the TYPE parameter.**
 
-If multiple codes are specified, EOBs matching all of those claim type will be returned:
+If multiple codes are specified, EOBs matching all of those claim types will be returned:
 
 ```
 /v1/fhir/ExplanationOfBenefit?patient=123&type=carrier,dme,hha,hospice,inpatient,outpatient,snf
@@ -740,7 +740,7 @@ The output from that request would look like this:
 …
 ```
 
- The BB2.0 API supports operators for less than (lt), greater than (gt), less than or equal (le), and greater than or equal(ge) the specified instant. It is also possible to specify a time interval by using two _lastUpdate parameters like this:
+ The BB2.0 API supports operators for less than (`lt`), greater than (`gt`), less than or equal (`le`), and greater than or equal (`ge`) the specified instant. It is also possible to specify a time interval by using two `_lastUpdated` parameters like this:
 
  ```
  /v1/fhir/ExplanationOfBenefit?patient=Patient/-19990000000001&_lastUpdated=gt2020-02-13T08:00:00-05:00&_lastUpdated=lt2020-02-14T08:00:00-05:00&_format=application%2Fjson%2Bfhir
