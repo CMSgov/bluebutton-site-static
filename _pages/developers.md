@@ -89,6 +89,12 @@ If information limited by a scope is required for your application to properly f
 
 For example, if you use demographic information to help beneficiaries autofill tedious data-entry, you might want to explain that benefit before they reach the authorization screen. **It is essential, however, that you give beneficiaries the full picture.** If they do share that data with you for one-time data entry, they should know how long you keep it and if it is used for any other purposes.
 
+#### What if my application doesn't need demographic information from beneficiaries?
+
+As stewards of sensitive data, it is important to adopt the practice of only asking for the data that is needed to perform a service for a beneficiary. As you register or edit an application in our Sandbox, you will see an option to choose whether or not your application needs to collect demographic information from beneficiaries.
+
+If you choose not to collect demographic information, Medicare beneficiaries will see a simplified version of the OAuth screen as they no longer need to choose whether or not they want to share that information.
+
 ### Native Mobile App Support {#nativeMobileApp}
 
 Native Mobile App Support follows the [RFC 8252 - OAuth 2.0 for Native Apps](https://tools.ietf.org/html/rfc8252) authentication flow utilizing the [PKCE](https://tools.ietf.org/html/rfc7636) extension and enables a custom URI scheme redirect.
