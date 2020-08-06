@@ -227,6 +227,15 @@ The output from that request would look like this:
 …
 ```
 
+<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
+  <div class="ds-c-alert__body">
+    <h3 class="ds-c-alert__heading">Note:</h3>
+    <p class="ds-c-alert__text">
+      Do not input dates before 02-12-2020 with <code>_lastUpdated</code>. Limitations of our backend service prevent data before 02-12-2020 from being tagged correctly.
+    </p>
+  </div>
+</div>
+
 The BB2.0 API supports operators for less than(lt), greater than(gt), less than or equal(le), and greater than or equal(ge) the specified instant. It is also possible to specify a time interval by using two _lastUpdate parameters like this:
 
 ```
@@ -266,7 +275,6 @@ More details are provided in the [search parameters page of the FHIR specificati
 The new selection parameters are live in the sandbox and production environments today. Try them out in the sandbox and let us know about your experience in the Google Group. Be sure to let our team know if this helps you more easily select the records you really want. Our team looks forward to seeing how you put this new capability to work.
 
 As always, please give us your feedback. You can let us know your experience with this new feature by posting a message in our Google Group.
-
 
 ---
 ## Earlier Blog Posts
