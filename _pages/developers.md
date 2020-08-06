@@ -715,6 +715,14 @@ The HL7 FHIR specification also provides a `_lastUpdated` query parameter for th
 ```
 https://sandbox.bluebutton.cms.gov/v1/fhir/Patient?_id=-19990000000001&_lastUpdated=gt2020-02-13T08:00:00-05:00&_format=application%2Fjson%2Bfhir’
 ```
+<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
+  <div class="ds-c-alert__body">
+    <h3 class="ds-c-alert__heading">Note:</h3>
+    <p class="ds-c-alert__text">
+      Do not input dates before 02-12-2020 with <code>_lastUpdated</code>. Limitations of our backend service prevent data before 02-12-2020 from being tagged correctly.
+    </p>
+  </div>
+</div>
 
 The output from that request would look like this:
 
