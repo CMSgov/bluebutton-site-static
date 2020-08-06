@@ -236,7 +236,7 @@ The output from that request would look like this:
   </div>
 </div>
 
-The BB2.0 API supports operators for less than(lt), greater than(gt), less than or equal(le), and greater than or equal(ge) the specified instant. It is also possible to specify a time interval by using two _lastUpdate parameters like this:
+The BB2.0 API supports operators for less than (`lt`), greater than (`gt`), less than or equal (`le`), and greater than or equal (`ge`) the specified instant. It is also possible to specify a time interval by using two `_lastUpdated` parameters like this:
 
 ```
 ‘/v1/fhir/ExplanationOfBenefit?patient=Patient/-19990000000001&_lastUpdated=gt2020-02-13T08:00:00-05:00&_lastUpdated=lt2020-02-14T08:00:00-05:00&_format=application%2Fjson%2Bfhir’
