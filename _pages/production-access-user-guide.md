@@ -103,8 +103,6 @@ Once you feel like you are ready for approval, you can send an email to [BlueBut
 
 The demo meeting is an opportunity for you to showcase your application to the Blue Button 2.0 Team. We need to see a predominately completed view of the journey beneficiaries take using your application. What does account creation look like? How do they initiate the OAuth flow? How do you display their data after they've shared it? How is their data used? If there is a feature within the app that allows the user to share their data with others (i.e., a provider), show how that is executed.
 
-Additionally, one of our main goals is to ensure that there are “no surprises” for our Medicare beneficiaries. Please consider offering a display screen that makes your Privacy Policy and TOS easily accessible to the user. If at some point in time you have an update or substantial change to either of those documents, we like for the user to be notified, i.e., a pop-up screen that notifies the user of a change, we prefer to see an opt-in approach.
-
 ### 4. Final Steps
 
 After the in-person demo, if necessary, we will follow up with your team to address any final concerns before issuing production credentials.
