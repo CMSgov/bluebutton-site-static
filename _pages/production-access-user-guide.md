@@ -91,14 +91,18 @@ And similarly from the security perspective:
 
 ## What does this process look like?
 
-### Review the Production Access Checklist
+### 1. Review the Production Access Checklist
 
 After you've read the [Blue Button 2.0 API Terms of Service](/terms/), take a moment to look over our [Production Access Checklist](/checklist/). Going over this document will help ensure that your application is ready for approval.
 
-### Email Our Team
+### 2. Email Our Team
 
-Once we receive your email, we’ll schedule a brief demonstration of your application to the BB2.0 API team to introduce ourselves and better understand a beneficiary's user journey using your application. 
+Once you feel like you are ready for approval, you can send an email to [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov). Once we receive your email, we’ll schedule a brief demonstration of your application to the BB2.0 API team to introduce ourselves and better understand a beneficiary's user journey using your application. 
 
-### Application Demo
+### 3. Application Demo
+
+The demo meeting is an opportunity for you to showcase your application to the Blue Button 2.0 Team. We need to see a predominately completed view of the journey beneficiaries take using your application. What does account creation look like? How do they initiate the OAuth flow? How do you display their data after they've shared it? How is their data used? If there is a feature within the app that allows the user to share their data with others (i.e., a provider), show how that is executed.
+
+### 4. Final Steps
 
 After the in-person demo, if necessary, we will follow up with your team to address any final concerns before issuing production credentials.
