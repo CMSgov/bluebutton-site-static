@@ -12,6 +12,15 @@ extra_links:
    link: /blog/index.html
 ---
 
+<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
+  <div class="ds-c-alert__body">
+    <h3 class="ds-c-alert__heading">Update: 09/02/2020</h3>
+    <p class="ds-c-alert__text">
+      As of 9/10/2020 the beneficiary demographic filter has been released and is now live.
+    </p>
+  </div>
+</div>
+
 As adoption of the Blue Button 2.0 API (BB2.0 API) grows, the CMS Blue Button team continues to look at ways to improve the API and stay current with evolving standards. A primary goal for CMS with the BB2.0 API is to help beneficiaries make informed choices about the applications they use and the data they share. To enhance the security and privacy posture for Medicare beneficiaries using the BB2.0 API, we are pleased to announce two changes to the API:
 
 1.	A feature enhancement to enable beneficiaries to choose whether they want to share their demographic information with a given application. This change is described in more detail below. 
