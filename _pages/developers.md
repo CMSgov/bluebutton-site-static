@@ -1,6 +1,6 @@
 ---
 layout: developers
-title:  "Blue Button API Docs"
+title:  "Blue Button 2.0 API Docs"
 date:   2017-10-30 09:21:12 -0500
 description: Instructions for understanding and using the CMS Blue Button 2.0 API to get you up and running quickly.
 landing-page: live
@@ -17,21 +17,21 @@ sections:
   - Sample Beneficiaries
   - Production API Access
   - Developer Guidelines
-  - Blue Button Implementation Guide
+  - Blue Button 2.0 API Implementation Guide
 ctas:
   -
     title: Developer Sandbox
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login
   -
-    title: Blue Button Blog
+    title: Blue Button 2.0 API Blog
     link: /blog
 ---
 
 ## Overview
 
-The Centers for Medicare and Medicaid Services (CMS) Blue Button API enables Medicare beneficiaries to connect their Medicare claims data to the applications, services, and research programs they trust.
+The Centers for Medicare and Medicaid Services (CMS) Blue Button 2.0 API enables Medicare beneficiaries to connect their Medicare claims data to the applications, services, and research programs they trust.
 
-The CMS Blue Button API:
+The CMS Blue Button 2.0 API:
 
 - Enables a developer to register a beneficiary-facing application
 - Enables a beneficiary to grant an application access to four years of their Part A, B, and D claims data
@@ -41,9 +41,9 @@ The CMS Blue Button API:
 
 ## Authorization
 
-To use the Blue Button OAuth 2 a developer must [register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/).
+To use the Blue Button 2.0 OAuth 2 a developer must [register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/).
 
-A registered application is given a client ID and a client secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button API. Otherwise the [Client Application Flow](#client-application-flow) may be used.
+A registered application is given a client ID and a client secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button 2.0 API. Otherwise the [Client Application Flow](#client-application-flow) may be used.
 
 ### Scopes
 
@@ -107,7 +107,7 @@ The [PKCE](https://tools.ietf.org/html/rfc7636) extension provides a technique 
 - plain
 - S256
 
-However, Blue Button 2.0 only supports the “S256” style code challenge.
+However, the Blue Button 2.0 API only supports the “S256” style code challenge.
 
 Where the:  
 ``` python
@@ -122,7 +122,7 @@ More details can be found about this flow on [OAuth.com](https://www.oauth.com/)
 
 ### Registering Your App for Mobile App Support
 
-When you register your application in the Blue Button 2.0 Developer Sandbox, you will want to specify a unique custom URI scheme. This should be a unique value that will not conflict with other custom URI schemes implemented on a user’s mobile device.
+When you register your application in the Blue Button 2.0 API Developer Sandbox, you will want to specify a unique custom URI scheme. This should be a unique value that will not conflict with other custom URI schemes implemented on a user’s mobile device.
 
 We recommend that you define your custom URI scheme using a reverse domain name notation. As we developed our own testing application, we implemented a custom URI scheme of:
 - `gov.cms.bluebutton.oauthtester`
@@ -138,7 +138,7 @@ tld.app.subdomain[.subsubdomain]:/callback/path/endpoint
 
 A coding example of an OAuth 2.0 and PKCE flow is available here: [Authorization Code with PKCE Flow - OAuth 2.0 Playground](https://www.oauth.com/playground/authorization-code-with-pkce.html)
 
-The Blue Button 2.0 engineering team has also created a sample Android application. You can review or fork the code here: [https://github.com/CMSgov/bluebutton-sample-client-android](https://github.com/CMSgov/bluebutton-sample-client-android)
+The Blue Button 2.0 API engineering team has also created a sample Android application. You can review or fork the code here: [https://github.com/CMSgov/bluebutton-sample-client-android](https://github.com/CMSgov/bluebutton-sample-client-android)
 
 ### Redirect_URI
 
@@ -181,7 +181,7 @@ If you are using Mobile OAuth support for communication directly with a mobile d
 Top-level.domain(TLD).domain-name[.sub-domain][.app_name]
 ```
 
-For example, if the Blue Button 2.0 team created an application we might create a custom_url of:
+For example, if the Blue Button 2.0 API team created an application we might create a custom_url of:
 ``` 
 gov.cms.bluebutton.oauthtester
 ```
@@ -197,7 +197,7 @@ To use this flow your application should be registered with `Client Type` set to
 
 #### Request authorization from user
 
-To allow a user to authorize your application, direct them to Blue Button's `authorize` endpoint.
+To allow a user to authorize your application, direct them to the Blue Button 2.0 API `authorize` endpoint.
 The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri. An optional `state` field that your application can use to identify the authorization request is recommended.
 
 ```
@@ -271,7 +271,7 @@ and
 
 To use the client application flow
 direct the user to
-the Blue Button `authorization` endpoint
+the Blue Button 2.0 API `authorization` endpoint
 with the `response_type` parameter set to `token`.
 
 ```
@@ -295,7 +295,7 @@ http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX
     &state=8e896a59f0744a8e93bf2f1f13230be5
 ```
 
-Below you will find a sample account you can use to test your Blue Button OAuth implementation. This account mimics a valid MyMedicare.gov account but has reduced functionality. For example, you cannot test “Forgot Password” flow.
+Below you will find a sample account you can use to test your Blue Button 2.0 API OAuth implementation. This account mimics a valid MyMedicare.gov account but has reduced functionality. For example, you cannot test “Forgot Password” flow.
 
 _Jane Doe Username: BBUser29999 Password: PW29999!_
 
@@ -317,7 +317,7 @@ Base Request URL:
 ### UserInfo:
 - Get User Profile from an Authorization Token
 
-As a security measure the date of birth, SSN, and HICN will not be provided by the CMS Blue Button API.
+As a security measure the date of birth, SSN, and HICN will not be provided by the CMS Blue Button 2.0 API.
 
 We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension) in our API responses.
 
@@ -334,7 +334,7 @@ Each one can be thousands of lines long.
 
 That API call will return an Explanation of Benefit that contains many FHIR resources and is typically thousands of lines long.  
 
-[Learn more about the Explanation of Benefits FHIR resource in Blue Button](/eob/)
+[Learn more about the Explanation of Benefits FHIR resource in the Blue Button 2.0 API](/eob/)
 
 <pre>
 {
@@ -767,7 +767,7 @@ We have mapped over 1,300 fields from the CMS claims data warehouse into FHIR.  
 - Part D Events
 - Skilled Nursing Facility Claims
 
-The Blue Button API FHIR data model leverages coding systems specific to Medicare billing forms and/or the Chronic Conditions Warehouse, FHIR and Industry Coding Systems.
+The Blue Button 2.0 API FHIR data model leverages coding systems specific to Medicare billing forms and/or the Chronic Conditions Warehouse, FHIR and Industry Coding Systems.
 
 For Example:
 
@@ -775,7 +775,7 @@ For Example:
 - [HL7 v3 Code System ActCode](http://hl7.org/fhir/v3/ActCode/cs.html)
 - [ICD-10](http://hl7.org/fhir/sid/icd-10)
 
-[View the full list of Blue Button API FHIR Data Model Coding Systems and Identifiers](https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md)
+[View the full list of Blue Button 2.0 API FHIR Data Model Coding Systems and Identifiers](https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md)
 
 **How Often Will New/Updated Data Be Available?**
 
@@ -783,23 +783,23 @@ Medicare Part A, B, and D claims data will be refreshed weekly.
 
 Our schedules may vary depending on many things like maintenance, delayed delivery of claims to the CCW data warehouse, or additional data quality processing that's needed.
 
-We recommend you have a daily job to fetch new claims data for your users. Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the Blue Button API Terms of Service.
+We recommend you have a daily job to fetch new claims data for your users. Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the Blue Button 2.0 API Terms of Service.
 
 **Synthetic Data**
 
-The CMS Blue Button API offers a synthetic data set for developers to test against. This means that each request returns a realistic value. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be accurate.
+The CMS Blue Button 2.0 API offers a synthetic data set for developers to test against. This means that each request returns a realistic value. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be accurate.
 
-Please note that this synthetic data set does not represent a longitudinal patient view. The claims—though representative independently—are shuffled and randomly assigned to patients. To build the synthetic data set, we selected a number of random claims, and shuffling them like a deck of cards among a group of fictitious Patient IDs. This will allow developers to test the Blue Button API system, but could result in a patient with records for contradictory procedures.
+Please note that this synthetic data set does not represent a longitudinal patient view. The claims—though representative independently—are shuffled and randomly assigned to patients. To build the synthetic data set, we selected a number of random claims, and shuffling them like a deck of cards among a group of fictitious Patient IDs. This will allow developers to test the Blue Button 2.0 API system, but could result in a patient with records for contradictory procedures.
 
 **Production Data**
 
-The CMS Blue Button API has at least one claim for over 53M beneficiaries.
+The CMS Blue Button 2.0 API has at least one claim for over 53M beneficiaries.
 
-Today, there are approximately 38M beneficiaries in traditional or fee-for-service Medicare.  The Blue Button API has Part A/B/D data for those beneficiaries plus Part D data for some beneficiaries on Medicare Advantage plans.  
+Today, there are approximately 38M beneficiaries in traditional or fee-for-service Medicare.  The Blue Button 2.0 API has Part A/B/D data for those beneficiaries plus Part D data for some beneficiaries on Medicare Advantage plans.  
 
 Part D has always been a separate program, but certain plans include both the MA benefits (Part C) and Part D.  As a result, Part D drug event data is collected separately from MA encounter data.  Part D drug event data for all participants in Part D has been collected by the agency since the program began in the mid-2000s.  
 
-The API also has historical claims data going back four years.  All of these factors contribute to the 53M number we use to describe the total number of beneficiaries available via the Blue Button API.
+The API also has historical claims data going back four years.  All of these factors contribute to the 53M number we use to describe the total number of beneficiaries available via the Blue Button 2.0 API.
 
 ## Try the API
 
@@ -811,9 +811,9 @@ Click "Add an Application" to register a new sample application and get a Client
 
 **Step 2:** Generate a sample token
 
-To test out the Blue Button API, you must first generate a sample token that represents a beneficiary granting consent.
+To test out the Blue Button 2.0 API, you must first generate a sample token that represents a beneficiary granting consent.
 
-To see a sample of Blue Button data you can access the Test Client. 
+To see a sample of Blue Button 2.0 API data you can access the Test Client. 
 
 1.  If you are already logged in to the Developer portal, log out
 2.  In the navigation bar on [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov) click on "Test Client"
@@ -952,7 +952,7 @@ you can do the following:
 
 [CSV of 100 sample beneficiaries with rich claims data](/synthetic_users_by_claim_count_full.csv)
 
-When getting started with the Blue Button API, it can be overwhelming to understand all of the coding systems and types of data that can be found in the Explanation of Benefit FHIR resource.
+When getting started with the Blue Button 2.0 API, it can be overwhelming to understand all of the coding systems and types of data that can be found in the Explanation of Benefit FHIR resource.
 
 Below are some hypothetical Beneficiaries that gives you a sense of what is found in claims data.
 
@@ -1037,11 +1037,11 @@ In order to gain production access, an organization should start by reviewing th
 
 ## Developer Guidelines
 
-Below are guidelines you should follow to be successful in your Blue Button API integration.
+Below are guidelines you should follow to be successful in your Blue Button 2.0 API integration.
 
 **Your Privacy Policy**
 
-You will be asked to provide a URL to your privacy policy and terms and conditions when registering your app in the Blue Button Developer Portal.  These links should be easy to access and understand by a beneficiary using your app.  Consider using the [Model Privacy Notice](https://www.healthit.gov/policy-researchers-implementers/model-privacy-notice-mpn).
+You will be asked to provide a URL to your privacy policy and terms and conditions when registering your app in the Blue Button 2.0 API Developer Portal.  These links should be easy to access and understand by a beneficiary using your app.  Consider using the [Model Privacy Notice](https://www.healthit.gov/policy-researchers-implementers/model-privacy-notice-mpn).
 
 **Rate Limiting and Data Refresh**
 
@@ -1049,11 +1049,11 @@ Medicare Part A, B, and D claims data will be refreshed weekly.
 
 Our schedules may vary depending on many things like maintenance, delayed delivery of claims to the CCW data warehouse, or additional data quality processing that's needed.
 
-We recommend you have a daily or weekly job to fetch new claims data for your users.  Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the [Blue Button API Terms of Service](/terms/).
+We recommend you have a daily or weekly job to fetch new claims data for your users.  Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the [Blue Button 2.0 API Terms of Service](/terms/).
 
-**Use of the Blue Button Logo**
+**Use of the Blue Button 2.0 API Logo**
 
-The Blue Button logo and usage guidelines is detailed [here](https://www.healthit.gov/patients-families/blue-button/blue-button-image).
+The Blue Button 2.0 API logo and usage guidelines is detailed [here](https://www.healthit.gov/patients-families/blue-button/blue-button-image).
 
 **Beneficiary Revokes Access**
 
@@ -1065,21 +1065,21 @@ If you or your users encounters this error message, know that our team is aware 
 
 ---
 
-## Blue Button Implementation Guide
+## Blue Button 2.0 Implementation Guide
 
-The Blue Button team have created a Blue Button 2.0 Implementation Guide (BB2IG).
-You can access the guide here: [Blue Button 2.0 Implementation Guide](/assets/ig/index.html).
+The Blue Button 2.0 API team has created a Blue Button 2.0 API Implementation Guide (BB2IG).
+You can access the guide here: [Blue Button 2.0 API Implementation Guide](/assets/ig/index.html).
 
 The BB2IG features nine profiles in this version of the guide:
 
-<li><a href="/assets/ig/StructureDefinition-bluebutton-patient-claim.html" target="_blank">Blue Button Patient Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-carrier-claim.html" target="_blank">Blue Button Carrier Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-dme-claim.html" target="_blank">Blue Button DME Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-hha-claim.html" target="_blank">Blue Button HHA Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-hospice-claim.html" target="_blank">Blue Button Hospice Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-inpatient-claim.html" target="_blank">Blue Button Inpatient Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-outpatient-claim.html" target="_blank">Blue Button Outpatient Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-pde-claim.html" target="_blank">Blue Button Part D Event Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-snf-claim.html" target="_blank">Blue Button SNF Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-patient-claim.html" target="_blank">Blue Button 2.0 API Patient Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-carrier-claim.html" target="_blank">Blue Button 2.0 API Carrier Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-dme-claim.html" target="_blank">Blue Button 2.0 API DME Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-hha-claim.html" target="_blank">Blue Button 2.0 API HHA Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-hospice-claim.html" target="_blank">Blue Button 2.0 API Hospice Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-inpatient-claim.html" target="_blank">Blue Button 2.0 API Inpatient Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-outpatient-claim.html" target="_blank">Blue Button 2.0 API Outpatient Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-pde-claim.html" target="_blank">Blue Button 2.0 API Part D Event Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-snf-claim.html" target="_blank">Blue Button 2.0 API SNF Claim Profile</a></li>
 
 ---
