@@ -1,6 +1,6 @@
-title: CMS Blue Button API
+title: CMS Blue Button 2.0 API
 description: > # this means to ignore newlines until "baseurl:"
-  The CMS Blue Button API enables beneficiaries to connect their Medicare claims data to the applications, services, and research programs they trust.
+  The CMS Blue Button 2.0 API enables beneficiaries to connect their Medicare claims data to the applications, services, and research programs they trust.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -39,7 +39,7 @@ exclude:
 include: ["_pages"]
 
 # Settings for RSS Feed for Blog
-name: Blue Button 2.0 Blog
+name: Blue Button 2.0 API Blog
 # the next two values are defined above so we are changing the keys.
 blog_description: Updates, how-to guides, sample apps, and other useful content related to Blue Button 2.0 API
 blog_url: https://bluebutton.cms.gov

@@ -1,8 +1,8 @@
 ---
 layout: default
-title:  "Blue Button Blog"
+title:  "Blue Button 2.0 API Blog"
 date:   2018-03-26 23:46:00 -0500
-description: The Blue Button Blog for Developers using Blue Button 2.0 API.
+description: The Blue Button 2.0 API Blog for Developers using Blue Button 2.0 API.
 landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"

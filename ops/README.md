@@ -1,4 +1,4 @@
-# Blue Button API Static Site
+# Blue Button 2.0 API Static Site
 
 ## Creating a release
 
