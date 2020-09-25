@@ -12,7 +12,7 @@ extra_links:
    link: /blog/index.html
 ---
 
-As adoption of the Blue Button 2.0 API (BB2.0 API) grows, the CMS Blue Button team continues to look at ways to improve the API and stay current with evolving standards. A primary goal for CMS with the BB2.0 API is to help beneficiaries make more informed choices about the applications they use and the data they share. To enhance the security and privacy posture for Medicare beneficiaries using the BB2.0 API, we are pleased to announce the following changes to our service:
+As adoption of the Blue Button 2.0 API (BB2.0 API) grows, the CMS Blue Button 2.0 team continues to look at ways to improve the API and stay current with evolving standards. A primary goal for CMS with the BB2.0 API is to help beneficiaries make more informed choices about the applications they use and the data they share. To enhance the security and privacy posture for Medicare beneficiaries using the BB2.0 API, we are pleased to announce the following changes to our service:
 
 1.	New requirements for third-party applications seeking access to Medicare claims data through the BB2.0 API, described below. 
 2.	A feature enhancement to enable beneficiaries to choose whether they want to share their demographic information with a given application ([more information on this enhancement available here](/blog/giving-beneficiaries-more-granular-choice-of-data-sharing-copy.html)).
@@ -33,13 +33,13 @@ The new requirements consist of the following documents:
 
 ## What does this mean for existing production applications?
 
-Organizations with applications that are currently in production will continue to have access to Blue Button under the existing terms of service until March 31st, 2020. However, before March 31st, 2020, an organization currently in production must review the new terms of service, user guide, and checklist, and seek re-approval from the CMS team to demonstrate adherence to the new requirements in order to maintain access to the API. Once an organization believes it is fulfilling all items detailed in the user guide and checklist and adheres to the new terms of service, they should email [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov) to set up a meeting with the CMS team to review. 
+Organizations with applications that are currently in production will continue to have access to Blue Button 2.0 under the existing terms of service until March 31st, 2020. However, before March 31st, 2020, an organization currently in production must review the new terms of service, user guide, and checklist, and seek re-approval from the CMS team to demonstrate adherence to the new requirements in order to maintain access to the API. Once an organization believes it is fulfilling all items detailed in the user guide and checklist and adheres to the new terms of service, they should email [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov) to set up a meeting with the CMS team to review. 
 
 **Every application currently in production will require re-review to ensure compliance with the new requirements by March 31st, 2020**. Many apps may already comply with, or even exceed, our new requirements - and we’re committed to working together to make the re review process as easy as possible. You can use our guides, mentioned above, to prepare and you can also reach out to us with any questions or concerns by contacting the BB2.0 email, above.
 
 Once your app is ready for a re-review meeting submit your request for an “application review meeting” via email to [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov).
 
-## What does this mean for applications looking to request production access to Blue Button for the first time?
+## What does this mean for applications looking to request production access to Blue Button 2.0 for the first time?
 
 **Effective 11/14/2019 (today), organizations seeking production access to the API must adhere to the requirements detailed in the user guide, checklist, and updated terms of service**. In order to gain production access, an organization should start by reviewing the [updated terms of service](/terms/), [user guide](/guide/), and [checklist](/checklist/). Once an organization believes it is fulfilling all the requirements detailed in the checklist and is adherent to the new terms of service, they should email bluebuttonapi@cms.hhs.gov to set up a production access demonstration meeting with the CMS team. 
 

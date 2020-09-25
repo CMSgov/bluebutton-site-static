@@ -6,16 +6,16 @@ description: "A guide to help you prepare for and understand our requirements fo
 badge: documentation
 permalink: /guide/
 sections:
-- Understanding Blue Button's Mission
+- Understanding the Blue Button 2.0 API Mission
 - Our Requirements for Production Access
 - What does this process look like?
 ---
-<div id="understanding-blue-button-s-mission"></div>
-## Understanding Blue Button's Mission
+<div id="understanding-the-blue-button-2-0-api-mission"></div>
+## Understanding the Blue Button 2.0 API Mission
 
 We're pleased that you're considering applying for production access to the CMS Blue Button 2.0 API. There is a broad and growing community of third-party companies, organizations, and developers building exciting applications that empower Medicare beneficiaries with their personal health information. Our mission is to provide a developer-friendly, standards-based API that enables developers to create these amazing resources for our beneficiaries.
 
-Another core element of our mission is making sure that Medicare beneficiaries (and their data) are protected. Our production access process and terms of service are designed to ensure that the beneficiary feels secure and that they are given the information to make informed decisions when using Blue Button to share their healthcare data with third-party applications. Before you apply for production access, it is vital that you have read and understand the Blue Button terms of service.
+Another core element of our mission is making sure that Medicare beneficiaries (and their data) are protected. Our production access process and terms of service are designed to ensure that the beneficiary feels secure and that they are given the information to make informed decisions when using the Blue Button 2.0 API to share their healthcare data with third-party applications. Before you apply for production access, it is vital that you have read and understand the Blue Button 2.0 API terms of service.
 
 This guide will help make sure you understand the requirements outlined in our terms of service, but you should always treat the terms of service as our official policy.
 

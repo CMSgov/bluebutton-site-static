@@ -1,6 +1,6 @@
 ---
 layout: home
-title:  "CMS Blue Button 2.0 API"
+title:  "CMS Blue Button 2.0"
 date:   2017-10-30 09:21:12 -0500
 description: A developer-friendly, standards-based API that enables Medicare beneficiaries to connect their claims data to the applications, services and research programs they trust.
 landing-page: live

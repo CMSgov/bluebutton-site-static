@@ -35,7 +35,7 @@ However, the installation does have a series of prerequisites: Docker, Docker-co
 For this post, we assume you are installing the application on a MacBook Pro running a current version of MacOS. Therefore, we will be using a unix-style shell for terminal access.
 
 The steps we will go through are:
-1. Get your Blue Button Developer Sandbox credentials
+1. Get your Blue Button 2.0 Developer Sandbox credentials
 2. Prepare your environment
 3. Get the Ruby on Rails code from GitHub
 4. Configure the application credentials

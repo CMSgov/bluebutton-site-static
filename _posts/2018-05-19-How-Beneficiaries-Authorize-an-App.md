@@ -23,7 +23,7 @@ One of the frequent questions we get is: *How does a beneficiary grant access to
 
 Let's look at this step-by-step.
 
-As a developer, let's assume that you have successfully submitted an application to the Blue Button Production API. You have your credentials and have implemented them in your application, or web site.
+As a developer, let's assume that you have successfully submitted an application to the Blue Button 2.0 Production API. You have your credentials and have implemented them in your application, or web site.
 
 *What happens next?*
 

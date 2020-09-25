@@ -25,7 +25,7 @@ ctas:
 
 ## Overview
 
-The [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html) is how the Blue Button API represents the bulk of the beneficiary's data.  Each one can be thousands of lines long.
+The [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html) is how the Blue Button 2.0 API represents the bulk of the beneficiary's data.  Each one can be thousands of lines long.
 
 <pre>curl --header "Authorization: Bearer AUTHORIZATION TOKEN"  "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=20140000008325"</pre>
 
