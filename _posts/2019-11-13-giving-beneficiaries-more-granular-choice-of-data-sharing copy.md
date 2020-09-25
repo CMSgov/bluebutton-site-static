@@ -12,7 +12,7 @@ extra_links:
    link: /blog/index.html
 ---
 
-As adoption of the Blue Button 2.0 API (BB2.0 API) grows, the CMS Blue Button team continues to look at ways to improve the API and stay current with evolving standards. A primary goal for CMS with the BB2.0 API is to help beneficiaries make informed choices about the applications they use and the data they share. To enhance the security and privacy posture for Medicare beneficiaries using the BB2.0 API, we are pleased to announce two changes to the API:
+As adoption of the Blue Button 2.0 API (BB2.0 API) grows, the CMS Blue Button 2.0 team continues to look at ways to improve the API and stay current with evolving standards. A primary goal for CMS with the BB2.0 API is to help beneficiaries make informed choices about the applications they use and the data they share. To enhance the security and privacy posture for Medicare beneficiaries using the BB2.0 API, we are pleased to announce two changes to the API:
 
 1.	A feature enhancement to enable beneficiaries to choose whether they want to share their demographic information with a given application. This change is described in more detail below. 
 2.	[Updates to the BB2.0 API Terms of Service, described in more detail here](/blog/ensuring-beneficiary-privacy-and-security-through-new-application-onboarding-requirements.html).

@@ -115,11 +115,11 @@ Fill out the other fields in the form and click "Save".
 
 Take the Client Id and Client Secret and add them to the respective fields in serverAuth.js file.
 
-If you are connecting to the Sandbox API the **tokenHost** Blue Button API Endpoint is:
+If you are connecting to the Sandbox API the **tokenHost** Blue Button 2.0 API Endpoint is:
 
 - https://sandbox.bluebutton.cms.gov
 
-For the Blue Button production API the Endpoint will be:
+For the Blue Button 2.0 production API the Endpoint will be:
 
 - https://api.bluebutton.cms.gov
 
@@ -137,13 +137,13 @@ Client ID was *ABCDEF12345* you would replace "<enter client id here>" with "ABC
 ```
 // BlueButton Registered Application Credentials
 const credentials = {
-    // Blue Button API sandbox Credentials
+    // Blue Button 2.0 API sandbox Credentials
 	 client: {
 	     id: '<enter client id here>',
 	     secret: '<enter client secret here>',
 	 },
     auth: {
-        tokenHost: '<Blue Button API Endpoint>',
+        tokenHost: '<Blue Button 2.0 API Endpoint>',
         authorizePath: '/v1/o/authorize/',
         tokenPath: '/v1/o/token/'
     }
