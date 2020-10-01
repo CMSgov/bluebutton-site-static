@@ -61,11 +61,11 @@ The BB2IG documents structure definitions for the following resources:
 <li><a href="/assets/ig/StructureDefinition-bluebutton-carrier-claim.html">Blue Button 2.0 PCarrier Claim Profile</a></li>
 <li><a href="/assets/ig/StructureDefinition-bluebutton-dme-claim.html">Blue Button 2.0 PDME Claim Profile</a></li>
 <li><a href="/assets/ig/StructureDefinition-bluebutton-hha-claim.html">Blue Button 2.0 PHHA Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-hospice-claim.html">Blue Button 2.0 PHospice Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-inpatient-claim.html">Blue Button 2.0 PInpatient Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-outpatient-claim.html">Blue Button 2.0 POutpatient Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-pde-claim.html">Blue Button 2.0 PPart D Event Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-snf-claim.html">Blue Button 2.0 PSNF Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-hospice-claim.html">Blue Button 2.0 Hospice Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-inpatient-claim.html">Blue Button 2.0 Inpatient Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-outpatient-claim.html">Blue Button 2.0 Outpatient Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-pde-claim.html">Blue Button 2.0 Part D Event Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-snf-claim.html">Blue Button 2.0 SNF Claim Profile</a></li>
 
 We welcome feedback on this guide. As always head over to the [Google Developer Group for Blue Button 2.0 API](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api) and
 leave us your comments.   
