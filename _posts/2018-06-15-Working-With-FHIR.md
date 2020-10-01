@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blue Button at HL7 FHIR DevDays
+title: Blue Button 2.0 at HL7 FHIR DevDays
 date:  2018-06-17 5:30 PM -0600
 categories: code
 permalink: /blog/:title
@@ -29,7 +29,7 @@ On June 19th, 2018 the Blue Button 2.0 API is being featured in one of the
 at the HL7 [FHIR DevDays conference](https://www.fhirdevdays.com/boston/) in Boston, MA.
 
 The break-out session and the hands-on practice areas feature exercises to work with different aspects of FHIR.
-For Blue Button we are taking developers through interacting with our FHIR API through the OAuth2.0 Interface.
+For Blue Button 2.0 we are taking developers through interacting with our FHIR API through the OAuth 2.0 Interface.
 We felt this was important because many test environments that expose FHIR resources do not protect those resources.
 Yet in the real world OAuth2.0 is typically used to control access. Interacting with an API through an OAuth2.0
 authorization layer can make development more complicated. Therefore, this exercise sets out to simplify that
@@ -46,10 +46,10 @@ What follows below is the Hands-on exercise that was provided for FHIR DevDays. 
 
 ## Hands-on Exercise
 
-During the hands-on session of the Blue Button on FHIR tutorial, you will learn how to connect an application to the CMS Blue Button Sandbox environment. Authorize access as one of 30,000 synthetic beneficiaries and retrieve a Patient record or a bundle of Coverage or ExplanationOfBenefit resources.
+During the hands-on session of the Blue Button 2.0 on FHIR tutorial, you will learn how to connect an application to the CMS Blue Button 2.0 Sandbox environment. Authorize access as one of 30,000 synthetic beneficiaries and retrieve a Patient record or a bundle of Coverage or ExplanationOfBenefit resources.
 
 After completing this tutorial, you will be able to:
--	Access the CMS Blue Button CapabilityStatement
+-	Access the CMS Blue Button 2.0 CapabilityStatement
 -	Connect to an Oauth2.0 protected API
 -	Authorize access as a target patient/beneficiary
 -	Retrieve Stu3 FHIR resources for the authorizing beneficiary
@@ -175,7 +175,7 @@ Sample data:
       }
     }
 
--	Copy and paste the curl commands into a terminal window to view Blue Button FHIR Resources.
+-	Copy and paste the curl commands into a terminal window to view Blue Button 2.0 FHIR Resources.
 
 ## Requirements
 - Internet connection

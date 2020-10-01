@@ -24,7 +24,7 @@ extra_links:
    link: /blog/index.html
 ---
 
-The Blue Button Team continues to look at performance improvements for the Blue Button 2.0 API. The
+The Blue Button 2.0 Team continues to look at performance improvements for the Blue Button 2.0 API. The
 ExplanationOfBenefit resource can involve a large amount of data being transferred. To improve performance
 in this area we are introducing the ability to apply gzip compression.
 

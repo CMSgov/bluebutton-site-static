@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Delving in to Blue Button Data
+title: Delving in to Blue Button 2.0 Data
 date:  2018-07-24 2:30 PM -0600
 categories: code
 permalink: /blog/:title

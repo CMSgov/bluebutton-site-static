@@ -12,7 +12,7 @@ extra_links:
    link: /blog/index.html
 ---
 
-Recently there has been an increase in questions on the [Blue Button Google Group](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api) about a ‘500 error’ when using the [Test Client](https://sandbox.bluebutton.cms.gov/testclient/).
+Recently there has been an increase in questions on the [Blue Button 2.0 Google Group](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api) about a ‘500 error’ when using the [Test Client](https://sandbox.bluebutton.cms.gov/testclient/).
 
 A few changes have been made to help you avoid this issue when starting to use the Blue Button 2.0 API.
 

@@ -60,7 +60,7 @@ Activate the environment with
 
     source ~/.virtualenv/pd_bbc/bin/activate
 
-## Download the Blue Button Client Code
+## Download the Blue Button 2.0 Client Code
 
     mkdir -p ~/developer/pd_bbc
     cd ~/developer/pd_bbc
