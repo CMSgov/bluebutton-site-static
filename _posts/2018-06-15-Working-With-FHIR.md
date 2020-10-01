@@ -29,7 +29,7 @@ On June 19th, 2018 the Blue Button 2.0 API is being featured in one of the
 at the HL7 [FHIR DevDays conference](https://www.fhirdevdays.com/boston/) in Boston, MA.
 
 The break-out session and the hands-on practice areas feature exercises to work with different aspects of FHIR.
-For Blue Button 2.0 we are taking developers through interacting with our FHIR API through the OAuth2.0 Interface.
+For Blue Button 2.0 we are taking developers through interacting with our FHIR API through the OAuth 2.0 Interface.
 We felt this was important because many test environments that expose FHIR resources do not protect those resources.
 Yet in the real world OAuth2.0 is typically used to control access. Interacting with an API through an OAuth2.0
 authorization layer can make development more complicated. Therefore, this exercise sets out to simplify that
