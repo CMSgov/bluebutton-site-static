@@ -58,9 +58,9 @@ this link: [Blue Button 2.0 Implementation Guide](/assets/ig/index.html).
 The BB2IG documents structure definitions for the following resources:
 
 <li><a href="/assets/ig/StructureDefinition-bluebutton-patient-claim.html">Blue Button 2.0 Patient Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-carrier-claim.html">Blue Button 2.0 PCarrier Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-dme-claim.html">Blue Button 2.0 PDME Claim Profile</a></li>
-<li><a href="/assets/ig/StructureDefinition-bluebutton-hha-claim.html">Blue Button 2.0 PHHA Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-carrier-claim.html">Blue Button 2.0 Carrier Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-dme-claim.html">Blue Button 2.0 DME Claim Profile</a></li>
+<li><a href="/assets/ig/StructureDefinition-bluebutton-hha-claim.html">Blue Button 2.0 HHA Claim Profile</a></li>
 <li><a href="/assets/ig/StructureDefinition-bluebutton-hospice-claim.html">Blue Button 2.0 Hospice Claim Profile</a></li>
 <li><a href="/assets/ig/StructureDefinition-bluebutton-inpatient-claim.html">Blue Button 2.0 Inpatient Claim Profile</a></li>
 <li><a href="/assets/ig/StructureDefinition-bluebutton-outpatient-claim.html">Blue Button 2.0 Outpatient Claim Profile</a></li>
