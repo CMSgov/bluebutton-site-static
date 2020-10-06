@@ -244,7 +244,7 @@ The BB2.0 API supports operators for less than (`lt`), greater than (`gt`), less
 
 ### Which Beneficiaries have updated records?
 
-Initially, all resources in production were given a lastUpdate value of 2020-01-01T00:00:00-00.00. The BB2.0 API started tracking lastUpdate values in February of 2020. So no resources have lastUpdate values before these dates. Queries for resources before these dates are valid, but will return empty results.
+Initially, all resources in production were given a lastUpdate value of 2020-01-01T00:00:00-00.00. The BB2.0 API started tracking lastUpdate values in February of 2020. So no resources have lastUpdate values before these dates. Do not input dates before 02-12-2020 with _lastUpdated.
 
 ### Which Synthetic Beneficiaries have updated records?
 
