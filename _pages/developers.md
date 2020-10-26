@@ -866,7 +866,7 @@ https://sandbox.bluebutton.cms.gov/v1/fhir/Patient?_id=-19990000000001&_lastUpda
   <div class="ds-c-alert__body">
     <h3 class="ds-c-alert__heading">Note:</h3>
     <p class="ds-c-alert__text">
-      Do not input dates before 02-12-2020 with <code>_lastUpdated</code>. Limitations of our backend service prevent data before 02-12-2020 from being tagged correctly.
+      Do not input dates before 2020-02-12 with <code>_lastUpdated</code>. Limitations of our backend service prevent data before 2020-02-12 from being tagged correctly.
     </p>
   </div>
 </div>
