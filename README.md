@@ -31,7 +31,7 @@ For more instructions on how to make changes, view the readme inside of the `blu
 
 ## Deploy
 
-Use the [deploy static site](https://cloudbeesjenkins.cms.gov/dev-master/job/Blue%20Button/job/deploy%20static%20site/) job.
+For information about deploying to the static site, please referernce the following document in confluence: [HOW-TO Static Site Updates](https://confluence.cms.gov/display/BB2/HOW-TO+Static+Site+Updates).
 
 ## Dockerized Setup
 
