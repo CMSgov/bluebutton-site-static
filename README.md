@@ -1,6 +1,8 @@
 # CMS Blue Button 2.0 API Static Site
 A static Jekyll site for the Blue Button 2.0 API splash page: [https://bluebutton.cms.gov](https://bluebutton.cms.gov/)
 
+NOTE:  Internal software engineers or other interested parties should follow the documentation for running a Dockerized local development enviornment. For more information see the [Dockerized Setup](#dockerized-setup) section.
+
 ## Requirements
 It is assumed that the environment already has these installed:
 * [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.io/) to install versioned ruby
@@ -30,3 +32,37 @@ For more instructions on how to make changes, view the readme inside of the `blu
 ## Deploy
 
 Use the [deploy static site](https://cloudbeesjenkins.cms.gov/dev-master/job/Blue%20Button/job/deploy%20static%20site/) job.
+
+## Dockerized Setup
+
+To startup the Docker containerized BB2 server, run the following command: 
+
+```
+docker-compose up -d
+
+```
+
+Alternatively, to also monitor the web server logging:
+
+```
+docker-compose up -d
+docker-compose logs -f | grep web
+
+```
+press Ctrl C will stop monitor logging.
+
+For static site development, open the following in your browser to view the changes being developed:  http://localhost:4000
+
+After making changes, you may need to refresh your browser a few times for them to show up. You may also need to restart the web service using the following command:
+
+```
+docker-compose restart web
+```
+
+To cleanup/remove the setup run the following:
+
+```
+docker-compose down
+docker rmi bluebutton-site-static_web
+```
+
