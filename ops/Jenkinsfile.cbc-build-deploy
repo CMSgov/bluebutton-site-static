@@ -1,0 +1,69 @@
+pipeline {
+  agent {
+    kubernetes {
+      defaultContainer "bb2-cbc-build"
+      yamlFile "ops/cbc-build.yaml"
+    }
+  }
+
+  environment {
+    AWS_ACCESS_KEY_ID = credentials("bb2-aws-key-id")
+    AWS_SECRET_ACCESS_KEY = credentials("bb2-aws-key-secret")
+    AWS_DEFAULT_REGION = "us-east-1"
+  }
+
+  parameters {
+    choice(
+      name: "SITE_ENV",
+      choices: ["test", "staging", "prod"],
+      description: "The environment to build and deploy to."
+    )
+
+    string(
+      name: "CSS_REPO_BRANCH",
+      defaultValue: "master",
+      description: "The branch of the CSS repo to deploy. Defaults to master."
+    )
+  }
+
+  stages {
+    stage("Notify Slack") {
+      steps {
+        script {
+          helpers = load "ops/helpers.groovy"
+          helpers.slackNotify "STARTING"
+        }
+      }
+    }
+
+    stage("Run Bundle Install") {
+      steps {
+        sh """
+        bundle install
+        """
+      }
+    }
+
+    stage("Run Jekyll Build") {
+      steps {
+        sh """
+        bundle exec jekyll build --config _config.yml,_config-${SITE_ENV}.yml
+        """
+      }
+    }
+  }
+
+  post {
+    success {
+      script {
+        helpers.slackNotify("SUCCESS", "good")
+      }
+    }
+
+    failure {
+      script {
+        helpers.slackNotify("FAILURE", "bad")
+      }
+    }
+  }
+}
