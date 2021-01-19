@@ -51,6 +51,16 @@ pipeline {
         """
       }
     }
+
+    stage("Checkout CSS Repo") {
+      steps {
+        checkout([
+            $class: "GitSCM",
+            branches: [[name: "${params.CSS_REPO_BRANCH}"]],
+            userRemoteConfigs: [[url: "https://github.com/CMSgov/bluebutton-css.git"]]
+        ])
+      }
+    }
   }
 
   post {
