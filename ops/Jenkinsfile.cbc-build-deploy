@@ -19,12 +19,6 @@ pipeline {
       description: "The environment to build and deploy to."
     )
 
-    booleanParam(
-      name: "CSS_DEPLOY",
-      defaultValue: false,
-      description: "Optionally deploy CSS. Defaults to false."
-    )
-
     string(
       name: "CSS_REPO_BRANCH",
       defaultValue: "master",
@@ -82,11 +76,6 @@ pipeline {
     }
 
     stage("Checkout CSS Repo") {
-      when {
-        expression {
-          params.CSS_DEPLOY == true
-        }
-      }
       steps {
         checkout([
             $class: "GitSCM",
@@ -97,11 +86,6 @@ pipeline {
     }
 
     stage("Deploy CSS to S3") {
-      when {
-        expression {
-          params.CSS_DEPLOY == true
-        }
-      }
       steps {
         sh """
         aws s3 cp ./dist/static-main.css s3://${SITE_BUCKET}/assets/css/
