@@ -22,7 +22,7 @@ pipeline {
     string(
       name: "CSS_REPO_BRANCH",
       defaultValue: "master",
-      description: "The branch of the CSS repo to deploy, if enabled. Defaults to master."
+      description: "The branch of the CSS repo to deploy. Defaults to master."
     )
   }
 
