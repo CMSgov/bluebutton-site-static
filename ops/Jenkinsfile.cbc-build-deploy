@@ -31,7 +31,7 @@ pipeline {
       steps {
         script {
           helpers = load "ops/helpers.groovy"
-          helpers.slackNotify "STARTING"
+          helpers.slackNotify "STARTING - ENV:${params.SITE_ENV}"
         }
       }
     }
@@ -97,13 +97,13 @@ pipeline {
   post {
     success {
       script {
-        helpers.slackNotify("SUCCESS", "good")
+        helpers.slackNotify("SUCCESS - ENV:${params.SITE_ENV", "good")
       }
     }
 
     failure {
       script {
-        helpers.slackNotify("FAILURE", "bad")
+        helpers.slackNotify("FAILURE - ENV:${params.SITE_ENV", "bad")
       }
     }
   }
