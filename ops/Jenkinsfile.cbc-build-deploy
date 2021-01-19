@@ -19,10 +19,16 @@ pipeline {
       description: "The environment to build and deploy to."
     )
 
+    booleanParam(
+      name: "CSS_DEPLOY",
+      defaultValue: false,
+      description: "Optionally deploy CSS. Defaults to false."
+    )
+
     string(
       name: "CSS_REPO_BRANCH",
       defaultValue: "master",
-      description: "The branch of the CSS repo to deploy. Defaults to master."
+      description: "The branch of the CSS repo to deploy, if enabled. Defaults to master."
     )
   }
 
@@ -32,6 +38,21 @@ pipeline {
         script {
           helpers = load "ops/helpers.groovy"
           helpers.slackNotify "STARTING"
+        }
+      }
+    }
+
+    stage("Determine S3 Bucket") {
+      steps {
+        script {
+          echo "Setting SITE_BUCKET from SITE_ENV"
+          if (params.SITE_ENV == "test") {
+            SITE_BUCKET = "test.bluebutton.cms.gov"
+          } else if (params.SITE_ENV = "staging") {
+            SITE_BUCKET = "staging.bluebutton.cms.gov"
+          } else if (params.SITE_ENV = "prod") {
+            SITE_BUCKET = "bluebutton.cms.gov"
+          }
         }
       }
     }
@@ -52,15 +73,18 @@ pipeline {
       }
     }
 
-    stage("Debug") {
+    stage("Deploy Static Site to S3") {
       steps {
         sh """
-        ls -l
+        aws s3 sync --delete ./_site/ s3://${SITE_BUCKET}
         """
       }
     }
 
     stage("Checkout CSS Repo") {
+      when {
+        environment name: "CSS_DEPLOY", value: true
+      }
       steps {
         checkout([
             $class: "GitSCM",
@@ -70,11 +94,12 @@ pipeline {
       }
     }
 
-    stage("Debug 2") {
+    stage("Deploy CSS to S3") {
+      when {
+        environment name: "CSS_DEPLOY", value: true
+      }
       steps {
-        sh """
-        ls -l
-        """
+        aws s3 cp ./dist/static-main.css s3://${SITE_BUCKET}/assets/css/
       }
     }
   }
