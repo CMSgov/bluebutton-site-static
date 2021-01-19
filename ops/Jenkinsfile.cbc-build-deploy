@@ -99,7 +99,9 @@ pipeline {
         environment name: "CSS_DEPLOY", value: true
       }
       steps {
+        sh """
         aws s3 cp ./dist/static-main.css s3://${SITE_BUCKET}/assets/css/
+        """
       }
     }
   }
