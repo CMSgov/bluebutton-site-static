@@ -83,7 +83,9 @@ pipeline {
 
     stage("Checkout CSS Repo") {
       when {
-        environment name: "CSS_DEPLOY", value: true
+        expression {
+          params.CSS_DEPLOY == true
+        }
       }
       steps {
         checkout([
@@ -96,7 +98,9 @@ pipeline {
 
     stage("Deploy CSS to S3") {
       when {
-        environment name: "CSS_DEPLOY", value: true
+        expression {
+          params.CSS_DEPLOY == true
+        }
       }
       steps {
         sh """
