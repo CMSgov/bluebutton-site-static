@@ -48,9 +48,9 @@ pipeline {
           echo "Setting SITE_BUCKET from SITE_ENV"
           if (params.SITE_ENV == "test") {
             SITE_BUCKET = "test.bluebutton.cms.gov"
-          } else if (params.SITE_ENV = "staging") {
+          } else if (params.SITE_ENV == "staging") {
             SITE_BUCKET = "staging.bluebutton.cms.gov"
-          } else if (params.SITE_ENV = "prod") {
+          } else if (params.SITE_ENV == "prod") {
             SITE_BUCKET = "bluebutton.cms.gov"
           }
         }
