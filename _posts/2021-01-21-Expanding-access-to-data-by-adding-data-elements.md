@@ -5,8 +5,8 @@ date:  2021-01-21 6:00 AM -0600
 categories: latest
 permalink: /blog/:title
 badge: blog
-hero-image: /assets/img/blog/hero-images/fhir-r4-coming-to-blue-button-api.jpg
-hero-thumb: /assets/img/blog/hero-images/thumbnails/fhir-r4-coming-to-blue-button-api.jpg
+hero-image: /assets/img/blog/hero-images/expanding-access-to-data-by-adding-data-elements.jpg
+hero-thumb: /assets/img/blog/hero-images/thumbnails/expanding-access-to-data-by-adding-data-elements.jpg
 extra_links:
  - title: Blog Index
    link: /blog/index.html
