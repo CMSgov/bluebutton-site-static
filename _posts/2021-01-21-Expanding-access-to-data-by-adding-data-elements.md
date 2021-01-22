@@ -87,7 +87,7 @@ updated accordingly.
 
 -   **Claim Effective Date:**
     -   **CCW Field Name:** `NCH_WKLY_PROC_DT`
-    -   **FHIR element Name:** `explanationofbenefits.supportinginfo.timingDate`
+    -   **FHIR element Name:** `explanationofbenefits.information.timingDate`
     -   **Slice:** claimrecvddate
     -   {:.ds-u-padding-bottom--2}**Description:** The date the weekly NCH database load
         process cycle begins, during which the claim records are loaded
@@ -138,7 +138,7 @@ updated accordingly.
 
 -   **Date Beneficiary Enrolled in Hospice:** 
     -   **CCW Field Name:** `CLM_HOSPC_START_DT_ID `
-    -   **FHIR Element:** `explanationofbenefits.supportinginfo.timing.period`
+    -   **FHIR Element:** `explanationofbenefits.information.timing.period`
     -   **Slice:** `admissionperiod`
     -   {:.ds-u-padding-bottom--2}**Description:** For Home Health prospective payment system
         (PPS) claims, the \'from\' date and the \'thru\' date on the RAP
@@ -156,7 +156,7 @@ updated accordingly.
 
 -   **Date Beneficiary Ended Hospice:**
     -   **CCW Field Name:** `NCH_BENE_DSCHRG_DT`
-    -   **FHIR element Name:** `explanationofbenefits.supportinginfo.timing.period  `
+    -   **FHIR element Name:** `explanationofbenefits.information.timing.period  `
     -   **Slice:** `admissionperiod`
     -   {:.ds-u-padding-bottom--2}**Description:** The last day on the billing statement covering
         services rendered to the beneficiary (a.k.a \'Statement Covers
