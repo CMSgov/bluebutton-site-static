@@ -99,13 +99,13 @@ pipeline {
   post {
     success {
       script {
-        helpers.slackNotify("SUCCESS - ENV:${params.SITE_ENV", "good")
+        helpers.slackNotify("SUCCESS - ENV:${params.SITE_ENV}", "good")
       }
     }
 
     failure {
       script {
-        helpers.slackNotify("FAILURE - ENV:${params.SITE_ENV", "bad")
+        helpers.slackNotify("FAILURE - ENV:${params.SITE_ENV}", "bad")
       }
     }
   }
