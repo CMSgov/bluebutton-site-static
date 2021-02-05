@@ -151,7 +151,7 @@ curl --header "Authorization: Bearer YOUR TOKEN HERE" https://sandbox.bluebutton
 **Step 4:** View the API Response
 
 In the API response for Patient -20140000008325 you will find:
-uests- 32 total claims (140 total claim lines)
+- 32 total claims (140 total claim lines)
 - 25 carrier claims (110 carrier claim lines)
 - 2 inpatient claims (25 inpatient claim lines)
 - 5 Part D events
