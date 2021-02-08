@@ -19,6 +19,15 @@ extra_links:
    link: /blog/index.html
 ---
 
+  <div class="ds-c-alert ds-c-alert--hide-icon">
+    <div class="ds-c-alert__body">
+      <h3 class="ds-c-alert__heading">Updated Feb 8, 2021</h3>
+      <p class="ds-c-alert__text">
+        This post has been updated with corrected content.
+      </p>
+    </div>
+  </div>
+
 One of the frequent questions we get is: *How does a beneficiary grant access to their claims information to an application?*
 
 Let's look at this step-by-step.
@@ -35,7 +44,7 @@ their claims data with your application.
 ## Connecting
 The beneficiary clicks the link in your application and is connected to the Blue Button 2.0 API.
 
-## Authenticating with MyMedicare.gov
+## Authenticating with Medicare.gov
 The Blue Button 2.0 API does not recognize the person connecting to the API so a login screen is presented to enable the Beneficiary to authenticate.
 
 ![MyMedicare beneficiary Sign-in screen](/assets/img/blog/beneficiary_auth_screen.png)
@@ -44,7 +53,7 @@ There are four tracks a beneficiary can take from this sign in page:
 
 1. Cancel: The beneficiary doesn't authenticate
 2. Forget their credentials: Click "Trouble Signing In to reset their credentials.
-3. Create an Account: If the Beneficiary doesn't have a MyMedicare.gov account
+3. Create an Account: If the Beneficiary doesn't have a Medicare account
 4. Sign In: Correctly enter the account credentials.
 
 ### 1. Cancel:
@@ -68,20 +77,20 @@ After providing this information and answering a challenge question the benefici
 
 ### 3. Create an Account:
 
-If a beneficiary does not have an account on MyMedicare.gov they can create one using the "Create Account" link.
+If a beneficiary does not have a your Medicare account they can create one using the "Create Account" link.
 
-In order for a beneficiary to sign up for a MyMedicare.gov account they will need their Medicare card.
+In order for a beneficiary to sign up for a Medicare account they will need their Medicare card.
 This has their Medicare Number and their Medicare Part A and Part B eligibility dates.
 
 In our [Google Group](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api) we have seen a
 number of questions posed about Medicare Advantage beneficiaries. Medicare Advantage Pharmacy information
 (Part D claims) are found in the Blue Button 2.0 API. The question that is raised is how does a beneficiary
-register a MyMedicare.gov account in order to access their pharmacy claims if they don't have a Medicare Part A or Part B plan.  
+register a Medicare account in order to access their pharmacy claims if they don't have a Medicare Part A or Part B plan.  
 The answer is that a beneficiary should refer to their Medicare card and enter the eligibility date for their Part A
 or Part B plan. A beneficiary does not have to be an active Part A or Part B plan in order to create a
-MyMedicare.gov online account.
+Medicare online account.
 
-The other information needed to apply for a MyMedicare.gov account is:
+The other information needed to apply for a Medicare account is:
 
 - Last name
 - Date of Birth
@@ -143,7 +152,7 @@ The screen asks the beneficiary if they want to give the named application acces
 - At least four years of their Medicare claims information
 - Access to their profile and demographic information (name, address, date of birth etc.)
 - Make copies of that data
-- Return to the Blue Button 2.0 API and retrieve new information until a beneficiary goes to MyMedicare.gov and revokes the application's access permissions
+- Return to the Blue Button 2.0 API and retrieve new information until a beneficiary goes to their Medicare account and revokes the application's access permissions
 
 There are two options:
 
@@ -156,7 +165,7 @@ If the beneficiary chooses the **Yes** option the Blue Button 2.0 API calls back
 with a token that enables the application to access the API.
 
 If a beneficiary wants to revoke access to your application at a future time they will need to use go to
-[MyMedicare.gov](https://mymedicare.gov), login using their Medicare Username and password and go to the
+[Medicare.gov](https://medicare.gov), login using their Medicare Username and password and go to the
 application dashboard in their profile to revoke access permission to your application.
 
 ### No, do not approve access
