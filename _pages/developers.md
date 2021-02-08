@@ -57,7 +57,7 @@ To see a sample of Blue Button data you can access the Test Client.
 2.  In the navigation bar on [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov) click on "Test Client"
 3.  Click "sample Authorization flow"
 4.	Click the Authorization Link to authorize
-5.  You will be redirected to MyMedicare.gov. Login with one of the synthetic beneficiary accounts
+5.  You will be redirected to your Medicare account. Login with one of the synthetic beneficiary accounts
 
 	<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
       <div class="ds-c-alert__body">
@@ -124,7 +124,7 @@ Try this out in Postman:
 
 	**Client Authentication:** Select "Send as Basic Auth header"
 
-6.  Click Request Token. You should see a pop up for the MyMedicare.gov. Login using one of the synthetic beneficiary accounts
+6.  Click Request Token. You should see a pop up for your Medicare account. Login using one of the synthetic beneficiary accounts
 
 	<div class="ds-c-alert ds-c-alert--hide-icon ds-u-margin-bottom--2">
     <div class="ds-c-alert__body">
@@ -442,7 +442,7 @@ http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX
     &state=8e896a59f0744a8e93bf2f1f13230be5
 ```
 
-Below you will find a sample account you can use to test your Blue Button 2.0 API OAuth implementation. This account mimics a valid MyMedicare.gov account but has reduced functionality. For example, you cannot test “Forgot Password” flow.
+Below you will find a sample account you can use to test your Blue Button 2.0 API OAuth implementation. This account mimics a valid Medicare account but has reduced functionality. For example, you cannot test “Forgot Password” flow.
 
 _Jane Doe Username: BBUser29999 Password: PW29999!_
 
@@ -1067,7 +1067,7 @@ The Blue Button 2.0 API logo and usage guidelines is detailed [here](https://www
 
 **Beneficiary Revokes Access**
 
-A beneficiary may revoke access to your application via the MyMedicare.gov website.  When you encounter an invalid token indicating a beneficiary has revoked access, you should make a reasonable attempt to handle that case making it easy for the beneficiary to understand what is happening with their Medicare data.
+A beneficiary may revoke access to your application via the Medicare website.  When you encounter an invalid token indicating a beneficiary has revoked access, you should make a reasonable attempt to handle that case making it easy for the beneficiary to understand what is happening with their Medicare data.
 
 **"Medicare is unable to retrieve your data at this time due to an internal issue. Our team is aware of the issue and is working to resolve it. Please try again at a later time. We apologize for any inconvenience."**
 
