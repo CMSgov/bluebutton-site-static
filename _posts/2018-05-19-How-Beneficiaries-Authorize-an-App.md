@@ -77,7 +77,7 @@ After providing this information and answering a challenge question the benefici
 
 ### 3. Create an Account:
 
-If a beneficiary does not have a your Medicare account they can create one using the "Create Account" link.
+If a beneficiary does not have a Medicare account they can create one using the "Create Account" link.
 
 In order for a beneficiary to sign up for a Medicare account they will need their Medicare card.
 This has their Medicare Number and their Medicare Part A and Part B eligibility dates.
