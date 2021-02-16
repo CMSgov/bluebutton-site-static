@@ -44,7 +44,7 @@ pipeline {
             if (!currentBuild.getBuildCauses()[0].toString().contains("Started by user")) {
               error("Prod deployment must be triggered manually.")
             }
-            if (env.BRANCH_NAME != "master") {
+            if (env.BRANCH_NAME != "master" || params.CSS_REPO_BRANCH != "master") {
               error("Prod deployment must be triggered from master branch.")
             }
             echo("Prod deployment passed tests, proceeding.")
