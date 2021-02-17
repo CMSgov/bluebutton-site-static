@@ -36,6 +36,25 @@ pipeline {
       }
     }
 
+    stage("Prod Deployment Gate") {
+      steps {
+        script {
+          if (params.SITE_ENV == "prod") {
+            echo("SITE_ENV is set to prod, verifying deployment was triggered manually from master branch")
+            if (!currentBuild.getBuildCauses()[0].toString().contains("Started by user")) {
+              error("Prod deployment must be triggered manually.")
+            }
+            if (env.BRANCH_NAME != "master" || params.CSS_REPO_BRANCH != "master") {
+              error("Prod deployment must be triggered from master branch.")
+            }
+            echo("Prod deployment passed tests, proceeding.")
+          } else {
+            echo("SITE_ENV is set to ${params.SITE_ENV}, proceeding.")
+          }
+        }
+      }
+    }
+
     stage("Determine S3 Bucket") {
       steps {
         script {
