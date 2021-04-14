@@ -2,6 +2,7 @@ bluebutton-css
 _site
 .sass-cache
 .jekyll-metadata
+.jekyll-cache
 .DS_Store
 terraform.tfstate
 terraform.tfstate.backup

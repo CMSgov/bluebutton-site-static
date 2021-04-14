@@ -19,8 +19,8 @@ plugins:
 sass:
   style: compressed
   load_paths:
-      - _sass
-      - node_modules
+    - _sass
+    - node_modules
 exclude:
   - .gitignore
   - README.md
