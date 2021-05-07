@@ -321,7 +321,7 @@ To use this flow your application should be registered with `Client Type` set to
 #### Request authorization from user
 
 To allow a user to authorize your application, direct them to the Blue Button 2.0 API `authorize` endpoint.
-The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri. An optional `state` field that your application can use to identify the authorization request is recommended. It is now recommended to implement PKCE for ALL OAuth flows, see the "Adding PKCE" section on how to implement it.
+The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri. An optional `state` field that your application can use to identify the authorization request is recommended. It is now recommended to implement PKCE for ALL OAuth flows, see the [Adding PKCE](#adding-pkce) section on how to implement it.
 
 ```
 https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
