@@ -89,7 +89,7 @@ Try this out in Postman:
 
 	**Token Name:** {The name of your app}
 
-	**Grant Type:** Authorization Code (unless you have chosen an alternate value for your app)
+	**Grant Type:** Authorization Code (With PKCE)
 
 	**Callback URL:** One of the redirect uris you registered for your app, for example:
 
@@ -112,6 +112,10 @@ Try this out in Postman:
 	**Client ID:** {The Client ID assigned to your App in the sandbox}
 
 	**Client Secret:** {The Client Secret assigned to your App in the sandbox}
+
+    **Code Challenge Method:** SHA-256
+
+    **Code Verifier:** Leave blank and it'll be automatically generated
 
 	**Scope:** 
 	```
@@ -241,32 +245,6 @@ For example, if you use demographic information to help beneficiaries autofill t
 As stewards of sensitive data, it is important to adopt the practice of only asking for the data that is needed to perform a service for a beneficiary. As you register or edit an application in our Sandbox, you will see an option to choose whether or not your application needs to collect demographic information from beneficiaries.
 
 If you choose not to collect demographic information, Medicare beneficiaries will see a simplified version of the OAuth screen as they no longer need to choose whether or not they want to share that information.
-
-### Native Mobile App Support {#nativeMobileApp}
-
-Native Mobile App Support follows the [RFC 8252 - OAuth 2.0 for Native Apps](https://tools.ietf.org/html/rfc8252) authentication flow utilizing the [PKCE](https://tools.ietf.org/html/rfc7636) extension and enables a custom URI scheme redirect.
-
-The implementation of the [RFC 8252](https://tools.ietf.org/html/rfc8252) specification enables developers to build mobile applications without requiring a proxy server to route redirect calls to their mobile app.
-
-The [PKCE](https://tools.ietf.org/html/rfc7636) extension provides a technique for public clients to mitigate the threat of a “man-in-the-middle” attack. This involves creating a secret that is used when exchanging the authorization code to obtain an access token.
-
-[PKCE](https://tools.ietf.org/html/rfc7636) uses a code challenge that is derived from a code-verifier. The standard supports two styles of code challenge:
-- plain
-- S256
-
-However, the Blue Button 2.0 API only supports the “S256” style code challenge.
-
-Where the:  
-``` python
-codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))
-```
-
-The following additional parameters and values are sent as part of the OAuth2.0 Authorization Request:
-- `code_challenge`
-- `codechallengemethod = “S256”`
-
-More details can be found about this flow on [OAuth.com](https://www.oauth.com/). Check out this link: [Protecting Mobile Apps with PKCE - OAuth 2.0 Servers](https://www.oauth.com/oauth2-servers/pkce/)
-
 ### Registering Your App for Mobile App Support
 
 When you register your application in the Blue Button 2.0 API Developer Sandbox, you will want to specify a unique custom URI scheme. This should be a unique value that will not conflict with other custom URI schemes implemented on a user’s mobile device.
@@ -282,8 +260,6 @@ For example:
 ``` python
 tld.app.subdomain[.subsubdomain]:/callback/path/endpoint
 ```
-
-A coding example of an OAuth 2.0 and PKCE flow is available here: [Authorization Code with PKCE Flow - OAuth 2.0 Playground](https://www.oauth.com/playground/authorization-code-with-pkce.html)
 
 The Blue Button 2.0 API engineering team has also created a sample Android application. You can review or fork the code here: [https://github.com/CMSgov/bluebutton-sample-client-android](https://github.com/CMSgov/bluebutton-sample-client-android)
 
@@ -345,7 +321,7 @@ To use this flow your application should be registered with `Client Type` set to
 #### Request authorization from user
 
 To allow a user to authorize your application, direct them to the Blue Button 2.0 API `authorize` endpoint.
-The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri. An optional `state` field that your application can use to identify the authorization request is recommended.
+The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri. An optional `state` field that your application can use to identify the authorization request is recommended. It is now recommended to implement PKCE for ALL OAuth flows, see this section on how to implement it.
 
 ```
 https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
@@ -404,50 +380,63 @@ Response
     "refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
 }
 ```
+### Adding PKCE
 
-### Client Application Flow
-
-To use this flow
-your application should
-be registered with
-`Client Type` set to `public`
-and
-`Grant Type` set to `implicit`.
-
-#### Request authorization from user
-
-To use the client application flow
-direct the user to
-the Blue Button 2.0 API `authorization` endpoint
-with the `response_type` parameter set to `token`.
-
+PKCE stands for Proof Key for Code Exchange. PKCE is an extension of the Authorization code flow that protects from authorization code injection attacks. Implementing PKCE involves creating a secret that is used when exchanging the authorization code to obtain an access token. You can read more about it from the <a href="https://oauth.net/2/pkce/">OAuth docs</a>
+#### Getting Started
+To implement PKCE you'll need to create a code-verifier which is then used to create a code challenge. They should be created using the following formula:
 ```
-https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
-    &redirect_uri=http://localhost:8080/testclient/callback
-    &response_type=token
-    &state=8e896a59f0744a8e93bf2f1f13230be5
+codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))
 ```
 
-If the user authorizes your application
-they will be redirected back to
-the `redirect_uri` of your application.
-The request will include an `access_token`
-in the fragment.
-
+The codeverifier is a random string between 43 and 128 characters. The characters can only be a-z, A-Z, 0-9, and special characters: "-"  "."  "_"  "~"
+#### Typescript Example
 ```
-http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX4hL6R
-    &expires_in=35849.875807
-    &token_type=Bearer
-    &scope=profile+patient%2FPatient.read+patient%2FExplanationOfBenefit.read+patient%2FCoverage.read
-    &state=8e896a59f0744a8e93bf2f1f13230be5
+import crypto from "crypto";
+
+export type CodeChallenge = {
+    codeChallenge: string,
+    verifier: string
+}
+
+function base64URLEncode(buffer: Buffer): string {
+    return buffer.toString('base64')
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=/g, '');
+}
+
+function sha256(str: string): Buffer {
+    return crypto.createHash('sha256').update(str).digest();
+}
+
+export function generateCodeChallenge(): CodeChallenge {
+    var verifier = base64URLEncode(crypto.randomBytes(32));
+    return {
+        codeChallenge: base64URLEncode(sha256(verifier)),
+        verifier: verifier
+    };
+}
+```
+#### Request Templates
+**Authorize**
+```
+/v1/o/authorize/?client_id=<client_id>&redirect_uri=<redirect>&
+grant_type=authorization_code&
+code=<received code>&
+code_challenge=<code_challenge>
 ```
 
-Below you will find a sample account you can use to test your Blue Button 2.0 API OAuth implementation. This account mimics a valid Medicare account but has reduced functionality. For example, you cannot test “Forgot Password” flow.
+**Token**
+```
+/v1/o/token/?client_id=<client_id>&
+redirect_uri=<redirect>&
+client_secret=<client_secret>&
+code=<access code from above request>&
+code_verifier=<code verifier used to generate code challenge>&grant_type=authorization_code&code=<received code>&code_challenge=<code_challenge>
+```
 
-_Jane Doe Username: BBUser29999 Password: PW29999!_
-
----
-
+A coding example of an OAuth 2.0 and PKCE flow is available here: [Authorization Code with PKCE Flow - OAuth 2.0 Playground](https://www.oauth.com/playground/authorization-code-with-pkce.html)
 
 ## Core Resources
 
