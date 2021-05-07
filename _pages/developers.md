@@ -321,7 +321,7 @@ To use this flow your application should be registered with `Client Type` set to
 #### Request authorization from user
 
 To allow a user to authorize your application, direct them to the Blue Button 2.0 API `authorize` endpoint.
-The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri. An optional `state` field that your application can use to identify the authorization request is recommended. It is now recommended to implement PKCE for ALL OAuth flows, see this section on how to implement it.
+The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri. An optional `state` field that your application can use to identify the authorization request is recommended. It is now recommended to implement PKCE for ALL OAuth flows, see the "Adding PKCE" section on how to implement it.
 
 ```
 https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
@@ -382,7 +382,7 @@ Response
 ```
 ### Adding PKCE
 
-PKCE stands for Proof Key for Code Exchange. PKCE is an extension of the Authorization code flow that protects from authorization code injection attacks. Implementing PKCE involves creating a secret that is used when exchanging the authorization code to obtain an access token. You can read more about it from the <a href="https://oauth.net/2/pkce/">OAuth docs</a>
+PKCE stands for Proof Key for Code Exchange. PKCE is an extension of the Authorization code flow that protects from authorization code injection attacks. Implementing PKCE involves creating a secret that is used when exchanging the authorization code to obtain an access token. You can read more about it from the [OAuth docs](https://oauth.net/2/pkce/)
 #### Getting Started
 To implement PKCE you'll need to create a code-verifier which is then used to create a code challenge. They should be created using the following formula:
 ```
