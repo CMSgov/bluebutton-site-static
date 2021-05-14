@@ -408,7 +408,9 @@ code_challenge_method=S256
 redirect_uri=<redirect>&
 client_secret=<client_secret>&
 code=<access code from above request>&
-code_verifier=<code verifier used to generate code challenge>&grant_type=authorization_code&code=<received code>&code_challenge=<code_challenge>
+code_verifier=<code verifier used to generate code challenge>&
+grant_type=authorization_code&code=<received code>&
+code_challenge=<code_challenge>
 ```
 
 A coding example of an OAuth 2.0 and PKCE flow is available here: [Authorization Code with PKCE Flow - OAuth 2.0 Playground](https://www.oauth.com/playground/authorization-code-with-pkce.html)
