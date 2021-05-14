@@ -390,41 +390,16 @@ codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))
 ```
 
 The codeverifier is a random string between 43 and 128 characters. The characters can only be a-z, A-Z, 0-9, and special characters: "-"  "."  "_"  "~"
-#### Typescript Example
-```
-import crypto from "crypto";
 
-export type CodeChallenge = {
-    codeChallenge: string,
-    verifier: string
-}
-
-function base64URLEncode(buffer: Buffer): string {
-    return buffer.toString('base64')
-        .replace(/\+/g, '-')
-        .replace(/\//g, '_')
-        .replace(/=/g, '');
-}
-
-function sha256(str: string): Buffer {
-    return crypto.createHash('sha256').update(str).digest();
-}
-
-export function generateCodeChallenge(): CodeChallenge {
-    var verifier = base64URLEncode(crypto.randomBytes(32));
-    return {
-        codeChallenge: base64URLEncode(sha256(verifier)),
-        verifier: verifier
-    };
-}
-```
 #### Request Templates
+
 **Authorize**
 ```
 /v1/o/authorize/?client_id=<client_id>&redirect_uri=<redirect>&
 grant_type=authorization_code&
 code=<received code>&
-code_challenge=<code_challenge>
+code_challenge=<code_challenge>&
+code_challenge_method=S256
 ```
 
 **Token**
