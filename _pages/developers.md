@@ -120,7 +120,7 @@ Try this out in Postman:
 	
 	*NOTE:* When a beneficiary is authorizing your application, they will have the ability to omit the `patient/Patient.read` scope. **Be sure that you build your application accordingly to handle a 403 error if a beneficiary decides to filter their demographic information.**
   
-	**State:** An optional value that you may use in your app
+	**State:** A recommended value that you should use in your app
 
 	**Client Authentication:** Select "Send as Basic Auth header"
 
@@ -345,7 +345,7 @@ To use this flow your application should be registered with `Client Type` set to
 #### Request authorization from user
 
 To allow a user to authorize your application, direct them to the Blue Button 2.0 API `authorize` endpoint.
-The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri.  It is recommended to use a `state` parameter to better secure your application and for your application to use to identify the authorization response.
+The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri.  It is recommended to use a `state` parameter to better secure your application by using it to identify the authorization response.
 ```
 https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
     &redirect_uri=http://localhost:8080/testclient/callback
