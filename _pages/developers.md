@@ -414,10 +414,10 @@ The flow for your application would look like the following:
 * Your client should generate and store a sufficiently large random string value. For example, this could be a universally unique identifier (UUID) and should have at least 122 bits of entropy.
 * This value is included as a "state" parameter in the initial /v1/o/authorize request. For example, a parameter similar to  "state=8e896a59f0744a8e93bf2f1f13230be5" is added.
 * When the user is redirected back to your application's redirect_uri, it includes the same “state” parameter that it was given.
-* Your client must validate that the "state" parameter equals the one that was previously stored (from your initial authorize request). If you receive a response that does not match, your client should exit the flow (since there may be an attack). 
+* Your client must validate that the "state" parameter equals the one that was previously stored (from your initial authorize request). If you receive a response that does not match, your client should exit the flow (since there may be a compromise). 
 * Your client has successfully correlated the original request with the call-back response received from the authentication.
 
-If implementing PKCE, clients may opt to not use state, since similar CSRF protection is provided. However, the state may be useful to your application for non-security type purposes, such as encoding other information in it for the authorization response.
+If implementing PKCE, clients may opt to not use state, since similar CSRF protection is provided by it. However, the state may be useful to your application for non-security type purposes, such as encoding other information in it for the authorization response.
 
 The following article has additional information about usage and the type of attack it helps to mitigate: https://auth0.com/docs/protocols/state-parameters
 
