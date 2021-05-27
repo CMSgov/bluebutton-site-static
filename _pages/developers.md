@@ -124,7 +124,7 @@ Try this out in Postman:
 	
 	*NOTE:* When a beneficiary is authorizing your application, they will have the ability to omit the `patient/Patient.read` scope. **Be sure that you build your application accordingly to handle a 403 error if a beneficiary decides to filter their demographic information.**
   
-	**State:** An optional value that you may use in your app
+	**State:** A recommended value that you should use in your app
 
 	**Client Authentication:** Select "Send as Basic Auth header"
 
@@ -321,7 +321,8 @@ To use this flow your application should be registered with `Client Type` set to
 #### Request authorization from user
 
 To allow a user to authorize your application, direct them to the Blue Button 2.0 API `authorize` endpoint.
-The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri. An optional `state` field that your application can use to identify the authorization request is recommended. It is now recommended to implement PKCE for ALL OAuth flows, see the [Adding PKCE](#adding-pkce) section on how to implement it.
+
+The request must include the `response_type` set to `code`, your application's client_id, and your application's redirect_uri.  It is recommended to use a `state` parameter to better secure your application by using it to identify the authorization response. It is now recommended to implement PKCE for ALL OAuth flows, see the [Adding PKCE](#adding-pkce) section on how to implement it.
 
 ```
 https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2
@@ -380,6 +381,24 @@ Response
     "refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
 }
 ```
+### Adding the STATE parameter
+
+To better protect the security of your application's users, it is recommended to utilize the "state" parameter.  
+
+The primary purpose is to mitigate CSRF (Cross-site request forgery) type attacks. 
+
+The flow for your application would look like the following:
+
+* Your client should generate and store a sufficiently large random string value. For example, this could be a universally unique identifier (UUID) and should have at least 122 bits of entropy.
+* This value is included as a "state" parameter in the initial /v1/o/authorize request. For example, a parameter similar to  "state=8e896a59f0744a8e93bf2f1f13230be5" is added.
+* When the user is redirected back to your application's redirect_uri, it includes the same “state” parameter that it was given.
+* Your client must validate that the "state" parameter equals the one that was previously stored (from your initial authorize request). If you receive a response that does not match, your client should exit the flow (since there may be a compromise). 
+* Your client has now successfully correlated the original request with the call-back response received from the authentication.
+
+If implementing PKCE, clients may opt to not use state, since similar CSRF protection is provided by it. However, the state may be useful to your application for non-security type purposes, such as encoding other information in it for the authorization response.
+
+The following article has additional information about usage and the type of attack it helps to mitigate: https://auth0.com/docs/protocols/state-parameters
+
 ### Adding PKCE
 
 PKCE stands for Proof Key for Code Exchange. PKCE is an extension of the Authorization code flow that protects from authorization code injection attacks. Implementing PKCE involves creating a secret that is used when exchanging the authorization code to obtain an access token. You can read more about it from the [OAuth docs](https://oauth.net/2/pkce/)
