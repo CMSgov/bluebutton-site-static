@@ -6,10 +6,13 @@ layout: default
 <section class="ds-l-container ds-base">
   <div class="ds-l-row">
 
-    <article class="ds-l-col--12 ds-l-sm-col--7 {{ page.badge | slugify }}" id="main" role="main">
+    <article class="ds-l-col--12 {{ page.badge | slugify }}" id="main" role="main">
       {{ content }}
     </article>
 
 
   </div>
 </section>
+
+{% include value-for-orgs.html %}
+{% include value-for-benes.html %}

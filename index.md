@@ -25,8 +25,10 @@ ctas:
 
 ---
 
-<div class="ds-u-display--flex ds-u-flex-direction--row">
-	<div class="bb-c-card default-card">
+<h2>Medicare claims data at your fingertips.</h2>
+<div class="preview__grid">
+<div class="ds-l-row">
+	<div class="bb-c-card default-card ds-l-col">
 		<div class="card-title">
 			For Developers
 		</div>
@@ -37,7 +39,7 @@ ctas:
       <a href="#">SIGN UP FOR THE DEVELOPER SANDBOX <i data-feather="arrow-right"></i></a>
 		</div>
 	</div>
-	<div class="bb-c-card default-card">
+	<div class="bb-c-card default-card ds-l-col">
 		<div class="card-title">
 			For Developers
 		</div>
@@ -48,7 +50,7 @@ ctas:
       <a href="#">SIGN UP FOR THE DEVELOPER SANDBOX <i data-feather="arrow-right"></i></a>
 		</div>
 	</div>
-	<div class="bb-c-card default-card">
+	<div class="bb-c-card default-card ds-l-col">
 		<div class="card-title">
 			For Developers
 		</div>
@@ -58,5 +60,6 @@ ctas:
 			<p>Explore the power of Blue Button 2.0 API to build amazing tools and services.</p>
       <a href="#">SIGN UP FOR THE DEVELOPER SANDBOX <i data-feather="arrow-right"></i></a>
 		</div>
+	</div>
 	</div>
 </div>
