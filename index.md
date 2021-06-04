@@ -25,60 +25,38 @@ ctas:
 
 ---
 
-<!-- <div>
-	<a class="bb-c-card default-card" href="{{ site.baseurl }}/blog/ensuring-beneficiary-privacy-and-security-through-new-application-onboarding-requirements.html">
+<div class="ds-u-display--flex ds-u-flex-direction--row">
+	<div class="bb-c-card default-card">
 		<div class="card-title">
-			We've got exciting updates to share.
+			For Developers
 		</div>
 		<div class="card-image" style="background-image: url('/assets/img/home/terms-announcement-graphic.svg')">
 		</div>
 		<div class="card-description">
-			We’ve made some updates to our production access process and Terms of Service. These updates are designed to make our process more clear and understandable, while also doing more to ensure Medicare beneficiaries are protected.
+			<p>Explore the power of Blue Button 2.0 API to build amazing tools and services.</p>
+      <a href="#">SIGN UP FOR THE DEVELOPER SANDBOX <i data-feather="arrow-right"></i></a>
 		</div>
-	</a>
-</div> -->
- 
-## Overview
-**Blue Button 2.0 is a standards-based application programming interface (API) that delivers Medicare Part A, B, and D data for over 60 million Medicare beneficiaries. Claims and enrollment data is available from May 2014.**
-
-The Blue Button 2.0 API uses the [HL7 FHIR standard](https://www.hl7.org/fhir/) for beneficiary data and the [OAuth 2.0 standard](https://oauth.net/2/) for beneficiary authorization.
-
----
-
-## Getting started
-
-You can get started on building your integration with the Blue Button 2.0 API by following these steps:
-
-- [Read the Developer Docs](/developers)
-- [Join the Developer Sandbox](https://sandbox.bluebutton.cms.gov/v1/accounts/create)
-- [Register Your Application](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login)
-- [Request Production API Access](https://bluebutton.cms.gov/developers/#production-api-access)
-- [Ask a Question](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api)
-
----
-
-## Value and Use Cases
-
-Developers integrate with the Blue Button 2.0 API adding value for beneficiaries, providers, care organizations, researchers and many more across Healthcare and Life Sciences to:
-
-**_Reduce patient burden_**
-
-A research organization can pre-populate a medication lists for a patient during clinical trial enrollment.
-
-**_Streamline information about different kinds of care over time_**
-
-A primary care physician can access information on other patient care (e.g. related to behavioral health) to better inform treatment.
-
-**_Uncover new insights that can improve health outcomes_**
-
-A pharmacy can determine if a beneficiary gets healthier over time due to medication adherence.
-
-**_Access and monitor health information in one place_**
-
-A health application can aggregate data into a health dashboard for beneficiaries.
-
----
-
-## Support
-
-The Blue Button 2.0 API Google Group is where developers can ask questions, find answers, leave feedback and share experiences using the API. [Visit the Blue Button 2.0 API Google Group.](https://groups.google.com/forum/#!forum/developer-group-for-cms-blue-button-api)
+	</div>
+	<div class="bb-c-card default-card">
+		<div class="card-title">
+			For Developers
+		</div>
+		<div class="card-image" style="background-image: url('/assets/img/home/terms-announcement-graphic.svg')">
+		</div>
+		<div class="card-description">
+			<p>Explore the power of Blue Button 2.0 API to build amazing tools and services.</p>
+      <a href="#">SIGN UP FOR THE DEVELOPER SANDBOX <i data-feather="arrow-right"></i></a>
+		</div>
+	</div>
+	<div class="bb-c-card default-card">
+		<div class="card-title">
+			For Developers
+		</div>
+		<div class="card-image" style="background-image: url('/assets/img/home/terms-announcement-graphic.svg')">
+		</div>
+		<div class="card-description">
+			<p>Explore the power of Blue Button 2.0 API to build amazing tools and services.</p>
+      <a href="#">SIGN UP FOR THE DEVELOPER SANDBOX <i data-feather="arrow-right"></i></a>
+		</div>
+	</div>
+</div>
