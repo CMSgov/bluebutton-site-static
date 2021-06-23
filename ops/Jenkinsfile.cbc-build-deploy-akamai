@@ -124,7 +124,7 @@ pipeline {
         // rsync -av -e "ssh -i ${AKAMAI_SCP_SSH_KEY}" ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${AKAMAI_PATH}
 
         sh """
-        scp -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${AKAMAI_PATH}
+        scp -oHostKeyAlgorithms=+ssh-dss -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${AKAMAI_PATH}
         """
       }
     }
@@ -150,7 +150,7 @@ pipeline {
     stage("Deploy CSS to Akamai Netstorage") {
       steps {
         sh """
-        scp -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${AKAMAI_PATH}/assets/css/
+        scp -oHostKeyAlgorithms=+ssh-dss -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${AKAMAI_PATH}/assets/css/
         """
       }
     }
