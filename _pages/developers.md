@@ -218,7 +218,7 @@ This gives access to the `/v1/connect/UserInfo` Endpoint.
 
 Our OAuth screen gives beneficiaries the ability to choose whether or not to share their demographic information. **Your application will need to handle the return of a 403 status code** from the `/v1/fhir/Patient` and `/v1/connect/userinfo` endpoints.
 
-<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/bene-auth-screen.png" alt="The OAuth screen with a choice for benes to share or withhold certain demographic information" />
+<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/bene_auth_screen.png" alt="The OAuth screen with a choice for benes to share or withhold certain demographic information" />
 
 If the beneficiary declines to share information that your application needs to function, you may display a message explaining why that information is needed and request reauthorization, or handle the collection of that information elsewhere within your application.
 
