@@ -93,7 +93,7 @@ pipeline {
 
     stage("Deploy Static Site to S3") {
       when {
-        environment name: params.SITE_ENV, value: 'test'
+        environment name: 'params.SITE_ENV', value: 'test'
         // params.SITE_ENV == 'test'
       }
       steps {
@@ -106,8 +106,8 @@ pipeline {
     stage("Deploy Static Site to Akamai NetStorage") {
       when {
         anyOf {
-          environment name: params.SITE_ENV, value: 'staging'
-          environment name: params.SITE_ENV, value: 'prod'
+          environment name: 'params.SITE_ENV', value: 'staging'
+          environment name: 'params.SITE_ENV', value: 'prod'
           // params.SITE_ENV == 'staging'
           // params.SITE_ENV == 'prod'
         }
@@ -131,7 +131,7 @@ pipeline {
 
     stage("Deploy CSS to S3") {
       when {
-        environment name: params.SITE_ENV, value: 'test'
+        environment name: 'params.SITE_ENV', value: 'test'
         // params.SITE_ENV == 'test'
       }
       steps {
@@ -144,8 +144,8 @@ pipeline {
     stage("Deploy CSS to Akamai Netstorage") {
       when {
         anyOf {
-          environment name: params.SITE_ENV, value: 'staging'
-          environment name: params.SITE_ENV, value: 'prod'
+          environment name: 'params.SITE_ENV', value: 'staging'
+          environment name: 'params.SITE_ENV', value: 'prod'
           // params.SITE_ENV == 'staging'
           // params.SITE_ENV == 'prod'
         }
