@@ -17,7 +17,8 @@ pipeline {
   parameters {
     choice(
       name: "SITE_ENV",
-      choices: ["test", "staging", "prod"],
+      //choices: ["test", "staging", "prod"],
+      choices: ["test", "staging"],
       description: "The environment to build and deploy to."
     )
 
@@ -92,7 +93,8 @@ pipeline {
 
     stage("Deploy Static Site to S3") {
       when {
-        params.SITE_ENV == 'test'
+        environment name: params.SITE_ENV, value: 'test'
+        // params.SITE_ENV == 'test'
       }
       steps {
         sh """
@@ -104,8 +106,10 @@ pipeline {
     stage("Deploy Static Site to Akamai NetStorage") {
       when {
         anyOf {
-          params.SITE_ENV == 'staging'
-          params.SITE_ENV == 'prod'
+          environment name: params.SITE_ENV, value: 'staging'
+          environment name: params.SITE_ENV, value: 'prod'
+          // params.SITE_ENV == 'staging'
+          // params.SITE_ENV == 'prod'
         }
       }
       steps {
@@ -127,7 +131,8 @@ pipeline {
 
     stage("Deploy CSS to S3") {
       when {
-        params.SITE_ENV == 'test'
+        environment name: params.SITE_ENV, value: 'test'
+        // params.SITE_ENV == 'test'
       }
       steps {
         sh """
@@ -139,13 +144,15 @@ pipeline {
     stage("Deploy CSS to Akamai Netstorage") {
       when {
         anyOf {
-          params.SITE_ENV == 'staging'
-          params.SITE_ENV == 'prod'
+          environment name: params.SITE_ENV, value: 'staging'
+          environment name: params.SITE_ENV, value: 'prod'
+          // params.SITE_ENV == 'staging'
+          // params.SITE_ENV == 'prod'
         }
       }
       steps {
         sh """
-        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}/assets/css/
+        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}assets/css/
         """
       }
     }
