@@ -7,9 +7,9 @@ pipeline {
   }
 
   environment {
-    // AWS_ACCESS_KEY_ID = credentials("bb2-aws-key-id")
-    // AWS_SECRET_ACCESS_KEY = credentials("bb2-aws-key-secret")
-    // AWS_DEFAULT_REGION = "us-east-1"
+    AWS_ACCESS_KEY_ID = credentials("bb2-aws-key-id")
+    AWS_SECRET_ACCESS_KEY = credentials("bb2-aws-key-secret")
+    AWS_DEFAULT_REGION = "us-east-1"
     AKAMAI_SCP_SSH_KEY = credentials("bb2-akamai-scp-ssh-key")
     AKAMAI_SSH_USER = credentials("bb2-akamai-ssh-user")
   }
@@ -17,8 +17,7 @@ pipeline {
   parameters {
     choice(
       name: "SITE_ENV",
-      // choices: ["test", "staging", "prod"],
-      choices: ["staging"],
+      choices: ["test", "staging", "prod"],
       description: "The environment to build and deploy to."
     )
 
@@ -58,33 +57,16 @@ pipeline {
       }
     }
 
-    // stage("Determine S3 Bucket") {
-    //   steps {
-    //     script {
-    //       echo "Setting SITE_BUCKET from SITE_ENV"
-    //       if (params.SITE_ENV == "test") {
-    //         SITE_BUCKET = "test.bluebutton.cms.gov"
-    //       } else if (params.SITE_ENV == "staging") {
-    //         SITE_BUCKET = "staging.bluebutton.cms.gov"
-    //       } else if (params.SITE_ENV == "prod") {
-    //         SITE_BUCKET = "bluebutton.cms.gov"
-    //       } else {
-    //         error("Please set SITE_ENV to one of: [test, staging, prod]")
-    //       }
-    //     }
-    //   }
-    // }
-    
-    stage("Determine Akamai Upload Path") {
+    stage("Determine S3 Bucket / Akamai NetStorage path") {
       steps {
         script {
-          echo "Setting AKAMAI_PATH from SITE_ENV"
+          echo "Setting UPLOAD_LOCATION from SITE_ENV"
           if (params.SITE_ENV == "test") {
-            AKAMAI_PATH = "/1197010/test.bluebutton.cms.gov/"
+            UPLOAD_LOCATION = "test.bluebutton.cms.gov"
           } else if (params.SITE_ENV == "staging") {
-            AKAMAI_PATH = "/1197010/staging.bluebutton.cms.gov/"
+            UPLOAD_LOCATION = "/1197010/staging.bluebutton.cms.gov/"
           } else if (params.SITE_ENV == "prod") {
-            AKAMAI_PATH = "/1197010/bluebutton.cms.gov/"
+            UPLOAD_LOCATION = "/1197010/bluebutton.cms.gov/"
           } else {
             error("Please set SITE_ENV to one of: [test, staging, prod]")
           }
@@ -108,23 +90,27 @@ pipeline {
       }
     }
 
-    // stage("Deploy Static Site to S3") {
-    //   steps {
-    //     sh """
-    //     aws s3 sync --delete ./_site/ s3://${SITE_BUCKET}
-    //     """
-    //   }
-    // }
+    stage("Deploy Static Site to S3") {
+      when {
+        params.SITE_ENV == 'test'
+      }
+      steps {
+        sh """
+        aws s3 sync --delete ./_site/ s3://${UPLOAD_LOCATION}
+        """
+      }
+    }
 
     stage("Deploy Static Site to Akamai NetStorage") {
+      when {
+        anyOf {
+          params.SITE_ENV == 'staging'
+          params.SITE_ENV == 'prod'
+        }
+      }
       steps {
-        // SCP Method
-        // scp -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${AKAMAI_PATH}
-        // RSYNC Method
-        // rsync -av -e "ssh -i ${AKAMAI_SCP_SSH_KEY}" ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${AKAMAI_PATH}
-
         sh """
-        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${AKAMAI_PATH}
+        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}
         """
       }
     }
@@ -139,18 +125,27 @@ pipeline {
       }
     }
 
-    // stage("Deploy CSS to S3") {
-    //   steps {
-    //     sh """
-    //     aws s3 cp ./dist/static-main.css s3://${SITE_BUCKET}/assets/css/
-    //     """
-    //   }
-    // }
-
-    stage("Deploy CSS to Akamai Netstorage") {
+    stage("Deploy CSS to S3") {
+      when {
+        params.SITE_ENV == 'test'
+      }
       steps {
         sh """
-        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${AKAMAI_PATH}/assets/css/
+        aws s3 cp ./dist/static-main.css s3://${UPLOAD_LOCATION}/assets/css/
+        """
+      }
+    }
+
+    stage("Deploy CSS to Akamai Netstorage") {
+      when {
+        anyOf {
+          params.SITE_ENV == 'staging'
+          params.SITE_ENV == 'prod'
+        }
+      }
+      steps {
+        sh """
+        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}/assets/css/
         """
       }
     }
