@@ -261,7 +261,6 @@ For example:
 tld.app.subdomain[.subsubdomain]:/callback/path/endpoint
 ```
 
-The Blue Button 2.0 API engineering team has also created a sample Android application. You can review or fork the code here: [https://github.com/CMSgov/bluebutton-sample-client-android](https://github.com/CMSgov/bluebutton-sample-client-android)
 
 ### Redirect_URI
 
