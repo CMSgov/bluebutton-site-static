@@ -27,6 +27,15 @@ ctas:
     link: /blog
 ---
 
+<div class="ds-c-alert">
+	<div class="ds-c-alert__body">
+		<h2 class="ds-c-alert__heading">This is the STU3 (v1) documentation for the Blue Button API.</h2>
+		<p class="ds-c-alert__text">
+			Please consider utilizing the <a href="/terms/terms-index/">FHIR R4 (v2)</a> implementation of the Blue Button API. 
+		</p>
+	</div>
+</div>
+
 ## Overview
 
 The Centers for Medicare and Medicaid Services (CMS) Blue Button 2.0 API enables Medicare beneficiaries to connect their Medicare claims data to the applications, services, and research programs they trust.
