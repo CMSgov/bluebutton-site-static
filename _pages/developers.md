@@ -401,7 +401,7 @@ The following article has additional information about usage and the type of att
 
 ### Adding PKCE
 
-PKCE stands for Proof Key for Code Exchange. PKCE is an extension of the Authorization code flow that protects from authorization code injection attacks. Implementing PKCE involves creating a secret that is used when exchanging the authorization code to obtain an access token. You can read more about it from the [OAuth docs](https://oauth.net/2/pkce/)
+PKCE stands for Proof Key for Code Exchange. PKCE is an extension of the Authorization code flow that protects from authorization code injection attacks. Implementing PKCE involves creating a secret that is used when exchanging the authorization code to obtain an access token. You can read more about it from the [OAuth docs](https://oauth.net/2/pkce/).
 #### Getting Started
 To implement PKCE you'll need to create a code-verifier which is then used to create a code challenge. They should be created using the following formula:
 ```
