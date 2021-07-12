@@ -17,8 +17,7 @@ pipeline {
   parameters {
     choice(
       name: "SITE_ENV",
-      //choices: ["test", "staging", "prod"],
-      choices: ["test", "staging"],
+      choices: ["test", "staging", "prod"],
       description: "The environment to build and deploy to."
     )
 
