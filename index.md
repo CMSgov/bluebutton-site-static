@@ -24,6 +24,11 @@ ctas:
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login
 
 ---
+<style>
+	.page-description {
+		max-width: 70%;
+	}
+</style>
 
 {% include swimlanes.html %}
 {% include value-for-orgs.html %}
