@@ -29,7 +29,7 @@ ctas:
 
 <div class="ds-c-alert">
 	<div class="ds-c-alert__body">
-		<h2 class="ds-c-alert__heading">This is the STU3 (v1) documentation for the Blue Button API.</h2>
+		<h2 class="ds-c-alert__heading">This is the STU3 (v1) documentation for the Blue Button API. STU3 is only intended for applications who began development prior to July 01, 2021. Please consider utilizing the FHIR R4 (v2) implementation of the Blue Button API.</h2>
 		<p class="ds-c-alert__text">
 			Please consider utilizing the <a href="/terms/terms-index/">FHIR R4 (v2)</a> implementation of the Blue Button API. 
 		</p>
