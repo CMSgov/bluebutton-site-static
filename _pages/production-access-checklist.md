@@ -6,6 +6,8 @@ description: "A checklist to help your organization prepare to apply for product
 badge: documentation
 permalink: /checklist/
 ---
+    
+<div markdown="1" class="ds-l-container" style="max-width: 60%;">
 
 ## What is this Checklist?
 
@@ -95,7 +97,7 @@ This section helps prepare you for questions around your understanding and treat
 
 - How will you notify the public when you receive any certification or accreditation from any independent certifying organizations?
 
-
+</div>
 
 
 
