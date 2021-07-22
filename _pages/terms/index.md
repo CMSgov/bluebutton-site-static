@@ -7,6 +7,8 @@ badge: documentation
 permalink: "/terms/terms-index/"
 ---
 
+<div markdown="1" class="ds-l-container" style="max-width: 60%;">
+
 ## Select a Version to View
 
 <div class="bb-c-card ds-u-padding--2 ds-u-margin-bottom--2">
@@ -15,4 +17,5 @@ permalink: "/terms/terms-index/"
 
 <div class="bb-c-card ds-u-padding--2 ds-u-margin-bottom--2">
 	<a href="{{ site.baseurl }}/terms/v1/">Blue Button 2.0 API Terms of Service, Published 02/22/2018 (v1)</a>
+</div>
 </div>

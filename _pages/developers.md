@@ -194,7 +194,7 @@ you can do the following:
 
 To use the Blue Button 2.0 OAuth 2 a developer must [register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/).
 
-A registered application is given a client ID and a client secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button 2.0 API. Otherwise the [Client Application Flow](#client-application-flow) may be used.
+A registered application is given a client ID and a client secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button 2.0 API.
 
 ### Scopes
 
