@@ -1,5 +1,5 @@
 tealium_env: "staging"
-url: "http://staging.bluebutton.cms.gov.s3-website-us-east-1.amazonaws.com"
+url: "https://staging.bluebutton.cms.gov/"
 # the base hostname & protocol for your site, e.g. http://example.com
 # S3 appears to require blog templates to append ".html" to files.
 # Define "use_dot_html" = true in environment _config file
