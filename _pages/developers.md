@@ -298,9 +298,6 @@ For example:
 tld.app.subdomain[.subsubdomain]:/callback/path/endpoint
 ```
 
-A coding example of an OAuth 2.0 and PKCE flow is available here: [Authorization Code with PKCE Flow - OAuth 2.0 Playground](https://www.oauth.com/playground/authorization-code-with-pkce.html)
-
-The Blue Button 2.0 API engineering team has also created a sample Android application. You can review or fork the code here: [https://github.com/CMSgov/bluebutton-sample-client-android](https://github.com/CMSgov/bluebutton-sample-client-android)
 
 **Redirect\_URI**
 
@@ -409,6 +406,7 @@ Response
 
 }
 ```
+### Adding the STATE parameter
 
 **Client Application Flow**
 
@@ -426,6 +424,7 @@ To use the client application flow direct the user to the Blue Button 2.0 API au
 
 If the user authorizes your application they will be redirected back to the redirect\_uri of your application. The request will include an access\_token in the fragment.
 
+#### Typescript Example
 ```
 http://localhost:8080/testclient/callback#access\_token=KCHMTX5VHNAXYGYv38eG2RLAX4hL6R
 
