@@ -2,7 +2,7 @@
 layout: default-full
 title:  "CMS Blue Button 2.0"
 date:   2017-10-30 09:21:12 -0500
-description: Blue Button 2.0 is a standards-based application programming interface (API) that delivers Medicare Part A, B, and D data for over 60 million Medicare beneficiaries.
+description: Blue Button 2.0 is a standards-based application programming interface (API) that delivers Medicare Part A, B, and D data for over 60 million people with Medicare.
 landing-page: live
 gradient: "blueberry-lime-background"
 subnav-link-gradient: "blueberry-lime-link"
