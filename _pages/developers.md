@@ -408,11 +408,11 @@ Response
 ```
 ### Adding the STATE parameter
 
-**Client Application Flow**
+#### Client Application Flow
 
 To use this flow your application should be registered with Client Type set to public and Grant Type set to implicit.
 
-**Request authorization from user**
+#### Request authorization from user
 
 To use the client application flow direct the user to the Blue Button 2.0 API authorization endpoint with the response\_type parameter set to token.
 
