@@ -191,7 +191,7 @@ _Note: The last backslash is important_. _Also remember to append ?client\_id={y
 
 **Synthetic Beneficiary Accounts**
 
-The first user is **BBUser00000** with password **PW00000! S** ample users continue all the way to **BBUser29999** with password **PW29999!** _Note: the ! at the end of the password is required_
+The first user is **BBUser00000** with password **PW00000!** Sample users continue all the way to **BBUser29999** with password **PW29999!** _Note: the ! at the end of the password is required_
 
 6.Approve access for your application, which will now receive an access token, which can be used in the requests described above.
 
