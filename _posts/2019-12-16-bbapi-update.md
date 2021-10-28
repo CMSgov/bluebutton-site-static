@@ -4,6 +4,7 @@ title: Blue Button 2.0 API Update
 date:  2019-12-16 6:00 AM -0600
 categories: latest
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/bbapi-update.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/bbapi-update.jpg
