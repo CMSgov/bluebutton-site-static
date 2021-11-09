@@ -4,6 +4,7 @@ title: More Frequent Prescription Data Updates
 date:  2019-03-15 6:30 AM -0600
 categories: latest
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/more-frequent-prescription-drug-updates.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/more-frequent-prescription-drug-updates.jpg

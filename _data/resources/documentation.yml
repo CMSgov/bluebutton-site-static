@@ -1,0 +1,12 @@
+- title: FHIR R4 (v2) documentation
+  description: Instructions for understanding and using the CMS Blue Button 2.0 v2 API
+  date: 2018-03-26 23:46:00 -0500
+  link: /developers/
+- title: STU3 (v1) documentation
+  description: Instructions for understanding and using the CMS Blue Button 2.0 v1 API
+  date:
+  link: https://bluebutton.cms.gov/v1/
+- title: Implementation guide
+  description: The ImplementationGuide resource is a single resource that defines the logical content of the IG, along with the important entry pages into the publication, so that the logical package that the IG represents, so that the contents are computable.
+  date:
+  link: https://www.hl7.org/fhir/implementationguide.html

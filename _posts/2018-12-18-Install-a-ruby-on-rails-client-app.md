@@ -4,6 +4,7 @@ title: Install a Ruby on Rails Client App
 date:  2018-12-18 6:30 AM -0600
 categories: latest code
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/install-a-ruby-on-rails-client-app.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/install-a-ruby-on-rails-client-app.jpg

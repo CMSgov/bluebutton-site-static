@@ -4,6 +4,7 @@ title: How Beneficiaries Authorize an App
 date:   2018-05-19 23:00:00 -0600
 categories: latest general
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/how-beneficiaries-authorize-an-app.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/how-beneficiaries-authorize-an-app.jpg

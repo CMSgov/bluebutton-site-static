@@ -4,6 +4,7 @@ title: List of Production Applications Integrated with Blue Button 2.0 Now on Me
 date:  2019-04-12 6:30 AM -0600
 categories: latest
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/list-of-production-applications.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/list-of-production-applications.jpg

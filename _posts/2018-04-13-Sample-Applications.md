@@ -7,6 +7,7 @@ badge: blog
 hero-image: /assets/img/blog/hero-images/sample-client-applications.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/sample-client-applications.jpg
 permalink: /blog/:title
+published: false
 ctas:
   -
     title: Home
