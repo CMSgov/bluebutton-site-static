@@ -26,7 +26,7 @@ permalink: "/resources/"
 <div class="ds-l-container" style="max-width: 60%;">
     <div class="ds-u-display--flex ds-u-lg-flex-direction--column ds-u-flex-direction--row ds-u-lg-flex-wrap--nowrap ds-u-flex-wrap--wrap">
         <div class="bb-c-card default-card ds-u-padding--2">
-            <h2 class="ds-h2 ds-u-margin-top--2 ds-u-border-bottom--2">Documentation</h2>
+            <h2 class="ds-h2 ds-u-margin-top--2 ds-u-padding-bottom--2 ds-u-border-bottom--2">Documentation</h2>
             {% for a in site.data.resources.documentation %}
                 <h3 class="ds-h3">
                     {{a.title}}
@@ -45,8 +45,8 @@ permalink: "/resources/"
             {% endfor %}
         </div>
         <div class="bb-c-card default-card ds-u-padding--2">
-            <h2 class="ds-h2 ds-u-margin-top--2 ds-u-border-bottom--2">Test clients</h2>
-            {% for a in site.data.resources.clients %}
+            <h2 class="ds-h2 ds-u-margin-top--2 ds-u-padding-bottom--2 ds-u-border-bottom--2">Sample applications</h2>
+            {% for a in site.data.resources.sample-applications %}
                 <h3 class="ds-h3">
                     {{a.title}}
                     {% if a.date %}
