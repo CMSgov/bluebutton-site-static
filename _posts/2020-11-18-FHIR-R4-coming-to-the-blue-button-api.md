@@ -4,6 +4,7 @@ title: FHIR R4 Coming to the Blue Button 2.0 API
 date:  2020-11-18 6:00 AM -0600
 categories: latest
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/fhir-r4-coming-to-blue-button-api.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/fhir-r4-coming-to-blue-button-api.jpg

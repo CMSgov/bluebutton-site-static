@@ -7,6 +7,7 @@ badge: blog
 hero-image: /assets/img/blog/hero-images/welcome-to-the-blue-button-blog.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/welcome-to-the-blue-button-blog.jpg
 permalink: /blog/:title
+published: false
 ctas:
   -
     title: Home

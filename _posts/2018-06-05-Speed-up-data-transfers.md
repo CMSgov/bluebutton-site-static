@@ -4,6 +4,7 @@ title: Speed up data transfers
 date:   2018-06-05 09:19 PM -0600
 categories: code
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/speed-up-data-transfers.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/speed-up-data-transfers.jpg

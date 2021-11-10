@@ -4,6 +4,7 @@ title: Blue Button 2.0 at HL7 FHIR DevDays
 date:  2018-06-17 5:30 PM -0600
 categories: code
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/hl7-fhir-dev-days.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/hl7-fhir-dev-days.jpg

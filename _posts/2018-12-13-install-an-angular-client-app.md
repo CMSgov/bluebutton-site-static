@@ -2,7 +2,7 @@
 layout: post
 title: Install an Angular Client App
 date:  2018-12-13 6:30 AM -0600
-published: true
+published: false
 categories: latest code
 permalink: /blog/:title
 badge: blog
