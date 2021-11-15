@@ -4,6 +4,7 @@ title: Update to Developer Documentation
 date:  2018-07-30 2:30 PM -0600
 categories: latest general
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/updates-to-developer-documentation.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/updates-to-developer-documentation.jpg

@@ -4,6 +4,7 @@ title: Giving Beneficiaries More Granular Choice of Data Sharing
 date:  2019-11-14 6:30 AM -0600
 categories: latest
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/giving-beneficiaries-more-granular-choice-of-data-sharing.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/giving-beneficiaries-more-granular-choice-of-data-sharing.jpg

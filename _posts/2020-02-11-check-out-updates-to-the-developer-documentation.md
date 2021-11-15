@@ -4,6 +4,7 @@ title: ­Check Out Updates to the Developer Documentation
 date:  2020-02-11 6:00 AM -0600
 categories: latest
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/check-out-updates-to-the-developer-documentation.jpg
 hero-thumb: /assets/img/blog/hero-images/check-out-updates-to-the-developer-documentation.jpg

@@ -4,6 +4,7 @@ title: Install a Django Client
 date:   2018-06-01 09:00:00 -0500
 categories: code
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/install-a-django-client.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/install-a-django-client.jpg

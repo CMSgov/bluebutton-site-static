@@ -4,6 +4,7 @@ title: ­Get Just the Claims Data You Need
 date:  2020-07-29 6:00 AM -0600
 categories: latest
 permalink: /blog/:title
+published: false
 badge: blog
 hero-image: /assets/img/blog/hero-images/get-just-the-claims-data-you-need.jpg
 hero-thumb: /assets/img/blog/hero-images/thumbnails/get-just-the-claims-data-you-need.jpg
