@@ -35,9 +35,9 @@ permalink: "/resources/"
                     {% endif %}
                 </h3>
                 {% if forloop.last == true %}
-                    <div class="card-description">
+                    <div class="card-description ds-u-leading--base">
                 {% else %}
-                    <div class="card-description ds-u-border-bottom--1">
+                    <div class="card-description ds-u-leading--base ds-u-border-bottom--1">
                 {% endif %}
                         <p>{{a.description}}</p>
                         <div class="ds-u-float--right"><a href="{{a.link}}">Read more <i data-feather="arrow-right"></i></a></div>

@@ -2,7 +2,7 @@
   description: Instructions for understanding and using the CMS Blue Button 2.0 v2 API
   date: 2021-08-23 23:46:00
   link: /developers/
-  - title: API documentation
+- title: API documentation
   description: Swagger documentation to try out the API
   date:
   link: https://sandbox.bluebutton.cms.gov/docs/openapi
