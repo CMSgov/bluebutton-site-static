@@ -1,6 +1,6 @@
 ---
 layout: default-full
-title:  "Blue Button 2.0 API resources"
+title:  "Blue Button 2.0 API Resources"
 description: Resources and sample applications for the Blue Button 2.0 API.
 landing-page: live
 gradient: "blueberry-lime-background"
