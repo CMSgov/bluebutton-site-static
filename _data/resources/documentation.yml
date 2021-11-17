@@ -2,15 +2,15 @@
   description: Instructions for understanding and using the CMS Blue Button 2.0 v2 API
   date: 2018-03-26 23:46:00 -0500
   link: /developers/
+  - title: API documentation
+  description: Swagger documentation to try out the API
+  date:
+  link: https://sandbox.bluebutton.cms.gov/docs/openapi
 - title: STU3 (v1) documentation (outdated)
-  description: Instructions for understanding and using the CMS Blue Button 2.0 v1 API (apps started before July 1, 2021)
+  description: This is the STU3 (v1) documentation for the Blue Button API. STU3 is only intended for applications who began development prior to July 01, 2021. Please consider utilizing the FHIR R4 (v2) implementation of the Blue Button API.
   date:
   link: https://bluebutton.cms.gov/v1/
 - title: Implementation guide
-  description: The Implementation Guide resource is a single resource that defines the logical content of the IG, along with the important entry pages into the publication, so that the logical package that the IG represents, so that the contents are computable.
+  description: The Implementation Guide (IG) resource is a single resource that defines the logical content of the IG, along with the important entry pages into the publication, so that the logical package that the IG represents, so that the contents are computable.
   date:
   link: https://www.hl7.org/fhir/implementationguide.html
-- title: API documentation
-  description: Swaggar documentation to try out the API
-  date:
-  link: https://sandbox.bluebutton.cms.gov/docs/openapi
