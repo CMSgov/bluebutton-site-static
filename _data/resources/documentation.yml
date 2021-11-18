@@ -13,4 +13,4 @@
 - title: Implementation guide
   description: The Implementation Guide (IG) resource is a single resource that defines the logical content of the IG, along with the important entry pages into the publication, so that the logical package that the IG represents, so that the contents are computable.
   date:
-  link: https://www.hl7.org/fhir/implementationguide.html
+  link: https://bluebutton.cms.gov/developers/#blue-button-implementation-guide
