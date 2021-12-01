@@ -368,7 +368,7 @@ To allow a user to authorize your application, direct them to the Blue Button 2.
 | **API version** | **Request URL** |
 | --- | --- |
 | v1 | https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=code&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
-| v2 | https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=&amp;response_type=code &amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
+| v2 | https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=&amp;response_type=code&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
 {:.ds-c-table}
 
 Exchange code for token
@@ -385,8 +385,8 @@ Your application can now exchange the code provided in the redirected request fo
 
 | **API version** | **Request URL** |
 | --- | --- |
-| v1 | curl -X POST "https://sandbox.bluebutton.cms.gov/v1/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2 &amp;grant_type=authorization_code &amp;redirect_uri=http://localhost/testclient/callback" |
-| v2 | curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2 &amp;grant_type=authorization_code &amp;redirect_uri=http://localhost/testclient/callback" |
+| v1 | curl -X POST "https://sandbox.bluebutton.cms.gov/v1/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;grant_type=authorization_code&amp;redirect_uri=http://localhost/testclient/callback" |
+| v2 | curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;grant_type=authorization_code&amp;redirect_uri=http://localhost/testclient/callback" |
 {:.ds-c-table}
 
 Response
@@ -418,23 +418,15 @@ To use the client application flow direct the user to the Blue Button 2.0 API au
 
 | **API version** | **Request URL** |
 | --- | --- |
-| v1 | https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token &amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
-| v2 | https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token &amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
+| v1 | https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
+| v2 | https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
 {:.ds-c-table}
 
-If the user authorizes your application they will be redirected back to the redirect_uri of your application. The request will include an access_token in the fragment.
+If the user authorizes your application they will be redirected back to the redirect_uri of your application. The request will include an access token in the fragment.
 
 #### Typescript Example
 ```
-http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX4hL6R
-
-&amp;expires_in=35849.875807
-
-&amp;token_type=Bearer
-
-&amp;scope=profile+patient%2FPatient.read+patient%2FExplanationOfBenefit.read+patient%2FCoverage.read
-
-&amp;state=8e896a59f0744a8e93bf2f1f13230be5
+http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX4hL6R&amp;expires_in=35849.875807&amp;token_type=Bearer&amp;scope=profile+patient%2FPatient.read+patient%2FExplanationOfBenefit.read+patient%2FCoverage.read&amp;state=8e896a59f0744a8e93bf2f1f13230be5
 ```
 
 You can use this sample account to test your Blue Button 2.0 API OAuth implementation. This account mimics a valid Medicare account but has reduced functionality. For example, you cannot test "Forgot Password" flow.
@@ -1119,7 +1111,7 @@ The API also has historical claims data going back four years. All of these fact
 
 ### Sample Beneficiaries
 
-[CSV of 100 sample beneficiaries with rich claims data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv)
+[CSV of sample beneficiaries with rich claims data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv)
 
 When getting started with the Blue Button 2.0 API, it can be overwhelming to understand all of the coding systems and types of data that can be found in the Explanation of Benefit FHIR resource.
 
