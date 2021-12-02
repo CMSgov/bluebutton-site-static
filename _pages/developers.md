@@ -183,7 +183,7 @@ for v1 https://sandbox.bluebutton.cms.gov/v1/o/authorize/
 
 for v2 https://sandbox.bluebutton.cms.gov/v2/o/authorize/
 
-_Note: The last backslash is important_. _Also remember to append ?client\_id={your client\_id assigned to the application you registered}_
+_Note: The last backslash is important_. _Also remember to append ?client_id={your client_id assigned to the application you registered}_
 
 1. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY.
 
@@ -195,7 +195,7 @@ The first user is **BBUser00000** with password **PW00000!** Sample users contin
 
 6.Approve access for your application, which will now receive an access token, which can be used in the requests described above.
 
-1. The authorization completes when you are redirected back to the Redirect\_URI you specified when you registered your application.
+1. The authorization completes when you are redirected back to the Redirect_URI you specified when you registered your application.
 
 ---
 
@@ -235,7 +235,7 @@ The default selection when a beneficiary reaches the authorization screen will b
 
 Take the time to ensure that you have fallbacks in place if you are unable to access the patient or userinfo endpoints.
 
-For example, if you are getting the patient\_ID from the v1/fhir/Patient (or v2/fhir/Patient) endpoint, we recommend getting that identifier from the initial authorization response, or another resource like ExplanationOfBenefit or Coverage.
+For example, if you are getting the patient_ID from the v1/fhir/Patient (or v2/fhir/Patient) endpoint, we recommend getting that identifier from the initial authorization response, or another resource like ExplanationOfBenefit or Coverage.
 
 **Explanation of needed data to Medicare Beneficiaries**
 
@@ -272,7 +272,7 @@ codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))
 The following additional parameters and values are sent as part of the OAuth2.0 Authorization Request:
 
 ```
-- code\_challenge
+- code_challenge
 - codechallengemethod = "S256"
 ```
 
@@ -299,16 +299,16 @@ tld.app.subdomain[.subsubdomain]:/callback/path/endpoint
 ```
 
 
-**Redirect\_URI**
+**Redirect_URI**
 
 When creating an Application in the sandbox a redirect URI is required. This is the API endpoint on _your_ system that receives the callback from the Blue Button 2.0 API after a beneficiary is passed to the Blue Button 2.0 API to authorize your application.
 
-Multiple redirect URIs can be entered in the Redirect\_URI field. Each entry should be separated by a space or newline.
+Multiple redirect URIs can be entered in the Redirect_URI field. Each entry should be separated by a space or newline.
 
-A Redirect\_URI follows this format:
+A Redirect_URI follows this format:
 
 ```
-URLprotocol://[sub-domain.]domain\_name[:port]/path
+URLprotocol://[sub-domain.]domain_name[:port]/path
 ```
 
 **URL Protocol**
@@ -317,7 +317,7 @@ Three URL protocols are supported, depending on the purpose:
 
 - http:// protocol
 - https:// protocol
-- custom\_url:// protocol
+- custom_url:// protocol
 
 _**http:// protocol**_
 
@@ -333,20 +333,20 @@ _**https://protocol**_
 
 The https:// format is used for secure communication and is required for all applications in the production environment unless the application is using the Mobile OAuth method for handling callbacks.
 
-_**custom\_url:// protocol**_
+_**custom_url:// protocol**_
 
 | (Works in: Sandbox | Production) |
 {:.ds-c-table}
 
-The `custom\_url` protocol is used by mobile applications to handle communications directly with your application on a mobile device.
+The `custom_url` protocol is used by mobile applications to handle communications directly with your application on a mobile device.
 
-If you are using Mobile OAuth support for communication directly with a mobile device the `custom\_url` should follow this format:
+If you are using Mobile OAuth support for communication directly with a mobile device the `custom_url` should follow this format:
 
 ```
-Top-level.domain(TLD).domain-name[.sub-domain][.app\_name]
+Top-level.domain(TLD).domain-name[.sub-domain][.app_name]
 ```
 
-For example, if the Blue Button 2.0 API team created an application we might create a custom\_url of:
+For example, if the Blue Button 2.0 API team created an application we might create a custom_url of:
 ```
 gov.cms.bluebutton.oauthtester
 ```
@@ -354,7 +354,7 @@ gov.cms.bluebutton.oauthtester
 This would then be incorporated into a redirect URI entry. Here is an example:
 
 ```
-gov.cms.bluebutton.oauthtester:8080//bluebutton\_app/callback.html
+gov.cms.bluebutton.oauthtester:8080//bluebutton_app/callback.html
 ```
 
 **Web Application Flow**
@@ -363,30 +363,30 @@ To use this flow your application should be registered with Client Type set to c
 
 **Request authorization from user**
 
-To allow a user to authorize your application, direct them to the Blue Button 2.0 API authorize endpoint. The request must include the response\_type set to code, your application&#39;s client\_id, and your application&#39;s redirect\_uri. An optional state field that your application can use to identify the authorization request is recommended.
+To allow a user to authorize your application, direct them to the Blue Button 2.0 API authorize endpoint. The request must include the response_type set to code, your application&#39;s client_id, and your application&#39;s redirect_uri. An optional state field that your application can use to identify the authorization request is recommended.
 
 | **API version** | **Request URL** |
 | --- | --- |
-| v1 | https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect\_uri=http://localhost:8080/testclient/callback&amp;response\_type=code&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
-| v2 | https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect\_uri=&amp;response\_type=code &amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
+| v1 | https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=code&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
+| v2 | https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=&amp;response_type=code&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
 {:.ds-c-table}
 
 Exchange code for token
 
-After visiting the authorization page a user will be redirected back to the redirect\_uri registered with your application.
+After visiting the authorization page a user will be redirected back to the redirect_uri registered with your application.
 
-For example if the redirect\_uri is `http://localhost:8080/testclient/callback` BlueButton will redirect with this request.
+For example if the redirect_uri is `http://localhost:8080/testclient/callback` BlueButton will redirect with this request.
 
 ```
 GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;state=8e896a59f0744a8e93bf2f1f13230be5
 ```
 
-Your application can now exchange the code provided in the redirected request for a full token. Send a POST request to the BlueButton token endpoint providing the code, the application&#39;s client\_id, client\_secret, and redirect\_uri. Your request must also specify the grant\_type which should always be authorization\_code for this flow.
+Your application can now exchange the code provided in the redirected request for a full token. Send a POST request to the BlueButton token endpoint providing the code, the application&#39;s client_id, client_secret, and redirect_uri. Your request must also specify the grant_type which should always be authorization_code for this flow.
 
 | **API version** | **Request URL** |
 | --- | --- |
-| v1 | curl -X POST "https://sandbox.bluebutton.cms.gov/v1/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client\_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2 &amp;grant\_type=authorization\_code &amp;redirect\_uri=http://localhost/testclient/callback" |
-| v2 | curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client\_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2 &amp;grant\_type=authorization\_code &amp;redirect\_uri=http://localhost/testclient/callback" |
+| v1 | curl -X POST "https://sandbox.bluebutton.cms.gov/v1/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;grant_type=authorization_code&amp;redirect_uri=http://localhost/testclient/callback" |
+| v2 | curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;grant_type=authorization_code&amp;redirect_uri=http://localhost/testclient/callback" |
 {:.ds-c-table}
 
 Response
@@ -394,15 +394,15 @@ Response
 ```
 {
 
-"access\_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
+"access_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
 
-"expires\_in": 16768.523842,
+"expires_in": 16768.523842,
 
-"token\_type": "Bearer",
+"token_type": "Bearer",
 
 "scope": "profile patient/Patient.read patient/ExplanationOfBenefit.read patient/Coverage.read"
 
-"refresh\_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
+"refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
 
 }
 ```
@@ -414,27 +414,19 @@ To use this flow your application should be registered with Client Type set to p
 
 #### Request authorization from user
 
-To use the client application flow direct the user to the Blue Button 2.0 API authorization endpoint with the response\_type parameter set to token.
+To use the client application flow direct the user to the Blue Button 2.0 API authorization endpoint with the response_type parameter set to token.
 
 | **API version** | **Request URL** |
 | --- | --- |
-| v1 | https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect\_uri=http://localhost:8080/testclient/callback&amp;response\_type=token &amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
-| v2 | https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect\_uri=http://localhost:8080/testclient/callback&amp;response\_type=token &amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
+| v1 | https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
+| v2 | https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
 {:.ds-c-table}
 
-If the user authorizes your application they will be redirected back to the redirect\_uri of your application. The request will include an access\_token in the fragment.
+If the user authorizes your application they will be redirected back to the redirect_uri of your application. The request will include an access token in the fragment.
 
 #### Typescript Example
 ```
-http://localhost:8080/testclient/callback#access\_token=KCHMTX5VHNAXYGYv38eG2RLAX4hL6R
-
-&amp;expires\_in=35849.875807
-
-&amp;token\_type=Bearer
-
-&amp;scope=profile+patient%2FPatient.read+patient%2FExplanationOfBenefit.read+patient%2FCoverage.read
-
-&amp;state=8e896a59f0744a8e93bf2f1f13230be5
+http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX4hL6R&amp;expires_in=35849.875807&amp;token_type=Bearer&amp;scope=profile+patient%2FPatient.read+patient%2FExplanationOfBenefit.read+patient%2FCoverage.read&amp;state=8e896a59f0744a8e93bf2f1f13230be5
 ```
 
 You can use this sample account to test your Blue Button 2.0 API OAuth implementation. This account mimics a valid Medicare account but has reduced functionality. For example, you cannot test "Forgot Password" flow.
@@ -471,8 +463,8 @@ We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension) 
 
 | **API version** | **Request** |
 | --- | --- |
-| v1 | HTTP GET /v1/fhir/ExplanationOfBenefit/?patient=[fhir\_id] |
-| v2 | HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir\_id] |
+| v1 | HTTP GET /v1/fhir/ExplanationOfBenefit/?patient=[fhir_id] |
+| v2 | HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id] |
 {:.ds-c-table}
 
 The above URL returns all of the beneficiary&#39;s Explanation of Benefit (sometimes referred to as an episode of care) records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html). The bulk of a beneficiary&#39;s data is contained within these ExplanationOfBenefit FHIR resources.
@@ -561,8 +553,8 @@ Response for v1, e.g. :
 
 | **API version** | **Request** |
 | --- | --- |
-| v1 | HTTP GET /v1/fhir/Patient/[fhir\_id] |
-| v2 | HTTP GET /v2/fhir/Patient/[fhir\_id] |
+| v1 | HTTP GET /v1/fhir/Patient/[fhir_id] |
+| v2 | HTTP GET /v2/fhir/Patient/[fhir_id] |
 {:.ds-c-table}
 
 The above URL returns the beneficiary&#39;s demographics and other administrative information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html). This information is mostly contact information, not medical data.
@@ -606,7 +598,7 @@ Response for v1 e.g.:
 
 {
 
-"system": "http://bluebutton.cms.hhs.gov/identifier#bene\_id",
+"system": "http://bluebutton.cms.hhs.gov/identifier#bene_id",
 
 "value": "-20140000008325"
 
@@ -669,8 +661,8 @@ Response for v1 e.g.:
 
 | **API version** | **Request** |
 | --- | --- |
-| v1 | HTTP GET /v1/fhir/Coverage/?beneficiary=[fhir\_id] |
-| v2 | HTTP GET /v2/fhir/Coverage/?beneficiary=[fhir\_id] |
+| v1 | HTTP GET /v1/fhir/Coverage/?beneficiary=[fhir_id] |
+| v2 | HTTP GET /v2/fhir/Coverage/?beneficiary=[fhir_id] |
 {:.ds-c-table}
 
 The above URL returns the beneficiary&#39;s Coverage information as an [Coverage FHIR Resource.](http://hl7.org/fhir/coverage.html)
@@ -698,11 +690,11 @@ Response for v1 e.g.:
 
 {
 
-"url": "https://bluebutton.cms.gov/resources/variables/ms\_cd",
+"url": "https://bluebutton.cms.gov/resources/variables/ms_cd",
 
 "valueCoding": {
 
-"system": "https://bluebutton.cms.gov/resources/variables/ms\_cd",
+"system": "https://bluebutton.cms.gov/resources/variables/ms_cd",
 
 "code": "10",
 
@@ -730,11 +722,11 @@ Response for v1 e.g.:
 
 {
 
-"url": "https://bluebutton.cms.gov/resources/variables/esrd\_ind",
+"url": "https://bluebutton.cms.gov/resources/variables/esrd_ind",
 
 "valueCoding": {
 
-"system": "https://bluebutton.cms.gov/resources/variables/esrd\_ind",
+"system": "https://bluebutton.cms.gov/resources/variables/esrd_ind",
 
 "code": "0",
 
@@ -746,11 +738,11 @@ Response for v1 e.g.:
 
 {
 
-"url": "https://bluebutton.cms.gov/resources/variables/a\_trm\_cd",
+"url": "https://bluebutton.cms.gov/resources/variables/a_trm_cd",
 
 "valueCoding": {
 
-"system": "https://bluebutton.cms.gov/resources/variables/a\_trm\_cd",
+"system": "https://bluebutton.cms.gov/resources/variables/a_trm_cd",
 
 "code": "0",
 
@@ -801,11 +793,11 @@ Response:
 
 "sub": "fflinstone",
 
-"prefered\_username": "fflinstone",
+"prefered_username": "fflinstone",
 
-"given\_name": "Fred",
+"given_name": "Fred",
 
-"family\_name:, "Flinstone,
+"family_name:, "Flinstone,
 
 "name": "Fred Flinstone",
 
@@ -949,7 +941,7 @@ Response for v1, e.g.:
 
 "relation": "first",
 
-"Url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit?\_count=10&amp;startIndex=0&amp;patient=-20140000000024"
+"Url": "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit?_count=10&amp;startIndex=0&amp;patient=-20140000000024"
 
 },
 ```
@@ -992,22 +984,22 @@ The HL7 FHIR specification provides a [Meta](https://www.hl7.org/fhir/resource.h
 
 YYYY-MM-DDThh:mm:ss.sss+zz:zz.
 
-The HL7 FHIR specification also provides a `\_lastUpdated` query parameter for the search operations on the end-points. By using the `\_lastUpdated` query parameter, **an application will be able to request only the records that have changed before or after a specific date**. If you keep track of the date of a previous request, you can request just the changes since your previous request. The format of this request would be:
+The HL7 FHIR specification also provides a `_lastUpdated` query parameter for the search operations on the end-points. By using the `_lastUpdated` query parameter, **an application will be able to request only the records that have changed before or after a specific date**. If you keep track of the date of a previous request, you can request just the changes since your previous request. The format of this request would be:
 
-for v1: `https://sandbox.bluebutton.cms.gov/v1/fhir/Patient?\_id=-19990000000001&amp;\_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;\_format=application%2Fjson%2Bfhir&#39;`
+for v1: `https://sandbox.bluebutton.cms.gov/v1/fhir/Patient?_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir&#39;`
 
-for v2: `https://sandbox.bluebutton.cms.gov/v2/fhir/Patient?\_id=-19990000000001&amp;\_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;\_format=application%2Fjson%2Bfhir&#39;`
+for v2: `https://sandbox.bluebutton.cms.gov/v2/fhir/Patient?_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir&#39;`
 
 **Note:**
 
-Do not input dates before 2020-02-12 with \_lastUpdated. Limitations of our backend service prevent data before 2020-02-12 from being tagged correctly.
+Do not input dates before 2020-02-12 with _lastUpdated. Limitations of our backend service prevent data before 2020-02-12 from being tagged correctly.
 
 The output from that request would look like this:
 
 | **API version** | **Request URL** |
 | --- | --- |
-| v1 | `/v1/fhir/Patient?\_id=-19990000000001&amp;\_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;\_format=application%2Fjson%2Bfhir&#39;` |
-| v2 | `/v2/fhir/Patient?\_id=-19990000000001&amp;\_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;\_format=application%2Fjson%2Bfhir&#39;` |
+| v1 | `/v1/fhir/Patient?_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir&#39;` |
+| v2 | `/v2/fhir/Patient?_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir&#39;` |
 {:.ds-c-table}
 
 Response for v1, e.g.:
@@ -1035,7 +1027,7 @@ Response for v1, e.g.:
 
 "relation": "self",
 
-"url": "https://prod-sbx.bfdcloud.net/v1/fhir/Patient?\_format=application%2Fjson%2Bfhir&amp;\_id=-19990000000001&amp;\_lastUpdated=gt2020-02-13T08%3A00%3A00-05%3A00"
+"url": "https://prod-sbx.bfdcloud.net/v1/fhir/Patient?_format=application%2Fjson%2Bfhir&amp;_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08%3A00%3A00-05%3A00"
 
 }
 
@@ -1059,12 +1051,12 @@ Response for v1, e.g.:
 
 ```
 
-The BB2.0 API supports operators for less than (lt), greater than (gt), less than or equal (le), and greater than or equal (ge) the specified instant. It is also possible to specify a time interval by using two `\_lastUpdated` parameters like this:
+The BB2.0 API supports operators for less than (lt), greater than (gt), less than or equal (le), and greater than or equal (ge) the specified instant. It is also possible to specify a time interval by using two `_lastUpdated` parameters like this:
 
 | **API version** | **Request URL** |
 | --- | --- |
-| v1 | `/v1/fhir/ExplanationOfBenefit?patient=Patient/-19990000000001&amp;\_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;\_lastUpdated=lt2020-02-14T08:00:00-05:00&amp;\_format=application%2Fjson%2Bfhir` |
-| v2 | `/v2/fhir/ExplanationOfBenefit?patient=Patient/-19990000000001&amp;\_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;\_lastUpdated=lt2020-02-14T08:00:00-05:00&amp;\_format=application%2Fjson%2Bfhir` |
+| v1 | `/v1/fhir/ExplanationOfBenefit?patient=Patient/-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_lastUpdated=lt2020-02-14T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir` |
+| v2 | `/v2/fhir/ExplanationOfBenefit?patient=Patient/-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_lastUpdated=lt2020-02-14T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir` |
 {:.ds-c-table}
 
 FHIR Data Model
@@ -1119,7 +1111,7 @@ The API also has historical claims data going back four years. All of these fact
 
 ### Sample Beneficiaries
 
-[CSV of 100 sample beneficiaries with rich claims data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv)
+[CSV of sample beneficiaries with rich claims data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv)
 
 When getting started with the Blue Button 2.0 API, it can be overwhelming to understand all of the coding systems and types of data that can be found in the Explanation of Benefit FHIR resource.
 
