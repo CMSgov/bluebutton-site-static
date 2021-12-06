@@ -1246,12 +1246,6 @@ The BB2IG features nine profiles in this version of the guide:
 
 ### Implementation Guides
 
-Questions:
-
-·Are these linked Implementation Guides sufficient for you to start implementing v2?
-
-·If not, what other documentation should Blue Button 2.0 provide?
-
 ·HL7 FHIR Common Payer Consumer Data Set (CPCDS)
 
 Implementation Guide: Version 1.0.0, Date 2020-11-23.
@@ -1268,8 +1262,7 @@ Implementation Guide: Version 1.0.0, Date 2020-11-23.
 
 ·Summary: The purpose of this IG is to outline the different artifacts released by CARIN for v2. The artifacts contain code explanations and benefits for the different EOB Profiles.
 
--
- HL7 FHIR CARIN – BlueButton GitHub IG
+- HL7 FHIR CARIN – BlueButton GitHub IG
 - Github Version 0.1.13, Date 2020-11-23
 - URL: [https://github.com/HL7/carin-bb/
 ](https://github.com/HL7/carin-bb/) Summary: This implementation guide describes the CARIN Blue Button® Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
