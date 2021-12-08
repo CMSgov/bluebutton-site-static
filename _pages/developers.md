@@ -1278,7 +1278,7 @@ See also the [version transforms](https://www.hl7.org/fhir/r3maps.html) and the 
 ### Additional Information
 **Migrating to v2/FHIR R4 FAQ**
 - [Frequently Asked Questions about the V2 API transition for Blue Button 2.0 API (BB2.0)](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ)
-- 
+ 
 **Where can you find the latest information?**
 
 Join the Google Groups for any APIs you access for the most up to date information:
