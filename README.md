@@ -16,6 +16,9 @@ It is assumed that the environment already has these installed:
 ## Build
 Jekyll builds the CSS and HTML pages. Run `bundle exec jekyll serve` from the project root for a local build. By default, the site will run in `http://localhost:4000/`. You can also run `bundle exec jekyll build` to compile the site files into the `_site` directory.
 
+## Codebook
+The `-codebook` directory and the [corresponding Jekyll plugin](_plugins/api_codings.rb) are used to create the variables resources, such as [this one](https://bluebutton.cms.gov/resources/variables/clm_non_utlztn_days_cnt/). Although these URLs show little to no usage from analytics these are used as URIs
+
 ## Get CSS/Styles Working
 We've moved the CSS for this application and our Sandbox application into a consolidated [Blue Button 2.0 API CSS repository](https://github.com/CMSgov/bluebutton-css) so that we can more easily keep things consistent and deploy changes more quickly.
 
