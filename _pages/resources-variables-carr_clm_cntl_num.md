@@ -1,7 +1,7 @@
 ---
 layout: basic
 title: 'CARR_CLM_CNTL_NUM'
-permalink: '/resources/codesystem/carr_clm_cntl_num/'
+permalink: '/resources/variables/carr_clm_cntl_num/'
 ---
 # Coding System: CARR_CLM_CNTL_NUM
 

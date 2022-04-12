@@ -1,7 +1,7 @@
 ---
 layout: basic
 title: 'FI_DOC_CLM_CNTL_NUM'
-permalink: '/resources/codesystem/fi_doc_clm_cntl_num/'
+permalink: '/resources/variables/fi_doc_clm_cntl_num/'
 ---
 # Coding System: FI_DOC_CLM_CNTL_NUM
 
