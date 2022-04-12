@@ -13,4 +13,4 @@ This field is an identification number for professional claims processed by the 
 - **Long name:** CARR_CLM_CNTL_NUM
 - **Type:** char
 - **Length:** 15
-- **Source:** MCS
+- **Source:** CCW
