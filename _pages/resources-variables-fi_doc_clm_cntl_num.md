@@ -13,4 +13,4 @@ This field is an identification value for institutional claims processed by the 
 - **Long name:** FI_DOC_CLM_CNTL_NUM
 - **Type:** char
 - **Length:** 23
-- **Source:** FISS
+- **Source:** CCW
