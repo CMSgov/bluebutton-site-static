@@ -5,9 +5,8 @@ NOTE:  Internal software engineers or other interested parties should follow the
 
 ## Requirements
 It is assumed that the environment already has these installed:
-* [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.io/) to install versioned ruby
-* [ruby](https://www.ruby-lang.org/en/) currently using 2.4
-* [jekyll](https://jekyllrb.com/) currently using 3.5.2
+* [jekyll](https://jekyllrb.com/docs/installation/) currently using 4.2.0
+* [chruby](https://github.com/postmodern/chruby) or [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.io/) to install versioned ruby - as mentioned in [Jekyll installation guide](https://jekyllrb.com/docs/installation/). Currently using ruby version 3.1.2
 
 ## Installation
 1. `$ gem install bundler` <—install Gem bundler
@@ -17,7 +16,7 @@ It is assumed that the environment already has these installed:
 Jekyll builds the CSS and HTML pages. Run `bundle exec jekyll serve` from the project root for a local build. By default, the site will run in `http://localhost:4000/`. You can also run `bundle exec jekyll build` to compile the site files into the `_site` directory.
 
 ## Codebook
-The [`_codebook` directory](_codebooks/) and the [corresponding Jekyll plugin](_plugins/api_codings.rb) are used to create the variables resources, such as [this one](https://bluebutton.cms.gov/resources/variables/clm_non_utlztn_days_cnt/). Although these *URLs* show little to no usage from analytics, they are used as *URIs* and are **integral to the [Beneficiary FHIR Data (BFD) endpoint responses](https://github.com/CMSgov/beneficiary-fhir-data/tree/b1ca6c4b630f6b0e5aa7e812addabf72bc334fe3/apps/bfd-server/bfd-server-war/src/test/resources/endpoint-responses)**. For now (Dec 2021), changing the URIs would require completely retiring all of the BFD v1 and v2 APIs and releasing a new v3 with different URIs. Any additions or changes to these URIs should involve the BFD team. 
+The [`_codebook` directory](_codebooks/) and the [corresponding Jekyll plugin](_plugins/api_codings.rb) are used to create the variables resources, such as [this one](https://bluebutton.cms.gov/resources/variables/clm_non_utlztn_days_cnt/). Although these *URLs* show little to no usage from analytics, they are used as *URIs* and are **integral to the [Beneficiary FHIR Data (BFD) endpoint responses](https://github.com/CMSgov/beneficiary-fhir-data/tree/b1ca6c4b630f6b0e5aa7e812addabf72bc334fe3/apps/bfd-server/bfd-server-war/src/test/resources/endpoint-responses)**. For now (Dec 2021), changing the URIs would require completely retiring all of the BFD v1 and v2 APIs and releasing a new v3 with different URIs. Any additions or changes to these URIs should involve the BFD team.
 
 ## Get CSS/Styles Working
 We've moved the CSS for this application and our Sandbox application into a consolidated [Blue Button 2.0 API CSS repository](https://github.com/CMSgov/bluebutton-css) so that we can more easily keep things consistent and deploy changes more quickly.
@@ -38,7 +37,7 @@ For information about deploying to the static site, please referernce the follow
 
 ## Dockerized Setup
 
-To startup the Docker containerized BB2 server, run the following command: 
+To startup the Docker containerized BB2 server, run the following command:
 
 ```
 docker-compose up -d
@@ -68,4 +67,3 @@ To cleanup/remove the setup run the following:
 docker-compose down
 docker rmi bluebutton-site-static_web
 ```
-
