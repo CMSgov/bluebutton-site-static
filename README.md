@@ -15,6 +15,9 @@ It is assumed that the environment already has these installed:
 ## Build
 Jekyll builds the CSS and HTML pages. Run `bundle exec jekyll serve` from the project root for a local build. By default, the site will run in `http://localhost:4000/`. You can also run `bundle exec jekyll build` to compile the site files into the `_site` directory.
 
+### Resolving potential errors
+When running `bundle exec jekyll serve`, if you get an error including `cannot load such file -- webrick (LoadError)`, run `bundle add webrick && bundle install` to resolve it.
+
 ## Codebook
 The [`_codebook` directory](_codebooks/) and the [corresponding Jekyll plugin](_plugins/api_codings.rb) are used to create the variables resources, such as [this one](https://bluebutton.cms.gov/resources/variables/clm_non_utlztn_days_cnt/). Although these *URLs* show little to no usage from analytics, they are used as *URIs* and are **integral to the [Beneficiary FHIR Data (BFD) endpoint responses](https://github.com/CMSgov/beneficiary-fhir-data/tree/b1ca6c4b630f6b0e5aa7e812addabf72bc334fe3/apps/bfd-server/bfd-server-war/src/test/resources/endpoint-responses)**. For now (Dec 2021), changing the URIs would require completely retiring all of the BFD v1 and v2 APIs and releasing a new v3 with different URIs. Any additions or changes to these URIs should involve the BFD team.
 
