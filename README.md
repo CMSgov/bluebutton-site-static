@@ -31,6 +31,11 @@ If you need to make CSS changes, make them within this directory and commit them
 
 For more instructions on how to make changes, view the readme inside of the `bluebutton-css` directory.
 
+## Making changes
+Make changes on a new branch and create pull requests to merge them into the master branch when ready.
+
+You'll need to [use a Github Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) instead of a password in order to push changes.
+
 ## Deploy
 
 For information about deploying to the static site, please referernce the following document in confluence: [HOW-TO Static Site Updates](https://confluence.cms.gov/display/BB2/HOW-TO+Static+Site+Updates).
