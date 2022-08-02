@@ -5,7 +5,8 @@ NOTE:  Internal software engineers or other interested parties should follow the
 
 ## Requirements
 It is assumed that the environment already has these installed:
-* [jekyll](https://jekyllrb.com/docs/installation/) currently using 4.2.0
+* [Docker Compose](https://docs.docker.com/compose/install/)
+* [Jekyll](https://jekyllrb.com/docs/installation/) currently using 4.2.0
 * [chruby](https://github.com/postmodern/chruby) or [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.io/) to install versioned ruby - as mentioned in [Jekyll installation guide](https://jekyllrb.com/docs/installation/). Currently using ruby version 3.1.2
 
 ## Installation
