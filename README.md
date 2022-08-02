@@ -1,7 +1,22 @@
 # CMS Blue Button 2.0 API Static Site
-A static Jekyll site for the Blue Button 2.0 API splash page: [https://bluebutton.cms.gov](https://bluebutton.cms.gov/)
+A static Jekyll site for the Blue Button 2.0 API splash page: [https://bluebutton.cms.gov](https://bluebutton.cms.gov/).
+
+See below for instructions to install locally and make changes to the code.
 
 NOTE:  Internal software engineers or other interested parties should follow the documentation for running a Dockerized local development enviornment. For more information see the [Dockerized Setup](#dockerized-setup) section.
+
+## Get CSS/Styles Working
+We've moved the CSS for this application and our Sandbox application into a consolidated [Blue Button 2.0 API CSS repository](https://github.com/CMSgov/bluebutton-css) so that we can more easily keep things consistent and deploy changes more quickly.
+
+You'll need to clone/download the BlueButton CSS repository to get started. If you're using a terminal on a Mac/Linux machine, navigate into the `bluebutton-site-static` repository and then run the following command:
+
+```bash
+git clone git@github.com:CMSgov/bluebutton-css.git
+```
+
+If you need to make CSS changes, make them within this directory and commit them to that repository. These changes will be ignored by the git status of the `bluebutton-site-static` project, but you will see any CSS changes take effect locally.
+
+For more instructions on how to make changes to this css, view the readme inside of the `bluebutton-css` directory.
 
 ## Dockerized Setup
 
@@ -59,19 +74,6 @@ Jekyll builds the CSS and HTML pages. Run `bundle exec jekyll serve` from the pr
 
 #### Resolving potential errors
 When running `bundle exec jekyll serve`, if you get an error including `cannot load such file -- webrick (LoadError)`, run `bundle add webrick && bundle install` to resolve it.
-
-## Get CSS/Styles Working
-We've moved the CSS for this application and our Sandbox application into a consolidated [Blue Button 2.0 API CSS repository](https://github.com/CMSgov/bluebutton-css) so that we can more easily keep things consistent and deploy changes more quickly.
-
-You'll need to clone/download the BlueButton CSS repository to get started. If you're using a terminal on a Mac/Linux machine, navigate into the `bluebutton-site-static` repository and then run the following command:
-
-```bash
-git clone git@github.com:CMSgov/bluebutton-css.git
-```
-
-If you need to make CSS changes, make them within this directory and commit them to that repository. These changes will be ignored by the git status of the `bluebutton-site-static` project, but you will see any CSS changes take effect locally.
-
-For more instructions on how to make changes, view the readme inside of the `bluebutton-css` directory.
 
 ## Making changes
 Make changes on a new branch and create pull requests to merge them into the master branch when ready.
