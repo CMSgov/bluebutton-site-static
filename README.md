@@ -78,6 +78,8 @@ When running `bundle exec jekyll serve`, if you get an error including `cannot l
 ## Making changes
 Make changes on a new branch and create pull requests to merge them into the master branch when ready.
 
+When creating a new branch, use the naming convention `[your-github-username]/[jira-ticket-number]-[description]`. For example, `mrengy/BB2-1511-layout-narrow-browser`.
+
 You'll need to [use a Github Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) instead of a password in order to push changes.
 
 ## Deploy
