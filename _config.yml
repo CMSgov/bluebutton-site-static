@@ -61,3 +61,12 @@ blog_url: https://bluebutton.cms.gov
 # - _codebooks/codebook-ffs-claims.xml
 # - _codebooks/codebook-pde.xml
 # - _codebooks/codebook-mbsf-abcd.xml
+
+# Configure the `_plugins/rda_api_variables.rb` plugin.
+# The plugin processes a csv file in `_data` directory extracted from the RDA API data dictionary
+# to produce pages for coding system URLs used by the BFD for partially-adjudicated claims data.
+# The `csv_file_key` should be the base name of the csv file minus the `.csv` suffix.
+# If either of these configuration settings are missing the plugin will not execute.
+#rda_api:
+#  layout: rda_api_variable.html
+#  csv_file_key: rda_api_data_dictionary
