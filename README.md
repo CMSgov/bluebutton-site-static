@@ -87,11 +87,12 @@ You'll need to [use a Github Personal Access Token](https://docs.github.com/en/a
 For information about deploying to the static site, please referernce the following document in confluence: [HOW-TO Static Site Updates](https://confluence.cms.gov/x/84P0Fw).
 
 ## Codebook
-The [`_codebook` directory](_codebooks/) and the [corresponding Jekyll plugin](_plugins/api_codings.rb) are used to create the variables resources, such as [this one](https://bluebutton.cms.gov/resources/variables/clm_non_utlztn_days_cnt/). Although these *URLs* show little to no usage from analytics, they are used as *URIs* and are **integral to the [Beneficiary FHIR Data (BFD) endpoint responses](https://github.com/CMSgov/beneficiary-fhir-data/tree/b1ca6c4b630f6b0e5aa7e812addabf72bc334fe3/apps/bfd-server/bfd-server-war/src/test/resources/endpoint-responses)**. For now (Dec 2021), changing the URIs would require completely retiring all of the BFD v1 and v2 APIs and releasing a new v3 with different URIs. Any additions or changes to these URIs should involve the BFD team.
+The [`_codebook` directory](_codebooks/) and the [corresponding Jekyll plugin](_plugins/api_codings.rb) are used to create the variables resources. Example: [Claim Medicare Non Utilization Days Count](https://bluebutton.cms.gov/resources/variables/clm_non_utlztn_days_cnt/). Although these *URLs* show little to no usage from analytics, they are used as *URIs* and are **integral to the [Beneficiary FHIR Data (BFD) endpoint responses](https://github.com/CMSgov/beneficiary-fhir-data/tree/b1ca6c4b630f6b0e5aa7e812addabf72bc334fe3/apps/bfd-server/bfd-server-war/src/test/resources/endpoint-responses)**  Changing the URIs requires retiring all of the BFD v1 and v2 APIs and releasing a new v3 with different URIs. Any additions or changes to these URIs should involve the BFD team.
 
 ## RDA API Data Dictionary
 Partially adjudicated claims data (FISS and MCS) sourced from the RDA API has its own data dictionary published as a spreadsheet.
 A CSV file exported from the spreadsheet and stored in the [`_data` directory](_data/rda_api_data_dictionary.csv) and its
-[corresponding Jekyll plugin](_plugins/rda_api_variables.rb) are used to create the variables resources, such as 
-[this one](https://bluebutton.cms.gov/resources/variables/fiss/bill-typ-cd/).  The plugin is similar to the one for
+[corresponding Jekyll plugin](_plugins/rda_api_variables.rb) are used to create the variables resources. Example:
+[Billing Type Code](https://bluebutton.cms.gov/resources/variables/fiss/bill-typ-cd/).  The plugin is similar to the one for
 codebooks but uses Jekyll's built-in support for parsing CSV data rather than parsing XML files.
+As with the codebook, any additions or changes to these URIs should involve the BFD team.
