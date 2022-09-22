@@ -67,7 +67,7 @@ end
 module Jekyll
   # Each VariablePage instance represents a Jekyll page that can be rendered,
   # providing documentation for the BlueButtonApi::Variable that it represents.
-  class VariablePage < Page
+  class RdaVariablePage < Page
     def initialize(site, layout, variable)
       @site = site
       @base = site.source
@@ -87,11 +87,11 @@ module Jekyll
 
   # VariableGenerator is a Jekyll Generator plugin, which can produce pages that
   # will be included in the site's rendered output.
-  class VariableGenerator < Generator
+  class RdaVariableGenerator < Generator
     safe true
 
     def generate(site)
-      Jekyll.logger.debug('VariableGenerator:', 'Verifying configuration...')
+      Jekyll.logger.debug('RdaVariableGenerator:', 'Verifying configuration...')
       return unless site.config.key? 'rda_api'
       config = site.config['rda_api']
       
@@ -100,13 +100,13 @@ module Jekyll
 
       csv_file_key = config['csv_file_key']
       return unless config.key? 'csv_file_key'
-      Jekyll.logger.debug('VariableGenerator:', 'Configured.')
+      Jekyll.logger.debug('RdaVariableGenerator:', 'Configured.')
 
       # Parse each XML file and generate a `VariablePage` for each `<variable/>`
       # entry.
       site.data[csv_file_key].each do |csv_row|
         variable_obj = RdaApi::Variable.new(csv_row)
-	      site.pages << VariablePage.new(site, layout, variable_obj)
+	      site.pages << RdaVariablePage.new(site, layout, variable_obj)
       end
     end
   end
