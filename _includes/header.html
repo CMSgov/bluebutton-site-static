@@ -1,6 +1,15 @@
 <!-- US Banner -->
-<script type = "text/javascript">  
-    function toggleBanner() {   
+<script type = "text/javascript">
+    // on site static pages - need this hack to the un-desirable svg flash during page loading
+    window.addEventListener('load', function() {
+        const banner_bar = document.getElementById('usa-banner-top');
+        if (banner_bar.style.length > 0) {
+            const disp = window.getComputedStyle(banner_bar).getPropertyValue("display");
+            banner_bar.style.display = "inline";
+        }
+    });
+
+    function toggleBanner() {
         const banner = document.getElementById('gov-banner_25');
         const icon27 = document.getElementById('icon-27');
         const styles = window.getComputedStyle(banner);
@@ -21,10 +30,9 @@
         }
     }  
 </script>
-<section class="ds-c-usa-banner" aria-label="Official government website">
+<section id="usa-banner-top" class="ds-c-usa-banner" aria-label="Official government website" style="display: none">
 <header class="ds-c-usa-banner__header ds-c-usa-banner__header--mobile" style="background-color:#f2f2f2; padding: 8px 16px 8px 16px;">
     <svg
-        aria-hidden="false"
         class="ds-c-icon ds-c-icon--usa-flag ds-c-usa-banner__header-flag"
         focusable="false"
         id="icon-26"
@@ -202,3 +210,5 @@
     <!-- Items Appended Here by JS -->
   </nav>
 </header>
+<script type = "text/javascript">
+</script>
