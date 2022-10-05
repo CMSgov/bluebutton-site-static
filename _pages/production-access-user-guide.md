@@ -19,7 +19,7 @@ Another core element of our mission is making sure that Medicare beneficiaries (
 
 This guide will help make sure you understand the requirements outlined in our terms of service, but you should always treat the terms of service as our official policy.
 
-<a classs="ds-c-button ds-c-button--primary" href="{{ site.baseurl }}/terms/">Read Our Terms of Service</a>
+<a classs="ds-c-button ds-c-button--solid" href="{{ site.baseurl }}/terms/">Read Our Terms of Service</a>
 
 ## Our Requirements for Production Access
 

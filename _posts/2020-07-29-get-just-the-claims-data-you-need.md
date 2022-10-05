@@ -252,7 +252,7 @@ Initially, all resources in production were given a lastUpdate value of 2020-01-
 
 Here is a CSV file that identifies the updated synthetic patient records and their associated Medicare beneficiary user accounts:
 
-<a class="ds-c-button ds-u-margin-y--2 ds-c-button--primary" href="{{site.baseurl}}/assets/developer-resources/Prod-Sandbox-SyntheticData-LastUpdated.csv">Download Updated Synthetic Beneficiary CSV File</a>
+<a class="ds-c-button ds-u-margin-y--2 ds-c-button--solid" href="{{site.baseurl}}/assets/developer-resources/Prod-Sandbox-SyntheticData-LastUpdated.csv">Download Updated Synthetic Beneficiary CSV File</a>
 
 More details are provided in the [search parameters page of the FHIR specification](https://www.hl7.org/fhir/search.html#3.1.1). The `gt` prefix is one of the values permitted as defined in the [prefix section of the search specification](https://www.hl7.org/fhir/search.html#prefix).
 
