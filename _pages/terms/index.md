@@ -12,7 +12,11 @@ permalink: "/terms/terms-index/"
 ## Select a Version to View
 
 <div class="bb-c-card ds-u-padding--2 ds-u-margin-bottom--2">
-	<a href="/terms/">Blue Button 2.0 API Terms of Service, Published 11/14/2019 (v2 - Current Version)</a>
+	<a href="/terms/">Blue Button 2.0 API Terms of Service, Published 11/01/2022 (v3 - Current Version)</a>
+</div>
+
+<div class="bb-c-card ds-u-padding--2 ds-u-margin-bottom--2">
+	<a href="{{ site.baseurl }}/terms/v2/">Blue Button 2.0 API Terms of Service, Published 11/14/2019 (v2)</a>
 </div>
 
 <div class="bb-c-card ds-u-padding--2 ds-u-margin-bottom--2">
