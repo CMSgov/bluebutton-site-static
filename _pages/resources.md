@@ -25,7 +25,7 @@ margin-block-end: 0em;
 ## Sample Applications
 Use our sample applications to see examples of basic use of the API.
 * [Node & React](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react)
-* [Python & React](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react)
+* [Python & React](https://github.com/CMSgov/bluebutton-sample-client-python-react)
 
 ## SDKs
 Our Node and Python SDKs provide methods for building API calls and managing token refreshes.
