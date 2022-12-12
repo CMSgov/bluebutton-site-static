@@ -1,6 +1,6 @@
 ---
-layout: default-full
-title:  "Blue Button 2.0 API Resources"
+layout: resources
+title:  "Blue Button 2.0 Resources"
 description: Resources and sample applications for the Blue Button 2.0 API.
 landing-page: live
 gradient: "blueberry-lime-background"
@@ -8,60 +8,68 @@ subnav-link-gradient: "blueberry-lime-link"
 badge: resources
 permalink: "/resources/"
 ---
-<link rel="stylesheet" media="all" href="{{ " /css/main.css" | prepend: site.baseurl }}" type="text/css">
 <style>
-.bb-c-card.default-card {
-    margin-top: 0;
+.ds-l-xl-col--12 {
+padding-left: 10%;
 }
-.ds-u-border-bottom--1 {
-    border-bottom: 1px solid #d6d7d9;
+
+ul {
+padding-inline-start: 20px;
 }
-.ds-u-border-bottom--2 {
-    border-bottom: 2px solid #d6d7d9;
-}
-.bb-c-card.default-card .card-description p {
-    min-height: 1em;
+
+h2, p {
+margin-block-start: 0em;
+margin-block-end: 0em;
 }
 </style>
-<div class="ds-l-container" style="max-width: 60%;">
-    <div class="ds-u-display--flex ds-u-lg-flex-direction--column ds-u-flex-direction--row ds-u-lg-flex-wrap--nowrap ds-u-flex-wrap--wrap">
-        <div class="bb-c-card default-card ds-u-padding--2">
-            <h2 class="ds-h2 ds-u-margin-top--2 ds-u-padding-bottom--2 ds-u-border-bottom--2">Documentation</h2>
-            {% for a in site.data.resources.documentation %}
-                <h3 class="ds-h3">
-                    {{a.title}}
-                    {% if a.date %}
-                    <span class="ds-u-float--right ds-u-font-size--sm ds-u-font-weight--normal ds-u-color--success"><date>Updated {{a.date | date: "%m/%d/%Y" }}</date></span>
-                    {% endif %}
-                </h3>
-                {% if forloop.last == true %}
-                    <div class="card-description ds-u-leading--base">
-                {% else %}
-                    <div class="card-description ds-u-leading--base ds-u-border-bottom--1">
-                {% endif %}
-                        <p>{{a.description}}</p>
-                        <div class="ds-u-float--right"><a href="{{a.link}}">Read more <i data-feather="arrow-right"></i></a></div>
-                    </div>
-            {% endfor %}
-        </div>
-        <div class="bb-c-card default-card ds-u-padding--2">
-            <h2 class="ds-h2 ds-u-margin-top--2 ds-u-padding-bottom--2 ds-u-border-bottom--2">Sample applications</h2>
-            {% for a in site.data.resources.sample-applications %}
-                <h3 class="ds-h3">
-                    {{a.title}}
-                    {% if a.date %}
-                    <span class="ds-u-float--right ds-u-font-size--sm ds-u-font-weight--normal ds-u-color--success"><date>Updated {{a.date | date: "%m/%d/%Y" }}</date></span>
-                    {% endif %}
-                </h3>
-                {% if forloop.last == true %}
-                    <div class="card-description">
-                {% else %}
-                    <div class="card-description ds-u-border-bottom--1">
-                {% endif %}
-                        <p>{{a.description}}</p>
-                        <div class="ds-u-float--right"><a href="{{a.link}}">Read more <i data-feather="arrow-right"></i></a></div>
-                    </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
+## Sample Applications
+Use our sample applications to see examples of basic use of the API.
+* [Node & React](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react)
+* [Python & React](https://github.com/CMSgov/bluebutton-sample-client-python-react)
+
+## SDKs
+Our Node and Python SDKs provide methods for building API calls and managing token refreshes.
+* [Node SDK](https://github.com/CMSgov/cms-bb2-node-sdk)
+* [Python SDK](https://github.com/CMSgov/cms-bb2-python-sdk)
+
+## Specifications
+
+* [Blue Button API Swagger Documentation](https://sandbox.bluebutton.cms.gov/docs/openapi)
+* [FHIR Specification](http://www.hl7.org/fhir/index.html)
+* [CARIN Implementation Guide ](http://www.hl7.org/fhir/us/carin-bb/)(Blue Button V2)
+* [Blue Button Implementation Guide](https://bluebutton.cms.gov/assets/ig/index.html) (Blue Button V1)
+* [OAuth 2.0 Specifications](https://oauth.net/specs/)
+
+## Version Resources
+
+* [Migrating to V2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ)
+* [Version transforms](https://www.hl7.org/fhir/r3maps.html)
+* [Version specific extensions](https://www.hl7.org/fhir/versions.html#extensions) (in [XML](https://www.hl7.org/fhir/fhir.diff.xml) or [JSON](https://www.hl7.org/fhir/fhir.diff.json))
+
+## CARIN Alliance
+
+* [CARIN Alliance](https://www.carinalliance.com/)
+* [CARIN Alliance Confluence Page](https://confluence.hl7.org/display/CAR)
+* [CARIN UX Guide](https://carinuxguide.arcwebtech.com/)
+* [CARIN Code of Conduct](https://www.carinalliance.com/our-work/trust-framework-and-code-of-conduct/)
+
+## Production Access
+
+* [Production Access Instructions](https://bluebutton.cms.gov/developers/#production-api-access) 
+* [Production Access User Guide](https://bluebutton.cms.gov/guide/)
+* [Production Access Checklist](https://bluebutton.cms.gov/checklist/)
+* [Terms of Use](https://bluebutton.cms.gov/terms/)
+
+## Tutorials and Learning Resources
+
+* [What is FHIR?](https://www.healthit.gov/sites/default/files/2019-08/ONCFHIRFSWhatIsFHIR.pdf)
+* [An Introduction to FHIR](https://www.youtube.com/watch?v=Px3564G-vw4)
+* [FHIR Training Calendar](https://www.hl7.org/training/calendar.cfm)
+* [FHIR Confluence Home Page](https://confluence.hl7.org/display/FHIR)
+* [OAuth Simplified](https://www.oauth.com/)
+
+## Other CMS APIs
+
+* [Beneficiary Claims Data API (BCDA)](https://groups.google.com/forum/#!forum/bc-api)
+* [Data at the Point of Care (DPC)](https://groups.google.com/forum/#!forum/dpc-api)
+* [Medicare Claims Data to Part D Sponsors (AB2D)](https://groups.google.com/g/ab2d-api)
