@@ -29,8 +29,8 @@ Use our sample applications to see examples of basic use of the API.
 
 ## SDKs
 Our Node and Python SDKs provide methods for building API calls and managing token refreshes.
-* [Node SDK](https://github.com/CMSgov/cms-bb2-node-sdk)
-* [Python SDK](https://github.com/CMSgov/cms-bb2-python-sdk)
+* [Node SDK](https://www.npmjs.com/package/cms-bluebutton-sdk)
+* [Python SDK](https://pypi.org/project/cms-bluebutton-sdk/)
 
 ## Specifications
 
