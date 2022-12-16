@@ -29,8 +29,8 @@ Use our sample applications to see examples of basic use of the API.
 
 ## SDKs
 Our Node and Python SDKs provide methods for building API calls and managing token refreshes.
-* [Node SDK](https://github.com/CMSgov/cms-bb2-node-sdk)
-* [Python SDK](https://github.com/CMSgov/cms-bb2-python-sdk)
+* [Node SDK](https://www.npmjs.com/package/cms-bluebutton-sdk)
+* [Python SDK](https://pypi.org/project/cms-bluebutton-sdk/)
 
 ## Specifications
 
@@ -70,6 +70,6 @@ Our Node and Python SDKs provide methods for building API calls and managing tok
 
 ## Other CMS APIs
 
-* [Beneficiary Claims Data API (BCDA)](https://groups.google.com/forum/#!forum/bc-api)
-* [Data at the Point of Care (DPC)](https://groups.google.com/forum/#!forum/dpc-api)
-* [Medicare Claims Data to Part D Sponsors (AB2D)](https://groups.google.com/g/ab2d-api)
+* [Beneficiary Claims Data API (BCDA)](https://bcda.cms.gov/)
+* [Data at the Point of Care (DPC)](https://dpc.cms.gov/)
+* [Medicare Claims Data to Part D Sponsors (AB2D)](https://ab2d.cms.gov/)
