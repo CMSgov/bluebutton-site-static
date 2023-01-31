@@ -67,6 +67,7 @@ Our Node and Python SDKs provide methods for building API calls and managing tok
 * [FHIR Training Calendar](https://www.hl7.org/training/calendar.cfm)
 * [FHIR Confluence Home Page](https://confluence.hl7.org/display/FHIR)
 * [OAuth Simplified](https://www.oauth.com/)
+* [FTC: Mobile Health App Interactive Tool](https://www.ftc.gov/business-guidance/resources/mobile-health-apps-interactive-tool)
 
 ## Other CMS APIs
 

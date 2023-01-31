@@ -4,7 +4,7 @@ title:  "API Terms of Service"
 date:   2019-11-14 09:21:12 -0500
 description: "Previous Version (v2), published 11/14/2019"
 badge: documentation
-permalink: "/terms/v2"
+permalink: "/terms/v2/"
 sections:
   - Overview
   - Scope
