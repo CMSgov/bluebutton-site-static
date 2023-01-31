@@ -12,6 +12,8 @@ sections:
   - Try the API
   - Authorization
   - Core Resources
+  - Calling the API
+  - Consuming the Data
   - Sample Beneficiaries
   - Production API Access
   - Developer Guidelines
@@ -1106,6 +1108,424 @@ Today, there are approximately 38M beneficiaries in traditional or fee-for-servi
 Part D has always been a separate program, but certain plans include both the MA benefits (Part C) and Part D. As a result, Part D drug event data is collected separately from MA encounter data. Part D drug event data for all participants in Part D has been collected by the agency since the program began in the mid-2000s.
 
 The API also has historical claims data going back four years. All of these factors contribute to the 53M number we use to describe the total number of beneficiaries available via the Blue Button 2.0 API.
+
+---
+
+### Calling the API
+
+This section provides information on basic and common queries against the Blue Button API.  For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi).
+
+
+#### Base FHIR URLs
+
+| Environment | Purpose | Base URL |
+| -------- | -------- | -------- |
+| Sandbox     | Development and Testing     | `https://sandbox.bluebutton.cms.gov/{version}/fhir/`   |
+| Production | Production Data Access | `https://api.bluebutton.cms.gov/{version}/fhir/`|
+
+    Note: Use `v1` or `v2` for the  {version}
+    
+To find beneficiaries with varying volumes and types of data, use this [CSV of synthetic data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv). Using the synthetic data, you can break down claims by type (carrier, inpatient, etc.) for each beneficiary/user combination.  Synthetic data works in both the Sandbox and Production environments.
+	
+
+
+#### Querying Resources
+A listing of common API calls are shown in the table below.  See "Base FHIR URLs" above and substitute for {baseURL} as appropriate.  
+    
+For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi).  
+
+
+
+| Resource | Request | Description |
+| -------- | -------- | -------- |
+| Patient     | `HTTP GET {baseURL}/Patient`     | Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Patient resources](https://www.hl7.org/fhir/patient.html) with one entry (one patient resource).  You can use the resource ID `Bundle.entry.resource.id`in later queries.  For synthetic data, the ID is a negative number.     |
+| Patient | `HTTP GET {baseURL}/Patient/{id}` | Returns a single Patient resource.  Replace `{id}` with a valid patient resource ID.  See `/Patient` call above. |
+| Coverage | `HTTP GET {baseURL}/Coverage?beneficiary={ id }`<br>OR<br>`HTTP GET {baseURL}/Coverage`| Replace `{id}` with the patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Coverage resources](https://www.hl7.org/fhir/coverage.html) |
+| Explanation of Benefit |  `HTTP GET {baseURL}/ExplanationOfBenefit?patient={ id }`<br />OR<br />`HTTP GET {baseURL}/ExplanationOfBenefit`| Replace `{id}` with patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html).  The bundle should contain one or more EOBs. You can use the resource ID located at `Bundle.entry.resource.id` (the explanation of benefit resource ID) in later queries.  For synthetic data, the ID is typically formatted as `[claimtype]`–`[number]` Example: `carrier--10114937820` |
+| Explanation of Benefit  | `HTTP GET {baseURL}/ExplanationOfBenefit/{id}` | Returns a single [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html).  Replace {id} with a valid EOB resource ID.  See `/ExplanationOfBenefit` call above. |
+| Capability Statement | `HTTP GET {baseURL}/metadata` | Returns the [FHIR capability statement](https://www.hl7.org/fhir/capabilitystatement.html) (Example: the FHIR features and operations supported by this server) |
+| User Info | `HTTP GET {host}/{version}/connect/userinfo` | If the user grants access to access to their personal information, `UserInfo` returns name, family name and email. If the user denies access to their personal information, `UserInfo` returns `You do not have permission.` | 
+
+---
+
+### Consuming the Data
+The Blue Button API includes over 1300 data elements with a wide variety of data exchange use cases. Here are some basics to get you started with common data elements. 
+
+For complete implementation guidance, see the [FHIR specification](http://www.hl7.org/fhir/index.html) and the [CARIN implementation guide](http://www.hl7.org/fhir/us/carin-bb/index.html). Our [Resources page](https://bluebutton.cms.gov/resources/) also includes links to tutorials and helpful information on FHIR.
+
+#### Understanding the Payload
+
+Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search) (like `/Patient`, `/ExplanationOfBenefit`, and `/ExplanationOfBenefit?patient=123`)  return data in [FHIR Bundles](http://www.hl7.org/fhir/bundle.html). A FHIR bundle is a container resource that includes a collection of FHIR resources. You can grab each resource by looping through the `Bundle.entry` list attribute.  
+
+[Read calls](http://www.hl7.org/fhir/http.html#read) such as `/Patient/123` return a single resource.
+
+
+
+
+**FHIR `Bundle` example:**
+```
+{
+    "resourceType": "Bundle",
+    "id": "123",
+    ....
+    ....
+    "type": "searchset",
+    "total": 99,
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "ExplanationOfBenefit",
+                "id": "carrier--123",
+                ....
+            }
+        }
+        {
+            "resource": {
+                "resourceType": "ExplanationOfBenefit",
+                "id": "carrier--456",
+                ....
+            }
+        }  
+    ]
+}
+```
+
+
+
+
+
+
+#### Navigating Through a Bundle
+FHIR search results are paginated because they typically contain many records. The default is 10 records in each call. You can override the default of 10 with a _count parameter in the request. The maximum records allowed is 50.
+
+To navigate forward and backward through the bundle, use the URLs provided in `Bundle.link`, as described in the table below. For instance, to get the next `X` records, use the URL supplied in `Bundle.link` where `relation = next`.  
+
+
+| Relation    | Description |
+| ----------- | ----------- |
+| first       | Retrieve the first X records in the resultset |
+| next        | Retrieve the next X records in the resultset |  
+| previous    | Retrieve the previous X records in the resultset |  
+| last        | Retrieve the last X records in the resultset |  
+
+
+In the example below, the `Bundle.total` attribute shows that there are 89 records in the results. However, only the first 10 records are delivered in the `Bundle.entry` array. 
+
+For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle](http://www.hl7.org/fhir/bundle.html) and [FHIR v4.3.0 Managing Returned Resources](http://www.hl7.org/fhir/search.html#return). 
+
+ 
+
+
+**Bundle navigation example:**
+
+```
+"resourceType": "Bundle",
+    "id": "5e5844c4-d3e2-44ca-8c87-77efccc5d60d",
+    ...
+    ...
+    "total": 89,
+    "link": [
+        {
+            "relation": "first",
+            "url": "{host}/v2/fhir/ExplanationOfBenefit?startIndex=0&_count=10&patient=......
+        },
+        {
+            "relation": "next",
+            "url": "{host}/v2/fhir/ExplanationOfBenefit?startIndex=10&_count=10&patient=......
+        },
+        {
+            "relation": "last",
+            "url": "{host}/v2/fhir/ExplanationOfBenefit?&startIndex=.....
+        },
+        {
+            "relation": "self",
+            "url": "{host}/v2/fhir/ExplanationOfBenefit?&startIndex=.....
+         }
+    ],
+```
+
+
+
+
+#### Working with Identifiers
+In FHIR, the difference between the `Resource.id` (resource ID) and `identifier` attributes within a resource can be confusing. 
+
+* **Resource ID:** In the Blue Button API, the resource ID is an internal identifier from the source database, the Chronic Conditions Warehouse (CCW).  The resource ID is a system-level resource, held outside the resource.  The Resource ID is guaranteed to be unique for a particular resource and will always be limited to one value.
+
+
+* **Identifier:** The identifier attribute typically provides business identifiers (or externally recognized identifiers).  In the Blue Button API, the `Patient.identifier` attribute provides the [Medicare Beneficiary ID (MBI)](https://www.cms.gov/medicare/new-medicare-card). The MBI is the number on a beneficiary's Medicare card.
+
+In FHIR, the identifier attribute is a list element that could supply multiple identifiers. Use [discriminators](https://www.hl7.org/fhir/profiling.html#discriminator) to distinguish between the entries to pull your desired identifier.  
+
+For example, you can use discriminators to pull the current MBI from a Patient resource. (Beneficiaries are sometimes given new or replacement MBIs in situations such as identity theft.) In the `Patient` resource snippet below, there are two identifiers in the list. Use the following discriminators to pull the current MBI: 
+- `identifier.system` = `http://hl7.org/fhir/sid/us-mbi` (ensures that the entry is an MBI)
+- `identifier.type.coding[n].extension.valueCoding.code` = "current"
+
+
+**Patient identifier example:**
+```
+
+"identifier": [
+        {
+            "system": "http://hl7.org/fhir/sid/us-mbi",
+            "type": {
+                "coding": [
+                    {
+                        "code": "MC",
+                        "extension": [
+                            {
+                                "url": "https://bluebutton.cms.gov/resources/codesystem/identifier-currency",
+                                "valueCoding": {
+                                    "code": "current",
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "value": "<CURRENT MBI HERE>"
+        },
+        {
+            "system": "http://hl7.org/fhir/sid/us-mbi",
+            "type": {
+                "coding": [
+                    {
+                        "code": "MC",
+                        "extension": [
+                            {
+                                "url": "https://bluebutton.cms.gov/resources/codesystem/identifier-currency",
+                                "valueCoding": {
+                                    "code": "historic",
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "value": "<HISTORIC MBI HERE>"
+        }
+    ],
+```
+
+
+Example [FHIRPath expression](https://hl7.org/fhir/fhirpath.html)  for pulling the current MBI:
+
+```
+Patient.identifier.where(type.coding.extension('https://bluebutton.cms.gov/
+resources/codesystem/identifier-currency').valueCoding.code =
+'current').where(system = 'http://hl7.org/fhir/sid/us-mbi').value
+```
+
+
+
+
+#### Working with References
+The Blue Button API uses both [literal](http://www.hl7.org/fhir/references.html#literal) and [logical](http://www.hl7.org/fhir/references.html#logical) FHIR references to refer to other resources/data external to the resource.
+
+##### Literal references
+
+For literal references, relative URLs are provided.  In the sample EOB resource below, the `Eob.patient` attribute contains a relative URL reference, `/Patient/123`. Append this path to the base FHIR URL to perform a Patient read operation. 
+
+
+
+**Literal reference example:**
+```
+"resource": {
+    "resourceType": "ExplanationOfBenefit",
+    "id": "carrier--10045426206",
+    ....
+    ....
+    "patient": {
+        "reference": "Patient/123"
+    },
+```
+
+
+##### Contained resources
+The Blue Button API also uses fragments and [contained resources](https://www.hl7.org/fhir/references.html#contained).  A resource that does not have independent existence is embedded inside another resource as a contained resource.  For example, the Organization resource does not have its own endpoint. Instead, it is supplied as a contained resource with EOB. In the example EOB resource below, the organization resource is within the `Eob.contained` attribute, and the `Eob.provider` attribute has a `#` reference to `contained.id` (`#provider-org`).   
+
+**Contained resource example:**
+```
+"contained": [
+    {
+        "active": true,
+        "id": "provider-org",
+        "identifier": [
+            {
+                "type": {
+                    "coding": [
+                        {
+                            "code": "PRN",
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+....
+....           
+....
+"provider": {
+    "reference": "#provider-org"
+},
+```
+##### Logical references
+[Logical references](http://www.hl7.org/fhir/references.html#logical) typically supply a business identifier instead of a URL to an endpoint or contained resource.  
+
+In the example below, the `Eob.careTeam.provider` attribute contains a reference to the the [National Provider Identifier (NPI)](https://npiregistry.cms.hhs.gov/) for the practitioner.  (Note: The Blue Button API  does not support a `/Practitioner` endpoint.)
+
+**Logical reference example**
+```
+"careTeam": [
+        {
+            "provider": {
+                "identifier": {
+                    "type": {
+                        "coding": [
+                            {
+                                "code": "npi",
+                                "display": "National Provider Identifier",
+                                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType"
+                            }
+                        ]
+                    },
+                    "value": "123"
+                }
+            },
+```
+
+
+#### Extensions and SupportingInfo
+
+
+The Blue Button API supplies many data points using [FHIR extensions](http://www.hl7.org/fhir/extensibility.html).  Extensions are information that is not part of the basic definition of the FHIR resource. They're often very specific to a use case or situation.  For example, the Blue Button API uses extensions to supply Medicare-specific data points that are not part of the standard FHIR specification. 
+
+All Blue Button API resources include extensions.  Extensions are like a key-value list, where the extension URL is the key. In an extension, the value attribute is defined as [Choice of Types](http://www.hl7.org/fhir/formats.html#choice), where the data type depends on the definition of the extension.    
+
+In the example below, there are two extensions: 
+* [NCH Near Line Record Identification Code](https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd/) provides the value as a `valueCoding` type
+* [Carrier or MAC Number](https://bluebutton.cms.gov/resources/variables/carr_num/)   is a `valueIdentifier`
+
+
+*Note: In the Blue Button API, the extension URL points at an underlying valueset rather than the standard FHIR practice of the URL pointing to the [StructureDefinition](http://www.hl7.org/fhir/structuredefinition.html) of the extension.  This is due to historical reasons and will be revisited in future versions of Blue Button.*
+
+
+
+**Extension example:**
+```
+"extension": [
+    {
+        "url": "https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd",
+        "valueCoding": {
+            "code": "O",
+            "display": "Part B physician/supplier claim record (processed by local carriers; can include DMEPOS services)",
+            "system": "https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd"
+        }
+    },
+    {
+        "url": "https://bluebutton.cms.gov/resources/variables/carr_num",
+        "valueIdentifier": {
+            "system": "https://bluebutton.cms.gov/resources/variables/carr_num",
+            "value": "15202"
+        }
+    }
+```
+
+##### Supporting Info attribute
+The `supportingInfo` attribute is a standard element in the FHIR EOB resource. Similar to extensions, `suportingInfo` is like a key-value list. `supportingInfo.category` serves as the key and `supportingInfo.code` is the value.   Other attributes in `supportingInfo` include `timing[x]`, `value[x]`, and `reason`.  
+
+*Note: The [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html) has chosen to use `supportingInfo` over extensions.  The CARIN IG does not define any extensions.  For historical and backwards compatibility reasons, the Blue Button API provides data in both extensions and `supportingInfo`.*
+
+#### Determining Claim Type
+The Blue Button API supplies claims data in the [ExplanationOfBenefit resource](http://www.hl7.org/fhir/explanationofbenefit.html) for all claim types (Example: Inpatient, Outpatient, Carrier, DME, etc.)
+
+To determine the type of a given claim, inspect the `Eob.type` attribute.  `Eob.type` is a `CodeableConcept`, which provides data as a list of codings. There are multiple entries in the list. 
+
+Each entry is a code from a given codesystem or valueset with information about the type of claim.  For example, the `NCH_CLM_TYPE_CD` codesystem uses the code `71` for a carrier claim. The Blue Button API `eob-type` valueset uses a code of `CARRIER` for a carrier claim.  
+
+
+**Claim type example:**
+```
+"type": {
+    "coding": [
+        {
+            "code": "71",
+            "display": "Local carrier non-durable medical equipment, prosthetics, orthotics, and supplies (DMEPOS) claim",
+            "system": "https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd"
+        },
+        {
+            "code": "CARRIER",
+            "system": "https://bluebutton.cms.gov/resources/codesystem/eob-type"
+        },
+        .....
+        .....
+    ]
+},
+```
+For more information about determining claim types, see the following coding system reference links:
+* [EOB type](https://bluebutton.cms.gov/resources/codesystem/eob-type/)
+* [NCH Claim Type Code variable](https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd/)
+* [FHIR Claim Type value set](http://hl7.org/fhir/STU3/valueset-claim-type.html)
+
+
+#### Linking Items
+The `item` data element in the EOB resource supplies a list of entries describing products/services provided.  You can link each entry in the list to other parts of the EOB using the `item.*sequence elements`.  
+
+For example, `Eob.item.diagnosisSequence` links to `Eob.diagnosis.sequence`, which tells you that this product/service is linked to the corresponding diagnosis.  In the partial EOB example below, the `item` is linked to diagnosis `1` and careTeam member `3`.
+
+**Linking item example:**
+
+```
+"item": [
+    {
+        "adjudication": [
+        ....
+        ....
+        "diagnosisSequence": [
+            1
+        ],
+        "careTeamSequence": [
+            3
+        ],
+        ....
+        ....
+    }
+]
+ 
+"diagnosis": [
+    {
+        "sequence": 1,
+        "diagnosisCodeableConcept": {
+            "coding": [
+                {
+                    "code": "Z0000",
+                    "display": "ENCNTR FOR GENERAL ADULT MEDICAL EXAM W/O ABNORMAL FINDINGS",
+        ....
+        ....
+    },
+     
+"careTeam": [
+        {
+            "sequence": 1
+            ....
+            ....
+        },
+        {
+            "sequence": 2
+            ....
+            ....
+        },
+        {
+        {
+            "sequence": 3,
+            "provider": {
+                "identifier": {
+                ....
+                ....
+            },
+            "role": {
+                "coding": [
+                    {
+                        "code": "performing",
+                        "display": "Performing provider",
+            ....
+            ....       
+```
 
 ---
 
