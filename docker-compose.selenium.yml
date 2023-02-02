@@ -42,8 +42,8 @@ services:
     healthcheck:
       test: curl --fail http://localhost:4000 || exit 1
       interval: 30s
-      timeout: 5s
-      retries: 20
-      start_period: 100s # Estimated time to boot.
+      timeout: 10s
+      retries: 25
+      start_period: 200s # Estimated time to boot.
     profiles:
       - local-web
