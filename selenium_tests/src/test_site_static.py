@@ -17,32 +17,38 @@ CMS_BB2_FOOTER_COLS = [
                     {
                         "text": "Home",
                         "link": "https://bluebutton.cms.gov/",
-                        "check": True
+                        "check": True,
+                        "water-mark": ("//body/div/h1", "Medicare claims data at your fingertips.")
                     },
                     {
                         "text": "Documentation",
                         "link": "https://bluebutton.cms.gov/developers/",
-                        "check": True
+                        "check": True,
+                        "water-mark": ("//body/div/div/h1", "Blue Button 2.0 API Docs")
                     },
                     {
                         "text": "Support",
                         "link": "https://bluebutton.cms.gov/support/",
-                        "check": True
+                        "check": True,
+                        "water-mark": ("//body/div/div/h1", "Developer Support")
                     },
                     {
                         "text": "Resources",
                         "link": "https://bluebutton.cms.gov/resources/",
-                        "check": True
+                        "check": True,
+                        "water-mark": ("//body/div/div/h1", "Blue Button 2.0 Resources")
                     },
                     {
                         "text": "API Docs",
                         "link": "https://sandbox.bluebutton.cms.gov/docs/openapi",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div/section/div[2]/div[2]/div/section/div/div/hgroup/h2", "BlueButton 2.0")
                     },
                     {
                         "text": "Developer Sandbox",
                         "link": "https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login",
-                        "check": True
+                        "check": True,
+                        "water-mark": ("//body/main/div/div/h1", "SANDBOX LOGIN")
                     }
                 ]
     },
@@ -52,32 +58,38 @@ CMS_BB2_FOOTER_COLS = [
                     {
                         "text": "CMS.gov",
                         "link": "https://www.cms.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div/header/div/div/div/div/div/div[2]", "Centers for Medicare & Medicaid Services")
                     },
                     {
                         "text": "Medicare.gov",
                         "link": "https://www.medicare.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div/div/div/div/div/div/div/div/header/div/a/img", "Medicare.gov")
                     },
                     {
                         "text": "Medicaid.gov",
                         "link": "https://www.medicaid.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div/div/div/header/div/div/div/a/img", "Medicaid.gov-Keeping America Healthy")
                     },
                     {
                         "text": "Healthcare.gov",
                         "link": "https://www.healthcare.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div/div/div/div/div/div[2]/a/img", "Healthcare.gov")
                     },
                     {
                         "text": "HHS.gov",
                         "link": "https://www.hhs.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div/div/div/header/div/a", "U.S. Department of Health & Human Services")
                     },
                     {
                         "text": "Developer.cms.gov",
                         "link": "https://developer.cms.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/header[2]/div/div/div/div/h1", "Developer tools")
                     }
                 ]
     },
@@ -87,47 +99,56 @@ CMS_BB2_FOOTER_COLS = [
                     {
                         "text": "CMS Design System",
                         "link": "https://design.cms.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div/div/div/div/div/header/a", "CMS Design System")
                     },
                     {
                         "text": "U.S. Web Design System",
                         "link": "https://designsystem.digital.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/header/div/div/em/a/span[2]", "U.S. Web Design System (USWDS)")
                     },
                     {
                         "text": "Freedom of Information Act",
                         "link": "https://www.foia.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/header/div[3]/div/em/a/h1", "FOIA.gov")
                     },
                     {
                         "text": "Inspector General",
                         "link": "https://oig.hhs.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/header/div/div/em/a/img", "U.S. Department of Health and Human Services, Office of Inspector General")
                     },
                     {
                         "text": "No Fear Act",
                         "link": "https://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/NoFearAct.html",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div/div/div/main/div/div/div/div[2]/inner/div/div[2]/div/h1/span", "No Fear Act")
                     },
                     {
                         "text": "Plain Writing",
                         "link": "https://www.medicare.gov/about-us/plain-writing/plain-writing.html",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div/div/div[3]/div[2]/div[2]/main/div/div/h1/span", "Plain writing")
                     },
                     {
                         "text": "USA.gov",
                         "link": "https://www.usa.gov/",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/header/span/div/div/em/a/img", "USAGov Logo")
                     },
                     {
                         "text": "CMS Privacy Policy",
                         "link": "https://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/Privacy-Policy.html",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div[2]/div/div/main/div/div/div/div[2]/inner/div/div[2]/div/h1/span", "Centers for Medicare & Medicaid Services (CMS) Website Privacy Policy")
                     },
                     {
                         "text": "CMS/HHS Vulnerability Disclosure Policy",
                         "link": "https://www.cms.gov/vulnerability-disclosure-policy",
-                        "check": False
+                        "check": False,
+                        "water-mark": ("//body/div[2]/div/div/main/div/div/div/div[2]/inner/div/div[2]/div/h1/span", "CMS/HHS Vulnerability Disclosure Policy")
                     },
                 ]
     },
@@ -209,11 +230,24 @@ class TestSiteStatic():
         assert not elems[0].is_displayed()
         assert not elems[1].is_displayed()
 
+    def _check_watermark(self, mark):
+        # mark is tuple: (xpath, text)
+        elem = self._find_and_return(10, By.XPATH, mark[0])
+        # assert the water mark (expected text) shows up
+        txt_val = "NO VALUE"
+        if mark[0].endswith("/a/img"):
+            txt_val = elem.get_attribute("alt")
+        else:
+            txt_val = elem.text
+
+        assert txt_val == mark[1] or txt_val.startswith(mark[1])
+
     def _verify_cms_footer(self):
         footer_cms_info = self._find_elem_xpath("//footer/div/div/div/div")
         footer_col_titles = self._find_elem_xpath("//footer/div/div/div/h6")
         footer_col_links = self._find_elem_xpath("//footer/div/div/div/ul")
         assert len(footer_cms_info) > 0
+        # check CMS standard logo present
         assert footer_cms_info[0].text == CMS_SITE_LOGO_TXT
         # now there are 3 columns of links group (ul)
         assert len(footer_col_titles) == 3
@@ -243,12 +277,23 @@ class TestSiteStatic():
         self._load_page(self.home_page_url)
         self._verify_us_banner()
         # check footer for required components
+        time.sleep(2)
         self._verify_cms_footer()
         # now go to sub pages and check banner and footer if applicable
         for col in CMS_BB2_FOOTER_COLS:
+            print("CHECK FOOTER COLUMN: {}".format(col["title"]))
             for lnk in col["links"]:
+                print("LOAD PAGE: {} URL: {}".format(lnk["text"], lnk["link"]))
                 self._load_page(lnk["link"])
-                time.sleep(5)
+                if lnk["link"] == "https://www.healthcare.gov/":
+                    # skip healthcare.gov for now - need to dismiss the pop up
+                    pass
+                else:
+                    self._check_watermark(lnk["water-mark"])
+                time.sleep(3)
                 if lnk["check"]:
+                    print("CHECK GOV SITE BANNER: {}".format(lnk["link"]))
                     self._verify_us_banner()
+                    time.sleep(2)
+                    print("CHECK CMS FOOTER: {}".format(lnk["link"]))
                     self._verify_cms_footer()
