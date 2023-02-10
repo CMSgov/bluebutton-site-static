@@ -1122,7 +1122,7 @@ This section provides information on basic and common queries against the Blue B
 | -------- | -------- | -------- |
 | Sandbox     | Development and Testing     | `https://sandbox.bluebutton.cms.gov/{version}/fhir/`   |
 | Production | Production Data Access | `https://api.bluebutton.cms.gov/{version}/fhir/`|
-
+{:.ds-c-table}
     Note: Use `v1` or `v2` for the  {version}
     
 To find beneficiaries with varying volumes and types of data, use this [CSV of synthetic data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv). Using the synthetic data, you can break down claims by type (carrier, inpatient, etc.) for each beneficiary/user combination.  Synthetic data works in both the Sandbox and Production environments.
@@ -1145,6 +1145,7 @@ For a complete listing of Blue Button API calls, see our [Swagger documentation]
 | Explanation of Benefit  | `HTTP GET {baseURL}/ExplanationOfBenefit/{id}` | Returns a single [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html).  Replace {id} with a valid EOB resource ID.  See `/ExplanationOfBenefit` call above. |
 | Capability Statement | `HTTP GET {baseURL}/metadata` | Returns the [FHIR capability statement](https://www.hl7.org/fhir/capabilitystatement.html) (Example: the FHIR features and operations supported by this server) |
 | User Info | `HTTP GET {host}/{version}/connect/userinfo` | If the user grants access to access to their personal information, `UserInfo` returns name, family name and email. If the user denies access to their personal information, `UserInfo` returns `You do not have permission.` | 
+{:.ds-c-table}
 
 ---
 
@@ -1207,7 +1208,7 @@ To navigate forward and backward through the bundle, use the URLs provided in `B
 | next        | Retrieve the next X records in the resultset |  
 | previous    | Retrieve the previous X records in the resultset |  
 | last        | Retrieve the last X records in the resultset |  
-
+{:.ds-c-table}
 
 In the example below, the `Bundle.total` attribute shows that there are 89 records in the results. However, only the first 10 records are delivered in the `Bundle.entry` array. 
 
