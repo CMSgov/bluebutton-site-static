@@ -1148,6 +1148,8 @@ For a complete listing of Blue Button API calls, see our [Swagger documentation]
 | User Info | `HTTP GET {host}/{version}/connect/userinfo` | If the user grants access to access to their personal information, `UserInfo` returns name, family name and email. If the user denies access to their personal information, `UserInfo` returns `You do not have permission.` | 
 {:.ds-c-table}
 
+---
+
 ### Consuming the Data
 The Blue Button API includes over 1300 data elements with a wide variety of data exchange use cases. Here are some basics to get you started with common data elements. 
 
