@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  selenium-tests-local:
+    build:
+      context: ./selenium_tests
+      dockerfile: ./Dockerfile
+    command: pytest ./src/test_site_static.py
+    environment:
+      - HOME_PAGE_URL=${HOME_PAGE_URL}
+    depends_on:
+      web:
+        condition: service_healthy
+      chrome:
+        condition: service_started
+    profiles:
+      - local-web
+  selenium-tests-remote:
+    build:
+      context: ./selenium_tests
+      dockerfile: ./Dockerfile
+    command: pytest ./src/test_site_static.py
+    environment:
+      - HOME_PAGE_URL=${HOME_PAGE_URL}
+    depends_on:
+      - chrome
+    profiles:
+      - remote-web
+  chrome:
+    image: selenium/standalone-chrome-debug
+    hostname: chrome
+    ports:
+      - "4444:4444"
+      - "5900:5900"
+  web:
+    build: .
+    command: bash -c "bundle exec jekyll serve --host '0.0.0.0' --port 4000"
+    volumes:
+      - .:/code
+    ports:
+      - "4000:4000"
+    healthcheck:
+      test: curl --fail http://localhost:4000 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 25
+      start_period: 200s # Estimated time to boot.
+    profiles:
+      - local-web
