@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ValueSet xmlns="https://bluebutton.cms.gov/assets/ig">
-  <id value="ms-dc"/>
+  <id value="ms-cd"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Medicare Status Code</h2><div><p>This variable indicates how a beneficiary currently qualifies for Medicare. Source: https://bluebutton.cms.gov/resources/variables/ms_cd</p>
-</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-dc</code></li></ul></div>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd</code></li></ul></div>
   </text>
-  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-ms-dc"/>
+  <url value="https://bluebutton.cms.gov/assets/ig/ValueSet-ms-cd"/>
   <version value="1.1.1"/>
   <name value="Medicare Status Code"/>
   <status value="draft"/>
@@ -14,7 +14,7 @@
   <description value="This variable indicates how a beneficiary currently qualifies for Medicare. Source: https://bluebutton.cms.gov/resources/variables/ms_cd"/>
   <compose>
     <include>
-      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-dc"/>
+      <system value="https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd"/>
     </include>
   </compose>
 </ValueSet>

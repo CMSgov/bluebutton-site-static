@@ -212,7 +212,7 @@ Extensions belonging to the SNF Claim Profile:
 	
 [NCH Primary Payer (if not Medicare) Claim Paid Amount]:StructureDefinition-bluebutton-dme-prpayamt-extension.html
 [Carrier or MAC Number]:StructureDefinition-bluebutton-dme-carr-num-extension.html
-[DME Claim Provider Assignment Indicator Switch]:StructureDefinition-bluebutton-dme-asgnmntcd-extension.html
+[DME Claim Provider Assignment Indicator Switch]:StructureDefinition-bluebutton-dme-asgmntcd-extension.html
 [Carrier Claim Cash Deductible Applied Amount (sum of all line-level deductible amounts)]:StructureDefinition-bluebutton-dme-carr-clm-cash-ddctbl-apld-amt-extension.html
 [DME Claim Payment Denial Code]:StructureDefinition-bluebutton-dme-carr-clm-pmt-dnl-cd-extension.html
 [NCH Carrier Claim Allowed Charge Amount (sum of all line-level allowed charges)]:StructureDefinition-bluebutton-dme-nch-carr-clm-alowd-amt-extension.html

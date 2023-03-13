@@ -45,7 +45,7 @@ The following table lists all of the claim/event EOB types, along with how they'
       <td><em>(no coding)</em></td>
       <td><code>81</code> or <code>82</code></td>
       <td><code>M</code></td>
-      <td><a href="https://www.medicare.gov/what-medicare-covers/part-b/durable-medical-equipment.html">What Part B Covers: Durable Medical Equipment</a></td>
+      <td><a href="https://www.medicare.gov/coverage/durable-medical-equipment-dme-coverage">What Part B Covers: Durable Medical Equipment</a></td>
     </tr>
     <tr>
       <th><code>HHA</code></th>
@@ -80,7 +80,7 @@ The following table lists all of the claim/event EOB types, along with how they'
       <td><code>pharmacy</code></td>
       <td><em>(no coding)</em></td>
       <td><em>(no coding)</em></td>
-      <td><a href="https://www.medicare.gov/part-d/coverage/part-d-coverage.html">What Drug Plans Cover</a></td>
+      <td><a href="https://www.medicare.gov/drug-coverage-part-d">What Drug Plans Cover</a></td>
     </tr>
     <tr>
       <th><code>SNF</code></th>
