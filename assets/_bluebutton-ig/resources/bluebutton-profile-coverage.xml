@@ -92,7 +92,7 @@
       <path value="Coverage.implicitRules" />
       <short value="A set of rules under which this content was created" />
       <definition value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content." />
-      <comment value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. &#xA;&#xA;This element is labelled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation." />
+      <comment value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. &#xA;&#xA;This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation." />
       <min value="0" />
       <max value="0" />
       <base>
@@ -477,7 +477,7 @@
     <element id="Coverage.identifier">
       <path value="Coverage.identifier" />
       <short value="The primary coverage ID" />
-      <definition value="The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatination of the Coverage.SubscriberID and the Coverage.dependant." />
+      <definition value="The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatination of the Coverage.SubscriberID and the Coverage.dependent." />
       <requirements value="This value may uniquely identify the coverage or it may be used in conjunction with the additional identifiers below." />
       <min value="0" />
       <max value="0" />
@@ -1424,16 +1424,16 @@
         <map value="when.done" />
       </mapping>
     </element>
-    <element id="Coverage.payor">
-      <path value="Coverage.payor" />
+    <element id="Coverage.payer">
+      <path value="Coverage.payer" />
       <short value="Identifier for the plan or agreement issuer" />
-      <definition value="The program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreements. May provide multiple identifiers such as insurance company identifier or business identifier (BIN number)." />
+      <definition value="The program or plan underwriter or payer including both insurance and non-insurance agreements, such as patient-pay agreements. May provide multiple identifiers such as insurance company identifier or business identifier (BIN number)." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <requirements value="Need to identify the issuer to target for processing and for coordination of benefit processing." />
       <min value="0" />
       <max value="0" />
       <base>
-        <path value="Coverage.payor" />
+        <path value="Coverage.payer" />
         <min value="0" />
         <max value="*" />
       </base>
@@ -1815,7 +1815,7 @@
     <element id="Coverage.grouping.class">
       <path value="Coverage.grouping.class" />
       <short value="An identifier for the class" />
-      <definition value="Identifies a style or collective of coverage issues by the underwriter, for example may be used to identify a class of coverage such as a level of deductables or co-payment." />
+      <definition value="Identifies a style or collective of coverage issues by the underwriter, for example may be used to identify a class of coverage such as a level of deductibles or co-payment." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <min value="0" />
       <max value="0" />
@@ -1873,7 +1873,7 @@
     <element id="Coverage.grouping.subClass">
       <path value="Coverage.grouping.subClass" />
       <short value="An identifier for the subsection of the class" />
-      <definition value="Identifies a sub-style or sub-collective of coverage issues by the underwriter, for example may be used to identify a subclass of coverage such as a sub-level of deductables or co-payment." />
+      <definition value="Identifies a sub-style or sub-collective of coverage issues by the underwriter, for example may be used to identify a subclass of coverage such as a sub-level of deductibles or co-payment." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <min value="0" />
       <max value="0" />
@@ -2301,8 +2301,8 @@
       <path value="Coverage.period" />
       <max value="0" />
     </element>
-    <element id="Coverage.payor">
-      <path value="Coverage.payor" />
+    <element id="Coverage.payer">
+      <path value="Coverage.payer" />
       <max value="0" />
     </element>
     <element id="Coverage.grouping">

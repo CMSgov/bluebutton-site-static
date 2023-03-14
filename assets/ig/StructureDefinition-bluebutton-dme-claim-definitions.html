@@ -294,7 +294,7 @@
   <tr><td>Comments</td><td><p>This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.type"> </a><b>ExplanationOfBenefit.type</b></td></tr>
-  <tr><td>Definition</td><td><p>The category of claim, eg, oral, pharmacy, vision, insitutional, professional.</p>
+  <tr><td>Definition</td><td><p>The category of claim, eg, oral, pharmacy, vision, institutional, professional.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/terminologies.html">Binding</a></td><td>The type or discipline-style of the claim<br/>The codes SHALL be taken from <a href="https://hl7.org/fhir/STU3/valueset-claim-type.html">Example Claim Type Codes</a></td></tr>
@@ -658,7 +658,7 @@
   <tr><td>Comments</td><td><p>References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.originalPrescription"> </a><b>ExplanationOfBenefit.originalPrescription</b></td></tr>
-  <tr><td>Definition</td><td><p>Original prescription which has been superceded by this prescription to support the dispensing of pharmacy services, medications or products. For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefor issues a new precription for an alternate medication which has the same theraputic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'.</p>
+  <tr><td>Definition</td><td><p>Original prescription which has been superseded by this prescription to support the dispensing of pharmacy services, medications or products. For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefore issues a new precription for an alternate medication which has the same therpeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#Reference">Reference</a>(<a href="https://hl7.org/fhir/STU3/medicationrequest.html" title="https://bluebutton.cms.gov/assets/ig/StructureDefinition-MedicationRequest">MedicationRequest</a>)</td></tr>
@@ -717,7 +717,7 @@
   <tr><td>Comments</td><td><p>References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.information"> </a><b>ExplanationOfBenefit.information</b></td></tr>
-  <tr><td>Definition</td><td><p>Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues. Often there are mutiple jurisdiction specific valuesets which are required.</p>
+  <tr><td>Definition</td><td><p>Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues. Often there are multiple jurisdiction specific valuesets which are required.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></td></tr>
@@ -1287,7 +1287,7 @@
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#positiveInt">positiveInt</a></td></tr>
-  <tr><td>Requirements</td><td><p>Required to maintain order of the procudures.</p>
+  <tr><td>Requirements</td><td><p>Required to maintain order of the procedures.</p>
 </td></tr>
   <tr><td>Comments</td><td><p>32 bit number; for values larger than this, use decimal</p>
 </td></tr>
@@ -1316,7 +1316,7 @@
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#positiveInt">positiveInt</a></td></tr>
-  <tr><td>Requirements</td><td><p>Health care programs and insurers are significant payors of health service costs.</p>
+  <tr><td>Requirements</td><td><p>Health care programs and insurers are significant payers of health service costs.</p>
 </td></tr>
   <tr><td>Comments</td><td><p>32 bit number; for values larger than this, use decimal</p>
 </td></tr>
@@ -1325,7 +1325,7 @@
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></td></tr>
-  <tr><td>Requirements</td><td><p>Health care programs and insurers are significant payors of health service costs.</p>
+  <tr><td>Requirements</td><td><p>Health care programs and insurers are significant payers of health service costs.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.insurance.id"> </a><b>ExplanationOfBenefit.insurance.id</b></td></tr>
   <tr><td>Definition</td><td><p>unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
@@ -1442,7 +1442,7 @@
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#date">date</a></td></tr>
-  <tr><td>Requirements</td><td><p>Coverage may be dependant on accidents.</p>
+  <tr><td>Requirements</td><td><p>Coverage may be dependent on accidents.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.accident.type"> </a><b>ExplanationOfBenefit.accident.type</b></td></tr>
   <tr><td>Definition</td><td><p>Type of accident: work, auto, etc.</p>
@@ -1450,7 +1450,7 @@
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/terminologies.html">Binding</a></td><td>Type of accident: work place, auto, etc.<br/>The codes SHALL be taken from <a href="https://hl7.org/fhir/STU3/v3/ActIncidentCode/vs.html">ActIncidentCode</a></td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
-  <tr><td>Requirements</td><td><p>Coverage may be dependant on the type of accident.</p>
+  <tr><td>Requirements</td><td><p>Coverage may be dependent on the type of accident.</p>
 </td></tr>
   <tr><td>Comments</td><td><p>Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.</p>
 </td></tr>
@@ -2164,7 +2164,7 @@
   <tr><td>Comments</td><td><p>Do not use a IEEE type floating point type, instead use something that works like a true decimal, with inbuilt precision (e.g. Java BigInteger)</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.item.net"> </a><b>ExplanationOfBenefit.item.net</b></td></tr>
-  <tr><td>Definition</td><td><p>The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.</p>
+  <tr><td>Definition</td><td><p>The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#Money">Money</a></td></tr>
@@ -2248,7 +2248,7 @@
   <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.item.adjudication.category"> </a><b>ExplanationOfBenefit.item.adjudication.category</b></td></tr>
-  <tr><td>Definition</td><td><p>Code indicating: Co-Pay, deductable, elegible, benefit, tax, etc.</p>
+  <tr><td>Definition</td><td><p>Code indicating: Co-Pay, deductible, elegible, benefit, tax, etc.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/terminologies.html">Binding</a></td><td>The adjudication codes.<br/>For example codes, see <a href="https://hl7.org/fhir/STU3/valueset-adjudication.html">Adjudication Value Codes</a></td></tr>
@@ -2636,7 +2636,7 @@
   <tr><td>Comments</td><td><p>Do not use a IEEE type floating point type, instead use something that works like a true decimal, with inbuilt precision (e.g. Java BigInteger)</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.item.detail.net"> </a><b>ExplanationOfBenefit.item.detail.net</b></td></tr>
-  <tr><td>Definition</td><td><p>The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.</p>
+  <tr><td>Definition</td><td><p>The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#Money">Money</a></td></tr>
@@ -2759,7 +2759,7 @@
   <tr><td>Comments</td><td><p>The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.item.detail.subDetail.unitPrice"> </a><b>ExplanationOfBenefit.item.detail.subDetail.unitPrice</b></td></tr>
-  <tr><td>Definition</td><td><p>The fee for an addittional service or product or charge.</p>
+  <tr><td>Definition</td><td><p>The fee for an additional service or product or charge.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#Money">Money</a></td></tr>
@@ -2777,7 +2777,7 @@
   <tr><td>Comments</td><td><p>Do not use a IEEE type floating point type, instead use something that works like a true decimal, with inbuilt precision (e.g. Java BigInteger)</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.item.detail.subDetail.net"> </a><b>ExplanationOfBenefit.item.detail.subDetail.net</b></td></tr>
-  <tr><td>Definition</td><td><p>The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.</p>
+  <tr><td>Definition</td><td><p>The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#Money">Money</a></td></tr>
@@ -2986,15 +2986,15 @@
 </td></tr>
   <tr><td>Comments</td><td><p>The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.</p>
 </td></tr>
-  <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.unallocDeductable"> </a><b>ExplanationOfBenefit.unallocDeductable</b></td></tr>
-  <tr><td>Definition</td><td><p>The amount of deductable applied which was not allocated to any particular service line.</p>
+  <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.unallocdeductible"> </a><b>ExplanationOfBenefit.unallocdeductible</b></td></tr>
+  <tr><td>Definition</td><td><p>The amount of deductible applied which was not allocated to any particular service line.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#Money">Money</a></td></tr>
   <tr><td>Comments</td><td><p>The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.totalBenefit"> </a><b>ExplanationOfBenefit.totalBenefit</b></td></tr>
-  <tr><td>Definition</td><td><p>Total amount of benefit payable (Equal to sum of the Benefit amounts from all detail lines and additions less the Unallocated Deductable).</p>
+  <tr><td>Definition</td><td><p>Total amount of benefit payable (Equal to sum of the Benefit amounts from all detail lines and additions less the Unallocated deductible).</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#Money">Money</a></td></tr>
@@ -3318,10 +3318,10 @@
   <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="ExplanationOfBenefit.benefitBalance.financial.type"> </a><b>ExplanationOfBenefit.benefitBalance.financial.type</b></td></tr>
-  <tr><td>Definition</td><td><p>Deductable, visits, benefit amount.</p>
+  <tr><td>Definition</td><td><p>deductible, visits, benefit amount.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
-  <tr><td><a href="https://hl7.org/fhir/STU3/terminologies.html">Binding</a></td><td>Deductable, visits, co-pay, etc.<br/>For example codes, see <a href="https://hl7.org/fhir/STU3/valueset-benefit-type.html">Benefit Type Codes</a></td></tr>
+  <tr><td><a href="https://hl7.org/fhir/STU3/terminologies.html">Binding</a></td><td>deductible, visits, co-pay, etc.<br/>For example codes, see <a href="https://hl7.org/fhir/STU3/valueset-benefit-type.html">Benefit Type Codes</a></td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
   <tr><td>Comments</td><td><p>Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.</p>
 </td></tr>

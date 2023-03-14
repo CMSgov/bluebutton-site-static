@@ -6554,7 +6554,7 @@
       <path value="Patient.animal" />
       <short value="This patient is known to be an animal (non-human)" />
       <definition value="This patient is known to be an animal." />
-      <comment value="The animal element is labeled &quot;Is Modifier&quot; since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject declared animal records.   The absense of the animal element does not imply that the patient is a human. If a system requires such a positive assertion that the patient is human, an extension will be required.  (Do not use a species of homo-sapiens in animal species, as this would incorrectly infer that the patient is an animal)." />
+      <comment value="The animal element is labeled &quot;Is Modifier&quot; since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject declared animal records.   The absence of the animal element does not imply that the patient is a human. If a system requires such a positive assertion that the patient is human, an extension will be required.  (Do not use a species of homo-sapiens in animal species, as this would incorrectly infer that the patient is an animal)." />
       <requirements value="Many clinical systems are extended to care for animal patients as well as human." />
       <min value="0" />
       <max value="0" />
@@ -6683,7 +6683,7 @@
       <path value="Patient.animal.species" />
       <short value="E.g. Dog, Cow" />
       <definition value="Identifies the high level taxonomic categorization of the kind of animal." />
-      <comment value="If the patient is non-human, at least a species SHALL be specified. Species SHALL be a widely recognised taxonomic classification.  It may or may not be Linnaean taxonomy and may or may not be at the level of species. If the level is finer than species--such as a breed code--the code system used SHALL allow inference of the species.  (The common example is that the word &quot;Hereford&quot; does not allow inference of the species Bos taurus, because there is a Hereford pig breed, but the SNOMED CT code for &quot;Hereford Cattle Breed&quot; does.)." />
+      <comment value="If the patient is non-human, at least a species SHALL be specified. Species SHALL be a widely recognized taxonomic classification.  It may or may not be Linnaean taxonomy and may or may not be at the level of species. If the level is finer than species--such as a breed code--the code system used SHALL allow inference of the species.  (The common example is that the word &quot;Hereford&quot; does not allow inference of the species Bos taurus, because there is a Hereford pig breed, but the SNOMED CT code for &quot;Hereford Cattle Breed&quot; does.)." />
       <requirements value="Need to know what kind of animal." />
       <min value="1" />
       <max value="1" />
@@ -8590,7 +8590,7 @@
       <path value="Patient.generalPractitioner" />
       <short value="Patient's nominated primary care provider" />
       <definition value="Patient's nominated care provider." />
-      <comment value="This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disablity setting, or even organization that will provide people to perform the care provider roles.&#xA;&#xA;It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources." />
+      <comment value="This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disability setting, or even organization that will provide people to perform the care provider roles.&#xA;&#xA;It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources." />
       <alias value="careProvider" />
       <min value="0" />
       <max value="0" />
@@ -9003,7 +9003,7 @@
       <path value="Patient.link" />
       <short value="Link to another patient resource that concerns the same actual person" />
       <definition value="Link to another patient resource that concerns the same actual patient." />
-      <comment value="There is no assumption that linked patient records have mutual links. &#xA;&#xA;This element is labelled as a modifier because it may not be the main Patient resource, and the referenced patient should be used instead of this Patient record. This is when the link.type value is 'replaced-by'." />
+      <comment value="There is no assumption that linked patient records have mutual links. &#xA;&#xA;This element is labeled as a modifier because it may not be the main Patient resource, and the referenced patient should be used instead of this Patient record. This is when the link.type value is 'replaced-by'." />
       <requirements value="There are multiple usecases: &#xA;&#xA;* Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and * Distribution of patient information across multiple servers." />
       <min value="0" />
       <max value="0" />

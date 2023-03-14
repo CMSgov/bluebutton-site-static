@@ -63,7 +63,7 @@
       <sch:assert test="count(f:item) &gt;= 1">item: minimum cardinality of 'item' is 1</sch:assert>
       <sch:assert test="count(f:addItem) &lt;= 0">addItem: maximum cardinality of 'addItem' is 0</sch:assert>
       <sch:assert test="count(f:totalCost) &lt;= 0">totalCost: maximum cardinality of 'totalCost' is 0</sch:assert>
-      <sch:assert test="count(f:unallocDeductable) &lt;= 0">unallocDeductable: maximum cardinality of 'unallocDeductable' is 0</sch:assert>
+      <sch:assert test="count(f:unallocdeductible) &lt;= 0">unallocdeductible: maximum cardinality of 'unallocdeductible' is 0</sch:assert>
       <sch:assert test="count(f:totalBenefit) &lt;= 0">totalBenefit: maximum cardinality of 'totalBenefit' is 0</sch:assert>
       <sch:assert test="count(f:payment) &gt;= 1">payment: minimum cardinality of 'payment' is 1</sch:assert>
       <sch:assert test="count(f:form) &lt;= 0">form: maximum cardinality of 'form' is 0</sch:assert>

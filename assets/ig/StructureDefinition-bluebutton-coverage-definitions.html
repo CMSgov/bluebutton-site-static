@@ -131,7 +131,7 @@
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
   <tr><td>Comments</td><td><p>Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element.</p>
-<p>This element is labelled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation.</p>
+<p>This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="Coverage.language"> </a><b>Coverage.language</b></td></tr>
   <tr><td>Definition</td><td><p>The base language in which the resource is written.</p>
@@ -217,7 +217,7 @@
   <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="Coverage.identifier"> </a><b>Coverage.identifier</b></td></tr>
-  <tr><td>Definition</td><td><p>The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatination of the Coverage.SubscriberID and the Coverage.dependant.</p>
+  <tr><td>Definition</td><td><p>The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatination of the Coverage.SubscriberID and the Coverage.dependent.</p>
 </td></tr>
   <tr><td>Note</td><td>This is a business identifer, not a resource identifier (see <a href="https://hl7.org/fhir/STU3/resource.html#identifiers">discussion</a>)</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
@@ -427,7 +427,7 @@
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">per-1</b>: If present, start SHALL have a lower value than end (: start.empty() or end.empty() or (start &lt;= end))</td></tr>
-  <tr><td colspan="2" class="structure"><a name="Coverage.payor"> </a><b>Coverage.payor</b></td></tr>
+  <tr><td colspan="2" class="structure"><a name="Coverage.payer"> </a><b>Coverage.payor</b></td></tr>
   <tr><td>Definition</td><td><p>The program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreements. May provide multiple identifiers such as insurance company identifier or business identifier (BIN number).</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
@@ -524,7 +524,7 @@
   <tr><td>Comments</td><td><p>Note that FHIR strings may not exceed 1MB in size</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="Coverage.grouping.class"> </a><b>Coverage.grouping.class</b></td></tr>
-  <tr><td>Definition</td><td><p>Identifies a style or collective of coverage issues by the underwriter, for example may be used to identify a class of coverage such as a level of deductables or co-payment.</p>
+  <tr><td>Definition</td><td><p>Identifies a style or collective of coverage issues by the underwriter, for example may be used to identify a class of coverage such as a level of deductibles or co-payment.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr>
@@ -538,7 +538,7 @@
   <tr><td>Comments</td><td><p>Note that FHIR strings may not exceed 1MB in size</p>
 </td></tr>
   <tr><td colspan="2" class="structure"><a name="Coverage.grouping.subClass"> </a><b>Coverage.grouping.subClass</b></td></tr>
-  <tr><td>Definition</td><td><p>Identifies a sub-style or sub-collective of coverage issues by the underwriter, for example may be used to identify a subclass of coverage such as a sub-level of deductables or co-payment.</p>
+  <tr><td>Definition</td><td><p>Identifies a sub-style or sub-collective of coverage issues by the underwriter, for example may be used to identify a subclass of coverage such as a sub-level of deductibles or co-payment.</p>
 </td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
   <tr><td><a href="https://hl7.org/fhir/STU3/datatypes.html">Type</a></td><td><a href="https://hl7.org/fhir/STU3/datatypes.html#string">string</a></td></tr>

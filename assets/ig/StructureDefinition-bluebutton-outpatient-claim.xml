@@ -96,7 +96,7 @@
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through" title="null">detail</span><a name="ExplanationOfBenefit.item.detail"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"/><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_extension_complex.png" alt="." style="background-color: white; background-color: inherit" title="Complex Extension" class="hierarchy"/> <span title="Extension URL = https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-rev-cntr-ndc-qty-extension">bluebutton-outpatient-rev-cntr-ndc-qty-extension</span><a name="ExplanationOfBenefit.item.extension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/STU3/datatypes.html#Quantity">Quantity</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Revenue Center National Drug Code (NDC) Quantity<br/><span style="font-weight:bold">URL: </span><a href="https://hl7.org/fhir/STU3/StructureDefinition-bluebutton-outpatient-rev-cntr-ndc-qty-extension.html">https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-rev-cntr-ndc-qty-extension</a></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through" title="null">addItem</span><a name="ExplanationOfBenefit.addItem"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"/><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through" title="null">unallocDeductable</span><a name="ExplanationOfBenefit.unallocDeductable"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"/><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through" title="null">unallocdeductible</span><a name="ExplanationOfBenefit.unallocdeductible"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"/><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through" title="null">totalBenefit</span><a name="ExplanationOfBenefit.totalBenefit"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"/><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span title="null">payment</span><a name="ExplanationOfBenefit.payment"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through" title="null">id</span><a name="ExplanationOfBenefit.payment.id"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"/><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
@@ -1533,7 +1533,7 @@
     <element id="ExplanationOfBenefit.type">
       <path value="ExplanationOfBenefit.type"/>
       <short value="Type or discipline"/>
-      <definition value="The category of claim, eg, oral, pharmacy, vision, insitutional, professional."/>
+      <definition value="The category of claim, eg, oral, pharmacy, vision, institutional, professional."/>
       <comment value="Affects which fields and value sets are used."/>
       <min value="1"/>
       <max value="1"/>
@@ -6426,8 +6426,8 @@
     </element>
     <element id="ExplanationOfBenefit.originalPrescription">
       <path value="ExplanationOfBenefit.originalPrescription"/>
-      <short value="Original prescription if superceded by fulfiller"/>
-      <definition value="Original prescription which has been superceded by this prescription to support the dispensing of pharmacy services, medications or products. For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefor issues a new precription for an alternate medication which has the same theraputic intent. The prescription from the pharmacy becomes the &#39;prescription&#39; and that from the physician becomes the &#39;original prescription&#39;."/>
+      <short value="Original prescription if superseded by fulfiller"/>
+      <definition value="Original prescription which has been superseded by this prescription to support the dispensing of pharmacy services, medications or products. For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefore issues a new precription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the &#39;prescription&#39; and that from the physician becomes the &#39;original prescription&#39;."/>
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository."/>
       <min value="0"/>
       <max value="0"/>
@@ -7713,7 +7713,7 @@
       </extension>
       <path value="ExplanationOfBenefit.information"/>
       <short value="Exceptions, special considerations, the condition, situation, prior or concurrent issues"/>
-      <definition value="Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues. Often there are mutiple jurisdiction specific valuesets which are required."/>
+      <definition value="Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues. Often there are multiple jurisdiction specific valuesets which are required."/>
       <requirements value="Typically these information codes are required to support the services rendered or the adjudication of the services rendered."/>
       <min value="0"/>
       <max value="*"/>
@@ -11222,7 +11222,7 @@
       <short value="Procedure sequence for reference"/>
       <definition value="Sequence of procedures which serves to order and provide a link."/>
       <comment value="32 bit number; for values larger than this, use decimal"/>
-      <requirements value="Required to maintain order of the procudures."/>
+      <requirements value="Required to maintain order of the procedures."/>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -11311,7 +11311,7 @@
       <short value="Precedence (primary, secondary, etc.)"/>
       <definition value="Precedence (primary, secondary, etc.)."/>
       <comment value="32 bit number; for values larger than this, use decimal"/>
-      <requirements value="Health care programs and insurers are significant payors of health service costs."/>
+      <requirements value="Health care programs and insurers are significant payers of health service costs."/>
       <min value="0"/>
       <max value="0"/>
       <base>
@@ -11334,7 +11334,7 @@
       <path value="ExplanationOfBenefit.insurance"/>
       <short value="Insurance or medical plan"/>
       <definition value="Financial instrument by which payment information for health care."/>
-      <requirements value="Health care programs and insurers are significant payors of health service costs."/>
+      <requirements value="Health care programs and insurers are significant payers of health service costs."/>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -11441,7 +11441,7 @@
     <element id="ExplanationOfBenefit.insurance.coverage">
       <path value="ExplanationOfBenefit.insurance.coverage"/>
       <short value="Insurance information"/>
-      <definition value="Reference to the program or plan identification, underwriter or payor."/>
+      <definition value="Reference to the program or plan identification, underwriter or payer."/>
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository."/>
       <requirements value="Need to identify the issuer to target for processing and for coordination of benefit processing."/>
       <min value="1"/>
@@ -11744,7 +11744,7 @@
       <path value="ExplanationOfBenefit.accident.date"/>
       <short value="When the accident occurred"/>
       <definition value="Date of an accident which these services are addressing."/>
-      <requirements value="Coverage may be dependant on accidents."/>
+      <requirements value="Coverage may be dependent on accidents."/>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -11769,7 +11769,7 @@
       <short value="The nature of the accident"/>
       <definition value="Type of accident: work, auto, etc."/>
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination."/>
-      <requirements value="Coverage may be dependant on the type of accident."/>
+      <requirements value="Coverage may be dependent on the type of accident."/>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -16128,7 +16128,7 @@
     <element id="ExplanationOfBenefit.item.net">
       <path value="ExplanationOfBenefit.item.net"/>
       <short value="Total item cost"/>
-      <definition value="The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."/>
+      <definition value="The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."/>
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator."/>
       <requirements value="If a fee is present the associated product/service code must be present."/>
       <min value="0"/>
@@ -17675,7 +17675,7 @@
     <element id="ExplanationOfBenefit.item.adjudication.category">
       <path value="ExplanationOfBenefit.item.adjudication.category"/>
       <short value="Adjudication category such as co-pay, eligible, benefit, etc."/>
-      <definition value="Code indicating: Co-Pay, deductable, elegible, benefit, tax, etc."/>
+      <definition value="Code indicating: Co-Pay, deductible, elegible, benefit, tax, etc."/>
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination."/>
       <min value="1"/>
       <max value="1"/>
@@ -21877,7 +21877,7 @@
     <element id="ExplanationOfBenefit.item.detail.net">
       <path value="ExplanationOfBenefit.item.detail.net"/>
       <short value="Total additional item cost"/>
-      <definition value="The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."/>
+      <definition value="The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."/>
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator."/>
       <requirements value="If a fee is present the associated product/service code must be present."/>
       <min value="0"/>
@@ -25171,7 +25171,7 @@
     <element id="ExplanationOfBenefit.item.detail.subDetail.unitPrice">
       <path value="ExplanationOfBenefit.item.detail.subDetail.unitPrice"/>
       <short value="Fee, charge or cost per point"/>
-      <definition value="The fee for an addittional service or product or charge."/>
+      <definition value="The fee for an additional service or product or charge."/>
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator."/>
       <requirements value="If a fee is present the associated product/service code must be present."/>
       <min value="0"/>
@@ -25454,7 +25454,7 @@
     <element id="ExplanationOfBenefit.item.detail.subDetail.net">
       <path value="ExplanationOfBenefit.item.detail.subDetail.net"/>
       <short value="Net additional item cost"/>
-      <definition value="The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."/>
+      <definition value="The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."/>
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator."/>
       <requirements value="If a fee is present the associated product/service code must be present."/>
       <min value="0"/>
@@ -25919,7 +25919,7 @@
       </extension>
       <path value="ExplanationOfBenefit.addItem"/>
       <short value="Insurer added line items"/>
-      <definition value="The first tier service adjudications for payor added services."/>
+      <definition value="The first tier service adjudications for payer added services."/>
       <min value="0"/>
       <max value="0"/>
       <base>
@@ -27968,7 +27968,7 @@
       </extension>
       <path value="ExplanationOfBenefit.addItem.detail"/>
       <short value="Added items details"/>
-      <definition value="The second tier service adjudications for payor added services."/>
+      <definition value="The second tier service adjudications for payer added services."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -30245,15 +30245,15 @@
         <map value="PQ.code, MO.currency, PQ.translation.code"/>
       </mapping>
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable">
-      <path value="ExplanationOfBenefit.unallocDeductable"/>
-      <short value="Unallocated deductable"/>
-      <definition value="The amount of deductable applied which was not allocated to any particular service line."/>
+    <element id="ExplanationOfBenefit.unallocdeductible">
+      <path value="ExplanationOfBenefit.unallocdeductible"/>
+      <short value="Unallocated deductible"/>
+      <definition value="The amount of deductible applied which was not allocated to any particular service line."/>
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator."/>
       <min value="0"/>
       <max value="0"/>
       <base>
-        <path value="ExplanationOfBenefit.unallocDeductable"/>
+        <path value="ExplanationOfBenefit.unallocdeductible"/>
         <min value="0"/>
         <max value="1"/>
       </base>
@@ -30277,8 +30277,8 @@
         <map value="MO"/>
       </mapping>
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable.id">
-      <path value="ExplanationOfBenefit.unallocDeductable.id"/>
+    <element id="ExplanationOfBenefit.unallocdeductible.id">
+      <path value="ExplanationOfBenefit.unallocdeductible.id"/>
       <representation value="xmlAttr"/>
       <short value="xml:id (or equivalent in JSON)"/>
       <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
@@ -30298,8 +30298,8 @@
         <map value="n/a"/>
       </mapping>
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable.extension">
-      <path value="ExplanationOfBenefit.unallocDeductable.extension"/>
+    <element id="ExplanationOfBenefit.unallocdeductible.extension">
+      <path value="ExplanationOfBenefit.unallocdeductible.extension"/>
       <slicing>
         <discriminator>
           <type value="value"/>
@@ -30332,8 +30332,8 @@
         <map value="N/A"/>
       </mapping>
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable.value">
-      <path value="ExplanationOfBenefit.unallocDeductable.value"/>
+    <element id="ExplanationOfBenefit.unallocdeductible.value">
+      <path value="ExplanationOfBenefit.unallocdeductible.value"/>
       <short value="Numerical value (with implicit precision)"/>
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value."/>
       <comment value="The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books)."/>
@@ -30362,8 +30362,8 @@
         <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value"/>
       </mapping>
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable.comparator">
-      <path value="ExplanationOfBenefit.unallocDeductable.comparator"/>
+    <element id="ExplanationOfBenefit.unallocdeductible.comparator">
+      <path value="ExplanationOfBenefit.unallocdeductible.comparator"/>
       <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value"/>
       <definition value="How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is &quot;&lt;&quot; , then the real value is &lt; stated value."/>
       <comment value="This is labeled as &quot;Is Modifier&quot; because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value."/>
@@ -30404,11 +30404,11 @@
         <map value="IVL properties"/>
       </mapping>
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable.unit">
+    <element id="ExplanationOfBenefit.unallocdeductible.unit">
       <extension url="https://bluebutton.cms.gov/assets/ig/StructureDefinition-elementdefinition-translatable">
         <valueBoolean value="true"/>
       </extension>
-      <path value="ExplanationOfBenefit.unallocDeductable.unit"/>
+      <path value="ExplanationOfBenefit.unallocdeductible.unit"/>
       <short value="Unit representation"/>
       <definition value="A human-readable form of the unit."/>
       <comment value="Note that FHIR strings may not exceed 1MB in size"/>
@@ -30437,8 +30437,8 @@
         <map value="PQ.unit"/>
       </mapping>
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable.system">
-      <path value="ExplanationOfBenefit.unallocDeductable.system"/>
+    <element id="ExplanationOfBenefit.unallocdeductible.system">
+      <path value="ExplanationOfBenefit.unallocdeductible.system"/>
       <short value="System that defines coded unit form"/>
       <definition value="The identification of the system that provides the coded form of the unit."/>
       <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier"/>
@@ -30468,8 +30468,8 @@
         <map value="CO.codeSystem, PQ.translation.codeSystem"/>
       </mapping>
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable.code">
-      <path value="ExplanationOfBenefit.unallocDeductable.code"/>
+    <element id="ExplanationOfBenefit.unallocdeductible.code">
+      <path value="ExplanationOfBenefit.unallocdeductible.code"/>
       <short value="Coded form of the unit"/>
       <definition value="A computer processable form of the unit in some unit representation system."/>
       <comment value="The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system."/>
@@ -30501,7 +30501,7 @@
     <element id="ExplanationOfBenefit.totalBenefit">
       <path value="ExplanationOfBenefit.totalBenefit"/>
       <short value="Total benefit payable for the Claim"/>
-      <definition value="Total amount of benefit payable (Equal to sum of the Benefit amounts from all detail lines and additions less the Unallocated Deductable)."/>
+      <definition value="Total amount of benefit payable (Equal to sum of the Benefit amounts from all detail lines and additions less the Unallocated deductible)."/>
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator."/>
       <min value="0"/>
       <max value="0"/>
@@ -36859,8 +36859,8 @@
     </element>
     <element id="ExplanationOfBenefit.benefitBalance.financial.type">
       <path value="ExplanationOfBenefit.benefitBalance.financial.type"/>
-      <short value="Deductable, visits, benefit amount"/>
-      <definition value="Deductable, visits, benefit amount."/>
+      <short value="deductible, visits, benefit amount"/>
+      <definition value="deductible, visits, benefit amount."/>
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination."/>
       <min value="1"/>
       <max value="1"/>
@@ -36877,7 +36877,7 @@
           <valueString value="BenefitType"/>
         </extension>
         <strength value="example"/>
-        <description value="Deductable, visits, co-pay, etc."/>
+        <description value="deductible, visits, co-pay, etc."/>
         <valueSetReference>
           <reference value="https://bluebutton.cms.gov/assets/ig/ValueSet-benefit-type"/>
         </valueSetReference>
@@ -38604,8 +38604,8 @@
       <path value="ExplanationOfBenefit.totalCost.code"/>
       <min value="1"/>
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable">
-      <path value="ExplanationOfBenefit.unallocDeductable"/>
+    <element id="ExplanationOfBenefit.unallocdeductible">
+      <path value="ExplanationOfBenefit.unallocdeductible"/>
       <max value="0"/>
     </element>
     <element id="ExplanationOfBenefit.totalBenefit">
