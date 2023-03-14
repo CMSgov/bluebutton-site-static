@@ -84,8 +84,6 @@
 
 
 
-<!-- ============BreadCrumbs=============== -->
-
   </div>  <!-- /container -->
  </div>  <!-- /segment-breadcrumb -->
 
@@ -100,38 +98,52 @@
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<!--
 <h2>Medicare Status Code</h2>
 
 <p>
-Formats: <a href="ValueSet-ms-dc.xml.html">XML</a>, <a href="ValueSet-ms-dc.json.html">JSON</a>, <a href="ValueSet-ms-dc.ttl.html">Turtle</a>
+Formats: <a href="ValueSet-ms-cd.html">Narrative</a>,
+ <a href="ValueSet-ms-cd.xml.html">XML</a>,
+  <a href="ValueSet-ms-cd.json.html">JSON</a>,
+   <a href="ValueSet-ms-cd.ttl.html">Turtle</a>
+</p>
+<p>
+Raw <a href="ValueSet-ms-cd.ttl" download>ttl</a>
 </p>
 
--->
+<pre class="rdf">
+@prefix fhir: &lt;https://bluebutton.cms.gov/assets/ig/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
-<!-- include ValueSet-ms-dc-html.xhtml   -->
+# - resource -------------------------------------------------------------------
 
-<table class="grid">
- <tbody><tr><td>Defining URL:</td><td>https://bluebutton.cms.gov/assets/ig/ValueSet-ms-dc</td></tr>
- <tr><td>Name:</td><td>Medicare Status Code</td></tr>
- <tr><td>Definition:</td><td><p>This variable indicates how a beneficiary currently qualifies for Medicare. Source: https://bluebutton.cms.gov/resources/variables/ms_cd</p>
-</td></tr>
- <tr><td>Source Resource</td><td><a href="ValueSet-ms-dc.xml.html">XML</a> / <a href="ValueSet-ms-dc.json.html">JSON</a> / <a href="ValueSet-ms-dc.ttl.html">Turtle</a></td></tr>
-</tbody></table>
+ a fhir:ValueSet;
+  <a href="https://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="https://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;ms-cd&quot;];
+  <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.text">fhir:DomainResource.text</a> [
+     <a href="https://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="https://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Medicare Status Code&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This variable indicates how a beneficiary currently qualifies for Medicare. Source: https://bluebutton.cms.gov/resources/variables/ms_cd&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;code&gt;https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="https://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;https://bluebutton.cms.gov/assets/ig/ValueSet-ms-cd&quot;];
+  <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="https://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1.1.1&quot;];
+  <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="https://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medicare Status Code&quot;];
+  <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="https://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
+  <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="https://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-11-27T15:56:35+00:00&quot;^^xsd:dateTime];
+  <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="https://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;This variable indicates how a beneficiary currently qualifies for Medicare. Source: https://bluebutton.cms.gov/resources/variables/ms_cd&quot;];
+  <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
+     <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
+       <a href="https://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+       <a href="https://hl7.org/fhir/STU3/valueset.html#ValueSet.compose.include.system">fhir:ValueSet.compose.include.system</a> [ <a href="https://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd&quot; ]     ]
+  ].
 
+# - ontology header ------------------------------------------------------------
 
-This value set is used by:
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
 
+</pre>
 
-<p>This value set is not used</p>
-
-
-<div xmlns="http://www.w3.org/1999/xhtml"><h2>Medicare Status Code</h2><div><p>This variable indicates how a beneficiary currently qualifies for Medicare. Source: https://bluebutton.cms.gov/resources/variables/ms_cd</p>
-</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-dc</code></li></ul></div>
-
-<h3>Expansion</h3>
-
-<p style="color: maroon; font-weight: bold">Error expanding ValueSet: running without terminology services</p>
 
 
   <!-- ==============END CONTENT END CONTENT=================== -->
@@ -144,6 +156,8 @@ This value set is used by:
         </div>  <!-- /container -->
 
     </div>  <!-- /segment-content -->
+
+
 
 
 

@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://bluebutton.cms.gov/assets/ig/ValueSet-ms-dc> a fhir:ValueSet;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-ms-cd> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "ms-dc"];
+  fhir:Resource.id [ fhir:value "ms-cd"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Medicare Status Code</h2><div><p>This variable indicates how a beneficiary currently qualifies for Medicare. Source: https://bluebutton.cms.gov/resources/variables/ms_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-dc</code></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Medicare Status Code</h2><div><p>This variable indicates how a beneficiary currently qualifies for Medicare. Source: https://bluebutton.cms.gov/resources/variables/ms_cd</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd</code></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-ms-dc"];
+  fhir:ValueSet.url [ fhir:value "https://bluebutton.cms.gov/assets/ig/ValueSet-ms-cd"];
   fhir:ValueSet.version [ fhir:value "1.1.1"];
   fhir:ValueSet.name [ fhir:value "Medicare Status Code"];
   fhir:ValueSet.status [ fhir:value "draft"];
@@ -21,15 +21,15 @@
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-dc" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "https://bluebutton.cms.gov/assets/ig/CodeSystem-ms-cd" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<https://bluebutton.cms.gov/assets/ig/ValueSet-ms-dc.ttl> a owl:Ontology;
+<https://bluebutton.cms.gov/assets/ig/ValueSet-ms-cd.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <https://bluebutton.cms.gov/assets/ig/STU3/ValueSet-ms-dc.ttl> .
+  owl:versionIRI <https://bluebutton.cms.gov/assets/ig/STU3/ValueSet-ms-cd.ttl> .
 
 # -------------------------------------------------------------------------------------
 
