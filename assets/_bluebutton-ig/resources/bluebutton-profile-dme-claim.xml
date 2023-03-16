@@ -821,7 +821,7 @@
     <element id="ExplanationOfBenefit.type">
       <path value="ExplanationOfBenefit.type" />
       <short value="Type or discipline" />
-      <definition value="The category of claim, eg, oral, pharmacy, vision, insitutional, professional." />
+      <definition value="The category of claim, eg, oral, pharmacy, vision, institutional, professional." />
       <comment value="Affects which fields and value sets are used." />
       <min value="1" />
       <max value="1" />
@@ -2320,8 +2320,8 @@
     </element>
     <element id="ExplanationOfBenefit.originalPrescription">
       <path value="ExplanationOfBenefit.originalPrescription" />
-      <short value="Original prescription if superceded by fulfiller" />
-      <definition value="Original prescription which has been superceded by this prescription to support the dispensing of pharmacy services, medications or products. For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefor issues a new precription for an alternate medication which has the same theraputic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'." />
+      <short value="Original prescription if superseded by fulfiller" />
+      <definition value="Original prescription which has been superseded by this prescription to support the dispensing of pharmacy services, medications or products. For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefore issues a new precription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="0" />
       <max value="0" />
@@ -2587,7 +2587,7 @@
       </extension>
       <path value="ExplanationOfBenefit.information" />
       <short value="Exceptions, special considerations, the condition, situation, prior or concurrent issues" />
-      <definition value="Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues. Often there are mutiple jurisdiction specific valuesets which are required." />
+      <definition value="Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues. Often there are multiple jurisdiction specific valuesets which are required." />
       <requirements value="Typically these information codes are required to support the services rendered or the adjudication of the services rendered." />
       <min value="0" />
       <max value="0" />
@@ -4802,7 +4802,7 @@
       <short value="Procedure sequence for reference" />
       <definition value="Sequence of procedures which serves to order and provide a link." />
       <comment value="32 bit number; for values larger than this, use decimal" />
-      <requirements value="Required to maintain order of the procudures." />
+      <requirements value="Required to maintain order of the procedures." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -4891,7 +4891,7 @@
       <short value="Precedence (primary, secondary, etc.)" />
       <definition value="Precedence (primary, secondary, etc.)." />
       <comment value="32 bit number; for values larger than this, use decimal" />
-      <requirements value="Health care programs and insurers are significant payors of health service costs." />
+      <requirements value="Health care programs and insurers are significant payers of health service costs." />
       <min value="0" />
       <max value="0" />
       <base>
@@ -4914,7 +4914,7 @@
       <path value="ExplanationOfBenefit.insurance" />
       <short value="Insurance or medical plan" />
       <definition value="Financial instrument by which payment information for health care." />
-      <requirements value="Health care programs and insurers are significant payors of health service costs." />
+      <requirements value="Health care programs and insurers are significant payers of health service costs." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -5021,7 +5021,7 @@
     <element id="ExplanationOfBenefit.insurance.coverage">
       <path value="ExplanationOfBenefit.insurance.coverage" />
       <short value="Insurance information" />
-      <definition value="Reference to the program or plan identification, underwriter or payor." />
+      <definition value="Reference to the program or plan identification, underwriter or payer." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <requirements value="Need to identify the issuer to target for processing and for coordination of benefit processing." />
       <min value="1" />
@@ -5324,7 +5324,7 @@
       <path value="ExplanationOfBenefit.accident.date" />
       <short value="When the accident occurred" />
       <definition value="Date of an accident which these services are addressing." />
-      <requirements value="Coverage may be dependant on accidents." />
+      <requirements value="Coverage may be dependent on accidents." />
       <min value="0" />
       <max value="1" />
       <base>
@@ -5349,7 +5349,7 @@
       <short value="The nature of the accident" />
       <definition value="Type of accident: work, auto, etc." />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
-      <requirements value="Coverage may be dependant on the type of accident." />
+      <requirements value="Coverage may be dependent on the type of accident." />
       <min value="0" />
       <max value="1" />
       <base>
@@ -8244,7 +8244,7 @@
     <element id="ExplanationOfBenefit.item.net">
       <path value="ExplanationOfBenefit.item.net" />
       <short value="Total item cost" />
-      <definition value="The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied." />
+      <definition value="The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied." />
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator." />
       <requirements value="If a fee is present the associated product/service code must be present." />
       <min value="0" />
@@ -8586,7 +8586,7 @@
     <element id="ExplanationOfBenefit.item.adjudication.category">
       <path value="ExplanationOfBenefit.item.adjudication.category" />
       <short value="Adjudication category such as co-pay, eligible, benefit, etc." />
-      <definition value="Code indicating: Co-Pay, deductable, elegible, benefit, tax, etc." />
+      <definition value="Code indicating: Co-Pay, deductible, elegible, benefit, tax, etc." />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <min value="1" />
       <max value="1" />
@@ -10169,7 +10169,7 @@
     <element id="ExplanationOfBenefit.item.detail.net">
       <path value="ExplanationOfBenefit.item.detail.net" />
       <short value="Total additional item cost" />
-      <definition value="The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied." />
+      <definition value="The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied." />
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator." />
       <requirements value="If a fee is present the associated product/service code must be present." />
       <min value="0" />
@@ -10694,7 +10694,7 @@
     <element id="ExplanationOfBenefit.item.detail.subDetail.unitPrice">
       <path value="ExplanationOfBenefit.item.detail.subDetail.unitPrice" />
       <short value="Fee, charge or cost per point" />
-      <definition value="The fee for an addittional service or product or charge." />
+      <definition value="The fee for an additional service or product or charge." />
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator." />
       <requirements value="If a fee is present the associated product/service code must be present." />
       <min value="0" />
@@ -10760,7 +10760,7 @@
     <element id="ExplanationOfBenefit.item.detail.subDetail.net">
       <path value="ExplanationOfBenefit.item.detail.subDetail.net" />
       <short value="Net additional item cost" />
-      <definition value="The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied." />
+      <definition value="The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied." />
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator." />
       <requirements value="If a fee is present the associated product/service code must be present." />
       <min value="0" />
@@ -10863,7 +10863,7 @@
       </extension>
       <path value="ExplanationOfBenefit.addItem" />
       <short value="Insurer added line items" />
-      <definition value="The first tier service adjudications for payor added services." />
+      <definition value="The first tier service adjudications for payer added services." />
       <min value="0" />
       <max value="0" />
       <base>
@@ -11235,7 +11235,7 @@
       </extension>
       <path value="ExplanationOfBenefit.addItem.detail" />
       <short value="Added items details" />
-      <definition value="The second tier service adjudications for payor added services." />
+      <definition value="The second tier service adjudications for payer added services." />
       <min value="0" />
       <max value="*" />
       <base>
@@ -11618,15 +11618,15 @@
         <map value="MO" />
       </mapping>
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable">
-      <path value="ExplanationOfBenefit.unallocDeductable" />
-      <short value="Unallocated deductable" />
-      <definition value="The amount of deductable applied which was not allocated to any particular service line." />
+    <element id="ExplanationOfBenefit.unallocdeductible">
+      <path value="ExplanationOfBenefit.unallocdeductible" />
+      <short value="Unallocated deductible" />
+      <definition value="The amount of deductible applied which was not allocated to any particular service line." />
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator." />
       <min value="0" />
       <max value="0" />
       <base>
-        <path value="ExplanationOfBenefit.unallocDeductable" />
+        <path value="ExplanationOfBenefit.unallocdeductible" />
         <min value="0" />
         <max value="1" />
       </base>
@@ -11657,7 +11657,7 @@
     <element id="ExplanationOfBenefit.totalBenefit">
       <path value="ExplanationOfBenefit.totalBenefit" />
       <short value="Total benefit payable for the Claim" />
-      <definition value="Total amount of benefit payable (Equal to sum of the Benefit amounts from all detail lines and additions less the Unallocated Deductable)." />
+      <definition value="Total amount of benefit payable (Equal to sum of the Benefit amounts from all detail lines and additions less the Unallocated deductible)." />
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator." />
       <min value="0" />
       <max value="0" />
@@ -13005,8 +13005,8 @@
     </element>
     <element id="ExplanationOfBenefit.benefitBalance.financial.type">
       <path value="ExplanationOfBenefit.benefitBalance.financial.type" />
-      <short value="Deductable, visits, benefit amount" />
-      <definition value="Deductable, visits, benefit amount." />
+      <short value="deductible, visits, benefit amount" />
+      <definition value="deductible, visits, benefit amount." />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <min value="1" />
       <max value="1" />
@@ -13023,7 +13023,7 @@
           <valueString value="BenefitType" />
         </extension>
         <strength value="example" />
-        <description value="Deductable, visits, co-pay, etc." />
+        <description value="deductible, visits, co-pay, etc." />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/ValueSet/benefit-type" />
         </valueSetReference>
@@ -14231,8 +14231,8 @@
       <path value="ExplanationOfBenefit.totalCost" />
       <max value="0" />
     </element>
-    <element id="ExplanationOfBenefit.unallocDeductable">
-      <path value="ExplanationOfBenefit.unallocDeductable" />
+    <element id="ExplanationOfBenefit.unallocdeductible">
+      <path value="ExplanationOfBenefit.unallocdeductible" />
       <max value="0" />
     </element>
     <element id="ExplanationOfBenefit.totalBenefit">

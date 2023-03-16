@@ -77,7 +77,7 @@
       <sch:assert test="count(f:employmentImpacted) &lt;= 0">employmentImpacted: maximum cardinality of 'employmentImpacted' is 0</sch:assert>
       <sch:assert test="count(f:item) &gt;= 1">item: minimum cardinality of 'item' is 1</sch:assert>
       <sch:assert test="count(f:addItem) &lt;= 0">addItem: maximum cardinality of 'addItem' is 0</sch:assert>
-      <sch:assert test="count(f:unallocDeductable) &lt;= 0">unallocDeductable: maximum cardinality of 'unallocDeductable' is 0</sch:assert>
+      <sch:assert test="count(f:unallocdeductible) &lt;= 0">unallocdeductible: maximum cardinality of 'unallocdeductible' is 0</sch:assert>
       <sch:assert test="count(f:totalBenefit) &lt;= 0">totalBenefit: maximum cardinality of 'totalBenefit' is 0</sch:assert>
       <sch:assert test="count(f:payment) &gt;= 1">payment: minimum cardinality of 'payment' is 1</sch:assert>
       <sch:assert test="count(f:form) &lt;= 0">form: maximum cardinality of 'form' is 0</sch:assert>
@@ -1435,8 +1435,8 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:title>f:ExplanationOfBenefit/f:unallocDeductable</sch:title>
-    <sch:rule context="f:ExplanationOfBenefit/f:unallocDeductable">
+    <sch:title>f:ExplanationOfBenefit/f:unallocdeductible</sch:title>
+    <sch:rule context="f:ExplanationOfBenefit/f:unallocdeductible">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
       <sch:assert test="count(f:value) &lt;= 1">value: maximum cardinality of 'value' is 1</sch:assert>
       <sch:assert test="count(f:comparator) &lt;= 1">comparator: maximum cardinality of 'comparator' is 1</sch:assert>
