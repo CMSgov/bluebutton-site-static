@@ -35,12 +35,12 @@ ctas:
 
 If you’ve found yourself on this page, it’s because you’re interested in building software that helps the more than 53 million Medicare beneficiaries in the United States. Thank you.
 
-Please read our Blue Button 2.0 Application Programming Interface (API) Terms of Service carefully and post any questions you may have to the [Google Group](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api).
+Please read our Blue Button 2.0 Application Programming Interface (API) Terms of Service carefully and post any questions you may have to the [Google Group](https://groups.google.com/forum/#!forum/Developer-group-for-cms-blue-button-api){:target="_blank"}.
 
 
 ## Scope
 
-By accessing or using Centers for Medicare & Medicaid Services (CMS) Blue Button 2.0 APIs and other developer services (collectively, Blue Button 2.0 APIs), you are agreeing to the terms below, any relevant sections of [CMS’s Privacy Policies](https://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/Privacy-Policy.html), and the [Medicare.gov Terms and Conditions](https://www.medicare.gov/account/login) (collectively, Terms).
+By accessing or using Centers for Medicare & Medicaid Services (CMS) Blue Button 2.0 APIs and other developer services (collectively, Blue Button 2.0 APIs), you are agreeing to the terms below, any relevant sections of [CMS’s Privacy Policies](https://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/Privacy-Policy.html){:target="_blank"}, and the [Medicare.gov Terms and Conditions](https://www.medicare.gov/account/login){:target="_blank"} (collectively, Terms).
 
 
 ## Data Rights and Usage
@@ -70,7 +70,7 @@ Information or data about Medicare beneficiaries available from the Blue Button 
 
 You further acknowledge that when records regarding an individual are obtained through a Blue Button 2.0 API, you may not disclose any information or data regarding the individual to any other individuals or third parties without specific, explicit consent from the individual or his or her authorized representative. The terms “individual” and “record” have the meanings given in the Privacy Act at 5 U.S.C. § 552a(a). [Click here if you would like more information about the application of the Privacy Act at CMS](https://www.cms.gov/Research-Statistics-Data-and-Systems/Computer-Data-and-Systems/Privacy/PrivacyActof1974.html).
 
-You may not request, access, use, or share a Medicare beneficiary’s [Medicare.gov](http://medicare.gov/) login credentials.
+You may not request, access, use, or share a Medicare beneficiary’s [Medicare.gov](http://medicare.gov/){:target="_blank"} login credentials.
 
 
 ## Attribution
@@ -81,7 +81,7 @@ When using content, data, documentation, code, and related materials associated 
 
 You may use CMS’s name or logo in order to identify the source of API content subject to these Terms. You may not use the CMS name, logo, or the like to imply endorsement of any product, service, or entity, not-for-profit, commercial or otherwise.
 
-[HealthIT.gov logo and usage guidelines](https://www.healthit.gov/topic/health-it-initiatives/blue-button/logo-and-usage)
+[HealthIT.gov logo and usage guidelines](https://www.healthit.gov/topic/health-it-initiatives/blue-button/logo-and-usage){:target="_blank"}
 
 
 ## Service Management
