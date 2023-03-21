@@ -142,13 +142,13 @@ CMS_BB2_FOOTER_COLS = [
                         "text": "CMS Privacy Policy",
                         "link": "https://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/Privacy-Policy.html",
                         "check": False,
-                        "water-mark": ("//body/div[2]/div/div/main/div/div/div/div[2]/inner/div/div[2]/div/h1/span", "Centers for Medicare & Medicaid Services (CMS) Website Privacy Policy")
+                        "water-mark": ("//body/div/div/div/main/div/div/div/div[2]/inner/div/div[2]/div/h1/span", "Centers for Medicare & Medicaid Services (CMS) Website Privacy Policy")
                     },
                     {
                         "text": "CMS/HHS Vulnerability Disclosure Policy",
                         "link": "https://www.cms.gov/vulnerability-disclosure-policy",
                         "check": False,
-                        "water-mark": ("//body/div[2]/div/div/main/div/div/div/div[2]/inner/div/div[2]/div/h1/span", "CMS/HHS Vulnerability Disclosure Policy")
+                        "water-mark": ("//body/div/div/div/main/div/div/div/div[2]/inner/div/div[2]/div/h1/span", "CMS/HHS Vulnerability Disclosure Policy")
                     },
                 ]
     },
