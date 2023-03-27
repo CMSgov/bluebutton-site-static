@@ -46,7 +46,7 @@ You can start using the API right away by following these steps:
 5. Access the synthetic dataset to try additional calls
 
 
-**Step 1:** [**Join the Developer Sandbox**](https://sandbox.bluebutton.cms.gov/v1/accounts/create) **and register a Sandbox application**
+**Step 1:** [**Join the Developer Sandbox**](https://sandbox.bluebutton.cms.gov/v1/accounts/create){:target="_blank"} **and register a Sandbox application**
 
 You will need to create an account to join the Developer Sandbox. Once you have verified your account, log in and click "Add an Application" from the Developer Sandbox homepage.
 
@@ -75,7 +75,7 @@ Access the Test Client to see a sample of Blue Button data.
 |<a href="{{ site.baseurl }}/assets/img/docs/v2/V1_AUTH_FORM.png"><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/V1_AUTH_FORM.png" alt="v1 sample API call" /></a> |<a href="{{ site.baseurl }}/assets/img/docs/v2/V2_AUTH_FORM.png"><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/V2_AUTH_FORM.png" alt="v2 sample API call" /></a>|
 {:.ds-c-table}
 
-5.You will be redirected to the login page for [Medicare.gov](http://medicare.gov/).
+5.You will be redirected to the login page for [Medicare.gov](http://medicare.gov/){:target="_blank"}.
 <img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-28-51.png?" alt="Medicare.gov login page" />
 6.Log in with one of the Synthetic Beneficiary Accounts:
 
@@ -177,7 +177,7 @@ for v2: curl --header "Authorization: Bearer YOUR TOKEN HERE" https://sandbox.bl
 In order to access the full synthetic dataset for an individual synthetic beneficiary, you can do the following:
 
 1. Set up your sandbox application
-2. Log out of [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov/).
+2. Log out of [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.
 
 3. Access the authorization url at:
 
@@ -203,13 +203,13 @@ The first user is **BBUser00000** with password **PW00000!** Sample users contin
 
 ### Authorization
 
-To use the Blue Button 2.0 OAuth 2 a developer must [register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/).
+To use the Blue Button 2.0 OAuth 2 a developer must [register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/){:target="_blank"}.
 
 A registered application is given a Client ID and a Client Secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button 2.0 API. Otherwise the [Client Application Flow](https://bluebutton.cms.gov/developers/#client-application-flow) may be used.
 
 **Scopes**
 
-Access tokens have a scope, which defines what the access token can do and what resources it can access. For our purposes, scopes are primarily utilized to give Medicare beneficiaries more granular choice over what data they would like to share with applications. The Blue Button 2.0 API has implemented [HL7 FHIR Scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html) to manage access to beneficiary data. They look like this:
+Access tokens have a scope, which defines what the access token can do and what resources it can access. For our purposes, scopes are primarily utilized to give Medicare beneficiaries more granular choice over what data they would like to share with applications. The Blue Button 2.0 API has implemented [HL7 FHIR Scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html){:target="_blank"} to manage access to beneficiary data. They look like this:
 
 ```
 patient/Patient.read
@@ -253,13 +253,13 @@ If you choose not to collect demographic information, Medicare beneficiaries wil
 
 **Native Mobile App Support**
 
-Native Mobile App Support follows the [RFC 8252 - OAuth 2.0 for Native Apps](https://tools.ietf.org/html/rfc8252) authentication flow utilizing the [PKCE](https://tools.ietf.org/html/rfc7636) extension and enables a custom URI scheme redirect.
+Native Mobile App Support follows the [RFC 8252 - OAuth 2.0 for Native Apps](https://tools.ietf.org/html/rfc8252){:target="_blank"} authentication flow utilizing the [PKCE](https://tools.ietf.org/html/rfc7636){:target="_blank"} extension and enables a custom URI scheme redirect.
 
-The implementation of the [RFC 8252](https://tools.ietf.org/html/rfc8252) specification enables developers to build mobile applications without requiring a proxy server to route redirect calls to their mobile app.
+The implementation of the [RFC 8252](https://tools.ietf.org/html/rfc8252){:target="_blank"} specification enables developers to build mobile applications without requiring a proxy server to route redirect calls to their mobile app.
 
-The [PKCE](https://tools.ietf.org/html/rfc7636) extension provides a technique for public clients to mitigate the threat of a "man-in-the-middle" attack. This involves creating a secret that is used when exchanging the authorization code to obtain an access token.
+The [PKCE](https://tools.ietf.org/html/rfc7636){:target="_blank"} extension provides a technique for public clients to mitigate the threat of a "man-in-the-middle" attack. This involves creating a secret that is used when exchanging the authorization code to obtain an access token.
 
-[PKCE](https://tools.ietf.org/html/rfc7636) uses a code challenge that is derived from a code-verifier. The standard supports two styles of code challenge:
+[PKCE](https://tools.ietf.org/html/rfc7636){:target="_blank"} uses a code challenge that is derived from a code-verifier. The standard supports two styles of code challenge:
 
 - plain
 - S256
@@ -278,7 +278,7 @@ The following additional parameters and values are sent as part of the OAuth2.0 
 - codechallengemethod = "S256"
 ```
 
-More details can be found about this flow on [OAuth.com](https://www.oauth.com/). Check out this link: [Protecting Mobile Apps with PKCE - OAuth 2.0 Servers](https://www.oauth.com/oauth2-servers/pkce/)
+More details can be found about this flow on [OAuth.com](https://www.oauth.com/){:target="_blank"}. Check out this link: [Protecting Mobile Apps with PKCE - OAuth 2.0 Servers](https://www.oauth.com/oauth2-servers/pkce/){:target="_blank"}
 
 **Registering Your App for Mobile App Support**
 
@@ -459,7 +459,7 @@ https://sandbox.bluebutton.cms.gov
 
 As a security measure, the beneficiary&#39;s date of birth, SSN, and HICN will not be provided by the CMS Blue Button 2.0 API.
 
-We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension) in our API responses.
+We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension){:target="_blank"} in our API responses.
 
 **Explanation of Benefit FHIR Resource**
 
@@ -469,7 +469,7 @@ We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension) 
 | v2 | HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id] |
 {:.ds-c-table}
 
-The above URL returns all of the beneficiary&#39;s Explanation of Benefit (sometimes referred to as an episode of care) records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html). The bulk of a beneficiary&#39;s data is contained within these ExplanationOfBenefit FHIR resources.
+The above URL returns all of the beneficiary&#39;s Explanation of Benefit (sometimes referred to as an episode of care) records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"}. The bulk of a beneficiary&#39;s data is contained within these ExplanationOfBenefit FHIR resources.
 
 Each one can be thousands of lines long.
 
@@ -559,7 +559,7 @@ Response for v1, e.g. :
 | v2 | HTTP GET /v2/fhir/Patient/[fhir_id] |
 {:.ds-c-table}
 
-The above URL returns the beneficiary&#39;s demographics and other administrative information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html). This information is mostly contact information, not medical data.
+The above URL returns the beneficiary&#39;s demographics and other administrative information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html){:target="_blank"}. This information is mostly contact information, not medical data.
 
 | **API version** | **CURL command** |
 | --- | --- |
@@ -667,7 +667,7 @@ Response for v1 e.g.:
 | v2 | HTTP GET /v2/fhir/Coverage/?beneficiary=[fhir_id] |
 {:.ds-c-table}
 
-The above URL returns the beneficiary&#39;s Coverage information as an [Coverage FHIR Resource.](http://hl7.org/fhir/coverage.html)
+The above URL returns the beneficiary&#39;s Coverage information as an [Coverage FHIR Resource.](http://hl7.org/fhir/coverage.html){:target="_blank"}
 
 | **API version** | **CURL command** |
 | --- | --- |
@@ -982,7 +982,7 @@ The queries to request each claim type individually would be:
 
 **Query by "lastUpdated" Field**
 
-The HL7 FHIR specification provides a [Meta](https://www.hl7.org/fhir/resource.html#Meta) section in each resource. The lastUpdated field represents the date and time of the last update. This takes the format of an "instant" type:
+The HL7 FHIR specification provides a [Meta](https://www.hl7.org/fhir/resource.html#Meta){:target="_blank"} section in each resource. The lastUpdated field represents the date and time of the last update. This takes the format of an "instant" type:
 
 YYYY-MM-DDThh:mm:ss.sss+zz:zz.
 
@@ -1079,11 +1079,11 @@ The Blue Button 2.0 API FHIR data model leverages coding systems specific to Med
 
 For Example:
 
-- [National Drug Code Directory](https://www.accessdata.fda.gov/scripts/cder/ndc/)
-- [HL7 v3 Code System ActCode](http://hl7.org/fhir/v3/ActCode/cs.html)
-- [ICD-10](https://terminology.hl7.org/4.0.0/CodeSystem-icd10CM.html)
+- [National Drug Code Directory](https://www.accessdata.fda.gov/scripts/cder/ndc/){:target="_blank"}
+- [HL7 v3 Code System ActCode](http://hl7.org/fhir/v3/ActCode/cs.html){:target="_blank"}
+- [ICD-10](https://terminology.hl7.org/4.0.0/CodeSystem-icd10CM.html){:target="_blank"}
 
-[View the full list of Blue Button 2.0 API FHIR Data Model Coding Systems and Identifiers](https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md)
+[View the full list of Blue Button 2.0 API FHIR Data Model Coding Systems and Identifiers](https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md){:target="_blank"}
 
 **How Often Will New/Updated Data Be Available?**
 
@@ -1113,7 +1113,7 @@ The API also has historical claims data going back four years. All of these fact
 
 ### Calling the API
 
-This section provides information on basic and common queries against the Blue Button API.  For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi).
+This section provides information on basic and common queries against the Blue Button API.  For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}.
 
 
 #### Base FHIR URLs
@@ -1133,18 +1133,18 @@ To find beneficiaries with varying volumes and types of data, use this [CSV of s
 #### Querying Resources
 A listing of common API calls are shown in the table below.  See "Base FHIR URLs" above and substitute for {baseURL} as appropriate.  
     
-For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi).  
+For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}.  
 
 
 
 | Resource | Request | Description |
 | -------- | -------- | -------- |
-| Patient     | `HTTP GET {baseURL}/Patient`     | Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Patient resources](https://www.hl7.org/fhir/patient.html) with one entry (one patient resource).  You can use the resource ID `Bundle.entry.resource.id`in later queries.  For synthetic data, the ID is a negative number.     |
+| Patient     | `HTTP GET {baseURL}/Patient`     | Returns a [bundle](https://www.hl7.org/fhir/bundle.html){:target="_blank"} of [Patient resources](https://www.hl7.org/fhir/patient.html){:target="_blank"} with one entry (one patient resource).  You can use the resource ID `Bundle.entry.resource.id`in later queries.  For synthetic data, the ID is a negative number.     |
 | Patient | `HTTP GET {baseURL}/Patient/{id}` | Returns a single Patient resource.  Replace `{id}` with a valid patient resource ID.  See `/Patient` call above. |
-| Coverage | `HTTP GET {baseURL}/Coverage?beneficiary={ id }`<br>OR<br>`HTTP GET {baseURL}/Coverage`| Replace `{id}` with the patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Coverage resources](https://www.hl7.org/fhir/coverage.html) |
-| Explanation of Benefit |  `HTTP GET {baseURL}/ExplanationOfBenefit?patient={ id }`<br />OR<br />`HTTP GET {baseURL}/ExplanationOfBenefit`| Replace `{id}` with patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html).  The bundle should contain one or more EOBs. You can use the resource ID located at `Bundle.entry.resource.id` (the explanation of benefit resource ID) in later queries.  For synthetic data, the ID is typically formatted as `[claimtype]`–`[number]` Example: `carrier--10114937820` |
-| Explanation of Benefit  | `HTTP GET {baseURL}/ExplanationOfBenefit/{id}` | Returns a single [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html).  Replace {id} with a valid EOB resource ID.  See `/ExplanationOfBenefit` call above. |
-| Capability Statement | `HTTP GET {baseURL}/metadata` | Returns the [FHIR capability statement](https://www.hl7.org/fhir/capabilitystatement.html) (Example: the FHIR features and operations supported by this server) |
+| Coverage | `HTTP GET {baseURL}/Coverage?beneficiary={ id }`<br>OR<br>`HTTP GET {baseURL}/Coverage`| Replace `{id}` with the patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Coverage resources](https://www.hl7.org/fhir/coverage.html){:target="_blank"} |
+| Explanation of Benefit |  `HTTP GET {baseURL}/ExplanationOfBenefit?patient={ id }`<br />OR<br />`HTTP GET {baseURL}/ExplanationOfBenefit`| Replace `{id}` with patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"}.  The bundle should contain one or more EOBs. You can use the resource ID located at `Bundle.entry.resource.id` (the explanation of benefit resource ID) in later queries.  For synthetic data, the ID is typically formatted as `[claimtype]`–`[number]` Example: `carrier--10114937820` |
+| Explanation of Benefit  | `HTTP GET {baseURL}/ExplanationOfBenefit/{id}` | Returns a single [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"}.  Replace {id} with a valid EOB resource ID.  See `/ExplanationOfBenefit` call above. |
+| Capability Statement | `HTTP GET {baseURL}/metadata` | Returns the [FHIR capability statement](https://www.hl7.org/fhir/capabilitystatement.html){:target="_blank"} (Example: the FHIR features and operations supported by this server) |
 | User Info | `HTTP GET {host}/{version}/connect/userinfo` | If the user grants access to access to their personal information, `UserInfo` returns name, family name and email. If the user denies access to their personal information, `UserInfo` returns `You do not have permission.` | 
 {:.ds-c-table}
 
@@ -1153,13 +1153,13 @@ For a complete listing of Blue Button API calls, see our [Swagger documentation]
 ### Consuming the Data
 The Blue Button API includes over 1300 data elements with a wide variety of data exchange use cases. Here are some basics to get you started with common data elements. 
 
-For complete implementation guidance, see the [FHIR specification](http://www.hl7.org/fhir/index.html) and the [CARIN implementation guide](http://www.hl7.org/fhir/us/carin-bb/index.html). Our [Resources page](https://bluebutton.cms.gov/resources/) also includes links to tutorials and helpful information on FHIR.
+For complete implementation guidance, see the [FHIR specification](http://www.hl7.org/fhir/index.html){:target="_blank"} and the [CARIN implementation guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"}. Our [Resources page](https://bluebutton.cms.gov/resources/) also includes links to tutorials and helpful information on FHIR.
 
 #### Understanding the Payload
 
-Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search) (like `/Patient`, `/ExplanationOfBenefit`, and `/ExplanationOfBenefit?patient=123`)  return data in [FHIR Bundles](http://www.hl7.org/fhir/bundle.html). A FHIR bundle is a container resource that includes a collection of FHIR resources. You can grab each resource by looping through the `Bundle.entry` list attribute.  
+Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search){:target="_blank"} (like `/Patient`, `/ExplanationOfBenefit`, and `/ExplanationOfBenefit?patient=123`)  return data in [FHIR Bundles](http://www.hl7.org/fhir/bundle.html){:target="_blank"}. A FHIR bundle is a container resource that includes a collection of FHIR resources. You can grab each resource by looping through the `Bundle.entry` list attribute.  
 
-[Read calls](http://www.hl7.org/fhir/http.html#read) such as `/Patient/123` return a single resource.
+[Read calls](http://www.hl7.org/fhir/http.html#read){:target="_blank"} such as `/Patient/123` return a single resource.
 
 
 
@@ -1213,7 +1213,7 @@ To navigate forward and backward through the bundle, use the URLs provided in `B
 
 In the example below, the `Bundle.total` attribute shows that there are 89 records in the results. However, only the first 10 records are delivered in the `Bundle.entry` array. 
 
-For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle](http://www.hl7.org/fhir/bundle.html) and [FHIR v4.3.0 Managing Returned Resources](http://www.hl7.org/fhir/search.html#return). 
+For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle](http://www.hl7.org/fhir/bundle.html) and [FHIR v4.3.0 Managing Returned Resources](http://www.hl7.org/fhir/search.html#return){:target="_blank"}. 
 
  
 
@@ -1255,9 +1255,9 @@ In FHIR, the difference between the `Resource.id` (resource ID) and `identifier`
 * **Resource ID:** In the Blue Button API, the resource ID is an internal identifier from the source database, the Chronic Conditions Warehouse (CCW).  The resource ID is a system-level resource, held outside the resource.  The Resource ID is guaranteed to be unique for a particular resource and will always be limited to one value.
 
 
-* **Identifier:** The identifier attribute typically provides business identifiers (or externally recognized identifiers).  In the Blue Button API, the `Patient.identifier` attribute provides the [Medicare Beneficiary ID (MBI)](https://www.cms.gov/medicare/new-medicare-card). The MBI is the number on a beneficiary's Medicare card.
+* **Identifier:** The identifier attribute typically provides business identifiers (or externally recognized identifiers).  In the Blue Button API, the `Patient.identifier` attribute provides the [Medicare Beneficiary ID (MBI)](https://www.cms.gov/medicare/new-medicare-card){:target="_blank"}. The MBI is the number on a beneficiary's Medicare card.
 
-In FHIR, the identifier attribute is a list element that could supply multiple identifiers. Use [discriminators](https://www.hl7.org/fhir/profiling.html#discriminator) to distinguish between the entries to pull your desired identifier.  
+In FHIR, the identifier attribute is a list element that could supply multiple identifiers. Use [discriminators](https://www.hl7.org/fhir/profiling.html#discriminator){:target="_blank"} to distinguish between the entries to pull your desired identifier.  
 
 For example, you can use discriminators to pull the current MBI from a Patient resource. (Beneficiaries are sometimes given new or replacement MBIs in situations such as identity theft.) In the `Patient` resource snippet below, there are two identifiers in the list. Use the following discriminators to pull the current MBI: 
 - `identifier.system` = `http://hl7.org/fhir/sid/us-mbi` (ensures that the entry is an MBI)
@@ -1310,7 +1310,7 @@ For example, you can use discriminators to pull the current MBI from a Patient r
 ```
 
 
-Example [FHIRPath expression](https://hl7.org/fhir/fhirpath.html)  for pulling the current MBI:
+Example [FHIRPath expression](https://hl7.org/fhir/fhirpath.html){:target="_blank"}  for pulling the current MBI:
 
 ```
 Patient.identifier.where(type.coding.extension('https://bluebutton.cms.gov/
@@ -1322,7 +1322,7 @@ resources/codesystem/identifier-currency').valueCoding.code =
 
 
 #### Working with References
-The Blue Button API uses both [literal](http://www.hl7.org/fhir/references.html#literal) and [logical](http://www.hl7.org/fhir/references.html#logical) FHIR references to refer to other resources/data external to the resource.
+The Blue Button API uses both [literal](http://www.hl7.org/fhir/references.html#literal){:target="_blank"} and [logical](http://www.hl7.org/fhir/references.html#logical){:target="_blank"} FHIR references to refer to other resources/data external to the resource.
 
 ##### Literal references
 
@@ -1344,7 +1344,7 @@ For literal references, relative URLs are provided.  In the sample EOB resource 
 
 
 ##### Contained resources
-The Blue Button API also uses fragments and [contained resources](https://www.hl7.org/fhir/references.html#contained).  A resource that does not have independent existence is embedded inside another resource as a contained resource.  For example, the Organization resource does not have its own endpoint. Instead, it is supplied as a contained resource with EOB. In the example EOB resource below, the organization resource is within the `Eob.contained` attribute, and the `Eob.provider` attribute has a `#` reference to `contained.id` (`#provider-org`).   
+The Blue Button API also uses fragments and [contained resources](https://www.hl7.org/fhir/references.html#contained){:target="_blank"}.  A resource that does not have independent existence is embedded inside another resource as a contained resource.  For example, the Organization resource does not have its own endpoint. Instead, it is supplied as a contained resource with EOB. In the example EOB resource below, the organization resource is within the `Eob.contained` attribute, and the `Eob.provider` attribute has a `#` reference to `contained.id` (`#provider-org`).   
 
 **Contained resource example:**
 ```
@@ -1367,9 +1367,9 @@ The Blue Button API also uses fragments and [contained resources](https://www.hl
 },
 ```
 ##### Logical references
-[Logical references](http://www.hl7.org/fhir/references.html#logical) typically supply a business identifier instead of a URL to an endpoint or contained resource.  
+[Logical references](http://www.hl7.org/fhir/references.html#logical){:target="_blank"} typically supply a business identifier instead of a URL to an endpoint or contained resource.  
 
-In the example below, the `Eob.careTeam.provider` attribute contains a reference to the the [National Provider Identifier (NPI)](https://npiregistry.cms.hhs.gov/) for the practitioner.  (Note: The Blue Button API  does not support a `/Practitioner` endpoint.)
+In the example below, the `Eob.careTeam.provider` attribute contains a reference to the the [National Provider Identifier (NPI)](https://npiregistry.cms.hhs.gov/){:target="_blank"} for the practitioner.  (Note: The Blue Button API  does not support a `/Practitioner` endpoint.)
 
 **Logical reference example**
 ```
@@ -1395,16 +1395,16 @@ In the example below, the `Eob.careTeam.provider` attribute contains a reference
 #### Extensions and SupportingInfo
 
 
-The Blue Button API supplies many data points using [FHIR extensions](http://www.hl7.org/fhir/extensibility.html).  Extensions are information that is not part of the basic definition of the FHIR resource. They're often very specific to a use case or situation.  For example, the Blue Button API uses extensions to supply Medicare-specific data points that are not part of the standard FHIR specification. 
+The Blue Button API supplies many data points using [FHIR extensions](http://www.hl7.org/fhir/extensibility.html){:target="_blank"}.  Extensions are information that is not part of the basic definition of the FHIR resource. They're often very specific to a use case or situation.  For example, the Blue Button API uses extensions to supply Medicare-specific data points that are not part of the standard FHIR specification. 
 
-All Blue Button API resources include extensions.  Extensions are like a key-value list, where the extension URL is the key. In an extension, the value attribute is defined as [Choice of Types](http://www.hl7.org/fhir/formats.html#choice), where the data type depends on the definition of the extension.    
+All Blue Button API resources include extensions.  Extensions are like a key-value list, where the extension URL is the key. In an extension, the value attribute is defined as [Choice of Types](http://www.hl7.org/fhir/formats.html#choice){:target="_blank"}, where the data type depends on the definition of the extension.    
 
 In the example below, there are two extensions: 
 * [NCH Near Line Record Identification Code](https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd/) provides the value as a `valueCoding` type
 * [Carrier or MAC Number](https://bluebutton.cms.gov/resources/variables/carr_num/)   is a `valueIdentifier`
 
 
-*Note: In the Blue Button API, the extension URL points at an underlying valueset rather than the standard FHIR practice of the URL pointing to the [StructureDefinition](http://www.hl7.org/fhir/structuredefinition.html) of the extension.  This is due to historical reasons and will be revisited in future versions of Blue Button.*
+*Note: In the Blue Button API, the extension URL points at an underlying valueset rather than the standard FHIR practice of the URL pointing to the [StructureDefinition](http://www.hl7.org/fhir/structuredefinition.html){:target="_blank"} of the extension.  This is due to historical reasons and will be revisited in future versions of Blue Button.*
 
 
 
@@ -1431,10 +1431,10 @@ In the example below, there are two extensions:
 ##### Supporting Info attribute
 The `supportingInfo` attribute is a standard element in the FHIR EOB resource. Similar to extensions, `suportingInfo` is like a key-value list. `supportingInfo.category` serves as the key and `supportingInfo.code` is the value.   Other attributes in `supportingInfo` include `timing[x]`, `value[x]`, and `reason`.  
 
-*Note: The [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html) has chosen to use `supportingInfo` over extensions.  The CARIN IG does not define any extensions.  For historical and backwards compatibility reasons, the Blue Button API provides data in both extensions and `supportingInfo`.*
+*Note: The [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"} has chosen to use `supportingInfo` over extensions.  The CARIN IG does not define any extensions.  For historical and backwards compatibility reasons, the Blue Button API provides data in both extensions and `supportingInfo`.*
 
 #### Determining Claim Type
-The Blue Button API supplies claims data in the [ExplanationOfBenefit resource](http://www.hl7.org/fhir/explanationofbenefit.html) for all claim types (Example: Inpatient, Outpatient, Carrier, DME, etc.)
+The Blue Button API supplies claims data in the [ExplanationOfBenefit resource](http://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"} for all claim types (Example: Inpatient, Outpatient, Carrier, DME, etc.)
 
 To determine the type of a given claim, inspect the `Eob.type` attribute.  `Eob.type` is a `CodeableConcept`, which provides data as a list of codings. There are multiple entries in the list. 
 
@@ -1462,7 +1462,7 @@ Each entry is a code from a given codesystem or valueset with information about 
 For more information about determining claim types, see the following coding system reference links:
 * [EOB type](https://bluebutton.cms.gov/resources/codesystem/eob-type/)
 * [NCH Claim Type Code variable](https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd/)
-* [FHIR Claim Type value set](http://hl7.org/fhir/STU3/valueset-claim-type.html)
+* [FHIR Claim Type value set](http://hl7.org/fhir/STU3/valueset-claim-type.html){:target="_blank"}
 
 
 #### Linking Items
@@ -1609,7 +1609,7 @@ Chemo
 
 Jack is a 70 year-old male with Type 2 Diabetes and high blood pressure. Jack takes daily medication and his Doctor told him he needs to lose weight. He takes Glimepiride to help control his blood sugar and previously was on Metformin.
 
-[Learn more about "Jack" (PDF)](https://cmsgov.github.io/bluebutton-developer-help/Jack-Persona.pdf)
+[Learn more about "Jack" (PDF)](https://cmsgov.github.io/bluebutton-developer-help/Jack-Persona.pdf){:target="_blank"}
 
 ---
 
@@ -1625,7 +1625,7 @@ Below are guidelines you should follow to be successful in your Blue Button 2.0 
 
 **Your Privacy Policy**
 
-You will be asked to provide a URL to your privacy policy and terms and conditions when registering your app in the Blue Button 2.0 API Developer Portal. These links should be easy to access and understand by a beneficiary using your app. Consider using the [Model Privacy Notice](https://www.healthit.gov/topic/privacy-security-and-hipaa/model-privacy-notice-mpn).
+You will be asked to provide a URL to your privacy policy and terms and conditions when registering your app in the Blue Button 2.0 API Developer Portal. These links should be easy to access and understand by a beneficiary using your app. Consider using the [Model Privacy Notice](https://www.healthit.gov/topic/privacy-security-and-hipaa/model-privacy-notice-mpn){:target="_blank"}.
 
 **Rate Limiting and Data Refresh**
 
@@ -1637,7 +1637,7 @@ We recommend you have a daily or weekly job to fetch new claims data for your us
 
 **Use of the Blue Button 2.0 API Logo**
 
-The Blue Button 2.0 API logo and usage guidelines is detailed [here](https://www.healthit.gov/topic/health-it-initiatives/blue-button/logo-and-usage).
+The Blue Button 2.0 API logo and usage guidelines is detailed [here](https://www.healthit.gov/topic/health-it-initiatives/blue-button/logo-and-usage){:target="_blank"}.
 
 **Beneficiary Revokes Access**
 
@@ -1672,7 +1672,7 @@ The BB2IG features nine profiles in this version of the guide:
 
 Implementation Guide: Version 1.0.0, Date 2020-11-23.
 
-·URL:[http://hl7.org/fhir/us/carin-bb/](http://hl7.org/fhir/us/carin-bb/)
+·URL:[http://hl7.org/fhir/us/carin-bb/](http://hl7.org/fhir/us/carin-bb/){:target="_blank"}
 
 ·Summary: This IG describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can exchange with third-parties to display to consumers via a FHIR-based API. This IG will help Medicare, Medicaid, CHIP, BHP standard health plans, and QHP issuers on the FFEs share adjudicated claims and encounter data via the Patient Access API discussed in section II.A. of this proposed rule. It includes data elements and coding instructions each impacted payer can use to prepare and share the specified data.
 
@@ -1680,34 +1680,34 @@ Implementation Guide: Version 1.0.0, Date 2020-11-23.
 
 Implementation Guide: Version 1.0.0, Date 2020-11-23.
 
-·URL: [https://build.fhir.org/ig/HL7/carin-bb/artifacts.html#4](https://build.fhir.org/ig/HL7/carin-bb/artifacts.html#4)
+·URL: [https://build.fhir.org/ig/HL7/carin-bb/artifacts.html#4](https://build.fhir.org/ig/HL7/carin-bb/artifacts.html#4){:target="_blank"}
 
 ·Summary: The purpose of this IG is to outline the different artifacts released by CARIN for v2. The artifacts contain code explanations and benefits for the different EOB Profiles.
 
 - HL7 FHIR CARIN – BlueButton GitHub IG
 - Github Version 0.1.13, Date 2020-11-23
 - URL: [https://github.com/HL7/carin-bb/
-](https://github.com/HL7/carin-bb/) Summary: This implementation guide describes the CARIN Blue Button® Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
+](https://github.com/HL7/carin-bb/){:target="_blank"} Summary: This implementation guide describes the CARIN Blue Button® Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
 
 ---
 
 ### STU3 vs FHIR R4 Comparison Tables
 
-See also the [version transforms](https://www.hl7.org/fhir/r3maps.html) and the note about [version specific extensions](https://www.hl7.org/fhir/versions.html#extensions). (This analysis is available as [XML](https://www.hl7.org/fhir/fhir.diff.xml) or [JSON](https://www.hl7.org/fhir/fhir.diff.json) from HL7 (note: this includes all R4 data).
+See also the [version transforms](https://www.hl7.org/fhir/r3maps.html){:target="_blank"} and the note about [version specific extensions](https://www.hl7.org/fhir/versions.html#extensions){:target="_blank"}. (This analysis is available as [XML](https://www.hl7.org/fhir/fhir.diff.xml){:target="_blank"} or [JSON](https://www.hl7.org/fhir/fhir.diff.json){:target="_blank"} from HL7 (note: this includes all R4 data).
 
 ---
 
 ### Additional Information
 **Migrating to v2/FHIR R4 FAQ**
-- [Frequently Asked Questions about the V2 API transition for Blue Button 2.0 API (BB2.0)](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ)
+- [Frequently Asked Questions about the V2 API transition for Blue Button 2.0 API (BB2.0)](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ){:target="_blank"}
  
 **Where can you find the latest information?**
 
 Join the Google Groups for any APIs you access for the most up to date information:
 
-- [Blue Button 2.0 (BB2.0)](https://groups.google.com/g/developer-group-for-cms-blue-button-api)
-- [Beneficiary Claims Data API (BCDA)](https://groups.google.com/forum/#!forum/bc-api)
-- [Data at the Point of Care (DPC)](https://groups.google.com/forum/#!forum/dpc-api)
-- [Medicare Claims Data to Part D Sponsors (AB2D)](https://groups.google.com/g/ab2d-api)
+- [Blue Button 2.0 (BB2.0)](https://groups.google.com/g/developer-group-for-cms-blue-button-api){:target="_blank"}
+- [Beneficiary Claims Data API (BCDA)](https://groups.google.com/forum/#!forum/bc-api){:target="_blank"}
+- [Data at the Point of Care (DPC)](https://groups.google.com/forum/#!forum/dpc-api){:target="_blank"}
+- [Medicare Claims Data to Part D Sponsors (AB2D)](https://groups.google.com/g/ab2d-api){:target="_blank"}
 
 ---
