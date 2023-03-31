@@ -1647,29 +1647,29 @@ A beneficiary may revoke access to your application via the Medicare website. Wh
 
 If you or your users encounters this error message, know that our team is aware of the issue and is working to resolve it as quickly as possible.
 
+---
 
 ### Implementation Guides
 
-·HL7 FHIR Common Payer Consumer Data Set (CPCDS)
+**HL7 FHIR Common Payer Consumer Data Set (CPCDS)**
 
-Implementation Guide: Version 1.0.0, Date 2020-11-23.
+[Implementation Guide: Version 1.0.0, Date 2020-11-23](http://hl7.org/fhir/us/carin-bb/){:target="_blank"}
 
-·URL:[http://hl7.org/fhir/us/carin-bb/](http://hl7.org/fhir/us/carin-bb/){:target="_blank"}
 
-·Summary: This IG describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can exchange with third-parties to display to consumers via a FHIR-based API. This IG will help Medicare, Medicaid, CHIP, BHP standard health plans, and QHP issuers on the FFEs share adjudicated claims and encounter data via the Patient Access API discussed in section II.A. of this proposed rule. It includes data elements and coding instructions each impacted payer can use to prepare and share the specified data.
+This IG describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can exchange with third-parties to display to consumers via a FHIR-based API. This IG will help Medicare, Medicaid, CHIP, BHP standard health plans, and QHP issuers on the FFEs share adjudicated claims and encounter data via the Patient Access API discussed in section II.A. of this proposed rule. It includes data elements and coding instructions each impacted payer can use to prepare and share the specified data.
 
-·HL7 FHIR CARIN - v2 Artifacts Summary
+**HL7 FHIR CARIN - v2 Artifacts Summary**
 
-Implementation Guide: Version 1.0.0, Date 2020-11-23.
+[Implementation Guide: Version 1.0.0, Date 2020-11-23](https://build.fhir.org/ig/HL7/carin-bb/artifacts.html#4){:target="_blank"}
 
-·URL: [https://build.fhir.org/ig/HL7/carin-bb/artifacts.html#4](https://build.fhir.org/ig/HL7/carin-bb/artifacts.html#4){:target="_blank"}
+The purpose of this IG is to outline the different artifacts released by CARIN for v2. The artifacts contain code explanations and benefits for the different EOB Profiles.
 
-·Summary: The purpose of this IG is to outline the different artifacts released by CARIN for v2. The artifacts contain code explanations and benefits for the different EOB Profiles.
+**HL7 FHIR CARIN – BlueButton GitHub IG**
+ 
+[Github Version 0.1.13, Date 2020-11-23
+](https://github.com/HL7/carin-bb/){:target="_blank"} 
 
-- HL7 FHIR CARIN – BlueButton GitHub IG
-- Github Version 0.1.13, Date 2020-11-23
-- URL: [https://github.com/HL7/carin-bb/
-](https://github.com/HL7/carin-bb/){:target="_blank"} Summary: This implementation guide describes the CARIN Blue Button® Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
+This implementation guide describes the CARIN Blue Button® Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
 
 ---
 
