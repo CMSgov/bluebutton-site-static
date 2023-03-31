@@ -17,7 +17,7 @@ sections:
   - Sample Beneficiaries
   - Production API Access
   - Developer Guidelines
-  - Blue Button Implementation Guide
+  - Implementation Guides
   - STU3 vs FHIR R4 Comparison Tables
   - Additional Information
   
@@ -1647,24 +1647,6 @@ A beneficiary may revoke access to your application via the Medicare website. Wh
 
 If you or your users encounters this error message, know that our team is aware of the issue and is working to resolve it as quickly as possible.
 
----
-### Blue Button Implementation Guide
-
-The Blue Button 2.0 API team has created a Blue Button 2.0 API Implementation Guide (BB2IG). You can access the guide here: [Blue Button 2.0 API Implementation Guide](https://bluebutton.cms.gov/assets/ig/index.html).
-
-The BB2IG features nine profiles in this version of the guide:
-
-- [Blue Button 2.0 API Patient Profile](https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-patient-claim.html)
-- [Blue Button 2.0 API Carrier Claim Profile](https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-carrier-claim.html)
-- [Blue Button 2.0 API DME Claim Profile](https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-dme-claim.html)
-- [Blue Button 2.0 API HHA Claim Profile](https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hha-claim.html)
-- [Blue Button 2.0 API Hospice Claim Profile](https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-hospice-claim.html)
-- [Blue Button 2.0 API Inpatient Claim Profile](https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-inpatient-claim.html)
-- [Blue Button 2.0 API Outpatient Claim Profile](https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-claim.html)
-- [Blue Button 2.0 API Part D Event Profile](https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-pde-claim.html)
-- [Blue Button 2.0 API SNF Claim Profile](https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-snf-claim.html)
-
----
 
 ### Implementation Guides
 
