@@ -101,8 +101,8 @@ To call the API using Postman:
 1. From the Postman app, open a new tab
 
 2. Paste the Request URL:
-v1: `https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325`
-v2: `https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
+    - v1: `https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325`
+    - v2: `https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
 
 1. Click "Authorization" and select type "OAuth 2.0"
 
