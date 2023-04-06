@@ -160,7 +160,7 @@ _Note: The last backslash is important_. _Also remember to append `?client_id={y
 1. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY.
 
 1. Log in with one of the Synthetic Beneficiary Accounts:
-The first synthetic beneficiary account user is BBUser00000 with password PW00000! Sample users continue all the way to BBUser29999 with password PW29999! _Note: the ! at the end of the password is required._
+The first synthetic beneficiary account user is `BBUser00000` with password `PW00000!` Sample users continue all the way to `BBUser29999` with password `PW29999!` _Note: the ! at the end of the password is required._
 
 1. Approve access for your application, which will now receive an access token, which can be used in the requests described above.
 
