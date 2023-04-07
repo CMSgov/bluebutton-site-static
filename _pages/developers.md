@@ -138,7 +138,7 @@ The first synthetic beneficiary account user is `BBUser00000` with password `PW0
 
 You can also use cURL:
 
-- v1: `curl --header "Authorization: Bearer YOUR TOKEN HERE" https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325`
+- v1: `curl --header "Authorization: Bearer <YOUR TOKEN HERE>" https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325`
 
 - v2: `curl --header "Authorization: Bearer YOUR TOKEN HERE" https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
 
