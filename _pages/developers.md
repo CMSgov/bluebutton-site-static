@@ -846,7 +846,7 @@ Let us take a synthetic beneficiary record:
 Username: `BBUser20023`
 Password `PW20023!`
 
-The FHIR ID for this beneficiary is `-20140000000024`
+The PATIENT ID for this beneficiary is `-20140000000024`
 
 Let us do a regular `ExplanationOfBenefit` request:
 
