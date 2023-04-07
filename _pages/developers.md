@@ -748,7 +748,7 @@ The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches t
 | **API version** | **CURL command** |
 | --- | --- |
 | v1 | `curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/connect/userinfo"` |
-| v2 | `curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"` |
+| v2 | `curl --header "Authorization: Bearer <AUTHORIZATION TOKEN>" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"` |
 {:.ds-c-table}
 
 Response:
