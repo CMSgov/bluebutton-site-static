@@ -410,21 +410,21 @@ _Password: PW29999!_
 
 Base Request URL: `https://sandbox.bluebutton.cms.gov`
 
-**FHIR Resources:**
+### FHIR Resources
 
 - Explanation of Benefit
 - Patient
 - Coverage
 
-**UserInfo:**
+### UserInfo
 
 - Get User Profile from an Authorization Token
 
-As a security measure, the beneficiary&#39;s date of birth, SSN, and HICN will not be provided by the CMS Blue Button 2.0 API.
+As a security measure, the beneficiary's date of birth, SSN, and HICN will not be provided by the CMS Blue Button 2.0 API.
 
 We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension){:target="_blank"} in our API responses.
 
-**Explanation of Benefit FHIR Resource**
+### Explanation of Benefit FHIR Resource
 
 | **API version** | **Request** |
 | --- | --- |
@@ -514,7 +514,7 @@ Response for v1, e.g. :
 
 ...this is only a subset of the entire output...
 
-**Patient FHIR Resource**
+### Patient FHIR Resource
 
 | **API version** | **Request** |
 | --- | --- |
@@ -622,7 +622,7 @@ Response for v1 e.g.:
 
 [Download a sample Patient FHIR Resource](https://bluebutton.cms.gov/sample-patient-entry.json)
 
-**Coverage FHIR Resource**
+### Coverage FHIR Resource
 
 | **API version** | **Request** |
 | --- | --- |
@@ -833,7 +833,7 @@ Use lower case when requesting a claim type. If you submit an invalid combinatio
 
 The status code for this message is a 400 Bad Request.
 
-**Query by Type Examples**
+#### Query by Type Examples
 
 In the sandbox there are synthetic beneficiaries with three of the eight claim types:
 
@@ -896,7 +896,7 @@ There are three claim types in this beneficiary&#39;s record:
 
 The queries to request each claim type individually would be:
 
-**Carrier Claims**
+##### Carrier Claims
 
 | **API version** | **Request** |
 | --- | --- |
@@ -904,7 +904,7 @@ The queries to request each claim type individually would be:
 | v2 | `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=carrier` <br />Or<br /> `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=https://bluebutton.cms.gov/resources/codesystem/eob-type|carrier` |
 {:.ds-c-table}
 
-**Inpatient Claims**
+##### Inpatient Claims
 
 | **API version** | **Request** |
 | --- | --- |
@@ -912,7 +912,7 @@ The queries to request each claim type individually would be:
 | v2 | `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=inpatient` <br />Or<br /> `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=https://bluebutton.cms.gov/resources/codesystem/eob-type|inpatient` |
 {:.ds-c-table}
 
-**PDE Claims** 
+##### PDE Claims
 
 Since many of our developers are interested in the Part D drug claims it is now possible to query for only PDE-type claims.
 
@@ -1103,7 +1103,8 @@ Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search){:t
 
 
 
-**FHIR `Bundle` example:**
+FHIR `Bundle` example:
+
 ```
 {
     "resourceType": "Bundle",
@@ -1133,9 +1134,6 @@ Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search){:t
 
 
 
-
-
-
 ### Navigating through a bundle
 FHIR search results are paginated because they typically contain many records. The default is 10 records in each call. You can override the default of 10 with a _count parameter in the request. The maximum records allowed is 50.
 
@@ -1157,7 +1155,7 @@ For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle
  
 
 
-**Bundle navigation example:**
+Bundle navigation example:
 
 ```
 "resourceType": "Bundle",
@@ -1203,7 +1201,7 @@ For example, you can use discriminators to pull the current MBI from a Patient r
 - `identifier.type.coding[n].extension.valueCoding.code` = "current"
 
 
-**Patient identifier example:**
+Patient identifier example:
 ```
 
 "identifier": [
@@ -1478,7 +1476,7 @@ When getting started with the Blue Button 2.0 API, it can be overwhelming to und
 
 We have provided some hypothetical Beneficiaries to help give you a sense of what is found in Medicare Claims data.
 
-**Meet Lucille**
+### Meet Lucille
 
 
 Lucille is a 70-year old female. She has non-small cell lung cancer. Prior to her diagnosis, Lucille was active and had no significant health issues. She went on daily walks around her neighborhood, did yoga and made a concerted effort to eat healthy. Lucille smoked cigarettes for a few years when she was a teenager, but she quit after her father passed away from lung cancer. Her only other family history is mild hypertension on her mother’s side.
@@ -1544,7 +1542,7 @@ Chemo
 "code": "96400"
 ```
 
-**Meet Jack**
+### Meet Jack
 
 Jack is a 70 year-old male with Type 2 Diabetes and high blood pressure. Jack takes daily medication and his Doctor told him he needs to lose weight. He takes Glimepiride to help control his blood sugar and previously was on Metformin.
 
@@ -1619,10 +1617,11 @@ See also the [version transforms](https://www.hl7.org/fhir/r3maps.html){:target=
 ---
 
 ## Additional Information
-**Migrating to v2/FHIR R4 FAQ**
+
+### Migrating to v2/FHIR R4 FAQ
 - [Frequently Asked Questions about the V2 API transition for Blue Button 2.0 API (BB2.0)](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ){:target="_blank"}
  
-**Where can you find the latest information?**
+### Where can you find the latest information?
 
 Join the Google Groups for any APIs you access for the most up to date information:
 
