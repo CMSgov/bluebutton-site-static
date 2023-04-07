@@ -150,7 +150,7 @@ In order to access the full synthetic dataset for an individual synthetic benefi
 
 1. Set up your sandbox application
 
-2. Log out of https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.
+2. Log out of [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.
 
 3. Access the authorization URL at:<br />
 v1: `https://sandbox.bluebutton.cms.gov/v1/o/authorize/`<br />
