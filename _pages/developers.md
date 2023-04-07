@@ -101,8 +101,8 @@ To call the API using Postman:
 1. From the Postman app, open a new tab
 
 2. Paste the Request URL:
-v1: `https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325`
-v2: `https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
+    - v1: `https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325`
+    - v2: `https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
 
 1. Click "Authorization" and select type "OAuth 2.0"
 
@@ -138,9 +138,9 @@ The first synthetic beneficiary account user is `BBUser00000` with password `PW0
 
 You can also use cURL:
 
-- v1: `curl --header "Authorization: Bearer YOUR TOKEN HERE" https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325`
+- v1: `curl --header "Authorization: Bearer <YOUR TOKEN HERE>" https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325`
 
-- v2: `curl --header "Authorization: Bearer YOUR TOKEN HERE" https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
+- v2: `curl --header "Authorization: Bearer <YOUR TOKEN HERE>" https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
 
 ### Step 4: View the API Response
 
@@ -150,7 +150,7 @@ In order to access the full synthetic dataset for an individual synthetic benefi
 
 1. Set up your sandbox application
 
-2. Log out of https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.
+2. Log out of [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.
 
 3. Access the authorization URL at:<br />
 v1: `https://sandbox.bluebutton.cms.gov/v1/o/authorize/`<br />
@@ -160,7 +160,7 @@ _Note: The last backslash is important_. _Also remember to append `?client_id={y
 1. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY.
 
 1. Log in with one of the Synthetic Beneficiary Accounts:
-The first synthetic beneficiary account user is BBUser00000 with password PW00000! Sample users continue all the way to BBUser29999 with password PW29999! _Note: the ! at the end of the password is required._
+The first synthetic beneficiary account user is `BBUser00000` with password `PW00000!` Sample users continue all the way to `BBUser29999` with password `PW29999!` _Note: the ! at the end of the password is required._
 
 1. Approve access for your application, which will now receive an access token, which can be used in the requests described above.
 
@@ -747,8 +747,8 @@ The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches t
 
 | **API version** | **CURL command** |
 | --- | --- |
-| v1 | `curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/connect/userinfo"` |
-| v2 | `curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"` |
+| v1 | `curl --header "Authorization: Bearer <AUTHORIZATION TOKEN>" "https://sandbox.bluebutton.cms.gov/v1/connect/userinfo"` |
+| v2 | `curl --header "Authorization: Bearer <AUTHORIZATION TOKEN>" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"` |
 {:.ds-c-table}
 
 Response:
@@ -846,7 +846,7 @@ Let us take a synthetic beneficiary record:
 Username: `BBUser20023`
 Password `PW20023!`
 
-The FHIR ID for this beneficiary is `-20140000000024`
+The PATIENT ID for this beneficiary is `-20140000000024`
 
 Let us do a regular `ExplanationOfBenefit` request:
 
