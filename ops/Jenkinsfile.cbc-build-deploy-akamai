@@ -57,7 +57,7 @@ pipeline {
       }
     }
 
-    stage("Determine S3 Bucket / Akamai NetStorage path") {
+    stage("Determine Akamai NetStorage path") {
       steps {
         script {
           echo "Setting UPLOAD_LOCATION from SITE_ENV"
