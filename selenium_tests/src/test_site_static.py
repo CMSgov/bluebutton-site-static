@@ -27,6 +27,12 @@ CMS_BB2_FOOTER_COLS = [
                         "water-mark": ("//body/div/div/h1", "Blue Button 2.0 API Docs")
                     },
                     {
+                        "text": "Terms of Service",
+                        "link": "https://bluebutton.cms.gov/terms",
+                        "check": True,
+                        "water-mark": ("//body/div/div/h1", "API Terms of Service")
+                    },
+                    {
                         "text": "Support",
                         "link": "https://bluebutton.cms.gov/support/",
                         "check": True,

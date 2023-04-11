@@ -36,7 +36,7 @@ ctas:
 	</div>
 </div>
 
-### Try the API
+## Try the API
 
 You can start using the API right away by following these steps:
 1. Join the Developer Sandbox & register a Sandbox application
@@ -46,9 +46,9 @@ You can start using the API right away by following these steps:
 5. Access the synthetic dataset to try additional calls
 
 
-**Step 1:** [**Join the Developer Sandbox**](https://sandbox.bluebutton.cms.gov/v1/accounts/create){:target="_blank"} **and register a Sandbox application**
+### Step 1: Join the developer sandbox and register a sandbox application
 
-You will need to create an account to join the Developer Sandbox. Once you have verified your account, log in and click "Add an Application" from the Developer Sandbox homepage.
+[Create an account](https://sandbox.bluebutton.cms.gov/v1/accounts/create){:target="_blank"} to join the developer sandbox. Once you have verified your account, log in and click "Add an Application" from the Developer Sandbox homepage.
 
 Register a new Sandbox application to get a Client ID and Client Secret. You can also use one of the [Blue Button Sample Applications](/resources).
 
@@ -58,156 +58,123 @@ You need to include at least one Callback or Redirect URL.
 
 You can change any of this information later in My Sandbox Apps.
 
-**Step 2: Generate a sample token**
+### Step 2: Generate a sample token
 
 To test out the Blue Button API, you must first generate a sample token that represents a beneficiary granting consent to access their CMS Medicare claims data.
 
 Access the Test Client to see a sample of Blue Button data.
 
 1. If you are already logged in to the Developer portal, log out.
+
 2. From the Sandbox homepage, click on "Test Client" in the top-level navigation.
-3. Click "Get a Sample Authorization Token" if you want to call v1 API or "Get a Sample Authorization Token for v2" if want to call v2 API:
-<a href="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-42-0.png"><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-42-0.png" alt="The sample authorization token page" /></a>
-1. Click the "Authorize as a Beneficiary" at the bottom to authorize
 
-| **v1** | **v2** |
-| --- | --- |
-|<a href="{{ site.baseurl }}/assets/img/docs/v2/V1_AUTH_FORM.png"><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/V1_AUTH_FORM.png" alt="v1 sample API call" /></a> |<a href="{{ site.baseurl }}/assets/img/docs/v2/V2_AUTH_FORM.png"><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/V2_AUTH_FORM.png" alt="v2 sample API call" /></a>|
-{:.ds-c-table}
+3. Click "Get a Sample Authorization Token" if you want to call v1 API or "Get a Sample Authorization Token for v2" if want to call v2 API:<br />
+<a href="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-42-0.png"><img style="width: 100%; padding:20px;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-42-0.png" alt="The sample authorization token page" /></a>
 
-5.You will be redirected to the login page for [Medicare.gov](http://medicare.gov/){:target="_blank"}.
-<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-28-51.png?" alt="Medicare.gov login page" />
-6.Log in with one of the Synthetic Beneficiary Accounts:
+1. Click the "Authorize as a Beneficiary" at the bottom to authorize<br />
+<a href="{{ site.baseurl }}/assets/img/docs/v2/V2_AUTH_FORM.png"><img style="width: 100%; padding:20px;" src="{{ site.baseurl }}/assets/img/docs/v2/V2_AUTH_FORM.png" alt="v2 sample API call" /></a>
 
-**Synthetic Beneficiary Accounts**
-The first user is **BBUser00000** with password **PW00000!** Sample users continue all the way to **BBUser29999** with password **PW29999!** _Note: the ! at the end of the password is required._
+1. You will be redirected to the login page for [Medicare.gov](http://medicare.gov/){:target="_blank"}.<br />
+<img style="width: 100%; padding:20px;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-28-51.png?" alt="Medicare.gov login page" />
 
-7. Depending on your application, you can select either "Share all of your data" or "Share healthcare data, but not your personal info" to test your application.
+6. Log in with one of the Synthetic Beneficiary Accounts: <br />
+The first synthetic beneficiary account user is `BBUser00000` with password `PW00000!` Sample users continue all the way to `BBUser29999` with password `PW29999!` _Note: the `!` at the end of the password is required._
+
+7. Depending on your application, select either "Share all of your data" or "Share healthcare data, but not your personal info" to test your application.
+
 8. Click "Allow" to Authorize sharing data.
-<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-33-13.png" alt="Medicare.gov authorization page" />
-9. Review the details returned from the Authorization flow: access token and its info, patient ID, scopes associated with the token etc.
+<img style="width: 100%; padding: 20px;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-33-13.png" alt="Medicare.gov authorization page" />
 
-| **v1** | **v2** |
-| --- | --- |
-|<a href="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-44-33.png"><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-44-33.png" alt="v1 Authorization flow return" /></a> |<a href="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-35-16.png"><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-35-16.png" alt="v2 Authorization flow return" /></a>|
-{:.ds-c-table}
+9. Review the details returned from the Authorization flow: access token and its info, patient ID, scopes associated with the token etc.<br />
+<a href="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-35-16.png"><img style="width: 100%; padding:20px;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-35-16.png" alt="v2 Authorization flow return" /></a>
 
 10. Switching from v2 to v1 or vice versa, on authorization details page (step 7) there are two links:
- "repeat this step if you need a new token" - click this link, you will be directed to authorize as a beneficiary as in step 4 and stay with your current API version.
- "restart testclient" - click this link, you will be directed to test client home page as in step 3 and choose v1 or v2 API there.
-<a href="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-40-23.png"><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-40-23.png" alt="Authorization details page displaying action items" /></a>
+    - "repeat this step if you need a new token" - click this link, you will be directed to authorize as a beneficiary as in step 4 and stay with your current API version.
+    - "restart testclient" - click this link, you will be directed to test client home page as in step 3 and choose v1 or v2 API there.<br />
+<a href="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-40-23.png"><img style="width: 100%; padding:20px;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-40-23.png" alt="Authorization details page displaying action items" /></a>
 
-**Step 3: Call the API**
+### Step 3: Call the API
 
 After you obtain your Access Token, you can call the API using Postman or cURL.
 
 To call the API using Postman:
-
 1. From the Postman app, open a new tab
+
 2. Paste the Request URL:
-
-for v1: https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325
-
-for v2: https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325
+    - v1: `https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325`
+    - v2: `https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
 
 1. Click "Authorization" and select type "OAuth 2.0"
-2. Click on "Get New Access Token"
 
-5.Enter the following parameters:
+1. Click on "Get New Access Token"
 
-**Token Name:** {The name of your app}
+2. Enter the following parameters:
+    - **Token Name:** {The name of your app}
+    - **Grant Type:** Authorization Code (unless you have chosen an alternate value for your app)
+    - **Callback URL:** One of the redirect uris you registered for your app, for example: `http://localhost:3000`
+    - **Auth URL:**
+        - v1: `https://sandbox.bluebutton.cms.gov/v1/o/authorize/`
+        - v2: `https://sandbox.bluebutton.cms.gov/v2/o/authorize/`
+    - **Access Token URL:**
+        - v1: `https://sandbox.bluebutton.cms.gov/v1/o/token/`
+        - v2: `https://sandbox.bluebutton.cms.gov/v2/o/token/`
+    - **Client ID:** {The Client ID assigned to your App in the sandbox}
+    - **Client Secret:** {The Client Secret assigned to your App in the sandbox}
+    - **Scope:** `patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read profile`<br />
+_Note:_ When a beneficiary is authorizing your application, they will have the ability to omit the `patient/Patient.read scope`.
+    - **State:** An optional value that you may use in your app
+    - **Client Authentication:** Select "Send as Basic Auth header"
+        - v1: `https://sandbox.bluebutton.cms.gov/v1/o/authorize/`
+        - v2: `https://sandbox.bluebutton.cms.gov/v2/o/authorize/`
 
-**Grant Type:** Authorization Code (unless you have chosen an alternate value for your app)
-
-**Callback URL:** One of the redirect uris you registered for your app, for example:
-```
-http://localhost:3000
-```
-
-**Auth URL:**
-
-for v1: https://sandbox.bluebutton.cms.gov/v1/o/authorize/
-
-for v2: https://sandbox.bluebutton.cms.gov/v2/o/authorize/
-
-**Access Token URL:**
-
-for v1: https://sandbox.bluebutton.cms.gov/v1/o/token/
-
-for v2: https://sandbox.bluebutton.cms.gov/v2/o/token/
-
-**Client ID:** {The Client ID assigned to your App in the sandbox}
-
-**Client Secret:** {The Client Secret assigned to your App in the sandbox}
-
-**Scope:**
-
-patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read profile
-
-_NOTE:_ When a beneficiary is authorizing your application, they will have the ability to omit the patient/Patient.read scope. **Be sure that you build your application accordingly to handle a 403 error if a beneficiary decides to filter their demographic information.**
-
-**State:** An optional value that you may use in your app
-
-**Client Authentication:** Select "Send as Basic Auth header"
-
-for v1: https://sandbox.bluebutton.cms.gov/v1/o/authorize/
-
-for v2: https://sandbox.bluebutton.cms.gov/v2/o/authorize/
-
-6.Click Request Token. You should see a pop up for your Medicare account. Login using one of the Synthetic Beneficiary Accounts
-
-**Synthetic Beneficiary Accounts**
-
-The first user is **BBUser00000** with password **PW00000!** Sample users continue all the way to **BBUser29999** with password **PW29999!** _Note: the ! at the end of the password is required_
+6. Click Request Token. You should see a pop up for your Medicare account. Log in with one of the Synthetic Beneficiary Accounts: <br />
+The first synthetic beneficiary account user is `BBUser00000` with password `PW00000!` Sample users continue all the way to `BBUser29999` with password `PW29999!` _Note: the `!` at the end of the password is required._
 
 1. Authorize sharing by clicking "Allow" on the authorization screen
+
 2. When you return to the Postman workspace you should now be able to make requests to the API using the Access Token that will have been placed in the Header
+
 3. Click "Send" and see the synthetic beneficiary&#39;s personal health information as a Patient FHIR Resource display under "Body" in Postman
 
 You can also use cURL:
 
-for v1: curl --header "Authorization: Bearer YOUR TOKEN HERE" https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325
+- v1: `curl --header "Authorization: Bearer <YOUR TOKEN HERE>" https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325`
 
-for v2: curl --header "Authorization: Bearer YOUR TOKEN HERE" https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325
+- v2: `curl --header "Authorization: Bearer <YOUR TOKEN HERE>" https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
 
-**Step 4: View the API Response**
+### Step 4: View the API Response
 
-**Step 5:** Access Synthetic Data
+### Step 5: Access Synthetic Data
 
 In order to access the full synthetic dataset for an individual synthetic beneficiary, you can do the following:
 
 1. Set up your sandbox application
+
 2. Log out of [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.
 
-3. Access the authorization url at:
-
-for v1 https://sandbox.bluebutton.cms.gov/v1/o/authorize/
-
-for v2 https://sandbox.bluebutton.cms.gov/v2/o/authorize/
-
-_Note: The last backslash is important_. _Also remember to append ?client_id={your client_id assigned to the application you registered}_
+3. Access the authorization URL at:<br />
+v1: `https://sandbox.bluebutton.cms.gov/v1/o/authorize/`<br />
+v2: `https://sandbox.bluebutton.cms.gov/v2/o/authorize/`<br />
+_Note: The last backslash is important_. _Also remember to append `?client_id={your client_id}` using the client ID assigned to the application you registered._
 
 1. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY.
 
-5.Use one of thirty thousand provided usernames and passwords.
+1. Log in with one of the Synthetic Beneficiary Accounts:
+The first synthetic beneficiary account user is `BBUser00000` with password `PW00000!` Sample users continue all the way to `BBUser29999` with password `PW29999!` _Note: the ! at the end of the password is required._
 
-**Synthetic Beneficiary Accounts**
+1. Approve access for your application, which will now receive an access token, which can be used in the requests described above.
 
-The first user is **BBUser00000** with password **PW00000!** Sample users continue all the way to **BBUser29999** with password **PW29999!** _Note: the ! at the end of the password is required_
-
-6.Approve access for your application, which will now receive an access token, which can be used in the requests described above.
-
-1. The authorization completes when you are redirected back to the Redirect_URI you specified when you registered your application.
+2. The authorization completes when you are redirected back to the `Redirect_URI` you specified when you registered your application.
 
 ---
 
-### Authorization
+## Authorization
 
 To use the Blue Button 2.0 OAuth 2 a developer must [register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/){:target="_blank"}.
 
 A registered application is given a Client ID and a Client Secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button 2.0 API. Otherwise the [Client Application Flow](https://bluebutton.cms.gov/developers/#client-application-flow) may be used.
 
-**Scopes**
+### Scopes
 
 Access tokens have a scope, which defines what the access token can do and what resources it can access. For our purposes, scopes are primarily utilized to give Medicare beneficiaries more granular choice over what data they would like to share with applications. The Blue Button 2.0 API has implemented [HL7 FHIR Scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html){:target="_blank"} to manage access to beneficiary data. They look like this:
 
@@ -251,7 +218,7 @@ As stewards of sensitive data, it is important to adopt the practice of only ask
 
 If you choose not to collect demographic information, Medicare beneficiaries will see a simplified version of the OAuth screen as they no longer need to choose whether or not they want to share that information.
 
-**Native Mobile App Support**
+### Native Mobile App Support
 
 Native Mobile App Support follows the [RFC 8252 - OAuth 2.0 for Native Apps](https://tools.ietf.org/html/rfc8252){:target="_blank"} authentication flow utilizing the [PKCE](https://tools.ietf.org/html/rfc7636){:target="_blank"} extension and enables a custom URI scheme redirect.
 
@@ -280,7 +247,7 @@ The following additional parameters and values are sent as part of the OAuth2.0 
 
 More details can be found about this flow on [OAuth.com](https://www.oauth.com/){:target="_blank"}. Check out this link: [Protecting Mobile Apps with PKCE - OAuth 2.0 Servers](https://www.oauth.com/oauth2-servers/pkce/){:target="_blank"}
 
-**Registering Your App for Mobile App Support**
+### Registering Your App for Mobile App Support
 
 When you register your application in the Blue Button 2.0 API Developer Sandbox, you will want to specify a unique custom URI scheme. This should be a unique value that will not conflict with other custom URI schemes implemented on a user&#39;s mobile device.
 
@@ -301,7 +268,7 @@ tld.app.subdomain[.subsubdomain]:/callback/path/endpoint
 ```
 
 
-**Redirect_URI**
+### Redirect_URI
 
 When creating an Application in the sandbox a redirect URI is required. This is the API endpoint on _your_ system that receives the callback from the Blue Button 2.0 API after a beneficiary is passed to the Blue Button 2.0 API to authorize your application.
 
@@ -312,36 +279,33 @@ A Redirect_URI follows this format:
 ```
 URLprotocol://[sub-domain.]domain_name[:port]/path
 ```
-
-**URL Protocol**
+### URL Protocol
 
 Three URL protocols are supported, depending on the purpose:
 
-- http:// protocol
-- https:// protocol
-- custom_url:// protocol
+#### http:// protocol
 
-_**http:// protocol**_
+Environment: Sandbox only
 
-(Works in: Sandbox only)
+Purpose: Typically used for local testing by using `http://localhost` 
 
-The http:// format is only accepted in the sandbox environment. It is typically used by developers for local testing by using `http://localhost` however, any domain name can be used.
+Notes: Any domain name can be used.
 
-_**https://protocol**_
+#### https://protocol
 
-| (Works in: Sandbox | Production) |
-{:.ds-c-table}
+Environment: Sandbox and Production
 
+Purpose: Used for secure communication.
 
-The https:// format is used for secure communication and is required for all applications in the production environment unless the application is using the Mobile OAuth method for handling callbacks.
+Notes: Required for all applications in the production environment unless the application is using the Mobile OAuth method for handling callbacks.
 
-_**custom_url:// protocol**_
+#### custom_url:// protocol
 
-| (Works in: Sandbox | Production) |
-{:.ds-c-table}
+Environment: Sandbox and Production
 
-The `custom_url` protocol is used by mobile applications to handle communications directly with your application on a mobile device.
+Purpose: Used by mobile applications to handle communications directly with an application on a mobile device.
 
+Notes:
 If you are using Mobile OAuth support for communication directly with a mobile device the `custom_url` should follow this format:
 
 ```
@@ -359,21 +323,22 @@ This would then be incorporated into a redirect URI entry. Here is an example:
 gov.cms.bluebutton.oauthtester:8080//bluebutton_app/callback.html
 ```
 
-**Web Application Flow**
+
+### Web Application Flow
 
 To use this flow your application should be registered with Client Type set to confidential and Grant Type set to authorization-code.
 
-**Request authorization from user**
+#### Request authorization from user
 
 To allow a user to authorize your application, direct them to the Blue Button 2.0 API authorize endpoint. The request must include the response_type set to code, your application&#39;s client_id, and your application&#39;s redirect_uri. An optional state field that your application can use to identify the authorization request is recommended.
 
 | **API version** | **Request URL** |
 | --- | --- |
-| v1 | https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=code&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
-| v2 | https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=&amp;response_type=code&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
+| v1 | `https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=code&amp;state=8e896a59f0744a8e93bf2f1f13230be5` |
+| v2 | `https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=&amp;response_type=code&amp;state=8e896a59f0744a8e93bf2f1f13230be5` |
 {:.ds-c-table}
 
-Exchange code for token
+#### Exchange code for token
 
 After visiting the authorization page a user will be redirected back to the redirect_uri registered with your application.
 
@@ -386,9 +351,9 @@ GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z
 Your application can now exchange the code provided in the redirected request for a full token. Send a POST request to the BlueButton token endpoint providing the code, the application&#39;s client_id, client_secret, and redirect_uri. Your request must also specify the grant_type which should always be authorization_code for this flow.
 
 | **API version** | **Request URL** |
-| --- | --- |
-| v1 | curl -X POST "https://sandbox.bluebutton.cms.gov/v1/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;grant_type=authorization_code&amp;redirect_uri=http://localhost/testclient/callback" |
-| v2 | curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;grant_type=authorization_code&amp;redirect_uri=http://localhost/testclient/callback" |
+| -------- | -------- |
+| v1 | `curl -X POST "https://sandbox.bluebutton.cms.gov/v1/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;grant_type=authorization_code&amp;redirect_uri=http://localhost/testclient/callback"` |
+| v2 |`curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;grant_type=authorization_code&amp;redirect_uri=http://localhost/testclient/callback"` |
 {:.ds-c-table}
 
 Response
@@ -420,8 +385,8 @@ To use the client application flow direct the user to the Blue Button 2.0 API au
 
 | **API version** | **Request URL** |
 | --- | --- |
-| v1 | https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
-| v2 | https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token&amp;state=8e896a59f0744a8e93bf2f1f13230be5 |
+| v1 |`https://sandbox.bluebutton.cms.gov/v1/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token&amp;state=8e896a59f0744a8e93bf2f1f13230be5`|
+| v2 |`https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token&amp;state=8e896a59f0744a8e93bf2f1f13230be5` |
 {:.ds-c-table}
 
 If the user authorizes your application they will be redirected back to the redirect_uri of your application. The request will include an access token in the fragment.
@@ -441,32 +406,30 @@ _Password: PW29999!_
 
 ---
 
-### Core Resources
+## Core Resources
 
-Base Request URL:
+Base Request URL: `https://sandbox.bluebutton.cms.gov`
 
-https://sandbox.bluebutton.cms.gov
-
-**FHIR Resources:**
+### FHIR Resources
 
 - Explanation of Benefit
 - Patient
 - Coverage
 
-**UserInfo:**
+### UserInfo
 
 - Get User Profile from an Authorization Token
 
-As a security measure, the beneficiary&#39;s date of birth, SSN, and HICN will not be provided by the CMS Blue Button 2.0 API.
+As a security measure, the beneficiary's date of birth, SSN, and HICN will not be provided by the CMS Blue Button 2.0 API.
 
 We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension){:target="_blank"} in our API responses.
 
-**Explanation of Benefit FHIR Resource**
+### Explanation of Benefit FHIR Resource
 
 | **API version** | **Request** |
 | --- | --- |
-| v1 | HTTP GET /v1/fhir/ExplanationOfBenefit/?patient=[fhir_id] |
-| v2 | HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id] |
+| v1 | `HTTP GET /v1/fhir/ExplanationOfBenefit/?patient=[fhir_id]` |
+| v2 | `HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id]` |
 {:.ds-c-table}
 
 The above URL returns all of the beneficiary&#39;s Explanation of Benefit (sometimes referred to as an episode of care) records as an [ExplanationOfBenefit FHIR Resource](https://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"}. The bulk of a beneficiary&#39;s data is contained within these ExplanationOfBenefit FHIR resources.
@@ -475,8 +438,8 @@ Each one can be thousands of lines long.
 
 | **API version** | **CURL command** |
 | --- | --- |
-| v1 | curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=-20140000008325" |
-| v2 | curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?patient=-20140000008325" |
+| v1 | `curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/?patient=-20140000008325"` |
+| v2 | `curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?patient=-20140000008325"`|
 {:.ds-c-table}
 
 That API call will return an Explanation of Benefit that contains many FHIR resources and is typically thousands of lines long.
@@ -551,25 +514,25 @@ Response for v1, e.g. :
 
 ...this is only a subset of the entire output...
 
-**Patient FHIR Resource**
+### Patient FHIR Resource
 
 | **API version** | **Request** |
 | --- | --- |
-| v1 | HTTP GET /v1/fhir/Patient/[fhir_id] |
-| v2 | HTTP GET /v2/fhir/Patient/[fhir_id] |
+| v1 | `HTTP GET /v1/fhir/Patient/[fhir_id]` |
+| v2 | `HTTP GET /v2/fhir/Patient/[fhir_id]` |
 {:.ds-c-table}
 
 The above URL returns the beneficiary&#39;s demographics and other administrative information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html){:target="_blank"}. This information is mostly contact information, not medical data.
 
 | **API version** | **CURL command** |
 | --- | --- |
-| v1 | curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325" |
-| v2 | curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325" |
+| v1 | `curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/fhir/Patient/-20140000008325"` |
+| v2 | `curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325"` |
 {:.ds-c-table}
 
-```
 Response for v1 e.g.:
 
+```
 {
 
 "resourceType": "Patient",
@@ -659,7 +622,7 @@ Response for v1 e.g.:
 
 [Download a sample Patient FHIR Resource](https://bluebutton.cms.gov/sample-patient-entry.json)
 
-**Coverage FHIR Resource**
+### Coverage FHIR Resource
 
 | **API version** | **Request** |
 | --- | --- |
@@ -671,8 +634,8 @@ The above URL returns the beneficiary&#39;s Coverage information as an [Coverage
 
 | **API version** | **CURL command** |
 | --- | --- |
-| v1 | curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?beneficiary=-20140000008325" |
-| v2 | curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325" |
+| v1 | `curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/fhir/Coverage/?beneficiary=-20140000008325"` |
+| v2 | `curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325"` |
 {:.ds-c-table}
 
 Response for v1 e.g.:
@@ -759,7 +722,7 @@ Response for v1 e.g.:
 
 ...this is only a subset of the entire output...
 
-**Compress Resources for more efficient data transfers**
+### Compress Resources for more efficient data transfers
 
 To improve the performance when transferring large data resources it is possible to turn on compression. Gzip compression is turned off by default. Compression can be activated for the following content types:
 
@@ -776,16 +739,16 @@ The minimum payload size we will gzip is 1 kilobyte. If the original uncompresse
 
 [Download a sample Coverage FHIR Resource](https://bluebutton.cms.gov/sample-coverage-entry.json)
 
-**Get User Profile for an Authorization Token**
+### Get User Profile for an Authorization Token
 
-HTTP GET /connect/userinfo
+`HTTP GET /connect/userinfo`
 
 The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches the fictitious beneficiary&#39;s basic account information given an Authorization Token. This is most often used when creating an account within your application. An HTTP GET is called and the response is returned as JSON.
 
 | **API version** | **CURL command** |
 | --- | --- |
-| v1 | curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v1/connect/userinfo" |
-| v2 | curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo" |
+| v1 | `curl --header "Authorization: Bearer <AUTHORIZATION TOKEN>" "https://sandbox.bluebutton.cms.gov/v1/connect/userinfo"` |
+| v2 | `curl --header "Authorization: Bearer <AUTHORIZATION TOKEN>" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"` |
 {:.ds-c-table}
 
 Response:
@@ -812,9 +775,9 @@ Response:
 }
 ```
 
-**More Efficient Data Queries**
+### More Efficient Data Queries
 
-**Query by Type**
+#### Query by Type
 
 Many developers are interested in specific claim types, such as Prescription Drug Events (PDE). The query by type feature will allow applications to request just those claims. This will enable applications to process and download data more quickly and efficiently.
 
@@ -837,51 +800,28 @@ For example, to request only Part D drug claims, add the query parameter:
 ?type=pde
 ```
 
-**To request multiple claim types, a list of comma-separated values can be given for the TYPE parameter.**
+To request multiple claim types, a list of comma-separated values can be given for the TYPE parameter.
 
 If multiple codes are specified, EOBs matching all of those claim types will be returned:
 
 | **API version** | **Request URL** |
 | --- | --- |
-| v1 | /v1/fhir/ExplanationOfBenefit?patient=123&amp;type=carrier,dme,hha,hospice,inpatient,outpatient,snf |
-| v2 | /v2/fhir/ExplanationOfBenefit?patient=123&amp;type=carrier,dme,hha,hospice,inpatient,outpatient,snf |
+| v1 | `/v1/fhir/ExplanationOfBenefit?patient=123&amp;type=carrier,dme,hha,hospice,inpatient,outpatient,snf` |
+| v2 | `/v2/fhir/ExplanationOfBenefit?patient=123&amp;type=carrier,dme,hha,hospice,inpatient,outpatient,snf` |
 {:.ds-c-table}
 
 The full list of claim types are:
 
-carrier
+* carrier: `https://bluebutton.cms.gov/resources/codesystem/eob-type|carrier`
+* pde: `https://bluebutton.cms.gov/resources/codesystem/eob-type|pde`
+* dme: `https://bluebutton.cms.gov/resources/codesystem/eob-type|dme`
+* hha: `https://bluebutton.cms.gov/resources/codesystem/eob-type|hha`
+* hospice: `https://bluebutton.cms.gov/resources/codesystem/eob-type|hospice`
+* inpatient: `https://bluebutton.cms.gov/resources/codesystem/eob-type|inpatient`
+* outpatient: `https://bluebutton.cms.gov/resources/codesystem/eob-type|outpatient`
+* snf: `https://bluebutton.cms.gov/resources/codesystem/eob-type|snf`
 
-https://bluebutton.cms.gov/resources/codesystem/eob-type|carrier
-
-pde
-
-https://bluebutton.cms.gov/resources/codesystem/eob-type|pde
-
-dme
-
-https://bluebutton.cms.gov/resources/codesystem/eob-type|dme
-
-hha
-
-https://bluebutton.cms.gov/resources/codesystem/eob-type|hha
-
-hospice
-
-https://bluebutton.cms.gov/resources/codesystem/eob-type|hospice&#39;
-
-inpatient
-
-https://bluebutton.cms.gov/resources/codesystem/eob-type|inpatient&#39;
-
-outpatient
-
-https://bluebutton.cms.gov/resources/codesystem/eob-type|outpatient&#39;
-
-snf
-
-https://bluebutton.cms.gov/resources/codesystem/eob-type|snf
-
-It is important to use lower case when requesting a claim type. If you submit an invalid combination of claim types or use the wrong case you&#39;ll see a message like this:
+Use lower case when requesting a claim type. If you submit an invalid combination of claim types or use the wrong case you&#39;ll see a message like this:
 
 ```
 {
@@ -893,7 +833,7 @@ It is important to use lower case when requesting a claim type. If you submit an
 
 The status code for this message is a 400 Bad Request.
 
-**Query by Type Examples:**
+#### Query by Type Examples
 
 In the sandbox there are synthetic beneficiaries with three of the eight claim types:
 
@@ -903,18 +843,18 @@ In the sandbox there are synthetic beneficiaries with three of the eight claim t
 
 Let us take a synthetic beneficiary record:
 
-Username: **BBUser20023**
+Username: `BBUser20023`
+Password `PW20023!`
 
-Password **PW20023!**
+The PATIENT ID for this beneficiary is `-20140000000024`
 
-The FHIR ID for this beneficiary is **-20140000000024**
-
-Let us do a regular ExplanationOfBenefit request:
+Let us do a regular `ExplanationOfBenefit` request:
 
 | **API version** | **Request** |
 | --- | --- |
-| v1 | https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/ |
-| v2 | https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/ |
+| v1 | `https://sandbox.bluebutton.cms.gov/v1/fhir/ExplanationOfBenefit/` |
+| v2 | `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/` |
+{:.ds-c-table}
 
 This bundle identifies 148 claims, returning the first 10. Here is how the start of the bundle will look:
 
@@ -956,7 +896,7 @@ There are three claim types in this beneficiary&#39;s record:
 
 The queries to request each claim type individually would be:
 
-**Carrier Claims**
+##### Carrier Claims
 
 | **API version** | **Request** |
 | --- | --- |
@@ -964,7 +904,7 @@ The queries to request each claim type individually would be:
 | v2 | `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=carrier` <br />Or<br /> `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=https://bluebutton.cms.gov/resources/codesystem/eob-type|carrier` |
 {:.ds-c-table}
 
-**Inpatient Claims**
+##### Inpatient Claims
 
 | **API version** | **Request** |
 | --- | --- |
@@ -972,7 +912,9 @@ The queries to request each claim type individually would be:
 | v2 | `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=inpatient` <br />Or<br /> `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=https://bluebutton.cms.gov/resources/codesystem/eob-type|inpatient` |
 {:.ds-c-table}
 
-**PDE Claims** Since many of our developers are interested in the Part D drug claims it is now possible to query for only PDE-type claims.
+##### PDE Claims
+
+Since many of our developers are interested in the Part D drug claims it is now possible to query for only PDE-type claims.
 
 | **API verion** | **Request** |
 | --- | --- |
@@ -980,21 +922,18 @@ The queries to request each claim type individually would be:
 | v2 | `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=pde` <br />Or<br /> `https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=https://bluebutton.cms.gov/resources/codesystem/eob-type|pde` |
 {:.ds-c-table}
 
-**Query by "lastUpdated" Field**
+### Query by lastUpdated Field
 
 The HL7 FHIR specification provides a [Meta](https://www.hl7.org/fhir/resource.html#Meta){:target="_blank"} section in each resource. The lastUpdated field represents the date and time of the last update. This takes the format of an "instant" type:
 
-YYYY-MM-DDThh:mm:ss.sss+zz:zz.
+`YYYY-MM-DDThh:mm:ss.sss+zz:zz`
 
 The HL7 FHIR specification also provides a `_lastUpdated` query parameter for the search operations on the end-points. By using the `_lastUpdated` query parameter, **an application will be able to request only the records that have changed before or after a specific date**. If you keep track of the date of a previous request, you can request just the changes since your previous request. The format of this request would be:
 
-for v1: `https://sandbox.bluebutton.cms.gov/v1/fhir/Patient?_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir&#39;`
+- v1: `https://sandbox.bluebutton.cms.gov/v1/fhir/Patient?_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir&#39;`
+- v2: `https://sandbox.bluebutton.cms.gov/v2/fhir/Patient?_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir&#39;`
 
-for v2: `https://sandbox.bluebutton.cms.gov/v2/fhir/Patient?_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir&#39;`
-
-**Note:**
-
-Do not input dates before 2020-02-12 with _lastUpdated. Limitations of our backend service prevent data before 2020-02-12 from being tagged correctly.
+_Note: Do not input dates before 2020-02-12 with `_lastUpdated`. Limitations of our backend service prevent data before 2020-02-12 from being tagged correctly._
 
 The output from that request would look like this:
 
@@ -1061,7 +1000,7 @@ The BB2.0 API supports operators for less than (lt), greater than (gt), less tha
 | v2 | `/v2/fhir/ExplanationOfBenefit?patient=Patient/-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_lastUpdated=lt2020-02-14T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir` |
 {:.ds-c-table}
 
-FHIR Data Model
+### FHIR Data Model
 
 We have mapped over 1,300 fields from the CMS Chronic Conditions Data Warehouse (CCW) into FHIR. These fields are surfaced across the Patient, Coverage and Explanation of Benefits FHIR resources.
 
@@ -1085,7 +1024,7 @@ For Example:
 
 [View the full list of Blue Button 2.0 API FHIR Data Model Coding Systems and Identifiers](https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md){:target="_blank"}
 
-**How Often Will New/Updated Data Be Available?**
+#### How Often Will New/Updated Data Be Available?
 
 Medicare Part A, B, and D claims data will be refreshed weekly.
 
@@ -1093,13 +1032,13 @@ Our schedules may vary depending on many things like maintenance, delayed delive
 
 We recommend you have a daily job to fetch new claims data for your users. Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the Blue Button 2.0 API Terms of Service.
 
-**Synthetic Data**
+#### Synthetic Data
 
 The CMS Blue Button 2.0 API offers a synthetic data set for developers to test against. This means that each request returns a realistic value. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be accurate.
 
 Please note that this synthetic data set does not represent a longitudinal patient view. The claims—though representative independently—are shuffled and randomly assigned to patients. To build the synthetic data set, we selected a number of random claims, and shuffled them like a deck of cards among a group of fictitious Patient IDs. This will allow developers to test the Blue Button 2.0 API system, but could result in a patient with records for contradictory procedures.
 
-**Production Data**
+#### Production Data
 
 The CMS Blue Button 2.0 API has at least one claim for over 60M beneficiaries.
 
@@ -1111,12 +1050,12 @@ The API also has historical claims data going back four years. All of these fact
 
 ---
 
-### Calling the API
+## Calling the API
 
 This section provides information on basic and common queries against the Blue Button API.  For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}.
 
 
-#### Base FHIR URLs
+### Base FHIR URLs
 
 | Environment | Purpose | Base URL |
 | -------- | -------- | -------- |
@@ -1130,7 +1069,7 @@ To find beneficiaries with varying volumes and types of data, use this [CSV of s
 	
 
 
-#### Querying Resources
+### Querying Resources
 A listing of common API calls are shown in the table below.  See "Base FHIR URLs" above and substitute for {baseURL} as appropriate.  
     
 For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}.  
@@ -1150,12 +1089,12 @@ For a complete listing of Blue Button API calls, see our [Swagger documentation]
 
 ---
 
-### Consuming the Data
+## Consuming the Data
 The Blue Button API includes over 1300 data elements with a wide variety of data exchange use cases. Here are some basics to get you started with common data elements. 
 
 For complete implementation guidance, see the [FHIR specification](http://www.hl7.org/fhir/index.html){:target="_blank"} and the [CARIN implementation guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"}. Our [Resources page](https://bluebutton.cms.gov/resources/) also includes links to tutorials and helpful information on FHIR.
 
-#### Understanding the Payload
+### Understanding the payload
 
 Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search){:target="_blank"} (like `/Patient`, `/ExplanationOfBenefit`, and `/ExplanationOfBenefit?patient=123`)  return data in [FHIR Bundles](http://www.hl7.org/fhir/bundle.html){:target="_blank"}. A FHIR bundle is a container resource that includes a collection of FHIR resources. You can grab each resource by looping through the `Bundle.entry` list attribute.  
 
@@ -1164,7 +1103,8 @@ Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search){:t
 
 
 
-**FHIR `Bundle` example:**
+FHIR `Bundle` example:
+
 ```
 {
     "resourceType": "Bundle",
@@ -1194,10 +1134,7 @@ Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search){:t
 
 
 
-
-
-
-#### Navigating Through a Bundle
+### Navigating through a bundle
 FHIR search results are paginated because they typically contain many records. The default is 10 records in each call. You can override the default of 10 with a _count parameter in the request. The maximum records allowed is 50.
 
 To navigate forward and backward through the bundle, use the URLs provided in `Bundle.link`, as described in the table below. For instance, to get the next `X` records, use the URL supplied in `Bundle.link` where `relation = next`.  
@@ -1218,7 +1155,7 @@ For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle
  
 
 
-**Bundle navigation example:**
+Bundle navigation example:
 
 ```
 "resourceType": "Bundle",
@@ -1249,7 +1186,7 @@ For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle
 
 
 
-#### Working with Identifiers
+### Working with identifiers
 In FHIR, the difference between the `Resource.id` (resource ID) and `identifier` attributes within a resource can be confusing. 
 
 * **Resource ID:** In the Blue Button API, the resource ID is an internal identifier from the source database, the Chronic Conditions Warehouse (CCW).  The resource ID is a system-level resource, held outside the resource.  The Resource ID is guaranteed to be unique for a particular resource and will always be limited to one value.
@@ -1264,7 +1201,7 @@ For example, you can use discriminators to pull the current MBI from a Patient r
 - `identifier.type.coding[n].extension.valueCoding.code` = "current"
 
 
-**Patient identifier example:**
+Patient identifier example:
 ```
 
 "identifier": [
@@ -1321,16 +1258,16 @@ resources/codesystem/identifier-currency').valueCoding.code =
 
 
 
-#### Working with References
+### Working with references
 The Blue Button API uses both [literal](http://www.hl7.org/fhir/references.html#literal){:target="_blank"} and [logical](http://www.hl7.org/fhir/references.html#logical){:target="_blank"} FHIR references to refer to other resources/data external to the resource.
 
-##### Literal references
+#### Literal references
 
 For literal references, relative URLs are provided.  In the sample EOB resource below, the `Eob.patient` attribute contains a relative URL reference, `/Patient/123`. Append this path to the base FHIR URL to perform a Patient read operation. 
 
 
 
-**Literal reference example:**
+Literal reference example:
 ```
 "resource": {
     "resourceType": "ExplanationOfBenefit",
@@ -1343,10 +1280,10 @@ For literal references, relative URLs are provided.  In the sample EOB resource 
 ```
 
 
-##### Contained resources
+#### Contained resources
 The Blue Button API also uses fragments and [contained resources](https://www.hl7.org/fhir/references.html#contained){:target="_blank"}.  A resource that does not have independent existence is embedded inside another resource as a contained resource.  For example, the Organization resource does not have its own endpoint. Instead, it is supplied as a contained resource with EOB. In the example EOB resource below, the organization resource is within the `Eob.contained` attribute, and the `Eob.provider` attribute has a `#` reference to `contained.id` (`#provider-org`).   
 
-**Contained resource example:**
+Contained resource example:
 ```
 "contained": [
     {
@@ -1366,12 +1303,12 @@ The Blue Button API also uses fragments and [contained resources](https://www.hl
     "reference": "#provider-org"
 },
 ```
-##### Logical references
+#### Logical references
 [Logical references](http://www.hl7.org/fhir/references.html#logical){:target="_blank"} typically supply a business identifier instead of a URL to an endpoint or contained resource.  
 
 In the example below, the `Eob.careTeam.provider` attribute contains a reference to the the [National Provider Identifier (NPI)](https://npiregistry.cms.hhs.gov/){:target="_blank"} for the practitioner.  (Note: The Blue Button API  does not support a `/Practitioner` endpoint.)
 
-**Logical reference example**
+Logical reference example:
 ```
 "careTeam": [
         {
@@ -1392,7 +1329,7 @@ In the example below, the `Eob.careTeam.provider` attribute contains a reference
 ```
 
 
-#### Extensions and SupportingInfo
+### Extensions and SupportingInfo
 
 
 The Blue Button API supplies many data points using [FHIR extensions](http://www.hl7.org/fhir/extensibility.html){:target="_blank"}.  Extensions are information that is not part of the basic definition of the FHIR resource. They're often very specific to a use case or situation.  For example, the Blue Button API uses extensions to supply Medicare-specific data points that are not part of the standard FHIR specification. 
@@ -1408,7 +1345,7 @@ In the example below, there are two extensions:
 
 
 
-**Extension example:**
+Extension example:
 ```
 "extension": [
     {
@@ -1428,12 +1365,12 @@ In the example below, there are two extensions:
     }
 ```
 
-##### Supporting Info attribute
+### SupportingInfo attribute
 The `supportingInfo` attribute is a standard element in the FHIR EOB resource. Similar to extensions, `suportingInfo` is like a key-value list. `supportingInfo.category` serves as the key and `supportingInfo.code` is the value.   Other attributes in `supportingInfo` include `timing[x]`, `value[x]`, and `reason`.  
 
 *Note: The [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"} has chosen to use `supportingInfo` over extensions.  The CARIN IG does not define any extensions.  For historical and backwards compatibility reasons, the Blue Button API provides data in both extensions and `supportingInfo`.*
 
-#### Determining Claim Type
+### Determining claim type
 The Blue Button API supplies claims data in the [ExplanationOfBenefit resource](http://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"} for all claim types (Example: Inpatient, Outpatient, Carrier, DME, etc.)
 
 To determine the type of a given claim, inspect the `Eob.type` attribute.  `Eob.type` is a `CodeableConcept`, which provides data as a list of codings. There are multiple entries in the list. 
@@ -1441,7 +1378,7 @@ To determine the type of a given claim, inspect the `Eob.type` attribute.  `Eob.
 Each entry is a code from a given codesystem or valueset with information about the type of claim.  For example, the `NCH_CLM_TYPE_CD` codesystem uses the code `71` for a carrier claim. The Blue Button API `eob-type` valueset uses a code of `CARRIER` for a carrier claim.  
 
 
-**Claim type example:**
+Claim type example:
 ```
 "type": {
     "coding": [
@@ -1465,12 +1402,12 @@ For more information about determining claim types, see the following coding sys
 * [FHIR Claim Type value set](http://hl7.org/fhir/STU3/valueset-claim-type.html){:target="_blank"}
 
 
-#### Linking Items
+### Linking items
 The `item` data element in the EOB resource supplies a list of entries describing products/services provided.  You can link each entry in the list to other parts of the EOB using the `item.*sequence elements`.  
 
 For example, `Eob.item.diagnosisSequence` links to `Eob.diagnosis.sequence`, which tells you that this product/service is linked to the corresponding diagnosis.  In the partial EOB example below, the `item` is linked to diagnosis `1` and careTeam member `3`.
 
-**Linking item example:**
+Linking item example:
 
 ```
 "item": [
@@ -1531,7 +1468,7 @@ For example, `Eob.item.diagnosisSequence` links to `Eob.diagnosis.sequence`, whi
 
 ---
 
-### Sample Beneficiaries
+## Sample Beneficiaries
 
 [CSV of sample beneficiaries with rich claims data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv)
 
@@ -1539,7 +1476,7 @@ When getting started with the Blue Button 2.0 API, it can be overwhelming to und
 
 We have provided some hypothetical Beneficiaries to help give you a sense of what is found in Medicare Claims data.
 
-**Meet Lucille**
+### Meet Lucille
 
 
 Lucille is a 70-year old female. She has non-small cell lung cancer. Prior to her diagnosis, Lucille was active and had no significant health issues. She went on daily walks around her neighborhood, did yoga and made a concerted effort to eat healthy. Lucille smoked cigarettes for a few years when she was a teenager, but she quit after her father passed away from lung cancer. Her only other family history is mild hypertension on her mother’s side.
@@ -1605,7 +1542,7 @@ Chemo
 "code": "96400"
 ```
 
-**Meet Jack**
+### Meet Jack
 
 Jack is a 70 year-old male with Type 2 Diabetes and high blood pressure. Jack takes daily medication and his Doctor told him he needs to lose weight. He takes Glimepiride to help control his blood sugar and previously was on Metformin.
 
@@ -1613,21 +1550,21 @@ Jack is a 70 year-old male with Type 2 Diabetes and high blood pressure. Jack ta
 
 ---
 
-### Production API Access
+## Production API Access
 
 In order to gain production access, an organization should start by reviewing the [Terms of Service](https://bluebutton.cms.gov/terms/), [production access user guide](https://bluebutton.cms.gov/guide/), and [checklist](https://bluebutton.cms.gov/checklist/). Once an organization believes it is fulfilling all the requirements detailed in the checklist and is adherent to the terms of service, they should email [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov) to set up a production access demonstration meeting with the CMS team.
 
 ---
 
-### Developer Guidelines
+## Developer Guidelines
 
 Below are guidelines you should follow to be successful in your Blue Button 2.0 API integration.
 
-**Your Privacy Policy**
+### Your Privacy Policy
 
 You will be asked to provide a URL to your privacy policy and terms and conditions when registering your app in the Blue Button 2.0 API Developer Portal. These links should be easy to access and understand by a beneficiary using your app. Consider using the [Model Privacy Notice](https://www.healthit.gov/topic/privacy-security-and-hipaa/model-privacy-notice-mpn){:target="_blank"}.
 
-**Rate Limiting and Data Refresh**
+### Rate Limiting and Data Refresh
 
 Medicare Part A, B, and D claims data will be refreshed weekly.
 
@@ -1635,36 +1572,36 @@ Our schedules may vary depending on many things like maintenance, delayed delive
 
 We recommend you have a daily or weekly job to fetch new claims data for your users. Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the [Blue Button 2.0 API Terms of Service](https://bluebutton.cms.gov/terms/).
 
-**Use of the Blue Button 2.0 API Logo**
+### Use of the Blue Button 2.0 API Logo
 
 The Blue Button 2.0 API logo and usage guidelines is detailed [here](https://www.healthit.gov/topic/health-it-initiatives/blue-button/logo-and-usage){:target="_blank"}.
 
-**Beneficiary Revokes Access**
+### Beneficiary Revoking Access
 
 A beneficiary may revoke access to your application via the Medicare website. When you encounter an invalid token indicating a beneficiary has revoked access, you should make a reasonable attempt to handle that case making it easy for the beneficiary to understand what is happening with their Medicare data.
 
-**"Medicare is unable to retrieve your data at this time due to an internal issue. Our team is aware of the issue and is working to resolve it. Please try again at a later time. We apologize for any inconvenience."**
+"Medicare is unable to retrieve your data at this time due to an internal issue. Our team is aware of the issue and is working to resolve it. Please try again at a later time. We apologize for any inconvenience."
 
 If you or your users encounters this error message, know that our team is aware of the issue and is working to resolve it as quickly as possible.
 
 ---
 
-### Implementation Guides
+## Implementation guides
 
-**HL7 FHIR Common Payer Consumer Data Set (CPCDS)**
+### HL7 FHIR Common Payer Consumer Data Set (CPCDS)
 
 [Implementation Guide: Version 1.0.0, Date 2020-11-23](http://hl7.org/fhir/us/carin-bb/){:target="_blank"}
 
 
 This IG describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can exchange with third-parties to display to consumers via a FHIR-based API. This IG will help Medicare, Medicaid, CHIP, BHP standard health plans, and QHP issuers on the FFEs share adjudicated claims and encounter data via the Patient Access API discussed in section II.A. of this proposed rule. It includes data elements and coding instructions each impacted payer can use to prepare and share the specified data.
 
-**HL7 FHIR CARIN - v2 Artifacts Summary**
+### HL7 FHIR CARIN - v2 Artifacts Summary
 
 [Implementation Guide: Version 1.0.0, Date 2020-11-23](https://build.fhir.org/ig/HL7/carin-bb/artifacts.html#4){:target="_blank"}
 
 The purpose of this IG is to outline the different artifacts released by CARIN for v2. The artifacts contain code explanations and benefits for the different EOB Profiles.
 
-**HL7 FHIR CARIN – BlueButton GitHub IG**
+### HL7 FHIR CARIN – BlueButton GitHub IG
  
 [Github Version 0.1.13, Date 2020-11-23
 ](https://github.com/HL7/carin-bb/){:target="_blank"} 
@@ -1673,17 +1610,18 @@ This implementation guide describes the CARIN Blue Button® Framework and Common
 
 ---
 
-### STU3 vs FHIR R4 Comparison Tables
+## STU3 vs FHIR R4 Comparison Tables
 
 See also the [version transforms](https://www.hl7.org/fhir/r3maps.html){:target="_blank"} and the note about [version specific extensions](https://www.hl7.org/fhir/versions.html#extensions){:target="_blank"}. (This analysis is available as [XML](https://www.hl7.org/fhir/fhir.diff.xml){:target="_blank"} or [JSON](https://www.hl7.org/fhir/fhir.diff.json){:target="_blank"} from HL7 (note: this includes all R4 data).
 
 ---
 
-### Additional Information
-**Migrating to v2/FHIR R4 FAQ**
+## Additional Information
+
+### Migrating to v2/FHIR R4 FAQ
 - [Frequently Asked Questions about the V2 API transition for Blue Button 2.0 API (BB2.0)](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ){:target="_blank"}
  
-**Where can you find the latest information?**
+### Where can you find the latest information?
 
 Join the Google Groups for any APIs you access for the most up to date information:
 
