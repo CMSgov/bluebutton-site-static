@@ -62,7 +62,7 @@ module RdaApi
     end
 
     def is_valid()
-      return data['id'] != '' && data['source_system'] != '' && data['source_field'] != ''
+      return @data['id'] != '' && @data['source_system'] != '' && @data['source_field'] != ''
     end
   end
 end
