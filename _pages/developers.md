@@ -590,6 +590,7 @@ To improve the performance when transferring large data resources it is possible
 To activate compression add the following to the header:
 ~~~
 Accept-Encoding: gzip
+~~~
 
 The minimum payload size we will gzip is 1 kilobyte. If the original uncompressed size of the payload is less than 1 kb, we will not apply gzip compression to our response. Therefore, developers should ensure their applications handle this scenario gracefully by checking for the **Content-Encoding: gzip** response header before trying to decompress.
 
@@ -597,7 +598,9 @@ The minimum payload size we will gzip is 1 kilobyte. If the original uncompresse
 
 ### Get User Profile for an Authorization Token
 
-`HTTP GET /connect/userinfo`
+~~~
+HTTP GET /connect/userinfo
+~~~
 
 The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches the fictitious beneficiary&#39;s basic account information given an Authorization Token. This is most often used when creating an account within your application. An HTTP GET is called and the response is returned as JSON.
 
@@ -747,6 +750,10 @@ https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=https://bl
 ~~~
 
 ##### Inpatient Claims
+
+~~~
+https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=inpatient` 
+~~~
 
 or
 
