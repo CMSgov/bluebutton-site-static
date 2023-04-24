@@ -31,14 +31,14 @@ module RdaApi
 
     # Extract the columns we need into a new Hash.
     def parse_csv_row(csv_row)
-      data = {}
+      data = Hash.new('')
 
-      data['source_system'] = csv_row['Source system']
-      data['field'] = csv_row['Field name']
-      data['source_field'] = csv_row['Source copybook field label']
-      data['alt_source_field'] = csv_row['Copybook data dictionary name (if different)']
-      data['source_definition'] = split(csv_row['Source system definition'])
-      data['version'] = csv_row['Version added']
+      data['source_system'] = csv_row['Source system'].to_s
+      data['field'] = csv_row['Field name'].to_s
+      data['source_field'] = csv_row['Source copybook field label'].to_s
+      data['alt_source_field'] = csv_row['Copybook data dictionary name (if different)'].to_s
+      data['source_definition'] = split(csv_row['Source system definition'].to_s)
+      data['version'] = csv_row['Version added'].to_s
 
       # We prefer the copybook data dictionary name if there is one.
       if data['alt_source_field'] =~ %r{^[A-Z]+(-[A-Z]+)*$}
@@ -61,6 +61,9 @@ module RdaApi
       end
     end
 
+    def is_valid()
+      return @data['id'] != '' && @data['source_system'] != '' && @data['source_field'] != ''
+    end
   end
 end
 
@@ -106,7 +109,9 @@ module Jekyll
       # entry.
       site.data[csv_file_key].each do |csv_row|
         variable_obj = RdaApi::Variable.new(csv_row)
-	      site.pages << RdaVariablePage.new(site, layout, variable_obj)
+        if variable_obj.is_valid
+	        site.pages << RdaVariablePage.new(site, layout, variable_obj)
+        end
       end
     end
   end
