@@ -465,7 +465,7 @@ HTTP GET /v2/fhir/Patient/[fhir_id]
 ~~~
 
 
-The above URL returns demographic and other administrative information as a [Patient FHIR Resource](https://www.hl7.org/fhir/patient.html){:target="_blank"}. This information is mostly contact information, not medical data.
+The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html){:target="_blank"}. This information is mostly contact information, not medical data.
 
 Request:
 ~~~
