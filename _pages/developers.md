@@ -416,7 +416,7 @@ Request:
 HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id]
 ~~~
 
-This request returns claims as [ExplanationOfBenefit Resources](https://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}. The response is typically thousands of lines long.
+This request returns claims as [ExplanationOfBenefit Resources](https://hl7.org/fhir/R4/explanationofbenefit.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}. The response is typically thousands of lines long.
 
 Example response excerpt:
 
@@ -533,7 +533,7 @@ Example response excerpt:
 HTTP GET /v2/fhir/Coverage/?beneficiary=[fhir_id]
 ~~~
 
-The above URL returns Coverage information as an [Coverage FHIR Resource.](http://hl7.org/fhir/coverage.html){:target="_blank"}
+The above URL returns Coverage information as [Coverage resources](http://hl7.org/fhir/R4/coverage.html) inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html).  One coverage resource is supplied for each coverage type. Example: Part-A, Part-B
 
 Request:
 ~~~
