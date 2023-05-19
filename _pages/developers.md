@@ -82,10 +82,10 @@ For other examples of how applications use the Blue Button 2.0 API, visit the [B
 
 The Blue Button 2.0 API is a RESTFul API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
 
-* [HL7 FHIR Standard](http://www.hl7.org/fhir/index.html)
-* [CARIN Consumer Directed Payer Data Exchange Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html)
-* [OAuth 2.0 protocol](https://oauth.net/)
-* [RESTful API Overview](https://restfulapi.io/)
+* [HL7 FHIR Standard](http://www.hl7.org/fhir/index.html){:target="_blank"}
+* [CARIN Consumer Directed Payer Data Exchange Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"}
+* [OAuth 2.0 protocol](https://oauth.net/){:target="_blank"}
+* [RESTful API Overview](https://restfulapi.net/){:target="_blank"}
 
 ### Versions
 
@@ -93,11 +93,11 @@ We currently support 2 BB2.0 API versions:
 
 #### Version 2 
 
-BB2.0 Version 2 (V2) is based on [FHIR release (R4)](http://hl7.org/fhir/R4/) and the [CARIN CDPDE Implementation Guide (Carin for Blue Button)](http://hl7.org/fhir/us/carin-bb/STU1.1/) and was released in July 2021\. To learn about migrating to BB2.0 V2, go to [Migrating to V2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ)
+BB2.0 Version 2 (V2) is based on [FHIR release (R4)](http://hl7.org/fhir/R4/){:target="_blank"} and the [CARIN CDPDE Implementation Guide (Carin for Blue Button)](http://hl7.org/fhir/us/carin-bb/STU1.1/){:target="_blank"} and was released in July 2021\. To learn about migrating to BB2.0 V2, go to [Migrating to V2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ)
 
 #### Version 1 
 
-Version 1 (V1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/). Development on V1 is limited to bug fixes and basic maintenance. If you're developing a new app, use V2\. For information about BB2.0 V1, see the [V1 Documentation](https://bluebutton.cms.gov/v1/). 
+Version 1 (V1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/){:target="_blank"}. Development on V1 is limited to bug fixes and basic maintenance. If you're developing a new app, use V2\. For information about BB2.0 V1, see the [V1 Documentation](https://bluebutton.cms.gov/v1/). 
 
 ### Environments
 
@@ -112,11 +112,11 @@ It's helpful to know that:
 * Sandbox credentials will not work in production. 
 * While we strive to provide a synthetic data set relevant to most use cases, our synthetic data set is not as comprehensive as production data.
 
-To get started in the developer sandbox, [create an account](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login).
+To get started in the developer sandbox, [create an account](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login){:target="_blank"}.
 
 #### Production
 
-Once your development is nearing completion, get access to live data in our production environment by following the instructions in our [production access user guide](https://bluebutton.cms.gov/guide/). After you complete the requirements in the production access guide and your app is approved, we'll give you credentials for the production environment.
+Once your development is nearing completion, get access to live data in our production environment by following the instructions in our [production access user guide](https://bluebutton.cms.gov/guide/){:target="_blank"}. After you complete the requirements in the production access guide and your app is approved, we'll give you credentials for the production environment.
 
 ## Try the API
 
