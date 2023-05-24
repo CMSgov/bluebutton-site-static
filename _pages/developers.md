@@ -101,7 +101,7 @@ Version 1 (V1) is the original Blue Button API, based on [FHIR release 3 (STU3)]
 
 ### Environments
 
-We currently maintain production and sandbox environments for developing with the BB2.0 API. For technical information about our environments, see [Base FHIR URLs](https://docs.google.com/document/d/1Ktw_lgOsqZRopJCTV8krJ2W5zjxNoeolxFcHQJje0zw/edit#heading=h.ikw2u81euyqi). 
+We currently maintain production and sandbox environments for developing with the BB2.0 API. For technical information about our environments, see [Base FHIR URLs](#base-fhir-urls). 
 
 #### Sandbox
 
