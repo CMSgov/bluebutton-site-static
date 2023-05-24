@@ -9,6 +9,7 @@ subnav-link-gradient: "blueberry-lime-link"
 badge: documentation
 permalink: "/developers/"
 sections:
+  - Overview 
   - Try the API
   - Authorization
   - Core Resources
@@ -27,14 +28,95 @@ ctas:
     link: https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login
 ---
 
-<div class="ds-c-alert">
-	<div class="ds-c-alert__body">
-		<h2 class="ds-c-alert__heading">This is the FHIR R4 (v2) documentation for the Blue Button API.</h2>
-		<p class="ds-c-alert__text">
-			If needed, <a href="/v1/">documentation for the STU3 (v1) implementation</a> of the Blue Button API is available. 
-		</p>
-	</div>
-</div>
+## Overview
+
+Blue Button 2.0 (BB2.0) API enables software developers to build trusted applications, services, and research programs that benefit Medicare enrollees. As a [standards-based API](#technical-specifications-and-standards), BB2.0 provides claims data for more than 64 million people with Medicare.
+
+### Data
+
+BB2.0 API includes more than 20 billion Medicare Part A, B and D claims going back to 2014\. 
+
+* Part A: Institutional claims (Example: services received at the hospital)
+* Part B: Professional or carrier claims (Example: primary care visits)
+* Part D: Prescription drug claims (Example: when a prescription was filled)
+
+Note: Blue Button 2.0 API does not provide Medicare Part C claims (Medicare Advantage). However, if a Medicare Advantage enrollee has a Part D plan, the API includes those claims.
+
+### Use Cases
+
+BB2.0 API data is valuable for any organization interested in innovating with claims data from over 64 million Medicare enrollees. The API serves a variety of use cases and we encourage you to explore ways to use BB2.0 API data to support Medicare enrollees in making healthcare decisions. 
+
+Examples of current use cases include:
+
+#### Personal health data aggregators
+
+Digital health applications can use BB2.0 to give Medicare enrollees a more comprehensive view of their health data. Access to personal health data can make Medicare enrollees more aware of their health conditions, helping them communicate more effectively with their providers. Research shows that thirty percent of  Medicare enrollees have 2 or 3 chronic conditions and see 5 or more physicians annually.1 Helping Medicare enrollees gather their health information in one place makes it easier for them to coordinate care across providers and may minimize redundant procedures.
+
+#### Insurance plan finders
+
+BB2.0 API data can help filter insurance plan options based on a Medicare enrollee's specific health history and needs. Medicare enrollees can use insurance plan finder tools directly or Medicare brokers can use these tools to advise patients on the best plan options.
+
+For example, with BB2.0 you can: 
+
+* Use claims and utilization data to make personalized recommendations for new plan options.
+* Estimate prescription costs to optimize Medicare plan guidance.
+* Check if a Medicare enrollee's current providers are in-network for various plan options.
+
+#### Clinical research studies
+
+Organizations conducting healthcare research and clinical trials often require participants to fill out long forms or regularly submit data over the course of the study. Medicare enrollees can authorize a research study to automatically pull their claims data with BB2.0, reducing the need for manual data entry.
+
+#### Health record sharing
+
+BB2.0 API can make it easy for Medicare enrollees to share their health data with doctors, pharmacies, caregivers, and others. 
+
+You can use BB2.0 to:
+
+* Integrate BB2.0 data with Electronic Health Records (EHR) systems to import current health information.
+* Allow patients to share health information like current medications, lab results, and medical imaging with providers..
+* Give caregivers an accurate picture of a Medicare enrollee's health data to facilitate care coordination and communication with providers.
+
+For other examples of how applications use the Blue Button 2.0 API, visit the [Blue Button app directory on Medicare.gov](https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps).
+
+### Technical Specifications and Standards 
+
+The Blue Button 2.0 API is a RESTFul API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
+
+* [HL7 FHIR Standard](http://www.hl7.org/fhir/index.html){:target="_blank"}
+* [CARIN Consumer Directed Payer Data Exchange Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"}
+* [OAuth 2.0 protocol](https://oauth.net/){:target="_blank"}
+* [RESTful API Overview](https://restfulapi.net/){:target="_blank"}
+
+### Versions
+
+We currently support 2 BB2.0 API versions:
+
+#### Version 2 
+
+BB2.0 Version 2 (V2) is based on [FHIR release (R4)](http://hl7.org/fhir/R4/){:target="_blank"} and the [CARIN CDPDE Implementation Guide (Carin for Blue Button)](http://hl7.org/fhir/us/carin-bb/STU1.1/){:target="_blank"} and was released in July 2021\. To learn about migrating to BB2.0 V2, go to [Migrating to V2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ)
+
+#### Version 1 
+
+Version 1 (V1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/){:target="_blank"}. Development on V1 is limited to bug fixes and basic maintenance. If you're developing a new app, use V2\. For information about BB2.0 V1, see the [V1 Documentation](https://bluebutton.cms.gov/v1/). 
+
+### Environments
+
+We currently maintain production and sandbox environments for developing with the BB2.0 API. For technical information about our environments, see [Base FHIR URLs](#base-fhir-urls). 
+
+#### Sandbox
+
+Develop your application using our sandbox environment. It provides access to synthetic Medicare enrollee data and includes all the same endpoints, resource types, and parameters as production. You can complete all of the same operations in the sandbox as in the production environment.
+
+It's helpful to know that:
+
+* Sandbox credentials will not work in production. 
+* While we strive to provide a synthetic data set relevant to most use cases, our synthetic data set is not as comprehensive as production data.
+
+To get started in the developer sandbox, [create an account](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login){:target="_blank"}.
+
+#### Production
+
+Once your development is nearing completion, get access to live data in our production environment by following the instructions in our [production access user guide](https://bluebutton.cms.gov/guide/){:target="_blank"}. After you complete the requirements in the production access guide and your app is approved, we'll give you credentials for the production environment.
 
 ## Try the API
 
