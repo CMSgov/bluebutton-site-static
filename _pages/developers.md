@@ -128,7 +128,7 @@ You can start using the API right away by following these steps:
 5. Access the synthetic dataset to try additional calls
 
 
-### Step 1: Join the developer sandbox and register a sandbox application
+### <a id="register-application"></a> Step 1: Join the developer sandbox and register a sandbox application
 
 [Create an account](https://sandbox.bluebutton.cms.gov/v1/accounts/create){:target="_blank"} to join the developer sandbox. Once you have verified your account, log in and click "Add an Application" from the Developer Sandbox homepage.
 
@@ -242,233 +242,230 @@ The first synthetic beneficiary account user is `BBUser00000` with password `PW0
 
 ## Authorization
 
-To use the Blue Button 2.0 OAuth 2 a developer must [register their application](https://sandbox.bluebutton.cms.gov/v1/o/applications/){:target="_blank"}.
+The BB2.0 API uses the [OAuth 2 authorization flow](https://www.oauth.com/){:target="_blank"}. To initiate an integration, you'll need the client ID and client secret for your application that were generated when you [registered your application](#register-application).
 
-A registered application is given a Client ID and a Client Secret. The secret should only be used if it can be kept confidential, such as communication between your server and the Blue Button 2.0 API. Otherwise the [Client Application Flow](https://bluebutton.cms.gov/developers/#client-application-flow) may be used.
+### Web applications
+
+BB2.0 API supports the Authorization Code flow for web applications running on a server. Use the following settings when registering your application: 
+
+* Client Type: Confidential
+* Grant Type: Authorization code
+
+#### User authorization
+
+To allow a user to authorize your application, direct them to the BB2.0 API `/authorize` endpoint with the appropriate parameters. 
+
+Example call:
+~~~
+https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=[http://localhost:8080/testclient/callback&response_type=code&state=8e896a59f0744a8e93bf2f1f13230be5](http://localhost:8080/testclient/callback&response_type=code&state=8e896a59f0744a8e93bf2f1f13230be5)
+~~~
+
+**Parameters: Authorization code request**
+
+|**Parameter** | **Required** | **Description** |
+| -------- | -------- | -------- |
+| `client_id`     | required     | The `client_id` from your registered application.     |
+| `redirect_uri`     | required     | The callback URL of your application. The user will be directed to this URL after authorizing your application.      |
+| `response_type`     | required     | Supported response type: `code`     |
+| `state`     | optional     | Recommended. A random string used to protect against request forgery attacks.   |
+{:.ds-c-table}
+
+#### Token endpoints
+
+* Sandbox: `https://sandbox.bluebutton.cms.gov/v2/o/token/`
+* Production: `https://api.bluebutton.cms.gov/v2/`
+
+#### Exchange code for token
+
+If the user authorizes your application, the BB2.0 API redirects back to the `redirect_uri` registered with your application with an authorization code and state parameter appended to it. 
+
+For example, if the Redirect URI is `http://localhost:8080/testclient/callback`, BB2.0 API will redirect with this request:
+
+~~~
+GET http:``//localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&state=8e896a59f0744a8e93bf2f1f13230
+~~~
+
+Your application can now exchange the code provided in the redirected request for a full token. 
+
+To retrieve a token, POST to the BB2.0 /token endpoint providing the code with the following parameters: 
+
+* `client_id`
+* `client_secret`
+* `redirect_uri`
+* `grant_type`: `authorization_code` 
+
+#### cURL command
+~~~
+curl -X "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
+-u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\<client_secret\>" \
+-d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost/testclient/callback](http://localhost/testclient/callback)"
+~~~
+#### Token response
+~~~
+{
+"access_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
+"expires_in": 16768.523842,
+"token_type": "Bearer",
+"scope": "profile patient/Patient.read patient/ExplanationOfBenefit.read patient/Coverage.read",
+"refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
+}
+~~~
+### Exchange refresh token for new access token
+
+Access tokens expire after 10 hours. You can't use an expired access token to access data. To access data after an access token expires, request a new access token using a refresh token. 
+
+You can use a refresh token at any time in your application's workflow, even before an access token expires.
+
+To retrieve a new refresh token, POST to the BB2.0 API `/token` endpoint with the following parameters:
+
+* `client_id`
+* `client_secret`
+* `grant_type`: `refresh_token`
+
+#### cURL command
+~~~
+curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
+-u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\<client_secret\>" \
+-d "grant_type=refresh_token&refresh_token=wDimPGoA8vwXP51kie71vpsy9l17HN”
+~~~
+#### Token response 
+
+(successful with 200 status code):
+~~~
+{
+"access_token": "VD1VaT4IfjXAMlZTS9E4RVXZlkhYG7",
+"expires_in": 36000,
+"token_type": "Bearer",
+"scope": "profile patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read",
+"refresh_token": "7x0VkRQlRU4fRNCQL2vh239nIyucgw",
+"patient": "-20140000000001"
+}
+~~~
+#### Common access token errors
+
+##### Reused refresh token
+
+A refresh token can only be used one time. The following is an example of an error response when attempting to reuse a refresh token:
+
+Response (unsuccessful with 400 status code):
+~~~
+{
+"error": "invalid_grant"
+}
+~~~
+If you receive this error, verify that your refresh token sent the correct value.  If it's already been used, the user should be directed to re-authorize following the original authorization flow above.
+
+##### Client credentials or permissions problems
+
+If your request has any issues with client credentials or permissions, the following response will be received:
+
+Response (unsuccessful with 401 status code):
+~~~
+{
+"error": "invalid_client"
+}
+~~~
+If you receive this message, double-check that the request looks correct. If everything looks correct, email [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov), and the Blue Button 2.0 API team can help troubleshoot.
+
+#### Expire authenticated user for sandbox testing
+
+For testing in our sandbox, you can use the `/expire_authenticated_user` endpoint that expires the authorization granted by a patient user.
+
+`/expire_authenticated_user` can be used to test your code for the following conditions that produce the same error responses via the API:
+
+* When an access token expires, without needing to wait for the expiration in 10 hours
+* When a patient revokes access to your application
+* When access granted to a patient's data has expired
+
+POST to the BB2.0 API `/expire_authenticated_user` endpoint with the following parameters:
+
+* `client_id`
+* `client_secret`
+* patient ID (patient ID "-20140000000001" is used in the cURL example below)
+
+##### cURL command
+~~~
+curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/-20140000000001/" \
+-u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\<client_secret\>" \
+-H “Content-Length: 0”
+~~~
+##### Response 
+
+Successful with 200 status code:
+~~~
+success
+~~~
+##### Common error responses
+
+
+| Error Code | Response | Reason |
+| -------- | -------- | -------- |
+| 404     | `Data Access Grant was Not Found`     | Patient ID has not granted access     |
+| 403     | `FORBIDDEN`    | Issues with client credentials or permissions    |
+{:.ds-c-table}
+
+
+
+### Native & mobile applications
+
+The Blue Button API supports the [OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749){:target="_blank"} using the [authorization code grant](https://www.rfc-editor.org/rfc/rfc6749#section-1.3.1) with a [confidential client](https://www.rfc-editor.org/rfc/rfc6749#section-2.1){:target="_blank"} type flow. To optimize the security of Medicare enrollees' data during authentication, we do not support the implicit grant or public client types.
+
+For best practices for the type of application you're developing, review the [OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252.txt){:target="_blank"}.
+
+To mitigate security risks, use a proxy middleware server following a Backend For Frontend (BFF) authentication pattern. In the BFF pattern, a backend server performs all authorization code and refresh token exchanges. For examples of this type of proxy middleware client/server implementation, check out our sample applications available in [Node](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react){:target="_blank"} or [Python](https://github.com/CMSgov/bluebutton-sample-client-python-react){:target="_blank"}.
+
+### Proof Key for Code Exchange (PKCE) extension usage
+
+To improve the security of your application, we highly recommend using the [PKCE](https://tools.ietf.org/html/rfc7636){:target="_blank"} extension.
+
+There are several reasons to use the PKCE extension:
+
+* Ensures that the application that started the OAuth 2.0 flow is the same one that is finishing it.
+* Mitigates the impact of a compromised Authorization Code by a malicious actor.
+* Follows the [OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#section-2.1.1){:target="_blank"}
+
+#### PKCE code challenge support
+
+PKCE uses a code challenge that is derived from a code-verifier. The BB2.0 API supports the S256 style code challenge:
+
+`codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
+
+When using PKCE, send the following additional parameters and values as part of the OAuth2.0 Authorization Request:
+
+* `code_challenge`
+* `codechallengemethod = "S256"`
+
+To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"}.
 
 ### Scopes
 
-Access tokens have a scope, which defines what the access token can do and what resources it can access. For our purposes, scopes are primarily utilized to give Medicare beneficiaries more granular choice over what data they would like to share with applications. The Blue Button 2.0 API has implemented [HL7 FHIR Scopes](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html){:target="_blank"} to manage access to beneficiary data. They look like this:
+Scopes define the API endpoints that your application is allowed to access. The BB2.0 API uses [HL7 FHIR Scopes](https://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html){:target="_blank"} to manage access to Medicare enrollee data. 
 
-```
-patient/Patient.read
+#### BB2.0 API HL7 FHIR 
 
-patient/Coverage.read
+| **Scope** | **Grants** |
+| -------- | -------- | 
+| `patient/Patient.read`     | Permission to read the Patient resource for a Medicare enrollee | 
+| `patient/Coverage.read`     | Permission to read the Coverage resources for a Medicare enrollee |
+| `patient/ExplanationOfBenefit.read`     | Permission to read the Explanation of Benefit resources for a Medicare enrollee |
+| `profile`     |Permission to access the `/UserInfo` endpoint (from the [OpenID Connect specification](https://openid.net/connect/){:target="_blank"} |
+{:.ds-c-table}
 
-patient/ExplanationOfBenefit.read
-```
 
-From the OpenID Connect specification we support:
-```
-profile
-```
-This gives access to the  '/v2/connect/UserInfo' endpoint.
+#### Medicare enrollee personal information guidelines
 
-Our OAuth screen gives beneficiaries the ability to choose whether or not to share their demographic information. **Your application will need to handle the return of a 403 status code** from the `/v2/fhir/Patient` and `/v2/connect/userinfo` endpoints.
+There are 2 scenarios that block your application's access to the `/Patient` and `/Userinfo` endpoints:
 
-<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/bene_auth_screen.png" alt="The OAuth screen with a choice for benes to share or withhold certain demographic information" />
+1. You choose not to collect Medicare enrollee personal information when your application is approved in production.
+2. A Medicare enrollee does not give your application permission to access their personal information. In the Medicare.gov authentication process, Medicare enrollees always have the option to block access to their personal data. 
 
-If the beneficiary declines to share information that your application needs to function, you may display a message explaining why that information is needed and request reauthorization, or handle the collection of that information elsewhere within your application.
+If you can't access the `/Patient` or `/Userinfo` endpoint, you can get the resource ID for a patient by pulling it during the initial authorization response or from the `ExplanationOfBenefit` or `Coverage` bundles.
 
-The default selection when a beneficiary reaches the authorization screen will be to share all data, including demographic data, with your application. If a beneficiary makes a selection as to whether or not they want to share demographic data with your application and later decides they want to change that selection, they&#39;ll need to be taken through the authorization flow again to make a different choice from the OAuth screen.
+Suppose your application requires information limited by a scope and you can't get the information in another endpoint. In that case, you can explain why certain data is needed within your application before the user goes through the Medicare.gov authentication process. For example, if you use demographic information to help users autofill forms, explain in your UI that allowing access to their personal data will make it easier and faster to fill out required forms. However, if a user shares that data with you for one-time data entry, be clear about how long you keep the information and if it is used for any other purposes in your Privacy Policy and/or Terms of Service documents.
 
-**Ensuring you still get the data you need**
+#### Revoked access
 
-Take the time to ensure that you have fallbacks in place if you are unable to access the patient or userinfo endpoints.
-
-For example, if you are getting the patient_ID from the `v2/fhir/Patient` endpoint, we recommend getting that identifier from the initial authorization response, or another resource like `ExplanationOfBenefit` or `Coverage`.
-
-**Explanation of needed data to Medicare Beneficiaries**
-
-If information limited by a scope is required for your application to properly function and it is not possible to get the information in another endpoint, we recommend providing an explanation about why certain data is needed in your user flow.
-
-For example, if you use demographic information to help beneficiaries autofill tedious data-entry, you might want to explain that benefit before they reach the authorization screen. **It is essential, however, that you give beneficiaries the full picture.** If they do share that data with you for one-time data entry, they should know how long you keep it and if it is used for any other purposes.
-
-**What if my application doesn&#39;t need demographic information from beneficiaries?**
-
-As stewards of sensitive data, it is important to adopt the practice of only asking for the data that is needed to perform a service for a beneficiary. As you register or edit an application in our Sandbox, you will see an option to choose whether or not your application needs to collect demographic information from beneficiaries.
-
-If you choose not to collect demographic information, Medicare beneficiaries will see a simplified version of the OAuth screen as they no longer need to choose whether or not they want to share that information.
-
-### Native Mobile App Support
-
-Native Mobile App Support follows the [RFC 8252 - OAuth 2.0 for Native Apps](https://tools.ietf.org/html/rfc8252){:target="_blank"} authentication flow utilizing the [PKCE](https://tools.ietf.org/html/rfc7636){:target="_blank"} extension and enables a custom URI scheme redirect.
-
-The implementation of the [RFC 8252](https://tools.ietf.org/html/rfc8252){:target="_blank"} specification enables developers to build mobile applications without requiring a proxy server to route redirect calls to their mobile app.
-
-The [PKCE](https://tools.ietf.org/html/rfc7636){:target="_blank"} extension provides a technique for public clients to mitigate the threat of a "man-in-the-middle" attack. This involves creating a secret that is used when exchanging the authorization code to obtain an access token.
-
-[PKCE](https://tools.ietf.org/html/rfc7636){:target="_blank"} uses a code challenge that is derived from a code-verifier. The standard supports two styles of code challenge:
-
-- plain
-- S256
-
-However, the Blue Button 2.0 API only supports the "S256" style code challenge.
-
-Where the:
-```
-codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))
-```
-
-The following additional parameters and values are sent as part of the OAuth2.0 Authorization Request:
-
-```
-- code_challenge
-- codechallengemethod = "S256"
-```
-
-More details can be found about this flow on [OAuth.com](https://www.oauth.com/){:target="_blank"}. Check out this link: [Protecting Mobile Apps with PKCE - OAuth 2.0 Servers](https://www.oauth.com/oauth2-servers/pkce/){:target="_blank"}
-
-### Registering Your App for Mobile App Support
-
-When you register your application in the Blue Button 2.0 API Developer Sandbox, you will want to specify a unique custom URI scheme. This should be a unique value that will not conflict with other custom URI schemes implemented on a user&#39;s mobile device.
-
-We recommend that you define your custom URI scheme using a reverse domain name notation. As we developed our own testing application, we implemented a custom URI scheme of:
-
-```
-- gov.cms.bluebutton.oauthtester
-```
-
-This equated to an oauthtester subdomain for the [bluebutton.cms.gov](https://bluebutton.cms.gov/developers) domain.
-
-The reverse DNS style custom URI scheme should then be coupled with the re-direct path on the mobile device that will handle the call back from the Blue Button 2.0 API.
-
-For example:
-
-```
-tld.app.subdomain[.subsubdomain]:/callback/path/endpoint
-```
-
-
-### Redirect_URI
-
-When creating an Application in the sandbox a redirect URI is required. This is the API endpoint on _your_ system that receives the callback from the Blue Button 2.0 API after a beneficiary is passed to the Blue Button 2.0 API to authorize your application.
-
-Multiple redirect URIs can be entered in the Redirect_URI field. Each entry should be separated by a space or newline.
-
-A Redirect_URI follows this format:
-
-```
-URLprotocol://[sub-domain.]domain_name[:port]/path
-```
-### URL Protocol
-
-Three URL protocols are supported, depending on the purpose:
-
-#### http:// protocol
-
-Environment: Sandbox only
-
-Purpose: Typically used for local testing by using `http://localhost` 
-
-Notes: Any domain name can be used.
-
-#### https://protocol
-
-Environment: Sandbox and Production
-
-Purpose: Used for secure communication.
-
-Notes: Required for all applications in the production environment unless the application is using the Mobile OAuth method for handling callbacks.
-
-#### custom_url:// protocol
-
-Environment: Sandbox and Production
-
-Purpose: Used by mobile applications to handle communications directly with an application on a mobile device.
-
-Notes:
-If you are using Mobile OAuth support for communication directly with a mobile device the `custom_url` should follow this format:
-
-```
-Top-level.domain(TLD).domain-name[.sub-domain][.app_name]
-```
-
-For example, if the Blue Button 2.0 API team created an application we might create a custom_url of:
-```
-gov.cms.bluebutton.oauthtester
-```
-
-This would then be incorporated into a redirect URI entry. Here is an example:
-
-```
-gov.cms.bluebutton.oauthtester:8080//bluebutton_app/callback.html
-```
-
-
-### Web Application Flow
-
-To use this flow your application should be registered with Client Type set to confidential and Grant Type set to authorization-code.
-
-#### Request authorization from user
-
-To allow a user to authorize your application, direct them to the Blue Button 2.0 API authorize endpoint. The request must include the response_type set to code, your application&#39;s client_id, and your application&#39;s redirect_uri. An optional state field that your application can use to identify the authorization request is recommended.
-
-~~~
-https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=&amp;response_type=code&amp;state=8e896a59f0744a8e93bf2f1f13230be5 
-~~~
-#### Exchange code for token
-
-After visiting the authorization page a user will be redirected back to the `redirect_uri` registered with your application.
-
-For example if the redirect_uri is `http://localhost:8080/testclient/callback`, BlueButton will redirect with this request.
-
-```
-GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;state=8e896a59f0744a8e93bf2f1f13230be5
-```
-
-Your application can now exchange the code provided in the redirected request for a full token. Send a POST request to the BlueButton token endpoint providing the code, the application&#39;s `client_id`, `client_secret`, and `redirect_uri`. Your request must also specify the `grant_type` which should always be `authorization_code` for this flow.
-
-Request:
-~~~
-curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \ -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\&lt;client_secret\&gt;" \ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&amp;grant_type=authorization_code&amp;redirect_uri=http://localhost/testclient/callback"
-~~~
-
-Response:
-
-```
-{
-
-"access_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
-
-"expires_in": 16768.523842,
-
-"token_type": "Bearer",
-
-"scope": "profile patient/Patient.read patient/ExplanationOfBenefit.read patient/Coverage.read"
-
-"refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
-
-}
-```
-### Adding the STATE parameter
-
-#### Client Application Flow
-
-To use this flow your application should be registered with Client Type set to public and Grant Type set to implicit.
-
-#### Request authorization from user
-
-To use the client application flow direct the user to the Blue Button 2.0 API authorization endpoint with the `response_type` parameter set to token.
-
-~~~
-https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&amp;redirect_uri=http://localhost:8080/testclient/callback&amp;response_type=token&amp;state=8e896a59f0744a8e93bf2f1f13230be5
-~~~
-
-If the user authorizes your application they will be redirected back to the `redirect_uri` of your application. The request will include an access token in the fragment.
-
-#### Typescript Example
-```
-http://localhost:8080/testclient/callback#access_token=KCHMTX5VHNAXYGYv38eG2RLAX4hL6R&amp;expires_in=35849.875807&amp;token_type=Bearer&amp;scope=profile+patient%2FPatient.read+patient%2FExplanationOfBenefit.read+patient%2FCoverage.read&amp;state=8e896a59f0744a8e93bf2f1f13230be5
-```
-
-You can use this sample account to test your Blue Button 2.0 API OAuth implementation. This account mimics a valid Medicare account but has reduced functionality. For example, you cannot test "Forgot Password" flow.
-
-_Jane Doe_
-
-_Username: BBUser29999_
-
-_Password: PW29999!_
+An enrollee can revoke access to your application in the 'My Connected Apps' section of their Medicare.gov account. This results in an invalid token for that user. If a Medicare enrollee revokes access to their data, be sure to account for that use case in your application's UI so it's easy for a Medicare enrollee to understand what's happening with their Medicare data.
 
 ---
 
@@ -1508,14 +1505,6 @@ We recommend you have a daily or weekly job to fetch new claims data for your us
 ### Use of the Blue Button 2.0 API Logo
 
 The Blue Button 2.0 API logo and usage guidelines is detailed [here](https://www.healthit.gov/topic/health-it-initiatives/blue-button/logo-and-usage){:target="_blank"}.
-
-### Beneficiary Revoking Access
-
-A beneficiary may revoke access to your application via the Medicare website. When you encounter an invalid token indicating a beneficiary has revoked access, you should make a reasonable attempt to handle that case making it easy for the beneficiary to understand what is happening with their Medicare data.
-
-"Medicare is unable to retrieve your data at this time due to an internal issue. Our team is aware of the issue and is working to resolve it. Please try again at a later time. We apologize for any inconvenience."
-
-If you or your users encounters this error message, know that our team is aware of the issue and is working to resolve it as quickly as possible.
 
 ---
 
