@@ -294,13 +294,13 @@ To retrieve a token, POST to the BB2.0 /token endpoint providing the code with t
 * `redirect_uri`
 * `grant_type`: `authorization_code` 
 
-#### cURL command
+##### cURL command
 ~~~
 curl -X "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\<client_secret\>" \
 -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost/testclient/callback](http://localhost/testclient/callback)"
 ~~~
-#### Token response
+##### Token response
 ~~~
 {
 "access_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
@@ -310,7 +310,7 @@ curl -X "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 "refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
 }
 ~~~
-### Exchange refresh token for new access token
+#### Exchange refresh token for new access token
 
 Access tokens expire after 10 hours. You can't use an expired access token to access data. To access data after an access token expires, request a new access token using a refresh token. 
 
@@ -322,13 +322,13 @@ To retrieve a new refresh token, POST to the BB2.0 API `/token` endpoint with th
 * `client_secret`
 * `grant_type`: `refresh_token`
 
-#### cURL command
+##### cURL command
 ~~~
 curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 -u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\<client_secret\>" \
 -d "grant_type=refresh_token&refresh_token=wDimPGoA8vwXP51kie71vpsy9l17HN”
 ~~~
-#### Token response 
+##### Token response 
 
 (successful with 200 status code):
 ~~~
