@@ -408,7 +408,7 @@ success
 
 ### Native & mobile applications
 
-The Blue Button API supports the [OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749){:target="_blank"} using the [authorization code grant](https://www.rfc-editor.org/rfc/rfc6749#section-1.3.1) with a [confidential client](https://www.rfc-editor.org/rfc/rfc6749#section-2.1){:target="_blank"} type flow. To optimize the security of Medicare enrollees' data during authentication, we do not support the implicit grant or public client types.
+The Blue Button API supports the [OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749){:target="_blank"} using the [authorization code grant](https://www.rfc-editor.org/rfc/rfc6749#section-1.3.1){:target="_blank"} with a [confidential client](https://www.rfc-editor.org/rfc/rfc6749#section-2.1){:target="_blank"} type flow. To optimize the security of Medicare enrollees' data during authentication, we do not support the implicit grant or public client types.
 
 For best practices for the type of application you're developing, review the [OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252.txt){:target="_blank"}.
 
