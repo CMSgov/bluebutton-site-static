@@ -273,7 +273,7 @@ https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qn
 #### Token endpoints
 
 * Sandbox: `https://sandbox.bluebutton.cms.gov/v2/o/token/`
-* Production: `https://api.bluebutton.cms.gov/v2/`
+* Production: `https://api.bluebutton.cms.gov/v2/o/token/`
 
 #### Exchange code for token
 
