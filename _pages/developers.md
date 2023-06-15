@@ -285,7 +285,7 @@ For example, if the Redirect URI is `http://localhost:8080/testclient/callback`,
 GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&state=8e896a59f0744a8e93bf2f1f13230
 ~~~
 
-Your application can now exchange the code provided in the redirected request for a full token. 
+Your application can now exchange the code provided in the redirected request for a access token. 
 
 To retrieve a token, POST to the BB2.0 /token endpoint providing the code with the following parameters: 
 
