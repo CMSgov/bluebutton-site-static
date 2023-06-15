@@ -282,7 +282,7 @@ If the user authorizes your application, the BB2.0 API redirects back to the `re
 For example, if the Redirect URI is `http://localhost:8080/testclient/callback`, BB2.0 API will redirect with this request:
 
 ~~~
-GET http:``//localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&state=8e896a59f0744a8e93bf2f1f13230
+GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&state=8e896a59f0744a8e93bf2f1f13230
 ~~~
 
 Your application can now exchange the code provided in the redirected request for a full token. 
