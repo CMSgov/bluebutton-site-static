@@ -293,6 +293,7 @@ To retrieve an access token, POST to the BB2.0 /token endpoint providing the cod
 * `client_secret`
 * `redirect_uri`
 * `grant_type`: `authorization_code` 
+* `code`
 
 ##### cURL command
 ~~~
