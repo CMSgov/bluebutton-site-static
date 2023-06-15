@@ -257,7 +257,7 @@ To allow a user to authorize your application, direct them to the BB2.0 API `/au
 
 Example call:
 ~~~
-https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=[http://localhost:8080/testclient/callback&response_type=code&state=8e896a59f0744a8e93bf2f1f13230be5](http://localhost:8080/testclient/callback&response_type=code&state=8e896a59f0744a8e93bf2f1f13230be5)
+https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&state=8e896a59f0744a8e93bf2f1f13230be5
 ~~~
 
 **Parameters: Authorization code request**
