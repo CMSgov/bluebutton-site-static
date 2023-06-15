@@ -322,6 +322,7 @@ To retrieve a new refresh token, POST to the BB2.0 API `/token` endpoint with th
 * `client_id`
 * `client_secret`
 * `grant_type`: `refresh_token`
+* `refresh_token`
 
 ##### cURL command
 ~~~
