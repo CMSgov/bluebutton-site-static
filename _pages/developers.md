@@ -342,7 +342,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 "patient": "-20140000000001"
 }
 ~~~
-#### Common access token errors
+#### Common token endpoint errors
 
 ##### Reused refresh token
 
