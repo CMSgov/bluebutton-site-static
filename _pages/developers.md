@@ -287,7 +287,7 @@ GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z
 
 Your application can now exchange the code provided in the redirected request for a access token. 
 
-To retrieve a token, POST to the BB2.0 /token endpoint providing the code with the following parameters: 
+To retrieve an access token, POST to the BB2.0 /token endpoint providing the code with the following parameters: 
 
 * `client_id`
 * `client_secret`
