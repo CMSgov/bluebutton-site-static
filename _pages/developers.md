@@ -298,7 +298,7 @@ To retrieve an access token, POST to the BB2.0 /token endpoint providing the cod
 ##### cURL command
 ~~~
 curl -X "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
--u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\<client_secret\>" \
+-u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:<client_secret>" \
 -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost:8080/testclient/callback"
 ~~~
 ##### Token response
