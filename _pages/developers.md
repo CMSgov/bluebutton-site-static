@@ -327,7 +327,7 @@ To retrieve a new refresh token, POST to the BB2.0 API `/token` endpoint with th
 ##### cURL command
 ~~~
 curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
--u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\<client_secret\>" \
+-u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:<client_secret>" \
 -d "grant_type=refresh_token&refresh_token=wDimPGoA8vwXP51kie71vpsy9l17HN”
 ~~~
 ##### Token response 
