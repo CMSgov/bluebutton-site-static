@@ -539,6 +539,8 @@ Example response excerpt:
 
 ~~~
 
+[Download a sample EOB FHIR Resource](https://bluebutton.cms.gov/sample-eob-entry.json)
+
 ### Patient FHIR Resource
 
 ~~~
@@ -658,6 +660,7 @@ Response excerpt:
                 .....
 	       
 ~~~
+[Download a sample Coverage FHIR Resource](https://bluebutton.cms.gov/sample-coverage-entry.json)
 
 ### Compress Resources for more efficient data transfers
 
@@ -674,8 +677,6 @@ Accept-Encoding: gzip
 ~~~
 
 The minimum payload size we will gzip is 1 kilobyte. If the original uncompressed size of the payload is less than 1 kb, we will not apply gzip compression to our response. Therefore, developers should ensure their applications handle this scenario gracefully by checking for the **Content-Encoding: gzip** response header before trying to decompress.
-
-[Download a sample Coverage FHIR Resource](https://bluebutton.cms.gov/sample-coverage-entry.json)
 
 ### Get User Profile for an Authorization Token
 
