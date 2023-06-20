@@ -50,7 +50,7 @@ Examples of current use cases include:
 
 #### Personal health data aggregators
 
-Digital health applications can use BB2.0 to give Medicare enrollees a more comprehensive view of their health data. Access to personal health data can make Medicare enrollees more aware of their health conditions, helping them communicate more effectively with their providers. Research shows that thirty percent of  Medicare enrollees have 2 or 3 chronic conditions and see 5 or more physicians annually.1 Helping Medicare enrollees gather their health information in one place makes it easier for them to coordinate care across providers and may minimize redundant procedures.
+Digital health applications can use BB2.0 to give Medicare enrollees a more comprehensive view of their health data. Access to personal health data can make Medicare enrollees more aware of their health conditions, helping them communicate more effectively with their providers. Research shows that thirty percent of  Medicare enrollees have 2 or 3 chronic conditions and see 5 or more physicians annually.<a href="#footnote-1"><sup>1</sup></a> Helping Medicare enrollees gather their health information in one place makes it easier for them to coordinate care across providers and may minimize redundant procedures.
 
 #### Insurance plan finders
 
@@ -73,7 +73,7 @@ BB2.0 API can make it easy for Medicare enrollees to share their health data wit
 You can use BB2.0 to:
 
 * Integrate BB2.0 data with Electronic Health Records (EHR) systems to import current health information.
-* Allow patients to share health information like current medications, lab results, and medical imaging with providers..
+* Allow patients to share health information like current medications, lab results, and medical imaging with providers.
 * Give caregivers an accurate picture of a Medicare enrollee's health data to facilitate care coordination and communication with providers.
 
 For other examples of how applications use the Blue Button 2.0 API, visit the [Blue Button app directory on Medicare.gov](https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps).
@@ -1555,3 +1555,5 @@ Join the Google Groups for any APIs you access for the most up to date informati
 - [Medicare Claims Data to Part D Sponsors (AB2D)](https://groups.google.com/g/ab2d-api){:target="_blank"}
 
 ---
+
+ <a id="footnote-1"></a><sup>1</sup> Jama Health Forum, “Addressing Challenges in Primary Care—Lessons to Guide Innovation” [https://jamanetwork.com/journals/jama-health-forum/fullarticle/2795471](https://jamanetwork.com/journals/jama-health-forum/fullarticle/2795471), August 19, 2022
