@@ -1,6 +1,6 @@
 ---
 layout: basic
-title: 'Hicn Hash'
+title: 'Mbi Hash'
 permalink: '/resources/identifier/mbi-hash/'
 ---
 
