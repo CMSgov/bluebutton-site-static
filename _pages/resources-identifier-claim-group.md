@@ -10,5 +10,5 @@ permalink: '/resources/identifier/claim-group/'
 **System URI**: `https://bluebutton.cms.gov/resources/identifier/claim-group`
 
 ## Description
-A claim is a suite of goods and services and insurances coverages under which adjudication or authorization is requested.
+A claim is provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.
 
