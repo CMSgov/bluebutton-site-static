@@ -10,7 +10,7 @@ permalink: '/resources/codesystem/diagnosis-type/'
 **System URI**: `https://bluebutton.cms.gov/resources/codesystem/diagnosis-type`
 
 ## Description
-This variable describes the type of diagnosis for a patient. In a setting such as a hospital, several events take place in diagnosing a patient that depend on whether a patient is admitted or discharged, if there is more than one diagnosis being recorded, or one diagnosis is more important than another.
+This variable provides the diagnosis type for the corresponding diagnosis code.
 
 ## Values
 This variable is coded, and will contain one of the following values.
@@ -19,8 +19,6 @@ This variable is coded, and will contain one of the following values.
 
 | Value     | Description                                                         |
 |-----------|---------------------------------------------------------------------|
-| admitting | A patient is admitted to a hospital.                                |
-| primary   | The most important or first diagnosis recorded upon admission.      |
-| secondary | A less important or not the first diagnosis recorded upon admission.|
-| discharge | A patient is discharged from a hospital.                            |
-
+| admitting | A diagnosis code indicating the beneficiary's initial diagnosis at admission.                                |
+| primary   | A diagnosis code identifying the diagnosis, condition, problem, or other reason for the admission/encounter/visit shown in the medical record to be chiefly responsible for the services provided.        |
+| secondary | A diagnosis other than the primary diagnosis.|
