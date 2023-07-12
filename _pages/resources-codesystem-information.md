@@ -10,9 +10,9 @@ permalink: '/resources/codesystem/information/'
 **System URI**: `https://bluebutton.cms.gov/resources/codesystem/information`
 
 ## Description
-This code system includes a selection of codes which convey supporting information about the claim
-Each code in the system is itself a URL providing additional information about that code. (example: https://bluebutton.cms.gov/resources/variables/nch_wkly_proc_dt)
+A selection of codes that provide supporting information about the claim.
 
+Each code in the system is a URL. (Example: https://bluebutton.cms.gov/resources/variables/nch_wkly_proc_dt/)
 
 
 
