@@ -14,6 +14,3 @@ A selection of codes that provide supporting information about the claim.
 
 Each code in the system is a URL. (Example: https://bluebutton.cms.gov/resources/variables/nch_wkly_proc_dt/)
 
-
-
-
