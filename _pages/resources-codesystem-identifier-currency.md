@@ -10,7 +10,7 @@ permalink: '/resources/codesystem/identifier-currency/'
 **System URI**: `https://bluebutton.cms.gov/resources/codesystem/identifier-currency`
 
 ## Description
-An indicator as to whether or not the corresponding Medicare Beneficiary Identifier (MBI) is the most recent/current identifier assigned to the beneficiary, or if it is a former/historic identifier that is no longer used
+An indicator as to whether or not the corresponding Medicare Beneficiary Identifier (MBI) is the most recent/current identifier assigned to the beneficiary, or if it is a former/historic identifier that is no longer used.
 
 ## Values
 This variable is coded, and will contain one of the following values.
@@ -19,5 +19,5 @@ This variable is coded, and will contain one of the following values.
 
 | Value     | Description                          |
 |-----------|--------------------------------------|
-| current   | The corresponding MBI is the most recent / current identifier assigned to the beneficiary
-| historic  | The corresponding MBI is a historic identifier that is no longer used
+| current   | The corresponding MBI is the most recent / current identifier assigned to the beneficiary. |
+| historic  | The corresponding MBI is a historic identifier that is no longer used. |
