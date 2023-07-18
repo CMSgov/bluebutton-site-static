@@ -43,6 +43,12 @@ pipeline {
     //     }
     //   }
     // }
+    stage('Chekcout release tag') {
+      steps {
+          sh "git fetch --tags"
+          sh "git checkout tags/\${RELEASE_TAG}"
+      }
+    }
 
     stage("Determine Akamai NetStorage path") {
       steps {
