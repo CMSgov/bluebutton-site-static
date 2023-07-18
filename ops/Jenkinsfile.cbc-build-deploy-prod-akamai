@@ -40,14 +40,15 @@ pipeline {
     //     }
     //   }
     // }
+
     stage("Checkout release tag") {
       steps {
-          sh """
-          git fetch --tags
-          """
-          sh """
-          git checkout tags/\${RELEASE_TAG}
-          """
+        checkout([
+            $class: "GitSCM",
+            branches: [[name: "refs/tags/${params.RELEASE_TAG}"]],
+            userRemoteConfigs: [[url: "https://github.com/CMSgov/bluebutton-site-static.git"]],
+            poll: false
+        ])
       }
     }
 
@@ -85,9 +86,6 @@ pipeline {
     }
 
     stage("Deploy Static Site to Akamai NetStorage") {
-      when {
-        expression { params.SITE_ENV ==~ /(test|staging|prod)/ }
-      }
       steps {
         sh """
         scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}
@@ -106,9 +104,6 @@ pipeline {
     }
 
     stage("Deploy CSS to Akamai Netstorage") {
-      when {
-        expression { params.SITE_ENV ==~ /(test|staging|prod)/ }
-      }
       steps {
         sh """
         scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}assets/css/
