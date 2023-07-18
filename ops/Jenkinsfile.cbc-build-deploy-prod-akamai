@@ -1,0 +1,126 @@
+pipeline {
+  agent {
+    kubernetes {
+      defaultContainer "bb2-cbc-build"
+      yamlFile "ops/cbc-build.yaml"
+    }
+  }
+
+  environment {
+    AWS_ACCESS_KEY_ID = credentials("bb2-aws-key-id")
+    AWS_SECRET_ACCESS_KEY = credentials("bb2-aws-key-secret")
+    AWS_DEFAULT_REGION = "us-east-1"
+    AKAMAI_SCP_SSH_KEY = credentials("bb2-akamai-scp-ssh-key")
+    AKAMAI_SSH_USER = credentials("bb2-akamai-ssh-user")
+  }
+
+  parameters {
+    choice(
+      name: "SITE_ENV",
+      choices: ["test", "staging", "prod"],
+      description: "The environment to build and deploy to."
+    )
+
+    string(
+      name: "RELEASE_TAG",
+      defaultValue: "",
+      description: "The release tag to deploy."
+    )
+
+    string(
+      name: "CSS_REPO_BRANCH",
+      defaultValue: "master",
+      description: "The branch of the CSS repo to deploy. Defaults to master."
+    )
+  }
+
+  stages {
+    // stage("Notify Slack") {
+    //   steps {
+    //     script {
+    //       helpers = load "ops/helpers.groovy"
+    //       helpers.slackNotify "STARTING - ENV:${params.SITE_ENV}"
+    //     }
+    //   }
+    // }
+
+    stage("Determine Akamai NetStorage path") {
+      steps {
+        script {
+          echo "Setting UPLOAD_LOCATION from SITE_ENV"
+          if (params.SITE_ENV == "test") {
+            UPLOAD_LOCATION = "/1197010/test.static.bluebutton.cms.gov/"
+          } else if (params.SITE_ENV == "staging") {
+            UPLOAD_LOCATION = "/1197010/staging.bluebutton.cms.gov/"
+          } else if (params.SITE_ENV == "prod") {
+            UPLOAD_LOCATION = "/1197010/bluebutton.cms.gov/"
+          } else {
+            error("Please set SITE_ENV to one of: [test, staging, prod]")
+          }
+        }
+      }
+    }
+
+    stage("Run Bundle Install") {
+      steps {
+        sh """
+        bundle install
+        """
+      }
+    }
+
+    stage("Run Jekyll Build") {
+      steps {
+        sh """
+        bundle exec jekyll build --config _config.yml,_config-${params.SITE_ENV}.yml
+        """
+      }
+    }
+
+    stage("Deploy Static Site to Akamai NetStorage") {
+      when {
+        expression { params.SITE_ENV ==~ /(test|staging|prod)/ }
+      }
+      steps {
+        sh """
+        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}
+        """
+      }
+    }
+
+    stage("Checkout CSS Repo") {
+      steps {
+        checkout([
+            $class: "GitSCM",
+            branches: [[name: "${params.CSS_REPO_BRANCH}"]],
+            userRemoteConfigs: [[url: "https://github.com/CMSgov/bluebutton-css.git"]]
+        ])
+      }
+    }
+
+    stage("Deploy CSS to Akamai Netstorage") {
+      when {
+        expression { params.SITE_ENV ==~ /(test|staging|prod)/ }
+      }
+      steps {
+        sh """
+        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}assets/css/
+        """
+      }
+    }
+  }
+
+  // post {
+  //   success {
+  //     script {
+  //       helpers.slackNotify("SUCCESS - ENV:${params.SITE_ENV}", "good")
+  //     }
+  //   }
+
+  //   failure {
+  //     script {
+  //       helpers.slackNotify("FAILURE - ENV:${params.SITE_ENV}", "bad")
+  //     }
+  //   }
+  // }
+}
