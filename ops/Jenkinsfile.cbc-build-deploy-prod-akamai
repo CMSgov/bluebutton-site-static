@@ -7,9 +7,6 @@ pipeline {
   }
 
   environment {
-    AWS_ACCESS_KEY_ID = credentials("bb2-aws-key-id")
-    AWS_SECRET_ACCESS_KEY = credentials("bb2-aws-key-secret")
-    AWS_DEFAULT_REGION = "us-east-1"
     AKAMAI_SCP_SSH_KEY = credentials("bb2-akamai-scp-ssh-key")
     AKAMAI_SSH_USER = credentials("bb2-akamai-ssh-user")
   }
@@ -43,10 +40,14 @@ pipeline {
     //     }
     //   }
     // }
-    stage('Chekcout release tag') {
+    stage("Checkout release tag") {
       steps {
-          sh "git fetch --tags"
-          sh "git checkout tags/\${RELEASE_TAG}"
+          sh """
+          git fetch --tags
+          """
+          sh """
+          git checkout tags/\${RELEASE_TAG}
+          """
       }
     }
 
