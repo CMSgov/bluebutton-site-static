@@ -92,23 +92,23 @@ pipeline {
     //   }
     // }
 
-    stage("Checkout CSS Repo") {
-      steps {
-        checkout([
-            $class: "GitSCM",
-            branches: [[name: "${params.CSS_REPO_BRANCH}"]],
-            userRemoteConfigs: [[url: "https://github.com/CMSgov/bluebutton-css.git"]]
-        ])
-      }
-    }
+    // stage("Checkout CSS Repo") {
+    //   steps {
+    //     checkout([
+    //         $class: "GitSCM",
+    //         branches: [[name: "${params.CSS_REPO_BRANCH}"]],
+    //         userRemoteConfigs: [[url: "https://github.com/CMSgov/bluebutton-css.git"]]
+    //     ])
+    //   }
+    // }
 
-    stage("Deploy CSS to Akamai Netstorage") {
-      steps {
-        sh """
-        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}assets/css/
-        """
-      }
-    }
+    // stage("Deploy CSS to Akamai Netstorage") {
+    //   steps {
+    //     sh """
+    //     scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}assets/css/
+    //     """
+    //   }
+    // }
   }
 
   // post {
