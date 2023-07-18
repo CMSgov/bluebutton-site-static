@@ -43,7 +43,7 @@ pipeline {
     stage("Checkout release tag") {
       steps {
           sh '''
-            git fetch --tags"
+            git fetch --tags
             git checkout tags/\${RELEASE_TAG}
           '''
       }
