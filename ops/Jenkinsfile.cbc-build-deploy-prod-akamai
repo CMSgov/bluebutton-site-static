@@ -21,13 +21,15 @@ pipeline {
     string(
       name: "RELEASE_TAG",
       defaultValue: "",
-      description: "The release tag to deploy."
+      description: "The release tag of the site-static to deploy.",
+      required: true
     )
 
     string(
       name: "CSS_RELEASE_TAG",
-      defaultValue: "master",
-      description: "The release tag of the CSS repo to deploy. Defaults to master."
+      defaultValue: "",
+      description: "The release tag of the CSS repo to deploy.",
+      required: true
     )
   }
 
