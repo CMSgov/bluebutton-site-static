@@ -21,15 +21,13 @@ pipeline {
     string(
       name: "RELEASE_TAG",
       defaultValue: "",
-      description: "The release tag of the site-static to deploy.",
-      required: true
+      description: "The release tag of the site-static to deploy."
     )
 
     string(
       name: "CSS_RELEASE_TAG",
       defaultValue: "",
-      description: "The release tag of the CSS repo to deploy.",
-      required: true
+      description: "The release tag of the CSS repo to deploy."
     )
   }
 
@@ -42,6 +40,14 @@ pipeline {
     //     }
     //   }
     // }
+    stage("Check parameter values") {
+      if (params.RELEASE_TAG && params.CSS_RELEASE_TAG) {
+        echo "Release tag parameters are set, Proceeding to next stage..."
+      } else {
+        error "Release tag values must be set, exiting pipeline..."
+      }
+    }
+
     stage("Checkout release tag") {
       steps {
           sh '''
