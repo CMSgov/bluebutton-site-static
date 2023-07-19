@@ -100,10 +100,11 @@ pipeline {
 
     stage("Checkout CSS Repo") {
       steps {
-          sh '''
-            git fetch --tags
-            git checkout tags/\${CSS_RELEASE_TAG}
-          '''
+        checkout([
+            $class: "GitSCM",
+            branches: [[name: "refs/tags/${params.CSS_RELEASE_TAG}"]],
+            userRemoteConfigs: [[url: "https://github.com/CMSgov/bluebutton-css.git"]]
+        ])
       }
     }
 
