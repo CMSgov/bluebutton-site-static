@@ -74,7 +74,9 @@ pipeline {
 
     stage("Run Jekyll Build") {
       steps {
-        sh 'bundle exec jekyll build --config _config.yml,_config-${params.SITE_ENV}.yml'
+        sh """
+        bundle exec jekyll build --config _config.yml,_config-${params.SITE_ENV}.yml
+        """
       }
     }
 
