@@ -42,10 +42,12 @@ pipeline {
     // }
     stage("Check parameter values") {
       steps {
-        if (params.RELEASE_TAG && params.CSS_RELEASE_TAG) {
-          echo "Release tag parameters are set, Proceeding to next stage..."
-        } else {
-          error "Release tag values must be set, exiting pipeline..."
+        script {
+          if (params.RELEASE_TAG && params.CSS_RELEASE_TAG) {
+            echo "Release tag parameters are set, Proceeding to next stage..."
+          } else {
+            error "Release tag values must be set, exiting pipeline..."
+          }
         }
       }
     }
