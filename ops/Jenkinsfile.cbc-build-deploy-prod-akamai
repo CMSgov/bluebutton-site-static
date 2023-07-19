@@ -25,9 +25,9 @@ pipeline {
     )
 
     string(
-      name: "CSS_REPO_BRANCH",
+      name: "CSS_RELEASE_TAG",
       defaultValue: "master",
-      description: "The branch of the CSS repo to deploy. Defaults to master."
+      description: "The release tag of the CSS repo to deploy. Defaults to master."
     )
   }
 
@@ -88,11 +88,10 @@ pipeline {
 
     stage("Checkout CSS Repo") {
       steps {
-        checkout([
-            $class: "GitSCM",
-            branches: [[name: "${params.CSS_REPO_BRANCH}"]],
-            userRemoteConfigs: [[url: "https://github.com/CMSgov/bluebutton-css.git"]]
-        ])
+          sh '''
+            git fetch --tags
+            git checkout tags/\${CSS_RELEASE_TAG}
+          '''
       }
     }
 
