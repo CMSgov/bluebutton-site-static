@@ -32,14 +32,15 @@ pipeline {
   }
 
   stages {
-    // stage("Notify Slack") {
-    //   steps {
-    //     script {
-    //       helpers = load "ops/helpers.groovy"
-    //       helpers.slackNotify "STARTING - ENV:${params.SITE_ENV}"
-    //     }
-    //   }
-    // }
+    stage("Notify Slack") {
+      steps {
+        script {
+          helpers = load "ops/helpers.groovy"
+          helpers.slackNotify "STARTING - ENV:${params.SITE_ENV}"
+        }
+      }
+    }
+    
     stage("Check parameter values") {
       steps {
         script {
@@ -115,17 +116,17 @@ pipeline {
     }
   }
 
-  // post {
-  //   success {
-  //     script {
-  //       helpers.slackNotify("SUCCESS - ENV:${params.SITE_ENV}", "good")
-  //     }
-  //   }
+  post {
+    success {
+      script {
+        helpers.slackNotify("SUCCESS - ENV:${params.SITE_ENV}", "good")
+      }
+    }
 
-  //   failure {
-  //     script {
-  //       helpers.slackNotify("FAILURE - ENV:${params.SITE_ENV}", "bad")
-  //     }
-  //   }
-  // }
+    failure {
+      script {
+        helpers.slackNotify("FAILURE - ENV:${params.SITE_ENV}", "bad")
+      }
+    }
+  }
 }
