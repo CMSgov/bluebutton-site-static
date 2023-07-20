@@ -21,7 +21,7 @@ pipeline {
     string(
       name: "RELEASE_TAG",
       defaultValue: "",
-      description: "The release tag of the site-static to deploy."
+      description: "The release tag of the site-static repo to deploy."
     )
 
     string(
@@ -40,7 +40,7 @@ pipeline {
         }
       }
     }
-    
+
     stage("Check parameter values") {
       steps {
         script {
