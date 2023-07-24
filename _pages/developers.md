@@ -12,15 +12,11 @@ sections:
   - Overview 
   - Try the API
   - Authorization
-  - Core Resources
+  - Understanding the Data
   - Calling the API
   - Consuming the Data
-  - Sample Beneficiaries
   - Production API Access
-  - Developer Guidelines
   - Implementation Guides
-  - STU3 vs FHIR R4 Comparison Tables
-  - Additional Information
   
 ctas:
   -
@@ -470,516 +466,469 @@ Suppose your application requires information limited by a scope and you can't g
 An enrollee can revoke access to your application in the 'My Connected Apps' section of their Medicare.gov account. This results in an invalid token for that user. If a Medicare enrollee revokes access to their data, be sure to account for that use case in your application's UI so it's easy for a Medicare enrollee to understand what's happening with their Medicare data.
 
 ---
+## Understanding the Data
 
-## Core Resources
+The BB2.0 database pulls data from the [CMS Chronic Conditions Warehouse (CCW)](https://www2.ccwdata.org/web/guest/home/){:target="_blank"}, which contains Medicare Part A, B and D claims data going back to 2014\. Over 600 fields from the CCW are mapped to FHIR. These fields are surfaced across the Patient, Coverage and Explanation of Benefits FHIR resources.
 
-Base Request URL: `https://sandbox.bluebutton.cms.gov`
+### FHIR resources
 
-### FHIR Resources
+Blue Button 2.0 API data is supplied in three resources from the [FHIR standard](http://hl7.org/fhir/R4/){:target="_blank"}:
 
-- Explanation of Benefit
-- Patient
-- Coverage
+* [Explanation of Benefit](http://www.hl7.org/fhir/R4/explanationofbenefit.html){:target="_blank"} (EOB): Primary source of claims data. The EOB resource contains the lines within an episode of care, including where and when the service was performed, the diagnosis codes, the provider who performed the service, and the cost of care.
+* [Patient](http://hl7.org/fhir/R4/patient.html){:target="_blank"}: Provides information about patients including demographic information and updates to their patient identifiers.
+* [Coverage](https://hl7.org/fhir/R4/coverage.html){:target="_blank"}: Provides information about the enrollees' insurance coverage, including information about dual coverage.
 
-### UserInfo
+#### Explanation of Benefit
 
-- Get User Profile from an Authorization Token
+The Explanation of Benefit resource provides data for the following claim types:  
 
-As a security measure, the beneficiary's date of birth, SSN, and HICN will not be provided by the CMS Blue Button 2.0 API.
-
-We use [FHIR Extensions](https://www.hl7.org/fhir/extensibility.html#Extension){:target="_blank"} in our API responses.
-
-### Explanation of Benefit FHIR Resource
-
-Request:
-
-~~~
-HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id]
-~~~
-
-This request returns claims as [ExplanationOfBenefit Resources](https://hl7.org/fhir/R4/explanationofbenefit.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}. The response is typically thousands of lines long.
-
-Example response excerpt:
-
-~~~
-{
-    "resourceType": "Bundle",
-    "id": "b50fafb4-e82e-4a4f-9d4b-1caf83e82807",
-    "meta": {
-        "lastUpdated": "2022-02-14T17:27:56.303-05:00"
-    },
-    "type": "searchset",
-    "total": 99,
-    "entry": [
-        {
-            "resource": {
-                "resourceType": "ExplanationOfBenefit",
-                "id": "carrier--10045426206",
-                "meta": {
-                    "lastUpdated": "2021-06-07T21:51:33.787-04:00",
-                    "profile": [
-                        "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"
-                    ]
-                },
-                "identifier": [
-                    {
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType",
-                                    "code": "uc",
-                                    "display": "Unique Claim ID"
-                                }
-                            ]
-                        },
-                        "system": "https://bluebutton.cms.gov/resources/variables/clm_id",
-                        "value": "-10045426206"
-                    },
-	.....
-
-~~~
-[Download a sample EOB FHIR Resource](https://bluebutton.cms.gov/sample-eob-entry.json)
-
-### Patient FHIR Resource
-
-~~~
-HTTP GET /v2/fhir/Patient/[fhir_id]
-~~~
-
-
-The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html){:target="_blank"}. This information is mostly contact information, not medical data.
+* Inpatient (INPATIENT)
+* Outpatient (OUTPATIENT)
+* Skilled Nursing Facility Claims (SNF)
+* Hospice (HOSPICE)
+* Home Health Agency Claims (HHA)
+* Carrier (Professional)
+* Durable Medical Equipment (DME)
+* Prescription Drug Events - Part D (PDE)  
 
 Request:
 ~~~
-curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325"`
+HTTPGET/v2/fhir/ExplanationOfBenefit/?patient=\[fhir\_id\]`  
 ~~~
 
+This request returns claims as [Explanation of Benefit Resources](https://hl7.org/fhir/R4/explanationofbenefit.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}.   
+
+~~~
 Example response excerpt:
 
-~~~
 {
-    "resourceType": "Patient",
-    "id": "-19990000000002",
-    "meta": {
-        "lastUpdated": "2021-06-07T21:50:48.132-04:00",
-        "profile": [
-            "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"
-        ]
-    },
-    "identifier": [
-        {
-            "type": {
-                "coding": [
-                    {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "MC",
-                        "display": "Patient's Medicare number"
-                    }
-                ]
-            },
-            "system": "http://hl7.org/fhir/sid/us-mbi",
-            "value": "2S00A00AA00",
-            "period": {
-                "start": "2020-01-01"
-            }
-        }
-    ],
-    "name": [
-        {
-            "use": "usual",
-            "family": "Doe",
-            "given": [
-                "John",
-                "X"
-            ]
-        }
-    ],
-    "gender": "male",
-    "birthDate": "1999-06-01",
-    "deceasedDateTime": "1981-03-17",
-    "address": [
-        {
-            "state": "07",
-            "postalCode": "99999"
-        }
-    ]
+
+"resourceType":"Bundle",
+
+"id":"b50fafb4-e82e-4a4f-9d4b-1caf83e82807",
+
+"meta":{
+
+"lastUpdated":"2022-02-14T17:27:56.303-05:00"
+
+},
+
+"type":"searchset",
+
+"total":99,
+
+"entry":\[
+
+{
+
+"resource":{
+
+"resourceType":"ExplanationOfBenefit",
+
+"id":"carrier--10045426206",
+
+"meta":{
+
+"lastUpdated":"2021-06-07T21:51:33.787-04:00",
+
+"profile":\[
+
+"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"
+
+\]
+
+},
+
+"identifier":\[
+
+{
+
+"type":{
+
+"coding":\[
+
+{
+
+"system":"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType",
+
+"code":"uc",
+
+"display":"UniqueClaimID"
+
 }
 
+\]
+
+},
+
+"system":"https://bluebutton.cms.gov/resources/variables/clm\_id",
+
+"value":"-10045426206"
+
+},
+
+~~~
+  
+
+<a href="/sample-eob-entry.json" download>Download a sample EOB resource</a>
+
+#### Patient  
+
+~~~
+HTTPGET/v2/fhir/Patient/\[fhir\_id\]  
 ~~~
 
-[Download a sample Patient FHIR Resource](https://bluebutton.cms.gov/sample-patient-entry.json)
-
-### Coverage FHIR Resource
-
-~~~
-HTTP GET /v2/fhir/Coverage/?beneficiary=[fhir_id]
-~~~
-
-The above URL returns Coverage information as [Coverage resources](http://hl7.org/fhir/R4/coverage.html) inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html).  One coverage resource is supplied for each coverage type. Example: Part-A, Part-B
+The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html){:target="_blank"}. This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes).  
 
 Request:
 ~~~
-curl --header "Authorization: Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325"`
+curl--header"Authorization:BearerAUTHORIZATIONTOKEN""https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325"\`  
+~~~
+
+Example response excerpt:
+~~~
+{
+
+"resourceType":"Patient",
+
+"id":"-19990000000002",
+
+"meta":{
+
+"lastUpdated":"2021-06-07T21:50:48.132-04:00",
+
+"profile":\[
+
+"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"
+
+\]
+
+},
+
+"identifier":\[
+
+{
+
+"type":{
+
+"coding":\[
+
+{
+
+"system":"http://terminology.hl7.org/CodeSystem/v2-0203",
+
+"code":"MC",
+
+"display":"Patient'sMedicarenumber"
+
+}
+
+\]
+
+},
+
+"system":"http://hl7.org/fhir/sid/us-mbi",
+
+"value":"2S00A00AA00",
+
+"period":{
+
+"start":"2020-01-01"
+
+}
+
+}
+
+\],
+
+"name":\[
+
+{
+
+"use":"usual",
+
+"family":"Doe",
+
+"given":\[
+
+"John",
+
+"X"
+
+\]
+
+}
+
+\],
+
+"gender":"male",
+
+"birthDate":"1999-06-01",
+
+"deceasedDateTime":"1981-03-17",
+
+"address":\[
+
+{
+
+"state":"07",
+
+"postalCode":"99999"
+
+}
+
+\]
+
+}  
+~~~
+
+<a href="/sample-patient-entry.json" download>Download a sample Patient FHIR Resource</a>  
+
+#### Coverage  
+~~~
+HTTPGET/v2/fhir/Coverage/?beneficiary=\[fhir\_id\]  
+~~~
+The above URL returns Coverage information as [Coverage resources](http://hl7.org/fhir/R4/coverage.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}. One coverage resource is supplied for each coverage type.
+
+Request: 
+~~~
+curl--header"Authorization:BearerAUTHORIZATIONTOKEN""https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325"\`
 ~~~
 
 Response excerpt:
-~~~
+~~~S
 {
-    "resourceType": "Bundle",
-    "id": "fb4bffd7-abb3-401f-96cd-d617c545092c",
-    "meta": {
-        "lastUpdated": "2022-02-14T17:27:56.303-05:00"
-    },
-    "type": "searchset",
-    "total": 4,
-    "entry": [
-        {
-            "resource": {
-                "resourceType": "Coverage",
-                "id": "part-a--19990000000002",
-                "meta": {
-                    "lastUpdated": "2021-06-07T21:50:48.132-04:00",
-                    "profile": [
-                        "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
-                    ]
-                },
-                "status": "active",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                            "code": "SUBSIDIZ"
-                        }
-                    ]
-                },
-                "subscriberId": "2S00A00AA00",
-                "beneficiary": {
-                    "reference": "Patient/-19990000000002"
-                },
-                .....
-	       
+
+"resourceType":"Bundle",
+
+"id":"fb4bffd7-abb3-401f-96cd-d617c545092c",
+
+"meta":{
+
+"lastUpdated":"2022-02-14T17:27:56.303-05:00"
+
+},
+
+"type":"searchset",
+
+"total":4,
+
+"entry":\[
+
+{
+
+"resource":{
+
+"resourceType":"Coverage",
+
+"id":"part-a--19990000000002",
+
+"meta":{
+
+"lastUpdated":"2021-06-07T21:50:48.132-04:00",
+
+"profile":\[
+
+"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
+
+\]
+
+},
+
+"status":"active",
+
+"type":{
+
+"coding":\[
+
+{
+
+"system":"http://terminology.hl7.org/CodeSystem/v3-ActCode",
+
+"code":"SUBSIDIZ"
+
+}
+
+\]
+
+},
+
+"subscriberId":"2S00A00AA00",
+
+"beneficiary":{
+
+"reference":"Patient/-19990000000002"
+
+},
+
 ~~~
-[Download a sample Coverage FHIR Resource](https://bluebutton.cms.gov/sample-coverage-entry.json)
 
-### Compress Resources for more efficient data transfers
+  
+<a href="/sample-coverage-entry.json" download>Download a sample Coverage FHIR Resource</a>  
 
-To improve the performance when transferring large data resources it is possible to turn on compression. Gzip compression is turned off by default. Compression can be activated for the following content types:
+### UserInfo
 
-- text/html
-- text/plain
-- application/json
-- application/fhir+json
+The UserInfo endpoint is an OAuth 2.0 Protected Resource that returns information about an authenticated user.   
 
-To activate compression add the following to the header:
-~~~
-Accept-Encoding: gzip
-~~~
+Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes){:target="_blank"}.  
+  
 
-The minimum payload size we will gzip is 1 kilobyte. If the original uncompressed size of the payload is less than 1 kb, we will not apply gzip compression to our response. Therefore, developers should ensure their applications handle this scenario gracefully by checking for the **Content-Encoding: gzip** response header before trying to decompress.
+`HTTPGET/connect/userinfo`  
 
-### Get User Profile for an Authorization Token
-
-~~~
-HTTP GET /connect/userinfo
-~~~
-
-The UserInfo Endpoint is an OAuth 2.0 Protected Resource.The above URL fetches the fictitious beneficiary&#39;s basic account information given an Authorization Token. This is most often used when creating an account within your application. An HTTP GET is called and the response is returned as JSON.
+The above URL returns basic information about the user, given an authorization token. An HTTP GET is called and the response is returned as JSON.  
 
 Request:
 ~~~
-curl --header "Authorization: Bearer <AUTHORIZATION TOKEN>" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"`
+curl--header"Authorization:Bearer<AUTHORIZATIONTOKEN\>""https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"\`
 ~~~
 
-Response:
-
+Example response:
 ~~~
-{
+{  
 
-"sub": "fflinstone",
+"sub":"-123456789",  
 
-"prefered_username": "fflinstone",
+"prefered\_username":"fflinstone",  
 
-"given_name": "Fred",
+"given\_name":"Fred",  
 
-"family_name:, "Flinstone,
+"family\_name:,"Flinstone,  
 
-"name": "Fred Flinstone",
+"name":"FredFlinstone",  
 
-"email": "pebbles-daddy@example.com",
+"email":"pebbles-daddy@example.com",  
 
-"created": "2017-11-28",
+"created":"2017-11-28",  
 
-"patient": "123456789",
+"patient":"-123456789",  
 
-}
+}  
 ~~~
+### Terminology and coding systems
 
-### More Efficient Data Queries
+BB2.0 API supplies codified data using several different terminology and coding systems, defined by various standards bodies, along with locally defined CMS coding systems: 
 
-#### Query by Type
+* [ICD-10](https://www.cms.gov/Medicare/Coding/ICD10){:target="_blank"}
+* [HCPCS](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo){:target="_blank"}
+* [CPT Codes](https://www.cms.gov/Medicare/Fraud-and-Abuse/PhysicianSelfReferral){:target="_blank"}
+* [National Drug Code Directory](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory){:target="_blank"}
+* [HL7 v3 Code System ActCode](http://hl7.org/fhir/v3/ActCode/cs.html){:target="_blank"}
+* [CMS Claim Type](https://bluebutton.cms.gov/resources/codesystem/eob-type/){:target="_blank"}  
 
-Many developers are interested in specific claim types, such as Prescription Drug Events (PDE). The query by type feature will allow applications to request just those claims. This will enable applications to process and download data more quickly and efficiently.
+Additional information about coding systems can be found on the [terminology page](http://www.hl7.org/fhir/us/carin-bb/artifacts.html#5){:target="_blank"} of the [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"} and in the [Blue Button Code System Listing](https://confluence.cms.gov/download/attachments/577047980/bluebutton_system_listing.xlsx?version=1&modificationDate=1648486382000&api=v2){:target="_blank"}.  
 
-ExplanationOfBenefit resources fall into 8 types:
+BB2.0 API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html){:target="_blank"}. FHIR extensions are custom data elements that are not found in the FHIR standard:
 
-- Carrier Claims (CARRIER)
-- Durable Medical Equipment (DME)
-- Home Health Agency Claims (HHA)
-- Hospice Claims (HOSPICE)
-- Inpatient Claims (INPATIENT)
-- Outpatient Claims (OUTPATIENT)
-- Part D Events (PDE)
-- Skilled Nursing Facility Claims (SNF)
+* [Blue Button extensions in V2](https://confluence.cms.gov/download/attachments/577047980/BB_V2_extension_listing.xlsx?version=1&modificationDate=1647033244000&api=v2){:target="_blank"}
+* [Original extensions defined in Blue Button V1](https://bluebutton.cms.gov/assets/ig/extensions.html) {:target="_blank"} 
 
-By default, the FHIR API returns all of these claim types when requesting the EOB for a beneficiary. You can use the Type query parameter to request specific claim types.
+### Refresh rate and rate limiting
 
-For example, to request only Part D drug claims, add the query parameter:
+Data from the CCW is pulled into the BB2.0 API database on a weekly basis. The weekly data pull may be delayed for maintenance or because of delayed delivery of claims to the CCW.  
 
-```
-?type=pde
-```
+Our rate limit is high enough to accommodate the needs of anyone integrating with the BB2.0 API. The BB2.0 API is one of 4 CMS APIs that share the same data from the CCW. BB2.0 is for single data calls for an individual Medicare enrollee and the other 3 APIs are designed for bulk data calls. Because the rate limit is set based on the needs the bulk data APIs, the rate limit is higher than required for an application making single API calls using BB2.0\.  
 
-To request multiple claim types, a list of comma-separated values can be given for the TYPE parameter.
+### Synthetic data
 
-If multiple codes are specified, EOBs matching all of those claim types will be returned:
+Because access to real claims data is restricted in order to protect the privacy of Medicare enrollees, CMS created synthetic user accounts representing enrollment information and healthcare claims for 40,000 Medicare enrollees. Since synthetic data are realistic-but-not-real data, the typical privacy and security restrictions do not apply.  
 
+Although the synthetic user accounts are not tied to any real patient data, they mimic real claims data. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be realistic. However, the synthetic data set does not represent a longitudinal patient view or true clinical scenario. This allows you to test your integration with BB2.0 API, but could result in a patient with records for contradictory procedures. 
+
+#### Working with synthetic user accounts
+
+BB2.0 API offers 40,000 synthetic user accounts for you to test with in both the sandbox and production environments:
+
+| User account ranges | Date updated | Description | 
+| -------- | -------- | -------- | 
+| BBUser00000 to BBuser09999     | Rolling Claims updated weekly<br /> Loaded July 2023 |     Most recently updated and most useful accounts. These accounts receive new claims data on a rolling basis.  These user accounts represent a range of Medicare demographics and ages, including people under 65 who qualify for Medicare for reasons other than age. |
+| BBUser30000 to BBuser39999 | Loaded October, 2021 | static claims data |
+| BBUser10000 to BBuser19999 | Loaded 2017 |  static claims data | 
+| BBUser20000 to BBuser29999 | Loaded 2017 | static claims data | 
+{:.ds-c-table}
+
+To differentiate between synthetic data and real patient production data, synthetic records have negative Patient ID and Explanation of Benefit values (example synthetic Patient ID: -10000010254618). Real Patient IDs will always have positive values.  
+
+#### Authenticating as a synthetic user
+
+Each of our 40,000 synthetic user accounts have Medicare.gov login credentials. To log in as a synthetic user, use the following username/password combination pattern when authorizing a test user with Blue Button 2.0:
+
+* Username: BBUserXXXXX (Example: BBUser00005)
+* Password: PWXXXXX! (Example: PW00005!)  
+
+#### Claim dates in rolling claims updates
+
+When new data is added for a synthetic user account in the weekly update, the new data includes claims dated 1-2 weeks prior. This delay simulates real claim processing time in production data. Get updated claims using the [\_lastUpdated query parameter](https://bluebutton.cms.gov/developers/#query-by-lastupdated-field).  
+  
+---
+
+## Optimizing your application
+
+### Compress resources for more efficient data transfers  
+
+Turn on compression to improve performance when transferring large data resources. Gzip compression is turned off by default. Compression can be activated for the following content types:  
+
+* `text/html`
+* `text/plain`
+* `application/json`
+* `application/fhir+json`  
+
+To activate compression add the following to the header:  
+
+`Accept-Encoding: gzip`  
+
+The minimum payload size we will gzip is 1 kilobyte. Check for the `Content-Encoding: gzip` response header before trying to decompress.  
+
+### Query by type
+
+EOB resources fall into 8 types. If you only need specific types of data, the query by type feature allows you to request claims by claim type. By default, the FHIR API returns all of these claim types when requesting the EOB for an individual Medicare enrollee.  
+
+#### EOB Claim types and parameters
+
+| Claim Type | Type Parameter<br /> (case-sensitive) |
+| ---- | ---- |
+| Carrier | carrier |
+| Durable Medical Equipment | dme |
+| Home Health Agency | hha |
+| Hospice | hospice |
+| Inpatient | inpatient |
+| Outpatient | outpatient |
+| Skilled Nursing Facility | snf |
+| Prescription Drug Event | pde |
+{:.ds-c-table}
+    
+Use the query parameter to request a specific claim type. 
 ~~~
-/v2/fhir/ExplanationOfBenefit?patient=123&amp;type=carrier,dme,hha,hospice,inpatient,outpatient,snf
-~~~
-
-The full list of claim types are:
-
-* carrier: `https://bluebutton.cms.gov/resources/codesystem/eob-type|carrier`
-* pde: `https://bluebutton.cms.gov/resources/codesystem/eob-type|pde`
-* dme: `https://bluebutton.cms.gov/resources/codesystem/eob-type|dme`
-* hha: `https://bluebutton.cms.gov/resources/codesystem/eob-type|hha`
-* hospice: `https://bluebutton.cms.gov/resources/codesystem/eob-type|hospice`
-* inpatient: `https://bluebutton.cms.gov/resources/codesystem/eob-type|inpatient`
-* outpatient: `https://bluebutton.cms.gov/resources/codesystem/eob-type|outpatient`
-* snf: `https://bluebutton.cms.gov/resources/codesystem/eob-type|snf`
-
-Use lower case when requesting a claim type. If you submit an invalid combination of claim types or use the wrong case you&#39;ll see a message like this:
-
-```
-{
-
-"detail": "not a valid value"
-
-}
-```
-
-The status code for this message is a 400 Bad Request.
-
-#### Query by Type Examples
-
-In the sandbox there are synthetic beneficiaries with three of the eight claim types:
-
-- carrier
-- inpatient
-- pde
-
-Let us take a synthetic beneficiary record:
-
-Username: `BBUser20023`
-Password `PW20023!`
-
-The PATIENT ID for this beneficiary is `-20140000000024`
-
-Let us do a regular `ExplanationOfBenefit` request:
-
-~~~
-https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/
-~~~
-
-This bundle identifies 151 claims, returning the first 10. Here is how the start of the bundle will look:
-
-~~~
-{
-   "resourceType": "Bundle",
-   "id": "4a475183-4763-4ee1-b90d-1d23908a11f5",
-   "meta": {
-      "lastUpdated": "2022-02-14T17:27:56.303-05:00"
-   },
-   "type": "searchset",
-   "total": 151,
-   "link": [
-      {
-         "relation": "first",
-         "url": "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit?_format=application%2Fjson%2Bfhir&startIndex=0&_count=10&patient=-20140000000024"
-      }
-      ....
-~~~
-
-There are three claim types in this record:
-
-- Carrier (44)
-- Inpatient (1)
-- PDE (103)
-
-The queries to request each claim type individually would be:
-
-##### Carrier Claims
-
-~~~ 
-https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=carrier 
+Example: ?type=pde
 ~~~
 
-or
+To request multiple claim types, use a comma-separated list of values for the TYPE parameter. If multiple codes are specified, EOBs matching all of those claim types will be returned.   
 
+Example:  
 ~~~
-https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=https://bluebutton.cms.gov/resources/codesystem/eob-type|carrier
-~~~
-
-##### Inpatient Claims
-
-~~~
-https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=inpatient` 
+{baseURL}/ExplanationOfBenefit?patient=123&type=carrier,dme,hha,hospice,inpatient,outpatient,snf  
 ~~~
 
-or
+#### Claim type errors
 
+If you submit an invalid combination of claim types or use the wrong case you'll get an error response with a status code of `400 Bad Request`.
+
+### Query by "lastUpdated" Field  
+
+The HL7 FHIR specification provides a Meta section in each resource. The `lastUpdated` field represents the date and time of the last update and is supplied with a FHIR instant datatype  
 ~~~
-https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=https://bluebutton.cms.gov/resources/codesystem/eob-type|inpatient
+YYYY-MM-DDThh:mm:ss.sss+zz:zz.  
 ~~~
-
-##### PDE Claims
-
-Since many of our developers are interested in the Part D drug claims it is now possible to query for only PDE-type claims.
-
+The HL7 FHIR specification also provides a `\_lastUpdated query` parameter for the search operations on the endpoints. By using the `\_lastUpdated` query parameter, you can request records that have changed before or after a specific date. If you keep track of the date of a previous request, you can request just the changes since your previous request. The format of this request would be:  
 ~~~
-https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=pde` 
-~~~
-
-or
-
-~~~
-https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/?type=https://bluebutton.cms.gov/resources/codesystem/eob-type|pde
+{baseURL}/Patient?\_id=-19990000000001&\_lastUpdated=gt2020-02-13T08:00:00-05:00  
 ~~~
 
-### Query by lastUpdated Field
+Do not use dates before 2020-02-12 with the `\_lastUpdated parameter`. 
 
-The HL7 FHIR specification provides a [Meta](https://www.hl7.org/fhir/resource.html#Meta){:target="_blank"} section in each resource. The lastUpdated field represents the date and time of the last update. This takes the format of an "instant" type:
-
-`YYYY-MM-DDThh:mm:ss.sss+zz:zz`
-
-The HL7 FHIR specification also provides a `_lastUpdated` query parameter for the search operations on the end-points. By using the `_lastUpdated` query parameter, **an application will be able to request only the records that have changed before or after a specific date**. If you keep track of the date of a previous request, you can request just the changes since your previous request. The format of this request would be:
-
+The Blue Button API supports operators for less than (lt), greater than (gt), less than or equal (le), and greater than or equal (ge) the specified instant. You can also specify a time interval by using two `\_lastUpdated parameters` like this:  
 ~~~
-https://sandbox.bluebutton.cms.gov/v2/fhir/Patient?_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir&#39;
+{baseURL}/ExplanationOfBenefit?patient=Patient/-19990000000001&\_lastUpdated=gt2020-02-13T08:00:00-05:00&\_lastUpdated=lt2020-02-14T08:00:00-05:00
 ~~~
-
-_Note: Do not input dates before 2020-02-12 with `_lastUpdated`. Limitations of our backend service prevent data before 2020-02-12 from being tagged correctly._
-
-The output from that request would look like this:
-
-Request URL:
-
-~~~
-/v2/fhir/Patient?_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir&#39;
-~~~
-
-Example response excerpt:
-
-~~~
-{
-
-"resourceType": "Bundle",
-
-"id": "7d8ff6a1-95f9-4210-b08b-58a96ea74494",
-
-"meta": {
-
-"lastUpdated": "2020-02-14T08:57:16.641-05:00"
-
-},
-
-"type": "searchset",
-
-"total": 1,
-
-"link": [
-
-{
-
-"relation": "self",
-
-"url": "https://prod-sbx.bfdcloud.net/v2/fhir/Patient?_format=application%2Fjson%2Bfhir&amp;_id=-19990000000001&amp;_lastUpdated=gt2020-02-13T08%3A00%3A00-05%3A00"
-
-}
-
-],
-
-"entry": [
-
-{
-
-"resource": {
-
-"resourceType": "Patient",
-
-"id": "-19990000000001",
-
-"meta": {
-
-"lastUpdated": "2020-02-13T21:53:06.017-05:00"
-
-},
-
-~~~
-
-The BB2.0 API supports operators for less than (lt), greater than (gt), less than or equal (le), and greater than or equal (ge) the specified instant. It is also possible to specify a time interval by using two `_lastUpdated` parameters like this:
-
-~~~
-/v2/fhir/ExplanationOfBenefit?patient=Patient/-19990000000001&amp;_lastUpdated=gt2020-02-13T08:00:00-05:00&amp;_lastUpdated=lt2020-02-14T08:00:00-05:00&amp;_format=application%2Fjson%2Bfhir`
-~~~
-
-### FHIR Data Model
-
-We have mapped over 1,300 fields from the CMS Chronic Conditions Data Warehouse (CCW) into FHIR. These fields are surfaced across the Patient, Coverage and Explanation of Benefits FHIR resources.
-
-- Beneficiary Enrollment Record
-- Carrier Claims (CARRIER)
-- Durable Medical Equipment (DME)
-- Home Health Agency Claims (HHA)
-- Hospice Claims (HOSPICE)
-- Inpatient Claims (INPATIENT)
-- Outpatient Claims (OUTPATIENT)
-- Part D Events (PDE)
-- Skilled Nursing Facility Claims (SNF)
-
-The Blue Button 2.0 API FHIR data model leverages coding systems specific to Medicare billing forms and/or the Chronic Conditions Warehouse, FHIR and Industry Coding Systems.
-
-For Example:
-
-- [National Drug Code Directory](https://www.accessdata.fda.gov/scripts/cder/ndc/){:target="_blank"}
-- [HL7 v3 Code System ActCode](http://hl7.org/fhir/v3/ActCode/cs.html){:target="_blank"}
-- [ICD-10](https://terminology.hl7.org/4.0.0/CodeSystem-icd10CM.html){:target="_blank"}
-
-[View the full list of Blue Button 2.0 API FHIR Data Model Coding Systems and Identifiers](https://github.com/CMSgov/bluebutton-data-server/blob/master/dev/data-model.md){:target="_blank"}
-
-#### How Often Will New/Updated Data Be Available?
-
-Medicare Part A, B, and D claims data will be refreshed weekly.
-
-Our schedules may vary depending on many things like maintenance, delayed delivery of claims to the CCW data warehouse, or additional data quality processing that&#39;s needed.
-
-We recommend you have a daily job to fetch new claims data for your users. Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the Blue Button 2.0 API Terms of Service.
-
-#### Synthetic Data
-
-The CMS Blue Button 2.0 API offers a synthetic data set for developers to test against. This means that each request returns a realistic value. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be accurate.
-
-Please note that this synthetic data set does not represent a longitudinal patient view. The claims—though representative independently—are shuffled and randomly assigned to patients. To build the synthetic data set, we selected a number of random claims, and shuffled them like a deck of cards among a group of fictitious Patient IDs. This will allow developers to test the Blue Button 2.0 API system, but could result in a patient with records for contradictory procedures.
-
-#### Production Data
-
-The CMS Blue Button 2.0 API has at least one claim for over 60M beneficiaries.
-
-Today, there are approximately 38M beneficiaries in traditional or fee-for-service Medicare. The Blue Button 2.0 API has Part A/B/D data for those beneficiaries plus Part D data for some beneficiaries on Medicare Advantage plans.
-
-Part D has always been a separate program, but certain plans include both the MA benefits (Part C) and Part D. As a result, Part D drug event data is collected separately from MA encounter data. Part D drug event data for all participants in Part D has been collected by the agency since the program began in the mid-2000s.
-
-The API also has historical claims data going back four years. All of these factors contribute to the 53M number we use to describe the total number of beneficiaries available via the Blue Button 2.0 API.
 
 ---
 
@@ -1400,113 +1349,9 @@ Linking item example:
 
 ---
 
-## Sample Beneficiaries
-
-[CSV of sample beneficiaries with rich claims data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv)
-
-When getting started with the Blue Button 2.0 API, it can be overwhelming to understand all of the coding systems and types of data that can be found in the Explanation of Benefit FHIR resource.
-
-We have provided some hypothetical Beneficiaries to help give you a sense of what is found in Medicare Claims data.
-
-### Meet Lucille
-
-
-Lucille is a 70-year old female. She has non-small cell lung cancer. Prior to her diagnosis, Lucille was active and had no significant health issues. She went on daily walks around her neighborhood, did yoga and made a concerted effort to eat healthy. Lucille smoked cigarettes for a few years when she was a teenager, but she quit after her father passed away from lung cancer. Her only other family history is mild hypertension on her mother’s side.
-
-Below are some examples you may find in the Explanation of Benefit FHIR resource for Lucille.
-
-Office Visit
-```
-"service": {
-
-"coding": [{
-
-"system": "https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/index.html",
-
-"version": "0",
-
-"code": "99215"
-
-Lung Biopsy
-
-"procedureCodeableConcept": {
-
-"coding": [{
-
-"system": "http://hl7.org/fhir/sid/icd-9-cm",
-
-"code": "3328"
-
-Diagnostic Radiology
-
-"service": {
-
-"coding": [{
-
-"system": "https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/index.html",
-
-"version": "0",
-
-"code": "70553"
-
-Radiation Therapy
-
-"service": {
-
-"coding": [{
-
-"system": "https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/index.html",
-
-"version": "9",
-
-"code": "77263"
-
-Chemo
-
-"service": {
-
-"coding": [{
-
-"system": "https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/index.html",
-
-"version": "0",
-
-"code": "96400"
-```
-
-### Meet Jack
-
-Jack is a 70 year-old male with Type 2 Diabetes and high blood pressure. Jack takes daily medication and his Doctor told him he needs to lose weight. He takes Glimepiride to help control his blood sugar and previously was on Metformin.
-
-[Learn more about "Jack" (PDF)](https://cmsgov.github.io/bluebutton-developer-help/Jack-Persona.pdf){:target="_blank"}
-
----
-
 ## Production API Access
 
 In order to gain production access, an organization should start by reviewing the [Terms of Service](https://bluebutton.cms.gov/terms/), [production access user guide](https://bluebutton.cms.gov/guide/), and [checklist](https://bluebutton.cms.gov/checklist/). Once an organization believes it is fulfilling all the requirements detailed in the checklist and is adherent to the terms of service, they should email [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov) to set up a production access demonstration meeting with the CMS team.
-
----
-
-## Developer Guidelines
-
-Below are guidelines you should follow to be successful in your Blue Button 2.0 API integration.
-
-### Your Privacy Policy
-
-You will be asked to provide a URL to your privacy policy and terms and conditions when registering your app in the Blue Button 2.0 API Developer Portal. These links should be easy to access and understand by a beneficiary using your app. Consider using the [Model Privacy Notice](https://www.healthit.gov/topic/privacy-security-and-hipaa/model-privacy-notice-mpn){:target="_blank"}.
-
-### Rate Limiting and Data Refresh
-
-Medicare Part A, B, and D claims data will be refreshed weekly.
-
-Our schedules may vary depending on many things like maintenance, delayed delivery of claims to the CCW data warehouse, or additional data quality processing that&#39;s needed.
-
-We recommend you have a daily or weekly job to fetch new claims data for your users. Please be responsible with your API usage and comply with the Service Management Rights to Limit conditions in the [Blue Button 2.0 API Terms of Service](https://bluebutton.cms.gov/terms/).
-
-### Use of the Blue Button 2.0 API Logo
-
-The Blue Button 2.0 API logo and usage guidelines is detailed [here](https://www.healthit.gov/topic/health-it-initiatives/blue-button/logo-and-usage){:target="_blank"}.
 
 ---
 
@@ -1531,28 +1376,6 @@ The purpose of this IG is to outline the different artifacts released by CARIN f
 ](https://github.com/HL7/carin-bb/){:target="_blank"} 
 
 This implementation guide describes the CARIN Blue Button® Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
-
----
-
-## STU3 vs FHIR R4 Comparison Tables
-
-See also the [version transforms](https://www.hl7.org/fhir/r3maps.html){:target="_blank"} and the note about [version specific extensions](https://www.hl7.org/fhir/versions.html#extensions){:target="_blank"}. (This analysis is available as [XML](https://www.hl7.org/fhir/fhir.diff.xml){:target="_blank"} or [JSON](https://www.hl7.org/fhir/fhir.diff.json){:target="_blank"} from HL7 (note: this includes all R4 data).
-
----
-
-## Additional Information
-
-### Migrating to v2/FHIR R4 FAQ
-- [Frequently Asked Questions about the V2 API transition for Blue Button 2.0 API (BB2.0)](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ){:target="_blank"}
- 
-### Where can you find the latest information?
-
-Join the Google Groups for any APIs you access for the most up to date information:
-
-- [Blue Button 2.0 (BB2.0)](https://groups.google.com/g/developer-group-for-cms-blue-button-api){:target="_blank"}
-- [Beneficiary Claims Data API (BCDA)](https://groups.google.com/forum/#!forum/bc-api){:target="_blank"}
-- [Data at the Point of Care (DPC)](https://groups.google.com/forum/#!forum/dpc-api){:target="_blank"}
-- [Medicare Claims Data to Part D Sponsors (AB2D)](https://groups.google.com/g/ab2d-api){:target="_blank"}
 
 ---
 
