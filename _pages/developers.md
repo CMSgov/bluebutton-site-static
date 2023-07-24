@@ -12,11 +12,12 @@ sections:
   - Overview 
   - Try the API
   - Authorization
-  - Understanding the Data
+  - Understanding the data
   - Calling the API
-  - Consuming the Data
-  - Production API Access
-  - Implementation Guides
+  - Consuming the data
+  - Optimizing your application
+  - Production API access
+  - Implementation guides
   
 ctas:
   -
@@ -466,7 +467,7 @@ Suppose your application requires information limited by a scope and you can't g
 An enrollee can revoke access to your application in the 'My Connected Apps' section of their Medicare.gov account. This results in an invalid token for that user. If a Medicare enrollee revokes access to their data, be sure to account for that use case in your application's UI so it's easy for a Medicare enrollee to understand what's happening with their Medicare data.
 
 ---
-## Understanding the Data
+## Understanding the data
 
 The BB2.0 database pulls data from the [CMS Chronic Conditions Warehouse (CCW)](https://www2.ccwdata.org/web/guest/home/){:target="_blank"}, which contains Medicare Part A, B and D claims data going back to 2014\. Over 600 fields from the CCW are mapped to FHIR. These fields are surfaced across the Patient, Coverage and Explanation of Benefits FHIR resources.
 
@@ -861,116 +862,7 @@ When new data is added for a synthetic user account in the weekly update, the ne
   
 ---
 
-## Optimizing your application
-
-### Compress resources for more efficient data transfers  
-
-Turn on compression to improve performance when transferring large data resources. Gzip compression is turned off by default. Compression can be activated for the following content types:  
-
-* `text/html`
-* `text/plain`
-* `application/json`
-* `application/fhir+json`  
-
-To activate compression add the following to the header:  
-
-`Accept-Encoding: gzip`  
-
-The minimum payload size we will gzip is 1 kilobyte. Check for the `Content-Encoding: gzip` response header before trying to decompress.  
-
-### Query by type
-
-EOB resources fall into 8 types. If you only need specific types of data, the query by type feature allows you to request claims by claim type. By default, the FHIR API returns all of these claim types when requesting the EOB for an individual Medicare enrollee.  
-
-#### EOB Claim types and parameters
-
-| Claim Type | Type Parameter<br /> (case-sensitive) |
-| ---- | ---- |
-| Carrier | carrier |
-| Durable Medical Equipment | dme |
-| Home Health Agency | hha |
-| Hospice | hospice |
-| Inpatient | inpatient |
-| Outpatient | outpatient |
-| Skilled Nursing Facility | snf |
-| Prescription Drug Event | pde |
-{:.ds-c-table}
-    
-Use the query parameter to request a specific claim type. 
-~~~
-Example: ?type=pde
-~~~
-
-To request multiple claim types, use a comma-separated list of values for the TYPE parameter. If multiple codes are specified, EOBs matching all of those claim types will be returned.   
-
-Example:  
-~~~
-{baseURL}/ExplanationOfBenefit?patient=123&type=carrier,dme,hha,hospice,inpatient,outpatient,snf  
-~~~
-
-#### Claim type errors
-
-If you submit an invalid combination of claim types or use the wrong case you'll get an error response with a status code of `400 Bad Request`.
-
-### Query by "lastUpdated" Field  
-
-The HL7 FHIR specification provides a Meta section in each resource. The `lastUpdated` field represents the date and time of the last update and is supplied with a FHIR instant datatype  
-~~~
-YYYY-MM-DDThh:mm:ss.sss+zz:zz.  
-~~~
-The HL7 FHIR specification also provides a `\_lastUpdated query` parameter for the search operations on the endpoints. By using the `\_lastUpdated` query parameter, you can request records that have changed before or after a specific date. If you keep track of the date of a previous request, you can request just the changes since your previous request. The format of this request would be:  
-~~~
-{baseURL}/Patient?\_id=-19990000000001&\_lastUpdated=gt2020-02-13T08:00:00-05:00  
-~~~
-
-Do not use dates before 2020-02-12 with the `\_lastUpdated parameter`. 
-
-The Blue Button API supports operators for less than (lt), greater than (gt), less than or equal (le), and greater than or equal (ge) the specified instant. You can also specify a time interval by using two `\_lastUpdated parameters` like this:  
-~~~
-{baseURL}/ExplanationOfBenefit?patient=Patient/-19990000000001&\_lastUpdated=gt2020-02-13T08:00:00-05:00&\_lastUpdated=lt2020-02-14T08:00:00-05:00
-~~~
-
----
-
-## Calling the API
-
-This section provides information on basic and common queries against the Blue Button API.  For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}.
-
-
-### Base FHIR URLs
-
-| Environment | Purpose | Base URL |
-| -------- | -------- | -------- |
-| Sandbox     | Development and Testing     | `https://sandbox.bluebutton.cms.gov/v2/fhir/`   |
-| Production | Production Data Access | `https://api.bluebutton.cms.gov/v2/fhir/`|
-{:.ds-c-table}
-
-    
-To find beneficiaries with varying volumes and types of data, use this [CSV of synthetic data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv). Using the synthetic data, you can break down claims by type (carrier, inpatient, etc.) for each beneficiary/user combination.  Synthetic data works in both the Sandbox and Production environments.
-	
-
-
-### Querying Resources
-A listing of common API calls are shown in the table below.  See "Base FHIR URLs" above and substitute for {baseURL} as appropriate.  
-    
-For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}.  
-
-
-
-| Resource | Request | Description |
-| -------- | -------- | -------- |
-| Patient     | `HTTP GET {baseURL}/Patient`     | Returns a [bundle](https://www.hl7.org/fhir/bundle.html){:target="_blank"} of [Patient resources](https://www.hl7.org/fhir/patient.html){:target="_blank"} with one entry (one patient resource).  You can use the resource ID `Bundle.entry.resource.id`in later queries.  For synthetic data, the ID is a negative number.     |
-| Patient | `HTTP GET {baseURL}/Patient/{id}` | Returns a single Patient resource.  Replace `{id}` with a valid patient resource ID.  See `/Patient` call above. |
-| Coverage | `HTTP GET {baseURL}/Coverage?beneficiary={ id }`<br>OR<br>`HTTP GET {baseURL}/Coverage`| Replace `{id}` with the patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html){:target="_blank"} of [Coverage resources](https://www.hl7.org/fhir/coverage.html){:target="_blank"} |
-| Explanation of Benefit |  `HTTP GET {baseURL}/ExplanationOfBenefit?patient={ id }`<br />OR<br />`HTTP GET {baseURL}/ExplanationOfBenefit`| Replace `{id}` with patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html){:target="_blank"} of [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"}.  The bundle should contain one or more EOBs. You can use the resource ID located at `Bundle.entry.resource.id` (the explanation of benefit resource ID) in later queries.  For synthetic data, the ID is typically formatted as `[claimtype]`–`[number]` Example: `carrier--10114937820` |
-| Explanation of Benefit  | `HTTP GET {baseURL}/ExplanationOfBenefit/{id}` | Returns a single [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"}.  Replace {id} with a valid EOB resource ID.  See `/ExplanationOfBenefit` call above. |
-| Capability Statement | `HTTP GET {baseURL}/metadata` | Returns the [FHIR capability statement](https://www.hl7.org/fhir/capabilitystatement.html){:target="_blank"} (Example: the FHIR features and operations supported by this server) |
-| User Info | `HTTP GET {host}/{version}/connect/userinfo` | If the user grants access to access to their personal information, `UserInfo` returns name, family name and email. If the user denies access to their personal information, `UserInfo` returns `You do not have permission.` | 
-{:.ds-c-table}
-
----
-
-## Consuming the Data
+## Consuming the data
 The Blue Button API includes over 1300 data elements with a wide variety of data exchange use cases. Here are some basics to get you started with common data elements. 
 
 For complete implementation guidance, see the [FHIR specification](http://www.hl7.org/fhir/index.html){:target="_blank"} and the [CARIN implementation guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"}. Our [Resources page](https://bluebutton.cms.gov/resources/) also includes links to tutorials and helpful information on FHIR.
@@ -1349,7 +1241,116 @@ Linking item example:
 
 ---
 
-## Production API Access
+## Calling the API
+
+This section provides information on basic and common queries against the Blue Button API.  For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}.
+
+
+### Base FHIR URLs
+
+| Environment | Purpose | Base URL |
+| -------- | -------- | -------- |
+| Sandbox     | Development and Testing     | `https://sandbox.bluebutton.cms.gov/v2/fhir/`   |
+| Production | Production Data Access | `https://api.bluebutton.cms.gov/v2/fhir/`|
+{:.ds-c-table}
+
+    
+To find beneficiaries with varying volumes and types of data, use this [CSV of synthetic data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv). Using the synthetic data, you can break down claims by type (carrier, inpatient, etc.) for each beneficiary/user combination.  Synthetic data works in both the Sandbox and Production environments.
+	
+
+
+### Querying Resources
+A listing of common API calls are shown in the table below.  See "Base FHIR URLs" above and substitute for {baseURL} as appropriate.  
+    
+For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}.  
+
+
+
+| Resource | Request | Description |
+| -------- | -------- | -------- |
+| Patient     | `HTTP GET {baseURL}/Patient`     | Returns a [bundle](https://www.hl7.org/fhir/bundle.html){:target="_blank"} of [Patient resources](https://www.hl7.org/fhir/patient.html){:target="_blank"} with one entry (one patient resource).  You can use the resource ID `Bundle.entry.resource.id`in later queries.  For synthetic data, the ID is a negative number.     |
+| Patient | `HTTP GET {baseURL}/Patient/{id}` | Returns a single Patient resource.  Replace `{id}` with a valid patient resource ID.  See `/Patient` call above. |
+| Coverage | `HTTP GET {baseURL}/Coverage?beneficiary={ id }`<br>OR<br>`HTTP GET {baseURL}/Coverage`| Replace `{id}` with the patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html){:target="_blank"} of [Coverage resources](https://www.hl7.org/fhir/coverage.html){:target="_blank"} |
+| Explanation of Benefit |  `HTTP GET {baseURL}/ExplanationOfBenefit?patient={ id }`<br />OR<br />`HTTP GET {baseURL}/ExplanationOfBenefit`| Replace `{id}` with patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html){:target="_blank"} of [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"}.  The bundle should contain one or more EOBs. You can use the resource ID located at `Bundle.entry.resource.id` (the explanation of benefit resource ID) in later queries.  For synthetic data, the ID is typically formatted as `[claimtype]`–`[number]` Example: `carrier--10114937820` |
+| Explanation of Benefit  | `HTTP GET {baseURL}/ExplanationOfBenefit/{id}` | Returns a single [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"}.  Replace {id} with a valid EOB resource ID.  See `/ExplanationOfBenefit` call above. |
+| Capability Statement | `HTTP GET {baseURL}/metadata` | Returns the [FHIR capability statement](https://www.hl7.org/fhir/capabilitystatement.html){:target="_blank"} (Example: the FHIR features and operations supported by this server) |
+| User Info | `HTTP GET {host}/{version}/connect/userinfo` | If the user grants access to access to their personal information, `UserInfo` returns name, family name and email. If the user denies access to their personal information, `UserInfo` returns `You do not have permission.` | 
+{:.ds-c-table}
+
+---
+
+## Optimizing your application
+
+### Compress resources for more efficient data transfers  
+
+Turn on compression to improve performance when transferring large data resources. Gzip compression is turned off by default. Compression can be activated for the following content types:  
+
+* `text/html`
+* `text/plain`
+* `application/json`
+* `application/fhir+json`  
+
+To activate compression add the following to the header:  
+
+`Accept-Encoding: gzip`  
+
+The minimum payload size we will gzip is 1 kilobyte. Check for the `Content-Encoding: gzip` response header before trying to decompress.  
+
+### Query by type
+
+EOB resources fall into 8 types. If you only need specific types of data, the query by type feature allows you to request claims by claim type. By default, the FHIR API returns all of these claim types when requesting the EOB for an individual Medicare enrollee.  
+
+#### EOB Claim types and parameters
+
+| Claim Type | Type Parameter<br /> (case-sensitive) |
+| ---- | ---- |
+| Carrier | carrier |
+| Durable Medical Equipment | dme |
+| Home Health Agency | hha |
+| Hospice | hospice |
+| Inpatient | inpatient |
+| Outpatient | outpatient |
+| Skilled Nursing Facility | snf |
+| Prescription Drug Event | pde |
+{:.ds-c-table}
+    
+Use the query parameter to request a specific claim type. 
+~~~
+Example: ?type=pde
+~~~
+
+To request multiple claim types, use a comma-separated list of values for the TYPE parameter. If multiple codes are specified, EOBs matching all of those claim types will be returned.   
+
+Example:  
+~~~
+{baseURL}/ExplanationOfBenefit?patient=123&type=carrier,dme,hha,hospice,inpatient,outpatient,snf  
+~~~
+
+#### Claim type errors
+
+If you submit an invalid combination of claim types or use the wrong case you'll get an error response with a status code of `400 Bad Request`.
+
+### Query by "lastUpdated" Field  
+
+The HL7 FHIR specification provides a Meta section in each resource. The `lastUpdated` field represents the date and time of the last update and is supplied with a FHIR instant datatype  
+~~~
+YYYY-MM-DDThh:mm:ss.sss+zz:zz.  
+~~~
+The HL7 FHIR specification also provides a `\_lastUpdated query` parameter for the search operations on the endpoints. By using the `\_lastUpdated` query parameter, you can request records that have changed before or after a specific date. If you keep track of the date of a previous request, you can request just the changes since your previous request. The format of this request would be:  
+~~~
+{baseURL}/Patient?\_id=-19990000000001&\_lastUpdated=gt2020-02-13T08:00:00-05:00  
+~~~
+
+Do not use dates before 2020-02-12 with the `\_lastUpdated parameter`. 
+
+The Blue Button API supports operators for less than (lt), greater than (gt), less than or equal (le), and greater than or equal (ge) the specified instant. You can also specify a time interval by using two `\_lastUpdated parameters` like this:  
+~~~
+{baseURL}/ExplanationOfBenefit?patient=Patient/-19990000000001&\_lastUpdated=gt2020-02-13T08:00:00-05:00&\_lastUpdated=lt2020-02-14T08:00:00-05:00
+~~~
+
+---
+
+## Production API access
 
 In order to gain production access, an organization should start by reviewing the [Terms of Service](https://bluebutton.cms.gov/terms/), [production access user guide](https://bluebutton.cms.gov/guide/), and [checklist](https://bluebutton.cms.gov/checklist/). Once an organization believes it is fulfilling all the requirements detailed in the checklist and is adherent to the terms of service, they should email [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov) to set up a production access demonstration meeting with the CMS team.
 
