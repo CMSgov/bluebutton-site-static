@@ -494,79 +494,40 @@ The Explanation of Benefit resource provides data for the following claim types:
 
 Request:
 ~~~
-HTTPGET/v2/fhir/ExplanationOfBenefit/?patient=\[fhir\_id\]`  
+HTTP GET/v2/fhir/ExplanationOfBenefit/?patient=\[fhir\_id\]  
 ~~~
 
 This request returns claims as [Explanation of Benefit Resources](https://hl7.org/fhir/R4/explanationofbenefit.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}.   
 
 ~~~
 Example response excerpt:
-
-{
-
-"resourceType":"Bundle",
-
-"id":"b50fafb4-e82e-4a4f-9d4b-1caf83e82807",
-
-"meta":{
-
-"lastUpdated":"2022-02-14T17:27:56.303-05:00"
-
-},
-
-"type":"searchset",
-
 "total":99,
-
 "entry":\[
-
-{
-
-"resource":{
-
-"resourceType":"ExplanationOfBenefit",
-
-"id":"carrier--10045426206",
-
-"meta":{
-
-"lastUpdated":"2021-06-07T21:51:33.787-04:00",
-
-"profile":\[
-
-"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"
-
-\]
-
-},
-
-"identifier":\[
-
-{
-
-"type":{
-
-"coding":\[
-
-{
-
-"system":"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType",
-
-"code":"uc",
-
-"display":"UniqueClaimID"
-
-}
-
-\]
-
-},
-
-"system":"https://bluebutton.cms.gov/resources/variables/clm\_id",
-
-"value":"-10045426206"
-
-},
+	{
+		"resource":{
+			"resourceType":"ExplanationOfBenefit",
+			"id":"carrier--10045426206",
+			"meta":{
+				"lastUpdated":"2021-06-07T21:51:33.787-04:00",
+				"profile":\[
+					"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"
+\
+				]
+			},
+			"identifier":\[
+				{
+					"type":{
+						"coding":\[
+							{
+								"system":"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType",
+								"code":"uc",
+								"display":"UniqueClaimID"
+							}\
+						]
+					},
+					"system":"https://bluebutton.cms.gov/resources/variables/clm\_id",
+					"value":"-10045426206"
+				},
 
 ~~~
   
@@ -590,95 +551,55 @@ Example response excerpt:
 ~~~
 {
 
-"resourceType":"Patient",
-
-"id":"-19990000000002",
-
-"meta":{
-
-"lastUpdated":"2021-06-07T21:50:48.132-04:00",
-
-"profile":\[
-
-"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"
-
-\]
-
-},
-
-"identifier":\[
-
 {
-
-"type":{
-
-"coding":\[
-
-{
-
-"system":"http://terminology.hl7.org/CodeSystem/v2-0203",
-
-"code":"MC",
-
-"display":"Patient'sMedicarenumber"
-
+	"resourceType":"Patient",
+	"id":"-19990000000002",
+	"meta":{
+		"lastUpdated":"2021-06-07T21:50:48.132-04:00",
+		"profile":\[
+			"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"
+\
+		]
+	},
+	"identifier":\[
+		{
+			"type":{
+				"coding":\[
+					{
+						"system":"http://terminology.hl7.org/CodeSystem/v2-0203",
+						"code":"MC",
+						"display":"Patient'sMedicarenumber"
+					}\
+				]
+			},
+			"system":"http://hl7.org/fhir/sid/us-mbi",
+			"value":"2S00A00AA00",
+			"period":{
+				"start":"2020-01-01"
+			}
+		}\
+	],
+	"name":\[
+		{
+			"use":"usual",
+			"family":"Doe",
+			"given":\[
+				"John",
+				"X"
+\
+			]
+		}\
+	],
+	"gender":"male",
+	"birthDate":"1999-06-01",
+	"deceasedDateTime":"1981-03-17",
+	"address":\[
+		{
+			"state":"07",
+			"postalCode":"99999"
+		}\
+	]
 }
-
-\]
-
-},
-
-"system":"http://hl7.org/fhir/sid/us-mbi",
-
-"value":"2S00A00AA00",
-
-"period":{
-
-"start":"2020-01-01"
-
-}
-
-}
-
-\],
-
-"name":\[
-
-{
-
-"use":"usual",
-
-"family":"Doe",
-
-"given":\[
-
-"John",
-
-"X"
-
-\]
-
-}
-
-\],
-
-"gender":"male",
-
-"birthDate":"1999-06-01",
-
-"deceasedDateTime":"1981-03-17",
-
-"address":\[
-
-{
-
-"state":"07",
-
-"postalCode":"99999"
-
-}
-
-\]
 
 }  
 ~~~
@@ -697,70 +618,40 @@ curl--header"Authorization:BearerAUTHORIZATIONTOKEN""https://sandbox.bluebutton.
 ~~~
 
 Response excerpt:
-~~~S
+~~~
 {
-
-"resourceType":"Bundle",
-
-"id":"fb4bffd7-abb3-401f-96cd-d617c545092c",
-
-"meta":{
-
-"lastUpdated":"2022-02-14T17:27:56.303-05:00"
-
-},
-
-"type":"searchset",
-
-"total":4,
-
-"entry":\[
-
-{
-
-"resource":{
-
-"resourceType":"Coverage",
-
-"id":"part-a--19990000000002",
-
-"meta":{
-
-"lastUpdated":"2021-06-07T21:50:48.132-04:00",
-
-"profile":\[
-
-"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
-
-\]
-
-},
-
-"status":"active",
-
-"type":{
-
-"coding":\[
-
-{
-
-"system":"http://terminology.hl7.org/CodeSystem/v3-ActCode",
-
-"code":"SUBSIDIZ"
-
-}
-
-\]
-
-},
-
-"subscriberId":"2S00A00AA00",
-
-"beneficiary":{
-
-"reference":"Patient/-19990000000002"
-
-},
+	"resourceType":"Bundle",
+	"id":"fb4bffd7-abb3-401f-96cd-d617c545092c",
+	"meta":{
+		"lastUpdated":"2022-02-14T17:27:56.303-05:00"
+	},
+	"type":"searchset",
+	"total":4,
+	"entry":\[
+		{
+			"resource":{
+				"resourceType":"Coverage",
+				"id":"part-a--19990000000002",
+				"meta":{
+					"lastUpdated":"2021-06-07T21:50:48.132-04:00",
+					"profile":\[
+						"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
+\
+					]
+				},
+				"status":"active",
+				"type":{
+					"coding":\[
+						{
+							"system":"http://terminology.hl7.org/CodeSystem/v3-ActCode",
+							"code":"SUBSIDIZ"
+						}\
+					]
+				},
+				"subscriberId":"2S00A00AA00",
+				"beneficiary":{
+					"reference":"Patient/-19990000000002"
+				},
 
 ~~~
 
@@ -785,25 +676,16 @@ curl--header"Authorization:Bearer<AUTHORIZATIONTOKEN\>""https://sandbox.bluebutt
 
 Example response:
 ~~~
-{  
-
-"sub":"-123456789",  
-
-"prefered\_username":"fflinstone",  
-
-"given\_name":"Fred",  
-
-"family\_name:,"Flinstone,  
-
-"name":"FredFlinstone",  
-
-"email":"pebbles-daddy@example.com",  
-
-"created":"2017-11-28",  
-
-"patient":"-123456789",  
-
-}  
+{
+	"sub":"-123456789",
+	"prefered\_username":"fflinstone",
+	"given\_name":"Fred",
+	"family\_name:,"Flinstone,
+	"name":"FredFlinstone",
+	"email":"pebbles-daddy@example.com",
+	"created":"2017-11-28",
+	"patient":"-123456789",
+}
 ~~~
 ### Terminology and coding systems
 
