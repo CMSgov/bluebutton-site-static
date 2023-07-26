@@ -528,6 +528,10 @@ Example response excerpt:
 					"system":"https://bluebutton.cms.gov/resources/variables/clm\_id",
 					"value":"-10045426206"
 				},
+            ]
+        }
+    }
+]
 
 ~~~
   
