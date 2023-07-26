@@ -499,39 +499,41 @@ HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=\[fhir\_id\]
 
 This request returns claims as [Explanation of Benefit Resources](https://hl7.org/fhir/R4/explanationofbenefit.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}.   
 
-~~~
 Example response excerpt:
-"total":99,
-"entry":\[
-	{
-		"resource":{
-			"resourceType":"ExplanationOfBenefit",
-			"id":"carrier--10045426206",
-			"meta":{
-				"lastUpdated":"2021-06-07T21:51:33.787-04:00",
-				"profile":\[
-					"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"
-\
-				]
-			},
-			"identifier":\[
-				{
-					"type":{
-						"coding":\[
-							{
-								"system":"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType",
-								"code":"uc",
-								"display":"UniqueClaimID"
-							}\
-						]
-					},
-					"system":"https://bluebutton.cms.gov/resources/variables/clm\_id",
-					"value":"-10045426206"
-				},
-            ]
+~~~
+{
+    "total":99,
+    "entry":\[
+        {
+            "resource":{
+                "resourceType":"ExplanationOfBenefit",
+                "id":"carrier--10045426206",
+                "meta":{
+                    "lastUpdated":"2021-06-07T21:51:33.787-04:00",
+                    "profile":\[
+                        "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"
+    \
+                    ]
+                },
+                "identifier":\[
+                    {
+                        "type":{
+                            "coding":\[
+                                {
+                                    "system":"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType",
+                                    "code":"uc",
+                                    "display":"UniqueClaimID"
+                                }\
+                            ]
+                        },
+                        "system":"https://bluebutton.cms.gov/resources/variables/clm\_id",
+                        "value":"-10045426206"
+                    },
+                ]
+            }
         }
-    }
-]
+    ]
+}
 
 ~~~
   
@@ -553,59 +555,57 @@ curl--header"Authorization:BearerAUTHORIZATIONTOKEN""https://sandbox.bluebutton.
 
 Example response excerpt:
 ~~~
-{
 
 {
-	"resourceType":"Patient",
-	"id":"-19990000000002",
-	"meta":{
-		"lastUpdated":"2021-06-07T21:50:48.132-04:00",
-		"profile":\[
-			"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"
+    "resourceType":"Patient",
+    "id":"-19990000000002",
+    "meta":{
+        "lastUpdated":"2021-06-07T21:50:48.132-04:00",
+        "profile":\[
+            "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"
 \
-		]
-	},
-	"identifier":\[
-		{
-			"type":{
-				"coding":\[
-					{
-						"system":"http://terminology.hl7.org/CodeSystem/v2-0203",
-						"code":"MC",
-						"display":"Patient'sMedicarenumber"
-					}\
-				]
-			},
-			"system":"http://hl7.org/fhir/sid/us-mbi",
-			"value":"2S00A00AA00",
-			"period":{
-				"start":"2020-01-01"
-			}
-		}\
-	],
-	"name":\[
-		{
-			"use":"usual",
-			"family":"Doe",
-			"given":\[
-				"John",
-				"X"
+        ]
+    },
+    "identifier":\[
+        {
+            "type":{
+                "coding":\[
+                    {
+                        "system":"http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code":"MC",
+                        "display":"Patient'sMedicarenumber"
+                    }\
+                ]
+            },
+            "system":"http://hl7.org/fhir/sid/us-mbi",
+            "value":"2S00A00AA00",
+            "period":{
+                "start":"2020-01-01"
+            }
+        }\
+    ],
+    "name":\[
+        {
+            "use":"usual",
+            "family":"Doe",
+            "given":\[
+                "John",
+                "X"
 \
-			]
-		}\
-	],
-	"gender":"male",
-	"birthDate":"1999-06-01",
-	"deceasedDateTime":"1981-03-17",
-	"address":\[
-		{
-			"state":"07",
-			"postalCode":"99999"
-		}\
-	]
+            ]
+        }\
+    ],
+    "gender":"male",
+    "birthDate":"1999-06-01",
+    "deceasedDateTime":"1981-03-17",
+    "address":\[
+        {
+            "state":"07",
+            "postalCode":"99999"
+        }\
+    ]
 }
 
-}  
 ~~~
 
 <a href="/sample-patient-entry.json" download>Download a sample Patient FHIR Resource</a>  
