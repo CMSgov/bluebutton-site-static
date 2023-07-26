@@ -494,7 +494,7 @@ The Explanation of Benefit resource provides data for the following claim types:
 
 Request:
 ~~~
-HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=\[fhir\_id\]  
+HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id]  
 ~~~
 
 This request returns claims as [Explanation of Benefit Resources](https://hl7.org/fhir/R4/explanationofbenefit.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}.   
@@ -503,33 +503,31 @@ Example response excerpt:
 ~~~
 {
     "total":99,
-    "entry":\[
+    "entry": [
         {
-            "resource":{
+            "resource": {
                 "resourceType":"ExplanationOfBenefit",
                 "id":"carrier--10045426206",
                 "meta":{
                     "lastUpdated":"2021-06-07T21:51:33.787-04:00",
-                    "profile":\[
+                    "profile": [
                         "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"
-    \
                     ]
                 },
-                "identifier":\[
+                "identifier": [
                     {
                         "type":{
-                            "coding":\[
+                            "coding": [
                                 {
                                     "system":"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType",
                                     "code":"uc",
                                     "display":"UniqueClaimID"
-                                }\
+                                }
                             ]
                         },
-                        "system":"https://bluebutton.cms.gov/resources/variables/clm\_id",
+                        "system":"https://bluebutton.cms.gov/resources/variables/clm_id",
                         "value":"-10045426206"
                     },
-
 ~~~
   
 
@@ -538,66 +536,63 @@ Example response excerpt:
 #### Patient  
 
 ~~~
-HTTP GET /v2/fhir/Patient/\[fhir\_id\]  
+HTTP GET /v2/fhir/Patient/[fhir_id]  
 ~~~
 
 The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html){:target="_blank"}. This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes).  
 
 Request:
 ~~~
-curl--header"Authorization:BearerAUTHORIZATIONTOKEN""https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325"\`  
+curl --header "Authorization:Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325"`  
 ~~~
 
 Example response excerpt:
 ~~~
-
 {
-    "resourceType":"Patient",
-    "id":"-19990000000002",
-    "meta":{
+    "resourceType": "Patient",
+    "id": "-19990000000002",
+    "meta": {
         "lastUpdated":"2021-06-07T21:50:48.132-04:00",
-        "profile":\[
+        "profile": [
             "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"
-\
         ]
     },
-    "identifier":\[
+    "identifier": [
         {
             "type":{
-                "coding":\[
+                "coding": [
                     {
-                        "system":"http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                         "code":"MC",
                         "display":"Patient'sMedicarenumber"
-                    }\
+                    }
                 ]
             },
-            "system":"http://hl7.org/fhir/sid/us-mbi",
+            "system": "http://hl7.org/fhir/sid/us-mbi",
             "value":"2S00A00AA00",
-            "period":{
+            "period": {
                 "start":"2020-01-01"
             }
-        }\
+        }
     ],
-    "name":\[
+    "name": [
         {
             "use":"usual",
             "family":"Doe",
-            "given":\[
+            "given": [
                 "John",
                 "X"
-\
             ]
-        }\
+        }
     ],
     "gender":"male",
     "birthDate":"1999-06-01",
     "deceasedDateTime":"1981-03-17",
-    "address":\[
+    "address": [
         {
             "state":"07",
             "postalCode":"99999"
-        }\
+        }
     ]
 }
 
@@ -607,13 +602,13 @@ Example response excerpt:
 
 #### Coverage  
 ~~~
-HTTP GET /v2/fhir/Coverage/?beneficiary=\[fhir\_id\]  
+HTTP GET /v2/fhir/Coverage/?beneficiary=[fhir_id]  
 ~~~
 The above URL returns Coverage information as [Coverage resources](http://hl7.org/fhir/R4/coverage.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}. One coverage resource is supplied for each coverage type.
 
 Request: 
 ~~~
-curl--header"Authorization:BearerAUTHORIZATIONTOKEN""https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325"\`
+curl --header "Authorization:Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325"`
 ~~~
 
 Response excerpt:
@@ -626,29 +621,28 @@ Response excerpt:
     },
     "type":"searchset",
     "total":4,
-    "entry":\[
+    "entry": [
         {
-            "resource":{
+            "resource": {
                 "resourceType":"Coverage",
                 "id":"part-a--19990000000002",
-                "meta":{
+                "meta": {
                     "lastUpdated":"2021-06-07T21:50:48.132-04:00",
-                    "profile":\[
+                    "profile": [
                         "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
-\
                     ]
                 },
                 "status":"active",
                 "type":{
-                    "coding":\[
+                    "coding": [
                         {
                             "system":"http://terminology.hl7.org/CodeSystem/v3-ActCode",
                             "code":"SUBSIDIZ"
-                        }\
+                        }
                     ]
                 },
-                "subscriberId":"2S00A00AA00",
-                "beneficiary":{
+                "subscriberId": "2S00A00AA00",
+                "beneficiary": {
                     "reference":"Patient/-19990000000002"
                 },
 
@@ -670,20 +664,20 @@ The above URL returns basic information about the user, given an authorization t
 
 Request:
 ~~~
-curl--header"Authorization:Bearer<AUTHORIZATIONTOKEN\>""https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"\`
+curl --header "Authorization: Bearer <AUTHORIZATIONTOKEN\>" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"`
 ~~~
 
 Example response:
 ~~~
 {
-    "sub":"-123456789",
-    "prefered\_username":"fflinstone",
-    "given\_name":"Fred",
-    "family\_name:,"Flinstone,
-    "name":"FredFlinstone",
-    "email":"pebbles-daddy@example.com",
-    "created":"2017-11-28",
-"patient":"-123456789",
+    "sub": "-123456789",
+    "prefered_username": "fflinstone",
+    "given_name": "Fred",
+    "family_name:, "Flinstone,
+    "name": "FredFlinstone",
+    "email": "pebbles-daddy@example.com",
+    "created": "2017-11-28",
+    "patient": "-123456789",
 }
 ~~~
 ### Terminology and coding systems
