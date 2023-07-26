@@ -619,38 +619,38 @@ curl--header"Authorization:BearerAUTHORIZATIONTOKEN""https://sandbox.bluebutton.
 Response excerpt:
 ~~~
 {
-	"resourceType":"Bundle",
-	"id":"fb4bffd7-abb3-401f-96cd-d617c545092c",
-	"meta":{
-		"lastUpdated":"2022-02-14T17:27:56.303-05:00"
-	},
-	"type":"searchset",
-	"total":4,
-	"entry":\[
-		{
-			"resource":{
-				"resourceType":"Coverage",
-				"id":"part-a--19990000000002",
-				"meta":{
-					"lastUpdated":"2021-06-07T21:50:48.132-04:00",
-					"profile":\[
-						"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
+    "resourceType":"Bundle",
+    "id":"fb4bffd7-abb3-401f-96cd-d617c545092c",
+    "meta":{
+        "lastUpdated":"2022-02-14T17:27:56.303-05:00"
+    },
+    "type":"searchset",
+    "total":4,
+    "entry":\[
+        {
+            "resource":{
+                "resourceType":"Coverage",
+                "id":"part-a--19990000000002",
+                "meta":{
+                    "lastUpdated":"2021-06-07T21:50:48.132-04:00",
+                    "profile":\[
+                        "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
 \
-					]
-				},
-				"status":"active",
-				"type":{
-					"coding":\[
-						{
-							"system":"http://terminology.hl7.org/CodeSystem/v3-ActCode",
-							"code":"SUBSIDIZ"
-						}\
-					]
-				},
-				"subscriberId":"2S00A00AA00",
-				"beneficiary":{
-					"reference":"Patient/-19990000000002"
-				},
+                    ]
+                },
+                "status":"active",
+                "type":{
+                    "coding":\[
+                        {
+                            "system":"http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                            "code":"SUBSIDIZ"
+                        }\
+                    ]
+                },
+                "subscriberId":"2S00A00AA00",
+                "beneficiary":{
+                    "reference":"Patient/-19990000000002"
+                },
 
 ~~~
 
@@ -676,14 +676,14 @@ curl--header"Authorization:Bearer<AUTHORIZATIONTOKEN\>""https://sandbox.bluebutt
 Example response:
 ~~~
 {
-	"sub":"-123456789",
-	"prefered\_username":"fflinstone",
-	"given\_name":"Fred",
-	"family\_name:,"Flinstone,
-	"name":"FredFlinstone",
-	"email":"pebbles-daddy@example.com",
-	"created":"2017-11-28",
-	"patient":"-123456789",
+    "sub":"-123456789",
+    "prefered\_username":"fflinstone",
+    "given\_name":"Fred",
+    "family\_name:,"Flinstone,
+    "name":"FredFlinstone",
+    "email":"pebbles-daddy@example.com",
+    "created":"2017-11-28",
+"patient":"-123456789",
 }
 ~~~
 ### Terminology and coding systems
