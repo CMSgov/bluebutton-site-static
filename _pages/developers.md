@@ -494,7 +494,7 @@ The Explanation of Benefit resource provides data for the following claim types:
 
 Request:
 ~~~
-HTTP GET/v2/fhir/ExplanationOfBenefit/?patient=\[fhir\_id\]  
+HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=\[fhir\_id\]  
 ~~~
 
 This request returns claims as [Explanation of Benefit Resources](https://hl7.org/fhir/R4/explanationofbenefit.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}.   
@@ -537,7 +537,7 @@ Example response excerpt:
 #### Patient  
 
 ~~~
-HTTPGET/v2/fhir/Patient/\[fhir\_id\]  
+HTTP GET /v2/fhir/Patient/\[fhir\_id\]  
 ~~~
 
 The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html){:target="_blank"}. This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes).  
@@ -608,7 +608,7 @@ Example response excerpt:
 
 #### Coverage  
 ~~~
-HTTPGET/v2/fhir/Coverage/?beneficiary=\[fhir\_id\]  
+HTTP GET /v2/fhir/Coverage/?beneficiary=\[fhir\_id\]  
 ~~~
 The above URL returns Coverage information as [Coverage resources](http://hl7.org/fhir/R4/coverage.html){:target="_blank"} inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html){:target="_blank"}. One coverage resource is supplied for each coverage type.
 
@@ -665,7 +665,7 @@ The UserInfo endpoint is an OAuth 2.0 Protected Resource that returns informatio
 Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes){:target="_blank"}.  
   
 
-`HTTPGET/connect/userinfo`  
+`HTTP GET /connect/userinfo`  
 
 The above URL returns basic information about the user, given an authorization token. An HTTP GET is called and the response is returned as JSON.  
 
