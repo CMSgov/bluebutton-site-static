@@ -55,8 +55,12 @@ module BlueButtonApi
 
     def convert_smart_quotes(text)
       smart_quotes_map = {
-        "�" => "'", # single quote Transformation
-      }
+        "\u2018" => "'", # Left single quote
+        "\uFFFD" => "'",
+        "\u2019" => "'", # Right single quote
+        "\u201C" => '"', # Left double quote
+        "\u201D" => '"', # Right double quote
+      }.freeze
       text.tr(smart_quotes_map.keys.join, smart_quotes_map.values.join)
     end
     def parse_paragraphs(paragraphs_xml)
