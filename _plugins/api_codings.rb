@@ -55,8 +55,8 @@ module BlueButtonApi
 
     def convert_smart_quotes(text)
       smart_quotes_map = {
-        "‘" => "'",
         "�" => "'",
+        "‘" => "'",
         "’" => "'",
         "“" => '"',
         "”" => '"',
