@@ -55,11 +55,11 @@ module BlueButtonApi
 
     def convert_smart_quotes(text)
       smart_quotes_map = {
-        "\u2018" => "'",
-        "\uFFFD" => "'",
-        "\u2019" => "'",
-        "\u201C" => '"',
-        "\u201D" => '"',
+        "‘" => "'",
+        "�" => "'",
+        "’" => "'",
+        "“" => '"',
+        "”" => '"',
       }.freeze
       text.tr(smart_quotes_map.keys.join, smart_quotes_map.values.join)
     end
