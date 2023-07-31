@@ -25,7 +25,7 @@
     </variable>
     <variable id="AGE" label="Age of beneficiary at end of year" shortName="AGE" longName="AGE_AT_END_REF_YR" type="NUM" length="3" source="CMS Common Medicare Environment (CME) (derived)" valueFormat="Maximum age is 115">
         <description>
-            <p>This is the beneficiary’s age, expressed in years and calculated as of the end of the calendar year, or, for beneficiaries that died during the year, age as of the date of death.</p>
+            <p>This is the beneficiaryï¿½s age, expressed in years and calculated as of the end of the calendar year, or, for beneficiaries that died during the year, age as of the date of death.</p>
         </description>
         <comment>
             <p>CCW calculates this variable.</p>
@@ -60,7 +60,7 @@
     </variable>
     <variable id="BENE_ID" label="Encrypted CCW Beneficiary ID" shortName="BENE_ID" longName="BENE_ID" type="CHAR" length="15" source="CCW">
         <description>
-            <p>The unique CCW identifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/ or Medicaid, and uses that number to identify an individual’s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiary’s lifetime and each number is used only once. The BENE_ID is specific to the CCW and is not applicable to any other identification system or data source.</p>
+            <p>The unique CCW identifier for a beneficiary. The CCW assigns a unique beneficiary identification number to each individual who receives Medicare and/ or Medicaid, and uses that number to identify an individualï¿½s records in all CCW data files (e.g., Medicare claims, MAX claims, MDS assessment data). This number does not change during a beneficiaryï¿½s lifetime and each number is used only once. The BENE_ID is specific to the CCW and is not applicable to any other identification system or data source.</p>
         </description>
     </variable>
     <variable id="BUYIN_MO" label="State Buy-In Coverage Count" shortName="BUYIN_MO" longName="BENE_STATE_BUYIN_TOT_MONS" type="NUM" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="0-12">
@@ -68,7 +68,7 @@
             <p>Months of state buy-in.</p>
         </description>
         <comment>
-            <p>This variable counts the total number of months during the year when the beneficiary premium was paid by the state. State Medicaid programs can pay Medicare premiums for certain dual eligibles (i.e., for beneficiaries also enrolled in a state Medicaid program); this action is called “buying in” and so this variable is the “buy-in code.” Any month where the BUYINXX variable was: A (Part A state buy-in), B (Part B state buy-in), or C (Part A and Part B state buy-in) is counted.</p>
+            <p>This variable counts the total number of months during the year when the beneficiary premium was paid by the state. State Medicaid programs can pay Medicare premiums for certain dual eligibles (i.e., for beneficiaries also enrolled in a state Medicaid program); this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½ Any month where the BUYINXX variable was: A (Part A state buy-in), B (Part B state buy-in), or C (Part A and Part B state buy-in) is counted.</p>
         </comment>
     </variable>
     <variable id="BUYIN01" label="Medicare Entitlement/Buy-In Indicator - January" shortName="BUYIN01" longName="MDCR_ENTLMT_BUYIN_IND_01" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
@@ -87,7 +87,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
     <variable id="BUYIN02" label="Medicare Entitlement/Buy-In Indicator - February" shortName="BUYIN02" longName="MDCR_ENTLMT_BUYIN_IND_02" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
@@ -107,7 +107,7 @@
         </valueGroups>
         <comment>
             <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
-            <p>The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
     <variable id="BUYIN03" label="Medicare Entitlement/Buy-In Indicator - March" shortName="BUYIN03" longName="MDCR_ENTLMT_BUYIN_IND_03" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
@@ -127,7 +127,7 @@
         </valueGroups>
         <comment>
             <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
-            <p>The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
     <variable id="BUYIN04" label="Medicare Entitlement/Buy-In Indicator - April" shortName="BUYIN04" longName="MDCR_ENTLMT_BUYIN_IND_04" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
@@ -146,7 +146,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
     <variable id="BUYIN05" label="Medicare Entitlement/Buy-In Indicator - May" shortName="BUYIN05" longName="MDCR_ENTLMT_BUYIN_IND_05" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
@@ -166,7 +166,7 @@
         </valueGroups>
         <comment>
             <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
-            <p>The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
     <variable id="BUYIN06" label="Medicare Entitlement/Buy-In Indicator - June" shortName="BUYIN06" longName="MDCR_ENTLMT_BUYIN_IND_06" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
@@ -186,7 +186,7 @@
         </valueGroups>
         <comment>
             <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
-            <p>The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
     <variable id="BUYIN07" label="Medicare Entitlement/Buy-In Indicator - July" shortName="BUYIN07" longName="MDCR_ENTLMT_BUYIN_IND_07" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
@@ -206,7 +206,7 @@
         </valueGroups>
         <comment>
             <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
-            <p>The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary).State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary).State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
     <variable id="BUYIN08" label="Medicare Entitlement/Buy-In Indicator - August" shortName="BUYIN08" longName="MDCR_ENTLMT_BUYIN_IND_08" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
@@ -226,7 +226,7 @@
         </valueGroups>
         <comment>
             <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
-            <p>The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
     <variable id="BUYIN09" label="Medicare Entitlement/Buy-In Indicator - September" shortName="BUYIN09" longName="MDCR_ENTLMT_BUYIN_IND_09" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
@@ -246,10 +246,10 @@
         </valueGroups>
         <comment>
             <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
-            <p>The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
-    <variable id="BUYIN10" label="Medicare Entitlement/Buy-In Indicator – October" shortName="BUYIN10" longName="MDCR_ENTLMT_BUYIN_IND_10" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
+    <variable id="BUYIN10" label="Medicare Entitlement/Buy-In Indicator ï¿½ October" shortName="BUYIN10" longName="MDCR_ENTLMT_BUYIN_IND_10" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
             <p>Monthly Part A and/or Part B entitlement indicator (October).</p>
         </description>
@@ -266,7 +266,7 @@
         </valueGroups>
         <comment>
             <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
-            <p>The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
     <variable id="BUYIN11" label="Medicare Entitlement/Buy-In Indicator - November" shortName="BUYIN11" longName="MDCR_ENTLMT_BUYIN_IND_11" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
@@ -286,10 +286,10 @@
         </valueGroups>
         <comment>
             <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
-            <p>The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary). State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
-    <variable id="BUYIN12" label="Medicare Entitlement/Buy-In Indicator – December" shortName="BUYIN12" longName="MDCR_ENTLMT_BUYIN_IND_12" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
+    <variable id="BUYIN12" label="Medicare Entitlement/Buy-In Indicator ï¿½ December" shortName="BUYIN12" longName="MDCR_ENTLMT_BUYIN_IND_12" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
             <p>Monthly Part A and/or Part B entitlement indicator (December).</p>
         </description>
@@ -306,7 +306,7 @@
         </valueGroups>
         <comment>
             <p>This variable indicates whether the beneficiary was entitled to Part A, Part B, or both for a given month. There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
-            <p>The variable also indicates whether the beneficiary’s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary).State Medicaid programs can pay those premiums for certain dual eligibles; this action is called “buying in” and so this variable is the “buy-in code.”</p>
+            <p>The variable also indicates whether the beneficiaryï¿½s state of residence paid his/her monthly premium for Part B coverage (and Part A if necessary).State Medicaid programs can pay those premiums for certain dual eligibles; this action is called ï¿½buying inï¿½ and so this variable is the ï¿½buy-in code.ï¿½</p>
         </comment>
     </variable>
     <variable id="CNTY_CD" label="County code for beneficiary (SSA code)" shortName="CNTY_CD" longName="COUNTY_CD" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)">
@@ -332,7 +332,7 @@
         </description>
         <valueGroups>
             <valueGroup>
-                <value code="0">Old age and survivor’s insurance (OASI)</value>
+                <value code="0">Old age and survivorï¿½s insurance (OASI)</value>
                 <value code="1">Disability insurance benefits (DIB)</value>
                 <value code="2">End-stage renal disease (ESRD)</value>
                 <value code="3">Both DIB and ESRD</value>
@@ -344,7 +344,7 @@
     </variable>
     <variable id="CRNT_BIC" label="Current Beneficiary Identification Code" shortName="CRNT_BIC" longName="CRNT_BIC_CD" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>The current beneficiary identification code (BIC) specifies the basis of the beneficiary’s eligibility for cash payment programs, mainly Social Security. When the individual qualifies under another person’s account (for example, as a spouse or child), the code identifies the type of relationship between the individual and primary beneficiary.</p>
+            <p>The current beneficiary identification code (BIC) specifies the basis of the beneficiaryï¿½s eligibility for cash payment programs, mainly Social Security. When the individual qualifies under another personï¿½s account (for example, as a spouse or child), the code identifies the type of relationship between the individual and primary beneficiary.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -562,7 +562,7 @@
     </variable>
     <variable id="CSTSHR01" label="Monthly cost sharing group under Part D low-income subsidy - January" shortName="CSTSHR01" longName="CST_SHR_GRP_CD_01" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (January). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (January). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -587,7 +587,7 @@
     </variable>
     <variable id="CSTSHR02" label="Monthly cost sharing group under Part D low-income subsidy - February" shortName="CSTSHR02" longName="CST_SHR_GRP_CD_02" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (February). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (February). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -612,7 +612,7 @@
     </variable>
     <variable id="CSTSHR03" label="Monthly cost sharing group under Part D low-income subsidy - March" shortName="CSTSHR03" longName="CST_SHR_GRP_CD_03" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (March). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (March). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -637,7 +637,7 @@
     </variable>
     <variable id="CSTSHR04" label="Monthly cost sharing group under Part D low-income subsidy - April" shortName="CSTSHR04" longName="CST_SHR_GRP_CD_04" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (April). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (April). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -662,7 +662,7 @@
     </variable>
     <variable id="CSTSHR05" label="Monthly cost sharing group under Part D low-income subsidy - May" shortName="CSTSHR05" longName="CST_SHR_GRP_CD_05" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (May). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (May). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -687,7 +687,7 @@
     </variable>
     <variable id="CSTSHR06" label="Monthly cost sharing group under Part D low-income subsidy - June" shortName="CSTSHR06" longName="CST_SHR_GRP_CD_06" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (June). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (June). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -712,7 +712,7 @@
     </variable>
     <variable id="CSTSHR07" label="Monthly cost sharing group under Part D low-income subsidy July" shortName="CSTSHR07" longName="CST_SHR_GRP_CD_07" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (July). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (July). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -737,7 +737,7 @@
     </variable>
     <variable id="CSTSHR08" label="Monthly cost sharing group under Part D low-income subsidy August" shortName="CSTSHR08" longName="CST_SHR_GRP_CD_08" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (August). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (August). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -762,7 +762,7 @@
     </variable>
     <variable id="CSTSHR09" label="Monthly cost sharing group under Part D low-income subsidy - September" shortName="CSTSHR09" longName="CST_SHR_GRP_CD_09" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (September). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (September). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -787,7 +787,7 @@
     </variable>
     <variable id="CSTSHR10" label="Monthly cost sharing group under Part D low-income subsidy - October" shortName="CSTSHR10" longName="CST_SHR_GRP_CD_10" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (October). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (October). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -812,7 +812,7 @@
     </variable>
     <variable id="CSTSHR11" label="Monthly cost sharing group under Part D low-income subsidy - November" shortName="CSTSHR11" longName="CST_SHR_GRP_CD_11" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (November). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (November). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -837,7 +837,7 @@
     </variable>
     <variable id="CSTSHR12" label="Monthly cost sharing group under Part D low-income subsidy - December" shortName="CSTSHR12" longName="CST_SHR_GRP_CD_12" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates the beneficiary’s Part D low-income subsidy cost sharing group for a given month (December). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
+            <p>This variable indicates the beneficiaryï¿½s Part D low-income subsidy cost sharing group for a given month (December). The Part D benefit requires enrollees to pay both premiums and cost-sharing, but the program also has a low-income subsidy (LIS) that covers some or all of those costs for certain low-income individuals, including deductibles and cost-sharing during the coverage gap.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -888,7 +888,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_02" label="Monthly Medicare-Medicaid dual eligibility code - February" shortName="DUAL_02" longName="DUAL_STUS_CD_02" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -911,7 +911,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_03" label="Monthly Medicare-Medicaid dual eligibility code - March" shortName="DUAL_03" longName="DUAL_STUS_CD_03" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -934,7 +934,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_04" label="Monthly Medicare-Medicaid dual eligibility code - April" shortName="DUAL_04" longName="DUAL_STUS_CD_04" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -957,7 +957,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_05" label="Monthly Medicare-Medicaid dual eligibility code - May" shortName="DUAL_05" longName="DUAL_STUS_CD_05" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -980,7 +980,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_06" label="Monthly Medicare-Medicaid dual eligibility code - June" shortName="DUAL_06" longName="DUAL_STUS_CD_06" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -1003,7 +1003,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_07" label="Monthly Medicare-Medicaid dual eligibility code - July" shortName="DUAL_07" longName="DUAL_STUS_CD_07" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -1026,7 +1026,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_08" label="Monthly Medicare-Medicaid dual eligibility code - August" shortName="DUAL_08" longName="DUAL_STUS_CD_08" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -1049,7 +1049,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_09" label="Monthly Medicare-Medicaid dual eligibility code - September" shortName="DUAL_09" longName="DUAL_STUS_CD_09" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -1072,7 +1072,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_10" label="Monthly Medicare-Medicaid dual eligibility code - October" shortName="DUAL_10" longName="DUAL_STUS_CD_10" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -1095,7 +1095,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_11" label="Monthly Medicare-Medicaid dual eligibility code - November" shortName="DUAL_11" longName="DUAL_STUS_CD_11" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -1118,7 +1118,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_12" label="Monthly Medicare-Medicaid dual eligibility code - December" shortName="DUAL_12" longName="DUAL_STUS_CD_12" type="CHAR" length="2" source="CMS Common Medicare Environment (CME)">
@@ -1141,7 +1141,7 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the “gold standard” for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into “full duals” and “partial duals” based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
+            <p>The original source for this variable is the State Medicare Modernization Act (MMA) files that states submit to CMS. Those files are considered the ï¿½gold standardï¿½ for identifying dual eligibles because the information in them is used to determine the level of Medicare Part D low-income subsidies. Dual eligibles are often divided into ï¿½full dualsï¿½ and ï¿½partial dualsï¿½ based on the level of Medicaid benefits they receive. CMS generally considers beneficiaries to be full duals if they have values of 02, 04, or 08, and to be partial duals if they have values of 01, 03, 05, or 06. Partial duals sometimes divided into the QMB-only population (01) and all other partial duals (03, 05, or 06). There are different ways to classify dually eligible beneficiaries. Additional information regarding various ways to identify dually enrolled populations, refer to a CCW Technical Guidance document entitled: "Options in Determining Dual Eligibles". There are 12 monthly variables - where the 01 through 12 at the end of the variable name correspond with the month (e.g., 01 is January and 12 is December).</p>
         </comment>
     </variable>
     <variable id="DUAL_MO" label="Months of Dual Eligibility" shortName="DUAL_MO" longName="DUAL_ELGBL_MONS" type="NUM" length="3" source="CMS Common Medicare Environment (CME) (derived)" valueFormat="0-12">
@@ -1205,7 +1205,7 @@
             <p>This variable counts the number of months during the year that the beneficiary received their Part A and Part B benefits through a managed care plan (i.e., a Medicare Advantage [MA] plan) instead of the traditional fee-for-service (FFS) program. Any month where the HMO indicator variable (HMOINDXX) was anything other than a 0 (not a member of an HMO) or a 4 (FFS participant in a case or disease management demonstration project) is counted as a MA month.</p>
         </comment>
     </variable>
-    <variable id="HMO_IND_01" label="HMO Indicator – January" shortName="HMOIND01" longName="HMO_IND_01" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
+    <variable id="HMO_IND_01" label="HMO Indicator ï¿½ January" shortName="HMOIND01" longName="HMO_IND_01" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
             <p>Monthly Medicare Advantage (MA) enrollment indicator (January).</p>
         </description>
@@ -1226,7 +1226,7 @@
             <p>The 01 through 12 at the end of the variable name correspond with the month (i.e., 01 is January and 12 is December).</p>
         </comment>
     </variable>
-    <variable id="HMO_IND_02" label="HMO Indicator – February" shortName="HMOIND02" longName="HMO_IND_02" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
+    <variable id="HMO_IND_02" label="HMO Indicator ï¿½ February" shortName="HMOIND02" longName="HMO_IND_02" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
             <p>Monthly Medicare Advantage (MA) enrollment indicator (February).</p>
         </description>
@@ -1703,7 +1703,7 @@
         </description>
         <valueGroups>
             <valueGroup>
-                <value code="0">Old age and survivor’s insurance (OASI)</value>
+                <value code="0">Old age and survivorï¿½s insurance (OASI)</value>
                 <value code="1">Disability insurance benefits (DIB)</value>
                 <value code="2">End-stage renal disease (ESRD)</value>
                 <value code="3">Both DIB and ESRD</value>
@@ -1715,7 +1715,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_01" label="Part C Contract Number - January" shortName="PTC_CNTRCT_ID_01" longName="PTC_CNTRCT_ID_01" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (January).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (January).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1726,7 +1726,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_02" label="Part C Contract Number - February" shortName="PTC_CNTRCT_ID_02" longName="PTC_CNTRCT_ID_02" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (February).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (February).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1737,7 +1737,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_03" label="Part C Contract Number - March" shortName="PTC_CNTRCT_ID_03" longName="PTC_CNTRCT_ID_03" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (March).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (March).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1748,7 +1748,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_04" label="Part C Contract Number - April" shortName="PTC_CNTRCT_ID_04" longName="PTC_CNTRCT_ID_04" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (April).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (April).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1759,7 +1759,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_05" label="Part C Contract Number - May" shortName="PTC_CNTRCT_ID_05" longName="PTC_CNTRCT_ID_05" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (May).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (May).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1770,7 +1770,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_06" label="Part C Contract Number - June" shortName="PTC_CNTRCT_ID_06" longName="PTC_CNTRCT_ID_06" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (June).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (June).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1781,7 +1781,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_07" label="Part C Contract Number - July" shortName="PTC_CNTRCT_ID_07" longName="PTC_CNTRCT_ID_07" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (July).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (July).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1792,7 +1792,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_08" label="Part C Contract Number - August" shortName="PTC_CNTRCT_ID_08" longName="PTC_CNTRCT_ID_08" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (August).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (August).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1803,7 +1803,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_09" label="Part C Contract Number - September" shortName="PTC_CNTRCT_ID_09" longName="PTC_CNTRCT_ID_09" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (September).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (September).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1814,7 +1814,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_10" label="Part C Contract Number - October" shortName="PTC_CNTRCT_ID_10" longName="PTC_CNTRCT_ID_10" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (October).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (October).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1825,7 +1825,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_11" label="Part C Contract Number - November" shortName="PTC_CNTRCT_ID_11" longName="PTC_CNTRCT_ID_11" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (November).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (November).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1836,7 +1836,7 @@
     </variable>
     <variable id="PTC_CNTRCT_ID_12" label="Part C Contract Number - December" shortName="PTC_CNTRCT_ID_12" longName="PTC_CNTRCT_ID_12" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Medicare Part C contract number for the beneficiary’s Medicare Advantage (MA) plan for a given month (December).</p>
+            <p>This variable is the Medicare Part C contract number for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (December).</p>
             <p>CMS assigns an identifier to each contract that a managed care plan has with CMS.</p>
         </description>
         <comment>
@@ -1847,7 +1847,7 @@
     </variable>
     <variable id="PTC_PBP_ID_01" label="Part C PBP Number - January" shortName="PTC_PBP_ID_01" longName="PTC_PBP_ID_01" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (January).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (January).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1858,7 +1858,7 @@
     </variable>
     <variable id="PTC_PBP_ID_02" label="Part C PBP Number - February" shortName="PTC_PBP_ID_02" longName="PTC_PBP_ID_02" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (February).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (February).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1869,7 +1869,7 @@
     </variable>
     <variable id="PTC_PBP_ID_03" label="Part C PBP Number - March" shortName="PTC_PBP_ID_03" longName="PTC_PBP_ID_03" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (March).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (March).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1880,7 +1880,7 @@
     </variable>
     <variable id="PTC_PBP_ID_04" label="Part C PBP Number - April" shortName="PTC_PBP_ID_04" longName="PTC_PBP_ID_04" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (April).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (April).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1891,7 +1891,7 @@
     </variable>
     <variable id="PTC_PBP_ID_05" label="Part C PBP Number - May" shortName="PTC_PBP_ID_05" longName="PTC_PBP_ID_05" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (May).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (May).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1902,7 +1902,7 @@
     </variable>
     <variable id="PTC_PBP_ID_06" label="Part C PBP Number - June" shortName="PTC_PBP_ID_06" longName="PTC_PBP_ID_06" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (June).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (June).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1913,7 +1913,7 @@
     </variable>
     <variable id="PTC_PBP_ID_07" label="Part C PBP Number - July" shortName="PTC_PBP_ID_07" longName="PTC_PBP_ID_07" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (July).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (July).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1924,7 +1924,7 @@
     </variable>
     <variable id="PTC_PBP_ID_08" label="Part C PBP Number - August" shortName="PTC_PBP_ID_08" longName="PTC_PBP_ID_08" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (August).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (August).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1935,7 +1935,7 @@
     </variable>
     <variable id="PTC_PBP_ID_09" label="Part C PBP Number - September" shortName="PTC_PBP_ID_09" longName="PTC_PBP_ID_09" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (September).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (September).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1946,7 +1946,7 @@
     </variable>
     <variable id="PTC_PBP_ID_10" label="Part C PBP Number - October" shortName="PTC_PBP_ID_10" longName="PTC_PBP_ID_10" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (October).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (October).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1957,7 +1957,7 @@
     </variable>
     <variable id="PTC_PBP_ID_11" label="Part C PBP Number - November" shortName="PTC_PBP_ID_11" longName="PTC_PBP_ID_11" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (November).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (November).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -1968,7 +1968,7 @@
     </variable>
     <variable id="PTC_PBP_ID_12" label="Part C PBP Number - December" shortName="PTC_PBP_ID_12" longName="PTC_PBP_ID_12" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiary’s Medicare Advantage (MA) plan for a given month (December).</p>
+            <p>The variable is the Medicare Part C plan benefit package (PBP) for the beneficiaryï¿½s Medicare Advantage (MA) plan for a given month (December).</p>
             <p>CMS assigns an identifier to each PBP within a contract that a Part C plan sponsor has with CMS.</p>
         </description>
         <comment>
@@ -2431,7 +2431,7 @@
     </variable>
     <variable id="PTDCNTRCT01" label="Monthly Part D Contract Number - January" shortName="PTDCNTRCT01" longName="PTD_CNTRCT_ID_01" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (January). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (January). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2456,7 +2456,7 @@
     </variable>
     <variable id="PTDCNTRCT02" label="Monthly Part D Contract Number - February" shortName="PTDCNTRCT02" longName="PTD_CNTRCT_ID_02" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (February). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (February). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2481,7 +2481,7 @@
     </variable>
     <variable id="PTDCNTRCT03" label="Monthly Part D Contract Number - March" shortName="PTDCNTRCT03" longName="PTD_CNTRCT_ID_03" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (March). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (March). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2506,7 +2506,7 @@
     </variable>
     <variable id="PTDCNTRCT04" label="Monthly Part D Contract Number - April" shortName="PTDCNTRCT04" longName="PTD_CNTRCT_ID_04" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (April). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (April). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2531,7 +2531,7 @@
     </variable>
     <variable id="PTDCNTRCT05" label="Monthly Part D Contract Number - May" shortName="PTDCNTRCT05" longName="PTD_CNTRCT_ID_05" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (May). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (May). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2556,7 +2556,7 @@
     </variable>
     <variable id="PTDCNTRCT06" label="Monthly Part D Contract Number - June" shortName="PTDCNTRCT06" longName="PTD_CNTRCT_ID_06" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (June). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (June). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2581,7 +2581,7 @@
     </variable>
     <variable id="PTDCNTRCT07" label="Monthly Part D Contract Number - July" shortName="PTDCNTRCT07" longName="PTD_CNTRCT_ID_07" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (July). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (July). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2606,7 +2606,7 @@
     </variable>
     <variable id="PTDCNTRCT08" label="Monthly Part D Contract Number - August" shortName="PTDCNTRCT08" longName="PTD_CNTRCT_ID_08" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (August). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (August). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2631,7 +2631,7 @@
     </variable>
     <variable id="PTDCNTRCT09" label="Monthly Part D Contract Number - September" shortName="PTDCNTRCT09" longName="PTD_CNTRCT_ID_09" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (September). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (September). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2656,7 +2656,7 @@
     </variable>
     <variable id="PTDCNTRCT10" label="Monthly Part D Contract Number - October" shortName="PTDCNTRCT10" longName="PTD_CNTRCT_ID_10" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (October). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (October). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2681,7 +2681,7 @@
     </variable>
     <variable id="PTDCNTRCT11" label="Monthly Part D Contract Number - November" shortName="PTDCNTRCT11" longName="PTD_CNTRCT_ID_11" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (November). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (November). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2706,7 +2706,7 @@
     </variable>
     <variable id="PTDCNTRCT12" label="Monthly Part D Contract Number - December" shortName="PTDCNTRCT12" longName="PTD_CNTRCT_ID_12" type="CHAR" length="5" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable is the Part D contract number for the beneficiary’s Part D plan for a given month (December). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
+            <p>This variable is the Part D contract number for the beneficiaryï¿½s Part D plan for a given month (December). CMS assigns an identifier to each contract that a Part D plan has with CMS.</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2731,7 +2731,7 @@
     </variable>
     <variable id="PTDPBPID01" label="Monthly Part D Plan Benefit Package Number - January" shortName="PTDPBPID01" longName="PTD_PBP_ID_01" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (January). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (January). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2741,7 +2741,7 @@
     </variable>
     <variable id="PTDPBPID02" label="Monthly Part D Plan Benefit Package Number - February" shortName="PTDPBPID02" longName="PTD_PBP_ID_02" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (February). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (February). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2751,7 +2751,7 @@
     </variable>
     <variable id="PTDPBPID03" label="Monthly Part D Plan Benefit Package Number - March" shortName="PTDPBPID03" longName="PTD_PBP_ID_03" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (March). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (March). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2761,7 +2761,7 @@
     </variable>
     <variable id="PTDPBPID04" label="Monthly Part D Plan Benefit Package Number - April" shortName="PTDPBPID04" longName="PTD_PBP_ID_04" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (April). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (April). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2771,7 +2771,7 @@
     </variable>
     <variable id="PTDPBPID05" label="Monthly Part D Plan Benefit Package Number - May" shortName="PTDPBPID05" longName="PTD_PBP_ID_05" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (May). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (May). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2781,7 +2781,7 @@
     </variable>
     <variable id="PTDPBPID06" label="Monthly Part D Plan Benefit Package Number - June" shortName="PTDPBPID06" longName="PTD_PBP_ID_06" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (June). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (June). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2791,7 +2791,7 @@
     </variable>
     <variable id="PTDPBPID07" label="Monthly Part D Plan Benefit Package Number - July" shortName="PTDPBPID07" longName="PTD_PBP_ID_07" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (July). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (July). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2801,7 +2801,7 @@
     </variable>
     <variable id="PTDPBPID08" label="Monthly Part D Plan Benefit Package Number - August" shortName="PTDPBPID08" longName="PTD_PBP_ID_08" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (August). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (August). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2811,7 +2811,7 @@
     </variable>
     <variable id="PTDPBPID09" label="Monthly Part D Plan Benefit Package Number - September" shortName="PTDPBPID09" longName="PTD_PBP_ID_09" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (September). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (September). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2821,7 +2821,7 @@
     </variable>
     <variable id="PTDPBPID10" label="Monthly Part D Plan Benefit Package Number - October" shortName="PTDPBPID10" longName="PTD_PBP_ID_10" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (October). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (October). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2831,7 +2831,7 @@
     </variable>
     <variable id="PTDPBPID11" label="Monthly Part D Plan Benefit Package Number - November" shortName="PTDPBPID11" longName="PTD_PBP_ID_11" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (November). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (November). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2841,7 +2841,7 @@
     </variable>
     <variable id="PTDPBPID12" label="Monthly Part D Plan Benefit Package Number - December" shortName="PTDPBPID12" longName="PTD_PBP_ID_12" type="CHAR" length="3" source="CMS Common Medicare Environment (CME)" valueFormat="3-digit alphanumeric that can include leading zeros.">
         <description>
-            <p>The variable is the Part D plan benefit package (PBP) for the beneficiary’s Part D plan for a given month (December). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
+            <p>The variable is the Part D plan benefit package (PBP) for the beneficiaryï¿½s Part D plan for a given month (December). CMS assigns an identifier to each PBP within a contract that a Part D plan sponsor has with CMS.</p>
         </description>
         <comment>
             <p>If the beneficiary did not have a Part D plan for a given month, this variable will have null/missing value for that month. If the beneficiary changed plans during the year, the value indicates the final, reconciled PBP number.</p>
@@ -2867,7 +2867,7 @@
     </variable>
     <variable id="RDS_MO" label="Months of Retiree Drug Subsidy Coverage" shortName="RDS_MO" longName="RDS_CVRG_MONS" type="NUM" length="3" source="CMS Common Medicare Environment (CME) (derived)" valueFormat="0-12">
         <description>
-            <p>This variable is the number of months during the year that the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS). CCW derives this variable by counting the number of months where the beneficiary had retiree drug subsidy.</p>
+            <p>This variable is the number of months during the year that the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS). CCW derives this variable by counting the number of months where the beneficiary had retiree drug subsidy.</p>
         </description>
         <comment>
             <p>A month of RDS is when the RDS_IND_XX for the month = Y.</p>
@@ -2877,7 +2877,7 @@
     </variable>
     <variable id="RDSIND01" label="Monthly Part D Retiree Drug Subsidy Indicator - January" shortName="RDSIND01" longName="RDS_IND_01" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (January).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (January).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2895,7 +2895,7 @@
     </variable>
     <variable id="RDSIND02" label="Monthly Part D Retiree Drug Subsidy Indicator - February" shortName="RDSIND02" longName="RDS_IND_02" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (February).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (February).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2913,7 +2913,7 @@
     </variable>
     <variable id="RDSIND03" label="Monthly Part D Retiree Drug Subsidy Indicator - March" shortName="RDSIND03" longName="RDS_IND_03" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (March).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (March).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2930,7 +2930,7 @@
     </variable>
     <variable id="RDSIND04" label="Monthly Part D Retiree Drug Subsidy Indicator - April" shortName="RDSIND04" longName="RDS_IND_04" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (April).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (April).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2948,7 +2948,7 @@
     </variable>
     <variable id="RDSIND05" label="Monthly Part D Retiree Drug Subsidy Indicator - May" shortName="RDSIND05" longName="RDS_IND_05" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (May).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (May).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2966,7 +2966,7 @@
     </variable>
     <variable id="RDSIND06" label="Monthly Part D Retiree Drug Subsidy Indicator - June" shortName="RDSIND06" longName="RDS_IND_06" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (June).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (June).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -2984,7 +2984,7 @@
     </variable>
     <variable id="RDSIND07" label="Monthly Part D Retiree Drug Subsidy Indicator - July" shortName="RDSIND07" longName="RDS_IND_07" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (July).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (July).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -3002,7 +3002,7 @@
     </variable>
     <variable id="RDSIND08" label="Monthly Part D Retiree Drug Subsidy Indicator - August" shortName="RDSIND08" longName="RDS_IND_08" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (August).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (August).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -3020,7 +3020,7 @@
     </variable>
     <variable id="RDSIND09" label="Monthly Part D Retiree Drug Subsidy Indicator - September" shortName="RDSIND09" longName="RDS_IND_09" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (September).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (September).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -3038,7 +3038,7 @@
     </variable>
     <variable id="RDSIND10" label="Monthly Part D Retiree Drug Subsidy Indicator - October" shortName="RDSIND10" longName="RDS_IND_10" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (October).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (October).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -3056,7 +3056,7 @@
     </variable>
     <variable id="RDSIND11" label="Monthly Part D Retiree Drug Subsidy Indicator - November" shortName="RDSIND11" longName="RDS_IND_11" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (November).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (November).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -3074,7 +3074,7 @@
     </variable>
     <variable id="RDSIND12" label="Monthly Part D Retiree Drug Subsidy Indicator - December" shortName="RDSIND12" longName="RDS_IND_12" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part D’s retiree drug subsidy (RDS) for a given month (December).</p>
+            <p>This variable indicates if the beneficiary was enrolled in an employer-sponsored prescription drug plan that qualified for Part Dï¿½s retiree drug subsidy (RDS) for a given month (December).</p>
         </description>
         <valueGroups>
             <valueGroup>
@@ -3114,8 +3114,8 @@
             </valueGroup>
         </valueGroups>
         <comment>
-            <p>This variable is created by taking the beneficiary race code that has historically been used by the Social Security Administration (and is in turn used in CMS’s enrollment data base) and applying an algorithm that identifies more beneficiaries as Hispanic or Asian.</p>
-            <p>This algorithm was developed by the Research Triangle Institute (RTI) and is thus often referred to as the “RTI race code”.</p>
+            <p>This variable is created by taking the beneficiary race code that has historically been used by the Social Security Administration (and is in turn used in CMSï¿½s enrollment data base) and applying an algorithm that identifies more beneficiaries as Hispanic or Asian.</p>
+            <p>This algorithm was developed by the Research Triangle Institute (RTI) and is thus often referred to as the ï¿½RTI race codeï¿½.</p>
             <p>The algorithm classifies beneficiaries as Hispanic or Asian if their SSA race code equals 4 (Asian) or 5 (Hispanic), or if they have a first or last name that RTI determined was likely Hispanic or Asian in origin.</p>
             <p>The variable also incorporates CCW enhancements that reduce the number of beneficiaries with missing information.</p>
         </comment>
@@ -3127,10 +3127,10 @@
         <comment>
             <p>CCW creates the sample values using standard CMS processes to identify the random 1, 5, 15, and 20 percent samples of Medicare beneficiaries.</p>
             <p>The sample groups are based on a random 20 percent sample that is split into three mutually exclusive groups of 1 percent, 4 percent, and 15 percent.</p>
-            <p>To use the 1 percent sample, specify that SAMPLE_GRP equals “01”.</p>
-            <p>To use the 5 percent sample, specify that SAMPLE_GRP equals “01” or “04”.</p>
-            <p>To use the 15 percent sample, specify that SAMPLE_GRP equals “15”.</p>
-            <p>To use the 20 percent sample, specify that SAMPLE_GRP equals “01”, “04”, or “15”.</p>
+            <p>To use the 1 percent sample, specify that SAMPLE_GRP equals ï¿½01ï¿½.</p>
+            <p>To use the 5 percent sample, specify that SAMPLE_GRP equals ï¿½01ï¿½ or ï¿½04ï¿½.</p>
+            <p>To use the 15 percent sample, specify that SAMPLE_GRP equals ï¿½15ï¿½.</p>
+            <p>To use the 20 percent sample, specify that SAMPLE_GRP equals ï¿½01ï¿½, ï¿½04ï¿½, or ï¿½15ï¿½.</p>
             <p>Beneficiaries are assigned to sample groups each year based on the last two digits of their Medicare Claim Account Numbers (CANs). Since CANs can change over time (e.g., in the case of remarriage), new beneficiaries are becoming eligible for Medicare, and existing beneficiaries are dying, the sample is cross-sectional. There is no guarantee that the exact same beneficiaries are represented in the same sample group from one year to the next (i.e., this is the strict sampling).</p>
         </comment>
     </variable>
@@ -3475,7 +3475,7 @@
     </variable>
     <variable id="V_DOD_SW" label="Valid Date of Death Switch" shortName="V_DOD_SW" longName="VALID_DEATH_DT_SW" type="CHAR" length="1" source="CMS Common Medicare Environment (CME)">
         <description>
-            <p>This variable indicates whether a beneficiary’s day of death has been verified by the Social Security Administration (SSA) or the Railroad Retirement Board (RRB).</p>
+            <p>This variable indicates whether a beneficiaryï¿½s day of death has been verified by the Social Security Administration (SSA) or the Railroad Retirement Board (RRB).</p>
         </description>
         <valueGroups>
             <valueGroup>

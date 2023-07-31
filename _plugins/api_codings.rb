@@ -53,12 +53,23 @@ module BlueButtonApi
       return data
     end
 
+    def convert_smart_quotes(text)
+      smart_quotes_map = {
+        "�" => "'",
+        "‘" => "'",
+        "’" => "'",
+        "“" => '"',
+        "”" => '"',
+      }.freeze
+      text.tr(smart_quotes_map.keys.join, smart_quotes_map.values.join)
+    end
     def parse_paragraphs(paragraphs_xml)
+
       paragraphs = []
       return paragraphs if paragraphs_xml.nil?
 
       paragraphs_xml.xpath('.//p').each do |paragraph|
-        paragraphs.push(paragraph.content)
+        paragraphs.push(convert_smart_quotes(paragraph.content))
       end
       return paragraphs
     end
