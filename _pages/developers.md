@@ -272,6 +272,7 @@ https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qn
 * Sandbox: `https://sandbox.bluebutton.cms.gov/v2/o/token/`
 * Production: `https://api.bluebutton.cms.gov/v2/o/token/`
 
+
 #### Exchange code for token
 
 If the user authorizes your application, the BB2.0 API redirects back to the `redirect_uri` registered with your application with an authorization code and state parameter appended to it. 
@@ -688,7 +689,6 @@ BB2.0 API supplies codified data using several different terminology and coding 
 * [HCPCS](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo){:target="_blank"}
 * [CPT Codes](https://www.cms.gov/Medicare/Fraud-and-Abuse/PhysicianSelfReferral){:target="_blank"}
 * [National Drug Code Directory](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory){:target="_blank"}
-* [HL7 v3 Code System ActCode](http://hl7.org/fhir/v3/ActCode/cs.html){:target="_blank"}
 * [CMS Claim Type](https://bluebutton.cms.gov/resources/codesystem/eob-type/){:target="_blank"}  
 
 Additional information about coding systems can be found on the [terminology page](http://www.hl7.org/fhir/us/carin-bb/artifacts.html#5){:target="_blank"} of the [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"} and in the [Blue Button Code System Listing](https://confluence.cms.gov/download/attachments/577047980/bluebutton_system_listing.xlsx?version=1&modificationDate=1648486382000&api=v2){:target="_blank"}.  
@@ -696,7 +696,7 @@ Additional information about coding systems can be found on the [terminology pag
 BB2.0 API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html){:target="_blank"}. FHIR extensions are custom data elements that are not found in the FHIR standard:
 
 * [Blue Button extensions in V2](https://confluence.cms.gov/download/attachments/577047980/BB_V2_extension_listing.xlsx?version=1&modificationDate=1647033244000&api=v2){:target="_blank"}
-* [Original extensions defined in Blue Button V1](https://bluebutton.cms.gov/assets/ig/extensions.html) {:target="_blank"} 
+* [Original extensions defined in Blue Button V1](https://bluebutton.cms.gov/assets/ig/extensions.html){:target="_blank"} 
 
 ### Refresh rate and rate limiting
 
