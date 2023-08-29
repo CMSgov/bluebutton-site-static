@@ -551,7 +551,7 @@ Example response excerpt:
 ~~~
 {
     "resourceType": "Patient",
-    "id": "-19990000000002",
+    "id": "-20000000001112",
     "meta": {
         "lastUpdated":"2021-06-07T21:50:48.132-04:00",
         "profile": [
@@ -626,7 +626,7 @@ Response excerpt:
         {
             "resource": {
                 "resourceType":"Coverage",
-                "id":"part-a--19990000000002",
+                "id":"part-a--20000000001112",
                 "meta": {
                     "lastUpdated":"2021-06-07T21:50:48.132-04:00",
                     "profile": [
@@ -644,7 +644,7 @@ Response excerpt:
                 },
                 "subscriberId": "2S00A00AA00",
                 "beneficiary": {
-                    "reference":"Patient/-19990000000002"
+                    "reference":"Patient/-20000000001112"
                 },
 
 ~~~
@@ -1213,14 +1213,14 @@ YYYY-MM-DDThh:mm:ss.sss+zz:zz.
 ~~~
 The HL7 FHIR specification also provides a `_lastUpdated query` parameter for the search operations on the endpoints. By using the `_lastUpdated` query parameter, you can request records that have changed before or after a specific date. If you keep track of the date of a previous request, you can request just the changes since your previous request. The format of this request would be:  
 ~~~
-{baseURL}/Patient?_id=-19990000000001&_lastUpdated=gt2020-02-13T08:00:00-05:00  
+{baseURL}/Patient?_id=-20000000001112&_lastUpdated=gt2020-02-13T08:00:00-05:00  
 ~~~
 
 Do not use dates before 2020-02-12 with the `_lastUpdated parameter`. 
 
 The Blue Button API supports operators for less than (lt), greater than (gt), less than or equal (le), and greater than or equal (ge) the specified instant. You can also specify a time interval by using two `_lastUpdated parameters` like this:  
 ~~~
-{baseURL}/ExplanationOfBenefit?patient=Patient/-19990000000001&_lastUpdated=gt2020-02-13T08:00:00-05:00&_lastUpdated=lt2020-02-14T08:00:00-05:00
+{baseURL}/ExplanationOfBenefit?patient=Patient/-20000000001112&_lastUpdated=gt2020-02-13T08:00:00-05:00&_lastUpdated=lt2020-02-14T08:00:00-05:00
 ~~~
 
 ---
