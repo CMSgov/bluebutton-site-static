@@ -17,7 +17,7 @@ pipeline {
   parameters {
     choice(
       name: "SITE_ENV",
-      choices: ["test", "staging", "prod"],
+      choices: ["test", "staging"],
       description: "The environment to build and deploy to."
     )
 
@@ -38,21 +38,10 @@ pipeline {
       }
     }
 
-    stage("Prod Deployment Gate") {
+    stage("Display Environment") {
       steps {
         script {
-          if (params.SITE_ENV == "prod") {
-            echo("SITE_ENV is set to prod, verifying deployment was triggered manually from master branch")
-            if (!currentBuild.getBuildCauses()[0].toString().contains("Started by user")) {
-              error("Prod deployment must be triggered manually.")
-            }
-            if (env.BRANCH_NAME != "master" || params.CSS_REPO_BRANCH != "master") {
-              error("Prod deployment must be triggered from master branch.")
-            }
-            echo("Prod deployment passed tests, proceeding.")
-          } else {
-            echo("SITE_ENV is set to ${params.SITE_ENV}, proceeding.")
-          }
+          echo("SITE_ENV is set to ${params.SITE_ENV}, proceeding.")
         }
       }
     }
@@ -65,10 +54,8 @@ pipeline {
             UPLOAD_LOCATION = "/1197010/test.static.bluebutton.cms.gov/"
           } else if (params.SITE_ENV == "staging") {
             UPLOAD_LOCATION = "/1197010/staging.bluebutton.cms.gov/"
-          } else if (params.SITE_ENV == "prod") {
-            UPLOAD_LOCATION = "/1197010/bluebutton.cms.gov/"
           } else {
-            error("Please set SITE_ENV to one of: [test, staging, prod]")
+            error("Please set SITE_ENV to one of: [test, staging]")
           }
         }
       }
@@ -92,7 +79,7 @@ pipeline {
 
     stage("Deploy Static Site to Akamai NetStorage") {
       when {
-        expression { params.SITE_ENV ==~ /(test|staging|prod)/ }
+        expression { params.SITE_ENV ==~ /(test|staging)/ }
       }
       steps {
         sh """
@@ -113,7 +100,7 @@ pipeline {
 
     stage("Deploy CSS to Akamai Netstorage") {
       when {
-        expression { params.SITE_ENV ==~ /(test|staging|prod)/ }
+        expression { params.SITE_ENV ==~ /(test|staging)/ }
       }
       steps {
         sh """
