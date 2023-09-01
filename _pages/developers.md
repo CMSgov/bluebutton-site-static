@@ -691,11 +691,11 @@ BB2.0 API supplies codified data using several different terminology and coding 
 * [National Drug Code Directory](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory){:target="_blank"}
 * [CMS Claim Type](https://bluebutton.cms.gov/resources/codesystem/eob-type/){:target="_blank"}  
 
-Additional information about coding systems can be found on the [terminology page](http://www.hl7.org/fhir/us/carin-bb/artifacts.html#5){:target="_blank"} of the [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"} and in the [Blue Button Code System Listing](https://confluence.cms.gov/download/attachments/577047980/bluebutton_system_listing.xlsx?version=1&modificationDate=1648486382000&api=v2){:target="_blank"}.  
+Additional information about coding systems can be found on the [terminology page](http://www.hl7.org/fhir/us/carin-bb/artifacts.html#5){:target="_blank"} of the [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"} and in the [Blue Button Code System Listing (CSV 77KB)](/assets/csv/bluebutton_system_listing.csv){:target="_blank"}.  
 
 BB2.0 API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html){:target="_blank"}. FHIR extensions are custom data elements that are not found in the FHIR standard:
 
-* [Blue Button extensions in V2](https://confluence.cms.gov/download/attachments/577047980/BB_V2_extension_listing.xlsx?version=1&modificationDate=1647033244000&api=v2){:target="_blank"}
+* [Blue Button extensions in V2 (CSV 96KB)](/assets/csv/BB_V2_extension_listing.csv){:target="_blank"}
 * [Original extensions defined in Blue Button V1](https://bluebutton.cms.gov/assets/ig/extensions.html){:target="_blank"} 
 
 ### Refresh rate and rate limiting
