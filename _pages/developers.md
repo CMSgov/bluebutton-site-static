@@ -309,9 +309,10 @@ curl -X "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 "refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
 }
 ~~~
+Applications in the "10 hours" access category do not receive a refresh token in the BB2.0 token response.
 #### Exchange refresh token for new access token
 
-Access tokens expire after 10 hours. You can't use an expired access token to access data. To access data after an access token expires, request a new access token using a refresh token. 
+Access tokens expire after 10 hours. You can't use an expired access token to access data. To access data after an access token expires, request a new access token using a refresh token. Refresh tokens are available to applications in the "13 months" and "Research" access duration categories.
 
 You can use a refresh token at any time in your application's workflow, even before an access token expires.
 
