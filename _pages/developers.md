@@ -90,27 +90,27 @@ The length of time that an application can continue to pull new claims data from
 There are 3 app categories for data access duration:
 
 <table class="ds-c-table">
-	<thead>
-	  <tr>
-		<th><strong>Category</strong></th>
-		<th><strong>Description and notes</strong></th>
-	  </tr>
-	</thead>
-	<tbody>
-	  <tr>
-		<td>10&nbsp;hours</td>
-		<td>One-time use apps (Example: An app that pulls an enrollee’s data once to recommend insurance plans)<ul><li>These apps do not usually require separate logins or store users’ data over time.</li><li>Authorization will be granted for 10 hours, without the ability to refresh the token.</li><li>If an enrollee uses the app more than once, they must reauthorize for each data pull.</li></ul></td>
-	  </tr>
-	  <tr>
-		<td>13&nbsp;months</td>
-		<td>Apps that pull data for the enrollee’s use on an ongoing basis (Example: A personal health aggregator app.) <ul><li>Authorization will be granted for 13 months.</li><li>For continued access after 13 months, an app must prompt the user to reauthorize.</li></ul></td>
-	  </tr>
-	  <tr>
-		<td>Research</td>
-		<td>Apps that facilitate Institutional Review Board (IRB)-regulated clinical research studies <ul><li>Access to an enrollee’s data will never expire unless revoked by the enrollee or by the BB2.0 team due to app inactivity over a period of time.</li><li>Research apps will be reviewed every 2 years to ensure that they are still active.</li><li>If a research app is not active at a 2-year check-in, we will contact the app team for confirmation that they still need BB2.0 API access.</li><li>If you have a research app, please keep us updated on changes to your contact information and watch for emails from BlueButtonAPI@cms.hhs.gov.</li></ul></td>
-	  </tr>
-	</tbody>
-  </table>
+  <thead>
+    <tr>
+      <th><strong>Category</strong></th>
+      <th><strong>Description and notes</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10&nbsp;hours</td>
+      <td>One-time use apps (Example: An app that pulls an enrollee’s data once to recommend insurance plans)<ul><li>These apps do not usually require separate logins or store users’ data over time.</li><li>Authorization will be granted for 10 hours, without the ability to refresh the token.</li><li>If an enrollee uses the app more than once, they must reauthorize for each data pull.</li></ul></td>
+    </tr>
+    <tr>
+      <td>13&nbsp;months</td>
+      <td>Apps that pull data for the enrollee’s use on an ongoing basis (Example: A personal health aggregator app.) <ul><li>Authorization will be granted for 13 months.</li><li>For continued access after 13 months, an app must prompt the user to reauthorize.</li></ul></td>
+    </tr>
+    <tr>
+      <td>Research</td>
+      <td>Apps that facilitate Institutional Review Board (IRB)-regulated clinical research studies <ul><li>Access to an enrollee’s data will never expire unless revoked by the enrollee or by the BB2.0 team due to app inactivity over a period of time.</li><li>Research apps will be reviewed every 2 years to ensure that they are still active.</li><li>If a research app is not active at a 2-year check-in, we will contact the app team for confirmation that they still need BB2.0 API access.</li><li>If you have a research app, please keep us updated on changes to your contact information and watch for emails from BlueButtonAPI@cms.hhs.gov.</li></ul></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Technical Specifications and Standards 
 
