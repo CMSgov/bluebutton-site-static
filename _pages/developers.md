@@ -75,7 +75,7 @@ You can use BB2.0 to:
 
 For other examples of how applications use the Blue Button 2.0 API, visit the [Blue Button app directory on Medicare.gov](https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps).
 
-### Access to Medicare enrolee data
+### Access to Medicare enrollee data
 
 #### Scope of access
 
