@@ -139,11 +139,12 @@ Once you're logged in as a Medicare enrollee, you'll get an access token and you
 
 ### Sample data
 
-If you want to see a sample of the data available in the Blue Button 2.0 API without authenticating a synthetic user or creating a sandbox account, you can download a sample file. This [zip folder of JSON files]({{ site.baseurl }}/assets/zip/bb_sample_data_bbuser29999.zip" alt="The OAuth screen with a choice for benes to share or withhold certain demographic information) contains synthetic data for a single Medicare enrollee. The download includes 3 FHIR resources in JSON format:
+If you want to see a sample of the data available in the Blue Button 2.0 API without authenticating a synthetic user or creating a sandbox account, you can download a sample file. This [zip folder of JSON files]({{ site.baseurl }}/assets/zip/bb_sample_data_bbuser29999.zip) contains synthetic data for a single Medicare enrollee. The download includes 3 FHIR resources in JSON format:
 
 1. A single [Patient](http://www.hl7.org/fhir/patient.html){:target="_blank"} resource
 2. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [ExplanationOfBenefit](http://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"} resources (EOB)
-3. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [Coverage](http://www.hl7.org/fhir/coverage.html){:target="_blank"} resources.  
+3. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [Coverage](http://www.hl7.org/fhir/coverage.html){:target="_blank"} resources
+
 To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](https://bluebutton.cms.gov/developers/#understanding-the-data){:target="_blank"}.
 
 --- 
@@ -177,9 +178,9 @@ The Blue Button 2.0 API only supports the authorization code grant type. An auth
 
 #### Callback URLs / Redirect URIs 
 
-This is an API endpoint on your system that receives the callback after a user successfully authorizes your application to access their Medicare data. To enter multiple URIs in the Callback URLs / Redirect URIs field, separate each entry with a space or new line.   
+This is an API endpoint on your system that receives the callback after a user successfully authorizes your application to access their Medicare data. To enter multiple URIs in the **Callback URLs / Redirect URIs** field, separate each entry with a space or new line.   
 
-Sample format: `URIscheme://\[sub-domain.\]domain\_name\[:port\]/path`
+Sample format: `URIscheme://[sub-domain.]domain_name[:port]/path`
 
 #### Does my application need to collect beneficiary demographic data?
 
@@ -190,15 +191,15 @@ This setting determines 2 things:
 
 | **Setting** | **Description** |
 | -------- | -------- |
-| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race and gender. (Scopes: `patient/Patient.read`, `patient/Coverage.read`, `patient/ExplanationOfBenefit.read`, `profile`)<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-yes.png" alt="Demographic information form with 'Yes' selected" />|
-| No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-no.png" alt="Demographic information form with 'No' selected" />|
+| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race and gender. (Scopes: `patient/Patient.read`, `patient/Coverage.read`, `patient/ExplanationOfBenefit.read`, `profile`)|
+| No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.|
 {:.ds-c-table}
 
 To learn more about scopes and permissions, visit [Authorization](https://bluebutton.cms.gov/developers/#authorization).
 
 ### 3\. Save your application
 
-Click Save Application.  
+Click **Save Application**.  
 
 After you register your sandbox application, you'll get a Client ID and Client Secret.
 
