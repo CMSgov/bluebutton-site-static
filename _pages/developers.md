@@ -116,6 +116,8 @@ To get started in the developer sandbox, [create an account](https://sandbox.blu
 
 Once your development is nearing completion, get access to live data in our production environment by following the instructions in our [production access user guide](https://bluebutton.cms.gov/guide/){:target="_blank"}. After you complete the requirements in the production access guide and your app is approved, we'll give you credentials for the production environment.
 
+---
+
 ## Explore the API
 
 ### Test client
