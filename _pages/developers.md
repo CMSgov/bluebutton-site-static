@@ -191,8 +191,8 @@ This setting determines 2 things:
 
 | **Setting** | **Description** |
 | -------- | -------- |
-| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race and gender. (Scopes: `patient/Patient.read`, `patient/Coverage.read`, `patient/ExplanationOfBenefit.read`, `profile`)|
-| No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.|
+| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race and gender. (Scopes: `patient/Patient.read`, `patient/Coverage.read`, `patient/ExplanationOfBenefit.read`, `profile`)<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-yes.png" alt="Authorization screen with demographic info option" />|
+| No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-no.png" alt="Authorization screen without demographic info option" />|
 {:.ds-c-table}
 
 To learn more about scopes and permissions, visit [Authorization](https://bluebutton.cms.gov/developers/#authorization).
