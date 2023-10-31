@@ -75,6 +75,43 @@ You can use BB2.0 to:
 
 For other examples of how applications use the Blue Button 2.0 API, visit the [Blue Button app directory on Medicare.gov](https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps).
 
+### Access to Medicare enrollee data
+
+#### Scope of access
+
+Applications receive permission to access Medicare enrollees' data on a per-user basis. Access to claims data for each individual enrollee begins after they grant access to your application via the BB2.0 API's authorization flow. 
+
+Medicare enrollees may always opt to omit personal data such as name, date of birth, race, and gender when granting access to claims data. An enrollee's choice during the BB2.0 authorization flow determines the [scope](#scopes) of access an application will have to their data. 
+
+#### Duration of access
+
+The length of time that an application can continue to pull new claims data from Medicare depends on the application's use case and category. The BB2.0 API team determines your application's access duration category during the [production access process](https://bluebutton.cms.gov/guide/){:target="_blank"}. 
+
+There are 3 app categories for data access duration:
+
+<table class="ds-c-table">
+  <thead>
+    <tr>
+      <th><strong>Category</strong></th>
+      <th><strong>Description and notes</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10&nbsp;hours</td>
+      <td>One-time use apps (Example: An app that pulls an enrollee’s data once to recommend insurance plans)<ul><li>These apps do not usually require separate logins or store users’ data over time.</li><li>Authorization will be granted for 10 hours, without the ability to refresh the token.</li><li>If an enrollee uses the app more than once, they must reauthorize for each data pull.</li></ul></td>
+    </tr>
+    <tr>
+      <td>13&nbsp;months</td>
+      <td>Apps that pull data for the enrollee’s use on an ongoing basis (Example: A personal health aggregator app.) <ul><li>Authorization will be granted for 13 months.</li><li>For continued access after 13 months, an app must prompt the user to reauthorize.</li></ul></td>
+    </tr>
+    <tr>
+      <td>Research</td>
+      <td>Apps that facilitate Institutional Review Board (IRB)-regulated clinical research studies <ul><li>Access to an enrollee’s data will never expire unless revoked by the enrollee or by the BB2.0 team due to app inactivity over a period of time.</li><li>Research apps will be reviewed every 2 years to ensure that they are still active.</li><li>If a research app is not active at a 2-year check-in, we will contact the app team for confirmation that they still need BB2.0 API access.</li><li>If you have a research app, please keep us updated on changes to your contact information and watch for emails from BlueButtonAPI@cms.hhs.gov.</li></ul></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Technical Specifications and Standards 
 
 The Blue Button 2.0 API is a RESTFul API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
@@ -309,9 +346,10 @@ curl -X "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 "refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
 }
 ~~~
+Applications in the "10 hours" access category do not receive a refresh token in the BB2.0 token response.
 #### Exchange refresh token for new access token
 
-Access tokens expire after 10 hours. You can't use an expired access token to access data. To access data after an access token expires, request a new access token using a refresh token. 
+Access tokens expire after 10 hours. You can't use an expired access token to access data. To access data after an access token expires, request a new access token using a refresh token. Refresh tokens are available to applications in the "13 months" and "Research" access duration categories.
 
 You can use a refresh token at any time in your application's workflow, even before an access token expires.
 
