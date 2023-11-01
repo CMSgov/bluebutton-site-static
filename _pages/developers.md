@@ -10,7 +10,8 @@ badge: documentation
 permalink: "/developers/"
 sections:
   - Overview 
-  - Try the API
+  - Explore the API
+  - Getting started in the developer sandbox
   - Authorization
   - Understanding the data
   - Calling the API
@@ -152,125 +153,115 @@ To get started in the developer sandbox, [create an account](https://sandbox.blu
 
 Once your development is nearing completion, get access to live data in our production environment by following the instructions in our [production access user guide](https://bluebutton.cms.gov/guide/){:target="_blank"}. After you complete the requirements in the production access guide and your app is approved, we'll give you credentials for the production environment.
 
-## Try the API
+---
 
-You can start using the API right away by following these steps:
-1. Join the Developer Sandbox & register a Sandbox application
-2. Generate a sample token
-3. Call the API to retrieve synthetic data for a sample Patient
-4. Review the response data
-5. Access the synthetic dataset to try additional calls
+## Explore the API
 
+### Test client
 
-### <a id="register-application"></a> Step 1: Join the developer sandbox and register a sandbox application
+The Blue Button 2.0 API test client is a quick, no-code-required way to explore data returned from our API endpoints.
 
-[Create an account](https://sandbox.bluebutton.cms.gov/v1/accounts/create){:target="_blank"} to join the developer sandbox. Once you have verified your account, log in and click "Add an Application" from the Developer Sandbox homepage.
+Before you begin: If you're logged in to the sandbox, log out to use the test client.  
 
-Register a new Sandbox application to get a Client ID and Client Secret. You can also use one of the [Blue Button Sample Applications](/resources).
+1. Go to the [Blue Button 2.0 API test client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
+2. Choose a sample authorization token option. We recommend choosing the "Get an Authorization Token of v2 (PKCE enabled)" option. This option references our current codebase and Proof Key for Code Exchange (PKCE) is recommended for improved security. For more information on PCKE see [Proof Key for Code Exchange (PKCE) extension usage](https://bluebutton.cms.gov/developers/#proof-key-for-code-exchange-pkce-extension-usage).
+3. Click **Authorize as a Beneficiary**.
+4. Log in to Medicare.gov using a [synthetic user's account credentials](https://bluebutton.cms.gov/developers/#authenticating-as-a-synthetic-user).
+5. Choose a Privacy Option setting.
+6. Click **Allow**.  
 
-<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/bene_auth_screen.png" alt="The OAuth screen with a choice for benes to share or withhold certain demographic information" />
+Once you're logged in as a Medicare enrollee, you'll get an access token and you can make calls to different endpoints and see the sample data that is delivered in the response.
 
-You need to include at least one Callback or Redirect URL.
+<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/test-client.png" alt="Blue Button 2.0 API test client" />
 
-You can change any of this information later in My Sandbox Apps.
+### Sample data
 
-### Step 2: Generate a sample token
+If you want to see a sample of the data available in the Blue Button 2.0 API without authenticating a synthetic user or creating a sandbox account, you can download a sample file. This [zip folder of JSON files]({{ site.baseurl }}/assets/zip/bb_sample_data_bbuser29999.zip) contains synthetic data for a single Medicare enrollee. The download includes 3 FHIR resources in JSON format:
 
-To test out the Blue Button API, you must first generate a sample token that represents a beneficiary granting consent to access their CMS Medicare claims data.
+1. A single [Patient](http://www.hl7.org/fhir/patient.html){:target="_blank"} resource
+2. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [ExplanationOfBenefit](http://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"} resources (EOB)
+3. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [Coverage](http://www.hl7.org/fhir/coverage.html){:target="_blank"} resources
 
-Access the Test Client to see a sample of Blue Button data.
+To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](https://bluebutton.cms.gov/developers/#understanding-the-data){:target="_blank"}.
 
-1. If you are already logged in to the Developer portal, log out.
+--- 
 
-2. From the Sandbox homepage, click on "Test Client" in the top-level navigation.
+## Getting started in the developer sandbox
 
-3. Click "Get a Sample Authorization Token for v2."<br />
-<a href="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-42-0.png"><img style="width: 100%; padding:20px;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-42-0.png" alt="The sample authorization token page" /></a>
+To get started integrating with the Blue Button 2.0 API, you'll need to register a sandbox application. You don't need a working application at this point, but you need to define basic settings to generate client credentials for testing purposes.   
 
-1. Click the "Authorize as a Beneficiary" at the bottom to authorize<br />
-<a href="{{ site.baseurl }}/assets/img/docs/v2/V2_AUTH_FORM.png"><img style="width: 100%; padding:20px;" src="{{ site.baseurl }}/assets/img/docs/v2/V2_AUTH_FORM.png" alt="v2 sample API call" /></a>
+### 1\. Register an application in the developer sandbox
 
-1. You will be redirected to the login page for [Medicare.gov](http://medicare.gov/){:target="_blank"}.<br />
-<img style="width: 100%; padding:20px;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-28-51.png?" alt="Medicare.gov login page" />
+1. Go to the [Sandbox Dashboard](https://sandbox.bluebutton.cms.gov/home){:target="_blank"}. (If you don't already have an account, create one.)
+2. Click [Add an Application](https://sandbox.bluebutton.cms.gov/v1/o/applications/register/){:target="_blank"}.
 
-6. Log in with one of the Synthetic Beneficiary Accounts: <br />
-The first synthetic beneficiary account user is `BBUser00000` with password `PW00000!` Sample users continue all the way to `BBUser29999` with password `PW29999!` _Note: the `!` at the end of the password is required._
+### 2\. Enter application details
 
-7. Depending on your application, select either "Share all of your data" or "Share healthcare data, but not your personal info" to test your application.
+When you add or edit a sandbox application, you'll enter various required configuration details.
 
-8. Click "Allow" to Authorize sharing data.
-<img style="width: 100%; padding: 20px;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-33-13.png" alt="Medicare.gov authorization page" />
+<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/register-new-application.png" alt="New application registration screen" />
 
-9. Review the details returned from the Authorization flow: access token and its info, patient ID, scopes associated with the token etc.<br />
-<a href="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-35-16.png"><img style="width: 100%; padding:20px;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-15_18-35-16.png" alt="v2 Authorization flow return" /></a>
+#### Application Name
 
-10. Switching from v2 to v1 or vice versa, on authorization details page (step 7) there are two links:
-    - "repeat this step if you need a new token" - click this link, you will be directed to authorize as a beneficiary as in step 4 and stay with your current API version.
-    - "restart testclient" - click this link, you will be directed to test client home page as in step 3 and choose v1 or v2 API there.<br />
-<a href="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-40-23.png"><img style="width: 100%; padding:20px;" src="{{ site.baseurl }}/assets/img/docs/v2/image2021-3-16_15-40-23.png" alt="Authorization details page displaying action items" /></a>
+The name of your sandbox application. 
 
-### Step 3: Call the API
+#### OAuth Client Type
 
-After you obtain your Access Token, you can call the API using Postman or cURL.
+The Blue Button 2.0 API only supports confidential client type. 
 
-To call the API using Postman:
-1. From the Postman app, open a new tab
+#### Authorization Grant Type 
 
-2. Paste the Request URL: `https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
+The Blue Button 2.0 API only supports the authorization code grant type. An authorization code is a random string generated by the authorization server and returned to the application as part of the authorization response.
 
-1. Click "Authorization" and select type "OAuth 2.0"
+#### Callback URLs / Redirect URIs 
 
-1. Click on "Get New Access Token"
+This is an API endpoint on your system that receives the callback after a user successfully authorizes your application to access their Medicare data. To enter multiple URIs in the **Callback URLs / Redirect URIs** field, separate each entry with a space or new line.   
 
-2. Enter the following parameters:
-    - **Token Name:** {The name of your app}
-    - **Grant Type:** Authorization Code (unless you have chosen an alternate value for your app)
-    - **Callback URL:** One of the redirect uris you registered for your app, for example: `http://localhost:3000`
-    - **Auth URL:**`https://sandbox.bluebutton.cms.gov/v2/o/authorize/`
-    - **Access Token URL:** `https://sandbox.bluebutton.cms.gov/v2/o/token/`
-    - **Client ID:** {The Client ID assigned to your App in the sandbox}
-    - **Client Secret:** {The Client Secret assigned to your App in the sandbox}
-    - **Scope:** `patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read profile`<br />
-_Note:_ When a beneficiary is authorizing your application, they will have the ability to omit the `patient/Patient.read scope`.
-    - **State:** An optional value that you may use in your app
-    - **Client Authentication:** Select "Send as Basic Auth header" `https://sandbox.bluebutton.cms.gov/v2/o/authorize/`
+Sample format: `URIscheme://[sub-domain.]domain_name[:port]/path`
 
-6. Click Request Token. You should see a pop up for your Medicare account. Log in with one of the Synthetic Beneficiary Accounts: <br />
-The first synthetic beneficiary account user is `BBUser00000` with password `PW00000!` Sample users continue all the way to `BBUser29999` with password `PW29999!` _Note: the `!` at the end of the password is required._
+#### Does my application need to collect beneficiary demographic data?
 
-1. Authorize sharing by clicking "Allow" on the authorization screen
+This setting determines 2 things:
 
-2. When you return to the Postman workspace you should now be able to make requests to the API using the Access Token that will have been placed in the Header
+* What [scopes](https://bluebutton.cms.gov/developers/#Scopes) are applied to your application (determines which API calls your application can execute).
+* The information and options displayed on the authorization screen Medicare enrollees use to allow or deny your application access to their data.
 
-3. Click "Send" and see the synthetic beneficiary&#39;s personal health information as a Patient FHIR Resource display under "Body" in Postman
+| **Setting** | **Description** |
+| -------- | -------- |
+| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race and gender. (Scopes: `patient/Patient.read`, `patient/Coverage.read`, `patient/ExplanationOfBenefit.read`, `profile`)<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-yes.png" alt="Authorization screen with demographic info option" />|
+| No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-no.png" alt="Authorization screen without demographic info option" />|
+{:.ds-c-table}
 
-You can also use cURL:
+To learn more about scopes and permissions, visit [Authorization](https://bluebutton.cms.gov/developers/#authorization).
 
-~~~
-curl --header "Authorization: Bearer <YOUR TOKEN HERE>" https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325`
-~~~
-    
-### Step 4: View the API Response
+### 3\. Save your application
 
-### Step 5: Access Synthetic Data
+Click **Save Application**.  
 
-In order to access the full synthetic dataset for an individual synthetic beneficiary, you can do the following:
+After you register your sandbox application, you'll get a Client ID and Client Secret.
 
-1. Set up your sandbox application
+* Client ID: an alphanumeric string used to identify your application. Use this in your code when you call the Blue Button 2.0 API.
+* Client Secret: an alphanumeric string used by your application to authenticate with the Blue Button server.  
 
-2. Log out of [https://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.
+Note: Client credentials from the developer sandbox only work in the sandbox environment. To get production credentials, you need to complete the [production access requirements](https://bluebutton.cms.gov/developers/#production-api-access) and be approved.  
 
-3. Access the authorization URL at:<br /> `https://sandbox.bluebutton.cms.gov/v2/o/authorize/`<br />
-_Note: The last backslash is important_. _Also remember to append `?client_id={your client_id}` using the client ID assigned to the application you registered._
+### 4\. Next steps
 
-1. You will be redirected to the Medicare authentication screen on. DO NOT ACCESS THIS PAGE DIRECTLY.
+If you're ready to start building, check out our Sample Applications or SDKs:
 
-1. Log in with one of the Synthetic Beneficiary Accounts:
-The first synthetic beneficiary account user is `BBUser00000` with password `PW00000!` Sample users continue all the way to `BBUser29999` with password `PW29999!` _Note: the ! at the end of the password is required._
+#### SDKs
 
-1. Approve access for your application, which will now receive an access token, which can be used in the requests described above.
+Our SDKs provide a comprehensive set of tools to help you build applications faster and in a more standardized way. The SDKs are available for Node and Python.  
 
-2. The authorization completes when you are redirected back to the `Redirect_URI` you specified when you registered your application.
+* [Node SDK](https://www.npmjs.com/package/cms-bluebutton-sdk){:target="_blank"}
+* [Python SDK](https://pypi.org/project/cms-bluebutton-sdk/){:target="_blank"}
+
+#### Sample Apps
+
+Our sample applications provide examples of basic use of the BB2.0 API.  
+
+* [Node & React](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react){:target="_blank"}
+* [Python & React](https://github.com/CMSgov/bluebutton-sample-client-python-react){:target="_blank"}
 
 ---
 
