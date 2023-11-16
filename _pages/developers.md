@@ -80,7 +80,7 @@ For other examples of how applications use the Blue Button 2.0 API, visit the [B
 
 #### Scope of access
 
-Applications receive permission to access Medicare enrollees' data on a per-user basis. Access to claims data for each individual enrollee begins after they grant access to your application via the BB2.0 API's authorization flow. 
+Applications receive permission to access Medicare enrollee data on a per-user basis. Access to claims data for each individual enrollee begins after they grant access to an application via the BB2.0 API's authorization flow. 
 
 Medicare enrollees may always opt to omit personal data such as name, date of birth, race, and gender when granting access to claims data. An enrollee's choice during the BB2.0 authorization flow determines the [scope](#scopes) of access an application will have to their data. 
 
@@ -88,7 +88,7 @@ Medicare enrollees may always opt to omit personal data such as name, date of bi
 
 The length of time that an application can continue to pull new claims data from Medicare depends on the application's use case and category. The BB2.0 API team determines your application's access duration category during the [production access process](https://bluebutton.cms.gov/guide/){:target="_blank"}. 
 
-There are 3 app categories for data access duration:
+There are 3 categories for data access duration:
 
 <table class="ds-c-table">
   <thead>
