@@ -115,7 +115,7 @@ There are 3 categories for data access duration:
 
 ### Technical Specifications and Standards 
 
-The Blue Button 2.0 API is a RESTFul API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
+The Blue Button 2.0 API is a RESTful API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
 
 * [HL7 FHIR Standard](http://www.hl7.org/fhir/index.html){:target="_blank"}
 * [CARIN Consumer Directed Payer Data Exchange Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"}
