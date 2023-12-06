@@ -182,7 +182,7 @@ If you want to see a sample of the data available in the Blue Button 2.0 API wit
 2. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [ExplanationOfBenefit](http://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"} resources (EOB)
 3. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [Coverage](http://www.hl7.org/fhir/coverage.html){:target="_blank"} resources
 
-To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](https://bluebutton.cms.gov/developers/#understanding-the-data){:target="_blank"}.
+To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](https://bluebutton.cms.gov/developers/#understanding-the-data).
 
 --- 
 
