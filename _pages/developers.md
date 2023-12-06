@@ -267,7 +267,7 @@ Our sample applications provide examples of basic use of the BB2.0 API.
 
 ## Authorization
 
-The BB2.0 API uses the [OAuth 2 authorization flow](https://www.oauth.com/){:target="_blank"}. To initiate an integration, you'll need the client ID and client secret for your application that were generated when you [registered your application](#register-application).
+The BB2.0 API uses the [OAuth 2 authorization flow](https://www.oauth.com/){:target="_blank"}. To initiate an integration, you'll need the client ID and client secret for your application that were generated when you registered your application.
 
 ### Web applications
 
