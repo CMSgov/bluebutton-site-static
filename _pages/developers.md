@@ -685,7 +685,7 @@ Response excerpt:
 
 The UserInfo endpoint is an OAuth 2.0 Protected Resource that returns information about an authenticated user.   
 
-Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes){:target="_blank"}.  
+Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes).  
   
 
 `HTTP GET /connect/userinfo`  
