@@ -86,7 +86,7 @@ Medicare enrollees may always opt to omit personal data such as name, date of bi
 
 #### Duration of access
 
-The length of time that an application can continue to pull new claims data from Medicare depends on the application's use case and category. The BB2.0 API team determines your application's access duration category during the [production access process](https://bluebutton.cms.gov/guide/){:target="_blank"}. 
+The length of time that an application can continue to pull new claims data from Medicare depends on the application's use case and category. The BB2.0 API team determines your application's access duration category during the [production access process](/guide/){:target="_blank"}. 
 
 There are 3 categories for data access duration:
 
@@ -132,7 +132,7 @@ BB2.0 Version 2 (V2) is based on [FHIR release (R4)](http://hl7.org/fhir/R4/){:t
 
 #### Version 1 
 
-Version 1 (V1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/){:target="_blank"}. Development on V1 is limited to bug fixes and basic maintenance. If you're developing a new app, use V2\. For information about BB2.0 V1, see the [V1 Documentation](https://bluebutton.cms.gov/v1/). 
+Version 1 (V1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/){:target="_blank"}. Development on V1 is limited to bug fixes and basic maintenance. If you're developing a new app, use V2\. For information about BB2.0 V1, see the [V1 Documentation](/v1/). 
 
 ### Environments
 
@@ -151,7 +151,7 @@ To get started in the developer sandbox, [create an account](https://sandbox.blu
 
 #### Production
 
-Once your development is nearing completion, get access to live data in our production environment by following the instructions in our [production access user guide](https://bluebutton.cms.gov/guide/){:target="_blank"}. After you complete the requirements in the production access guide and your app is approved, we'll give you credentials for the production environment.
+Once your development is nearing completion, get access to live data in our production environment by following the instructions in our [production access user guide](/guide/){:target="_blank"}. After you complete the requirements in the production access guide and your app is approved, we'll give you credentials for the production environment.
 
 ---
 
@@ -164,9 +164,9 @@ The Blue Button 2.0 API test client is a quick, no-code-required way to explore 
 Before you begin: If you're logged in to the sandbox, log out to use the test client.  
 
 1. Go to the [Blue Button 2.0 API test client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
-2. Choose a sample authorization token option. We recommend choosing the "Get an Authorization Token of v2 (PKCE enabled)" option. This option references our current codebase and Proof Key for Code Exchange (PKCE) is recommended for improved security. For more information on PCKE see [Proof Key for Code Exchange (PKCE) extension usage](https://bluebutton.cms.gov/developers/#proof-key-for-code-exchange-pkce-extension-usage).
+2. Choose a sample authorization token option. We recommend choosing the "Get an Authorization Token of v2 (PKCE enabled)" option. This option references our current codebase and Proof Key for Code Exchange (PKCE) is recommended for improved security. For more information on PCKE see [Proof Key for Code Exchange (PKCE) extension usage](#proof-key-for-code-exchange-pkce-extension-usage).
 3. Click **Authorize as a Beneficiary**.
-4. Log in to Medicare.gov using a [synthetic user's account credentials](https://bluebutton.cms.gov/developers/#authenticating-as-a-synthetic-user).
+4. Log in to Medicare.gov using a [synthetic user's account credentials](#authenticating-as-a-synthetic-user).
 5. Choose a Privacy Option setting.
 6. Click **Allow**.  
 
@@ -182,7 +182,7 @@ If you want to see a sample of the data available in the Blue Button 2.0 API wit
 2. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [ExplanationOfBenefit](http://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"} resources (EOB)
 3. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [Coverage](http://www.hl7.org/fhir/coverage.html){:target="_blank"} resources
 
-To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](https://bluebutton.cms.gov/developers/#understanding-the-data){:target="_blank"}.
+To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](#understanding-the-data){:target="_blank"}.
 
 --- 
 
@@ -223,7 +223,7 @@ Sample format: `URIscheme://[sub-domain.]domain_name[:port]/path`
 
 This setting determines 2 things:
 
-* What [scopes](https://bluebutton.cms.gov/developers/#Scopes) are applied to your application (determines which API calls your application can execute).
+* What [scopes](#Scopes) are applied to your application (determines which API calls your application can execute).
 * The information and options displayed on the authorization screen Medicare enrollees use to allow or deny your application access to their data.
 
 | **Setting** | **Description** |
@@ -232,7 +232,7 @@ This setting determines 2 things:
 | No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-no.png" alt="Authorization screen without demographic info option" />|
 {:.ds-c-table}
 
-To learn more about scopes and permissions, visit [Authorization](https://bluebutton.cms.gov/developers/#authorization).
+To learn more about scopes and permissions, visit [Authorization](#authorization).
 
 ### 3\. Save your application
 
@@ -243,7 +243,7 @@ After you register your sandbox application, you'll get a Client ID and Client S
 * Client ID: an alphanumeric string used to identify your application. Use this in your code when you call the Blue Button 2.0 API.
 * Client Secret: an alphanumeric string used by your application to authenticate with the Blue Button server.  
 
-Note: Client credentials from the developer sandbox only work in the sandbox environment. To get production credentials, you need to complete the [production access requirements](https://bluebutton.cms.gov/developers/#production-api-access) and be approved.  
+Note: Client credentials from the developer sandbox only work in the sandbox environment. To get production credentials, you need to complete the [production access requirements](#production-api-access) and be approved.  
 
 ### 4\. Next steps
 
@@ -569,7 +569,7 @@ Example response excerpt:
 HTTP GET /v2/fhir/Patient/[fhir_id]  
 ~~~
 
-The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html){:target="_blank"}. This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes).  
+The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html){:target="_blank"}. This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes).  
 
 Request:
 ~~~
@@ -685,7 +685,7 @@ Response excerpt:
 
 The UserInfo endpoint is an OAuth 2.0 Protected Resource that returns information about an authenticated user.   
 
-Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes){:target="_blank"}.  
+Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes){:target="_blank"}.  
   
 
 `HTTP GET /connect/userinfo`  
@@ -718,14 +718,14 @@ BB2.0 API supplies codified data using several different terminology and coding 
 * [HCPCS](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo){:target="_blank"}
 * [CPT Codes](https://www.cms.gov/Medicare/Fraud-and-Abuse/PhysicianSelfReferral){:target="_blank"}
 * [National Drug Code Directory](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory){:target="_blank"}
-* [CMS Claim Type](https://bluebutton.cms.gov/resources/codesystem/eob-type/){:target="_blank"}  
+* [CMS Claim Type](/resources/codesystem/eob-type/){:target="_blank"}  
 
 Additional information about coding systems can be found on the [terminology page](http://www.hl7.org/fhir/us/carin-bb/artifacts.html#5){:target="_blank"} of the [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"} and in the [Blue Button Code System Listing (CSV 77KB)](/assets/csv/bluebutton_system_listing.csv){:target="_blank"}.  
 
 BB2.0 API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html){:target="_blank"}. FHIR extensions are custom data elements that are not found in the FHIR standard:
 
 * [Blue Button extensions in V2 (CSV 96KB)](/assets/csv/BB_V2_extension_listing.csv){:target="_blank"}
-* [Original extensions defined in Blue Button V1](https://bluebutton.cms.gov/assets/ig/extensions.html){:target="_blank"} 
+* [Original extensions defined in Blue Button V1](/assets/ig/extensions.html){:target="_blank"} 
 
 ### Refresh rate and rate limiting
 
@@ -762,14 +762,14 @@ Each of our 40,000 synthetic user accounts have Medicare.gov login credentials. 
 
 #### Claim dates in rolling claims updates
 
-When new data is added for a synthetic user account in the weekly update, the new data includes claims dated 1-2 weeks prior. This delay simulates real claim processing time in production data. Get updated claims using the [\_lastUpdated query parameter](https://bluebutton.cms.gov/developers/#query-by-lastupdated-field).  
+When new data is added for a synthetic user account in the weekly update, the new data includes claims dated 1-2 weeks prior. This delay simulates real claim processing time in production data. Get updated claims using the [\_lastUpdated query parameter](#query-by-lastupdated-field).  
   
 ---
 
 ## Consuming the data
 The Blue Button API includes over 1300 data elements with a wide variety of data exchange use cases. Here are some basics to get you started with common data elements. 
 
-For complete implementation guidance, see the [FHIR specification](http://www.hl7.org/fhir/index.html){:target="_blank"} and the [CARIN implementation guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"}. Our [Resources page](https://bluebutton.cms.gov/resources/) also includes links to tutorials and helpful information on FHIR.
+For complete implementation guidance, see the [FHIR specification](http://www.hl7.org/fhir/index.html){:target="_blank"} and the [CARIN implementation guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"}. Our [Resources page](/resources/) also includes links to tutorials and helpful information on FHIR.
 
 ### Understanding the payload
 
@@ -1014,8 +1014,8 @@ The Blue Button API supplies many data points using [FHIR extensions](http://www
 All Blue Button API resources include extensions.  Extensions are like a key-value list, where the extension URL is the key. In an extension, the value attribute is defined as [Choice of Types](http://www.hl7.org/fhir/formats.html#choice){:target="_blank"}, where the data type depends on the definition of the extension.    
 
 In the example below, there are two extensions: 
-* [NCH Near Line Record Identification Code](https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd/) provides the value as a `valueCoding` type
-* [Carrier or MAC Number](https://bluebutton.cms.gov/resources/variables/carr_num/)   is a `valueIdentifier`
+* [NCH Near Line Record Identification Code](/resources/variables/nch_near_line_rec_ident_cd/) provides the value as a `valueCoding` type
+* [Carrier or MAC Number](/resources/variables/carr_num/)   is a `valueIdentifier`
 
 
 *Note: In the Blue Button API, the extension URL points at an underlying valueset rather than the standard FHIR practice of the URL pointing to the [StructureDefinition](http://www.hl7.org/fhir/structuredefinition.html){:target="_blank"} of the extension.  This is due to historical reasons and will be revisited in future versions of Blue Button.*
@@ -1074,8 +1074,8 @@ Claim type example:
 },
 ```
 For more information about determining claim types, see the following coding system reference links:
-* [EOB type](https://bluebutton.cms.gov/resources/codesystem/eob-type/)
-* [NCH Claim Type Code variable](https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd/)
+* [EOB type](/resources/codesystem/eob-type/)
+* [NCH Claim Type Code variable](/resources/variables/nch_clm_type_cd/)
 * [FHIR Claim Type value set](http://hl7.org/fhir/STU3/valueset-claim-type.html){:target="_blank"}
 
 
@@ -1159,7 +1159,7 @@ This section provides information on basic and common queries against the Blue B
 {:.ds-c-table}
 
     
-To find beneficiaries with varying volumes and types of data, use this [CSV of synthetic data](https://bluebutton.cms.gov/synthetic_users_by_claim_count_full.csv). Using the synthetic data, you can break down claims by type (carrier, inpatient, etc.) for each beneficiary/user combination.  Synthetic data works in both the Sandbox and Production environments.
+To find beneficiaries with varying volumes and types of data, use this [CSV of synthetic data](/synthetic_users_by_claim_count_full.csv). Using the synthetic data, you can break down claims by type (carrier, inpatient, etc.) for each beneficiary/user combination.  Synthetic data works in both the Sandbox and Production environments.
 	
 
 
@@ -1256,7 +1256,7 @@ The Blue Button API supports operators for less than (lt), greater than (gt), le
 
 ## Production API access
 
-In order to gain production access, an organization should start by reviewing the [Terms of Service](https://bluebutton.cms.gov/terms/), [production access user guide](https://bluebutton.cms.gov/guide/), and [checklist](https://bluebutton.cms.gov/checklist/). Once an organization believes it is fulfilling all the requirements detailed in the checklist and is adherent to the terms of service, they should email [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov) to set up a production access demonstration meeting with the CMS team.
+In order to gain production access, an organization should start by reviewing the [Terms of Service](/terms/), [production access user guide](/guide/), and [checklist](/checklist/). Once an organization believes it is fulfilling all the requirements detailed in the checklist and is adherent to the terms of service, they should email [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov) to set up a production access demonstration meeting with the CMS team.
 
 ---
 
