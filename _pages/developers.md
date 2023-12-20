@@ -223,7 +223,7 @@ Sample format: `URIscheme://[sub-domain.]domain_name[:port]/path`
 
 This setting determines 2 things:
 
-* What [scopes](#Scopes) are applied to your application (determines which API calls your application can execute).
+* What [scopes](#scopes) are applied to your application (determines which API calls your application can execute).
 * The information and options displayed on the authorization screen Medicare enrollees use to allow or deny your application access to their data.
 
 | **Setting** | **Description** |
