@@ -115,7 +115,7 @@ There are 3 categories for data access duration:
 
 ### Technical Specifications and Standards 
 
-The Blue Button 2.0 API is a RESTFul API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
+The Blue Button 2.0 API is a RESTful API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
 
 * [HL7 FHIR Standard](http://www.hl7.org/fhir/index.html){:target="_blank"}
 * [CARIN Consumer Directed Payer Data Exchange Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"}
@@ -164,9 +164,9 @@ The Blue Button 2.0 API test client is a quick, no-code-required way to explore 
 Before you begin: If you're logged in to the sandbox, log out to use the test client.  
 
 1. Go to the [Blue Button 2.0 API test client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
-2. Choose a sample authorization token option. We recommend choosing the "Get an Authorization Token of v2 (PKCE enabled)" option. This option references our current codebase and Proof Key for Code Exchange (PKCE) is recommended for improved security. For more information on PCKE see [Proof Key for Code Exchange (PKCE) extension usage](https://bluebutton.cms.gov/developers/#proof-key-for-code-exchange-pkce-extension-usage).
+2. Choose a sample authorization token option. We recommend choosing the "Get an Authorization Token of v2 (PKCE enabled)" option. This option references our current codebase and Proof Key for Code Exchange (PKCE) is recommended for improved security. For more information on PCKE see [Proof Key for Code Exchange (PKCE) extension usage](#proof-key-for-code-exchange-pkce-extension-usage).
 3. Click **Authorize as a Beneficiary**.
-4. Log in to Medicare.gov using a [synthetic user's account credentials](https://bluebutton.cms.gov/developers/#authenticating-as-a-synthetic-user).
+4. Log in to Medicare.gov using a [synthetic user's account credentials](#authenticating-as-a-synthetic-user).
 5. Choose a Privacy Option setting.
 6. Click **Allow**.  
 
@@ -182,7 +182,7 @@ If you want to see a sample of the data available in the Blue Button 2.0 API wit
 2. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [ExplanationOfBenefit](http://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"} resources (EOB)
 3. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [Coverage](http://www.hl7.org/fhir/coverage.html){:target="_blank"} resources
 
-To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](https://bluebutton.cms.gov/developers/#understanding-the-data){:target="_blank"}.
+To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](#understanding-the-data).
 
 --- 
 
@@ -223,7 +223,7 @@ Sample format: `URIscheme://[sub-domain.]domain_name[:port]/path`
 
 This setting determines 2 things:
 
-* What [scopes](https://bluebutton.cms.gov/developers/#Scopes) are applied to your application (determines which API calls your application can execute).
+* What [scopes](#scopes) are applied to your application (determines which API calls your application can execute).
 * The information and options displayed on the authorization screen Medicare enrollees use to allow or deny your application access to their data.
 
 | **Setting** | **Description** |
@@ -232,7 +232,7 @@ This setting determines 2 things:
 | No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-no.png" alt="Authorization screen without demographic info option" />|
 {:.ds-c-table}
 
-To learn more about scopes and permissions, visit [Authorization](https://bluebutton.cms.gov/developers/#authorization).
+To learn more about scopes and permissions, visit [Authorization](#authorization).
 
 ### 3\. Save your application
 
@@ -243,7 +243,7 @@ After you register your sandbox application, you'll get a Client ID and Client S
 * Client ID: an alphanumeric string used to identify your application. Use this in your code when you call the Blue Button 2.0 API.
 * Client Secret: an alphanumeric string used by your application to authenticate with the Blue Button server.  
 
-Note: Client credentials from the developer sandbox only work in the sandbox environment. To get production credentials, you need to complete the [production access requirements](https://bluebutton.cms.gov/developers/#production-api-access) and be approved.  
+Note: Client credentials from the developer sandbox only work in the sandbox environment. To get production credentials, you need to complete the [production access requirements](#production-api-access) and be approved.  
 
 ### 4\. Next steps
 
@@ -267,7 +267,7 @@ Our sample applications provide examples of basic use of the BB2.0 API.
 
 ## Authorization
 
-The BB2.0 API uses the [OAuth 2 authorization flow](https://www.oauth.com/){:target="_blank"}. To initiate an integration, you'll need the client ID and client secret for your application that were generated when you [registered your application](#register-application).
+The BB2.0 API uses the [OAuth 2 authorization flow](https://www.oauth.com/){:target="_blank"}. To initiate an integration, you'll need the client ID and client secret for your application that were generated when you registered your application.
 
 ### Web applications
 
@@ -569,7 +569,7 @@ Example response excerpt:
 HTTP GET /v2/fhir/Patient/[fhir_id]  
 ~~~
 
-The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html){:target="_blank"}. This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes).  
+The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html){:target="_blank"}. This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes).  
 
 Request:
 ~~~
@@ -685,7 +685,7 @@ Response excerpt:
 
 The UserInfo endpoint is an OAuth 2.0 Protected Resource that returns information about an authenticated user.   
 
-Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](https://bluebutton.cms.gov/developers/#scopes){:target="_blank"}.  
+Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes).  
   
 
 `HTTP GET /connect/userinfo`  
@@ -762,7 +762,7 @@ Each of our 40,000 synthetic user accounts have Medicare.gov login credentials. 
 
 #### Claim dates in rolling claims updates
 
-When new data is added for a synthetic user account in the weekly update, the new data includes claims dated 1-2 weeks prior. This delay simulates real claim processing time in production data. Get updated claims using the [\_lastUpdated query parameter](https://bluebutton.cms.gov/developers/#query-by-lastupdated-field).  
+When new data is added for a synthetic user account in the weekly update, the new data includes claims dated 1-2 weeks prior. This delay simulates real claim processing time in production data. Get updated claims using the [\_lastUpdated query parameter](#query-by-lastupdated-field).  
   
 ---
 
