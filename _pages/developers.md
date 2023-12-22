@@ -245,7 +245,55 @@ After you register your sandbox application, you'll get a Client ID and Client S
 
 Note: Client credentials from the developer sandbox only work in the sandbox environment. To get production credentials, you need to complete the [production access requirements](#production-api-access) and be approved.  
 
-### 4\. Next steps
+### 4\. Test the API with Postman or cURL
+
+Once you've created a Blue Button 2.0 sandbox application, you can start making requests. The instructions in this section will get you up and running quickly with Postman or cURL.
+
+#### Postman
+
+[Postman](https://www.postman.com/){:target="_blank"} is a widely used API client. To start making Blue Button 2.0 API sandbox calls in Postman, follow the steps shown below. The screenshots in these instructions are from version 10.20.6 of the Postman desktop app for macOS.  
+
+1. Configure your Sandbox application to work with Postman:
+  1. Log into the [Blue Button 2.0 Sandbox](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.
+  2. Click **View/Edit App** for the app you want to use with Postman.
+  3. Click **Edit Application**.
+  4. Enter the following URLs into the **Callback URLs / Redirect URIs** field, separated by a carriage return.
+    * `https://oauth.pstmn.io/v1/callback`
+    * `https://oauth.pstmn.io/v1/browser-callback`
+  5. Click **Save Application**.
+2. Download the [Blue Button 2.0 API Sandbox Postman collection](/assets/developer-resources/CMS-BlueButton-2.0-API-Sandbox.postman_collection.json) and import it into the Postman desktop or web application. To import the collection, either click the **Import** button in Postman and select the collection file, or drag the file into the Postman window. 
+3. Select the top-level folder in the collection, **CMS BlueButton 2.0 API Sandbox**.
+4. Select the **Variables** tab.
+5. Copy your application's **Client ID** and **Client Secret** from your Sandbox account into both the **Initial Value** and **Current Value** cels for the corresponding Postman variables, `clientId` and `clientSecret`.
+6. After copying and pasting your API credentials, log out of the Blue Button sandbox in your browser. Being logged into the sandbox can cause errors during authorization in Postman.
+7. In Postman, select the **Authorization** tab.
+8. Click **Get New Access Token**.
+9. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click Log in.
+10. Click **Connect**.
+11. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.
+12. Make any desired Blue Button 2.0 API calls from the endpoints listed under the **Patient**, **Explanation of Benefit**, and **Coverage** folders. For example, to retrieve explanation of benefits information for the authenticated patient:
+  1. Select the **Explanation of Benefits** folder, then **GET Search Explanation of Benefits**.
+  2. Click **Send**.
+  3. The API will return a FHIR bundle with explanation of benefits information.
+
+#### cURL
+
+You can also call the  Blue Button 2.0 sandbox with [cURL](https://curl.se/){:target="_blank"}, a popular command-line HTTP client.
+
+First, obtain an access token. To test using your sandbox application, you can use [Postman](#postman) to retrieve a token with your client ID and secret, as shown in the previous section. Alternately, you can get a sample authorization token from the Blue Button 2.0 Test Client as shown in the following steps:  
+
+1. Navigate to the [Blue Button 2.0 API Test Client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
+2. If you are currently logged into the Blue Button 2.0 sandbox, click **Log Out to Continue**.
+3. Click **Get a Sample Authorization Token for v2**.
+4. Click **Authorize as a Beneficiary**.
+5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.
+6. Click **Connect**.A new page will open. Copy the access token from the JSON shown under **Step 1: Sample Authorization**.
+
+Once you have an access token, you can start making API calls with cURL. For example, the following command will retrieve insurance coverage information for the authenticated patient (replace `\<YOUR ACCESS TOKEN\>` with your actual access token):  
+
+`curl --location "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/" --header "Accept: application/json" --header "Authorization: Bearer <YOUR ACCESS TOKEN>"`
+
+### 5\. Next steps
 
 If you're ready to start building, check out our Sample Applications or SDKs:
 
