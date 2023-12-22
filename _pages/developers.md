@@ -115,7 +115,7 @@ There are 3 categories for data access duration:
 
 ### Technical Specifications and Standards 
 
-The Blue Button 2.0 API is a RESTFul API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
+The Blue Button 2.0 API is a RESTful API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
 
 * [HL7 FHIR Standard](http://www.hl7.org/fhir/index.html){:target="_blank"}
 * [CARIN Consumer Directed Payer Data Exchange Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html){:target="_blank"}
@@ -182,7 +182,7 @@ If you want to see a sample of the data available in the Blue Button 2.0 API wit
 2. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [ExplanationOfBenefit](http://www.hl7.org/fhir/explanationofbenefit.html){:target="_blank"} resources (EOB)
 3. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html){:target="_blank"} containing multiple [Coverage](http://www.hl7.org/fhir/coverage.html){:target="_blank"} resources
 
-To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](#understanding-the-data){:target="_blank"}.
+To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](#understanding-the-data).
 
 --- 
 
@@ -267,7 +267,7 @@ Our sample applications provide examples of basic use of the BB2.0 API.
 
 ## Authorization
 
-The BB2.0 API uses the [OAuth 2 authorization flow](https://www.oauth.com/){:target="_blank"}. To initiate an integration, you'll need the client ID and client secret for your application that were generated when you [registered your application](#register-application).
+The BB2.0 API uses the [OAuth 2 authorization flow](https://www.oauth.com/){:target="_blank"}. To initiate an integration, you'll need the client ID and client secret for your application that were generated when you registered your application.
 
 ### Web applications
 
@@ -685,7 +685,9 @@ Response excerpt:
 
 The UserInfo endpoint is an OAuth 2.0 Protected Resource that returns information about an authenticated user.   
 
-Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes){:target="_blank"}.  
+
+Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes).  
+
   
 
 `HTTP GET /connect/userinfo`  
