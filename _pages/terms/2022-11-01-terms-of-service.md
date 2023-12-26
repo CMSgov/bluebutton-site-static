@@ -142,4 +142,4 @@ You agree to use the Blue Button 2.0 APIs in a manner consistent with the follow
 
 ## Resources
 
-For more context on these terms of service and information around these requirements, we’ve created a [production access user guide](https://bluebutton.cms.gov/guide) and a [production access checklist](https://bluebutton.cms.gov/checklist).
+For more context on these terms of service and information around these requirements, we’ve created a [production access user guide](/guide) and a [production access checklist](/checklist).
