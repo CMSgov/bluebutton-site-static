@@ -268,8 +268,8 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
 6. After copying and pasting your API credentials, log out of the Blue Button sandbox in your browser. Being logged into the sandbox can cause errors during authorization in Postman.
 7. In Postman, select the **Authorization** tab.
 8. Click **Get New Access Token**.
-9. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click Log in.
-10. Click **Connect**.
+9. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.<br><img src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-10.png" alt="Medicare login window" />
+10. Click **Connect**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-11.png" alt="Connect button" />
 11. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.
 12. Make any desired Blue Button 2.0 API calls from the endpoints listed under the **Patient**, **Explanation of Benefit**, and **Coverage** folders. For example, to retrieve explanation of benefits information for the authenticated patient:
     1. Select the **Explanation of Benefits** folder, then **GET Search Explanation of Benefits**.
@@ -283,13 +283,14 @@ You can also call the  Blue Button 2.0 sandbox with [cURL](https://curl.se/){:ta
 First, obtain an access token. To test using your sandbox application, you can use [Postman](#postman) to retrieve a token with your client ID and secret, as shown in the previous section. Alternately, you can get a sample authorization token from the Blue Button 2.0 Test Client as shown in the following steps:  
 
 1. Navigate to the [Blue Button 2.0 API Test Client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
-2. If you are currently logged into the Blue Button 2.0 sandbox, click **Log Out to Continue**.
-3. Click **Get a Sample Authorization Token for v2**.
-4. Click **Authorize as a Beneficiary**.
-5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.
-6. Click **Connect**. A new page will open. Copy the access token from the JSON shown under **Step 1: Sample Authorization**.
+2. If you are currently logged into the Blue Button 2.0 sandbox, click **Log Out to Continue**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-06.png" alt="Log Out to Continue button" />
+3. Click **Get a Sample Authorization Token for v2**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-07.png" alt="Get a Sample Authorization for V2 button" />
+4. Click **Authorize as a Beneficiary**.<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-08.png" alt="Authorize as a Beneficiary button" />
+5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.<br><img src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-10.png" alt="Medicare login window" />
+6. Click **Connect**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-11.png" alt="Connect button" />
+7. A new page will open. Copy the access token from the JSON shown under **Step 1: Sample Authorization** for use in your cURL command.<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-09.png" alt="JSON object with access token highlighted" />
 
-Once you have an access token, you can start making API calls with cURL. For example, the following command will retrieve insurance coverage information for the authenticated patient (replace `\<YOUR ACCESS TOKEN\>` with your actual access token):  
+Once you have an access token, you can start making API calls with cURL. For example, the following command will retrieve insurance coverage information for the authenticated patient (replace `<YOUR ACCESS TOKEN>` with your actual access token):  
 
 ~~~
 curl --location "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/" --header "Accept: application/json" --header "Authorization: Bearer <YOUR ACCESS TOKEN>"
