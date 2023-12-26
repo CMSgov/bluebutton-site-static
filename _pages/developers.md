@@ -254,13 +254,13 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
 [Postman](https://www.postman.com/){:target="_blank"} is a widely used API client. To start making Blue Button 2.0 API sandbox calls in Postman, follow the steps shown below. The screenshots in these instructions are from version 10.20.6 of the Postman desktop app for macOS.  
 
 1. Configure your Sandbox application to work with Postman:
-    1. Log into the [Blue Button 2.0 Sandbox](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.
-    2. Click **View/Edit App** for the app you want to use with Postman.
-    3. Click **Edit Application**.
+    1. Log into the [Blue Button 2.0 Sandbox](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-01.png" alt="Sandbox login button" />
+    2. Click **View/Edit App** for the app you want to use with Postman.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-02.png" alt="View/Edit App link" />
+    3. Click **Edit Application**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-03.png" alt="Edit Application button" />
     4. Enter the following URLs into the **Callback URLs / Redirect URIs** field, separated by a carriage return.
         - `https://oauth.pstmn.io/v1/callback`
-        - `https://oauth.pstmn.io/v1/browser-callback`
-    5. Click **Save Application**.
+        - `https://oauth.pstmn.io/v1/browser-callback`<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-04.png" alt="Callback URLs / Redirect URIs field, populated with callback URLs listed text" />
+    5. Click **Save Application**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-05.png" alt="Save Application button" />
 2. Download the [Blue Button 2.0 API Sandbox Postman collection](/assets/developer-resources/CMS-BlueButton-2.0-API-Sandbox.postman_collection.json) and import it into the Postman desktop or web application. To import the collection, either click the **Import** button in Postman and select the collection file, or drag the file into the Postman window. 
 3. Select the top-level folder in the collection, **CMS BlueButton 2.0 API Sandbox**.
 4. Select the **Variables** tab.
