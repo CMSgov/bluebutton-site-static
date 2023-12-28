@@ -251,7 +251,7 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
 
 #### Postman
 
-[Postman](https://www.postman.com/){:target="_blank"} is a widely used API client. To start making Blue Button 2.0 API sandbox calls in Postman, follow the steps shown below. The screenshots in these instructions are from version 10.20.6 of the Postman desktop app for macOS.  
+[Postman](https://www.postman.com/){:target="_blank"} is a widely used API client. To start making Blue Button 2.0 API sandbox calls in Postman, follow the steps shown below.  
 
 1. Configure your Sandbox application to work with Postman:
     1. Log into the [Blue Button 2.0 Sandbox](https://sandbox.bluebutton.cms.gov/){:target="_blank"}.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-01.png" alt="Sandbox login button" />
