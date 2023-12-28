@@ -291,7 +291,7 @@ First, obtain an access token. To test using your sandbox application, you can u
 6. Click **Connect**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-11.png" alt="Connect button" />
 7. A new page will open. Copy the access token from the JSON shown under **Step 1: Sample Authorization** for use in your cURL command.<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-09.png" alt="JSON object with access token highlighted" />
 
-Once you have an access token, you can start making API calls with cURL. For example, the following command will retrieve insurance coverage information for the authenticated patient (replace `<YOUR ACCESS TOKEN>` with your actual access token):  
+Once you have an access token, you can start making API calls with cURL. For example, the following command will retrieve explanation of benefit information for the authenticated patient (replace `<YOUR ACCESS TOKEN>` with your actual access token):  
 
 ~~~
 curl --location "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/" --header "Accept: application/json" --header "Authorization: Bearer <YOUR ACCESS TOKEN>"
