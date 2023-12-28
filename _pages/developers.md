@@ -262,7 +262,7 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
         - `https://oauth.pstmn.io/v1/browser-callback`<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-04.png" alt="Callback URLs / Redirect URIs field, populated with callback URLs listed text" />
     5. Click **Save Application**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-05.png" alt="Save Application button" />
 2. Download the [Blue Button 2.0 API Sandbox Postman collection](/assets/developer-resources/CMS-BlueButton-2.0-API-Sandbox.postman_collection.json) and import it into the Postman desktop or web application. 
-    To import the collection, either click the **Import** button in Postman and select the collection file, or drag the file into the Postman window. 
+    - To import the collection, either click the **Import** button in Postman and select the collection file, or drag the file into the Postman window. 
 3. Select the top-level folder in the collection, **CMS BlueButton 2.0 API Sandbox**.
 4. Select the **Variables** tab.
 5. Copy your application's **Client ID** and **Client Secret** from your Sandbox account into both the **Initial Value** and **Current Value** cels for the corresponding Postman variables, `clientId` and `clientSecret`.
