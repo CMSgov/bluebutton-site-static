@@ -265,7 +265,7 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
     - To import the collection, either click the **Import** button in Postman and select the collection file, or drag the file into the Postman window. 
 3. Select the top-level folder in the collection, **CMS BlueButton 2.0 API Sandbox**.
 4. Select the **Variables** tab.
-5. Copy your application's **Client ID** and **Client Secret** from your Sandbox account into both the **Initial Value** and **Current Value** cels for the corresponding Postman variables, `clientId` and `clientSecret`.
+5. Copy your application's **Client ID** and **Client Secret** from your Sandbox account into both the **Initial Value** and **Current Value** cells for the corresponding Postman variables, `clientId` and `clientSecret`.
 6. After copying and pasting your API credentials, log out of the Blue Button sandbox in your browser. Being logged into the sandbox can cause errors during authorization in Postman.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-12.png" alt="Sandbox Logout button" />
 7. In Postman, select the **Authorization** tab.
 8. Click **Get New Access Token**.
