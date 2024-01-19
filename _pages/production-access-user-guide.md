@@ -6,103 +6,176 @@ description: "A guide to help you prepare for and understand our requirements fo
 badge: documentation
 permalink: /guide/
 sections:
-- Understanding the Blue Button 2.0 API Mission
-- Our Requirements for Production Access
-- What does this process look like?
+- The production access process
+- Application development resources and guidelines
+- Your privacy policy and terms of service
+- Production access request and demo
 ---
-<div id="understanding-the-blue-button-2-0-api-mission"></div>
-## Understanding the Blue Button 2.0 API Mission
+We're pleased that you're considering applying for production access to the CMS Blue Button 2.0 API. Our production access process and Terms of Service are designed to ensure that Medicare enrollees and their data are kept secure, and that enrollees are given the information to make informed decisions when sharing their healthcare data with third-party applications.  
 
-We're pleased that you're considering applying for production access to the CMS Blue Button 2.0 API. There is a broad and growing community of third-party companies, organizations, and developers building exciting applications that empower Medicare beneficiaries with their personal health information. Our mission is to provide a developer-friendly, standards-based API that enables developers to create these amazing resources for our beneficiaries.
+This guide includes:
 
-Another core element of our mission is making sure that Medicare beneficiaries (and their data) are protected. Our production access process and terms of service are designed to ensure that the beneficiary feels secure and that they are given the information to make informed decisions when using the Blue Button 2.0 API to share their healthcare data with third-party applications. Before you apply for production access, it is vital that you have read and understand the Blue Button 2.0 API terms of service.
+* An outline of the major steps in the Blue Button 2.0 API [production access process](#the-production-access-process)
+* Resources and guidelines for [developing your application](#application-development-resources-and-guidelines)
+* Requirements for your [privacy policy and terms of service](#your-privacy-policy-and-terms-of-service)
+* Information about [applying for production access and demoing your application](#production-access-request-and-demo) for the Blue Button 2.0 team
 
-This guide will help make sure you understand the requirements outlined in our terms of service, but you should always treat the terms of service as our official policy.
+## The production access process
 
-<a classs="ds-c-button ds-c-button--solid" href="{{ site.baseurl }}/terms/">Read Our Terms of Service</a>
+The major steps you will take when developing your application and applying for Blue Button 2.0 API production access are as follows:  
 
-## Our Requirements for Production Access
+1. **Read the Blue Button 2.0 API Terms of Service.**
+  * The [Blue Button 2.0 API Terms of Service](/terms/) include all official policies for production use of the API. It is essential that you read and understand the Terms of Service before developing your application and applying for production access.
+2. **Develop your application in the Blue Button 2.0 developer sandbox.**
+  * Refer to our [application development resources and guidelines](#application-development-resources-and-guidelines)Application development resources and guidelines) for links to essential documentation and tips to help make sure that your app is ready for production approval.
+3. **Draft your privacy policy and terms of service.**
+  * All organizations applying for production API access must include their [privacy policy and terms of service](#your-privacy-policy-and-terms-of-service) with their application.
+4. **Apply for production access and demo your application.**
+  * When you are ready to apply for production approval for your application, send an email to [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov). We'll respond with a form requesting basic information about your organization and application, then follow up to schedule your demo.
+  * After your demo, and once any concerns with your application, privacy policy, and terms of service have been met, we will schedule the handoff of production credentials.
+  * Please read about the [production access request and demo](#production-access-request-and-demo) for complete information on applying and scheduling your demo.
 
-Before you apply for production access, it might be helpful for you to better understand our requirements and why they are important. Every part of this process comes from our mission to make sure Medicare beneficiaries are informed and protected. So - let's dive in!
+---
 
-### General Information/Questions
+## Application development resources and guidelines
 
-We'll need to know some basic information about your organization and your application. To continue delivering the best service possible to developers, it helps us to have information including (but not limited to):
+These resources and guidelines will help you develop your application and make sure that the finished app is ready for production approval by the Blue Button 2.0 API team. 
 
-- Details on your plan for timeline/release of your application
-- The number of Medicare beneficiaries you plan to provide services to
-- How you will market you application to Medicare beneficiaries
-- Contact information for your team
+### Documentation and other resources
 
-Some of this information is useful to ensure an efficient roll-out of your application, but we also like to make sure that organizations are carefully marketing to Medicare beneficiaries.
+The following resources are available for your use while developing your application:
 
-### Required Resources
+* The [Blue Button 2.0 developer sandbox](https://sandbox.bluebutton.cms.gov/) is a clone of the production API that provides synthetic sample data for 40,000 Medicare enrollees.
+* Our [developer documentation](https://bluebutton.cms.gov/developers/) provides all the technical information you will need to develop your application in the sandbox.
+* Get started exploring the API and making requests with the [sandbox test client](https://sandbox.bluebutton.cms.gov/testclient/), [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi), and a pre-configured [Postman collection](/developers/#4-test-the-api-with-postman-or-curl).
+* Start building your app with our Node and Python [SDKs and sample apps](https://bluebutton.cms.gov/developers/#4-next-steps).
+* You can reach out to the Blue Button 2.0 team with any questions via the [Blue Button 2.0 API Google Group](https://groups.google.com/g/Developer-group-for-cms-blue-button-api) or by emailing [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov).
 
-We require that organizations applying for production access have the following documents publicly available for users to see and read:
+### User interface guidelines
 
-- Privacy Policy
-- Terms of Service
+#### Presenting your privacy policy and terms of service
 
-We'll walk through each of these specific documents, but in general, **it is vital that these documents are easy to read and understand**. We understand that these are legal documents, and language can get complicated, but we ask that you keep your ultimate audience in mind when reviewing your privacy policy and terms of service. Medicare beneficiaries, like all people, need to know that they will be protected and want to know definitively how their data will be used. When you apply for production access, please verify the reading level of these documents to ensure that you made them as clear and readable as possible.
+Your application should present your privacy policy and terms of service in a way that is clearly accessible for the user. It should also allow the enrollee to actively opt-in to the privacy policy and terms of service, instead of defaulting to agreement.
 
-In cases where it may be difficult to write or update your privacy policy to be more readable, you could create a separate publicly hosted document we refer to as a Privacy Notice. A privacy notice is simply an accurate summary of the terms in your privacy policy that could be hosted and displayed prominently together.
+#### Keeping the user informed
 
-### What We Expect From Your Privacy Policy
+While your privacy policy and terms of service are important for keeping enrollees informed about how their data will be used and shared, many users will click through and authorize access to their medical information without reading them completely. For this reason, your in-app messaging should also clearly describe how user data will be collected, used, and shared.
 
-In general, we are looking for your privacy policy to clearly demonstrate to Medicare beneficiaries how you use, store, and potentially share their healthcare data. When you are applying for production access, you will need to attest that your privacy policy covers all of the requirements listed in the [Blue Button 2.0 API terms of service](/terms/), so be sure you have read it and checked your privacy policy against those requirements.
+For example, If an enrollee's data is about to be shared, you could use a message, modal, or the general UI to clearly and concisely convey what is about to happen, why it is about to happen, and give the enrollee the ability to choose to move forward or not. Short contextual messages like this are far easier for users to digest and understand than the same information as presented in your privacy policy.
 
-Here are other topics/items we'll need to see indicated in your privacy policy:
+Create your application with this in mind: "A Medicare enrollee should never be surprised to learn how their data is being used." Your application should always collect, use, and disclose health information in ways that are consistent with user expectation and consent.
 
-- Does your privacy policy detail if and how data is shared? What data is shared?  Is data "anonymized" or "de-identified" before it is shared? Are you communicating that clearly to users in terms they will understand?
-- Give the users the full picture: if they revoke access to their data, do you continue to store their data or do you delete it?
-- Do you understand that, prior to rolling out changes to your Privacy Policy or Terms of Service, you must submit drafts of the new documents and draft notification to beneficiaries by emailing [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov)? The CMS team will review your documents and respond with feedback or approval within five business days. You may not roll out the new documents or notify beneficiaries of changes until you receive approval from CMS.
-- What happens if your company is sold and the use of user's data could change in a material way? Are beneficiaries and CMS notified?
-  - Note: We understand that when your company is being purchased, you may have very little power over these decisions. The responsibility of informing users about material changes to the way their data is used belongs to the acquiring company. We would, however, like to see some indication of this in your privacy policy to ensure that the burden is not on the beneficiary find that out on their own.
-- If your application works with third-party vendors, do your third-party vendors commit to data protection requirements that are consistent with the law and your expectations based on the sensitivity of the personal information they will receive from you or collect on your behalf?
-- What happens if you suffer a security or data breach? How will you notify your users? Will you inform them of steps they can take to protect their data, if possible? Is this information clearly stated in your privacy policy?
+#### Giving the user control
 
-This gives you an idea of what we are looking for in a privacy policy: that Medicare beneficiaries are prioritized, protected, and informed. Be sure to refer to our terms of service for all requirements.
+Remember that Medicare enrollees will be sharing very sensitive personally identifiable information (PII) and protected health information (PHI) with your application. Giving enrollees the ability to take action on information presented in the UI ensures they have complete and thoughtful control over their healthcare data. Users should also be given opportunities to opt into or revoke service, request that their data be securely and completely deleted, or otherwise control access to and retention of their data.
 
-### What We Expect From Your Terms of Service
+### Security and privacy
 
-While the privacy policy should be designed to protect and inform your users, your terms of service is likely designed to protect your organization from a legal perspective. The main thing that we want to see with your terms of service is that it in no way contradicts, negates or detracts from the protections detailed in your privacy policy.
+While developing your application, please comply with all applicable laws and industry best practices to minimize the risk of unauthorized access, use, destruction, annotation, or disclosure of Medicare enrollees' PII and PHI. If applicable to your organization and/or use case, your application's handling of PII and PHI  must also be in compliance with HIPAA regulations.
 
-### Keeping the Beneficiary Informed About Privacy
+### Referring to Blue Button data
 
-We put a lot of emphasis on your privacy policy and terms of service because they help ensure that beneficiaries (and their data) stay protected. But we also know that **privacy policies are not enough on their own**. The simple fact is that many users will click through and authorize access to their medical information without reading the complete privacy policy and terms of service. For this reason, **it is essential that you try to deliver information and context to Medicare beneficiaries in the application itself**.
+If your application allows connections to several data sources and users must search or pick from a list, please use "Medicare" as the name of the data source for your application. Do not use "Blue Button," "CMS Blue Button," "Medicare.gov," or any other terminology. 
 
-For example, If a beneficiary's data is about to be shared, you could use a message, modal, or the general UI to clearly and concisely convey what is about to happen, why it is about to happen, and give the beneficiary the ability to choose to move forward or not. Short contextual messages like this are also far easier for users to digest and understand. Additionally, giving the user the ability to take action on the information ensures they have complete and thoughtful control over their healthcare data.
+---
 
-We like to think of it like this: "A Medicare beneficiary should never be surprised to learn how their data is being used." Create your application with that in mind. Are you taking the content of the privacy policy and presenting it to users in the application itself? Are you letting them know when their data is being shared? Are you giving them information and choice?
+## Your privacy policy and terms of service
 
-### User Interface and Security Practices
+We require that organizations applying for production access to the Blue Button 2.0 API have the following documents publicly available for users to see and read:
 
-It is important that we understand how a Medicare beneficiary will actually interact with your application. Since Medicare beneficiaries are sharing incredibly sensitive information, we want to make sure that they are given opportunities to opt-in to service or revoke service, request that their data be deleted, etc. Please be sure to [refer to the Production Access Checklist](/checklist/) for a full list of requirements.
+* Privacy policy
+* Terms of service
 
-Here are some examples of the kinds of questions we'd like to see you answer:
+It is vital that these documents are easy for users to read and understand. We understand that these are legal documents, but please keep your ultimate audience in mind when reviewing your privacy policy and terms of service. Medicare enrollees, like all people, need to know that they will be protected and want to know exactly how their data will be used. 
 
-- Does your user interface present the terms of service and privacy policy in a way that is clearly accessible for the user? How?
-- Does the UI of your app allow the beneficiary to actively opt-in to the terms of service and privacy policy, instead of defaulting to agreement?
+### Privacy policy
 
-And similarly from the security perspective:
+Your privacy policy must clearly demonstrate to Medicare enrollees how you use, store, and potentially share their healthcare data. When you are applying for production access, you will need to attest that your privacy policy covers all of the requirements listed in the [Blue Button 2.0 API Terms of Service](/terms/), so be sure you have read it and checked your privacy policy against them. 
 
-- Are you using industry best-practices to store and retain healthcare information? 
-- How will you protect this identifiable health information?
+### Privacy policy checklist
 
-## What does this process look like?
+The following checklist will help you make sure that your privacy policy is complete and ready for approval by the Blue Button 2.0 team.  
 
-### 1. Review the Production Access Checklist
+In terms that Medicare enrollees will understand, your privacy policy should specify your company's:
 
-After you've read the [Blue Button 2.0 API Terms of Service](/terms/), take a moment to look over our [Production Access Checklist](/checklist/). Going over this document will help ensure that your application is ready for approval.
+* Data collection practice
+* User consent practice
+* Data disclosure practice
+* Data access practice
+* Security practice
+* Retention/deletion practice
 
-### 2. Email Our Team
+Your privacy policy should be:
 
-Once you feel like you are ready for approval, you can send an email to [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov). Once we receive your email, we’ll schedule a brief demonstration of your application to the BB2.0 API team to introduce ourselves and better understand a beneficiary's user journey using your application. 
+* Based on industry best practices.
+* Prominent and publicly accessible.
+* Easy to read, especially from the perspective of a Medicare enrollee. We encourage you to use readability checking software to estimate the reading level of your privacy policy.
 
-### 3. Application Demo
+Your privacy policy should detail and address:
 
-The demo meeting is an opportunity for you to showcase your application to the Blue Button 2.0 Team. We need to see a predominately completed view of the journey beneficiaries take using your application. What does account creation look like? How do they initiate the OAuth flow? How do you display their data after they've shared it? How is their data used? If there is a feature within the app that allows the user to share their data with others (i.e., a provider), show how that is executed.
+* How your application collects and shares data:
+  * If and how data is shared.
+  * What data is shared, and with whom.
+  * If data is shared with third parties, whether that is on a one-time basis, or persistently collected.
+  * If data is persistently collected, over what time frame it is collected for.
+* Any use and sharing of de-identified, anonymized or pseudonymized data. 
+  * Some data, even if it has been anonymized, can still be used to identify people with specific medical conditions or other personal attributes. Your privacy policy should explain these risks, if applicable.
+* What happens to a user's data if they revoke access to it. Do you continue to retain and use their data, or is their data securely deleted?
+* Your application's policy regarding dormant or closed accounts.
+* How you will notify users if your app's privacy policy is updated.
+  * Notifications should tell the user what has changed and allow them to update their privacy settings or opt out of the service.
+* If third-party vendors that you work with commit to data protection requirements that are consistent with the law and your expectations, based on the sensitivity of the personal information they will receive from you or collect on your behalf.
+* How you will notify users if you suffer a security or data breach, and if you will inform them of any steps they can take to protect their data in this event. The FTC's [Health Breach Notification Rule](https://www.ftc.gov/legal-library/browse/rules/health-breach-notification-rule){:target="_blank"} specifies requirements for notifying consumers following a breach involving personal health records.
+* How enrollees will be notified if your company is sold and the use of their data could change.
 
-### 4. Final Steps
+### Privacy notice
 
-After the in-person demo, if necessary, we will follow up with your team to address any final concerns before issuing production credentials.
+In addition to your privacy policy, you may also consider creating a separate, publicly hosted privacy notice. A privacy notice is an accurate, plain-language summary of the terms in your privacy policy. 
+
+We suggest using the Office of the National Coordinator for Health Information Technology (ONC)'s [Model Privacy Notice (MPN)](https://www.healthit.gov/topic/privacy-security-and-hipaa/model-privacy-notice-mpn){:target="_blank"} template when developing your privacy notice.
+
+### Terms of service
+
+Your terms of service may in no way contradict, negate, or detract from the protections detailed in your privacy policy.
+
+### Changes to your privacy policy and terms of service
+
+Prior to rolling out any changes to your privacy policy or terms of service, you must submit drafts of the new documents and draft notification to enrollees by emailing [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov). The Blue Button 2.0 API team will review your documents and respond with feedback or approval within five business days. You may not roll out the new documents or notify enrollees of changes until you receive approval from CMS.
+
+---
+
+## Production access request and demo
+
+### Production access request
+
+When you are ready to apply for production access, send an email to [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov). The team will reply with a link to the Blue Button 2.0 production access form. We typically respond to requests within 24 business hours.
+
+The production access form will request your privacy policy and terms of service, along with some basic information about your organization and application:
+
+* The name of your organization
+* The name of your application
+* Your application's use case for Medicare enrollees
+* Your application's redirect URI
+* A point of contact for your organization
+
+Fill out and submit the production access form, attaching PDF versions of your terms of service and privacy policy.
+
+### Application demo
+
+After you submit the production access form, we will follow up to schedule a 1-hour demo over Zoom. The demo meeting is an opportunity for you to showcase your application to the Blue Button 2.0 API team. 
+
+You should be prepared to demonstrate a substantially complete view of the journey enrollees take using your app, including these aspects: 
+
+* User account creation 
+* User authorization to share Medicare data
+* How the application displays enrollees' data
+* How enrollees' data is used 
+* If applicable, how the app allows enrollees to share their data with others (e.g., providers or caregivers)
+
+You should also be ready to discuss your privacy policy and terms of service, and any security-related questions or other concerns that the Blue Button 2.0 API team may have about your application.
+
+After the demo, the Blue Button 2.0 API team will review your application, privacy policy, and terms of service, and determine if you are ready for production access. We may follow up with you after the demo about concerns that must be addressed before issuing production credentials. In some cases, we may ask to schedule an additional demo.
+
+### Production credentials
+
+Once you have met any concerns raised by the team and your application is approved, we will send the Blue Button 2.0 post-approval form. This form includes information about how you want your app listed on the [Medicare connected apps directory](https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps){:target="_blank"}. After you submit the post-approval form, we will schedule the handoff of production API credentials.
