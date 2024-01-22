@@ -6,11 +6,13 @@ description: "A guide to help you prepare for and understand our requirements fo
 badge: documentation
 permalink: /guide/
 sections:
+- Introduction
 - The production access process
 - Application development resources and guidelines
 - Your privacy policy and terms of service
 - Production access request and demo
 ---
+## Introduction
 We're pleased that you're considering applying for production access to the CMS Blue Button 2.0 API. Our production access process and Terms of Service are designed to ensure that Medicare enrollees and their data are kept secure, and that enrollees are given the information to make informed decisions when sharing their healthcare data with third-party applications.  
 
 This guide includes:
@@ -25,9 +27,9 @@ This guide includes:
 The major steps you will take when developing your application and applying for Blue Button 2.0 API production access are as follows:  
 
 1. **Read the Blue Button 2.0 API Terms of Service.**
-  * The [Blue Button 2.0 API Terms of Service](/terms/) include all official policies for production use of the API. It is essential that you read and understand the Terms of Service before developing your application and applying for production access.
+  * The [Blue Button 2.0 API Terms of Service](/terms/){:target="_blank"} include all official policies for production use of the API. It is essential that you read and understand the Terms of Service before developing your application and applying for production access.
 2. **Develop your application in the Blue Button 2.0 developer sandbox.**
-  * Refer to our [application development resources and guidelines](#application-development-resources-and-guidelines)Application development resources and guidelines) for links to essential documentation and tips to help make sure that your app is ready for production approval.
+  * Refer to our [application development resources and guidelines](#application-development-resources-and-guidelines) for links to essential documentation and tips to help make sure that your app is ready for production approval.
 3. **Draft your privacy policy and terms of service.**
   * All organizations applying for production API access must include their [privacy policy and terms of service](#your-privacy-policy-and-terms-of-service) with their application.
 4. **Apply for production access and demo your application.**
@@ -45,11 +47,11 @@ These resources and guidelines will help you develop your application and make s
 
 The following resources are available for your use while developing your application:
 
-* The [Blue Button 2.0 developer sandbox](https://sandbox.bluebutton.cms.gov/) is a clone of the production API that provides synthetic sample data for 40,000 Medicare enrollees.
-* Our [developer documentation](https://bluebutton.cms.gov/developers/) provides all the technical information you will need to develop your application in the sandbox.
-* Get started exploring the API and making requests with the [sandbox test client](https://sandbox.bluebutton.cms.gov/testclient/), [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi), and a pre-configured [Postman collection](/developers/#4-test-the-api-with-postman-or-curl).
-* Start building your app with our Node and Python [SDKs and sample apps](https://bluebutton.cms.gov/developers/#4-next-steps).
-* You can reach out to the Blue Button 2.0 team with any questions via the [Blue Button 2.0 API Google Group](https://groups.google.com/g/Developer-group-for-cms-blue-button-api) or by emailing [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov).
+* The [Blue Button 2.0 developer sandbox](https://sandbox.bluebutton.cms.gov/){:target="_blank"} is a clone of the production API that provides synthetic sample data for 40,000 Medicare enrollees.
+* Our [developer documentation](https://bluebutton.cms.gov/developers/){:target="_blank"} provides all the technical information you will need to develop your application in the sandbox.
+* Get started exploring the API and making requests with the [sandbox test client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}, [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}, and a pre-configured [Postman collection](/developers/#4-test-the-api-with-postman-or-curl){:target="_blank"}.
+* Start building your app with our Node and Python [SDKs and sample apps](https://bluebutton.cms.gov/developers/#4-next-steps){:target="_blank"}.
+* You can reach out to the Blue Button 2.0 team with any questions via the [Blue Button 2.0 API Google Group](https://groups.google.com/g/Developer-group-for-cms-blue-button-api){:target="_blank"} or by emailing [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov).
 
 ### User interface guidelines
 
@@ -90,7 +92,7 @@ It is vital that these documents are easy for users to read and understand. We u
 
 ### Privacy policy
 
-Your privacy policy must clearly demonstrate to Medicare enrollees how you use, store, and potentially share their healthcare data. When you are applying for production access, you will need to attest that your privacy policy covers all of the requirements listed in the [Blue Button 2.0 API Terms of Service](/terms/), so be sure you have read it and checked your privacy policy against them. 
+Your privacy policy must clearly demonstrate to Medicare enrollees how you use, store, and potentially share their healthcare data. When you are applying for production access, you will need to attest that your privacy policy covers all of the requirements listed in the [Blue Button 2.0 API Terms of Service](/terms/){:target="_blank"}, so be sure you have read it and checked your privacy policy against them. 
 
 ### Privacy policy checklist
 
