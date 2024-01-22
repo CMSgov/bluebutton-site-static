@@ -13,7 +13,7 @@ sections:
 - Production access request and demo
 ---
 ## Introduction
-We're pleased that you're considering applying for production access to the CMS Blue Button 2.0 API. Our production access process and Terms of Service are designed to ensure that Medicare enrollees and their data are kept secure, and that enrollees are given the information to make informed decisions when sharing their healthcare data with third-party applications.  
+We're pleased that you're considering applying for production access to the CMS Blue Button 2.0 API. Our production access process and [Terms of Service](/terms/){:target="_blank"} are designed to ensure that Medicare enrollees and their data are kept secure, and that enrollees are given the information to make informed decisions when sharing their healthcare data with third-party applications.  
 
 This guide includes:
 
@@ -35,7 +35,7 @@ The major steps you will take when developing your application and applying for 
 4. **Apply for production access and demo your application.**
   * When you are ready to apply for production approval for your application, send an email to [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov). We'll respond with a form requesting basic information about your organization and application, then follow up to schedule your demo.
   * After your demo, and once any concerns with your application, privacy policy, and terms of service have been met, we will schedule the handoff of production credentials.
-  * Please read about the [production access request and demo](#production-access-request-and-demo) for complete information on applying and scheduling your demo.
+  * Please read about our [production access request and demo](#production-access-request-and-demo) process for complete information on applying and scheduling your demo.
 
 ---
 
@@ -57,11 +57,11 @@ The following resources are available for your use while developing your applica
 
 #### Presenting your privacy policy and terms of service
 
-Your application should present your privacy policy and terms of service in a way that is clearly accessible for the user. It should also allow the enrollee to actively opt-in to the privacy policy and terms of service, instead of defaulting to agreement.
+Your application should present your privacy policy and terms of service in a way that is clearly accessible for the user. It should also allow the enrollee to actively opt in to the privacy policy and terms of service, instead of defaulting to agreement.
 
 #### Keeping the user informed
 
-While your privacy policy and terms of service are important for keeping enrollees informed about how their data will be used and shared, many users will click through and authorize access to their medical information without reading them completely. For this reason, your in-app messaging should also clearly describe how user data will be collected, used, and shared.
+Your privacy policy and terms of service are important for keeping enrollees informed about how their data will be used and shared. However, many users will click through and authorize access to their medical information without reading them completely. For this reason, your in-app messaging should also clearly describe how user data will be collected, used, and shared.
 
 For example, If an enrollee's data is about to be shared, you could use a message, modal, or the general UI to clearly and concisely convey what is about to happen, why it is about to happen, and give the enrollee the ability to choose to move forward or not. Short contextual messages like this are far easier for users to digest and understand than the same information as presented in your privacy policy.
 
@@ -69,7 +69,7 @@ Create your application with this in mind: "A Medicare enrollee should never be 
 
 #### Giving the user control
 
-Remember that Medicare enrollees will be sharing very sensitive personally identifiable information (PII) and protected health information (PHI) with your application. Giving enrollees the ability to take action on information presented in the UI ensures they have complete and thoughtful control over their healthcare data. Users should also be given opportunities to opt into or revoke service, request that their data be securely and completely deleted, or otherwise control access to and retention of their data.
+Remember that Medicare enrollees will be sharing very sensitive personally identifiable information (PII) and protected health information (PHI) with your application. Giving enrollees the ability to take action on information presented in the UI ensures that they have complete and thoughtful control over their healthcare data. Users should also be given opportunities to opt into or revoke service, request that their data be securely and completely deleted, or otherwise control access to and retention of their data.
 
 ### Security and privacy
 
@@ -77,7 +77,7 @@ While developing your application, please comply with all applicable laws and in
 
 ### Referring to Blue Button data
 
-If your application allows connections to several data sources and users must search or pick from a list, please use "Medicare" as the name of the data source for your application. Do not use "Blue Button," "CMS Blue Button," "Medicare.gov," or any other terminology. 
+If your application allows connections to several data sources and users must search or pick from a list, please use "Medicare" as the name of the Blue Button 2.0 data source. Do not use "Blue Button," "CMS Blue Button," "Medicare.gov," or any other terminology. 
 
 ---
 
@@ -88,7 +88,7 @@ We require that organizations applying for production access to the Blue Button 
 * Privacy policy
 * Terms of service
 
-It is vital that these documents are easy for users to read and understand. We understand that these are legal documents, but please keep your ultimate audience in mind when reviewing your privacy policy and terms of service. Medicare enrollees, like all people, need to know that they will be protected and want to know exactly how their data will be used. 
+**It is vital that these documents are easy for users to read and understand.** We understand that these are legal documents, but please keep your ultimate audience in mind when reviewing your privacy policy and terms of service. Medicare enrollees, like all people, need to know that they will be protected and want to know exactly how their data will be used. 
 
 ### Privacy policy
 
@@ -96,7 +96,7 @@ Your privacy policy must clearly demonstrate to Medicare enrollees how you use, 
 
 ### Privacy policy checklist
 
-The following checklist will help you make sure that your privacy policy is complete and ready for approval by the Blue Button 2.0 team.  
+The following checklist will help you make sure that your privacy policy is complete and ready for approval by the Blue Button 2.0 API team.  
 
 In terms that Medicare enrollees will understand, your privacy policy should specify your company's:
 
@@ -109,30 +109,30 @@ In terms that Medicare enrollees will understand, your privacy policy should spe
 
 Your privacy policy should be:
 
-* Based on industry best practices.
-* Prominent and publicly accessible.
+* Based on industry best practices
+* Prominent and publicly accessible
 * Easy to read, especially from the perspective of a Medicare enrollee. We encourage you to use readability checking software to estimate the reading level of your privacy policy.
 
 Your privacy policy should detail and address:
 
 * How your application collects and shares data:
-  * If and how data is shared.
-  * What data is shared, and with whom.
-  * If data is shared with third parties, whether that is on a one-time basis, or persistently collected.
-  * If data is persistently collected, over what time frame it is collected for.
-* Any use and sharing of de-identified, anonymized or pseudonymized data. 
+  * If and how data is shared
+  * What data is shared, and with whom
+  * If data is shared with third parties, whether that is on a one-time basis, or persistently collected
+  * If data is persistently collected, over what time frame it is collected for
+* Any use and sharing of de-identified, anonymized or pseudonymized data
   * Some data, even if it has been anonymized, can still be used to identify people with specific medical conditions or other personal attributes. Your privacy policy should explain these risks, if applicable.
 * What happens to a user's data if they revoke access to it. Do you continue to retain and use their data, or is their data securely deleted?
-* Your application's policy regarding dormant or closed accounts.
-* How you will notify users if your app's privacy policy is updated.
+* Your application's policy regarding dormant or closed accounts
+* How you will notify users if your app's privacy policy is updated
   * Notifications should tell the user what has changed and allow them to update their privacy settings or opt out of the service.
-* If third-party vendors that you work with commit to data protection requirements that are consistent with the law and your expectations, based on the sensitivity of the personal information they will receive from you or collect on your behalf.
+* If third-party vendors that you work with commit to data protection requirements that are consistent with the law and your expectations, based on the sensitivity of the personal information they will receive from you or collect on your behalf
 * How you will notify users if you suffer a security or data breach, and if you will inform them of any steps they can take to protect their data in this event. The FTC's [Health Breach Notification Rule](https://www.ftc.gov/legal-library/browse/rules/health-breach-notification-rule){:target="_blank"} specifies requirements for notifying consumers following a breach involving personal health records.
-* How enrollees will be notified if your company is sold and the use of their data could change.
+* How enrollees will be notified if your company is sold and the use of their data could change
 
 ### Privacy notice
 
-In addition to your privacy policy, you may also consider creating a separate, publicly hosted privacy notice. A privacy notice is an accurate, plain-language summary of the terms in your privacy policy. 
+In addition to your privacy policy, you may also consider creating a separate, publicly hosted *privacy notice*. A privacy notice is an accurate, plain-language summary of the terms in your privacy policy. 
 
 We suggest using the Office of the National Coordinator for Health Information Technology (ONC)'s [Model Privacy Notice (MPN)](https://www.healthit.gov/topic/privacy-security-and-hipaa/model-privacy-notice-mpn){:target="_blank"} template when developing your privacy notice.
 
@@ -180,4 +180,4 @@ After the demo, the Blue Button 2.0 API team will review your application, priva
 
 ### Production credentials
 
-Once you have met any concerns raised by the team and your application is approved, we will send the Blue Button 2.0 post-approval form. This form includes information about how you want your app listed on the [Medicare connected apps directory](https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps){:target="_blank"}. After you submit the post-approval form, we will schedule the handoff of production API credentials.
+Once you have met any concerns raised by the team and your application is approved, we will send a link to the Blue Button 2.0 post-approval form. This form includes information about how you want your app listed in the [Medicare connected apps directory](https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps){:target="_blank"}. After you submit the post-approval form, we will schedule the handoff of production API credentials.
