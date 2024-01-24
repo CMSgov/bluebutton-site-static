@@ -14,8 +14,8 @@ sections:
   - Getting started in the developer sandbox
   - Authorization
   - Understanding the data
-  - Calling the API
   - Consuming the data
+  - Calling the API
   - Optimizing your application
   - Production API access
   - Implementation guides
