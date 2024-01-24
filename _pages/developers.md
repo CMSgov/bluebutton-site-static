@@ -1310,7 +1310,7 @@ The Blue Button API supports operators for less than (lt), greater than (gt), le
 
 ## Production API access
 
-In order to gain production access, an organization should start by reviewing the [Terms of Service](/terms/), [production access user guide](/guide/), and [checklist](/checklist/). Once an organization believes it is fulfilling all the requirements detailed in the checklist and is adherent to the terms of service, they should email [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov) to set up a production access demonstration meeting with the CMS team.
+In order to gain production access, an organization should start by reviewing the [Terms of Service](/terms/) and [production access user guide](/guide/). Once an organization believes it is fulfilling all the requirements detailed in the checklist and is adherent to the terms of service, they should email [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov) to set up a production access demonstration meeting with the CMS team.
 
 ---
 

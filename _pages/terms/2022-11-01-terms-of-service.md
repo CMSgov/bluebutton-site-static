@@ -17,9 +17,6 @@ ctas:
   -
     title: Production Access User Guide
     link: /guide/
-  -
-    title: Production Access Checklist
-    link: /checklist/
 ---
 
 <div class="ds-c-alert">
@@ -142,4 +139,4 @@ You agree to use the Blue Button 2.0 APIs in a manner consistent with the follow
 
 ## Resources
 
-For more context on these terms of service and information around these requirements, we’ve created a [production access user guide](/guide) and a [production access checklist](/checklist).
+For more context on these terms of service and information around these requirements, we’ve created a [production access user guide](/guide).

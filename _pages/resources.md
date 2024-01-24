@@ -57,7 +57,6 @@ Our Node and Python SDKs provide methods for building API calls and managing tok
 
 * [Production Access Instructions](/developers/#production-api-access) 
 * [Production Access User Guide](/guide/)
-* [Production Access Checklist](/checklist/)
 * [Terms of Use](/terms/)
 
 ## Tutorials and Learning Resources
