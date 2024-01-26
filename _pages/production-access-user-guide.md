@@ -110,7 +110,7 @@ Your privacy policy should detail and address:
   * If and how data is shared
   * What data is shared, and with whom
   * If data is shared with third parties, whether that is on a one-time basis, or persistently collected
-  * The time frame over which data is persistently collected (if applicable).
+  * If data is persistently collected, the time frame over which it is collected
 * Any use and sharing of de-identified, anonymized or pseudonymized data
   * Some data, even if it has been anonymized, can still be used to identify people with specific medical conditions or other personal attributes. Your privacy policy should explain these risks, if applicable.
 * What happens to a user's data if they revoke access to retrieve it. Do you continue to retain and use data that was previously shared, or is it securely deleted?
