@@ -342,10 +342,21 @@ https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qn
 |**Parameter** | **Required** | **Description** |
 | -------- | -------- | -------- |
 | `client_id`     | required     | The `client_id` from your registered application.     |
+| `lang`     | optional     | Authorization screen language selection. Use `en` for English or `es` for Spanish.    |
 | `redirect_uri`     | required     | The callback URL of your application. The user will be directed to this URL after authorizing your application.      |
 | `response_type`     | required     | Supported response type: `code`     |
 | `state`     | optional     | Recommended. A random string used to protect against request forgery attacks.   |
 {:.ds-c-table}
+
+##### Authorization screen language selection
+
+The BB2.0 user authorization screens are available in both English (the default)  and Spanish. Language selection for these screens works as follows:
+
+* To explicitly specify the language for the Blue Button 2.0 authorization screens, add the optional `lang` parameter to your `/authorize` request. Valid values are `en` (English) and `es` (Spanish).
+  * Example: `https://sandbox.bluebutton.cms.gov/v2/o/authorize/?lang=es`
+* If the `lang` parameter is omitted or is set to a value other than `en` or `es`, the API server will next check the `Accept-Language` HTTP header in the `/authorize` request. 
+  * If the language settings in a user's web browser lists Spanish higher in the preference list than English, the browser will automatically include the correct `Accept-Language` value to request the Spanish-language screens. 
+* If neither English or Spanish is requested via the `lang` parameter or `Accept-Language` header, the API server will default to the English version of the authorization screens.
 
 #### Token endpoints
 
