@@ -23,7 +23,7 @@ FISS,Adjustment Medicare Beneficiary Identifier,ADJ-MBI,fiss_claims.adj_mbi,Bene
 FISS,Adjustment Medicare Beneficiary Identifier (MBI) Indicator,ADJ-MBI-IND,fiss_claims.adj_mbi_ind,Beneficiary information,n/a,This field identifies the adjustment/cancel claim that was submitted with a Health Insurance Claim (HIC) Number or MBI number.,,,Y,"Alphanumeric, 1 character
 H = The HIC was submitted on the adjustment/cancel claim
 M = The MBI was submitted on the adjustment/cancel claim
-Blank = This field will be blank on adjustment/cancel claims created prior to 7/01/18 and non-adjustment/cancel claims.",FSRCCLXB,0.5,,,,,
+Blank = This field will be blank on adjustment/cancel claims created prior to 7/01/18 and non-adjustment/cancel claims.",FSRCCLXB,0.5,,,,,Does this field get populated on the original claim or the child claim that is adjusting/canceling the parent claim? 
 FISS,Adjustment Reason Code,ADJ-REAS-CD,fiss_claims.adj_reas_cd,Claim processing,n/a,"This field identifies the type of adjustment being performed on the claim. For automated claims, the system sets this field. For manual adjustments, the employee enters this field.",,There are many reason codes and they can be defined definitely by different Medicare Administrative Contractors.,N,"Alphanumeric, 2 characters
 See Table 1, Adjustment Reason Codes in the FISS Quick Reference, copied in tab C for convenience. ",FSRCCLXB,0.5,,,,,"There are values in the sample data (e.g., AC, BE, CC) that aren't defined in the table from the FISS Quick Reference document. Where would we find the meanings of these codes? Is there any relationship between these reason codes and the X12 claim adjustment reason codes? https://x12.org/codes/claim-adjustment-reason-codes"
 FISS,Adjustment Requestor Identification,ADJ-REQ-CD,fiss_claims.adj_req_cd,Claim processing,n/a,This field identifies the entity responsible for the origin of the claim adjustment,,,Y,"Alphanumeric, 1 character
@@ -583,3 +583,9 @@ FISS,Fiscal Intermediary Number,INTERMEDIARY-NB,fiss_claims.intermediary_nb,Clai
 
 None = Not Applicable",FSSCIDRC,0.13,,,,,
 ,RDA Claim Key,N/A,fiss_claims.rda_claim_key,Field created for RDA API,n/a,n/a,,This field contains the primary key employed by the RDA API database to help distinguish unique FISS claims; as DCN was established to be insufficient for uniquess. It was added with the release of RDA API 0.13.0 and is a concatenation of the fields Document Control Number (DCN) and Fiscal Intermediary Number (INTERMEDIARY-NB),,,n/a,0.13,,,,,
+FISS,NDC,NDC,fiss_revenue_lines.ndc,Service information,n/a,This field identifies the NDC assigned to each medication.,,,,11 characters,,0.14.1,,,,,
+FISS,NDC_QTY,NDC_QTY,fiss_revenue_lines.ndc_qty,Service information,n/a,This field identifies the quantity of the NDC medication administered.,,,,Numeric 9(7).999,,0.14.1,,,,,
+FISS,NDC_QTY_QUAL,NDC_QTY_QUAL,fiss_revenue_lines.ndc_qty_qual,Service information,n/a,This field identifies the measurement qualifier for the quantity of the NDC medication administered.,,,,2 characters,,0.14.1,,,,,
+FISS,ADM_TYPE_CD,ADM_TYPE_CD,fiss_claims.adm_type_cd,Claim processing,n/a,,,,,,,0.14.1,,,,,
+MCS,DTL_NDC,DTL_NDC,mcs_details.dtl_ndc,Service information,n/a,This field holds the data from segment 2410-LIN03 of claims submitted in 5010A1 format.,,,,"48 characters, alphanumeric",,0.14.1,,,,,
+MCS,NDC_UNIT_COUNT,NDC_UNIT_COUNT,mcs_details.dtc_ndc_unit_count,Service information,n/a,This field holds the data from 5010A format 2410 CTP04 claims.,,,,"15 characters, alphanumeric",,0.14.1,,,,,
