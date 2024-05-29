@@ -386,8 +386,8 @@ To retrieve an access token, POST to the BB2.0 /token endpoint providing the cod
 
 ##### cURL command
 ~~~
-curl -X "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
--u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:<client_secret>" \
+curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
+-u "<client_id>:<client_secret>" \
 -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost:8080/testclient/callback"
 ~~~
 ##### Token response
@@ -458,6 +458,20 @@ Response (unsuccessful with 401 status code):
 }
 ~~~
 If you receive this message, double-check that the request looks correct. If everything looks correct, email [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov), and the Blue Button 2.0 API team can help troubleshoot.
+
+##### Expired Data Access Gramt
+
+If the authorization for accessing user data by an application has expired, the corresponding access token will not be able to be refreshed. Attempts to refresh that token will result in the following error message:
+
+Response (unsuccessful with 400 status code):
+```
+{
+  "status_code": 400,
+  "error": "invalid_grant",
+  "error_description": "The authorization for accessing user data has expired. To refresh Medicare data, the end user must re-authenticate and consent to data sharing."
+}
+```
+To re-authorize refer to [link](#user-authorization)
 
 #### Expire authenticated user for sandbox testing
 
