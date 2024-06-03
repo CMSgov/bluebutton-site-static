@@ -493,7 +493,7 @@ POST to the BB2.0 API `/expire_authenticated_user` endpoint with the following p
 ~~~
 curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/-20140000000001/" \
 -u "<client_id>:<client_secret>" \
--H “Content-Length: 0"
+-H "Content-Length: 0"
 ~~~
 ##### Response 
 
@@ -1363,4 +1363,4 @@ This implementation guide describes the CARIN Blue Button® Framework and Common
 
 ---
 
- <a id="footnote-1"></a><sup>1</sup> Jama Health Forum, “Addressing Challenges in Primary Care—Lessons to Guide Innovation" [https://jamanetwork.com/journals/jama-health-forum/fullarticle/2795471](https://jamanetwork.com/journals/jama-health-forum/fullarticle/2795471), August 19, 2022
+ <a id="footnote-1"></a><sup>1</sup> Jama Health Forum, "Addressing Challenges in Primary Care—Lessons to Guide Innovation" [https://jamanetwork.com/journals/jama-health-forum/fullarticle/2795471](https://jamanetwork.com/journals/jama-health-forum/fullarticle/2795471), August 19, 2022
