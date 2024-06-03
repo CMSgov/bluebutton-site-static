@@ -417,8 +417,8 @@ To retrieve a new refresh token, POST to the BB2.0 API `/token` endpoint with th
 ##### cURL command
 ~~~
 curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
--u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:<client_secret>" \
--d "grant_type=refresh_token&refresh_token=wDimPGoA8vwXP51kie71vpsy9l17HN”
+-u "<client_id>:<client_secret>" \
+-d "grant_type=refresh_token&refresh_token=wDimPGoA8vwXP51kie71vpsy9l17HN"
 ~~~
 ##### Token response 
 
@@ -492,8 +492,8 @@ POST to the BB2.0 API `/expire_authenticated_user` endpoint with the following p
 ##### cURL command
 ~~~
 curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/-20140000000001/" \
--u "swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2:\<client_secret\>" \
--H “Content-Length: 0”
+-u "<client_id>:<client_secret>" \
+-H “Content-Length: 0"
 ~~~
 ##### Response 
 
@@ -1363,4 +1363,4 @@ This implementation guide describes the CARIN Blue Button® Framework and Common
 
 ---
 
- <a id="footnote-1"></a><sup>1</sup> Jama Health Forum, “Addressing Challenges in Primary Care—Lessons to Guide Innovation” [https://jamanetwork.com/journals/jama-health-forum/fullarticle/2795471](https://jamanetwork.com/journals/jama-health-forum/fullarticle/2795471), August 19, 2022
+ <a id="footnote-1"></a><sup>1</sup> Jama Health Forum, “Addressing Challenges in Primary Care—Lessons to Guide Innovation" [https://jamanetwork.com/journals/jama-health-forum/fullarticle/2795471](https://jamanetwork.com/journals/jama-health-forum/fullarticle/2795471), August 19, 2022
