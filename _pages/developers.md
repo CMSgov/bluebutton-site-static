@@ -459,9 +459,9 @@ Response (unsuccessful with 401 status code):
 ~~~
 If you receive this message, double-check that the request looks correct. If everything looks correct, email [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov), and the Blue Button 2.0 API team can help troubleshoot.
 
-##### Expired Data Access Gramt
+##### Expired Data Access Grant
 
-If the authorization for accessing user data by an application has expired, the corresponding access token will not be able to be refreshed. Attempts to refresh that token will result in the following error message:
+If an application's authorization for accessing user data has expired, the corresponding access token will not be able to be refreshed. Attempts to refresh that token will result in the following error message:
 
 Response (unsuccessful with 400 status code):
 ```
