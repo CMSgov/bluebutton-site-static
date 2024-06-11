@@ -1,7 +1,7 @@
 ---
 layout: basic
 title: 'FI_ORIG_CLM_CNTL_NUM'
-permalink: '/resources/variables/fi_orig_cntl_num/'
+permalink: '/resources/variables/fi_orig_clm_cntl_num/'
 ---
 # Coding System: FI_ORIG_CLM_CNTL_NUM
 
