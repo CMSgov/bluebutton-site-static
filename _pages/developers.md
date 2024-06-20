@@ -461,7 +461,7 @@ If you receive this message, double-check that the request looks correct. If eve
 
 ##### Expired Data Access Grant
 
-If an application's authorization for accessing user data has expired, the corresponding access token will not be able to be refreshed. Attempts to refresh that token will result in the following error message:
+If your authorization for accessing user data has expired, the corresponding access token will not be refreshed. Attempts to refresh the token will result in the following error message:
 
 Response (unsuccessful with 400 status code):
 ```
@@ -471,7 +471,7 @@ Response (unsuccessful with 400 status code):
   "error_description": "The authorization for accessing user data has expired. To refresh Medicare data, the end user must re-authenticate and consent to data sharing."
 }
 ```
-To re-authorize refer to [link](#user-authorization)
+For information on re-authorizing, see [User Authorization](#user-authorization)
 
 #### Expire authenticated user for sandbox testing
 
