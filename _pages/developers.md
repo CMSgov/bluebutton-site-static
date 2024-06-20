@@ -471,7 +471,7 @@ Response (unsuccessful with 400 status code):
   "error_description": "The authorization for accessing user data has expired. To refresh Medicare data, the end user must re-authenticate and consent to data sharing."
 }
 ```
-For information on re-authorizing, see [User Authorization](#user-authorization)
+For information on re-authorizing, see [user authorization](#user-authorization).
 
 #### Expire authenticated user for sandbox testing
 
