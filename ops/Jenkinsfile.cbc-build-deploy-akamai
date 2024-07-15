@@ -77,13 +77,19 @@ pipeline {
       }
     }
 
+    stage("rsync list, a test") {
+      steps {
+        sh "rsync -av -e 'ssh -i ${AKAMAI_SCP_SSH_KEY} ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}'"
+      }
+    }
+
     stage("Deploy Static Site to Akamai NetStorage") {
       when {
         expression { params.SITE_ENV ==~ /(test|staging)/ }
       }
       steps {
         sh """
-        rsync -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}
+        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}
         """
       }
     }
