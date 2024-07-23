@@ -53,6 +53,16 @@ pipeline {
       }
     }
 
+    stage("Checkout release tag") {
+      steps {
+          sh '''
+            git branch
+            git checkout \${RELEASE_TAG}
+            git branch
+          '''
+      }
+    }
+
     stage("Determine Akamai NetStorage path") {
       steps {
         script {
