@@ -105,7 +105,9 @@ pipeline {
 
     stage("rsync upload") {
       steps {
-        sh "rsync -ave ssh -i '${AKAMAI_SCP_SSH_KEY}' ./_site/* '${AKAMAI_SSH_USER}'@bluebuttoncms.rsync.upload.akamai.com:'${UPLOAD_LOCATION}'"
+        sh """
+        rsync -ave ssh -i ${AKAMAI_SCP_SSH_KEY} ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION}
+        """
       }
     }
 

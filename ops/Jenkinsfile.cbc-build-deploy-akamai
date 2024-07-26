@@ -80,7 +80,6 @@ pipeline {
     stage("rsync upload") {
       steps {
         sh """
-        echo "quoted var: " '${AKAMAI_SSH_USER}' " no quote var: " ${AKAMAI_SSH_USER}
         rsync -ave ssh -i ${AKAMAI_SCP_SSH_KEY} ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION}
         """
       }
