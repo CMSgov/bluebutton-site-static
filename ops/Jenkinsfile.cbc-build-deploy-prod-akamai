@@ -53,12 +53,11 @@ pipeline {
       }
     }
 
-    stage("Checkout release tag - trouble shoot") {
+    stage("Checkout release tag") {
       steps {
           sh '''
-            git branch
-            git checkout \${RELEASE_TAG}
-            git branch
+            git fetch --tags
+            git checkout tags/\${RELEASE_TAG}
           '''
       }
     }
@@ -104,17 +103,17 @@ pipeline {
       }
     }
 
-    stage("rsync list, a test") {
+    stage("rsync upload") {
       steps {
-        sh "rsync -av -e 'ssh -i ${AKAMAI_SCP_SSH_KEY} ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}'"
+        sh "rsync -ave ssh -i '${AKAMAI_SCP_SSH_KEY}' ./_site/* '${AKAMAI_SSH_USER}'@bluebuttoncms.rsync.upload.akamai.com:'${UPLOAD_LOCATION}'"
       }
     }
 
-    stage("Deploy Static Site to Akamai NetStorage") {
-      steps {
-        sh "scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i '${AKAMAI_SCP_SSH_KEY}' -r ./_site/* '${AKAMAI_SSH_USER}'@bluebuttoncms.scp.upload.akamai.com:'${UPLOAD_LOCATION}'"
-      }
-    }
+    // stage("Deploy Static Site to Akamai NetStorage") {
+    //   steps {
+    //     sh "scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i '${AKAMAI_SCP_SSH_KEY}' -r ./_site/* '${AKAMAI_SSH_USER}'@bluebuttoncms.scp.upload.akamai.com:'${UPLOAD_LOCATION}'"
+    //   }
+    // }
 
     stage("Checkout CSS Repo") {
       steps {
