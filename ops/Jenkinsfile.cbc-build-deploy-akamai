@@ -77,24 +77,24 @@ pipeline {
       }
     }
 
-    stage("rsync upload") {
-      steps {
-        sh """
-        rsync -ave ssh -i ${AKAMAI_SCP_SSH_KEY} ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION}
-        """
-      }
-    }
-
-    // stage("Deploy Static Site to Akamai NetStorage") {
-    //   when {
-    //     expression { params.SITE_ENV ==~ /(test|staging)/ }
-    //   }
+    // stage("rsync upload") {
     //   steps {
     //     sh """
-    //     scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}
+    //     rsync -ave ssh -i ${AKAMAI_SCP_SSH_KEY} ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION}
     //     """
     //   }
     // }
+
+    stage("Deploy Static Site to Akamai NetStorage") {
+      when {
+        expression { params.SITE_ENV ==~ /(test|staging)/ }
+      }
+      steps {
+        sh """
+        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} -r ./_site/* ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}
+        """
+      }
+    }
 
     stage("Checkout CSS Repo") {
       steps {
