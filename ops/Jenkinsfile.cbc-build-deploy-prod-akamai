@@ -62,6 +62,16 @@ pipeline {
       }
     }
 
+    stage("Checkout release tag") {
+      steps {
+          sh '''
+            git branch
+            git checkout \${RELEASE_TAG}
+            git branch
+          '''
+      }
+    }
+
     stage("Determine Akamai NetStorage path") {
       steps {
         script {
@@ -93,9 +103,11 @@ pipeline {
       }
     }
 
-    stage("Deploy Static Site to Akamai NetStorage") {
+    stage("Deploy Static Site to Akamai NetStorage (rsync)") {
       steps {
-        sh "scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i '${AKAMAI_SCP_SSH_KEY}' -r ./_site/* '${AKAMAI_SSH_USER}'@bluebuttoncms.scp.upload.akamai.com:'${UPLOAD_LOCATION}'"
+        sh """
+        rsync -av -e "ssh -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY}" ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION}
+        """
       }
     }
 
