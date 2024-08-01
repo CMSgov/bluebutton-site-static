@@ -95,7 +95,7 @@ pipeline {
       }
     }
 
-    stage("Deploy Static Site to Akamai NetStorage (rsync)") {
+    stage("Deploy CSS to Akamai NetStorage (rsync)") {
       steps {
         sh """
         rsync -av -e "ssh -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY}" ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION}assets/css/
