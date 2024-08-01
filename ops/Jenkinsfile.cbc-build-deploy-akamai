@@ -102,17 +102,6 @@ pipeline {
         """
       }
     }
-
-    // stage("Deploy CSS to Akamai Netstorage") {
-    //   when {
-    //     expression { params.SITE_ENV ==~ /(test|staging)/ }
-    //   }
-    //   steps {
-    //     sh """
-    //     scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}assets/css/
-    //     """
-    //   }
-    // }
   }
 
   post {
