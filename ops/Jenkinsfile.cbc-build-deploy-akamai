@@ -80,7 +80,7 @@ pipeline {
     stage("Deploy Static Site to Akamai NetStorage (rsync)") {
       steps {
         sh """
-        rsync -av -e "ssh -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY}" ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION}
+        rsync -av -e "ssh -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY}" ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION} --delete
         """
       }
     }
@@ -95,13 +95,10 @@ pipeline {
       }
     }
 
-    stage("Deploy CSS to Akamai Netstorage") {
-      when {
-        expression { params.SITE_ENV ==~ /(test|staging)/ }
-      }
+    stage("Deploy CSS to Akamai NetStorage (rsync)") {
       steps {
         sh """
-        scp -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY} ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.scp.upload.akamai.com:${UPLOAD_LOCATION}assets/css/
+        rsync -av -e "ssh -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i ${AKAMAI_SCP_SSH_KEY}" ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION}assets/css/
         """
       }
     }
