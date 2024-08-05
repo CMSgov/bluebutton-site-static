@@ -393,14 +393,18 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 ##### Token response
 ~~~
 {
-"access_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
-"expires_in": 16768.523842,
-"token_type": "Bearer",
-"scope": "profile patient/Patient.read patient/ExplanationOfBenefit.read patient/Coverage.read",
-"refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN"
+    "access_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
+    "expires_in": 16768.523842,
+    "token_type": "Bearer",
+    "scope": "profile patient/Patient.read patient/ExplanationOfBenefit.read patient/Coverage.read",
+    "refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN",
+    "access_grant_expiration": "2025-09-05 19:17:53Z"
 }
 ~~~
 Applications in the "10 hours" access category do not receive a refresh token in the BB2.0 token response.
+
+Note that for applicants in the 10 hours or 13 months access expiration category, you will also see a response that shows the access_grant_expiration date for that user.
+
 #### Exchange refresh token for new access token
 
 Access tokens expire after 10 hours. You can't use an expired access token to access data. To access data after an access token expires, request a new access token using a refresh token. Refresh tokens are available to applications in the "13 months" and "Research" access duration categories.
@@ -425,12 +429,13 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 (successful with 200 status code):
 ~~~
 {
-"access_token": "VD1VaT4IfjXAMlZTS9E4RVXZlkhYG7",
-"expires_in": 36000,
-"token_type": "Bearer",
-"scope": "profile patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read",
-"refresh_token": "7x0VkRQlRU4fRNCQL2vh239nIyucgw",
-"patient": "-20140000000001"
+    "access_token": "VD1VaT4IfjXAMlZTS9E4RVXZlkhYG7",
+    "expires_in": 36000,
+    "token_type": "Bearer",
+    "scope": "profile patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read",
+    "refresh_token": "7x0VkRQlRU4fRNCQL2vh239nIyucgw",
+    "patient": "-20140000000001",
+    "access_grant_expiration": "2025-09-05 19:17:53Z"
 }
 ~~~
 #### Common token endpoint errors
@@ -442,7 +447,7 @@ A refresh token can only be used one time. The following is an example of an err
 Response (unsuccessful with 400 status code):
 ~~~
 {
-"error": "invalid_grant"
+    "error": "invalid_grant"
 }
 ~~~
 If you receive this error, verify that your refresh token sent the correct value.  If it's already been used, the user should be directed to re-authorize following the original authorization flow above.
@@ -454,7 +459,7 @@ If your request has any issues with client credentials or permissions, the follo
 Response (unsuccessful with 401 status code):
 ~~~
 {
-"error": "invalid_client"
+    "error": "invalid_client"
 }
 ~~~
 If you receive this message, double-check that the request looks correct. If everything looks correct, email [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov), and the Blue Button 2.0 API team can help troubleshoot.
@@ -466,9 +471,9 @@ If your authorization for accessing user data has expired, the corresponding acc
 Response (unsuccessful with 400 status code):
 ```
 {
-  "status_code": 400,
-  "error": "invalid_grant",
-  "error_description": "The authorization for accessing user data has expired. To refresh Medicare data, the end user must re-authenticate and consent to data sharing."
+    "status_code": 400,
+    "error": "invalid_grant",
+    "error_description": "The authorization for accessing user data has expired. To refresh Medicare data, the end user must re-authenticate and consent to data sharing."
 }
 ```
 For information on re-authorizing, see [user authorization](#user-authorization).
