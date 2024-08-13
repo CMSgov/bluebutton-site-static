@@ -403,7 +403,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 ~~~
 Applications in the "10 hours" access category do not receive a refresh token in the BB2.0 token response.
 
-Note that for applicants in the 10 hours or 13 months access expiration category, you will also see a response that shows the access_grant_expiration date for that user.
+Note that for applications in the "10 hours" or "13 months" access expiration categories, the response includes the `access_grant_expiration` date for that user.
 
 #### Exchange refresh token for new access token
 
