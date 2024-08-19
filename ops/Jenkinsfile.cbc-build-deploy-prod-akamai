@@ -93,7 +93,7 @@ pipeline {
       }
     }
 
-    stage("Deploy Static Site to Akamai NetStorage (rsync)") {
+    stage("Deploy Static Site to Akamai NetStorage (rsync) (EDITED)") {
       steps {
         sh """
         rsync -av -e "ssh -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i '${AKAMAI_SCP_SSH_KEY}'" ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION} --delete
