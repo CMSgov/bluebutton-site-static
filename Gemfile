@@ -27,6 +27,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Pre-requisites for the `_plugins/api_codings.rb` plugin:
-gem 'nokogiri', '>= 1.13.10'
+gem 'nokogiri', '>= 1.16.5'
 
 gem "webrick", "~> 1.7"
