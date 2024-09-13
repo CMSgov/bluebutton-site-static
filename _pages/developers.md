@@ -74,7 +74,7 @@ You can use BB2.0 to:
 * Allow patients to share health information like current medications, lab results, and medical imaging with providers.
 * Give caregivers an accurate picture of a Medicare enrollee's health data to facilitate care coordination and communication with providers.
 
-For other examples of how applications use the Blue Button 2.0 API, visit the [Blue Button app directory on Medicare.gov](https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps).
+For other examples of how applications use the Blue Button 2.0 API, visit the [Blue Button app directory on Medicare.gov](https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps).
 
 ### Access to Medicare enrollee data
 

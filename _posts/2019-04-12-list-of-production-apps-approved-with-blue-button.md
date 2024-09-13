@@ -13,7 +13,7 @@ extra_links:
    link: /blog/index.html
 ---
 
-On Tuesday, February 12th at HIMSS19, CMS Administrator Seema Verma announced the publication of the list of the production applications connected to the Blue Button 2.0 API on Medicare.gov – you can find the list at: [https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps](https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps). This announcement demonstrates CMS’ ongoing commitment to MyHealthEData, a government-wide initiative to empower patients by giving them control of their healthcare data and allowing it to follow them through their healthcare journey. 
+On Tuesday, February 12th at HIMSS19, CMS Administrator Seema Verma announced the publication of the list of the production applications connected to the Blue Button 2.0 API on Medicare.gov – you can find the list at: [https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps](https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps). This announcement demonstrates CMS’ ongoing commitment to MyHealthEData, a government-wide initiative to empower patients by giving them control of their healthcare data and allowing it to follow them through their healthcare journey. 
 
 We believe increasing beneficiary awareness about the wide variety of applications available that leverage the Blue Button 2.0 API will continue to drive beneficiary participation in this innovative program. To assist beneficiaries in finding an application that meets their needs, CMS has grouped the apps into five categories:
   - Organize & share medical information & claims
