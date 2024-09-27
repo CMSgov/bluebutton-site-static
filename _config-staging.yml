@@ -1,4 +1,5 @@
 tealium_env: "staging"
+tealium_url: "https://tealium-tags.cms.gov/cms-bluebutton/qa/utag.sync.js"
 url: "https://staging.bluebutton.cms.gov"
 # the base hostname & protocol for your site, e.g. http://example.com
 # S3 appears to require blog templates to append ".html" to files.
