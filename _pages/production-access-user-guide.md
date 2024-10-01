@@ -171,4 +171,4 @@ After the demo, the Blue Button 2.0 API team will review your application, priva
 
 ### Production credentials
 
-Once you have met any concerns raised by the team and your application is approved, we will send you a link to the Blue Button 2.0 post-approval form. This form includes information about how you want your app listed in the [Medicare connected apps directory](https://www.medicare.gov/manage-your-health/medicares-blue-button-blue-button-20/blue-button-apps){:target="_blank"}. After you submit the post-approval form, we will schedule the handoff of production API credentials.
+Once you have met any concerns raised by the team and your application is approved, we will send you a link to the Blue Button 2.0 post-approval form. This form includes information about how you want your app listed in the [Medicare connected apps directory](https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps){:target="_blank"}. After you submit the post-approval form, we will schedule the handoff of production API credentials.
