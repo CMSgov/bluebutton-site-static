@@ -113,6 +113,10 @@ There are 3 categories for data access duration:
   </tbody>
 </table>
 
+### Access on behalf of a third party
+
+Applications that request data on behalf of a third party should begin using the optional "DATA-END-USER" header to identify the end user of data they request.
+
 ### Technical Specifications and Standards 
 
 The Blue Button 2.0 API is a RESTful API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
