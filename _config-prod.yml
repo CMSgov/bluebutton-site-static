@@ -1,4 +1,9 @@
 tealium_env: "prod"
+##temporarily commenting out tealium_url with updated link and will later cut over
+#tealium_url: "https://tealium-tags.cms.gov/cms-bluebutton/prod/utag.sync.js"
+
+##old url that will be removed once BLAST team confirms that things work on their end
+tealium_url: "https://tags.tiqcdn.com/utag/cmsgov/cms-bluebutton/prod/utag.sync.js"
 url: "https://bluebutton.cms.gov" # the base hostname & protocol for your site, e.g. http://example.com
 # S3 appears to require blog templates to append ".html" to files.
 # Define "use_dot_html" = true in environment _config file
