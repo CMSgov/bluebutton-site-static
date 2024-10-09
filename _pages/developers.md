@@ -515,9 +515,9 @@ success
 | 403     | `FORBIDDEN`    | Issues with client credentials or permissions    |
 {:.ds-c-table}
 
-#### Revoke token
+#### Revoke access token
 
-If you need to revoke a token, you can use the `/v2/o/revoke/` endpoint to revoke a token and related access grants.
+If you need to revoke an access token, you can use the `/v2/o/revoke/` endpoint to revoke a token and related access grants.
 
 POST to the BB2.0 API `/v2/o/revoke/` endpoint with the following parameters:
 
