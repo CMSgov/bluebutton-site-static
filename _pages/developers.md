@@ -515,7 +515,37 @@ success
 | 403     | `FORBIDDEN`    | Issues with client credentials or permissions    |
 {:.ds-c-table}
 
+#### Revoke token
 
+If you need to revoke a token, you can use the `/v2/o/revoke/` endpoint to revoke a token and related access grants.
+
+POST to the BB2.0 API `/v2/o/revoke/` endpoint with the following parameters:
+
+* `client_id`
+* `client_secret`
+* `token` gjKW5DfQtXh4Ihr3zM4CwNz1zfeIpj in the cURL example below
+
+##### cURL command
+~~~
+curl -X POST \
+--url 'http://localhost:8000/v1/o/revoke/'
+--header 'content-type: application/json'
+--data '{ "client_id": <client_id>, "client_secret": <client_secret>, "token": "gjKW5DfQtXh4Ihr3zM4CwNz1zfeIpj" }'
+~~~
+##### Response 
+
+Successful with 200 status code:
+~~~
+OK
+~~~
+##### Common error responses
+
+
+| Error Code | Response | Reason                                        |
+| -------- | -------- |-----------------------------------------------|
+| 404     | `Token was Not Found`     | Token was not found                           |
+| 403     | `FORBIDDEN`    | Issues with client credentials or permissions |
+{:.ds-c-table}
 
 ### Native & mobile applications
 
