@@ -43,8 +43,7 @@ Our Node and Python SDKs provide methods for building API calls and managing tok
 ## Version Resources
 
 * [Migrating to V2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ){:target="_blank"}
-* [Version transforms](https://www.hl7.org/fhir/r3maps.html){:target="_blank"}
-* [Version specific extensions](https://www.hl7.org/fhir/versions.html#extensions){:target="_blank"} (in [XML](https://www.hl7.org/fhir/fhir.diff.xml){:target="_blank"} or [JSON](https://www.hl7.org/fhir/fhir.diff.json){:target="_blank"})
+* [Version specific extensions](https://www.hl7.org/fhir/versions.html#extensions){:target="_blank"} (in [JSON](https://hl7.org/fhir/R4/json.html){:target="_blank"})
 
 ## CARIN Alliance
 
