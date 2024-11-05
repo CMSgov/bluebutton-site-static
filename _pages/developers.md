@@ -830,7 +830,8 @@ BB2.0 API offers 40,000 synthetic user accounts for you to test with in both the
 | User account ranges | Date updated | Description | 
 | -------- | -------- | -------- | 
 | BBUser00000 to BBuser09999     | Rolling Claims updated weekly<br /> Loaded July 2023 |     Most recently updated and most useful accounts. These accounts receive new claims data on a rolling basis.  These user accounts represent a range of Medicare demographics and ages, including people under 65 who qualify for Medicare for reasons other than age. |
-| BBUser10000 to BBuser19999 | Loaded 2017 |  Static claims data<br>Note, BBUser10000 is associated with Golden Bene [See Wiki](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Synthetic-Data-Guide#golden-bene),<br>with beneficiary ID -88888888888888, and its FHIR resources<br>have most/all fields in use,<br>so that various data elements can be checked at once, e.g.<br>it has all 8 types of CMS claims as shown below:<br>1. HHA, 1 count, id=hha--9998909<br>2. DME, 1 count, id=dme--9090999<br>3. HOSPICE, 1 count, id=hospice--9398989<br>4. SNF, 1 count, id=snf--9393939<br>5. OUTPATIENT, 1 count, id=outpatient--9292929<br>6. INPATIENT, 1 count, id=inpatient--92949189<br>7. PDE, 1 count, id=pde--999<br>8. CARRIER, 1 count, id=carrier--9090999. | 
+| BBUser10000 |  Loaded 2017 |  This synthetic user is sometimes referred to as the [Golden Bene](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Synthetic-Data-Guide#golden-bene). It is meant to contain most/all fields in use, including a variety of claim types, so that various data elements can be checked at once.
+| BBUser10001 to BBuser29999 | Loaded 2017 | Static claims data |
 | BBUser20000 to BBuser29999 | Loaded 2017 | Static claims data | 
 | BBUser30000 to BBuser39999 | Loaded October, 2021 | Static claims data |
 {:.ds-c-table}
