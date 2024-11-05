@@ -832,7 +832,6 @@ BB2.0 API offers 40,000 synthetic user accounts for you to test with in both the
 | BBUser00000 to BBuser09999     | Rolling Claims updated weekly<br /> Loaded July 2023 |     Most recently updated and most useful accounts. These accounts receive new claims data on a rolling basis.  These user accounts represent a range of Medicare demographics and ages, including people under 65 who qualify for Medicare for reasons other than age. |
 | BBUser10000 |  Loaded 2017 |  This synthetic user is sometimes referred to as the [Golden Bene](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Synthetic-Data-Guide#golden-bene). It is meant to contain most/all fields in use, including a variety of claim types, so that various data elements can be checked at once.
 | BBUser10001 to BBuser29999 | Loaded 2017 | Static claims data |
-| BBUser20000 to BBuser29999 | Loaded 2017 | Static claims data | 
 | BBUser30000 to BBuser39999 | Loaded October, 2021 | Static claims data |
 {:.ds-c-table}
 
