@@ -834,7 +834,7 @@ BB2.0 API offers 40,000 synthetic user accounts for you to test with in both the
 | BBUser30000 to BBuser39999 | Loaded October, 2021 | Static claims data |
 {:.ds-c-table}
 
-Note, BBUser10000 is a special synthetic user that provides nearly every field the API supports, including a variety of claim types. This makes it an excellent testing account for populating test scenarios.
+Note: BBUser10000 is a special synthetic user that provides nearly every field the API supports, including a variety of claim types. This makes it an excellent testing account for populating test scenarios.
 
 To differentiate between synthetic data and real patient production data, synthetic records have negative Patient ID and Explanation of Benefit values (example synthetic Patient ID: -10000010254618). Real Patient IDs will always have positive values.  
 
