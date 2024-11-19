@@ -438,6 +438,28 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
     "access_grant_expiration": "2025-09-05 19:17:53Z"
 }
 ~~~
+
+#### Revoking tokens
+
+Developers can revoke an enrollee’s previously granted access. To invalidate the ability to generate new access tokens without authorization, developers can revoke an access token and the underlying data access grant. 
+
+To revoke an access token, POST to the BB2.0 API `/revoke` endpoint with the following parameters:
+
+* `client_id`
+* `client_secret`
+* `token`
+
+##### cURL command
+~~~
+curl -X POST --url 'https://bluebutton.cms.gov/v2/o/revoke/' \
+--header 'content-type: application/x-www-form-urlencoded' \
+-u <client_id>:<client_secret> \
+-d 'token=oQlduHNr09GKCU506GOgp8OarrAy2q'
+~~~
+
+##### Response
+Valid requests to the `/revoke` endpoint will always result in a 200 response, regardless of whether or not the requested token exists.  
+
 #### Common token endpoint errors
 
 ##### Reused refresh token
