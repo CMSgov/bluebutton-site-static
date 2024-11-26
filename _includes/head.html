@@ -36,25 +36,4 @@
   <script>
     window.tealiumEnvironment = "{{ site.tealium_env }}";
   </script>
-
-<script src="{{ site.tealium_url }}"></script>
-{% if site.tealium_env == "prod" %}
-<script type="text/javascript">
-  (function(a,b,c,d)
-    { a='https://tealium-tags.cms.gov/cms-bluebutton/prod/utag.js'; b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true; a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a); }
-  )();
-</script>
-{% elsif site.tealium_env == "staging" %}
-<script type="text/javascript">
-  (function(a,b,c,d)
-    { a='https://tealium-tags.cms.gov/cms-bluebutton/qa/utag.js'; b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true; a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a); }
-  )();
-</script>
-{% else %}
-<script type="text/javascript">
-  (function(a,b,c,d)
-    { a='https://tealium-tags.cms.gov/cms-bluebutton/dev/utag.js'; b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true; a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a); }
-  )();
-</script>
-{% endif %}
 </head>
