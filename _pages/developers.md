@@ -438,6 +438,28 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
     "access_grant_expiration": "2025-09-05 19:17:53Z"
 }
 ~~~
+
+#### Revoking tokens
+
+Developers can revoke an enrollee’s previously granted access. To invalidate the ability to generate new access tokens without authorization, developers can revoke an access token and the underlying data access grant. 
+
+To revoke an access token, POST to the BB2.0 API `/revoke` endpoint with the following parameters:
+
+* `client_id`
+* `client_secret`
+* `token`
+
+##### cURL command
+~~~
+curl -X POST --url 'https://bluebutton.cms.gov/v2/o/revoke/' \
+--header 'content-type: application/x-www-form-urlencoded' \
+-u <client_id>:<client_secret> \
+-d 'token=oQlduHNr09GKCU506GOgp8OarrAy2q'
+~~~
+
+##### Response
+Valid requests to the `/revoke` endpoint will always result in a 200 response, regardless of whether or not the requested token exists.  
+
 #### Common token endpoint errors
 
 ##### Reused refresh token
@@ -830,10 +852,11 @@ BB2.0 API offers 40,000 synthetic user accounts for you to test with in both the
 | User account ranges | Date updated | Description | 
 | -------- | -------- | -------- | 
 | BBUser00000 to BBuser09999     | Rolling Claims updated weekly<br /> Loaded July 2023 |     Most recently updated and most useful accounts. These accounts receive new claims data on a rolling basis.  These user accounts represent a range of Medicare demographics and ages, including people under 65 who qualify for Medicare for reasons other than age. |
-| BBUser30000 to BBuser39999 | Loaded October, 2021 | static claims data |
-| BBUser10000 to BBuser19999 | Loaded 2017 |  static claims data | 
-| BBUser20000 to BBuser29999 | Loaded 2017 | static claims data | 
+| BBUser10000 to BBuser29999 | Loaded 2017 | Static claims data |
+| BBUser30000 to BBuser39999 | Loaded October, 2021 | Static claims data |
 {:.ds-c-table}
+
+Note: BBUser10000 is a special synthetic user that provides nearly every field the API supports, including a variety of claim types. This makes it an excellent testing account for populating test scenarios.
 
 To differentiate between synthetic data and real patient production data, synthetic records have negative Patient ID and Explanation of Benefit values (example synthetic Patient ID: -10000010254618). Real Patient IDs will always have positive values.  
 
