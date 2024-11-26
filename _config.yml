@@ -70,3 +70,6 @@ codebooks:
 rda_api:
   layout: rda_api_variable.html
   csv_file_key: rda_api_data_dictionary
+
+tealium_env: "development"
+tealium_url: "https://tealium-tags.cms.gov/cms-bluebutton/dev/utag.sync.js"
