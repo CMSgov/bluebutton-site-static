@@ -328,24 +328,47 @@ BB2.0 API supports the Authorization Code flow for web applications running on a
 * Client Type: Confidential
 * Grant Type: Authorization code
 
+#### Proof Key for Code Exchange (PKCE) extension usage
+
+To improve the security of your application, we highly recommend using the [Proof Key for Code Exchange (PKCE) extension](https://tools.ietf.org/html/rfc7636){:target="_blank"}.
+
+There are several reasons to use the PKCE extension:
+
+* Ensures that the application that started the OAuth 2.0 flow is the same one that is finishing it.
+* Mitigates the impact of a compromised Authorization Code by a malicious actor.
+* Follows the [OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#section-2.1.1){:target="_blank"}
+
+PKCE uses a code challenge that is derived from a code-verifier. The BB2.0 API supports the S256 style code challenge:
+
+`codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
+
+When using PKCE, send the following additional parameters and values as part of the OAuth2.0 Authorization Request:
+
+* `code_challenge`
+* `codechallengemethod = "S256"`
+
+These optional parameteres will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"}.
+
 #### User authorization
 
 To allow a user to authorize your application, direct them to the BB2.0 API `/authorize` endpoint with the appropriate parameters. 
 
 Example call:
 ~~~
-https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&state=8e896a59f0744a8e93bf2f1f13230be5
+https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
 ~~~
 
 **Parameters: Authorization code request**
 
-|**Parameter** | **Required** | **Description** |
-| -------- | -------- | -------- |
-| `client_id`     | required     | The `client_id` from your registered application.     |
-| `lang`     | optional     | Authorization screen language selection. Use `en` for English or `es` for Spanish.    |
-| `redirect_uri`     | required     | The callback URL of your application. The user will be directed to this URL after authorizing your application.      |
-| `response_type`     | required     | Supported response type: `code`     |
-| `state`     | optional     | Recommended. A random string used to protect against request forgery attacks.   |
+| **Parameter**           | **Required** | **Description**                                                                                                                            |
+|-------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| `client_id`             | required     | The `client_id` from your registered application.                                                                                          |
+| `lang`                  | optional     | Authorization screen language selection. Use `en` for English or `es` for Spanish.                                                         |
+| `redirect_uri`          | required     | The callback URL of your application. The user will be directed to this URL after authorizing your application.                            |
+| `response_type`         | required     | Supported response type: `code`                                                                                                            |
+| `state`                 | optional     | Recommended. A random string used to protect against request forgery attacks.                                                              |
+| `code_challenge`        | optional     | Recommended, required for PKCE. Value computed from a generated code verifier value using `BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`. |
+| `code_challenge_method` | optional     | Recommended, required for PKCE. Supported code challenge method: `S256`                                                                    |
 {:.ds-c-table}
 
 ##### Authorization screen language selection
@@ -383,6 +406,7 @@ To retrieve an access token, POST to the BB2.0 /token endpoint providing the cod
 * `redirect_uri`
 * `grant_type`: `authorization_code` 
 * `code`
+* `code_verifier` (optional, required for PKCE)
 
 ##### cURL command
 ~~~
@@ -546,29 +570,6 @@ The Blue Button API supports the [OAuth 2.0 Authorization Framework](https://too
 For best practices for the type of application you're developing, review the [OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252.txt){:target="_blank"}.
 
 To mitigate security risks, use a proxy middleware server following a Backend For Frontend (BFF) authentication pattern. In the BFF pattern, a backend server performs all authorization code and refresh token exchanges. For examples of this type of proxy middleware client/server implementation, check out our sample applications available in [Node](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react){:target="_blank"} or [Python](https://github.com/CMSgov/bluebutton-sample-client-python-react){:target="_blank"}.
-
-### Proof Key for Code Exchange (PKCE) extension usage
-
-To improve the security of your application, we highly recommend using the [PKCE](https://tools.ietf.org/html/rfc7636){:target="_blank"} extension.
-
-There are several reasons to use the PKCE extension:
-
-* Ensures that the application that started the OAuth 2.0 flow is the same one that is finishing it.
-* Mitigates the impact of a compromised Authorization Code by a malicious actor.
-* Follows the [OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#section-2.1.1){:target="_blank"}
-
-#### PKCE code challenge support
-
-PKCE uses a code challenge that is derived from a code-verifier. The BB2.0 API supports the S256 style code challenge:
-
-`codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
-
-When using PKCE, send the following additional parameters and values as part of the OAuth2.0 Authorization Request:
-
-* `code_challenge`
-* `codechallengemethod = "S256"`
-
-To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"}.
 
 ### Scopes
 
