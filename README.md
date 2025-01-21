@@ -62,8 +62,8 @@ docker rmi bluebutton-site-static_web
 We recommend [using Docker](#dockerized-setup), but if this is a barrier, you can set up your local environment manually.
 
 ### Requirements for non-Docker setup
-* [Jekyll](https://jekyllrb.com/docs/installation/) currently using 4.2.0
-* [chruby](https://github.com/postmodern/chruby) or [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.io/) to install versioned ruby - as mentioned in [Jekyll installation guide](https://jekyllrb.com/docs/installation/). Currently using ruby version 3.1.2
+* [Jekyll](https://jekyllrb.com/docs/installation/) currently using 4.3.4
+* [chruby](https://github.com/postmodern/chruby) or [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.io/) to install versioned ruby - as mentioned in [Jekyll installation guide](https://jekyllrb.com/docs/installation/). Currently using ruby version 3.3.5
 
 ### Installation
 1. `$ gem install bundler` <—install Gem bundler

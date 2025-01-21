@@ -1,4 +1,4 @@
-FROM ruby:3.1.2
+FROM ruby:3.3.5
 RUN mkdir /code
 WORKDIR /code
 COPY Gemfile /code/Gemfile
