@@ -355,20 +355,21 @@ To allow a user to authorize your application, direct them to the BB2.0 API `/au
 
 Example call:
 ~~~
-https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
+https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&scope=profile%20patient%2FPatient.read%20patient%2FCoverage.read%20patient%2FExplanationOfBenefit.read&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
 ~~~
 
 **Parameters: Authorization code request**
 
-| **Parameter**           | **Required** | **Description**                                                                                                                            |
-|-------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| `client_id`             | required     | The `client_id` from your registered application.                                                                                          |
-| `lang`                  | optional     | Authorization screen language selection. Use `en` for English or `es` for Spanish.                                                         |
-| `redirect_uri`          | required     | The callback URL of your application. The user will be directed to this URL after authorizing your application.                            |
-| `response_type`         | required     | Supported response type: `code`                                                                                                            |
-| `state`                 | optional     | Recommended. A random string used to protect against request forgery attacks.                                                              |
-| `code_challenge`        | optional     | Recommended, required for PKCE. Value computed from a generated code verifier value using `BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`. |
-| `code_challenge_method` | optional     | Recommended, required for PKCE. Supported code challenge method: `S256`                                                                    |
+| **Parameter**           | **Required** | **Description**                                                                                                                                                                       |
+|-------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `client_id`             | required     | The `client_id` from your registered application.                                                                                                                                     |
+| `lang`                  | optional     | Authorization screen language selection. Use `en` for English or `es` for Spanish.                                                                                                    |
+| `redirect_uri`          | required     | The callback URL of your application. The user will be directed to this URL after authorizing your application.                                                                       |
+| `response_type`         | required     | Supported response type: `code`                                                                                                                                                       |
+| `scope`                 | optional     | A list of scopes being requested. Use URL encoding for special characters, including using an encoded space character, `%20`, as a delimiter. See [Scopes](#scopes) for more details. |
+| `state`                 | optional     | Recommended. A random string used to protect against request forgery attacks.                                                                                                         |
+| `code_challenge`        | optional     | Recommended, required for PKCE. Value computed from a generated code verifier value using `BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`.                                            |
+| `code_challenge_method` | optional     | Recommended, required for PKCE. Supported code challenge method: `S256`                                                                                                               |
 {:.ds-c-table}
 
 ##### Authorization screen language selection
@@ -577,12 +578,13 @@ Scopes define the API endpoints that your application is allowed to access. The 
 
 #### BB2.0 API HL7 FHIR 
 
-| **Scope** | **Grants** |
-| -------- | -------- | 
-| `patient/Patient.read`     | Permission to read the Patient resource for a Medicare enrollee | 
-| `patient/Coverage.read`     | Permission to read the Coverage resources for a Medicare enrollee |
-| `patient/ExplanationOfBenefit.read`     | Permission to read the Explanation of Benefit resources for a Medicare enrollee |
-| `profile`     |Permission to access the `/UserInfo` endpoint (from the [OpenID Connect specification](https://openid.net/connect/){:target="_blank"} |
+| **Scope**                           | **Grants**                                                                                                    |
+|-------------------------------------|---------------------------------------------------------------------------------------------------------------| 
+| `patient/Patient.read`              | Permission to read the Patient resource for a Medicare enrollee                                               | 
+| `patient/Coverage.read`             | Permission to read the Coverage resources for a Medicare enrollee                                             |
+| `patient/ExplanationOfBenefit.read` | Permission to read the Explanation of Benefit resources for a Medicare enrollee                               |
+| `openid`                            | Permission to retrieve information about the current logged-in user                                           |
+| `profile`                           | Permission to access the `/UserInfo` endpoint (from the [OpenID Connect specification](https://openid.net/connect/){:target="_blank"} |
 {:.ds-c-table}
 
 
