@@ -355,7 +355,7 @@ To allow a user to authorize your application, direct them to the BB2.0 API `/au
 
 Example call:
 ~~~
-https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&scope=profile%20patient%2FPatient.read%20patient%2FCoverage.read%20patient%2FExplanationOfBenefit.read&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
+https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&scope=openid%20profile%20patient%2FPatient.read%20patient%2FCoverage.read%20patient%2FExplanationOfBenefit.read&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
 ~~~
 
 **Parameters: Authorization code request**
