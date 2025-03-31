@@ -82,7 +82,7 @@ For other examples of how applications use the Blue Button 2.0 API, visit the [B
 
 Applications receive permission to access Medicare enrollee data on a per-user basis. Access to claims data for each individual enrollee begins after they grant access to an application via the BB2.0 API's authorization flow. 
 
-Medicare enrollees may always opt to omit personal data such as name, date of birth, race, and gender when granting access to claims data. An enrollee's choice during the BB2.0 authorization flow determines the [scope](#scopes) of access an application will have to their data. 
+Medicare enrollees may always opt to omit personal data such as name, date of birth, race, and sex when granting access to claims data. An enrollee's choice during the BB2.0 authorization flow determines the [scope](#scopes) of access an application will have to their data. 
 
 #### Duration of access
 
@@ -228,7 +228,7 @@ This setting determines 2 things:
 
 | **Setting** | **Description** |
 | -------- | -------- |
-| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race and gender. (Scopes: `patient/Patient.read`, `patient/Coverage.read`, `patient/ExplanationOfBenefit.read`, `profile`)<br><br>*NOTE:* When a beneficiary is authorizing your application, they will have the ability to omit the `patient/Patient.read` scope. **Be sure that you build your application accordingly to handle a 403 error if a beneficiary decides to filter their demographic information.**<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-yes.png" alt="Authorization screen with demographic info option" />|
+| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race, and sex. (Scopes: `patient/Patient.read`, `patient/Coverage.read`, `patient/ExplanationOfBenefit.read`, `profile`)<br><br>*NOTE:* When a beneficiary is authorizing your application, they will have the ability to omit the `patient/Patient.read` scope. **Be sure that you build your application accordingly to handle a 403 error if a beneficiary decides to filter their demographic information.**<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-yes.png" alt="Authorization screen with demographic info option" />|
 | No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-no.png" alt="Authorization screen without demographic info option" />|
 {:.ds-c-table}
 
