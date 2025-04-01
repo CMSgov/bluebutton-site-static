@@ -219,17 +219,17 @@ This is an API endpoint on your system that receives the callback after a user s
 
 Sample format: `URIscheme://[sub-domain.]domain_name[:port]/path`
 
-#### Does my application need to collect beneficiary demographic data?
+#### Does my application need to collect enrollee demographic data?
 
 This setting determines 2 things:
 
 * What [scopes](#scopes) are applied to your application (determines which API calls your application can execute).
 * The information and options displayed on the authorization screen Medicare enrollees use to allow or deny your application access to their data.
 
-| **Setting** | **Description** |
-| -------- | -------- |
-| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race, and sex. (Scopes: `patient/Patient.read`, `patient/Coverage.read`, `patient/ExplanationOfBenefit.read`, `profile`)<br><br>*NOTE:* When a beneficiary is authorizing your application, they will have the ability to omit the `patient/Patient.read` scope. **Be sure that you build your application accordingly to handle a 403 error if a beneficiary decides to filter their demographic information.**<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-yes.png" alt="Authorization screen with demographic info option" />|
-| No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-no.png" alt="Authorization screen without demographic info option" />|
+| **Setting** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race and gender. (Scopes: `patient/Patient.read`, `patient/Coverage.read`, `patient/ExplanationOfBenefit.read`, `profile`)<br><br>Note: When an enrollee is authorizing your application, they will have the ability to omit the `patient/Patient.read` scope. Be sure that you build your application accordingly to handle a 403 error if an enrollee decides to filter their demographic information.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-yes.png" alt="Authorization screen with demographic info option" />    |
+| No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-no.png" alt="Authorization screen without demographic info option" />                                                                                                                                                                                                                                                                                                                                                                                                                       |
 {:.ds-c-table}
 
 To learn more about scopes and permissions, visit [Authorization](#authorization).
@@ -979,11 +979,11 @@ In FHIR, the difference between the `Resource.id` (resource ID) and `identifier`
 * **Resource ID:** In the Blue Button API, the resource ID is an internal identifier from the source database, the Chronic Conditions Warehouse (CCW).  The resource ID is a system-level resource, held outside the resource.  The Resource ID is guaranteed to be unique for a particular resource and will always be limited to one value.
 
 
-* **Identifier:** The identifier attribute typically provides business identifiers (or externally recognized identifiers).  In the Blue Button API, the `Patient.identifier` attribute provides the [Medicare Beneficiary ID (MBI)](https://www.cms.gov/medicare/new-medicare-card){:target="_blank"}. The MBI is the number on a beneficiary's Medicare card.
+* **Identifier:** The identifier attribute typically provides business identifiers (or externally recognized identifiers).  In the Blue Button API, the `Patient.identifier` attribute provides the [Medicare Beneficiary ID (MBI)](https://www.cms.gov/medicare/new-medicare-card){:target="_blank"}. The MBI is the number on an enrollee's Medicare card.
 
 In FHIR, the identifier attribute is a list element that could supply multiple identifiers. Use [discriminators](https://www.hl7.org/fhir/profiling.html#discriminator){:target="_blank"} to distinguish between the entries to pull your desired identifier.  
 
-For example, you can use discriminators to pull the current MBI from a Patient resource. (Beneficiaries are sometimes given new or replacement MBIs in situations such as identity theft.) In the `Patient` resource snippet below, there are two identifiers in the list. Use the following discriminators to pull the current MBI: 
+For example, you can use discriminators to pull the current MBI from a Patient resource. (Enrollees are sometimes given new or replacement MBIs in situations such as identity theft.) In the `Patient` resource snippet below, there are two identifiers in the list. Use the following discriminators to pull the current MBI: 
 - `identifier.system` = `http://hl7.org/fhir/sid/us-mbi` (ensures that the entry is an MBI)
 - `identifier.type.coding[n].extension.valueCoding.code` = "current"
 
@@ -1269,7 +1269,7 @@ This section provides information on basic and common queries against the Blue B
 {:.ds-c-table}
 
     
-To find beneficiaries with varying volumes and types of data, use this [CSV of synthetic data](/synthetic_users_by_claim_count_full.csv). Using the synthetic data, you can break down claims by type (carrier, inpatient, etc.) for each beneficiary/user combination.  Synthetic data works in both the Sandbox and Production environments.
+To find enrollees with varying volumes and types of data, use this [CSV of synthetic data](/synthetic_users_by_claim_count_full.csv). Using the synthetic data, you can break down claims by type (carrier, inpatient, etc.) for each enrollee/user combination.  Synthetic data works in both the Sandbox and Production environments.
 	
 
 
