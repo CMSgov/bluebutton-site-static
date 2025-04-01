@@ -979,7 +979,7 @@ In FHIR, the difference between the `Resource.id` (resource ID) and `identifier`
 * **Resource ID:** In the Blue Button API, the resource ID is an internal identifier from the source database, the Chronic Conditions Warehouse (CCW).  The resource ID is a system-level resource, held outside the resource.  The Resource ID is guaranteed to be unique for a particular resource and will always be limited to one value.
 
 
-* **Identifier:** The identifier attribute typically provides business identifiers (or externally recognized identifiers).  In the Blue Button API, the `Patient.identifier` attribute provides the [Medicare Beneficiary ID (MBI)](https://www.cms.gov/medicare/new-medicare-card){:target="_blank"}. The MBI is the number on a enrollee's Medicare card.
+* **Identifier:** The identifier attribute typically provides business identifiers (or externally recognized identifiers).  In the Blue Button API, the `Patient.identifier` attribute provides the [Medicare Beneficiary ID (MBI)](https://www.cms.gov/medicare/new-medicare-card){:target="_blank"}. The MBI is the number on an enrollee's Medicare card.
 
 In FHIR, the identifier attribute is a list element that could supply multiple identifiers. Use [discriminators](https://www.hl7.org/fhir/profiling.html#discriminator){:target="_blank"} to distinguish between the entries to pull your desired identifier.  
 
