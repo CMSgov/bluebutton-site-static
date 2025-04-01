@@ -367,7 +367,7 @@ https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qn
 | `redirect_uri`          | required     | The callback URL of your application. The user will be directed to this URL after authorizing your application.                                                                       |
 | `response_type`         | required     | Supported response type: `code`                                                                                                                                                       |
 | `scope`                 | optional     | A list of scopes being requested. Use URL encoding for special characters, including using an encoded space character, `%20`, as a delimiter. See [Scopes](#scopes) for more details. |
-| `state`                 | optional     | Recommended. A random string used to protect against request forgery attacks.                                                                                                         |
+| `state`                 | required     | A random string used to protect against request forgery attacks.                                                                                                         |
 | `code_challenge`        | optional     | Recommended, required for PKCE. Value computed from a generated code verifier value using `BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`.                                            |
 | `code_challenge_method` | optional     | Recommended, required for PKCE. Supported code challenge method: `S256`                                                                                                               |
 {:.ds-c-table}
