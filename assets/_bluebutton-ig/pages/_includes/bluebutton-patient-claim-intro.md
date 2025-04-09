@@ -16,7 +16,7 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
  1. an id 
  2. patient identifiers (e.g. BeneID, hicnHash)
  3. a patient name
- 4. a gender
+ 4. a sex
  5. an address
  
 **If the data is available a Patient shall include:**
