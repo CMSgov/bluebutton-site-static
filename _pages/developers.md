@@ -722,7 +722,7 @@ Example response excerpt:
             ]
         }
     ],
-    "sex":"male",
+    "gender":"male",
     "birthDate":"1999-06-01",
     "deceasedDateTime":"1981-03-17",
     "address": [
