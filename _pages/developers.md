@@ -844,13 +844,13 @@ Our rate limit is high enough to accommodate the needs of anyone integrating wit
 
 ### Synthetic data
 
-Because access to real claims data is restricted in order to protect the privacy of Medicare enrollees, CMS created synthetic user accounts representing enrollment information and healthcare claims for 10,001 Medicare enrollees. Since synthetic data are realistic-but-not-real data, the typical privacy and security restrictions do not apply.  
+Because access to real claims data is restricted in order to protect the privacy of Medicare enrollees, CMS created synthetic user accounts representing enrollment information and healthcare claims for 10,000 Medicare enrollees. Since synthetic data are realistic-but-not-real data, the typical privacy and security restrictions do not apply.  
 
 Although the synthetic user accounts are not tied to any real patient data, they mimic real claims data. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be realistic. However, the synthetic data set does not represent a longitudinal patient view or true clinical scenario. This allows you to test your integration with BB2.0 API, but could result in a patient with records for contradictory procedures. 
 
 #### Working with synthetic user accounts
 
-BB2.0 API offers 10,001 synthetic user accounts for you to test with in both the sandbox and production environments:
+BB2.0 API offers 10,000 synthetic user accounts for you to test with in both the sandbox and production environments:
 
 | User account ranges | Date updated | Description | 
 | -------- |-----------------------------------------------------| -------- | 
@@ -862,7 +862,7 @@ To differentiate between synthetic data and real patient production data, synthe
 
 #### Authenticating as a synthetic user
 
-Each of our 10,001 synthetic user accounts have Medicare.gov login credentials. To log in as a synthetic user, use the following username/password combination pattern when authorizing a test user with Blue Button 2.0:
+Each of our 10,000 synthetic user accounts have Medicare.gov login credentials. To log in as a synthetic user, use the following username/password combination pattern when authorizing a test user with Blue Button 2.0:
 
 * Username: BBUserXXXXX (Example: BBUser00005)
 * Password: PWXXXXX! (Example: PW00005!)  
