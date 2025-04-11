@@ -95,7 +95,7 @@ The other information needed to apply for a Medicare account is:
 
 - Last name
 - Date of Birth
-- Gender
+- Sex
 - Five digit zip code
 
 #### Step 1 - Enter Your Information:

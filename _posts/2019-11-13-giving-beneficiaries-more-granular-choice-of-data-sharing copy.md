@@ -31,7 +31,7 @@ As adoption of the Blue Button 2.0 API (BB2.0 API) grows, the CMS Blue Button te
 
 Beginning March 31st, 2020, the application authorization process will allow beneficiaries to choose not to share personally identifying demographic information (e.g., name, date of birth) with applications.  
 
-Beneficiary demographic information like name, race, gender, birthday, and address is stored in the patient resource. This change will allow beneficiaries to elect not to share that demographic data. Developers of applications that rely on demographic data for their application will need to collect that information elsewhere in the user flow should the beneficiary not allow it to be shared through Blue Button 2.0.
+Beneficiary demographic information like name, race, sex, birthday, and address is stored in the patient resource. This change will allow beneficiaries to elect not to share that demographic data. Developers of applications that rely on demographic data for their application will need to collect that information elsewhere in the user flow should the beneficiary not allow it to be shared through Blue Button 2.0.
 
 To allow developers to test this new functionality, CMS will introduce the new choice feature into [sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov) in two phases over the coming months:
 
