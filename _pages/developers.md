@@ -854,7 +854,7 @@ BB2.0 API offers 10,000 synthetic user accounts for you to test with in both the
 
 | User account ranges | Date updated | Description | 
 | -------- |-----------------------------------------------------| -------- | 
-| BBUser00000 to BBuser09999 | Rolling Claims updated weekly<br /> Loaded July 2023 | Most recently updated and most useful accounts. These accounts receive new claims data on a rolling basis.  These user accounts represent a range of Medicare demographics and ages, including people under 65 who qualify for Medicare for reasons other than age. |
+| BBUser00000 to BBuser09999 | Rolling claims updated weekly. <br/><br/>Loaded July 2023 | These accounts receive new claims data on a rolling basis.  These user accounts represent a range of Medicare demographics and ages, including people under 65 who qualify for Medicare for reasons other than age. |
 | BBUser10000 | Last Updated 2022 | BBUser10000 is a special synthetic user that provides nearly every field the API supports, including a variety of claim types. This makes it an excellent testing account for populating test scenarios. |
 {:.ds-c-table}
 
