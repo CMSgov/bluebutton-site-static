@@ -580,20 +580,29 @@ Scopes define the API endpoints that your application is allowed to access. The 
 
 #### BB2.0 API HL7 FHIR 
 
-| **Scope**                           | **Grants**                                                                                                    |
+| **Scope**                           | **Permission**                                                                                                |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------| 
+| `patient/Patient.rs`                | Read and search my general patient and demographic information|
+| `patient/Patient.s`                 | Search my general patient and demographic information|
+| `patient/Patient.r`                 | Read my general patient and demographic information|
 | `patient/Coverage.rs`               | Read and search my Medicare and supplemental coverage information|
 | `patient/Coverage.s`                | Search my Medicare and supplemental coverage information|
 | `patient/Coverage.r`                | Read my Medicare and supplemental coverage information|
 | `patient/ExplanationOfBenefit.rs`   | Read and search my Medicare claim information|
 | `patient/ExplanationOfBenefit.s`    | Search my Medicare claim information|
 | `patient/ExplanationOfBenefit.r`    | Read my Medicare claim information|
-| `patient/Patient.rs`                | Read and search my general patient and demographic information|
-| `patient/Patient.s`                 | Search my general patient and demographic information|
-| `patient/Patient.r`                 | Read my general patient and demographic information|
 | `launch/patient`                    | Patient launch context|
-| `openid`                            | Permission to retrieve information about the current logged-in user                                           |
-| `profile`                           | Permission to access the `/UserInfo` endpoint (from the [OpenID Connect specification](https://openid.net/connect/){:target="_blank"} |
+| `openid`                            | Retrieve information about the current logged-in user|
+| `profile`                           | Access the `/UserInfo` endpoint (from the [OpenID Connect specification](https://openid.net/connect/){:target="_blank"} |
+{:.ds-c-table}
+
+*Legacy scope still supported*
+
+| **Scope**                           | **Permission**                                                                                                |
+|-------------------------------------|---------------------------------------------------------------------------------------------------------------| 
+| `patient/Patient.read`              | My general patient and demographic information|
+| `patient/Coverage.read`             | My Medicare and supplemental coverage information|
+| `patient/ExplanationOfBenefit.read` | My Medicare claim information|
 {:.ds-c-table}
 
 
