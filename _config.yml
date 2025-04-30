@@ -35,6 +35,7 @@ exclude:
   - Jenkinsfile
   - ops
   - assets/bluebutton-ig/
+  - assets/ig/
   - assets/public_open_source/
 
 include: ["_pages"]
