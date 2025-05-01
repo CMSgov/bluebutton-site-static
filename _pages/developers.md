@@ -596,7 +596,9 @@ Scopes define the API endpoints that your application is allowed to access. The 
 | `profile`                           | Access the `/UserInfo` endpoint (from the [OpenID Connect specification](https://openid.net/connect/){:target="_blank"} |
 {:.ds-c-table}
 
-*Legacy scope still supported*
+*Legacy scope*
+
+While above SMART v2 scopes are not required, it is highly recommend to adopt them, as future versions of the Blue Button 2.0 API may not support the following v1 scopes that we currently support.
 
 | **Scope**                           | **Permission**                                                                                                |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------| 
