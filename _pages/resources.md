@@ -37,7 +37,6 @@ Our Node and Python SDKs provide methods for building API calls and managing tok
 * [Blue Button API Swagger Documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}
 * [FHIR Specification](http://www.hl7.org/fhir/index.html){:target="_blank"}
 * [CARIN Implementation Guide ](http://www.hl7.org/fhir/us/carin-bb/){:target="_blank"}(Blue Button V2)
-* [Blue Button Implementation Guide](/assets/ig/index.html) (Blue Button V1)
 * [OAuth 2.0 Specifications](https://oauth.net/specs/){:target="_blank"}
 
 ## Version Resources
