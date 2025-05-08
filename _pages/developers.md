@@ -358,6 +358,8 @@ Example call:
 https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&scope=openid%20profile%20patient%2FPatient.rs%20patient%2FCoverage.rs%20patient%2FExplanationOfBenefit.rs&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
 ~~~
 
+Note, the authorization in the example is started by an HTTP GET operation, for [SMART App Launch](https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html) compliance, POST style authorization is also supported.
+
 **Parameters: Authorization code request**
 
 | **Parameter**           | **Required** | **Description**                                                                                                                                                                       |

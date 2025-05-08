@@ -372,7 +372,7 @@
 			},
 			{
 				"key": "scope",
-				"value": "patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read profile",
+				"value": "patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs profile",
 				"type": "string"
 			},
 			{
