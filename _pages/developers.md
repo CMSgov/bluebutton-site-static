@@ -228,8 +228,8 @@ This setting determines 2 things:
 
 | **Setting** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race, and sex. (Scopes: `patient/Patient.read`, `patient/Coverage.read`, `patient/ExplanationOfBenefit.read`, `profile`)<br><br>Note: When an enrollee is authorizing your application, they will have the ability to omit the `patient/Patient.read` scope. Be sure that you build your application accordingly to handle a 403 error if an enrollee decides to filter their demographic information.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-yes.png" alt="Authorization screen with demographic info option" />    |
-| No | Allows your application to request access to the `patient/Coverage.read` and `patient/ExplanationOfBenefit.read` scopes.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-no.png" alt="Authorization screen without demographic info option" />                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Yes | Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race, and sex. (Scopes: `patient/Patient.rs`, `patient/Coverage.rs`, `patient/ExplanationOfBenefit.rs`, `profile`)<br><br>Note: When an enrollee is authorizing your application, they will have the ability to omit the `patient/Patient.rs` scope. Be sure that you build your application accordingly to handle a 403 error if an enrollee decides to filter their demographic information.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-yes.png" alt="Authorization screen with demographic info option" />    |
+| No | Allows your application to request access to the `patient/Coverage.rs` and `patient/ExplanationOfBenefit.rs` scopes.<br><br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/demographic-info-no.png" alt="Authorization screen without demographic info option" />                                                                                                                                                                                                                                                                                                                                                                                                                       |
 {:.ds-c-table}
 
 To learn more about scopes and permissions, visit [Authorization](#authorization).
@@ -355,8 +355,10 @@ To allow a user to authorize your application, direct them to the BB2.0 API `/au
 
 Example call:
 ~~~
-https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&scope=openid%20profile%20patient%2FPatient.read%20patient%2FCoverage.read%20patient%2FExplanationOfBenefit.read&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
+https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&scope=openid%20profile%20patient%2FPatient.rs%20patient%2FCoverage.rs%20patient%2FExplanationOfBenefit.rs&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
 ~~~
+
+Note, the authorization in the example is started by an HTTP GET operation, for [SMART App Launch](https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html) compliance, POST style authorization is also supported.
 
 **Parameters: Authorization code request**
 
@@ -413,7 +415,9 @@ To retrieve an access token, POST to the BB2.0 /token endpoint providing the cod
 ~~~
 curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 -u "<client_id>:<client_secret>" \
--d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost:8080/testclient/callback&code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
+-d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost:8080/testclient/callback&
+scope=profile patient/Patient.rs patient/ExplanationOfBenefit.rs patient/Coverage.rs&
+code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
 ~~~
 ##### Token response
 ~~~
@@ -421,7 +425,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
     "access_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
     "expires_in": 16768.523842,
     "token_type": "Bearer",
-    "scope": "profile patient/Patient.read patient/ExplanationOfBenefit.read patient/Coverage.read",
+    "scope": "profile patient/Patient.rs patient/ExplanationOfBenefit.rs patient/Coverage.rs",
     "refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN",
     "access_grant_expiration": "2025-09-05 19:17:53Z"
 }
@@ -457,7 +461,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
     "access_token": "VD1VaT4IfjXAMlZTS9E4RVXZlkhYG7",
     "expires_in": 36000,
     "token_type": "Bearer",
-    "scope": "profile patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read",
+    "scope": "profile patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs",
     "refresh_token": "7x0VkRQlRU4fRNCQL2vh239nIyucgw",
     "patient": "-20140000000001",
     "access_grant_expiration": "2025-09-05 19:17:53Z"
@@ -578,13 +582,25 @@ Scopes define the API endpoints that your application is allowed to access. The 
 
 #### BB2.0 API HL7 FHIR 
 
-| **Scope**                           | **Grants**                                                                                                    |
+| **Scope**                           | **Permission**                                                                                                |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------| 
-| `patient/Patient.read`              | Permission to read the Patient resource for a Medicare enrollee                                               | 
-| `patient/Coverage.read`             | Permission to read the Coverage resources for a Medicare enrollee                                             |
-| `patient/ExplanationOfBenefit.read` | Permission to read the Explanation of Benefit resources for a Medicare enrollee                               |
-| `openid`                            | Permission to retrieve information about the current logged-in user                                           |
-| `profile`                           | Permission to access the `/UserInfo` endpoint (from the [OpenID Connect specification](https://openid.net/connect/){:target="_blank"} |
+| `patient/Patient.rs`                | Read and search my general patient and demographic information|
+| `patient/Coverage.rs`               | Read and search my Medicare and supplemental coverage information|
+| `patient/ExplanationOfBenefit.rs`   | Read and search my Medicare claim information|
+| `launch/patient`                    | Patient launch context|
+| `openid`                            | Retrieve information about the current logged-in user|
+| `profile`                           | Access the `/UserInfo` endpoint (from the [OpenID Connect specification](https://openid.net/connect/){:target="_blank"} |
+{:.ds-c-table}
+
+*Legacy scope*
+
+While above SMART v2 scopes are not required, it is highly recommend to adopt them, as future versions of the Blue Button 2.0 API may not support the following v1 scopes that we currently support.
+
+| **Scope**                           | **Permission**                                                                                                |
+|-------------------------------------|---------------------------------------------------------------------------------------------------------------| 
+| `patient/Patient.read`              | My general patient and demographic information|
+| `patient/Coverage.read`             | My Medicare and supplemental coverage information|
+| `patient/ExplanationOfBenefit.read` | My Medicare claim information|
 {:.ds-c-table}
 
 
