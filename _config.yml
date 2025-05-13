@@ -34,6 +34,10 @@ exclude:
   - package.json
   - Jenkinsfile
   - ops
+  - _posts
+  - _pages/blog.md
+  - _pages/bb2dc18.md
+  - _pages/developer-conference.md
   - assets/bluebutton-ig/
   - assets/ig/
   - assets/public_open_source/
