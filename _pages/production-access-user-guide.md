@@ -47,7 +47,7 @@ These resources and guidelines will help you develop your application and make s
 
 The following resources are available for your use while developing your application:
 
-* The [Blue Button 2.0 developer sandbox](https://sandbox.bluebutton.cms.gov/){:target="_blank"} is a clone of the production API that provides synthetic sample data for 40,000 Medicare enrollees.
+* The [Blue Button 2.0 developer sandbox](https://sandbox.bluebutton.cms.gov/){:target="_blank"} is a clone of the production API that provides synthetic sample data for 10,000 Medicare enrollees.
 * Our [developer documentation](https://bluebutton.cms.gov/developers/){:target="_blank"} provides all the technical information you will need to develop your application in the sandbox.
 * Get started exploring the API and making requests with the [sandbox test client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}, [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi){:target="_blank"}, and a pre-configured [Postman collection](/developers/#4-test-the-api-with-postman-or-curl){:target="_blank"}.
 * Start building your app with our Node and Python [SDKs and sample apps](https://bluebutton.cms.gov/developers/#4-next-steps){:target="_blank"}.
