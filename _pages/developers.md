@@ -147,7 +147,7 @@ It's helpful to know that:
 * Sandbox credentials will not work in production. 
 * While we strive to provide a synthetic data set relevant to most use cases, our synthetic data set is not as comprehensive as production data.
 
-To get started in the developer sandbox, [create an account](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login){:target="_blank"}.
+To get started in the developer sandbox, [create an account](https://sandbox.bluebutton.cms.gov/v2/accounts/mfa/login){:target="_blank"}.
 
 #### Production
 
@@ -164,11 +164,30 @@ The Blue Button 2.0 API test client is a quick, no-code-required way to explore 
 Before you begin: If you're logged in to the sandbox, log out to use the test client.  
 
 1. Go to the [Blue Button 2.0 API test client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
-2. Choose a sample authorization token option. We recommend choosing the "Get an Authorization Token of v2 (PKCE enabled)" option. This option references our current codebase and Proof Key for Code Exchange (PKCE) is recommended for improved security. For more information on PCKE see [Proof Key for Code Exchange (PKCE) extension usage](#proof-key-for-code-exchange-pkce-extension-usage).
-3. Click **Authorize as a Beneficiary**.
-4. Log in to Medicare.gov using a [synthetic user's account credentials](#authenticating-as-a-synthetic-user).
-5. Choose a Privacy Option setting.
-6. Click **Allow**.  
+2. Choose a sample authorization token option. Click **Authorize as a Beneficiary**.
+3. Log in to Medicare.gov using a [synthetic user's account credentials](#authenticating-as-a-synthetic-user).
+4. Click **Allow**.  
+
+#### Proof Key for Code Exchange (PKCE) extension usage
+
+To improve the security of your application, we highly recommend using the [Proof Key for Code Exchange (PKCE) extension](https://tools.ietf.org/html/rfc7636){:target="_blank"}.
+
+There are several reasons to use the PKCE extension:
+
+* Ensures that the application that started the OAuth 2.0 flow is the same one that is finishing it.
+* Mitigates the impact of a compromised Authorization Code by a malicious actor.
+* Follows the [OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#section-2.1.1){:target="_blank"}
+
+PKCE uses a code challenge that is derived from a code-verifier. The BB2.0 API supports the S256 style code challenge:
+
+`codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
+
+When using PKCE, send the following additional parameters and values as part of the OAuth2.0 Authorization Request:
+
+* `code_challenge`
+* `codechallengemethod = "S256"`
+
+These optional parameters will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"} 
 
 Once you're logged in as a Medicare enrollee, you'll get an access token and you can make calls to different endpoints and see the sample data that is delivered in the response.
 
@@ -193,7 +212,7 @@ To get started integrating with the Blue Button 2.0 API, you'll need to register
 ### 1\. Register an application in the developer sandbox
 
 1. Go to the [Sandbox Dashboard](https://sandbox.bluebutton.cms.gov/home){:target="_blank"}. (If you don't already have an account, create one.)
-2. Click [Add an Application](https://sandbox.bluebutton.cms.gov/v1/o/applications/register/){:target="_blank"}.
+2. Click [Add an Application](https://sandbox.bluebutton.cms.gov/v2/o/applications/register/){:target="_blank"}.
 
 ### 2\. Enter application details
 
@@ -327,27 +346,6 @@ BB2.0 API supports the Authorization Code flow for web applications running on a
 
 * Client Type: Confidential
 * Grant Type: Authorization code
-
-#### Proof Key for Code Exchange (PKCE) extension usage
-
-To improve the security of your application, we highly recommend using the [Proof Key for Code Exchange (PKCE) extension](https://tools.ietf.org/html/rfc7636){:target="_blank"}.
-
-There are several reasons to use the PKCE extension:
-
-* Ensures that the application that started the OAuth 2.0 flow is the same one that is finishing it.
-* Mitigates the impact of a compromised Authorization Code by a malicious actor.
-* Follows the [OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#section-2.1.1){:target="_blank"}
-
-PKCE uses a code challenge that is derived from a code-verifier. The BB2.0 API supports the S256 style code challenge:
-
-`codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
-
-When using PKCE, send the following additional parameters and values as part of the OAuth2.0 Authorization Request:
-
-* `code_challenge`
-* `codechallengemethod = "S256"`
-
-These optional parameteres will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"}.
 
 #### User authorization
 
@@ -850,7 +848,6 @@ Additional information about coding systems can be found on the [terminology pag
 BB2.0 API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html){:target="_blank"}. FHIR extensions are custom data elements that are not found in the FHIR standard:
 
 * [Blue Button extensions in V2 (CSV 96KB)](/assets/csv/BB_V2_extension_listing.csv){:target="_blank"}
-* [Original extensions defined in Blue Button V1](/assets/ig/extensions.html){:target="_blank"} 
 
 ### Refresh rate and rate limiting
 
