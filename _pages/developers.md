@@ -164,30 +164,9 @@ The Blue Button 2.0 API test client is a quick, no-code-required way to explore 
 Before you begin: If you're logged in to the sandbox, log out to use the test client.  
 
 1. Go to the [Blue Button 2.0 API test client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
-2. Choose a sample authorization token option. Click **Authorize as a Beneficiary**.
+2. Choose a sample authorization token option. Click **Authorize as a Beneficiary** or **or ‘Authorize as a Beneficiary (Spanish)**.
 3. Log in to Medicare.gov using a [synthetic user's account credentials](#authenticating-as-a-synthetic-user).
 4. Click **Allow**.  
-
-#### Proof Key for Code Exchange (PKCE) extension usage
-
-To improve the security of your application, we highly recommend using the [Proof Key for Code Exchange (PKCE) extension](https://tools.ietf.org/html/rfc7636){:target="_blank"}.
-
-There are several reasons to use the PKCE extension:
-
-* Ensures that the application that started the OAuth 2.0 flow is the same one that is finishing it.
-* Mitigates the impact of a compromised Authorization Code by a malicious actor.
-* Follows the [OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#section-2.1.1){:target="_blank"}
-
-PKCE uses a code challenge that is derived from a code-verifier. The BB2.0 API supports the S256 style code challenge:
-
-`codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
-
-When using PKCE, send the following additional parameters and values as part of the OAuth2.0 Authorization Request:
-
-* `code_challenge`
-* `codechallengemethod = "S256"`
-
-These optional parameters will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"} 
 
 Once you're logged in as a Medicare enrollee, you'll get an access token and you can make calls to different endpoints and see the sample data that is delivered in the response.
 
@@ -304,7 +283,7 @@ First, obtain an access token. To test using your sandbox application, you can u
 
 1. Navigate to the [Blue Button 2.0 API Test Client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
 2. If you are currently logged into the Blue Button 2.0 sandbox, click **Log Out to Continue**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-06.png" alt="Log Out to Continue button" />
-3. Click **Get a Sample Authorization Token for v2**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-07.png" alt="Get a Sample Authorization for V2 button" />
+3. Click **Get a Sample Authorization Token**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-07.png" alt="Get a Sample Authorization button" />
 4. Click **Authorize as a Beneficiary**.<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-08.png" alt="Authorize as a Beneficiary button" />
 5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.<br><img src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-10.png" alt="Medicare login window" />
 6. Click **Connect**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-11.png" alt="Connect button" />
@@ -347,6 +326,29 @@ BB2.0 API supports the Authorization Code flow for web applications running on a
 * Client Type: Confidential
 * Grant Type: Authorization code
 
+
+#### Proof Key for Code Exchange (PKCE) extension usage
+
+To improve the security of your application, we highly recommend using the [Proof Key for Code Exchange (PKCE) extension](https://tools.ietf.org/html/rfc7636){:target="_blank"}.
+
+There are several reasons to use the PKCE extension:
+
+* Ensures that the application that started the OAuth 2.0 flow is the same one that is finishing it.
+* Mitigates the impact of a compromised Authorization Code by a malicious actor.
+* Follows the [OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#section-2.1.1){:target="_blank"}
+
+PKCE uses a code challenge that is derived from a code-verifier. The BB2.0 API supports the S256 style code challenge:
+
+`codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
+
+When using PKCE, send the following additional parameters and values as part of the OAuth2.0 Authorization Request:
+
+* `code_challenge`
+* `codechallengemethod = "S256"`
+
+These optional parameters will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"} 
+
+
 #### User authorization
 
 To allow a user to authorize your application, direct them to the BB2.0 API `/authorize` endpoint with the appropriate parameters. 
@@ -368,8 +370,8 @@ Note, the authorization in the example is started by an HTTP GET operation, for 
 | `response_type`         | required     | Supported response type: `code`                                                                                                                                                       |
 | `scope`                 | optional     | A list of scopes being requested. Use URL encoding for special characters, including using an encoded space character, `%20`, as a delimiter. See [Scopes](#scopes) for more details. |
 | `state`                 | required     | A random string used to protect against request forgery attacks.                                                                                                         |
-| `code_challenge`        | optional     | Recommended, required for PKCE. Value computed from a generated code verifier value using `BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`.                                            |
-| `code_challenge_method` | optional     | Recommended, required for PKCE. Supported code challenge method: `S256`                                                                                                               |
+| `code_challenge`        | required     | Required for PKCE. Value computed from a generated code verifier value using `BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`.                                            |
+| `code_challenge_method` | required     | Required for PKCE. Supported code challenge method: `S256`                                                                                                               |
 {:.ds-c-table}
 
 ##### Authorization screen language selection
