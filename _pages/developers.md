@@ -326,7 +326,6 @@ BB2.0 API supports the Authorization Code flow for web applications running on a
 * Client Type: Confidential
 * Grant Type: Authorization code
 
-
 #### Proof Key for Code Exchange (PKCE) extension usage
 
 To improve the security of your application, we highly recommend using the [Proof Key for Code Exchange (PKCE) extension](https://tools.ietf.org/html/rfc7636){:target="_blank"}.
