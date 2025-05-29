@@ -147,7 +147,7 @@ It's helpful to know that:
 * Sandbox credentials will not work in production. 
 * While we strive to provide a synthetic data set relevant to most use cases, our synthetic data set is not as comprehensive as production data.
 
-To get started in the developer sandbox, [create an account](https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login){:target="_blank"}.
+To get started in the developer sandbox, [create an account](https://sandbox.bluebutton.cms.gov/v2/accounts/mfa/login){:target="_blank"}.
 
 #### Production
 
@@ -164,11 +164,9 @@ The Blue Button 2.0 API test client is a quick, no-code-required way to explore 
 Before you begin: If you're logged in to the sandbox, log out to use the test client.  
 
 1. Go to the [Blue Button 2.0 API test client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
-2. Choose a sample authorization token option. We recommend choosing the "Get an Authorization Token of v2 (PKCE enabled)" option. This option references our current codebase and Proof Key for Code Exchange (PKCE) is recommended for improved security. For more information on PCKE see [Proof Key for Code Exchange (PKCE) extension usage](#proof-key-for-code-exchange-pkce-extension-usage).
-3. Click **Authorize as a Beneficiary**.
-4. Log in to Medicare.gov using a [synthetic user's account credentials](#authenticating-as-a-synthetic-user).
-5. Choose a Privacy Option setting.
-6. Click **Allow**.  
+2. Choose a sample authorization token option. Click **Authorize as a Beneficiary** or **or ‘Authorize as a Beneficiary (Spanish)**.
+3. Log in to Medicare.gov using a [synthetic user's account credentials](#authenticating-as-a-synthetic-user).
+4. Click **Connect**.  
 
 Once you're logged in as a Medicare enrollee, you'll get an access token and you can make calls to different endpoints and see the sample data that is delivered in the response.
 
@@ -193,7 +191,7 @@ To get started integrating with the Blue Button 2.0 API, you'll need to register
 ### 1\. Register an application in the developer sandbox
 
 1. Go to the [Sandbox Dashboard](https://sandbox.bluebutton.cms.gov/home){:target="_blank"}. (If you don't already have an account, create one.)
-2. Click [Add an Application](https://sandbox.bluebutton.cms.gov/v1/o/applications/register/){:target="_blank"}.
+2. Click [Add an Application](https://sandbox.bluebutton.cms.gov/v2/o/applications/register/){:target="_blank"}.
 
 ### 2\. Enter application details
 
@@ -285,7 +283,7 @@ First, obtain an access token. To test using your sandbox application, you can u
 
 1. Navigate to the [Blue Button 2.0 API Test Client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
 2. If you are currently logged into the Blue Button 2.0 sandbox, click **Log Out to Continue**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-06.png" alt="Log Out to Continue button" />
-3. Click **Get a Sample Authorization Token for v2**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-07.png" alt="Get a Sample Authorization for V2 button" />
+3. Click **Get a Sample Authorization Token**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-07.png" alt="Get a Sample Authorization button" />
 4. Click **Authorize as a Beneficiary**.<img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-08.png" alt="Authorize as a Beneficiary button" />
 5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.<br><img src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-10.png" alt="Medicare login window" />
 6. Click **Connect**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-11.png" alt="Connect button" />
@@ -347,7 +345,8 @@ When using PKCE, send the following additional parameters and values as part of 
 * `code_challenge`
 * `codechallengemethod = "S256"`
 
-These optional parameteres will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"}.
+These optional parameters will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"} 
+
 
 #### User authorization
 
@@ -370,8 +369,8 @@ Note: The authorization in the example is started by an HTTP GET operation. For 
 | `response_type`         | required     | Supported response type: `code`                                                                                                                                                       |
 | `scope`                 | optional     | A list of scopes being requested. Use URL encoding for special characters, including using an encoded space character, `%20`, as a delimiter. See [Scopes](#scopes) for more details. |
 | `state`                 | required     | A random string used to protect against request forgery attacks.                                                                                                         |
-| `code_challenge`        | optional     | Recommended, required for PKCE. Value computed from a generated code verifier value using `BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`.                                            |
-| `code_challenge_method` | optional     | Recommended, required for PKCE. Supported code challenge method: `S256`                                                                                                               |
+| `code_challenge`        | required     | Required for PKCE. Value computed from a generated code verifier value using `BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`.                                            |
+| `code_challenge_method` | required     | Required for PKCE. Supported code challenge method: `S256`                                                                                                               |
 {:.ds-c-table}
 
 ##### Authorization screen language selection
@@ -838,7 +837,6 @@ Additional information about coding systems can be found on the [terminology pag
 BB2.0 API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html){:target="_blank"}. FHIR extensions are custom data elements that are not found in the FHIR standard:
 
 * [Blue Button extensions in V2 (CSV 96KB)](/assets/csv/BB_V2_extension_listing.csv){:target="_blank"}
-* [Original extensions defined in Blue Button V1](/assets/ig/extensions.html){:target="_blank"} 
 
 ### Refresh rate and rate limiting
 
