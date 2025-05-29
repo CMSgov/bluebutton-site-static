@@ -166,7 +166,7 @@ Before you begin: If you're logged in to the sandbox, log out to use the test cl
 1. Go to the [Blue Button 2.0 API test client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
 2. Choose a sample authorization token option. Click **Authorize as a Beneficiary** or **or ‘Authorize as a Beneficiary (Spanish)**.
 3. Log in to Medicare.gov using a [synthetic user's account credentials](#authenticating-as-a-synthetic-user).
-4. Click **Allow**.  
+4. Click **Connect**.  
 
 Once you're logged in as a Medicare enrollee, you'll get an access token and you can make calls to different endpoints and see the sample data that is delivered in the response.
 
