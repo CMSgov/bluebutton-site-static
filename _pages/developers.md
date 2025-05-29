@@ -358,7 +358,7 @@ Example call:
 https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&scope=openid%20profile%20patient%2FPatient.rs%20patient%2FCoverage.rs%20patient%2FExplanationOfBenefit.rs&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
 ~~~
 
-Note, the authorization in the example is started by an HTTP GET operation, for [SMART App Launch](https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html) compliance, POST style authorization is also supported.
+Note: The authorization in the example is started by an HTTP GET operation. For [SMART App Launch](https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html) compliance, POST style authorization is also supported.
 
 **Parameters: Authorization code request**
 
@@ -582,27 +582,15 @@ Scopes define the API endpoints that your application is allowed to access. The 
 
 #### BB2.0 API HL7 FHIR 
 
-| **Scope**                           | **Permission**                                                                                                |
-|-------------------------------------|---------------------------------------------------------------------------------------------------------------| 
-| `patient/Patient.rs`                | Read and search my general patient and demographic information|
-| `patient/Coverage.rs`               | Read and search my Medicare and supplemental coverage information|
-| `patient/ExplanationOfBenefit.rs`   | Read and search my Medicare claim information|
-| `launch/patient`                    | Patient launch context|
-| `openid`                            | Retrieve information about the current logged-in user|
-| `profile`                           | Access the `/UserInfo` endpoint (from the [OpenID Connect specification](https://openid.net/connect/){:target="_blank"} |
+| **Scope**                                                                | **Permission**                                                                                                |
+|--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------| 
+| `patient/Patient.rs` or `patient/Patient.read`                           | Read and search my general patient and demographic information|
+| `patient/Coverage.rs` or `patient/Coverage.read`                         | Read and search my Medicare and supplemental coverage information|
+| `patient/ExplanationOfBenefit.rs` or `patient/ExplanationOfBenefit.read` | Read and search my Medicare claim information|
+| `launch/patient`                                                         | Patient launch context|
+| `openid`                                                                 | Retrieve information about the current logged-in user|
+| `profile`                                                                | Access the `/UserInfo` endpoint (from the [OpenID Connect specification](https://openid.net/connect/){:target="_blank"} |
 {:.ds-c-table}
-
-*Legacy scope*
-
-While above SMART v2 scopes are not required, it is highly recommend to adopt them, as future versions of the Blue Button 2.0 API may not support the following v1 scopes that we currently support.
-
-| **Scope**                           | **Permission**                                                                                                |
-|-------------------------------------|---------------------------------------------------------------------------------------------------------------| 
-| `patient/Patient.read`              | My general patient and demographic information|
-| `patient/Coverage.read`             | My Medicare and supplemental coverage information|
-| `patient/ExplanationOfBenefit.read` | My Medicare claim information|
-{:.ds-c-table}
-
 
 #### Medicare enrollee personal information guidelines
 
