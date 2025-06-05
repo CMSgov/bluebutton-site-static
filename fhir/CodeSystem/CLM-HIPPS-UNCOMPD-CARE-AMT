@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-HIPPS-UNCOMPD-CARE-AMT",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-HIPPS-UNCOMPD-CARE-AMT",
+  "name": "CLM_HIPPS_UNCOMPD_CARE_AMT",
+  "title": "Claim Uncompensated Care Payment Amount",
+  "status": "draft",
+  "description": "This field identifies the payment for disproportionate share hospitals (DSH). It represents the uncompensated care amount of the payment.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.adjudication"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Claim Uncompensated Care Payment Amount",
+        "definition": "This field identifies the payment for disproportionate share hospitals (DSH). It represents the uncompensated care amount of the payment."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-HIPPS-UNCOMPD-CARE-AMT"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ]
+      }
+    ]
+  }
+}

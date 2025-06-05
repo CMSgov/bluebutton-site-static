@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-FI-ACTN-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-FI-ACTN-CD",
+  "name": "CLM_FI_ACTN_CD",
+  "title": "FI or MAC Claim Action Code",
+  "status": "draft",
+  "description": "The type of action requested by the intermediary to be taken on an institutional claim.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "FI or MAC Claim Action Code",
+        "definition": "The type of action requested by the intermediary to be taken on an institutional claim."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-FI-ACTN-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-FI-ACTN-CD"
+      }
+    ]
+  }
+}

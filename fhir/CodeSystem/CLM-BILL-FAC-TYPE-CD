@@ -1,0 +1,53 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_BILL_FAC_TYPE_CD",
+  "id": "CLM-BILL-FAC-TYPE-CD",
+  "title": "Clm Bill Fac Type Cd",
+  "description": "Code system for clm bill fac type cd",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-BILL-FAC-TYPE-CD",
+  "concept": [
+    {
+      "code": "1",
+      "display": "HOSPITAL"
+    },
+    {
+      "code": "2",
+      "display": "SKILLED NURSING FACILITY (SNF)"
+    },
+    {
+      "code": "3",
+      "display": "HOME HEALTH AGENCY (HHA)"
+    },
+    {
+      "code": "4",
+      "display": "RELIGIOUS NONMEDICAL (HOSPITAL) (EFF. 8/1/00); PRIOR TO 8/00 REFERENCED CHRISTIAN SCIENCE (CS)"
+    },
+    {
+      "code": "5",
+      "display": "RELIGIOUS NONMEDICAL (EXTENDED CARE) (EFF. 8/1/00); PRIOR TO 8/00 REFERENCED CS (DISCONTINUED EFFECTIVE 10/1/05)"
+    },
+    {
+      "code": "6",
+      "display": "INTERMEDIATE CARE"
+    },
+    {
+      "code": "7",
+      "display": "CLINIC OR HOSPITAL-BASED RENAL DIALYSIS FACILITY"
+    },
+    {
+      "code": "8",
+      "display": "SPECIAL FACILITY OR ASC SURGERY"
+    },
+    {
+      "code": "9",
+      "display": "RESERVED"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 10
+}

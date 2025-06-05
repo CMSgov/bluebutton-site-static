@@ -1,0 +1,56 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BENE-BUYIN-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-BUYIN-CD",
+  "name": "BENE_BUYIN_CD",
+  "title": "Beneficiary Buy-in Indicator",
+  "status": "draft",
+  "description": "Monthly Part A and/or Part B entitlement indicator.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Coverage"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Beneficiary Buy-in Indicator",
+        "definition": "Monthly Part A and/or Part B entitlement indicator."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-BUYIN-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-BUYIN-CD"
+      }
+    ]
+  }
+}
