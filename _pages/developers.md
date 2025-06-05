@@ -338,12 +338,12 @@ There are several reasons to use the PKCE extension:
 
 PKCE uses a code challenge that is derived from a code-verifier. The BB2.0 API supports the S256 style code challenge:
 
-`codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
+`code_challenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
 
 When using PKCE, send the following additional parameters and values as part of the OAuth2.0 Authorization Request:
 
 * `code_challenge`
-* `codechallengemethod = "S256"`
+* `code_challenge_method = "S256"`
 
 These optional parameters will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"} 
 
