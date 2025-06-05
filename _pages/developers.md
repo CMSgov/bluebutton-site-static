@@ -164,7 +164,7 @@ The Blue Button 2.0 API test client is a quick, no-code-required way to explore 
 Before you begin: If you're logged in to the sandbox, log out to use the test client.  
 
 1. Go to the [Blue Button 2.0 API test client](https://sandbox.bluebutton.cms.gov/testclient/){:target="_blank"}.
-2. Choose a sample authorization token option. Click **Authorize as a Beneficiary** or **or ‘Authorize as a Beneficiary (Spanish)**.
+2. Choose a sample authorization token option. Click **Authorize as a Beneficiary** or **Authorize as a Beneficiary (Spanish)**.
 3. Log in to Medicare.gov using a [synthetic user's account credentials](#authenticating-as-a-synthetic-user).
 4. Click **Connect**.  
 
@@ -328,7 +328,7 @@ BB2.0 API supports the Authorization Code flow for web applications running on a
 
 #### Proof Key for Code Exchange (PKCE) extension usage
 
-To improve the security of your application, we highly recommend using the [Proof Key for Code Exchange (PKCE) extension](https://tools.ietf.org/html/rfc7636){:target="_blank"}.
+To improve the security of your application, we require using the [Proof Key for Code Exchange (PKCE) extension](https://tools.ietf.org/html/rfc7636){:target="_blank"}.
 
 There are several reasons to use the PKCE extension:
 
@@ -338,15 +338,14 @@ There are several reasons to use the PKCE extension:
 
 PKCE uses a code challenge that is derived from a code-verifier. The BB2.0 API supports the S256 style code challenge:
 
-`codechallenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
+`code_challenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
 
 When using PKCE, send the following additional parameters and values as part of the OAuth2.0 Authorization Request:
 
 * `code_challenge`
-* `codechallengemethod = "S256"`
+* `code_challenge_method = "S256"`
 
 These optional parameters will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"} 
-
 
 #### User authorization
 
