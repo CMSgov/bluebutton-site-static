@@ -1,0 +1,413 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BENE_PTNT_STUS_CD",
+  "id": "BENE-PTNT-STUS-CD",
+  "title": "Bene Ptnt Stus Cd",
+  "description": "Code system for bene ptnt stus cd",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-PTNT-STUS-CD",
+  "concept": [
+    {
+      "code": "01",
+      "display": "DISCHARGED TO HOME OR SELF CARE (ROUTINE DISCHARGE)"
+    },
+    {
+      "code": "02",
+      "display": "DISCHARGED/TRANSFERRED TO A SHORT TERM GENERAL HOSPITAL FOR INPATIENT CARE"
+    },
+    {
+      "code": "03",
+      "display": "DISCHARGED/TRANSFERRED TO SKILLED NURSING FACILITY (SNF) WITH MEDICARE CERTIFICATION"
+    },
+    {
+      "code": "04",
+      "display": "DISCHARGED/TRANSFERRED TO A FACILITY THAT PROVIDES CUSTODIAL OR SUPPORTIVE CARE"
+    },
+    {
+      "code": "05",
+      "display": "DISCHARGED/TRANSFERRED TO A DESIGNATED CANCER CENTER OR CHILDREN’S HOSPITAL"
+    },
+    {
+      "code": "06",
+      "display": "DISCHARGED/TRANSFERRED TO HOME UNDER CARE OF ORGANIZED HOME HEALTH SERVICE ORGANIZATION"
+    },
+    {
+      "code": "07",
+      "display": "LEFT AGAINST MEDICAL ADVICE OR DISCONTINUED CARE"
+    },
+    {
+      "code": "08",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "09",
+      "display": "ADMITTED AS AN INPATIENT TO THIS HOSPITAL"
+    },
+    {
+      "code": "10",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "11",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "12",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "13",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "14",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "15",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "16",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "17",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "18",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "19",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "20",
+      "display": "EXPIRED"
+    },
+    {
+      "code": "21",
+      "display": "DISCHARGED/TRANSFERRED TO COURT/LAW ENFORCEMENT"
+    },
+    {
+      "code": "22",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "23",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "24",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "25",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "26",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "27",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "28",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "29",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "30",
+      "display": "STILL PATIENT"
+    },
+    {
+      "code": "31",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "32",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "33",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "34",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "35",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "36",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "37",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "38",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "39",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "40",
+      "display": "EXPIRED AT HOME"
+    },
+    {
+      "code": "41",
+      "display": "EXPIRED IN A MEDICAL FACILITY (E.G., HOSPITAL, SNF, ICF, OR FREE STANDING HOSPICE)"
+    },
+    {
+      "code": "42",
+      "display": "EXPIRED - PLACE UNKNOWN"
+    },
+    {
+      "code": "43",
+      "display": "DISCHARGED/TRANSFERRED TO A FEDERAL HEALTH CARE FACILITY"
+    },
+    {
+      "code": "44",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "45",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "46",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "47",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "48",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "49",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "50",
+      "display": "HOSPICE - HOME"
+    },
+    {
+      "code": "51",
+      "display": "HOSPICE - MEDICAL FACILITY (CERTIFIED) PROVIDING HOSPICE LEVEL OF CARE"
+    },
+    {
+      "code": "52",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "53",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "54",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "55",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "56",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "57",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "58",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "59",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "60",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "61",
+      "display": "DISCHARGED/TRANSFERRED TO A HOSPITAL-BASED MEDICARE APPROVED SWING BED"
+    },
+    {
+      "code": "62",
+      "display": "DISCHARGED/TRANSFERRED TO AN INPATIENT REHABILITATION FACILITY (IRF) INCLUDING REHABILITATION DISTINCT PART UNITS OF A HOSPITAL"
+    },
+    {
+      "code": "63",
+      "display": "DISCHARGED/TRANSFERRED TO A MEDICARE CERTIFIED LONG TERM CARE HOSPITAL (LTCH)"
+    },
+    {
+      "code": "64",
+      "display": "DISCHARGED/TRANSFERRED TO A NURSING FACILITY CERTIFIED UNDER MEDICAID BUT NOT CERTIFIED UNDER MEDICARE"
+    },
+    {
+      "code": "65",
+      "display": "DISCHARGED/TRANSFERRED TO A PSYCHIATRIC HOSPITAL OR PSYCHIATRIC DISTINCT PART UNIT OF A HOSPITAL"
+    },
+    {
+      "code": "66",
+      "display": "DISCHARGED/TRANSFERRED TO A CRITICAL ACCESS HOSPITAL (CAH)"
+    },
+    {
+      "code": "67",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "68",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "69",
+      "display": "DISCHARGED/TRANSFERRED TO A DESIGNATED DISASTER ALTERNATIVE CARE SITE (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "70",
+      "display": "DISCHARGED/TRANSFERRED TO ANOTHER TYPE OF HEALTH CARE INSTITUTION NOT DEFINED ELSEWHERE IN THIS CODE LIST"
+    },
+    {
+      "code": "71",
+      "display": "DISCONTINUED 4/1/03"
+    },
+    {
+      "code": "72",
+      "display": "DISCONTINUED 4/1/03"
+    },
+    {
+      "code": "73",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "74",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "75",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "76",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "77",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "78",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "79",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "80",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "81",
+      "display": "DISCHARGED TO HOME OR SELF CARE WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "82",
+      "display": "DISCHARGED/TRANSFERRED TO A SHORT TERM GENERAL HOSPITAL FOR INPATIENT CARE WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "83",
+      "display": "DISCHARGED/TRANSFERRED TO A SKILLED NURSING FACILITY (SNF) WITH MEDICARE CERTIFICATION WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "84",
+      "display": "DISCHARGED/TRANSFERRED TO A FACILITY THAT PROVIDES CUSTODIAL OR SUPPORTIVE CARE WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "85",
+      "display": "DISCHARGED/TRANSFERRED TO A DESIGNATED CANCER CENTER OR CHILDREN’S HOSPITAL WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "86",
+      "display": "DISCHARGED/TRANSFERRED TO HOME UNDER CARE OF ORGANIZED HOME HEALTH SERVICE ORGANIZATION WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "87",
+      "display": "DISCHARGED/TRANSFERRED TO COURT/LAW ENFORCEMENT WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "88",
+      "display": "DISCHARGED/TRANSFERRED TO A FEDERAL HEALTH CARE FACILITY WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "89",
+      "display": "DISCHARGED/TRANSFERRED TO A HOSPITAL-BASED MEDICARE APPROVED SWING BED WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "90",
+      "display": "DISCHARGED/TRANSFERRED TO AN INPATIENT REHABILITATION FACILITY (IRF) INCLUDING REHABILITATION DISTINCT PART UNITS OF A HOSPITAL WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "91",
+      "display": "DISCHARGED/TRANSFERRED TO A MEDICARE CERTIFIED LONG TERM CARE HOSPITAL (LTCH) WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "92",
+      "display": "DISCHARGED/TRANSFERRED TO A NURSING FACILITY CERTIFIED UNDER MEDICAID BUT NOT CERTIFIED UNDER MEDICARE WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "93",
+      "display": "DISCHARGED/TRANSFERRED TO A PSYCHIATRIC HOSPITAL OR PSYCHIATRIC DISTINCT PART UNIT OF A HOSPITAL WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "94",
+      "display": "DISCHARGED/TRANSFERRED TO A CRITICAL ACCESS HOSPITAL (CAH) WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "95",
+      "display": "DISCHARGED/TRANSFERRED TO ANOTHER TYPE OF HEALTH CARE INSTITUTION NOT DEFINED ELSEWHERE IN THIS CODE LIST WITH A PLANNED ACUTE CARE HOSPITAL INPATIENT READMISSION (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "96",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "97",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "98",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "99",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 100
+}
