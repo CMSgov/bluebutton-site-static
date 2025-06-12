@@ -345,7 +345,7 @@ When using PKCE, send the following additional parameters and values as part of 
 * `code_challenge`
 * `code_challenge_method = "S256"`
 
-These optional parameters will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/){:target="_blank"} 
+These required parameters will be used in the examples in the following sections. To learn more about this flow, refer to [OAuth.com](https://www.oauth.com/).
 
 #### User authorization
 
@@ -367,9 +367,9 @@ Note: The authorization in the example is started by an HTTP GET operation. For 
 | `redirect_uri`          | required     | The callback URL of your application. The user will be directed to this URL after authorizing your application.                                                                       |
 | `response_type`         | required     | Supported response type: `code`                                                                                                                                                       |
 | `scope`                 | optional     | A list of scopes being requested. Use URL encoding for special characters, including using an encoded space character, `%20`, as a delimiter. See [Scopes](#scopes) for more details. |
-| `state`                 | required     | A random string used to protect against request forgery attacks.                                                                                                         |
+| `state`                 | required     | A random string used to protect against request forgery attacks. The string shall have an entropy of at least 122 bits, and a randomly-generated UUID is preferred. If the state parameter is under 16 characters, an error will be returned.
 | `code_challenge`        | required     | Required for PKCE. Value computed from a generated code verifier value using `BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`.                                            |
-| `code_challenge_method` | required     | Required for PKCE. Supported code challenge method: `S256`                                                                                                               |
+| `code_challenge_method` | required     | Required for PKCE. Only S256 is supported. Any value other than `S256` will return an error.                                                                                                               |
 {:.ds-c-table}
 
 ##### Authorization screen language selection
@@ -407,7 +407,7 @@ To retrieve an access token, POST to the BB2.0 /token endpoint providing the cod
 * `redirect_uri`
 * `grant_type`: `authorization_code` 
 * `code`
-* `code_verifier` (optional, required for PKCE)
+* `code_verifier`
 
 ##### cURL command
 ~~~
