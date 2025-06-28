@@ -42,7 +42,12 @@ exclude:
   - assets/ig/
   - assets/public_open_source/
 
-include: ["_pages"]
+include:
+  - _pages
+  - fhir
+
+keep_files:
+  - fhir
 
 # Settings for RSS Feed for Blog
 name: Blue Button 2.0 API Blog

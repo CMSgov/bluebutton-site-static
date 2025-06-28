@@ -73,6 +73,7 @@ pipeline {
       steps {
         sh """
         bundle exec jekyll build --config _config.yml,_config-${params.SITE_ENV}.yml
+        cp -R ./fhir ./_site/fhir
         """
       }
     }
