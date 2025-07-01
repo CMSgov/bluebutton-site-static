@@ -52,7 +52,32 @@
       "code": "CLM_PPS_IND_CD",
       "display": "Claim PPS Indicator Code",
       "definition": "The code indicating whether or not: (1) the claim is from the prospective payment system (PPS), and/or (2) the beneficiary is a deemed insured MQGE (Medicare Qualified Government Employee)"
+    },
+    {
+      "code": "CLM_NCH_PRMRY_PYR_CD",
+      "display": "NCH Primary Payer Code",
+      "definition": "Code system for NCH primary payer code"
+    },
+    {
+      "code": "CLM_QLFY_STAY_FROM_DT",
+      "display": "Qualified Stay From Date",
+      "definition": "The beginning date of the beneficiary's qualifying Medicare stay."
+    },
+    {
+      "code": "CLM_QLFY_STAY_THRU_DT",
+      "display": "Qualified Stay Through Date",
+      "definition": "The ending date of the beneficiary's qualifying Medicare stay."
+    },
+    {
+      "code": "CLM_HHA_LUP_IND_CD",
+      "display": "Claim Lupa Indicator Code",
+      "definition": "The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode."
+    },
+    {
+      "code": "CLM_HHA_RFRL_CD",
+      "display": "Claim Referral Code",
+      "definition": "The code used to identify the means by which the beneficiary was referred for Home Health services."
     }
   ],
-  "count": 9
+  "count": 14
 }

@@ -1,0 +1,81 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_REV_PMT_MTHD_CD",
+  "id": "CLM-REV-PMT-MTHD-CD",
+  "title": "Revenue Center Payment Method Indicator Code",
+  "description": "THE DOMAIN OF CLAIM PAYMENT METHOD CODES.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-REV-PMT-MTHD-CD",
+  "concept": [
+    {
+      "code": "1",
+      "display": "PAID STANDARD HOSPITAL OPPS AMOUNT (STATUS INDICATORS J1, J2, R, S, T, U, V)"
+    },
+    {
+      "code": "10",
+      "display": "PAID FQHC ENCOUNTER PAYMENT"
+    },
+    {
+      "code": "11",
+      "display": "NOT PAID OR NOT INCLUDED UNDER FQHC ENCOUNTER PAYMENT"
+    },
+    {
+      "code": "12",
+      "display": "NO ADDITIONAL PAYMENT, INCLUDED IN PAYMENT FOR FQHC ENCOUNTER"
+    },
+    {
+      "code": "13",
+      "display": "PAID FQHC ENCOUNTER PAYMENT FOR NEW PATIENT OR IPPE/AWV"
+    },
+    {
+      "code": "14",
+      "display": "GRANDFATHERED TRIBAL FQHC ENCOUNTER PAYMENT"
+    },
+    {
+      "code": "15",
+      "display": "FQHC IOP ENCOUNTER PAYMENT"
+    },
+    {
+      "code": "16",
+      "display": "WRAP-AROUND PAYMENT FOR FQHCS THAT CONTRACT WITH MEDICARE ADVANTAGE (MA) ORGANIZATIONS"
+    },
+    {
+      "code": "2",
+      "display": "SERVICES NOT PAID BY OPPS PRICER; PAID UNDER FEE SCHEDULE OR OTHER PAYMENT SYSTEM (SI, OF A, G, K)"
+    },
+    {
+      "code": "3",
+      "display": "NOT PAID (Q1, Q2, Q3, Q4, M, W, Y, E1, E2), OR NOT PAID UNDER OPPS (B, C, Z)"
+    },
+    {
+      "code": "4",
+      "display": "PAID AT REASONABLE COST (STATUS INDICATOR F, L)"
+    },
+    {
+      "code": "5",
+      "display": "PAID STANDARD AMOUNT FOR PASS-THROUGH DRUG OR BIOLOGICAL (STATUS INDICATOR G)"
+    },
+    {
+      "code": "6",
+      "display": "PAYMENT BASED ON CHARGE ADJUSTED TO COST (STATUS INDICATOR H)"
+    },
+    {
+      "code": "7",
+      "display": "ADDITIONAL PAYMENT FOR NEW DRUG OR NEW BIOLOGICAL (STATUS INDICATOR J)"
+    },
+    {
+      "code": "8",
+      "display": "PAID PARTIAL HOSPITALIZATION OR INTENSIVE OUTPATIENT PROGRAM PER DIEM (STATUS INDICATOR P)"
+    },
+    {
+      "code": "9",
+      "display": "NO ADDITIONAL PAYMENT, PAYMENT INCLUDED IN LINE ITEMS WITH APCS (STATUS INDICATOR N, OR NO HCPCS CODE AND CERTAIN REVENUE CODES, OR HCPCS CODES G0176, G0177, OR G0129)"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 17
+}

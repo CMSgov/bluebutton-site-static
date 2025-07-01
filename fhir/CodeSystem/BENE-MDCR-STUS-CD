@@ -1,56 +1,49 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "BENE-MDCR-STUS-CD",
-  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-MDCR-STUS-CD",
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
   "name": "BENE_MDCR_STUS_CD",
-  "title": "Medicare Beneficiary Status Code",
-  "status": "draft",
+  "id": "BENE-MDCR-STUS-CD",
+  "title": "Beneficiary Medicare Status Code",
   "description": "A code identifying the reason for a beneficiary's entitlement to Medicare benefits.",
-  "fhirVersion": "4.0.1",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-MDCR-STUS-CD",
+  "concept": [
     {
-      "type": "element",
-      "expression": "Coverage"
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    },
+    {
+      "code": "0",
+      "display": "UNKNOWN"
+    },
+    {
+      "code": "00",
+      "display": "NO INFO PROVIDED"
+    },
+    {
+      "code": "10",
+      "display": "AGED WITHOUT ESRD"
+    },
+    {
+      "code": "11",
+      "display": "AGED WITH ESRD"
+    },
+    {
+      "code": "20",
+      "display": "DISABLED WITHOUT ESRD"
+    },
+    {
+      "code": "21",
+      "display": "DISABLED WITH ESRD"
+    },
+    {
+      "code": "31",
+      "display": "ESRD ONLY"
+    },
+    {
+      "code": "40",
+      "display": "MEDICARE PART B IMMUNOSUPPRESSANT DRUG BENEFIT (PBID)"
     }
   ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Medicare Beneficiary Status Code",
-        "definition": "A code identifying the reason for a beneficiary's entitlement to Medicare benefits."
-      },
-      {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-MDCR-STUS-CD"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x].system",
-        "path": "Extension.value[x].system",
-        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-MDCR-STUS-CD"
-      }
-    ]
-  }
+  "count": 9
 }

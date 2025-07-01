@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-REV-PMT-MTHD-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-REV-PMT-MTHD-CD",
+  "name": "CLM_REV_PMT_MTHD_CD",
+  "title": "Revenue Center Payment Method Indicator Code",
+  "status": "draft",
+  "description": "Extension used to provide the code used to identify how the service is priced for payment.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Revenue Center Payment Method Indicator Code",
+        "definition": "Extension used to provide the code used to identify how the service is priced for payment."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-REV-PMT-MTHD-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-REV-PMT-MTHD-CD"
+      }
+    ]
+  }
+}

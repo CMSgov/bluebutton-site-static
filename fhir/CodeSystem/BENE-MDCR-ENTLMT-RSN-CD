@@ -1,56 +1,29 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "BENE-MDCR-ENTLMT-RSN-CD",
-  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-MDCR-ENTLMT-RSN-CD",
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
   "name": "BENE_MDCR_ENTLMT_RSN_CD",
-  "title": "Beneficiary Entitlement Reason Code",
-  "status": "draft",
-  "description": "A code identifying the basis in determining a beneficiary's entitlement to Medicare benefits.",
-  "fhirVersion": "4.0.1",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
+  "id": "BENE-MDCR-ENTLMT-RSN-CD",
+  "title": "Beneficiary Medicare Entitlement Reason Code",
+  "description": "The reason for a beneficiary's entitlement to Medicare.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-MDCR-ENTLMT-RSN-CD",
+  "concept": [
     {
-      "type": "element",
-      "expression": "Coverage"
+      "code": "0",
+      "display": "BENEFICIARY INSURED DUE TO AGE (OASI)"
+    },
+    {
+      "code": "1",
+      "display": "BENEFICIARY INSURED DUE TO DISABILITY"
+    },
+    {
+      "code": "2",
+      "display": "BENEFICIARY INSURED DUE TO END STAGE RENAL DISEASE (ESRD)"
+    },
+    {
+      "code": "3",
+      "display": "BENEFICIARY INSURED DUE TO DISABILITY AND CURRENT ESRD"
     }
   ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Beneficiary Entitlement Reason Code",
-        "definition": "A code identifying the basis in determining a beneficiary's entitlement to Medicare benefits."
-      },
-      {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-MDCR-ENTLMT-RSN-CD"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x].system",
-        "path": "Extension.value[x].system",
-        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-MDCR-ENTLMT-RSN-CD"
-      }
-    ]
-  }
+  "count": 4
 }

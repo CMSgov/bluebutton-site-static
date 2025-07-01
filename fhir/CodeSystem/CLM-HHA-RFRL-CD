@@ -1,0 +1,65 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_HHA_RFRL_CD",
+  "id": "CLM-HHA-RFRL-CD",
+  "title": "Claim Referral Code",
+  "description": "The code used to identify those Home Health PPS claims that have 4 visits or less in a 60-day episode.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-HHA-RFRL-CD",
+  "concept": [
+    {
+      "code": "1",
+      "display": "PHYSICIAN REFERRAL - THE PATIENT WAS ADMITTED UPON THE RECOMMENDATION OF A PERSONAL PHYSICIAN."
+    },
+    {
+      "code": "2",
+      "display": "CLINIC REFERRAL - THE PATIENT WAS ADMITTED UPON THE RECOMMENDATION OF THIS FACILITY'S CLINIC PHYSICIAN."
+    },
+    {
+      "code": "3",
+      "display": "HMO REFERRAL - THE PATIENT WAS ADMITTED UPON THE RECOMMENDATION OF AN HEALTH MAINTENANCE ORGANIZATION (HMO)PHYSICIAN."
+    },
+    {
+      "code": "4",
+      "display": "TRANSFER FROM HOSPITAL - THE PATIENT WAS ADMITTED AS AN INPATIENT TRANSFER FROM AN ACUTE CARE FACILITY."
+    },
+    {
+      "code": "5",
+      "display": "TRANSFER FROM A SKILLED NURSING FACILITY (SNF) - THE PATIENT WAS ADMITTED AS AN INPATIENT TRANSFER FROM A SNF."
+    },
+    {
+      "code": "6",
+      "display": "TRANSFER FROM ANOTHER HEALTH CARE FACILITY - THE PATIENT WAS ADMITTED AS A TRANSFER FROM A HEALTH CARE FACILITY OTHER THAN AN ACUTE CARE FACILITY OR SNF."
+    },
+    {
+      "code": "7",
+      "display": "EMERGENCY ROOM - THE PATIENT WAS ADMITTED UPON THE RECOMMENDATION OF THIS FACILITY'S EMERGENCY ROOM PHYSICIAN."
+    },
+    {
+      "code": "8",
+      "display": "COURT/LAW ENFORCEMENT - THE PATIENT WAS ADMITTED UPON THE DIRECTION OF A COURT OF LAW OR UPON THE REQUEST OF A LAW ENFORCEMENT AGENCY'S REPRESENTATIVE."
+    },
+    {
+      "code": "9",
+      "display": "INFORMATION NOT AVAILABLE - THE MEANS BY WHICH THE PATIENT WAS ADMITTED IS NOT KNOWN."
+    },
+    {
+      "code": "A",
+      "display": "TRANSFER FROM A CRITICAL ACCESS HOSPITAL - PATIENT WAS ADMITTED/REFERRED TO THIS FACILITY AS A TRANSFER FROM A CRITICAL ACCESS HOSPITAL."
+    },
+    {
+      "code": "B",
+      "display": "TRANSFER FROM ANOTHER HHA – BENEFICIARIES ARE PERMITTED TO TRANSFER FROM ONE HHA TO ANOTHER UNRELATED HHA UNDER HH PPS.(EFF. 10/00)"
+    },
+    {
+      "code": "C",
+      "display": "READMISSION TO SAME HHA - IF A BENEFICIARY IS DISCHARGED FROM AN HHA AND THEN READMITTED WITHIN THE ORIGINAL 60-DAY EPISODE THE ORIGINAL EPISODE MUST BE CLOSED EARLY AND A NEW ONE CREATED."
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 13
+}

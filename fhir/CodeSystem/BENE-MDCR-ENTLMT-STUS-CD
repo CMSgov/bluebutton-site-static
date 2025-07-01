@@ -1,56 +1,49 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "BENE-MDCR-ENTLMT-STUS-CD",
-  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-MDCR-ENTLMT-STUS-CD",
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
   "name": "BENE_MDCR_ENTLMT_STUS_CD",
+  "id": "BENE-MDCR-ENTLMT-STUS-CD",
   "title": "Beneficiary Entitlement Status Code",
-  "status": "draft",
   "description": "The reason for entitlement or termination of a beneficiary's benefits during a period of coverage.",
-  "fhirVersion": "4.0.1",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-MDCR-ENTLMT-STUS-CD",
+  "concept": [
     {
-      "type": "element",
-      "expression": "Coverage"
+      "code": "C",
+      "display": "No longer entitled due to cessation of disability."
+    },
+    {
+      "code": "E",
+      "display": "Free Part A entitlement."
+    },
+    {
+      "code": "F",
+      "display": "Terminated due to invalid enrollment or enrollment voided."
+    },
+    {
+      "code": "G",
+      "display": "Entitled due to good cause."
+    },
+    {
+      "code": "S",
+      "display": "Terminated - no longer entitled under end-stage renal disease provision."
+    },
+    {
+      "code": "T",
+      "display": "Terminated for non-payment of premiums."
+    },
+    {
+      "code": "W",
+      "display": "Voluntary withdrawal from coverage."
+    },
+    {
+      "code": "X",
+      "display": "Free Part A terminated because of Title II termination."
+    },
+    {
+      "code": "Y",
+      "display": "Currently entitled premium is payable."
     }
   ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Beneficiary Entitlement Status Code",
-        "definition": "The reason for entitlement or termination of a beneficiary's benefits during a period of coverage."
-      },
-      {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-MDCR-ENTLMT-STUS-CD"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x].system",
-        "path": "Extension.value[x].system",
-        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-MDCR-ENTLMT-STUS-CD"
-      }
-    ]
-  }
+  "count": 9
 }

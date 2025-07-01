@@ -82,7 +82,22 @@
       "code": "CLM_SBMT_CHRG_AMT",
       "display": "Total Charge Amount",
       "definition": "The total charges for all services included on the claim."
+    },
+    {
+      "code": "CLM_PRVDR_PMT_AMT",
+      "display": "Provider Payment Amount",
+      "definition": "The total payments made to the provider for this claim."
+    },
+    {
+      "code": "CLM_BENE_PMT_AMT",
+      "display": "Beneficiary Payment Amount",
+      "definition": "The total payments made to the beneficiary for this claim."
+    },
+    {
+      "code": "CLM_ALOWD_CHRG_AMT",
+      "display": "Allowed Charge Amount",
+      "definition": "The total allowed charges on the claim (the sum of line item allowed charges)."
     }
   ],
-  "count": 15
+  "count": 18
 }
