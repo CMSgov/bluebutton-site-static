@@ -1,56 +1,29 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "BENE-ESRD-STUS-ID",
-  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-ESRD-STUS-ID",
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
   "name": "BENE_ESRD_STUS_ID",
-  "title": "Beneficiary ESRD Status Indicator Code",
-  "status": "draft",
+  "id": "BENE-ESRD-STUS-ID",
+  "title": "Beneficiary ESRD Status ID",
   "description": "A beneficiary's ESRD Status indicator.",
-  "fhirVersion": "4.0.1",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-ESRD-STUS-ID",
+  "concept": [
     {
-      "type": "element",
-      "expression": "Coverage"
+      "code": "Y",
+      "display": "Yes"
+    },
+    {
+      "code": "N",
+      "display": "No"
+    },
+    {
+      "code": "null",
+      "display": "null"
+    },
+    {
+      "code": "U",
+      "display": "UNK"
     }
   ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Beneficiary ESRD Status Indicator Code",
-        "definition": "A beneficiary's ESRD Status indicator."
-      },
-      {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-ESRD-STUS-ID"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x].system",
-        "path": "Extension.value[x].system",
-        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-ESRD-STUS-ID"
-      }
-    ]
-  }
+  "count": 4
 }

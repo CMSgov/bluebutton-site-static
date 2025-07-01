@@ -1,55 +1,33 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "CLM-NRLN-RIC-CD",
-  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-NRLN-RIC-CD",
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
   "name": "CLM_NRLN_RIC_CD",
-  "title": "Near Line Record Identification Code",
-  "status": "draft",
-  "description": "A code defining the type of claim record being processed.",
-  "fhirVersion": "4.0.1",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
+  "id": "CLM-NRLN-RIC-CD",
+  "title": "Clm Nrln Ric Cd",
+  "description": "Code system for clm nrln ric cd",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-NRLN-RIC-CD",
+  "concept": [
     {
-      "type": "element",
-      "expression": "ExplanationOfBenefit"
+      "code": "M",
+      "display": "Part B DMEPOS claim record (processed by DME Regional Carrier)"
+    },
+    {
+      "code": "O",
+      "display": "Part B physician/supplier claim record (processed by local carriers; can include DMEPOS services)"
+    },
+    {
+      "code": "U",
+      "display": "Both Part A and B institutional home health agency (HHA) claim records"
+    },
+    {
+      "code": "V",
+      "display": "Part A institutional claim record (inpatient [IP], skilled nursing facility [SNF], hospice [HOS], or home health agency [HHA])"
+    },
+    {
+      "code": "W",
+      "display": "Part B institutional claim record (outpatient [HOP], HHA)"
     }
   ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Near Line Record Identification Code",
-        "definition": "A code defining the type of claim record being processed."
-      },
-      {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-NRLN-RIC-CD"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x].system",
-        "path": "Extension.value[x].system",
-        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-NRLN-RIC-CD"
-      }
-    ]
-  }
+  "count": 5
 }

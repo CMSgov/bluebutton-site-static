@@ -1,56 +1,117 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "CLM-DISP-CD",
-  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-DISP-CD",
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
   "name": "CLM_DISP_CD",
+  "id": "CLM-DISP-CD",
   "title": "Claim Disposition Code",
-  "status": "draft",
   "description": "Code indicating the disposition or outcome of the processing of the claim record.",
-  "fhirVersion": "4.0.1",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-DISP-CD",
+  "concept": [
     {
-      "type": "element",
-      "expression": "ExplanationOfBenefit"
+      "code": "1",
+      "display": "DEBIT ACCEPTED"
+    },
+    {
+      "code": "2",
+      "display": "DEBIT ACCEPTED (AUTOMATIC ADJUSTMENT) APPLICABLE THROUGH 4/4/93"
+    },
+    {
+      "code": "3",
+      "display": "CANCEL ACCEPTED"
+    },
+    {
+      "code": "4",
+      "display": "OUTPATIENT HISTORY ONLY ACCEPTED"
+    },
+    {
+      "code": "50",
+      "display": "BENEFICIARY NOT IN FILE"
+    },
+    {
+      "code": "51",
+      "display": "TRUE NOT IN FILE"
+    },
+    {
+      "code": "52",
+      "display": "MASTER RECORD AT ANOTHER CWF SITE"
+    },
+    {
+      "code": "53",
+      "display": "RECORD IN CMS ALPHA MATCH"
+    },
+    {
+      "code": "54",
+      "display": "CROSS-REFERENCE HIC"
+    },
+    {
+      "code": "55",
+      "display": "NAME/SEX MIS-MATCH"
+    },
+    {
+      "code": "57",
+      "display": "BENEFICIARY RECORD ARCHIVED, ONLY SKELETON EXISTS"
+    },
+    {
+      "code": "58",
+      "display": "BENEFICIARY RECORD BLOCKED FOR CROSS-REFERENCE"
+    },
+    {
+      "code": "59",
+      "display": "BENEFICIARY RECORD FROZEN FOR CLERICAL CORRECTION"
+    },
+    {
+      "code": "60",
+      "display": "ABEND ERROR"
+    },
+    {
+      "code": "61",
+      "display": "CROSS-REFERENCE/DATA BASE PROBLEM"
+    },
+    {
+      "code": "AA",
+      "display": "AUTOMATIC ADJUSTMENT"
+    },
+    {
+      "code": "AB",
+      "display": "TRANSACTION CAUSED CICS ABNORMAL END OF JOB"
+    },
+    {
+      "code": "BT",
+      "display": "HISTORY CLAIM NOT PRESENT TO SUPPORT SPELL OF ILLNESS"
+    },
+    {
+      "code": "CI",
+      "display": "CICS PROCESSING ERROR"
+    },
+    {
+      "code": "CR",
+      "display": "CROSSOVER REJECT"
+    },
+    {
+      "code": "ER",
+      "display": "CONSISTENCY EDIT REJECT"
+    },
+    {
+      "code": "RD",
+      "display": "TRANSACTION ERROR"
+    },
+    {
+      "code": "RT",
+      "display": "RETRIEVE PENDING"
+    },
+    {
+      "code": "SV",
+      "display": "SECURITY VIOLATION"
+    },
+    {
+      "code": "UR",
+      "display": "UTILIZATION REJECT"
+    },
+    {
+      "code": "~",
+      "display": "MISSING"
     }
   ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Claim Disposition Code",
-        "definition": "Code indicating the disposition or outcome of the processing of the claim record."
-      },
-      {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-DISP-CD"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x].system",
-        "path": "Extension.value[x].system",
-        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-DISP-CD"
-      }
-    ]
-  }
+  "count": 26
 }

@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_OTAF_IND_CD",
+  "id": "CLM-OTAF-IND-CD",
+  "title": "Claim Revenue Discount Indicator Code",
+  "description": "THE DOMAIN OF OTAF INDICATOR CODES",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-OTAF-IND-CD",
+  "concept": [
+    {
+      "code": "N",
+      "display": "PROVIDER IS NOT OBLIGATED TO ACCEPT THE PAYMENT, OR THERE IS NO PAYMENT BY A PRIOR PAYER."
+    },
+    {
+      "code": "Y",
+      "display": "PROVIDER IS OBLIGATED TO ACCEPT THE PAYMENT AS PAYMENT IN FULL FOR THE SERVICE."
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 3
+}

@@ -122,7 +122,23 @@
       "code": "CLM_HIPPS_UNCOMPD_CARE_AMT",
       "display": "Claim Uncompensated Care Payment Amount",
       "definition": "This field identifies the payment for disproportionate share hospitals (DSH). It represents the uncompensated care amount of the payment."
+    },
+    {
+      "code": "CLM_MDCR_INSTNL_BENE_PD_AMT",
+      "display": "The amount paid, from the Medicare trust fund, to the beneficiary for the services reported on the claim."
+    },
+    {
+      "code": "CLM_PRVDR_PMT_AMT",
+      "display": "The amount paid, from the Medicare trust fund, to the provider for the services reported on the claim."
+    },
+    {
+      "code": "CLM_MDCR_HOSPC_PRD_CNT",
+      "display": "The count of the number of hospice period trailers present for the beneficiary's record."
+    },
+    {
+      "code": "CLM_MDCR_HHA_TOT_VISIT_CNT",
+      "display": "The count of the number of HHA visits as derived by CMS."
     }
   ],
-  "count": 23
+  "count": 27
 }

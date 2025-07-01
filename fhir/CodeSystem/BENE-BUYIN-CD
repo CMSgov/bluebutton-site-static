@@ -1,56 +1,53 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "BENE-BUYIN-CD",
-  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-BUYIN-CD",
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
   "name": "BENE_BUYIN_CD",
-  "title": "Beneficiary Buy-in Indicator",
-  "status": "draft",
-  "description": "Monthly Part A and/or Part B entitlement indicator.",
-  "fhirVersion": "4.0.1",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
+  "id": "BENE-BUYIN-CD",
+  "title": "Beneficiary Buy-in Code",
+  "description": "Monthly Part A and/or Part B entitlement indicator CodeSystem.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-BUYIN-CD",
+  "concept": [
     {
-      "type": "element",
-      "expression": "Coverage"
+      "code": "A",
+      "display": "Aged recipient of SSI payments (CMS to State)."
+    },
+    {
+      "code": "B",
+      "display": "Blind recipient of SSI payments (CMS to State)."
+    },
+    {
+      "code": "C",
+      "display": "Entitled to Part A of Title IV (AFDC) (State to CMS)."
+    },
+    {
+      "code": "D",
+      "display": "Disabled recipient of SSI payments (CMS to State)."
+    },
+    {
+      "code": "E",
+      "display": "Aged recipient of supplemental payment administered by SSA (CMS to State)."
+    },
+    {
+      "code": "F",
+      "display": "Blind recipient of supplemental payment administered by SSA (CMS to State)."
+    },
+    {
+      "code": "G",
+      "display": "Disabled recipient of supplemental payment administered by SSA (CMS to State)."
+    },
+    {
+      "code": "H",
+      "display": "Aged, blind, or disabled recipient."
+    },
+    {
+      "code": "M",
+      "display": "Entitled to Medical Assistance only (MAO), non-cash recipient (State to CMS)."
+    },
+    {
+      "code": "Z",
+      "display": "Deemed categorically needy (State to CMS)."
     }
   ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Beneficiary Buy-in Indicator",
-        "definition": "Monthly Part A and/or Part B entitlement indicator."
-      },
-      {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-BUYIN-CD"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x].system",
-        "path": "Extension.value[x].system",
-        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-BUYIN-CD"
-      }
-    ]
-  }
+  "count": 10
 }
