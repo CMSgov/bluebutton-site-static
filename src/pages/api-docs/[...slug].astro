@@ -1,0 +1,25 @@
+---
+import Link from "#components/link.astro";
+import { getCollection, render } from "astro:content";
+import DocsLayout from "layouts/DocsLayout.astro";
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const posts = await getCollection("apiDocs");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+---
+
+<DocsLayout title={post.data.title} description="" headings={headings}>
+  <Content
+    components={{
+      a: Link,
+    }}
+  />
+</DocsLayout>

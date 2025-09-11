@@ -1,0 +1,86 @@
+---
+import Link from "./link.astro";
+import LogoHHS from "#assets/images/HHS-logo.svg";
+import LogoCMS from "#assets/images/CMS-logo.svg";
+import { IDENTIFIER_LINKS } from "utils/constants";
+---
+
+<div class="usa-identifier">
+  <section
+    class="usa-identifier__section usa-identifier__section--masthead"
+    aria-label="Agency identifier,"
+  >
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__logos">
+        <Link
+          href="https://www.hhs.gov/"
+          showIcon={false}
+          isExternal
+          class="usa-identifier__logo"
+        >
+          <LogoHHS
+            class="usa-identifier__logo-img"
+            aria-label="HHS logo"
+          /></Link
+        >
+        <Link
+          href="https://www.cms.gov/"
+          showIcon={false}
+          isExternal
+          class="usa-identifier__logo"
+          ><LogoCMS
+            class="usa-identifier__logo-img padding-x-2"
+            aria-label="CMS logo"
+          /></Link
+        >
+      </div>
+      <section class="usa-identifier__identity" aria-label="Agency description">
+        <p class="usa-identifier__identity-domain">cms.gov</p>
+        <p class="usa-identifier__identity-disclaimer">
+          <span aria-hidden="true">An </span>official website of the
+          <Link href="https://www.hhs.gov/" isExternal
+            >U.S. Department of Health and Human Services</Link
+          > and the
+          <Link href="https:www.cms.gov" isExternal
+            >Centers for Medicare & Medicaid Services</Link
+          >.
+        </p>
+      </section>
+    </div>
+  </section>
+  <nav
+    class="usa-identifier__section usa-identifier__section--required-links"
+    aria-label="Important links"
+  >
+    <div class="usa-identifier__container">
+      <ul class="usa-identifier__required-links-list">
+        {
+          IDENTIFIER_LINKS.map((link) => (
+            <li class="usa-identifier__required-links-item">
+              <Link
+                href={link.href}
+                isExternal
+                class="usa-identifier__required-link usa-link"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </nav>
+  <section
+    class="usa-identifier__section usa-identifier__section--usagov"
+    aria-label="U.S. government information and services,"
+  >
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__usagov-description">
+        Looking for U.S. government information and services?
+      </div>
+      <Link href="https://www.usa.gov/" isExternal class="usa-link"
+        >Visit USA.gov</Link
+      >
+    </div>
+  </section>
+</div>

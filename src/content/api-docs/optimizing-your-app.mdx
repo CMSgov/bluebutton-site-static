@@ -1,0 +1,74 @@
+---
+title: "Optimizing your application"
+description: ""
+sortOrder: 6
+---
+
+## Optimizing your application
+
+### Compress resources for more efficient data transfers  
+
+Turn on compression to improve performance when transferring large data resources. Gzip compression is turned off by default. Compression can be activated for the following content types:  
+
+* `text/html`
+* `text/plain`
+* `application/json`
+* `application/fhir+json`  
+
+To activate compression add the following to the header:  
+
+`Accept-Encoding: gzip`  
+
+The minimum payload size we will gzip is 1 kilobyte. Check for the `Content-Encoding: gzip` response header before trying to decompress.  
+
+### Query by type
+
+EOB resources fall into 8 types. If you only need specific types of data, the query by type feature allows you to request claims by claim type. By default, the FHIR API returns all of these claim types when requesting the EOB for an individual Medicare enrollee.  
+
+#### EOB Claim types and parameters
+
+| Claim Type | Type Parameter<br /> (case-sensitive) |
+| ---- | ---- |
+| Carrier | carrier |
+| Durable Medical Equipment | dme |
+| Home Health Agency | hha |
+| Hospice | hospice |
+| Inpatient | inpatient |
+| Outpatient | outpatient |
+| Skilled Nursing Facility | snf |
+| Prescription Drug Event | pde |
+
+    
+Use the query parameter to request a specific claim type. 
+~~~
+Example: ?type=pde
+~~~
+
+To request multiple claim types, use a comma-separated list of values for the TYPE parameter. If multiple codes are specified, EOBs matching all of those claim types will be returned.   
+
+Example:  
+~~~
+/ExplanationOfBenefit?patient=123&type=carrier,dme,hha,hospice,inpatient,outpatient,snf  
+~~~
+
+#### Claim type errors
+
+If you submit an invalid combination of claim types or use the wrong case you'll get an error response with a status code of `400 Bad Request`.
+
+### Query by "lastUpdated" Field  
+
+The HL7 FHIR specification provides a Meta section in each resource. The `lastUpdated` field represents the date and time of the last update and is supplied with a FHIR instant datatype  
+~~~
+YYYY-MM-DDThh:mm:ss.sss+zz:zz.  
+~~~
+The HL7 FHIR specification also provides a `_lastUpdated query` parameter for the search operations on the endpoints. By using the `_lastUpdated` query parameter, you can request records that have changed before or after a specific date. If you keep track of the date of a previous request, you can request just the changes since your previous request. The format of this request would be:  
+~~~
+/Patient?_id=-20000000001112&_lastUpdated=gt2020-02-13T08:00:00-05:00  
+~~~
+
+Do not use dates before 2020-02-12 with the `_lastUpdated parameter`. 
+
+The Blue Button API supports operators for less than (lt), greater than (gt), less than or equal (le), and greater than or equal (ge) the specified instant. You can also specify a time interval by using two `_lastUpdated parameters` like this:  
+~~~
+/ExplanationOfBenefit?patient=Patient/-20000000001112&_lastUpdated=gt2020-02-13T08:00:00-05:00&_lastUpdated=lt2020-02-14T08:00:00-05:00
+~~~

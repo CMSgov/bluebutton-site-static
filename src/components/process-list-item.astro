@@ -1,0 +1,11 @@
+---
+type Props = {
+  heading: string;
+};
+const { heading } = Astro.props;
+---
+
+<li class="usa-process-list__item">
+  <p class="usa-process-list__heading">{heading}</p>
+  <slot />
+</li>

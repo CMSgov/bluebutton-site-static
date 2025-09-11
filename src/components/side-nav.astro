@@ -1,0 +1,105 @@
+---
+import { getCollection } from "astro:content";
+import Link from "./link.astro";
+import Icon from "./icon.astro";
+import Button from "./button.astro";
+import type { RouteId, RouteOptions } from "astro-typesafe-routes/path";
+
+type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[];
+
+const { pathname } = Astro.url;
+
+const apiDocs = (await getCollection("apiDocs")).sort(
+  (a, b) => a.data.sortOrder - b.data.sortOrder,
+);
+const docsnavLinks = apiDocs.map((doc) => ({
+  to: "/api-docs/[...slug]",
+  params: {
+    slug: doc.id,
+  },
+  label: doc.data.title,
+})) satisfies RoutesArray<"/api-docs/[...slug]">;
+
+const dataDocs = (await getCollection("dataDocs")).sort(
+  (a, b) => a.data.sortOrder - b.data.sortOrder,
+);
+const datanavLinks = dataDocs.map((doc) => ({
+  to: "/data/[...slug]",
+  params: {
+    slug: doc.id,
+  },
+  label: doc.data.title,
+})) satisfies RoutesArray<"/data/[...slug]">;
+---
+
+<div
+  class="display-none position-sticky tablet:display-block tablet:grid-col-auto overflow-y-auto overflow-x-hidden padding-top-5 desktop:padding-top-7 padding-bottom-6 tablet:padding-right-3 padding-left-05 margin-left-neg-05"
+  style="top: 4rem; height: calc(100vh - 4.5rem);"
+>
+  <div class="width-card-lg">
+    <nav aria-label="Side navigation">
+      <ul class="usa-sidenav">
+        <li class="usa-sidenav__item">
+          <Link
+            to="/api-documentation"
+            class="if current page"
+            data-tealium="left-rail"
+          >
+            Get Started
+          </Link>
+        </li>
+        <ul class="usa-sidenav__sublist">
+          {
+            docsnavLinks.map((link) => (
+              <li class="usa-sidenav__item">
+                <Link
+                  to={link.to}
+                  params={link.params}
+                  class={pathname.startsWith(link.to) ? "usa-current" : null}
+                  data-tealium="left-rail"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
+        <li class="usa-sidenav__item">
+          <Link to="/about" data-tealium="left-rail"> Data </Link>
+        </li>
+        <ul class="usa-sidenav__sublist">
+          {
+            datanavLinks.map((link) => (
+              <li class="usa-sidenav__item">
+                <Link
+                  to={link.to}
+                  params={link.params}
+                  class={pathname.startsWith(link.to) ? "usa-current" : null}
+                  data-tealium="left-rail"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
+        <li class="usa-sidenav__item">
+          <Link href="/" isExternal data-tealium="left-rail">
+            <span>
+              GitHub
+              <Icon icon="github" color="base-darkest" size={3} />
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link href="/" isExternal data-tealium="left-rail">
+            <span>
+              Swagger
+              <Icon icon="swagger" color="base-darkest" size={3} />
+            </span>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

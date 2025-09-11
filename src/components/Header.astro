@@ -1,0 +1,164 @@
+---
+import IconClose from "#assets/uswds/img/usa-icons/close.svg";
+
+import LogoBlueButton from "#assets/images/logo-bluebutton.svg";
+import Link from "./link.astro";
+
+type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[];
+
+import { getCollection } from "astro:content";
+import type { RouteId, RouteOptions } from "astro-typesafe-routes/path";
+const apiDocs = (await getCollection("apiDocs")).sort(
+  (a, b) => a.data.sortOrder - b.data.sortOrder,
+);
+const docsnavLinks = apiDocs.map((doc) => ({
+  to: "/api-docs/[...slug]",
+  params: {
+    slug: doc.id,
+  },
+  label: doc.data.title,
+})) satisfies RoutesArray<"/api-docs/[...slug]">;
+
+const dataDocs = (await getCollection("dataDocs")).sort(
+  (a, b) => a.data.sortOrder - b.data.sortOrder,
+);
+const datanavLinks = dataDocs.map((doc) => ({
+  to: "/data/[...slug]",
+  params: {
+    slug: doc.id,
+  },
+  label: doc.data.title,
+})) satisfies RoutesArray<"/data/[...slug]">;
+---
+
+<div class="position-sticky top-0 bg-white shadow-1 z-500">
+  <div class="usa-overlay"></div>
+  <header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo">
+          <Link
+            to="/"
+            title="BlueButton 2.0"
+            data-tealium="navigation"
+            class="display-block width-5 height-5"
+          >
+            <LogoBlueButton
+              aria-label="BlueButton 2.0 logo"
+              class="width-full height-5"
+            />
+          </Link>
+        </div>
+        <button type="button" class="usa-menu-btn">Menu</button>
+      </div>
+      <nav aria-label="Primary navigation" class="usa-nav">
+        <button type="button" class="usa-nav__close">
+          <IconClose aria-label="close" />
+        </button>
+        <ul class="usa-nav__primary usa-accordion">
+          <li class="usa-nav__primary-item">
+            <button
+              type="button"
+              class="usa-accordion__button usa-nav__link"
+              aria-expanded="false"
+              aria-controls="basic-nav-section-zero"
+            >
+              <span>About</span>
+            </button>
+            <ul id="basic-nav-section-zero" class="usa-nav__submenu" hidden>
+              <li class="usa-nav__submenu-item">
+                <Link to="/about" class="" data-tealium="main_nav">
+                 About
+                </Link>
+              </li>
+              <li class="usa-nav__submenu-item">
+                <Link to="/use-cases" class="" data-tealium="main_nav">
+                 Use Cases
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li class="usa-nav__primary-item">
+            <button
+              type="button"
+              class="usa-accordion__button usa-nav__link"
+              aria-expanded="false"
+              aria-controls="basic-nav-section-one"
+            >
+              <span>API Documentation</span>
+            </button>
+            <ul id="basic-nav-section-one" class="usa-nav__submenu" hidden>
+              <li class="usa-nav__submenu-item">
+                <Link to="/api-documentation" class="" data-tealium="main_nav">
+                  Get Started
+                </Link>
+              </li>
+              {
+                docsnavLinks.map((link) => (
+                  <li class="usa-nav__submenu-item">
+                    <Link
+                      to={link.to}
+                      params={link.params}
+                      class=""
+                      data-tealium="main_nav"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </li>
+          <li class="usa-nav__primary-item">
+            <button
+              type="button"
+              class="usa-accordion__button usa-nav__link"
+              aria-expanded="false"
+              aria-controls="basic-nav-section-two"
+            >
+              <span>Data</span>
+            </button>
+            <ul id="basic-nav-section-two" class="usa-nav__submenu" hidden>
+              {
+                datanavLinks.map((link) => (
+                  <li class="usa-nav__submenu-item">
+                    <Link
+                      to={link.to}
+                      params={link.params}
+                      class=""
+                      data-tealium="main_nav"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </li>
+          <li class="usa-nav__primary-item">
+            <Link
+              to="/production-access"
+              class="usa-nav-link"
+              data-tealium="navigation"
+            >
+              <span>Production Access</span>
+            </Link>
+          </li>
+          <li class="usa-nav__primary-item">
+            <Link to="/support" class="usa-nav-link" data-tealium="navigation">
+              <span>Support</span>
+            </Link>
+          </li>
+        </ul>
+        <div class="padding-left-1">
+          <Link
+            to="/api-documentation"
+            class="usa-button"
+            data-tealium="navigation"
+            >Get Started
+          </Link>
+        </div>
+      </nav>
+    </div>
+  </header>
+</div>

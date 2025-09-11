@@ -1,0 +1,106 @@
+---
+import Link from "./link.astro";
+
+import LogoDPC from "#assets/images/logo-dpc.svg";
+import LogoBB from "#assets/images/logo-bluebutton.svg";
+import LogoAB2D from "#assets/images/logo-ab2d-sm.svg";
+---
+
+<footer class="usa-footer usa-footer--big">
+  <div class="grid-container usa-footer__return-to-top padding-top-6">
+    <a href="#">Return to top</a>
+  </div>
+
+  <div class="usa-footer__primary-section">
+    <h2 class="usa-sr-only">Site footer</h2>
+    <div>
+      <div class="grid-container tablet:padding-x-3">
+        <div class="grid-row grid-gap tablet:grid-gap-6">
+          <div class="usa-footer__logo grid-row desktop:grid-col-fill">
+            <div class="mobile-lg:grid-col-auto">
+              <Link
+                href="https://groups.google.com/g/bc-api"
+                isExternal
+                class="usa-button"
+                data-tealium="navigation"
+                showIcon={false}
+              >
+                Join the Google Group
+              </Link>
+            </div>
+          </div>
+          <div class="desktop:grid-col-auto tablet:padding-x-3">
+            <div class="grid-row tablet:grid-gap-6">
+              <div
+                class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2"
+              >
+                <Link
+                  href="https://dpc.cms.gov/"
+                  class="grid-row grid-gap-1 flex-align-center text-no-underline"
+                  showIcon={false}
+                  isExternal
+                >
+                  <span class="grid-col-auto"
+                    ><LogoDPC
+                      class="usa-icon--size-5 display-block"
+                      aria-label="DPC logo"
+                    /></span
+                  >
+                  <p
+                    class="grid-col-fill font-sans-2xs text-bold text-black line-height-sans-2"
+                  >
+                    Data at the Point of Care
+                  </p>
+                </Link>
+              </div>
+              <div
+                class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2"
+              >
+                <Link
+                  to="/"
+                  class="grid-row grid-gap-1 flex-align-center text-no-underline"
+                  showIcon={false}
+                  isExternal
+                >
+                  <span class="grid-col-auto"
+                    ><LogoBB
+                      class="usa-icon--size-5 display-block"
+                      aria-label="Blue Button 2.0 logo"
+                    /></span
+                  >
+                  <p
+                    class="grid-col-fill font-sans-2xs text-bold text-black line-height-sans-2"
+                  >
+                    Blue Button 2.0
+                  </p>
+                </Link>
+              </div>
+              <div
+                class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2"
+              >
+                <Link
+                  href="https://ab2d.cms.gov/"
+                  class="grid-row grid-gap-1 flex-align-center text-no-underline"
+                  showIcon={false}
+                  isExternal
+                >
+                  <span class="grid-col-auto"
+                    ><LogoAB2D
+                      class="usa-icon--size-5 display-block"
+                      aria-label="AB2D logo"
+                    /></span
+                  >
+                  <p
+                    class="grid-col-fill font-sans-2xs text-bold text-black line-height-sans-2"
+                  >
+                    Claims Data to Part D Sponsors API
+                  </p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

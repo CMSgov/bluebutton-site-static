@@ -1,0 +1,272 @@
+---
+title: "Understanding the data"
+description: ""
+sortOrder: 1
+---
+
+## Understanding the data
+
+The BB2.0 database pulls data from the [CMS Chronic Conditions Warehouse (CCW)](https://www2.ccwdata.org/web/guest/home/), which contains Medicare Part A, B and D claims data going back to 2014\. Over 600 fields from the CCW are mapped to FHIR. These fields are surfaced across the Patient, Coverage and Explanation of Benefits FHIR resources.
+
+### FHIR resources
+
+Blue Button 2.0 API data is supplied in three resources from the [FHIR standard](http://hl7.org/fhir/R4/):
+
+* [Explanation of Benefit](http://www.hl7.org/fhir/R4/explanationofbenefit.html) (EOB): Primary source of claims data. The EOB resource contains the lines within an episode of care, including where and when the service was performed, the diagnosis codes, the provider who performed the service, and the cost of care.
+* [Patient](http://hl7.org/fhir/R4/patient.html): Provides information about patients including demographic information and updates to their patient identifiers.
+* [Coverage](https://hl7.org/fhir/R4/coverage.html): Provides information about the enrollees' insurance coverage, including information about dual coverage.
+
+#### Explanation of Benefit
+
+The Explanation of Benefit resource provides data for the following claim types:  
+
+* Inpatient (INPATIENT)
+* Outpatient (OUTPATIENT)
+* Skilled Nursing Facility Claims (SNF)
+* Hospice (HOSPICE)
+* Home Health Agency Claims (HHA)
+* Carrier (Professional)
+* Durable Medical Equipment (DME)
+* Prescription Drug Events - Part D (PDE)  
+
+Request:
+~~~
+HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id]  
+~~~
+
+This request returns claims as [Explanation of Benefit Resources](https://hl7.org/fhir/R4/explanationofbenefit.html) inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html).   
+
+Example response excerpt:
+~~~
+{
+    "total":99,
+    "entry": [
+        {
+            "resource": {
+                "resourceType":"ExplanationOfBenefit",
+                "id":"carrier--10045426206",
+                "meta":{
+                    "lastUpdated":"2021-06-07T21:51:33.787-04:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "type":{
+                            "coding": [
+                                {
+                                    "system":"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType",
+                                    "code":"uc",
+                                    "display":"UniqueClaimID"
+                                }
+                            ]
+                        },
+                        "system":"https://bluebutton.cms.gov/resources/variables/clm_id",
+                        "value":"-10045426206"
+                    },
+~~~
+  
+
+<a href="/sample-eob-entry.json" download>Download a sample EOB resource</a>
+
+#### Patient  
+
+~~~
+HTTP GET /v2/fhir/Patient/[fhir_id]  
+~~~
+
+The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html). This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes).  
+
+Request:
+~~~
+curl --header "Authorization:Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325"`  
+~~~
+
+Example response excerpt:
+~~~
+{
+    "resourceType": "Patient",
+    "id": "-20000000001112",
+    "meta": {
+        "lastUpdated":"2021-06-07T21:50:48.132-04:00",
+        "profile": [
+            "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"
+        ]
+    },
+    "identifier": [
+        {
+            "type":{
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code":"MC",
+                        "display":"Patient'sMedicarenumber"
+                    }
+                ]
+            },
+            "system": "http://hl7.org/fhir/sid/us-mbi",
+            "value":"2S00A00AA00",
+            "period": {
+                "start":"2020-01-01"
+            }
+        }
+    ],
+    "name": [
+        {
+            "use":"usual",
+            "family":"Doe",
+            "given": [
+                "John",
+                "X"
+            ]
+        }
+    ],
+    "gender":"male",
+    "birthDate":"1999-06-01",
+    "deceasedDateTime":"1981-03-17",
+    "address": [
+        {
+            "state":"07",
+            "postalCode":"99999"
+        }
+    ]
+}
+
+~~~
+
+<a href="/sample-patient-entry.json" download>Download a sample Patient FHIR Resource</a>  
+
+#### Coverage  
+~~~
+HTTP GET /v2/fhir/Coverage/?beneficiary=[fhir_id]  
+~~~
+The above URL returns Coverage information as [Coverage resources](http://hl7.org/fhir/R4/coverage.html) inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html). One coverage resource is supplied for each coverage type.
+
+Request: 
+~~~
+curl --header "Authorization:Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325"`
+~~~
+
+Response excerpt:
+~~~
+{
+    "resourceType":"Bundle",
+    "id":"fb4bffd7-abb3-401f-96cd-d617c545092c",
+    "meta":{
+        "lastUpdated":"2022-02-14T17:27:56.303-05:00"
+    },
+    "type":"searchset",
+    "total":4,
+    "entry": [
+        {
+            "resource": {
+                "resourceType":"Coverage",
+                "id":"part-a--20000000001112",
+                "meta": {
+                    "lastUpdated":"2021-06-07T21:50:48.132-04:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
+                    ]
+                },
+                "status":"active",
+                "type":{
+                    "coding": [
+                        {
+                            "system":"http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                            "code":"SUBSIDIZ"
+                        }
+                    ]
+                },
+                "subscriberId": "2S00A00AA00",
+                "beneficiary": {
+                    "reference":"Patient/-20000000001112"
+                },
+
+~~~
+
+  
+<a href="/sample-coverage-entry.json" download>Download a sample Coverage FHIR Resource</a>  
+
+### UserInfo
+
+The UserInfo endpoint is an OAuth 2.0 Protected Resource that returns information about an authenticated user.   
+
+
+Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes).  
+
+  
+
+`HTTP GET /connect/userinfo`  
+
+The above URL returns basic information about the user, given an authorization token. An HTTP GET is called and the response is returned as JSON.  
+
+Request:
+~~~
+curl --header "Authorization: Bearer <AUTHORIZATIONTOKEN\>" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"`
+~~~
+
+Example response:
+~~~
+{
+    "sub": "-123456789",
+    "prefered_username": "fflinstone",
+    "given_name": "Fred",
+    "family_name:, "Flinstone,
+    "name": "FredFlinstone",
+    "email": "pebbles-daddy@example.com",
+    "created": "2017-11-28",
+    "patient": "-123456789",
+}
+~~~
+### Terminology and coding systems
+
+BB2.0 API supplies codified data using several different terminology and coding systems, defined by various standards bodies, along with locally defined CMS coding systems: 
+
+* [ICD-10](https://www.cms.gov/Medicare/Coding/ICD10)
+* [HCPCS](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo)
+* [CPT Codes](https://www.cms.gov/Medicare/Fraud-and-Abuse/PhysicianSelfReferral)
+* [National Drug Code Directory](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory)
+* [CMS Claim Type](/resources/codesystem/eob-type/)  
+
+Additional information about coding systems can be found on the [terminology page](http://www.hl7.org/fhir/us/carin-bb/artifacts.html#5) of the [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html) and in the [Blue Button Code System Listing (CSV 77KB)](/assets/csv/bluebutton_system_listing.csv).  
+
+BB2.0 API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html). FHIR extensions are custom data elements that are not found in the FHIR standard:
+
+* [Blue Button extensions in V2 (CSV 96KB)](/assets/csv/BB_V2_extension_listing.csv)
+
+### Refresh rate and rate limiting
+
+Data from the CCW is pulled into the BB2.0 API database on a weekly basis. The weekly data pull may be delayed for maintenance or because of delayed delivery of claims to the CCW.  
+
+Our rate limit is high enough to accommodate the needs of anyone integrating with the BB2.0 API. The BB2.0 API is one of 4 CMS APIs that share the same data from the CCW. BB2.0 is for single data calls for an individual Medicare enrollee and the other 3 APIs are designed for bulk data calls. Because the rate limit is set based on the needs the bulk data APIs, the rate limit is higher than required for an application making single API calls using BB2.0\.  
+
+### Synthetic data
+
+Because access to real claims data is restricted in order to protect the privacy of Medicare enrollees, CMS created synthetic user accounts representing enrollment information and healthcare claims for 10,000 Medicare enrollees. Since synthetic data are realistic-but-not-real data, the typical privacy and security restrictions do not apply.  
+
+Although the synthetic user accounts are not tied to any real patient data, they mimic real claims data. For example, if a patient is prescribed the diabetes medication Metformin, the associated cost and date of this prescription will be realistic. However, the synthetic data set does not represent a longitudinal patient view or true clinical scenario. This allows you to test your integration with BB2.0 API, but could result in a patient with records for contradictory procedures. 
+
+#### Working with synthetic user accounts
+
+BB2.0 API offers 10,000 synthetic user accounts for you to test with in both the sandbox and production environments:
+
+| User account ranges | Date updated | Description | 
+| -------- |-----------------------------------------------------| -------- | 
+| BBUser00000 to BBuser09999 | Rolling claims updated weekly. <br/><br/>Loaded July 2023 | These accounts receive new claims data on a rolling basis.  These user accounts represent a range of Medicare demographics and ages, including people under 65 who qualify for Medicare for reasons other than age. |
+| BBUser10000 | Last Updated 2022 | BBUser10000 is a special synthetic user that provides nearly every field the API supports, including a variety of claim types. This makes it an excellent testing account for populating test scenarios. |
+
+
+To differentiate between synthetic data and real patient production data, synthetic records have negative Patient ID and Explanation of Benefit values (example synthetic Patient ID: -10000010254618). Real Patient IDs will always have positive values.  
+
+#### Authenticating as a synthetic user
+
+Each of our 10,000 synthetic user accounts have Medicare.gov login credentials. To log in as a synthetic user, use the following username/password combination pattern when authorizing a test user with Blue Button 2.0:
+
+* Username: BBUserXXXXX (Example: BBUser00005)
+* Password: PWXXXXX! (Example: PW00005!)  
+
+#### Claim dates in rolling claims updates
+
+When new data is added for a synthetic user account in the weekly update, the new data includes claims dated 1-2 weeks prior. This delay simulates real claim processing time in production data. Get updated claims using the [\_lastUpdated query parameter](#query-by-lastupdated-field).  
+  

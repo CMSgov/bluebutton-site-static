@@ -1,0 +1,118 @@
+---
+import type { MarkdownHeading } from "astro";
+
+interface Props {
+    headings: MarkdownHeading[];
+}
+
+const { headings = [] } = Astro.props;
+---
+
+<!-- 
+<nav aria-label="On this page" class="usa-in-page-nav__nav" id="toc">
+    <h4 class="usa-in-page-nav__heading" tabindex="0">On this page</h4>
+    <ul class="usa-in-page-nav__list">
+        <li class="usa-in-page-nav__item usa-in-page-nav__item--primary">
+            <a href={tocLink} 
+                class={`usa-in-page-nav__link${tocCurrent ? " usa-current" : ""}`}
+            >{tocItem}</a>
+        </li>
+    </ul>
+</nav> 
+-->
+<div
+    class="display-none position-sticky tablet:display-block tablet:grid-col-auto overflow-y-auto overflow-x-hidden padding-top-5 desktop:padding-top-5 padding-bottom-6 tablet:padding-right-3 padding-left-05 margin-left-neg-05"
+    style="top: 4rem; height: calc(100vh - 4.5rem); width: 14rem;"
+>
+    <div class="grid-col-auto maxw-order-last margin-left-auto">
+        <ul>
+            {
+                headings.map((heading) => (
+                    <li>
+                        <a href={`#${heading.slug}`}>{heading.text}</a>
+                    </li>
+                ))
+            }
+        </ul>
+        <!-- <aside
+            style="top: 5.75rem; height: calc(100vh - 6rem);"
+            class="margin-top-0 overflow-y-auto"
+            id="toc"
+        >
+            <nav aria-label="On this page" class=""usa-in-page-nav__nav>
+                <h4 class="usa-in-page-nav__heading" tabindex="0">On this page</h4>
+                <ul id="toc-list" class="usa-in-page-nav__list">
+                </ul>
+            </nav>
+        </aside> -->
+    </div>
+</div>
+
+<script>
+    function showRootMargin(rootMargin: string) {
+        const visualizerEl = document.createElement("div");
+        visualizerEl.style.position = "fixed";
+        visualizerEl.style.pointerEvents = "none";
+        visualizerEl.style.border = "2px dashed red";
+        visualizerEl.style.zIndex = "9999";
+
+        function update() {
+            const margins = rootMargin
+                .split(" ")
+                .map((v) => Number.parseInt(v, 10));
+            const [top, right, bottom, left] =
+                margins.length === 1
+                    ? [margins[0], margins[0], margins[0], margins[0]]
+                    : margins.length === 2
+                      ? [margins[0], margins[1], margins[0], margins[1]]
+                      : margins.length === 3
+                        ? [margins[0], margins[1], margins[2], margins[1]]
+                        : margins;
+
+            visualizerEl.style.top = -top + "px";
+            visualizerEl.style.left = -left + "px";
+            visualizerEl.style.width = window.innerWidth + left + right + "px";
+            visualizerEl.style.height =
+                window.innerHeight + top + bottom + "px";
+        }
+
+        update();
+        window.addEventListener("resize", update);
+        document.body.appendChild(visualizerEl);
+    }
+
+    const rootMargin = "-100px 0px";
+    showRootMargin(rootMargin);
+</script>
+
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const main = document.getElementById("main-content");
+        if (!main) return;
+
+        const headings = main.querySelectorAll(" h2, h3 ");
+        const tocList = document.getElementById("toc-list");
+
+        if (!tocList) return;
+
+        headings.forEach((heading) => {
+            if (!heading.id) {
+                heading.id = heading.textContent
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")
+                    .replace(/[^\w-]/g, "");
+            }
+
+            const li = document.createElement("li");
+            li.classList.add("usa-in-page-nav__item");
+
+            const link = document.createElement("a");
+            link.href = `#${heading.id}`;
+            link.textContent = heading.textContent;
+            link.classList.add("usa-in-page-nav__link")
+
+            li.appendChild(link);
+            tocList.appendChild(li);
+        });
+    });
+</script> -->

@@ -1,0 +1,70 @@
+---
+import LaunchSvg from "#assets/uswds/img/usa-icons/launch.svg";
+import type { RouteId } from "astro-typesafe-routes/path";
+import type { RouteOptions } from "astro-typesafe-routes/path";
+import { $path } from "astro-typesafe-routes/path";
+import type { HTMLAttributes } from "astro/types";
+
+type Props<T extends RouteId> =
+  | (HTMLAttributes<"a"> & { isExternal: boolean })
+  | (Omit<HTMLAttributes<"a">, "href"> &
+      RouteOptions<T> & {
+        showIcon?: boolean;
+      });
+
+const {
+  href,
+  to,
+  params,
+  search,
+  searchParams,
+  hash,
+  trailingSlash,
+  showIcon = true,
+  isExternal = false,
+  ...props
+} = Astro.props;
+const site = Astro.site;
+
+let computedIsExternal = isExternal;
+const computedHref = $path({
+  to,
+  params,
+  search,
+  searchParams,
+  hash,
+  trailingSlash,
+});
+
+if (href) {
+  try {
+    const { hostname } = new URL(href || "");
+    if (hostname === site?.hostname) {
+      throw new Error(
+        `${href} is an internal link! Use 'to' instead of 'href' and unset 'isExternal'.`,
+      );
+    }
+  } catch {
+    computedIsExternal = true;
+  }
+}
+---
+
+<a
+  href={computedHref || href}
+  target={computedIsExternal ? "_blank" : undefined}
+  rel={computedIsExternal ? "noopener" : undefined}
+  {...props}
+>
+  <slot />{
+    computedIsExternal && showIcon ? (
+      <LaunchSvg
+        height={16}
+        width={16}
+        fill="currentColor"
+        style="vertical-align:middle;"
+        class="margin-left-2px"
+      />
+    ) : null
+  }</a
+>

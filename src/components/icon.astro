@@ -1,0 +1,26 @@
+---
+import Github from "#assets/uswds/img/usa-icons/github.svg";
+import ArrowForward from "#assets/uswds/img/usa-icons/arrow_forward.svg";
+import Swagger from "#assets/images/swagger.svg";
+
+const iconMap = {
+  github: Github,
+  arrow_forward: ArrowForward,
+  swagger: Swagger
+};
+
+type Props = {
+  icon: keyof typeof iconMap;
+  color: string;
+  size: 3 | 4 | 5;
+};
+
+const { icon, color, size } = Astro.props;
+
+const IconEl = iconMap[icon];
+---
+
+<IconEl
+  class={`usa-icon text-${color} usa-icon--size-${size}`}
+  aria-hidden="true"
+/>

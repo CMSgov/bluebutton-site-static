@@ -1,0 +1,29 @@
+---
+import Link from "./link.astro";
+
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {
+    link: string;
+    unstyled?: boolean;
+    outline?: boolean;
+    icon?: boolean;
+}
+
+const { link = "", unstyled = false, outline = false, icon = false, } = Astro.props;
+---
+
+<a
+    href={link}
+    class={`margin-y-2 usa-button${outline ? " usa-button--outline" : ""} ${unstyled ? " usa-button--unstyled" : ""}`}
+    ><slot />
+    {
+        icon ? (
+            <icon
+                icon="arrow_forward"
+                color={`${unstyled ? "base-darkest" : "white"}`}
+                size={3}
+            />
+        ) : null
+    }
+</a>

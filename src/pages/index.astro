@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "#components/Hero.astro";
+import Card from "#components/Card.astro";
+import Browsers from "#assets/images/browsers.svg?url";
+import Home from "#assets/images/home.svg?url";
+import Whiteboard from "#assets/images/whiteboard.svg?url";
+import TwoColumn from "#components/two-column.astro";
+import Button from "#components/button.astro";
+---
+
+<BaseLayout
+  title="Blue Button 2.0 (BB2)"
+  description=""
+  showSideNav={false}
+  showInPageNav={false}
+>
+  <main id="main-content">
+    <Hero
+      h1="CMS BlueButton 2.0"
+      description="Blue Button 2.0 is a standards-based application programming interface (API) that delivers Medicare Part A, B, and D data for over 60 million people with Medicare."
+    />
+    <h2>Medicare claims data at your fingertips</h2>
+    <ul class="usa-card-group flex-justify-center padding-y-4">
+      <Card
+        heading="For Developers"
+        img={Browsers}
+        body="Explore the developer sandbox to build amazing tools and services with the Blue Button 2.0 API."
+        footer="Sign up for the developer sandbox"
+        footerLink=""
+      />
+      <Card
+        heading="For Organizations"
+        img={Whiteboard}
+        body="Discover how your company or organization could use Blue Button 2.0."
+        footer="See the power of Blue Button 2.0"
+        footerLink=""
+      />
+      <Card
+        heading="For People with Medicare"
+        img={Home}
+        body="Learn about Medicare's Blue Button & find apps you can use."
+        footer="Get Blue Button details on Medicare.gov"
+        footerLink=""
+      />
+    </ul>
+    <TwoColumn image={Whiteboard} title="Value for organizations">
+      <h3>What does Blue Button 2.0 allow you to do?</h3>
+      <p>
+        Whether you are a health plan market place, a non-profit research
+        organization, or a healthcare startup - integration with Blue Button 2.0
+        provides value to organizations that deliver services to people with
+        Medicare.
+      </p>
+      <p>
+        People with Medicare can allow access to their data, which can improve
+        data accuracy and efficiency over manual data entry. Faster, more
+        accurate data can lead to better service recommendations and health
+        outcomes for beneficiaries.
+      </p>
+      <p>
+        Learn more about using Blue Button 2.0, or go ahead and create your
+        Sandbox account to explore our sample data.
+      </p>
+      <p>
+        <Button link="">View Documentation</Button>
+      </p>
+    </TwoColumn>
+    <TwoColumn
+      image={Home}
+      title="Value for people with Medicare"
+      imageLast={true}
+    >
+      <h3>What does Blue Button 2.0 allow you to do?</h3>
+      <p>
+        Blue Button 2.0 allows you to share your data with third-party
+        applications, doctors, research programs, and more! It also gives
+        beneficiaries and their caregivers more options and control over their
+        claims data.
+      </p>
+      <p>
+        Our team is working on new features that allow people with Medicare to
+        have more control over the types of data third-party applications can
+        see and use.
+      </p>
+      <p>
+        Follow the link below to learn about the third-party applications using
+        Blue Button.
+      </p>
+      <p>
+        <Button link="">View Blue Button apps</Button>
+      </p>
+    </TwoColumn>
+  </main>
+</BaseLayout>

@@ -1,9 +1,0 @@
-services:
-
-  web:
-    build: .
-    command: bash -c "bundle exec jekyll serve --host '0.0.0.0' --port 4000"
-    volumes:
-      - .:/code
-    ports:
-      - "4000:4000"

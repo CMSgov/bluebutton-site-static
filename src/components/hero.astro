@@ -1,0 +1,44 @@
+---
+import Icon from "./icon.astro";
+
+type Props = {
+  h1: string;
+  description: string;
+};
+
+const { h1, description } = Astro.props;
+---
+
+<div class="usa-section--dark bg-primary">
+  <div class="grid-container padding-y-8">
+    <h1
+      class="hero-title font-body-3xl measure-1 margin-bottom-0 line-height-sans-2 text-semibold text-balance"
+    >
+      {h1}
+    </h1>
+    <p class="hero-paragraph line-height-sans-4 measure-5">
+      {description}
+    </p>
+    <div class="grid-row grid-gap margin-top-2">
+      <div class="tablet:grid-col-auto margin-top-2">
+        <a
+          href=""
+          class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
+        >
+          Get started
+          <Icon icon="arrow_forward" color="white" size={3} />
+        </a>
+      </div>
+      <div class="tablet:grid-col-auto margin-top-2">
+        <a
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
+        >
+          Code repo <Icon icon="github" color="white" size={3} />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

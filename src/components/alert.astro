@@ -1,0 +1,16 @@
+---
+type Props = {
+  heading?: string;
+};
+
+const { heading } = Astro.props;
+---
+
+<div class="usa-alert usa-alert--warning usa-alert--no-icon">
+  <div class="usa-alert__body">
+    {heading ? <h4 class="usa-alert__heading">{heading}</h4> : null}
+    <div class="usa-alert__text">
+      <slot />
+    </div>
+  </div>
+</div>

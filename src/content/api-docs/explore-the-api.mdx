@@ -1,0 +1,28 @@
+---
+title: "Explore the API"
+description: ""
+sortOrder: 1
+---
+
+## Test client
+
+The Blue Button 2.0 API test client is a quick, no-code-required way to explore data returned from our API endpoints.
+
+Before you begin: If you're logged in to the sandbox, log out to use the test client.  
+
+1. Go to the [Blue Button 2.0 API test client](https://sandbox.bluebutton.cms.gov/testclient/).
+2. Choose a sample authorization token option. Click **Authorize as a Beneficiary** or **Authorize as a Beneficiary (Spanish)**.
+3. Log in to Medicare.gov using a [synthetic user's account credentials](#authenticating-as-a-synthetic-user).
+4. Click **Connect**.  
+
+Once you're logged in as a Medicare enrollee, you'll get an access token and you can make calls to different endpoints and see the sample data that is delivered in the response.
+
+## Sample data
+
+If you want to see a sample of the data available in the Blue Button 2.0 API without authenticating a synthetic user or creating a sandbox account, you can download a sample file. This [zip folder of JSON files](/assets/zip/bb_sample_data_bbuser29999.zip) contains synthetic data for a single Medicare enrollee. The download includes 3 FHIR resources in JSON format:
+
+1. A single [Patient](http://www.hl7.org/fhir/patient.html) resource
+2. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html) containing multiple [ExplanationOfBenefit](http://www.hl7.org/fhir/explanationofbenefit.html) resources (EOB)
+3. A [FHIR bundle](http://www.hl7.org/fhir/bundle.html) containing multiple [Coverage](http://www.hl7.org/fhir/coverage.html) resources
+
+To learn more about Blue Button 2.0 API data, refer to [Understanding the Data](#understanding-the-data).

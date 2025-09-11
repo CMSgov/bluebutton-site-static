@@ -1,0 +1,667 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+   sass root. Don't edit the version
+   in node_modules.
+----------------------------------------
+Custom project SASS goes here.
+
+i.e.
+@include u-padding-right('05');
+----------------------------------------
+*/
+
+@use "uswds-core" as *;
+
+// USWDS doesn't apply styles to some elements unless they're direct children
+// of .usa-prose (this sets defaults that utility classes can override).
+main {
+
+  p {
+    @include typeset-p-base;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include typeset-heading-base;
+  }
+
+  $elements: h1, h2, h3, h4, h5, h6, p, ul, ol;
+
+  @each $element in $elements {
+    #{$element} {
+      &+ {
+        @each $element in $elements {
+          #{$element} {
+            margin-top: $theme-paragraph-margin-top;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  *+ {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: $theme-heading-margin-top;
+    }
+  }
+
+  h1 {
+    @include h1;
+  }
+
+  h2 {
+    @include h2;
+  }
+
+  h3 {
+    @include h3;
+  }
+
+  h4 {
+    @include h4;
+  }
+
+  h5 {
+    @include h5;
+  }
+
+  h6 {
+    @include h6;
+  }
+
+  a {
+    @include typeset-link;
+  }
+
+  ul,
+  ol {
+    @include usa-list;
+
+    li {
+      @include usa-list-item;
+    }
+  }
+
+}
+
+// Landing page hero background
+.bg-primary-gradient {
+  background: linear-gradient(30deg, color('primary') 60%, #0078a5, #00a488, #8abc4a, color('gold-20v'));
+
+  @include at-media($theme-site-margins-breakpoint) {
+    background: linear-gradient(90deg, color('primary') 60%, #0078a5, #00a488, #8abc4a, color('gold-20v'));
+  }
+}
+
+// Landing page hero text
+@include at-media("desktop-lg") {
+  .hero-title {
+    font-size: clamp(3rem, 3.625vw, 4.25rem);
+  }
+
+  .hero-paragraph {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+  }
+
+  .hero-button {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+    padding: clamp(.75rem, 1vw, 1.25rem) clamp(1.25rem, 1.5vw, 1.75rem);
+  }
+}
+
+.usa-section--dark {
+
+  // Headings default to "accent-cool" and are not theme-able
+  // https://github.com/uswds/uswds/blob/develop/packages/usa-section/src/styles/_usa-section.scss#L22-L31
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: color($theme-text-reverse-color);
+  }
+
+  // For dark sections within a .grid-container, fake them being full-width
+  .grid-container & {
+    position: relative;
+
+    &.bg-primary {
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: calc(-50vw + 50%);
+        bottom: 0;
+        left: 100%;
+        background-color: color('primary');
+      }
+
+      &::before {
+        right: 100%;
+        left: calc(-50vw + 50%);
+      }
+    }
+  }
+}
+
+// Card images default to having a background color
+.usa-card__img {
+  background-color: transparent;
+}
+
+// In-page Nav shows on tablet and larger by default, but we want it to show
+// on desktop and larger
+.usa-in-page-nav {
+  @include at-media("tablet") {
+    display: none;
+  }
+
+  @include at-media("desktop-lg") {
+    display: block;
+  }
+}
+
+
+// Syntax highlighting (Pygments)
+.highlight {
+  @include u-margin(0);
+  width: fit-content;
+
+  pre {
+    @include u-margin(0);
+  }
+
+  // From PyData Sphinx
+  // "…designed to meet WCAG AA or AAA standards for color contrast…"
+  // via https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/styling.html
+  td.linenos .normal {
+    color: inherit;
+    background-color: transparent;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  span.linenos {
+    color: inherit;
+    background-color: transparent;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  td.linenos .special {
+    color: #000000;
+    background-color: #ffffc0;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  span.linenos.special {
+    color: #000000;
+    background-color: #ffffc0;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .hll {
+    background-color: #fae4c2
+  }
+
+  .c {
+    color: #515151
+  }
+
+  /* Comment */
+  .err {
+    color: #a12236
+  }
+
+  /* Error */
+  .k {
+    color: #6730c5
+  }
+
+  /* Keyword */
+  .l {
+    color: #7f4707
+  }
+
+  /* Literal */
+  .n {
+    color: #080808
+  }
+
+  /* Name */
+  .o {
+    color: #00622f
+  }
+
+  /* Operator */
+  .p {
+    color: #080808
+  }
+
+  /* Punctuation */
+  .ch {
+    color: #515151
+  }
+
+  /* Comment.Hashbang */
+  .cm {
+    color: #515151
+  }
+
+  /* Comment.Multiline */
+  .cp {
+    color: #515151
+  }
+
+  /* Comment.Preproc */
+  .cpf {
+    color: #515151
+  }
+
+  /* Comment.PreprocFile */
+  .c1 {
+    color: #515151
+  }
+
+  /* Comment.Single */
+  .cs {
+    color: #515151
+  }
+
+  /* Comment.Special */
+  .gd {
+    color: #005b82
+  }
+
+  /* Generic.Deleted */
+  .ge {
+    font-style: italic
+  }
+
+  /* Generic.Emph */
+  .gh {
+    color: #005b82
+  }
+
+  /* Generic.Heading */
+  .gs {
+    font-weight: bold
+  }
+
+  /* Generic.Strong */
+  .gu {
+    color: #005b82
+  }
+
+  /* Generic.Subheading */
+  .kc {
+    color: #6730c5
+  }
+
+  /* Keyword.Constant */
+  .kd {
+    color: #6730c5
+  }
+
+  /* Keyword.Declaration */
+  .kn {
+    color: #6730c5
+  }
+
+  /* Keyword.Namespace */
+  .kp {
+    color: #6730c5
+  }
+
+  /* Keyword.Pseudo */
+  .kr {
+    color: #6730c5
+  }
+
+  /* Keyword.Reserved */
+  .kt {
+    color: #7f4707
+  }
+
+  /* Keyword.Type */
+  .ld {
+    color: #7f4707
+  }
+
+  /* Literal.Date */
+  .m {
+    color: #7f4707
+  }
+
+  /* Literal.Number */
+  .s {
+    color: #00622f
+  }
+
+  /* Literal.String */
+  .na {
+    color: #912583
+  }
+
+  /* Name.Attribute */
+  .nb {
+    color: #7f4707
+  }
+
+  /* Name.Builtin */
+  .nc {
+    color: #005b82
+  }
+
+  /* Name.Class */
+  .no {
+    color: #005b82
+  }
+
+  /* Name.Constant */
+  .nd {
+    color: #7f4707
+  }
+
+  /* Name.Decorator */
+  .ni {
+    color: #00622f
+  }
+
+  /* Name.Entity */
+  .ne {
+    color: #6730c5
+  }
+
+  /* Name.Exception */
+  .nf {
+    color: #005b82
+  }
+
+  /* Name.Function */
+  .nl {
+    color: #7f4707
+  }
+
+  /* Name.Label */
+  .nn {
+    color: #080808
+  }
+
+  /* Name.Namespace */
+  .nx {
+    color: #080808
+  }
+
+  /* Name.Other */
+  .py {
+    color: #005b82
+  }
+
+  /* Name.Property */
+  .nt {
+    color: #005b82
+  }
+
+  /* Name.Tag */
+  .nv {
+    color: #a12236
+  }
+
+  /* Name.Variable */
+  .ow {
+    color: #6730c5
+  }
+
+  /* Operator.Word */
+  .pm {
+    color: #080808
+  }
+
+  /* Punctuation.Marker */
+  .w {
+    color: #080808
+  }
+
+  /* Text.Whitespace */
+  .mb {
+    color: #7f4707
+  }
+
+  /* Literal.Number.Bin */
+  .mf {
+    color: #7f4707
+  }
+
+  /* Literal.Number.Float */
+  .mh {
+    color: #7f4707
+  }
+
+  /* Literal.Number.Hex */
+  .mi {
+    color: #7f4707
+  }
+
+  /* Literal.Number.Integer */
+  .mo {
+    color: #7f4707
+  }
+
+  /* Literal.Number.Oct */
+  .sa {
+    color: #00622f
+  }
+
+  /* Literal.String.Affix */
+  .sb {
+    color: #00622f
+  }
+
+  /* Literal.String.Backtick */
+  .sc {
+    color: #00622f
+  }
+
+  /* Literal.String.Char */
+  .dl {
+    color: #00622f
+  }
+
+  /* Literal.String.Delimiter */
+  .sd {
+    color: #00622f
+  }
+
+  /* Literal.String.Doc */
+  .s2 {
+    color: #00622f
+  }
+
+  /* Literal.String.Double */
+  .se {
+    color: #00622f
+  }
+
+  /* Literal.String.Escape */
+  .sh {
+    color: #00622f
+  }
+
+  /* Literal.String.Heredoc */
+  .si {
+    color: #00622f
+  }
+
+  /* Literal.String.Interpol */
+  .sx {
+    color: #00622f
+  }
+
+  /* Literal.String.Other */
+  .sr {
+    color: #a12236
+  }
+
+  /* Literal.String.Regex */
+  .s1 {
+    color: #00622f
+  }
+
+  /* Literal.String.Single */
+  .ss {
+    color: #005b82
+  }
+
+  /* Literal.String.Symbol */
+  .bp {
+    color: #7f4707
+  }
+
+  /* Name.Builtin.Pseudo */
+  .fm {
+    color: #005b82
+  }
+
+  /* Name.Function.Magic */
+  .vc {
+    color: #a12236
+  }
+
+  /* Name.Variable.Class */
+  .vg {
+    color: #a12236
+  }
+
+  /* Name.Variable.Global */
+  .vi {
+    color: #a12236
+  }
+
+  /* Name.Variable.Instance */
+  .vm {
+    color: #7f4707
+  }
+
+  /* Name.Variable.Magic */
+  .il {
+    color: #7f4707
+  }
+
+  /* Literal.Number.Integer.Long */
+}
+
+[data-canCopy="true"] .highlight pre {
+  @include u-padding-right(15);
+}
+
+code.language-plaintext.highlighter-rouge,
+code.inline-code {
+  background-color: color('base-lightest');
+  padding-top: .125rem;
+  padding-bottom: .125rem;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  word-wrap: break-word;
+}
+
+body {
+  overflow-wrap: break-word;
+}
+
+@include at-media-max("mobile-lg") {
+  table {
+    width: 100%
+  }
+}
+
+a {
+  text-underline-offset: 4px;
+}
+
+// custom styles for process lists on different pages
+.about-process-list {
+  .usa-process-list__item {
+    border-left: 2rem solid color('blue-5v');
+
+    &::before {
+      border: .25rem solid color('blue-60v');
+    }
+  }
+
+  .about-final-item {
+    border-left: 2rem solid rgba(0, 0, 0, 0);
+  }
+}
+
+.docs-process-list {
+  .usa-process-list__item {
+    margin-left: .75rem;
+    border-left: .5rem solid color('base-lighter');
+
+  }
+
+  .docs-final-item {
+    border-left: .5rem solid rgba(0, 0, 0, 0);
+  }
+}
+
+.production-access-process-list {
+  .usa-process-list__item {
+    margin-left: .75rem;
+    border-left: .5rem solid color('gold-5v');
+
+    &::before {
+      border: .25rem solid color('gold-20v');
+    }
+  }
+
+  .production-access-final-item {
+    border-left: .5rem solid rgba(0, 0, 0, 0);
+  }
+}
+
+// The following classes are added due to this issue: https: //github.com/uswds/uswds/issues/6486
+.usa-table--borderless thead th,
+.usa-table--borderless thead td {
+  border-bottom: 0px
+}
+
+.usa-table--borderless tbody tr:first-of-type th,
+.usa-table--borderless tbody tr:first-of-type td {
+  border-top: 2px solid #1b1b1b;
+}
+
+.usa-button {
+  line-height: 1.3;
+}
+
+.h1 {
+  margin-top: 32px;
+}

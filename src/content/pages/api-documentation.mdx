@@ -1,0 +1,157 @@
+---
+title: "API Documentation"
+description: ""
+---
+
+Blue Button 2.0 (BCDA) uses [Fast Healthcare Interoperability Resources (FHIR)](https://hl7.org/fhir/R4/overview.html) to share claims data. You can use a variety of tools or client software programs to access the sandbox and production environments.
+
+## Getting started
+
+<ProcessList>
+  <ProcessListItem heading="Learn about BCDA">
+      Explore the [documentation](/api-documentation#endpoints), [Data Dictionary](/bcda-data#data-dictionary), and [sample files](/bcda-data#sample-files).
+  </ProcessListItem>
+  <ProcessListItem heading="Use the sandbox">
+      The sandbox environment allows anyone to try the API and download test claims data. Learn how to [get a bearer token](/get-a-bearer-token) and [access the sandbox](/access-claims-data).  
+  </ProcessListItem>
+  <ProcessListItem class="docs-final-item" heading="Get production access">
+      [Eligible model entities](/index#eligible-model-entities) must have [production credentials](/production-access) to access their enrollees' claims data. 
+  </ProcessListItem>
+</ProcessList>
+
+
+Blue Button 2.0 (BB2.0) API enables software developers to build trusted applications, services, and research programs that benefit Medicare enrollees. As a [standards-based API](#technical-specifications-and-standards), BB2.0 provides claims data for more than 64 million people with Medicare.
+
+BB2.0 API includes more than 20 billion Medicare Part A, B and D claims going back to 2014.
+
+<table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-4">
+  <caption class="usa-sr-only">Definitions of Part A, B, and D claims data</caption>
+  <thead>
+    <tr>
+      <th scope="col">Data type</th>
+      <th scope="col">Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Medicare Part A claims data</th>
+      <td>
+        Inpatient hospital stays, care in skilled nursing facilities, and hospice care
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Medicare Part B claims data</th>
+      <td>
+        Doctors' services, outpatient care, preventive services, and durable medical equipment (DME)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Medicare Part D claims data</th>
+      <td>
+         Prescription drugs prescribed by healthcare providers
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Note: Blue Button 2.0 API does not provide Medicare Part C claims (Medicare Advantage). However, if a Medicare Advantage enrollee has a Part D plan, the API includes those claims.
+
+## Access to Medicare enrollee data
+
+### Scope of access
+
+Applications receive permission to access Medicare enrollee data on a per-user basis. Access to claims data for each individual enrollee begins after they grant access to an application via the BB2.0 API's authorization flow. 
+
+Medicare enrollees may always opt to omit personal data such as name, date of birth, race, and sex when granting access to claims data. An enrollee's choice during the BB2.0 authorization flow determines the [scope](#scopes) of access an application will have to their data. 
+
+### Duration of access
+
+The length of time that an application can continue to pull new claims data from Medicare depends on the application's use case and category. The BB2.0 API team determines your application's access duration category during the [production access process](/guide/). 
+
+There are 3 categories for data access duration:
+
+
+<table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-4">
+  <caption class="usa-sr-only">Categories for data access duration</caption>
+  <thead>
+    <tr>
+      <th scope="col">Category</th>
+      <th scope="col">Description and Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">10 hours</th>
+      <td>
+        One-time use apps (Example: An app that pulls an enrollee’s data once to recommend insurance plans)
+        <ul>
+          <li>These apps do not usually require separate logins or store users’ data over time.</li>
+          <li>Authorization will be granted for 10 hours, without the ability to refresh the token.</li>
+          <li>If an enrollee uses the app more than once outside the 10-hour window, they must reauthorize for each data pull.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">13 months</th>
+      <td>
+        Apps that pull data for the enrollee’s use on an ongoing basis (Example: A personal health aggregator app.) 
+        <ul>
+          <li>Authorization will be granted for 13 months.</li>
+          <li>For continued access after 13 months, an app must prompt the user to reauthorize.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Research</th>
+      <td>
+        Apps that facilitate Institutional Review Board (IRB)-approved clinical research studies 
+        <ul>
+          <li>Access to an enrollee’s data will never expire unless revoked by the enrollee or by the BB2.0 team due to app inactivity over a period of time.</li>
+          <li>Research apps will be reviewed every 2 years to ensure that they are still active.</li>
+          <li>If a research app is not active at a 2-year check-in, we will contact the app team for confirmation that they still need BB2.0 API access.</li>
+          <li>If you have a research app, please keep us updated on changes to your contact information and watch for emails from BlueButtonAPI@cms.hhs.gov.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Technical Specifications and Standards 
+
+The Blue Button 2.0 API is a RESTful API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
+
+* [HL7 FHIR Standard](http://www.hl7.org/fhir/index.html)
+* [CARIN Consumer Directed Payer Data Exchange Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html)
+* [OAuth 2.0 protocol](https://oauth.net/)
+* [RESTful API Overview](https://restfulapi.net/)
+
+## Versions
+
+We currently support 2 BB2.0 API versions:
+
+### Version 2 
+
+BB2.0 Version 2 (V2) is based on [FHIR release (R4)](http://hl7.org/fhir/R4/) and the [CARIN CDPDE Implementation Guide (Carin for Blue Button)](http://hl7.org/fhir/us/carin-bb/STU1.1/) and was released in July 2021\. To learn about migrating to BB2.0 V2, go to [Migrating to V2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ)
+
+### Version 1 
+
+Version 1 (V1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/). Development on V1 is limited to bug fixes and basic maintenance. If you're developing a new app, use V2\. For information about BB2.0 V1, see the [V1 Documentation](/v1/). 
+
+## Environments
+
+We currently maintain production and sandbox environments for developing with the BB2.0 API. For technical information about our environments, see [Base FHIR URLs](#base-fhir-urls). 
+
+### Sandbox
+
+Develop your application using our sandbox environment. It provides access to synthetic Medicare enrollee data and includes all the same endpoints, resource types, and parameters as production. You can complete all of the same operations in the sandbox as in the production environment.
+
+It's helpful to know that:
+
+* Sandbox credentials will not work in production. 
+* While we strive to provide a synthetic data set relevant to most use cases, our synthetic data set is not as comprehensive as production data.
+
+To get started in the developer sandbox, [create an account](https://sandbox.bluebutton.cms.gov/v2/accounts/mfa/login).
+
+### Production
+
+Once your development is nearing completion, get access to live data in our production environment by following the instructions in our [production access user guide](/guide/). After you complete the requirements in the production access guide and your app is approved, we'll give you credentials for the production environment.

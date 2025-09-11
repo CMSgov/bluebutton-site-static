@@ -1,0 +1,36 @@
+---
+type Props = {
+  heading: string;
+  img: string;
+  body: string;
+  footer: string;
+  footerLink: string;
+};
+
+const { heading, img, body, footer, footerLink } =
+  Astro.props;
+---
+  <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
+    <div class="usa-card__container">
+      <div class="usa-card__header">
+        <h3 class="usa-card__heading">{heading}</h3>
+      </div>
+      <div class="usa-card__media usa-card__media--inset">
+        <div class="usa-card__img text-center">
+          <img src={img} class="maxw-16 margin-x-auto" />
+        </div>
+      </div>
+      <div class="usa-card__body">
+        <p>{body}</p>
+      </div>
+      <div class="usa-card__footer">
+        <a
+          href={footerLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="usa-button">{footer}</a
+        >
+      </div>
+    </div>
+  </li>
+

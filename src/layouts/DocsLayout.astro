@@ -1,0 +1,115 @@
+---
+import Banner from "#components/banner.astro";
+import Header from "#components/Header.astro";
+import Footer from "#components/Footer.astro";
+import Identifier from "#components/Identifier.astro";
+import SideNav from "components/side-nav.astro";
+import InPageNav from "components/in-page-nav.astro";
+import { SEO } from "astro-seo";
+
+import LogoBlueButton from "#assets/images/logo-bluebutton.svg";
+
+import "@fontsource-variable/open-sans";
+import "#assets/sass/styles.scss";
+import type { MarkdownHeading } from "astro";
+
+type Props = {
+    title: string;
+    description: string;
+    image?: string;
+    showSideNav?: boolean;
+    showInPageNav?: boolean;
+    headings?: MarkdownHeading[];
+};
+
+const {
+    title,
+    description,
+    image,
+    showSideNav = true,
+    showInPageNav = true,
+    headings = [],
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <SEO
+        charset="utf-8"
+        title={title}
+        titleTemplate={`%s - Blue Button 2.0`}
+        description={description}
+        openGraph={{
+            basic: {
+                title,
+                type: "Website",
+                image: "/",
+                url: Astro.url,
+            },
+            optional: {
+                description,
+                locale: "en_US",
+                siteName: "Blue Button 2.0",
+            },
+            image: {
+                width: 1200,
+                height: 630,
+                alt: "",
+            },
+        }}
+        twitter={{
+            card: "summary_large_image",
+            title,
+            description,
+            image: image || "",
+        }}
+        extend={{
+            link: [
+                {
+                    rel: "icon",
+                    type: "image/svg+xml+png",
+                    href: LogoBlueButton.src,
+                },
+            ],
+            meta: [
+                {
+                    name: "viewport",
+                    content: "width=device-width, initial-scale=1.0",
+                },
+                { name: "generator", content: Astro.generator },
+            ],
+        }}
+    />
+    <script src="#assets/uswds/js/uswds-init.js"></script>
+
+    <body id="page-top">
+        <a class="usa-skipnav z-top" href="#main-content"
+            >Skip to main content</a
+        >
+        <Banner />
+        <div class="position-relative">
+            <Header />
+            <div class="grid-container">
+                <div class="grid-row flex-align-start">
+                    {showSideNav && <SideNav />}
+                    <main
+                        id="main-content"
+                        class="main-content position-relative grid-col-fill"
+                    >
+                    <h1 class="margin-top-6">{title}</h1>
+                    <slot />
+                    </main>
+                    {
+                        showInPageNav && headings.length > 0 && (
+                            <InPageNav headings={headings} />
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+
+        <Footer />
+        <Identifier />
+        <script src="#assets/uswds/js/uswds.js"></script>
+    </body>
+</html>

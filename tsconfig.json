@@ -1,0 +1,28 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "strictNullChecks": true,
+    "baseUrl": "src",
+    "paths": {
+      "#assets/*": [
+        "assets/*"
+      ],
+      "#components/*": [
+        "components/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "#assets/sass/styles.scss";
+import Link from "components/link.astro";
+import { getEntry } from "astro:content";
+import { render } from "astro:content";
+import ProcessList from "components/process-list.astro";
+import ProcessListItem from "components/process-list-item.astro";
+import CopySnippet from "components/copy-snippet.astro";
+
+const entry = await getEntry("pages", "resources");
+if (!entry) {
+	throw new Error("Page not found");
+}
+
+const { Content, headings } = await render(entry);
+---
+
+<BaseLayout title="API Documentation" description="">
+	<main id="main-content">
+		<h1 class="margin-top-6">{entry.data.title}</h1>
+
+		<Content
+			components={{
+				a: Link,
+				ProcessList,
+				ProcessListItem,
+				CopySnippet,
+			}}
+		/>
+	</main>
+</BaseLayout>
