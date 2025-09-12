@@ -1,1 +1,0 @@
-import{d as r,h as s,c as t,o as a,r as n,s as d,t as l,u as i}from"./api.astro_astro_type_script_index_0_lang.NHHQh0jI.js";const u=r({__name:"ViewLayout",setup(f){const{cx:e}=s();return(o,m)=>(a(),t("div",d(l(i(e)("flex flex-col min-h-0 flex-1 *:border-t first:*:border-t-0 md:*:border-t-0 xl:overflow-hidden md:flex-row leading-3"))),[n(o.$slots,"default")],16))}});export{u};

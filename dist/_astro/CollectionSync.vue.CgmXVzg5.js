@@ -1,1 +1,0 @@
-import{b as o}from"./ViewLayoutSection.vue.M-wu7EC7.js";import{d as t,k as a,o as n,T as l,Y as r}from"./api.astro_astro_type_script_index_0_lang.NHHQh0jI.js";const p=t({__name:"CollectionSync",setup(c){return(s,e)=>(n(),a(o,null,{title:l(()=>e[0]||(e[0]=[r("Sync")])),_:1}))}});export{p as default};

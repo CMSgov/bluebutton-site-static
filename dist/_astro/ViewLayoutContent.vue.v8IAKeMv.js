@@ -1,1 +1,0 @@
-import{ae as e,c as o,o as l,r as t}from"./api.astro_astro_type_script_index_0_lang.NHHQh0jI.js";const s={},c={class:"custom-scroll flex flex-col pr-0 *:border-t *:first:border-t-0 xl:flex-row *:xl:border-t-0 *:xl:border-l *:first:xl:border-l-0"};function n(r,d){return l(),o("div",c,[t(r.$slots,"default")])}const x=e(s,[["render",n]]);export{x};

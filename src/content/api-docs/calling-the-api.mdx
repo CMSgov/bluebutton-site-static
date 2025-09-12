@@ -6,23 +6,130 @@ sortOrder: 5
 
 This section provides information on basic and common queries against the Blue Button API.  For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi).
 
+## Sandbox vs. Production Environments
 
-### Base FHIR URLs
+### Sandbox
 
-| Environment | Purpose | Base URL |
-| -------- | -------- | -------- |
-| Sandbox     | Development and Testing     | `https://sandbox.bluebutton.cms.gov/v2/fhir/`   |
-| Production | Production Data Access | `https://api.bluebutton.cms.gov/v2/fhir/`|
+- Available to everyone via test credentials
+- Contains test claims data
+- Base FHIR URL: `https://sandbox.bluebutton.cms.gov/v2/fhir/`
 
+### Production
 
-    
+- Must [complete the steps]() for production credentials
+- Contains real Medicare enrollee data
+- Base FHIR URL: `https://api.bluebutton.cms.gov/v2/fhir/`
+
 To find enrollees with varying volumes and types of data, use this [CSV of synthetic data](/synthetic_users_by_claim_count_full.csv). Using the synthetic data, you can break down claims by type (carrier, inpatient, etc.) for each enrollee/user combination.  Synthetic data works in both the Sandbox and Production environments.
-	
 
+## Querying Resources
 
-### Querying Resources
 A listing of common API calls are shown in the table below.  See "Base FHIR URLs" above and substitute for  as appropriate.  
     
 For a complete listing of Blue Button API calls, see our [Swagger documentation](https://sandbox.bluebutton.cms.gov/docs/openapi).  
 
-TABLE REMOVED
+### Patient Resource
+
+<table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-8">
+  <caption class="usa-sr-only">Patient resource requests and descriptions</caption>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>HTTP GET \{baseURL}/Patient</code></td>
+      <td>Returns a <a href="https://www.hl7.org/fhir/bundle.html" target="_blank">bundle</a> of <a href="https://www.hl7.org/fhir/patient.html" target="_blank">Patient resources</a> with one entry (one patient resource).  You can use the resource ID <code>Bundle.entry.resource.id</code>in later queries.  For synthetic data, the ID is a negative number.</td>
+    </tr>
+    <tr>
+      <td><code>HTTP GET \{baseURL}/Patient/\{id}</code></td>
+      <td>Returns a single Patient resource.  Replace <code>\{id}</code> with a valid patient resource ID.  See <code>/Patient</code> call above.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Coverage Resource
+
+<table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-8">
+  <caption class="usa-sr-only">Coverage resource requests and descriptions</caption>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>HTTP GET \{baseURL}/Coverage</code></td>
+      <td>Returns a <a href="https://www.hl7.org/fhir/bundle.html" target="_blank">bundle</a> of <a href="https://www.hl7.org/fhir/coverage.html" target="_blank">Coverage resources</a></td>
+    </tr>
+    <tr>
+      <td><code>HTTP GET \{baseURL}/Coverage?beneficiary=\{id}</code></td>
+      <td>Replace <code>\{id}</code> with the patient resource ID.  Returns a <a href="https://www.hl7.org/fhir/bundle.html" target="_blank">bundle</a> of <a href="https://www.hl7.org/fhir/coverage.html" target="_blank">Coverage resources</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### Explanation of Benefit Resource
+
+<table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-8">
+  <caption class="usa-sr-only">Explanation of Benefit Resource requests and descriptions</caption>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>HTTP GET \{baseURL}<br/>/ExplanationOfBenefit</code></td>
+      <td>Returns a <a href="https://www.hl7.org/fhir/bundle.html" target="_blank">bundle</a> of <a href="https://www.hl7.org/fhir/explanationofbenefit.html" target="_blank">Explanation of Benefit resources</a>.  The bundle should contain one or more EOBs. You can use the resource ID located at <code>Bundle.entry.resource.id</code> (the explanation of benefit resource ID) in later queries.  For synthetic data, the ID is typically formatted as <code>[claimtype]</code>–<code>[number]</code> Example: <code>carrier--10114937820</code></td>
+    </tr>
+    <tr>
+      <td><code>HTTP GET \{baseURL}<br/>/ExplanationOfBenefit?patient=\{id}</code></td>
+      <td>Replace <code>\{id}</code> with patient resource ID. Returns a <a href="https://www.hl7.org/fhir/bundle.html" target="_blank">bundle</a> of <a href="https://www.hl7.org/fhir/explanationofbenefit.html" target="_blank">Explanation of Benefit resources</a>.  The bundle should contain one or more EOBs. You can use the resource ID located at <code>Bundle.entry.resource.id</code> (the explanation of benefit resource ID) in later queries.  For synthetic data, the ID is typically formatted as <code>[claimtype]</code>–<code>[number]</code> Example: <code>carrier--10114937820</code></td>
+    </tr>
+    <tr>
+      <td><code>HTTP GET \{baseURL}<br/>/ExplanationOfBenefit/\{id}</code></td>
+      <td>Returns a single <a href="https://www.hl7.org/fhir/explanationofbenefit.html" target="_blank">Explanation of Benefit resources</a>.  Replace \{id} with a valid EOB resource ID.  See <code>/ExplanationOfBenefit</code> call above.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Capability Statement Resource
+
+<table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-8">
+  <caption class="usa-sr-only">Capability Statement resource requests and descriptions</caption>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>HTTP GET \{baseURL}/metadata</code></td>
+      <td>Returns the <a href="https://www.hl7.org/fhir/capabilitystatement.html" target="_blank">FHIR capability statement</a> (Example: the FHIR features and operations supported by this server)</td>
+    </tr>
+  </tbody>
+</table>
+
+### User Info Resource
+
+<table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-8">
+  <caption class="usa-sr-only">User Info resource requests and descriptions</caption>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>HTTP GET \{host}/\{version}<br/>/connect/userinfo</code></td>
+      <td>If the user grants access to access to their personal information, <code>UserInfo</code> returns name, family name and email. If the user denies access to their personal information, <code>UserInfo</code> returns <code>You do not have permission.</code></td>
+    </tr>
+  </tbody>
+</table>
