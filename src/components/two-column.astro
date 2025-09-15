@@ -1,13 +1,11 @@
 ---
 type Props = {
     image: string;
-    title: string;
     imageLast?: boolean;
 };
 
 const {
     image,
-    title,
     imageLast,
 } = Astro.props;
 
@@ -23,7 +21,6 @@ const {
             class="tablet:grid-col padding-top-4 tablet:padding-top-0 display-flex flex-align-center"
         >
             <div>
-                <h2>{title}</h2>
                   <slot />
             </div>
         </div>

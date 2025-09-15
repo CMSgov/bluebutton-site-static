@@ -58,6 +58,7 @@ declare module "astro-typesafe-routes/path" {
 "/api": { params: null; search: null },
 "/api-docs/[...slug]": { params: ["slug"]; search: null },
 "/api-documentation": { params: null; search: null },
+"/bb2-data": { params: null; search: null },
 "/data/[...slug]": { params: ["slug"]; search: null },
 "/production-access": { params: null; search: null },
 "/resources": { params: null; search: null },

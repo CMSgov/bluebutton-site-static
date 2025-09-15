@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "#components/Hero.astro";
-import Card from "#components/Card.astro";
+import Hero from "#components/hero.astro";
+import Card from "#components/card.astro";
 import Browsers from "#assets/images/browsers.svg?url";
 import Home from "#assets/images/home.svg?url";
 import Whiteboard from "#assets/images/whiteboard.svg?url";
@@ -44,7 +44,8 @@ import Button from "#components/button.astro";
         footerLink=""
       />
     </ul>
-    <TwoColumn image={Whiteboard} title="Value for organizations">
+    <TwoColumn image={Whiteboard}>
+      <h2>Value for organizations</h2>
       <h3>What does Blue Button 2.0 allow you to do?</h3>
       <p>
         Whether you are a health plan market place, a non-profit research
@@ -68,9 +69,9 @@ import Button from "#components/button.astro";
     </TwoColumn>
     <TwoColumn
       image={Home}
-      title="Value for people with Medicare"
       imageLast={true}
     >
+      <h2>Value for people with Medicare</h2>
       <h3>What does Blue Button 2.0 allow you to do?</h3>
       <p>
         Blue Button 2.0 allows you to share your data with third-party
