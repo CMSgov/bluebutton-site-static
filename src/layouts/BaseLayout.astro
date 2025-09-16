@@ -3,8 +3,8 @@ import Banner from "#components/banner.astro";
 import Header from "#components/Header.astro";
 import Footer from "#components/Footer.astro";
 import Identifier from "#components/Identifier.astro";
-import SideNav from "components/side-nav.astro";
-import InPageNav from "components/in-page-nav.astro";
+import SideNav from "#components/side-nav.astro";
+import TableOfComponents from "#components/toc.astro";
 import { SEO } from "astro-seo";
 
 import LogoBlueButton from "#assets/images/logo-bluebutton.svg";
@@ -96,11 +96,11 @@ const {
                         id="main-content"
                         class="main-content position-relative grid-col-fill"
                     >
-                    <slot />
+                        <slot />
                     </main>
                     {
                         showInPageNav && headings.length > 0 && (
-                            <InPageNav headings={headings} />
+                            <TableOfComponents headings={headings} />
                         )
                     }
                 </div>
