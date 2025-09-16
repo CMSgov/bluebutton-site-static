@@ -29,42 +29,35 @@ const { headings = [] } = Astro.props;
 </div>
 
 <script>
-  let didScroll = false;
-  const interectingIds: string[] = [];
-  const tocLinks = Array.from(
-    document.querySelectorAll<HTMLAnchorElement>("#toc a"),
-  );
+  const visibleHeadings = new Set<string>();
+  const tocLinks = document.querySelectorAll<HTMLAnchorElement>("#toc a");
+  const headings = document.querySelectorAll("main :is(h2,h3,h4,h5,h6)[id]");
 
-  window.addEventListener(
-    "scroll",
-    () => {
-      didScroll = true;
-    },
-    { once: true },
-  );
+  let didScroll = false;
+  window.addEventListener("scroll", () => (didScroll = true), { once: true });
 
   const headingsObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          interectingIds.push(entry.target.id);
+          visibleHeadings.add(entry.target.id);
         } else {
-          const idx = interectingIds.findIndex((id) => id === entry.target.id);
-          if (idx > -1) {
-            interectingIds.splice(idx, 1);
-          }
+          visibleHeadings.delete(entry.target.id);
         }
       });
 
-      tocLinks.forEach((el) => el.classList.remove("usa-current"));
-      const temp = didScroll
-        ? [...interectingIds]
-        : [...interectingIds].reverse();
-      const activeId = temp.pop();
-      const active = tocLinks.find(
-        (el) => el.getAttribute("href") === `#${activeId}`,
-      );
-      if (active) active.classList.add("usa-current");
+      const activeId = didScroll
+        ? [...visibleHeadings].pop()
+        : [...visibleHeadings][0];
+
+      if (visibleHeadings.size > 0) {
+        tocLinks.forEach((el) =>
+          el.classList.toggle(
+            "usa-current",
+            el.getAttribute("href") === `#${activeId}`,
+          ),
+        );
+      }
     },
     {
       rootMargin: "-100px 0px",
@@ -72,19 +65,20 @@ const { headings = [] } = Astro.props;
     },
   );
 
-  document
-    .querySelectorAll("main :is(h2,h3,h4,h5,h6)")
-    .forEach((h) => headingsObserver.observe(h));
+  const tocHeadingIds = Array.from(tocLinks)
+    .map((link) => link.getAttribute("href")?.replace("#", ""))
+    .filter(Boolean);
+
+  Array.from(headings)
+    .filter((heading) => tocHeadingIds.includes(heading.id))
+    .forEach((heading) => headingsObserver.observe(heading));
 
   tocLinks.forEach((el) => {
-    el.addEventListener("click", () => {
+    el.addEventListener("click", (e) => {
+      // Prevent USWDS event from firing
+      e.stopImmediatePropagation();
       // Restore native click behavior, since USWDS overrides this by default on this component
-      const evt = new MouseEvent("click", {
-        bubbles: false,
-        cancelable: true,
-        view: window,
-      });
-      el.dispatchEvent(evt);
+      document.location.href = el.getAttribute("href") || "#";
     });
   });
 </script>
