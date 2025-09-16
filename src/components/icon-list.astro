@@ -1,5 +1,6 @@
 ---
 import Icon from "./icon.astro";
+import ArrowForward from "@uswds/uswds/img/usa-icons/arrow_forward.svg";
 
 type Props = {
   intro?: string;
@@ -10,7 +11,7 @@ const { intro } = Astro.props;
 
 <div class="grid-row grid-gap margin-y-4">
   <div class="grid-col-auto">
-    <Icon icon="arrow_forward" size={5} />
+    <Icon icon={ArrowForward} size={5} />
   </div>
   <div class="grid-col-fill">
     {intro ? <p class="usa-intro measure-4">{intro}</p> : null}

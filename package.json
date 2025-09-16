@@ -5,9 +5,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "gulp": "gulp",
-    "postinstall": "gulp copyAssets"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.5",
@@ -17,14 +15,14 @@
     "@uswds/uswds": "3.12.0",
     "astro": "^5.7.5",
     "astro-seo": "^0.8.4",
-    "class-variance-authority": "^0.7.1",
     "astro-typesafe-routes": "^5.0.0",
+    "class-variance-authority": "^0.7.1",
+    "cva": "^1.0.0-beta.4",
     "sass": "^1.86.3"
   },
   "devDependencies": {
     "@astrojs/ts-plugin": "^1.10.4",
     "@uswds/compile": "^1.2.2",
-    "gulp": "^5.0.0",
     "typescript": "^5.9.2"
   }
 }
