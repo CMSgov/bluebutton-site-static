@@ -29,7 +29,7 @@ const { headings = [] } = Astro.props;
 </div>
 
 <script>
-  const visibleHeadings = new Set<string>();
+  const visibleHeadingIds = new Set<string>();
   const tocLinks = document.querySelectorAll<HTMLAnchorElement>("#toc a");
   const headings = document.querySelectorAll("main :is(h2,h3,h4,h5,h6)[id]");
 
@@ -40,17 +40,19 @@ const { headings = [] } = Astro.props;
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          visibleHeadings.add(entry.target.id);
+          visibleHeadingIds.add(entry.target.id);
         } else {
-          visibleHeadings.delete(entry.target.id);
+          visibleHeadingIds.delete(entry.target.id);
         }
       });
 
       const activeId = didScroll
-        ? [...visibleHeadings].pop()
-        : [...visibleHeadings][0];
+        ? // As a user scrolls, get the latest id to enter the viewport
+          [...visibleHeadingIds].pop()
+        : // When the page first loads, get the first/top-most id in the viewport
+          [...visibleHeadingIds][0];
 
-      if (visibleHeadings.size > 0) {
+      if (visibleHeadingIds.size > 0) {
         tocLinks.forEach((el) =>
           el.classList.toggle(
             "usa-current",
