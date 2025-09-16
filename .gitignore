@@ -13,3 +13,5 @@ terraform.tfstate.backup
 node_modules
 bluebutton-css
 .vscode
+dist
+.astro
