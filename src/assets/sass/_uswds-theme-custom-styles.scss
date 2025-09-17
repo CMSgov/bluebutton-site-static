@@ -108,7 +108,9 @@ main {
 // Landing page hero background
 .bg-primary-gradient {
   background: linear-gradient(30deg, color('primary') 60%, #0078a5, #00a488, #8abc4a, color('gold-20v'));
-
+  width:100vw; 
+  margin-left:calc(50% - 50vw);
+  
   @include at-media($theme-site-margins-breakpoint) {
     background: linear-gradient(90deg, color('primary') 60%, #0078a5, #00a488, #8abc4a, color('gold-20v'));
   }
@@ -131,7 +133,6 @@ main {
 }
 
 .usa-section--dark {
-
   // Headings default to "accent-cool" and are not theme-able
   // https://github.com/uswds/uswds/blob/develop/packages/usa-section/src/styles/_usa-section.scss#L22-L31
   h1,
@@ -635,10 +636,10 @@ a {
 .production-access-process-list {
   .usa-process-list__item {
     margin-left: .75rem;
-    border-left: .5rem solid color('gold-5v');
+    border-left: .5rem solid color('violet-5v');
 
     &::before {
-      border: .25rem solid color('gold-20v');
+      border: .25rem solid color('violet-40');
     }
   }
 

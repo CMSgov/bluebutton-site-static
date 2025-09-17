@@ -9,7 +9,7 @@ type Props = {
   canCopy?: boolean;
 };
 
-const { code, lang, canCopy = true } = Astro.props;
+const { code = "", lang, canCopy = true } = Astro.props;
 const nanosecond = crypto.randomUUID();
 ---
 

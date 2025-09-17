@@ -1,3 +1,7 @@
-<ol class="usa-process-list margin-top-1">
+---
+const { class: className, } = Astro.props;
+---
+
+<ol class={`usa-process-list margin-top-1 ${className}`}>
   <slot />
 </ol>
