@@ -636,10 +636,10 @@ a {
 .production-access-process-list {
   .usa-process-list__item {
     margin-left: .75rem;
-    border-left: .5rem solid color('violet-5v');
+    border-left: .5rem solid color('indigo-warm-5v');
 
     &::before {
-      border: .25rem solid color('violet-40');
+      border: .25rem solid color('indigo-warm-40v');
     }
   }
 

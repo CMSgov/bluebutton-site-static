@@ -1,0 +1,30 @@
+---
+type Props = {
+  heading: string;
+  id: string;
+};
+
+const { heading, id } = Astro.props;
+---
+
+<div class="grid-container padding-x-0">
+    <div class="usa-accordion margin-y-2 maxw-tablet-lg">
+        <h4 class="usa-accordion__heading">
+            <button
+                type="button"
+                class="usa-accordion__button"
+                aria-expanded="false"
+                aria-controls={id}
+                data-tealium="accordion"
+            >
+                {heading}
+            </button>
+        </h4>
+        <div
+            id={id}
+            class="usa-accordion__content usa-prose"
+        >
+            <slot />
+        </div>
+    </div>
+</div>

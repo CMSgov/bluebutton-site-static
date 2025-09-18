@@ -2,7 +2,7 @@
 import Link from "./link.astro";
 
 import LogoDPC from "#assets/images/logo-dpc.svg";
-import LogoBB from "#assets/images/logo-bluebutton.svg";
+import LogoBCDA from "#assets/images/logo-bcda.svg";
 import LogoAB2D from "#assets/images/logo-ab2d-sm.svg";
 ---
 
@@ -35,7 +35,7 @@ import LogoAB2D from "#assets/images/logo-ab2d-sm.svg";
                 class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2"
               >
                 <Link
-                  href="https://dpc.cms.gov/"
+                  to="https://dpc.cms.gov/"
                   class="grid-row grid-gap-1 flex-align-center text-no-underline"
                   showIcon={false}
                   isExternal
@@ -57,21 +57,21 @@ import LogoAB2D from "#assets/images/logo-ab2d-sm.svg";
                 class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2"
               >
                 <Link
-                  to="/"
+                  to="https://bcda.cms.gov/"
                   class="grid-row grid-gap-1 flex-align-center text-no-underline"
                   showIcon={false}
                   isExternal
                 >
                   <span class="grid-col-auto"
-                    ><LogoBB
+                    ><LogoBCDA
                       class="usa-icon--size-5 display-block"
-                      aria-label="Blue Button 2.0 logo"
+                      aria-label="BCDA logo"
                     /></span
                   >
                   <p
                     class="grid-col-fill font-sans-2xs text-bold text-black line-height-sans-2"
                   >
-                    Blue Button 2.0
+                    Beneficiary Claims Data API
                   </p>
                 </Link>
               </div>
@@ -79,7 +79,7 @@ import LogoAB2D from "#assets/images/logo-ab2d-sm.svg";
                 class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2"
               >
                 <Link
-                  href="https://ab2d.cms.gov/"
+                  to="https://ab2d.cms.gov/"
                   class="grid-row grid-gap-1 flex-align-center text-no-underline"
                   showIcon={false}
                   isExternal

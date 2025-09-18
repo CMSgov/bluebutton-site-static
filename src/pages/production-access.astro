@@ -6,6 +6,7 @@ import { render } from "astro:content";
 import ProcessList from "components/process-list.astro";
 import ProcessListItem from "components/process-list-item.astro";
 import Link from "components/link.astro";
+import Accordion from "#components/accordion.astro";
 
 const entry = await getEntry("pages", "production-access");
 if (!entry) {
@@ -24,6 +25,7 @@ const { Content, headings } = await render(entry);
 				a: Link,
 				ProcessList,
 				ProcessListItem,
+				Accordion,
 			}}
 		/>
 	</main>

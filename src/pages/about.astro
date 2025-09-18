@@ -3,7 +3,7 @@ import Link from "components/link.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TwoColumn from "components/two-column.astro";
 import Card from "#components/card.astro";
-import Pharmacist from "#assets/images/pharmacist.svg?url";
+import Programmer from "#assets/images/programmer.svg?url";
 import LogoAB2D from "#assets/images/logo-ab2d-sm.svg?url";
 import LogoBCDA from "#assets/images/logo-bcda.svg?url";
 import LogoDPC from "#assets/images/logo-dpc.svg?url";
@@ -15,7 +15,7 @@ import LogoDPC from "#assets/images/logo-dpc.svg?url";
 	showSideNav={false}
 	showInPageNav={false}
 >
-	<TwoColumn image={Pharmacist} imageLast={true}>
+	<TwoColumn image={Programmer} imageLast={true}>
 		<h1 class="margin-top-6">About Blue Button</h1>
 		<p>
 			Blue Button 2.0 (BB2.0) API enables software developers to build
@@ -28,53 +28,19 @@ import LogoDPC from "#assets/images/logo-dpc.svg?url";
 		</p>
 	</TwoColumn>
 
-	<table class="usa-table usa-table--borderless usa-table--stacked">
-		<caption class="usa-sr-only"
-			>Definitions of Part A, Part B, and Part D claims data</caption
-		>
-		<thead>
-			<tr>
-				<th scope="col">Data type</th>
-				<th scope="col">Definition</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="row">Medicare Part A claims data</th>
-				<td>
-					Inpatient hospital stays, care in skilled nursing
-					facilities, and hospice care
-				</td>
-			</tr>
-			<tr>
-				<th scope="row">Medicare Part B claims data</th>
-				<td>
-					Various doctors' services, outpatient care, medical
-					supplies, and preventive services
-				</td>
-			</tr>
-			<tr>
-				<th scope="row">Medicare Part D claims data</th>
-				<td> Prescription drugs prescribed by healthcare providers </td>
-			</tr>
-		</tbody>
-	</table>
-
 	<h2 class="padding-top-8">
 		What are the other CMS claims-based FHIR APIs?
 	</h2>
 
 	<ul class="usa-card-group flex-justify-center padding-y-4">
 		<Card
-			heading="Claims Data to Part D Sponsors"
-			img={LogoAB2D}
+			heading="For People with Medicare"
+			img={LogoDPC}
 			imgSize={15}
-			footer="Visit AB2D"
+			footer="Visit DPC"
 			footerLink=""
 		>
-			The AB2D API provides stand-alone Prescription Drug Plan sponsors
-			with claims data to enhance the use of medications and improve the
-			long term health of enrollees.
+			The Data at the Point of Care (DPC) API enables healthcare providers with claims data to fill in gaps in patient history at the point of care and deliver high-quality care to Medicare enrollees.
 		</Card>
 		<Card
 			heading="For Organizations"
@@ -86,13 +52,13 @@ import LogoDPC from "#assets/images/logo-dpc.svg?url";
 			The Beneficiary Claims Data API (BCDA) helps Alternative Payment Model participants provide high-quality, coordinated care by making it easier to access bulk Medicare Parts A, B, and D claims data.
 		</Card>
 		<Card
-			heading="For People with Medicare"
-			img={LogoDPC}
+			heading="Claims Data to Part D Sponsors"
+			img={LogoAB2D}
 			imgSize={15}
-			footer="Visit DPC"
+			footer="Visit AB2D"
 			footerLink=""
 		>
-			The Data at the Point of Care (DPC) API enables healthcare providers with claims data to fill in gaps in patient history at the point of care and deliver high-quality care to Medicare enrollees.
+			The AB2D API provides stand-alone Prescription Drug Plan sponsors with claims data to enhance the use of medications and improve the long term health of enrollees.
 		</Card>
 	</ul>
 </BaseLayout>
