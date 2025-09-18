@@ -2,12 +2,12 @@
 type Props = {
   heading: string;
   img: string;
-  body: string;
   footer: string;
   footerLink: string;
+  imgSize?: 15 | 16;
 };
 
-const { heading, img, body, footer, footerLink } =
+const { heading, img, imgSize = 16, footer, footerLink } =
   Astro.props;
 ---
   <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
@@ -17,11 +17,11 @@ const { heading, img, body, footer, footerLink } =
       </div>
       <div class="usa-card__media usa-card__media--inset">
         <div class="usa-card__img text-center">
-          <img src={img} class="maxw-16 margin-x-auto" />
+          <img src={img} class={`maxw-${imgSize} margin-x-auto`} />
         </div>
       </div>
       <div class="usa-card__body">
-        <p>{body}</p>
+        <slot />
       </div>
       <div class="usa-card__footer">
         <a

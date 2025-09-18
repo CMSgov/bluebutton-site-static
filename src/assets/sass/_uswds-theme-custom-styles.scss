@@ -107,12 +107,12 @@ main {
 
 // Landing page hero background
 .bg-primary-gradient {
-  background: linear-gradient(30deg, color('primary') 60%, #0078a5, #00a488, #8abc4a, color('gold-20v'));
+  background: linear-gradient(30deg, color('cyan-40v'), color('primary'), color('indigo-warm-60v'));
   width:100vw; 
   margin-left:calc(50% - 50vw);
   
   @include at-media($theme-site-margins-breakpoint) {
-    background: linear-gradient(90deg, color('primary') 60%, #0078a5, #00a488, #8abc4a, color('gold-20v'));
+    background: linear-gradient(90deg, color('cyan-40v'), color('primary'), color('indigo-warm-60v'));
   }
 }
 

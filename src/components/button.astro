@@ -1,5 +1,6 @@
 ---
 import Link from "./link.astro";
+import Icon from "./icon.astro";
 
 import type { HTMLAttributes } from "astro/types";
 
@@ -19,7 +20,7 @@ const { link = "", unstyled = false, outline = false, icon = false, } = Astro.pr
     ><slot />
     {
         icon ? (
-            <icon
+            <Icon
                 icon="arrow_forward"
                 color={`${unstyled ? "base-darkest" : "white"}`}
                 size={3}
