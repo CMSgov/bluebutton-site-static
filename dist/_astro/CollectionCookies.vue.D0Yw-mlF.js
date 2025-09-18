@@ -1,1 +1,0 @@
-import{b as e}from"./ViewLayoutSection.vue.DmuGjUg0.js";import{d as t,c as a,o as s,w as l,f as n}from"./api.astro_astro_type_script_index_0_lang.CNbPyKW1.js";const p=t({__name:"CollectionCookies",setup(r){return(c,o)=>(s(),a(e,null,{title:l(()=>o[0]||(o[0]=[n("Cookies")])),_:1}))}});export{p as default};

@@ -1,1 +1,0 @@
-import{b as t}from"./ViewLayoutSection.vue.DmuGjUg0.js";import{d as o,c as r,o as s,w as a,f as c}from"./api.astro_astro_type_script_index_0_lang.CNbPyKW1.js";const m=o({__name:"CollectionScripts",setup(n){return(i,e)=>(s(),r(t,null,{title:a(()=>e[0]||(e[0]=[c("Scripts")])),_:1}))}});export{m as default};
