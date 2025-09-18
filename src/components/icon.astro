@@ -1,26 +1,28 @@
 ---
-import Github from "#assets/uswds/img/usa-icons/github.svg";
-import ArrowForward from "#assets/uswds/img/usa-icons/arrow_forward.svg";
-import Swagger from "#assets/images/swagger.svg";
+import type { SvgComponent } from "../utils/types/svg";
+import type { VariantProps } from "cva";
+import { cva } from "cva";
 
-const iconMap = {
-  github: Github,
-  arrow_forward: ArrowForward,
-  swagger: Swagger
+const iconStyles = cva({
+  base: "usa-icon",
+  variants: {
+    size: {
+      3: "usa-icon--size-3",
+      4: "usa-icon--size-4",
+      5: "usa-icon--size-5",
+    },
+    color: {
+      white: "text-white",
+      "base-darkest": "text-base-darkest",
+    },
+  },
+});
+
+type Props = VariantProps<typeof iconStyles> & {
+  icon: SvgComponent;
 };
 
-type Props = {
-  icon: keyof typeof iconMap;
-  color: string;
-  size: 3 | 4 | 5;
-};
-
-const { icon, color, size } = Astro.props;
-
-const IconEl = iconMap[icon];
+const { icon: Component, color, size, ...props } = Astro.props;
 ---
 
-<IconEl
-  class={`usa-icon text-${color} usa-icon--size-${size}`}
-  aria-hidden="true"
-/>
+<Component {...props} class={iconStyles({ size, color })} aria-hidden="true" />

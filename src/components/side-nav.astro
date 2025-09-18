@@ -2,8 +2,9 @@
 import { getCollection } from "astro:content";
 import Link from "./link.astro";
 import Icon from "./icon.astro";
-import Button from "./button.astro";
 import type { RouteId, RouteOptions } from "astro-typesafe-routes/path";
+import Github from "@uswds/uswds/img/usa-icons/github.svg";
+import ArrowForward from "@uswds/uswds/img/usa-icons/arrow_forward.svg";
 
 type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[];
 
@@ -87,7 +88,7 @@ const datanavLinks = dataDocs.map((doc) => ({
           <Link href="/" isExternal data-tealium="left-rail">
             <span>
               GitHub
-              <Icon icon="github" color="base-darkest" size={3} />
+              <Icon icon={Github} color="base-darkest" size={3} />
             </span>
           </Link>
         </li>
@@ -95,7 +96,7 @@ const datanavLinks = dataDocs.map((doc) => ({
           <Link href="/" isExternal data-tealium="left-rail">
             <span>
               Swagger
-              <Icon icon="swagger" color="base-darkest" size={3} />
+              <Icon icon={ArrowForward} color="base-darkest" size={3} />
             </span>
           </Link>
         </li>
