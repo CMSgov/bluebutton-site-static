@@ -2,20 +2,18 @@
 import Icon from "./icon.astro";
 
 type Props = {
-  heading: string;
-  intro: string;
+  intro?: string;
 };
 
-const { heading, intro } = Astro.props;
+const { intro } = Astro.props;
 ---
 
 <div class="grid-row grid-gap margin-y-4">
   <div class="grid-col-auto">
-    <Icon icon="arrow_forward" color="" size={5} />
+    <Icon icon="arrow_forward" size={5} />
   </div>
   <div class="grid-col-fill">
-    <h2>{heading}</h2>
-    <p class="usa-intro measure-4">{intro}</p>
+    {intro ? <p class="usa-intro measure-4">{intro}</p> : null}
     <slot />
   </div>
 </div>
