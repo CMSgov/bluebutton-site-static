@@ -14,6 +14,6 @@ const { post } = Astro.props;
 const { Content, headings } = await render(post);
 ---
 
-<DocsLayout title={post.data.title} description="" headings={headings}>
+<DocsLayout title={post.data.title} description="" headings={headings} showSideNav={false}>
   <Content />
 </DocsLayout>
