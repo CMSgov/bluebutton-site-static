@@ -2,14 +2,12 @@
 type Props = {
   heading: string;
   img: string;
-  footer: string;
-  footerLink: string;
   outline?: boolean,
   sandbox?: boolean,
   imgSize?: 15 | 16;
 };
 
-const { heading, img, imgSize = 16, footer, footerLink, outline = false, sandbox = false,  } =
+const { heading, img, imgSize = 16, outline = false, sandbox = false,  } =
   Astro.props;
 ---
   <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
@@ -25,13 +23,8 @@ const { heading, img, imgSize = 16, footer, footerLink, outline = false, sandbox
       <div class="usa-card__body">
         <slot />
       </div>
-      <div class="usa-card__footer">
-        <a
-          href={footerLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          class={`usa-button${outline ? " usa-button--outline" : "" }${sandbox ? " usa-button--secondary" : "" }`}>{footer}</a
-        >
+      <div class="usa-card__footer padding-y-0">
+        <slot name="buttonSlot" />
       </div>
     </div>
   </li>

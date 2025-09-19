@@ -3,6 +3,7 @@ import Link from "components/link.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TwoColumn from "components/two-column.astro";
 import Card from "#components/card.astro";
+import Button from "#components/button.astro";
 import Programmer from "#assets/images/programmer.svg?url";
 import LogoAB2D from "#assets/images/logo-ab2d-sm.svg?url";
 import LogoBCDA from "#assets/images/logo-bcda.svg?url";
@@ -37,28 +38,37 @@ import LogoDPC from "#assets/images/logo-dpc.svg?url";
 			heading="For People with Medicare"
 			img={LogoDPC}
 			imgSize={15}
-			footer="Visit DPC"
-			footerLink=""
 		>
 			The Data at the Point of Care (DPC) API enables healthcare providers with claims data to fill in gaps in patient history at the point of care and deliver high-quality care to Medicare enrollees.
+			<Button 
+				slot="buttonSlot"
+				link="https://dpc.cms.gov/"
+			>Visit DPC
+			</Button>
 		</Card>
 		<Card
 			heading="For Organizations"
 			img={LogoBCDA}
 			imgSize={15}
-			footer="Visit BCDA"
-			footerLink=""
 		>
 			The Beneficiary Claims Data API (BCDA) helps Alternative Payment Model participants provide high-quality, coordinated care by making it easier to access bulk Medicare Parts A, B, and D claims data.
+			<Button 
+				slot="buttonSlot"
+				link="https://bcda.cms.gov/"
+			>Visit BCDA
+			</Button>
 		</Card>
 		<Card
 			heading="Claims Data to Part D Sponsors"
 			img={LogoAB2D}
 			imgSize={15}
-			footer="Visit AB2D"
-			footerLink=""
 		>
 			The AB2D API provides stand-alone Prescription Drug Plan sponsors with claims data to enhance the use of medications and improve the long term health of enrollees.
+			<Button 
+				slot="buttonSlot"
+				link="https://ab2d.cms.gov/"
+			>Visit AB2D
+			</Button>
 		</Card>
 	</ul>
 </BaseLayout>
