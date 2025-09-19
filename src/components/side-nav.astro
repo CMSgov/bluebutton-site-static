@@ -4,7 +4,7 @@ import Link from "./link.astro";
 import Icon from "./icon.astro";
 import type { RouteId, RouteOptions } from "astro-typesafe-routes/path";
 import Github from "@uswds/uswds/img/usa-icons/github.svg";
-import ArrowForward from "@uswds/uswds/img/usa-icons/arrow_forward.svg";
+import Swagger from "#assets/images/swagger.svg";
 
 type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[];
 
@@ -85,21 +85,35 @@ const datanavLinks = dataDocs.map((doc) => ({
           }
         </ul>
         <li class="usa-sidenav__item">
-          <Link href="/" isExternal data-tealium="left-rail">
-            <span>
-              GitHub
-              <Icon icon={Github} color="base-darkest" size={3} />
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link href="/" isExternal data-tealium="left-rail">
-            <span>
-              Swagger
-              <Icon icon={ArrowForward} color="base-darkest" size={3} />
-            </span>
-          </Link>
-        </li>
+      <a
+        href="https://github.com/CMSgov/bluebutton-web-server"
+        class="usa-nav-link"
+        target="blank"
+        rel="noopener noreferrer"
+        data-tealium="left-rail"
+
+      >
+        <span class="display-flex flex-align-center">
+          <span class="padding-right-1">GitHub</span>
+          <Icon icon={Github} color="base-dark" size={3} />
+        </span>
+      </a>
+    </li>
+    <li class="usa-sidenav__item">
+      <a
+        href="https://sandbox.bluebutton.cms.gov/docs/openapi"
+        class="usa-nav-link"
+        target="blank"
+        rel="noopener noreferrer"
+        data-tealium="left-rail"
+
+      >
+        <span class="display-flex flex-align-center">
+          <span class="padding-right-1">Swagger</span>
+          <Icon icon={Swagger} color="base-dark" size={3} />
+        </span>
+      </a>
+    </li>
       </ul>
     </nav>
   </div>

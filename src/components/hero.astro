@@ -1,6 +1,8 @@
 ---
 import Icon from "./icon.astro";
 import Github from "@uswds/uswds/img/usa-icons/github.svg";
+import Code from "@uswds/uswds/img/usa-icons/code.svg";
+import Swagger from "#assets/images/swagger.svg";
 import ArrowForward from "@uswds/uswds/img/usa-icons/arrow_forward.svg";
 
 type Props = {
@@ -38,7 +40,17 @@ const { h1, description } = Astro.props;
           rel="noopener noreferrer"
           class="hero-button usa-button  usa-button--inverse usa-button--outline width-full"
         >
-          Visit the sandbox <Icon icon={ArrowForward} color="white" size={3} />
+          API reference <Icon icon={Swagger} color="white" size={3} />
+        </a>
+      </div>
+      <div class="tablet:grid-col-auto margin-top-2">
+        <a
+          href="https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero-button usa-button  usa-button--inverse usa-button--outline width-full"
+        >
+          Visit the sandbox <Icon icon={Code} color="white" size={3} />
         </a>
       </div>
     </div>
