@@ -6,12 +6,14 @@ sortOrder: 2
 
 To get started integrating with the Blue Button 2.0 API, you'll need to register a sandbox application. You don't need a working application at this point, but you need to define basic settings to generate client credentials for testing purposes.   
 
-## 1\. Register an application in the developer sandbox
+      <Button link="https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login" sandbox={true}>Visit the Sandbox</Button>
+
+## 1. Register an application in the developer sandbox
 
 1. Go to the [Sandbox Dashboard](https://sandbox.bluebutton.cms.gov/home). (If you don't already have an account, create one.)
 2. Click [Add an Application](https://sandbox.bluebutton.cms.gov/v2/o/applications/register/).
 
-## 2\. Enter application details
+## 2. Enter application details
 
 When you add or edit a sandbox application, you'll enter various required configuration details.
 
@@ -71,7 +73,7 @@ This setting determines 2 things:
 
 To learn more about scopes and permissions, visit [Authorization](#authorization).
 
-## 3\. Save your application
+## 3. Save your application
 
 Click **Save Application**.  
 
@@ -82,7 +84,7 @@ After you register your sandbox application, you'll get a Client ID and Client S
 
 Note: Client credentials from the developer sandbox only work in the sandbox environment. To get production credentials, you need to complete the [production access requirements](#production-api-access) and be approved.  
 
-## 4\. Test the API with Postman or cURL
+## 4. Test the API with Postman or cURL
 
 Once you've created a Blue Button 2.0 sandbox application, you can start making requests. The instructions in this section will get you up and running quickly with Postman or cURL.
 
@@ -160,10 +162,9 @@ First, obtain an access token. To test using your sandbox application, you can u
 Once you have an access token, you can start making API calls with cURL. For example, the following command will retrieve explanation of benefit information for the authenticated patient (replace `<YOUR ACCESS TOKEN>` with your actual access token):  
 
 
-`curl --location "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/" --header "Accept: application/json" --header "Authorization: Bearer <YOUR ACCESS TOKEN>"
-`
+`curl --location "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/" --header "Accept: application/json" --header "Authorization: Bearer <YOUR ACCESS TOKEN>"`
 
-## 5\. Next steps
+## 5. Next steps
 
 If you're ready to start building, check out our Sample Applications or SDKs:
 

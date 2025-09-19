@@ -25,8 +25,9 @@ import Button from "#components/button.astro";
       <Card
         heading="For Developers"
         img={Browsers}
-        footer="Sign up for the developer sandbox"
-        footerLink=""
+        footer="Sign up for the sandbox"
+        footerLink="https://sandbox.bluebutton.cms.gov/v1/accounts/create"
+        sandbox={true}
       >
         Explore the developer sandbox to build amazing tools and services with
         the Blue Button 2.0 API.
@@ -35,15 +36,17 @@ import Button from "#components/button.astro";
         heading="For Organizations"
         img={Whiteboard}
         footer="See the power of Blue Button 2.0"
-        footerLink=""
+        footerLink="#value-for-organizations"
+        outline={true}
       >
         Discover how your company or organization could use Blue Button 2.0.
       </Card>
       <Card
         heading="For People with Medicare"
         img={Home}
-        footer="Get Blue Button details on Medicare.gov"
+        footer="Get details on Medicare.gov"
         footerLink=""
+        outline={true}
       >
         Learn about Medicare's Blue Button & find apps you can use.
       </Card>

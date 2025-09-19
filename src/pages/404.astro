@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Link from "components/link.astro";
+import Button from "#components/button.astro";
+---
+
+<BaseLayout
+	title="Page Not Found"
+	description="The page you are looking for can't be found or does not exist."
+	showSideNav={false}
+	showInPageNav={false}
+>
+  <script type="text/javascript">
+    utag_data["page_type"] = true;
+  </script>
+  <div class="margin-y-7">
+    <h1>Page Not Found</h1>
+    <p class="usa-intro">
+      We're sorry, we can't find the page you're looking for. It may have been removed, changed location, or become
+      unavailable.
+    </p>
+    <p>
+      If you typed the URL directly, check your spelling and capitalization. Our URLs look like this:
+      <strong>bluebutton.cms.gov/support</strong>.
+    </p>
+    <p>
+      Email <a href="mailto:BlueButtonAPI@cms.hhs.gov">BlueButtonAPI@cms.hhs.gov</a> to troubleshoot and ask questions, or visit our
+      sitemap to find the page you're looking for.
+    </p>
+    <div class="margin-y-5">
+      <ul class="usa-button-group">
+        <li class="usa-button-group__item">
+          <a
+            href=""
+            class="usa-button"
+          >Visit sitemap</a>
+        </li>
+        <li class="usa-button-group__item">
+          <a
+            class="usa-button usa-button--outline"
+            href="mailto:BlueButtonAPI@cms.hhs.gov"
+          >Email us</a>
+        </li>
+      </ul>
+    </div>
+    <p class="text-base"><strong>Error code:</strong> 404</p>
+  </div>
+</BaseLayout>

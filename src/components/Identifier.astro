@@ -67,6 +67,20 @@ import { IDENTIFIER_LINKS } from "utils/constants";
             </li>
           ))
         }
+        <li class="usa-identifier__required-links-item">
+          <button
+            class="usa-identifier__required-link usa-link usa-button--unstyled"
+            data-privacy-policy="modal-trigger-footer"
+            onclick="utag.gdpr.showConsentPreferences()"
+          >
+            Privacy Settings</button>
+        </li>
+        <li class="usa-identifier__required-links-item">
+          <a
+            href="/sitemap"
+            data-tealium="identifier"
+            class="usa-identifier__required-link usa-link"
+          >Sitemap</a>
       </ul>
     </div>
   </nav>

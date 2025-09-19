@@ -7,6 +7,7 @@ import { render } from "astro:content";
 import ProcessList from "components/process-list.astro";
 import ProcessListItem from "components/process-list-item.astro";
 import CopySnippet from "components/copy-snippet.astro";
+import Button from "#components/button.astro"
 
 const entry = await getEntry("pages", "api-documentation");
 if (!entry) {
@@ -24,6 +25,7 @@ const { Content, headings } = await render(entry);
 				ProcessList,
 				ProcessListItem,
 				CopySnippet,
+				Button,
 			}}
 		/>
 	</main>

@@ -9,6 +9,7 @@ interface Props extends HTMLAttributes<"a"> {
     unstyled?: boolean;
     outline?: boolean;
     icon?: boolean;
+    sandbox?: boolean;
 }
 
 const {
@@ -16,12 +17,13 @@ const {
     unstyled = false,
     outline = false,
     icon = false,
+    sandbox = false,
 } = Astro.props;
 ---
 
 <a
     href={link}
-    class={`margin-y-2 usa-button${outline ? " usa-button--outline" : ""} ${unstyled ? " usa-button--unstyled" : ""}`}
+    class={`margin-y-2 usa-button${outline ? " usa-button--outline" : ""} ${unstyled ? " usa-button--unstyled" : ""} ${sandbox ? " usa-button--secondary" : ""}`}
     ><slot />
     {
         icon ? (
