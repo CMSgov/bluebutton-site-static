@@ -582,8 +582,7 @@ main {
   @include u-padding-right(15);
 }
 
-code.language-plaintext.highlighter-rouge,
-code.inline-code {
+code {
   background-color: color('base-lightest');
   padding-top: .125rem;
   padding-bottom: .125rem;
