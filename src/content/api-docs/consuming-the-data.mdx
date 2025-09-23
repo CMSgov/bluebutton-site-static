@@ -19,30 +19,30 @@ FHIR `Bundle` example:
 <CopySnippet
   lang="json"
   code={
-    `{
-        "resourceType": "Bundle",
-            "id": "123",
-            ....
-            ....
-            "type": "searchset",
-            "total": 99,
-            "entry": [
-                {
-                    "resource": {
-                        "resourceType": "ExplanationOfBenefit",
-                        "id": "carrier--123",
-                        ....
-                    }
-                }
-                {
-                    "resource": {
-                        "resourceType": "ExplanationOfBenefit",
-                        "id": "carrier--456",
-                        ....
-                    }
-                }  
-            ]
-    }`
+`{
+    "resourceType": "Bundle",
+    "id": "123",
+    ....
+    ....
+    "type": "searchset",
+    "total": 99,
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "ExplanationOfBenefit",
+                "id": "carrier--123",
+                ....
+            }
+        }
+        {
+            "resource": {
+                "resourceType": "ExplanationOfBenefit",
+                "id": "carrier--456",
+                ....
+            }
+        }  
+    ]
+}`
 }
 />
 
@@ -86,8 +86,10 @@ For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle
 
 Bundle navigation example:
 
-~~~
-"resourceType": "Bundle",
+<CopySnippet
+  lang="json"
+  code={
+`"resourceType": "Bundle",
     "id": "5e5844c4-d3e2-44ca-8c87-77efccc5d60d",
     ...
     ...
@@ -109,8 +111,9 @@ Bundle navigation example:
             "relation": "self",
             "url": "{host}/v2/fhir/ExplanationOfBenefit?&startIndex=.....
          }
-    ],
-~~~
+    ],`
+}
+/>
 
 ## Working with identifiers
 
@@ -128,8 +131,10 @@ For example, you can use discriminators to pull the current MBI from a Patient r
 
 Patient identifier example:
 
-~~~
-"identifier": [
+<CopySnippet
+  lang="json"
+  code={
+    `"identifier": [
         {
             "system": "http://hl7.org/fhir/sid/us-mbi",
             "type": {
@@ -169,15 +174,21 @@ Patient identifier example:
             "value": "<HISTORIC MBI HERE>"
         }
     ],
-~~~
+`
+}
+/>
 
 Example [FHIRPath expression](https://hl7.org/fhir/fhirpath.html)  for pulling the current MBI:
 
-~~~
-Patient.identifier.where(type.coding.extension('https://bluebutton.cms.gov/
+<CopySnippet
+  lang="json"
+  code={
+    `Patient.identifier.where(type.coding.extension('https://bluebutton.cms.gov/
 resources/codesystem/identifier-currency').valueCoding.code =
 'current').where(system = 'http://hl7.org/fhir/sid/us-mbi').value
-~~~
+`
+}
+/>
 
 ## Working with references
 
@@ -189,8 +200,10 @@ For literal references, relative URLs are provided.  In the sample EOB resource 
 
 Literal reference example:
 
-~~~
-"resource": {
+<CopySnippet
+  lang="json"
+  code={
+    `"resource": {
     "resourceType": "ExplanationOfBenefit",
     "id": "carrier--10045426206",
     ....
@@ -198,7 +211,9 @@ Literal reference example:
     "patient": {
         "reference": "Patient/123"
     },
-~~~
+`
+}
+/>
 
 ### Contained resources
 
@@ -206,8 +221,10 @@ The Blue Button API also uses fragments and [contained resources](https://www.hl
 
 Contained resource example:
 
-~~~
-"contained": [
+<CopySnippet
+  lang="json"
+  code={
+    `"contained": [
     {
         "active": true,
         "id": "provider-org",
@@ -224,7 +241,9 @@ Contained resource example:
 "provider": {
     "reference": "#provider-org"
 },
-~~~
+`
+}
+/>
 
 ### Logical references
 
@@ -234,8 +253,10 @@ In the example below, the `Eob.careTeam.provider` attribute contains a reference
 
 Logical reference example:
 
-~~~
-"careTeam": [
+<CopySnippet
+  lang="json"
+  code={
+    `"careTeam": [
         {
             "provider": {
                 "identifier": {
@@ -251,7 +272,9 @@ Logical reference example:
                     "value": "123"
                 }
             },
-~~~
+`
+}
+/>
 
 ## Extensions and SupportingInfo
 
@@ -267,8 +290,10 @@ In the example below, there are two extensions:
 
 Extension example:
 
-~~~
-"extension": [
+<CopySnippet
+  lang="json"
+  code={
+    `"extension": [
     {
         "url": "https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd",
         "valueCoding": {
@@ -283,8 +308,10 @@ Extension example:
             "system": "https://bluebutton.cms.gov/resources/variables/carr_num",
             "value": "15202"
         }
-    }
-~~~
+    },
+`
+}
+/>
 
 ### SupportingInfo attribute
 
@@ -302,8 +329,10 @@ Each entry is a code from a given codesystem or valueset with information about 
 
 Claim type example:
 
-~~~
-"type": {
+<CopySnippet
+  lang="json"
+  code={
+    `"type": {
     "coding": [
         {
             "code": "71",
@@ -318,7 +347,9 @@ Claim type example:
         .....
     ]
 },
-~~~
+`
+}
+/>
 
 For more information about determining claim types, see the following coding system reference links:
 - [EOB type](/resources/codesystem/eob-type/)
@@ -333,8 +364,10 @@ For example, `Eob.item.diagnosisSequence` links to `Eob.diagnosis.sequence`, whi
 
 Linking item example:
 
-~~~
-"item": [
+<CopySnippet
+  lang="json"
+  code={
+`"item": [
     {
         "adjudication": [
         ....
@@ -388,4 +421,6 @@ Linking item example:
                         "display": "Performing provider",
             ....
             ....       
-~~~
+`
+}
+/>

@@ -40,9 +40,12 @@ To allow a user to authorize your application, direct them to the BB2.0 API `/au
 
 Example call:
 
-~~~
-https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&scope=openid%20profile%20patient%2FPatient.rs%20patient%2FCoverage.rs%20patient%2FExplanationOfBenefit.rs&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
-~~~
+<CopySnippet
+  lang="json"
+  code={
+`https://sandbox.bluebutton.cms.gov/v2/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http://localhost:8080/testclient/callback&response_type=code&scope=openid%20profile%20patient%2FPatient.rs%20patient%2FCoverage.rs%20patient%2FExplanationOfBenefit.rs&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256`
+}
+/>
 
 Note: The authorization in the example is started by an HTTP GET operation. For [SMART App Launch](https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html) compliance, POST style authorization is also supported.
 
@@ -132,22 +135,42 @@ Note: The authorization in the example is started by an HTTP GET operation. For 
   </tbody>
 </table>
 
-
 #### Authorization screen language selection
 
 The BB2.0 user authorization screens are available in both English (the default)  and Spanish. Language selection for these screens works as follows:
 
-- To explicitly specify the language for the Blue Button 2.0 authorization screens, add the optional `lang` parameter to your `/authorize` request. Valid values are `en` (English) and `es` (Spanish).
-  - Example: `https://sandbox.bluebutton.cms.gov/v2/o/authorize/?lang=es`
+- To explicitly specify the language for the Blue Button 2.0 authorization screens, add the optional `lang` parameter to your `/authorize` request. Valid values are `en` (English) and `es` (Spanish). For example: 
+
+<CopySnippet
+  lang="json"
+  code={
+    `https://sandbox.bluebutton.cms.gov/v2/o/authorize/?lang=es`
+}
+/>
+  
 - If the `lang` parameter is omitted or is set to a value other than `en` or `es`, the API server will next check the `Accept-Language` HTTP header in the `/authorize` request. 
   - If the language settings in a user's web browser lists Spanish higher in the preference list than English, the browser will automatically include the correct `Accept-Language` value to request the Spanish-language screens. 
 - If neither English or Spanish is requested via the `lang` parameter or `Accept-Language` header, the API server will default to the English version of the authorization screens.
 
 ### Token endpoints
 
-- Sandbox: `https://sandbox.bluebutton.cms.gov/v2/o/token/`
-- Production: `https://api.bluebutton.cms.gov/v2/o/token/`
+#### Sandbox
 
+<CopySnippet
+  lang="json"
+  code={
+    `https://sandbox.bluebutton.cms.gov/v2/o/token/`
+}
+/>
+
+#### Production
+
+<CopySnippet
+  lang="json"
+  code={
+    `https://api.bluebutton.cms.gov/v2/o/token/`
+}
+/>
 
 ### Exchange code for token
 
@@ -155,7 +178,13 @@ If the user authorizes your application, the BB2.0 API redirects back to the `re
 
 For example, if the Redirect URI is `http://localhost:8080/testclient/callback`, BB2.0 API will redirect with this request:
 
+<CopySnippet
+  lang="json"
+  canCopy={false}
+  code={
 `GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&state=8e896a59f0744a8e93bf2f1f13230`
+}
+/>
 
 Your application can now exchange the code provided in the redirected request for an access token. 
 
@@ -170,26 +199,32 @@ To retrieve an access token, POST to the BB2.0 /token endpoint providing the cod
 
 #### cURL command
 
-~~~
-curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
+<CopySnippet
+  lang="json"
+  code={
+`curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 -u "<client_id>:<client_secret>" \
 -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost:8080/testclient/callback&
 scope=profile patient/Patient.rs patient/ExplanationOfBenefit.rs patient/Coverage.rs&
-code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
-~~~
+code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"`
+}
+/>
 
 #### Token response
 
-~~~
-{
+<CopySnippet
+  lang="json"
+  code={
+`{
     "access_token": "oQlduHNr09GKCU506GOgp8OarrAy2q",
     "expires_in": 16768.523842,
     "token_type": "Bearer",
     "scope": "profile patient/Patient.rs patient/ExplanationOfBenefit.rs patient/Coverage.rs",
     "refresh_token": "wDimPGoA8vwXP51kie71vpsy9l17HN",
     "access_grant_expiration": "2025-09-05 19:17:53Z"
+}`
 }
-~~~
+/>
 
 Applications in the "10 hours" access category do not receive a refresh token in the BB2.0 token response.
 
@@ -210,18 +245,23 @@ To retrieve a new refresh token, POST to the BB2.0 API `/token` endpoint with th
 
 #### cURL command
 
-~~~
-curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
+<CopySnippet
+  lang="json"
+  code={
+`curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 -u "<client_id>:<client_secret>" \
--d "grant_type=refresh_token&refresh_token=wDimPGoA8vwXP51kie71vpsy9l17HN"
-~~~
+-d "grant_type=refresh_token&refresh_token=wDimPGoA8vwXP51kie71vpsy9l17HN"`
+}
+/>
 
 #### Token response 
 
 (successful with 200 status code):
 
-~~~
-{
+<CopySnippet
+  lang="json"
+  code={
+`{
     "access_token": "VD1VaT4IfjXAMlZTS9E4RVXZlkhYG7",
     "expires_in": 36000,
     "token_type": "Bearer",
@@ -229,8 +269,9 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
     "refresh_token": "7x0VkRQlRU4fRNCQL2vh239nIyucgw",
     "patient": "-20140000000001",
     "access_grant_expiration": "2025-09-05 19:17:53Z"
+}`
 }
-~~~
+/>
 
 ### Revoking tokens
 
@@ -244,12 +285,15 @@ To revoke an access token, POST to the BB2.0 API `/revoke` endpoint with the fol
 
 #### cURL command
 
-~~~
-curl -X POST --url 'https://bluebutton.cms.gov/v2/o/revoke/' \
+<CopySnippet
+  lang="json"
+  code={
+`curl -X POST --url 'https://bluebutton.cms.gov/v2/o/revoke/' \
 --header 'content-type: application/x-www-form-urlencoded' \
 -u <client_id>:<client_secret> \
--d 'token=oQlduHNr09GKCU506GOgp8OarrAy2q'
-~~~
+-d 'token=oQlduHNr09GKCU506GOgp8OarrAy2q'`
+}
+/>
 
 #### Response
 
@@ -263,11 +307,14 @@ A refresh token can only be used one time. The following is an example of an err
 
 Response (unsuccessful with 400 status code):
 
-~~~
-{
+<CopySnippet
+  lang="json"
+  code={
+`{
     "error": "invalid_grant"
+}`
 }
-~~~
+/>
 
 If you receive this error, verify that your refresh token sent the correct value.  If it's already been used, the user should be directed to re-authorize following the original authorization flow above.
 
@@ -277,11 +324,14 @@ If your request has any issues with client credentials or permissions, the follo
 
 Response (unsuccessful with 401 status code):
 
-~~~
-{
+<CopySnippet
+  lang="json"
+  code={
+    `{
     "error": "invalid_client"
+}`
 }
-~~~
+/>
 
 If you receive this message, double-check that the request looks correct. If everything looks correct, email [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov), and the Blue Button 2.0 API team can help troubleshoot.
 
@@ -291,13 +341,16 @@ If your authorization for accessing user data has expired, the corresponding acc
 
 Response (unsuccessful with 400 status code):
 
-~~~
-{
+<CopySnippet
+  lang="json"
+  code={
+`{
     "status_code": 400,
     "error": "invalid_grant",
     "error_description": "The authorization for accessing user data has expired. To refresh Medicare data, the end user must re-authenticate and consent to data sharing."
+}`
 }
-~~~
+/>
 
 For information on re-authorizing, see [user authorization](#user-authorization).
 
@@ -319,19 +372,25 @@ POST to the BB2.0 API `/expire_authenticated_user` endpoint with the following p
 
 #### cURL command
 
-~~~
-curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/-20140000000001/" \
+<CopySnippet
+  lang="json"
+  code={
+`curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/-20140000000001/" \
 -u "<client_id>:<client_secret>" \
--H "Content-Length: 0"
-~~~
+-H "Content-Length: 0"`
+}
+/>
 
 #### Response 
 
 Successful with 200 status code:
 
-~~~
-success
-~~~
+<CopySnippet
+  lang="json"
+  code={
+`success`
+}
+/>
 
 #### Common error responses
 

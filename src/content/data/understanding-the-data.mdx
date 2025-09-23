@@ -27,16 +27,20 @@ The Explanation of Benefit resource provides data for the following claim types:
 
 Request:
 
-~~~
-HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id]  
-~~~
+<CopySnippet
+  lang="json"
+  code={
+`HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id]`}
+/>
 
 This request returns claims as [Explanation of Benefit Resources](https://hl7.org/fhir/R4/explanationofbenefit.html) inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html).   
 
 Example response excerpt:
 
-~~~
-{
+<CopySnippet
+  lang="json"
+  code={
+`{
     "total":99,
     "entry": [
         {
@@ -62,29 +66,38 @@ Example response excerpt:
                         },
                         "system":"https://bluebutton.cms.gov/resources/variables/clm_id",
                         "value":"-10045426206"
-                    },
-~~~
+                    },`
+}
+/>
   
 <a href="/sample-eob-entry.json" download>Download a sample EOB resource</a>
 
 ### Patient  
 
-~~~
-HTTP GET /v2/fhir/Patient/[fhir_id]  
-~~~
+<CopySnippet
+  lang="json"
+  code={
+`HTTP GET /v2/fhir/Patient/[fhir_id]`
+}
+/>
 
 The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html). This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes).  
 
 Request:
 
-~~~
-curl --header "Authorization:Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325"`  
-~~~
+<CopySnippet
+  lang="json"
+  code={
+    `curl --header "Authorization:Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325"`
+}
+/>
 
 Example response excerpt:
 
-~~~
-{
+<CopySnippet
+  lang="json"
+  code={
+`{
     "resourceType": "Patient",
     "id": "-20000000001112",
     "meta": {
@@ -130,29 +143,38 @@ Example response excerpt:
             "postalCode":"99999"
         }
     ]
+}`
 }
-~~~
+/>
 
 <a href="/sample-patient-entry.json" download>Download a sample Patient FHIR Resource</a>  
 
 ### Coverage  
 
-~~~
-HTTP GET /v2/fhir/Coverage/?beneficiary=[fhir_id]  
-~~~
+<CopySnippet
+  lang="json"
+  code={
+`HTTP GET /v2/fhir/Coverage/?beneficiary=[fhir_id]`
+}
+/>
 
 The above URL returns Coverage information as [Coverage resources](http://hl7.org/fhir/R4/coverage.html) inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html). One coverage resource is supplied for each coverage type.
 
 Request: 
 
-~~~
-curl --header "Authorization:Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325"`
-~~~
+<CopySnippet
+  lang="json"
+  code={
+`curl --header "Authorization:Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325"`
+}
+/>
 
 Response excerpt:
 
-~~~
-{
+<CopySnippet
+  lang="json"
+  code={
+`{
     "resourceType":"Bundle",
     "id":"fb4bffd7-abb3-401f-96cd-d617c545092c",
     "meta":{
@@ -183,9 +205,9 @@ Response excerpt:
                 "subscriberId": "2S00A00AA00",
                 "beneficiary": {
                     "reference":"Patient/-20000000001112"
-                },
-
-~~~
+                },`
+}
+/>
 
 <a href="/sample-coverage-entry.json" download>Download a sample Coverage FHIR Resource</a>  
 
@@ -201,14 +223,19 @@ The above URL returns basic information about the user, given an authorization t
 
 Request:
 
-~~~
-curl --header "Authorization: Bearer <AUTHORIZATIONTOKEN\>" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"`
-~~~
+<CopySnippet
+  lang="json"
+  code={
+`curl --header "Authorization: Bearer <AUTHORIZATIONTOKEN\>" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"`
+}
+/>
 
 Example response:
 
-~~~
-{
+<CopySnippet
+  lang="json"
+  code={
+`{
     "sub": "-123456789",
     "prefered_username": "fflinstone",
     "given_name": "Fred",
@@ -217,8 +244,9 @@ Example response:
     "email": "pebbles-daddy@example.com",
     "created": "2017-11-28",
     "patient": "-123456789",
+}`
 }
-~~~
+/>
 
 ## Terminology and coding systems
 
@@ -234,7 +262,7 @@ Additional information about coding systems can be found on the [terminology pag
 
 BB2.0 API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html). FHIR extensions are custom data elements that are not found in the FHIR standard:
 
-- [Blue Button extensions in V2 (CSV 96KB)](/assets/csv/BB_V2_extension_listing.csv)
+- [Blue Button extensions in v2 (CSV 96KB)](/assets/csv/BB_V2_extension_listing.csv)
 
 ## Refresh rate and rate limiting
 
