@@ -27,21 +27,26 @@ const {
 const site = Astro.site;
 
 let computedIsExternal = isExternal;
-const computedHref = $path({
-  to,
-  params,
-  search,
-  searchParams,
-  hash,
-  trailingSlash,
-});
+// Default to plain href first to support markdown
+let computedHref = href; 
+
+if (to) {
+  computedHref = $path({
+    to,
+    params,
+    search,
+    searchParams,
+    hash,
+    trailingSlash,
+  });
+}
 
 if (href) {
   try {
     const { hostname } = new URL(href || "");
     if (hostname === site?.hostname) {
       throw new Error(
-        `${href} is an internal link! Use 'to' instead of 'href' and unset 'isExternal'.`,
+        `${to}`,
       );
     }
   } catch {
@@ -51,7 +56,7 @@ if (href) {
 ---
 
 <a
-  href={computedHref || href}
+  href={computedHref}
   target={computedIsExternal ? "_blank" : undefined}
   rel={computedIsExternal ? "noopener" : undefined}
   {...props}
@@ -66,5 +71,4 @@ if (href) {
         class="margin-left-2px"
       />
     ) : null
-  }</a
->
+  }</a>

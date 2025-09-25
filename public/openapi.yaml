@@ -817,7 +817,7 @@ components:
         ui_locales_supported:
           - en-US
         service_documentation: 'https://bluebutton.cms.gov/developers'
-        op_tos_uri: 'https://bluebutton.cms.gov/terms'
+        op_tos_uri: 'https://bluebutton.cms.gov/resources/terms'
         grant_types_supported:
           - authorization-code
           - refresh_token
@@ -835,7 +835,7 @@ components:
         ui_locales_supported:
           - en-US
         service_documentation: 'https://bluebutton.cms.gov/developers'
-        op_tos_uri: 'https://bluebutton.cms.gov/terms'
+        op_tos_uri: 'https://bluebutton.cms.gov/resources/terms'
         grant_types_supported:
           - authorization-code
           - refresh_token
