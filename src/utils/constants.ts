@@ -126,5 +126,9 @@ export const IDENTIFIER_LINKS: IdentifierLinks = [
   {
     href: "https://www.cms.gov/about-cms/performance-budget/current",
     label: "Performance Reports"
+  },
+{
+    href: "/resources/terms",
+    label: "Terms of Service"
   },]
 
