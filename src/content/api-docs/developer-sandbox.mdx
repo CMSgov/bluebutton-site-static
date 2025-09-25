@@ -6,7 +6,7 @@ sortOrder: 2
 
 To get started integrating with the Blue Button 2.0 API, you'll need to register a sandbox application. You don't need a working application at this point, but you need to define basic settings to generate client credentials for testing purposes.   
 
-      <Button link="https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login" sandbox={true}>Visit the Sandbox</Button>
+<Button link="https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login" sandbox={true}>Visit the Sandbox</Button>
 
 ## 1. Register an application in the developer sandbox
 
@@ -49,8 +49,8 @@ Sample format:
 
 This setting determines 2 things:
 
-* What [scopes](#scopes) are applied to your application (determines which API calls your application can execute).
-* The information and options displayed on the authorization screen Medicare enrollees use to allow or deny your application access to their data.
+* What [scopes](/authorization#scopes) are applied to your application (determines which API calls your application can execute).
+* The information and options displayed on the authorization screen Medicare enrollees use to allow or deny your application access to their data
 
 <table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-4">
   <caption class="usa-sr-only">Demographic data settings</caption>
@@ -79,7 +79,7 @@ This setting determines 2 things:
   </tbody>
 </table>
 
-To learn more about scopes and permissions, visit [Authorization](#authorization).
+To learn more about scopes and permissions, visit [Authorization](/authorization).
 
 ## 3. Save your application
 
@@ -90,7 +90,7 @@ After you register your sandbox application, you'll get a Client ID and Client S
 * Client ID: an alphanumeric string used to identify your application. Use this in your code when you call the Blue Button 2.0 API.
 * Client Secret: an alphanumeric string used by your application to authenticate with the Blue Button server.  
 
-Note: Client credentials from the developer sandbox only work in the sandbox environment. To get production credentials, you need to complete the [production access requirements](#production-api-access) and be approved.  
+Note: Client credentials from the developer sandbox only work in the sandbox environment. To get production credentials, you need to complete the [production access requirements](/production-access) and be approved.  
 
 ## 4. Test the API with Postman or cURL
 
@@ -142,7 +142,7 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
 
 8. Click **Get New Access Token**.
 
-9. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.
+9. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](/data/understanding-the-data#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.
 <img src="/src/assets/images/bb-postman-10.png" alt="Medicare login window" />
 
 10. Click **Connect**.<img style="width: 100%;" src="/src/assets/images/bb-postman-11.png" alt="Connect button" />
@@ -171,7 +171,7 @@ First, obtain an access token. To test using your sandbox application, you can u
 4. Click **Authorize as a Beneficiary**.
 <img style="width: 100%;" src="/src/assets/images/bb-postman-08.png" alt="Authorize as a Beneficiary button" />
 
-5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = `BBUser00000` and password = `PW00000!`), and click **Log in**.
+5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](/data/understanding-the-data#authenticating-as-a-synthetic-user) (e.g., user = `BBUser00000` and password = `PW00000!`), and click **Log in**.
 <img src="/src/assets/images/bb-postman-10.png" alt="Medicare login window" />
 
 6. Click **Connect**.<img style="width: 100%;" src="/src/assets/images/bb-postman-11.png" alt="Connect button" />

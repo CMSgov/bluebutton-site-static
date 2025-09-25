@@ -70,7 +70,7 @@ Example response excerpt:
 }
 />
   
-<a href="/sample-eob-entry.json" download>Download a sample EOB resource</a>
+<a href="/src/assets/files/sample-eob-entry.json" download>Download a sample EOB resource</a>
 
 ### Patient  
 
@@ -81,7 +81,7 @@ Example response excerpt:
 }
 />
 
-The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html). This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes).  
+The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html). This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](/api-docs/authorization#scopes).  
 
 Request:
 
@@ -147,7 +147,7 @@ Example response excerpt:
 }
 />
 
-<a href="/sample-patient-entry.json" download>Download a sample Patient FHIR Resource</a>  
+<a href="/src/assets/files/sample-patient-entry.json" download>Download a sample Patient FHIR Resource</a>  
 
 ### Coverage  
 
@@ -209,13 +209,13 @@ Response excerpt:
 }
 />
 
-<a href="/sample-coverage-entry.json" download>Download a sample Coverage FHIR Resource</a>  
+<a href="/src/assets/files/sample-coverage-entry.json" download>Download a sample Coverage FHIR Resource</a>  
 
 ## UserInfo
 
 The UserInfo endpoint is an OAuth 2.0 Protected Resource that returns information about an authenticated user.   
 
-Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](#scopes). 
+Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](/api-docs/authorization#scopes). 
 
 `HTTP GET /connect/userinfo`  
 

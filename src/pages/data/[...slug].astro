@@ -4,6 +4,10 @@ import DocsLayout from "layouts/DocsLayout.astro";
 import Link from "#components/link.astro";
 import CopySnippet from "#components/copy-snippet.astro";
 import Button from "#components/button.astro";
+import Card from "#components/card.astro";
+import LogoAB2D from "#assets/images/logo-ab2d-sm.svg?url";
+import LogoBCDA from "#assets/images/logo-bcda.svg?url";
+import LogoDPC from "#assets/images/logo-dpc.svg?url";
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
@@ -24,6 +28,10 @@ const { Content, headings } = await render(post);
       a: Link,
       CopySnippet,
       Button,
+      Card,
+      LogoAB2D,
+      LogoBCDA,
+      LogoDPC,
     }}
   />
 </DocsLayout>
