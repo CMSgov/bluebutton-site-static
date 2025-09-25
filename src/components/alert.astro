@@ -1,16 +1,20 @@
 ---
 type Props = {
   heading?: string;
+  slim?: string;
+  type: string; 
 };
 
-const { heading } = Astro.props;
+const { heading, slim = "false", type = "info" } = Astro.props;
 ---
 
-<div class="usa-alert usa-alert--warning usa-alert--no-icon">
-  <div class="usa-alert__body">
-    {heading ? <h4 class="usa-alert__heading">{heading}</h4> : null}
-    <div class="usa-alert__text">
-      <slot />
+<div class="grid-container padding-x-0 margin-y-2">
+  <div class={`maxw-tablet-lg usa-alert usa-alert--${type} usa-alert--no-icon${slim ? " usa-alert--slim" : null }`}>
+    <div class="usa-alert__body">
+      {heading ? <h4 class="usa-alert__heading">{heading}</h4> : null}
+      <div class="usa-alert__text">
+        <slot />
+      </div>
     </div>
   </div>
 </div>

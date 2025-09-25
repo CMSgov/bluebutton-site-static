@@ -1,4 +1,8 @@
 ---
+import Icon from "#components/icon.astro";
+import Add from "@uswds/uswds/img/usa-icons/add.svg";
+import Remove from "@uswds/uswds/img/usa-icons/remove.svg";
+
 type Props = {
   heading: string;
   id: string;
@@ -12,12 +16,13 @@ const { heading, id } = Astro.props;
         <h4 class="usa-accordion__heading">
             <button
                 type="button"
-                class="usa-accordion__button"
+                class="usa-accordion__button flex-justify flex-align-center"
                 aria-expanded="false"
                 aria-controls={id}
                 data-tealium="accordion"
             >
                 {heading}
+                <Icon icon={Add} color="base-dark" size={3} />
             </button>
         </h4>
         <div

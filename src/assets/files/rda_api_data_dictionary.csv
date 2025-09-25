@@ -1,0 +1,591 @@
+Source system,Field name,Source copybook field label,RDA API field label,Category,Copybook data dictionary name (if different),Source system definition,Plain language definition,Additional context ,Enum Y/N,Source system field types and values according to their documentation,Copybook source,Version added,CCLF Mapping,CCW Mapping ,837 Mapping ,FISS <> MCS Mapping,Open questions 
+FISS,Batch Audit Current Date,BADT-CURR-DATE-CYMD,fiss_audit_trail.badt_curr_date_cymd,Claim processing,n/a,"This field is the group level name for the batch cycle transaction date (century, year, month, day) for the claim audit trail.",,,N,CC-YY-MM-DD date format,FSRCCXLB,0.5,,,,,
+FISS,Batch Audit Location,BADT-LOC,fiss_audit_trail.badt_loc,Claim processing,n/a,"This field identifies where the claim is currently located in the system. The first position identifies the type of processing occurring on the claim. The second and third position represents the driver name. The fourth and fifth position allow for further category definition with the driver.
+Note: The claim status is combined with the claim location to route claims through the system.",,,N,"Alphanumeric, 5 digits
+This field will have the same range of values as the CURR-LOCATION field. See the table of Location Codes from the Intro-Status-Location document, copied in tab C for convenience. ",FSRCCXLB,0.5,,,,,
+FISS,Batch Audit Operator ID,BADT-OPER-ID,fiss_audit_trail.badt_oper_id,Claim processing,n/a,"This field identifies the authorized operator that created, or revised data that processed to the claim audit trail. This field is also utilized in a variety of mainframe programs to identify a program name, or function that processes a request in the system, as an operator.Note: Security authorization is handled through the Operator Control file.",,,N,"Alphanumeric, 9 digits",FSRCCXLB,0.5,,,,,
+FISS,Batch Audit Reason Code,BADT-REAS,fiss_audit_trail.badt_reas,Claim processing,n/a,This field identifies the system edit code on the claim audit trail.,,,N,"Alphanumeric, 5 digits.
+
+See Table 134, Table 135 and Table 136 in the FISS Quick Reference, copied in tab C for convenience. ",FSRCCXLB,0.5,,,,,
+FISS,Batch Audit Status,BADT-STATUS,fiss_audit_trail.badt_status,Claim processing,n/a,"This field identifies the condition of the claim (paid, reject, deny, etc.) on the claim audit trail.
+Note: The claim status is combined with the claim location to route claims through the system.",,,,"Alphanumeric, 1 digit
+This field will have the same range of values as the CURR-STATUS field. Refer to Table 1, Pending Statuses from the FISS Intro-Status-Location document, copied in tab C for convenience. ",FSRCCXLB,0.5,,,,,
+FISS,Audit Trail Table Position Number,not in source copybook ,fiss_patients.rda_position,Field created for RDA API,n/a,This field does not exist in the Shared Systems. ,,This field indicates the order of the rows in the fiss_audit_trail table. ,,"1 character, numeric",n/a,0.7,,,,,
+FISS,Patient Table Position Number,not in source copybook ,fiss_patient_table.rda_position,Field created for RDA API,n/a,This field does not exist in the Shared Systems. ,,This field indicates the order of the rows in the fiss_patients table. ,,"1 character, numeric",n/a,0.7,,,,,
+FISS,Diagnosis Code Table Position Number,not in source copybook ,fiss_diagnosis_codes.rda_position,Field created for RDA API,n/a,This field does not exist in the Shared Systems. ,,This field indicates the order of the rows in the fiss_diagnosis_codes table. ,,"1 character, numeric",n/a,0.7,,,,,
+FISS,Payer Table Position Number,not in source copybook ,fiss_payer_table.rda_position,Field created for RDA API,n/a,This field does not exist in the Shared Systems. ,,This field indicates the order of the rows in the fiss_payers table. ,,"1 character, numeric",n/a,0.7,,,,,
+FISS,Procedure Code Table Position Number,not in source copybook ,fiss_proc_codes.rda_position,Field created for RDA API,n/a,This field does not exist in the Shared Systems. ,,This field indicates the order of the rows in the fiss_proc_codes table. ,,"1 character, numeric",n/a,0.7,,,,,
+MCS,Adjustments Table Position Number,not in source copybook ,mcs_adjustments.rda_position,Field created for RDA API,n/a,This field does not exist in the Shared Systems. ,,This field indicates the order of the rows in the mcs_adjustments table. ,,"1 character, numeric",n/a,0.7,,,,,
+MCS,Audit Table Position Number,not in source copybook ,mcs_audits.rda_position,Field created for RDA API,n/a,This field does not exist in the Shared Systems. ,,This field indicates the order of the rows in the mcs_audits table. ,,"1 character, numeric",n/a,0.7,,,,,
+MCS,Diagnosis Code Table Position Number,not in source copybook ,mcs_diagnosis_codes.rda_position,Field created for RDA API,n/a,This field does not exist in the Shared Systems. ,,This field indicates the order of the rows in the mcs_diagnosis_codes table. ,,"1 character, numeric",n/a,0.7,,,,,
+MCS,Location Table Position Number,not in source copybook ,mcs_locations.rda_position,Field created for RDA API,n/a,This field does not exist in the Shared Systems. ,,This field indicates the order of the rows in the mcs_locations table. ,,"1 character, numeric",n/a,0.7,,,,,
+FISS,Adjustment Medicare Beneficiary Identifier,ADJ-MBI,fiss_claims.adj_mbi,Beneficiary information,n/a,This field identifies the MBI number submitted on the adjustment/cancel claim,,,N,"Alphanumeric, 11 characters",FSRCCLXB,0.5,,,,,Does this field get populated on the original claim or the child claim that is adjusting/canceling the parent claim? 
+FISS,Adjustment Medicare Beneficiary Identifier (MBI) Indicator,ADJ-MBI-IND,fiss_claims.adj_mbi_ind,Beneficiary information,n/a,This field identifies the adjustment/cancel claim that was submitted with a Health Insurance Claim (HIC) Number or MBI number.,,,Y,"Alphanumeric, 1 character
+H = The HIC was submitted on the adjustment/cancel claim
+M = The MBI was submitted on the adjustment/cancel claim
+Blank = This field will be blank on adjustment/cancel claims created prior to 7/01/18 and non-adjustment/cancel claims.",FSRCCLXB,0.5,,,,,Does this field get populated on the original claim or the child claim that is adjusting/canceling the parent claim? 
+FISS,Adjustment Reason Code,ADJ-REAS-CD,fiss_claims.adj_reas_cd,Claim processing,n/a,"This field identifies the type of adjustment being performed on the claim. For automated claims, the system sets this field. For manual adjustments, the employee enters this field.",,There are many reason codes and they can be defined definitely by different Medicare Administrative Contractors.,N,"Alphanumeric, 2 characters
+See Table 1, Adjustment Reason Codes in the FISS Quick Reference, copied in tab C for convenience. ",FSRCCLXB,0.5,,,,,"There are values in the sample data (e.g., AC, BE, CC) that aren't defined in the table from the FISS Quick Reference document. Where would we find the meanings of these codes? Is there any relationship between these reason codes and the X12 claim adjustment reason codes? https://x12.org/codes/claim-adjustment-reason-codes"
+FISS,Adjustment Requestor Identification,ADJ-REQ-CD,fiss_claims.adj_req_cd,Claim processing,n/a,This field identifies the entity responsible for the origin of the claim adjustment,,,Y,"Alphanumeric, 1 character
+F = Fiscal Intermediary 
+H = Hospital / Provider
+P = Peer Review Organization 
+S = System",FSRCCLXB,0.5,,,,,
+FISS,Admission Date,ADM-DATE-CYMD,fiss_claims.adm_date_cymd,Service information,n/a,This is a group level field that identifies the date of the patient's admission to this provider or the date Home Health services began; for the record depending on the copybook it is used in.,,This field is also provided as raw string text in the field fiss_claims.adm_date_cymd_text in case an invalid date is provided by the system,N,Date format,FSRCCLXS,0.5,,,,,
+FISS,Admitting Diagnosis Code,ADM-DIAG-CD,fiss_claims.adm_diag_cd,Service information,n/a,This field identifies the diagnosis code describing the inpatient condition at the time of the admission; for the record depending on the copybook it is used in.,,"This field uses ICD-10 codes, which range in length from 3 to 7 characters.",N,"7 digits, alphanumeric",FSRCCLXS,0.1,,,,,
+FISS,Source of Admission,ADM-SOURCE,fiss_claims.adm_source,Service information,n/a,This field identifies the way a patient was referred to the hospital for admission.,,,Y,"Alphanumeric, 1 character.
+See Table 139, Source of Admission Codes, from the FISS Quick Reference, copied in tab C for convenience. ",FSRCCLXB,0.5,,,,,
+FISS,Attending Physician Flag,ATTEND-PHYS-FLAG,fiss_claims.attend_phys_flag,Provider information,n/a,This field identifies whether an attending physician identification number is present.,,,,"Alphanumeric, 1 character
+
+'N' = No",FSRCCLXB,0.5,,,,,
+FISS,Attending Physician First Name,ATTEND-PHYS-FNAME,fiss_claims.attend_phys_fname,Provider information,n/a,This field identifies the first name of the attending physician.,,,,"Alphanumeric, 18 characters",FSRCCLXB,0.5,,,,,
+FISS,Attending Physician Last Name,ATTEND-PHYS-LNAME,fiss_claims.attend_phys_lname,Provider information,n/a,This field identifies the last name of the attending physician.,,,,"Alphanumeric, 17 characters",FSRCCLXB,0.5,,,,,
+FISS,Attending Physician Middle Initial,ATTEND-PHYS-MINT,fiss_claims.attend_phys_mint,Provider information,n/a,This field identifies the middle initial of the attending physician.,,,,"Alphanumeric, 1 character",FSRCCLXB,0.5,,,,,
+FISS,Attending Physician NPI,ATTEND-PHYS-NPI-NUM,fiss_claims.attend_phys_npi_num,Provider information,n/a,"This field identifies the attending physician NPI number assigned by the Centers for Medicare and Medicaid Services (CMS). This is an intelligence free number; meaning that the numbers do not carry information about health care providers, such as the state in which they practice or their provider type or specialization. The provider’s NPI will not change and will remain with the provider regardless of job or location changes.",,,,"Numeric, 10 characters",FSRCCLXB,0.5,,,,,
+FISS,Billing Type Code,BILL-TYP-CD,fiss_claims.bill_typ_cd,Claim information,n/a,"This field is the group level name of the data containing the type of facility, bill classification, and frequency of the claim in a particular period of care.",,"This field is a concatenation of the following three fields: lob_cd, serv_typ_cd, and freq_cd. ",,"Alphanumeric, 3 digits 
+
+See Table 147, Table 148, Table 149, Table 150, and Table 151 in the FISS Quick Reference, copied in tab C for convenience.",FSRCCLXS,0.4,,,,,
+FISS,Cancel Adjustment Code,CANC-ADJ-CD,                                                                                                                                                               ,Claim processing,n/a,This field identifies the reason for a cancel without a corresponding repayment.,,,Y,"Alphanumeric, 1 character
+B = Home Health Prospective Payment System (HHPPS) final not received
+C = Coverage
+D = Duplicate
+E = Provider cancelled episode
+F = Fiscal Intermediary cancelled episode
+H = Other
+P = Plan Transfer
+S = Scramble HIC",FSRCCLXB,0.5,,,,,
+FISS,Cancel Date,CANCEL-DATE-CYMD,fiss_claims.cancel_date_cymd,Claim processing,n/a,This field is the group level name comprised of the Cancel Date. It identifies the date of cancellation of original payment when an adjustment has been process through the system.,,This field is populated on the parent claim that is being adjusted/canceled.,N,CC-YY-MM-DD date format,FSRCCLXS,0.5,,,,,
+FISS,Cancel Cross-reference Document Control Number,CANCEL-XREF-DCN,fiss_claims.cancel_xref_dcn,Claim processing,n/a,"This field is the identification number of the canceled claim and is only used on cancel and adjustment transactions. It provides a cross-reference number for the control and monitoring of specific claims, and to differentiate between claims for the beneficiary. This is a unique field created by the system when a match is found during the re-imaging process and is located on claim page 2 as the AD.DCN.",,This field is populated on the parent claim that is being adjusted or canceled.,N,"Alphanumeric, 23 characters",FSRCCLXB,0.5,,,,,
+FISS,Current Location 1,CURR-LOC-1,fiss_claims.curr_loc_1,Claim processing,n/a,This field identifies the type of processing occurring on the claim.,,"Claims in ""Offline"" processing will not be visible through the MPSM data replication process. As a result, RDA API users will not receive claims with an ""O"" location. For more information on status and location codes, see the FISS specification named ""Intro-Status-Location.""",,"1 character, alphanumeric
+Batch processing = 'B'
+Manual processing = 'M'
+Offline processing = 'O'",FSRCCLXS,0.1,,,,,
+FISS,Current Location 2,CURR-LOC-2,fiss_claims.curr_loc_2,Claim processing,n/a,This field contains the last four positions of the Location field. The second and third position represents the driver name. The fourth and fifth positions allow for more definition with the driver for the location.,,"For more information on status and location codes, see the FISS specification named ""Intro-Status-Location.""",N,"There are many possible location values. See the Location Codes table from the Intro-Status-Location document, copied in tab C for convenience. 
+Here are a few common values: 
+Preprocessing = '0100' 
+Unmatched' = '01LC' 
+Cable = '9000' 
+Cabled = '9900'
+Floor = '9996'
+Final = '9997'
+Offline = '9998'
+Cross Walk Down = '019M'
+Post Pay = '7500' to '7599'",FSRCCLXS,0.1,,,,,
+FISS,Current Status,CURR-STATUS,fiss_claims.curr_status,Claim processing,n/a,"This field identifies the current condition of the claim (paid, reject, deny, etc.); for the record depending on the copybook it is used in.",,"The purpose of the CURR-STATUS, CURR-LOC1 and CURR-LOC2 fields are to route claims through FISS. 
+ Medicare Administrative Contractors (MACs) establish how status and location fields are assigned to claims depending on the ""reason codes"" that are set as the outcome of specific adjudication processes. 
+For more information, see the FISS specification named ""Intro-Status-Location."" ",Y,"1 character, alphanumeric
+See Table 1, Status Codes from the Intro-Status-Location document, copied in tab C for convenience. ",FSRCCLXS,0.1,,,,,
+FISS,Current Transaction Date,CURR-TRAN-DT-CYMD,fiss_claims.curr_tran_dt_cymd,Claim processing,n/a,This field is the group level name for the transaction date of the claim; the last date the Status/Location changed or the claim was updated.,,This field is updated every time there is a change to the claim.,N,Date,FSRCCLXS,0.1,,,,,
+FISS,Document Control Number,DCN,fiss_claims.dcn,Claim information,n/a,"This field is the identification number for a claim. It provides a reference number for the control and monitoring of specific claims, and to differentiate between claims for the beneficiary; it may be used to access data for the record depending on the copybook it used for. This is a unique field created by the system.",,,N,"23 digits, alphanumeric",FSRCCLXS,0.1,,,,,
+FISS,Federal Tax Number,FED-TAX-NB,fiss_claims.fed_tax_nb,Provider information,n/a,This field identifies the number assigned to the provider by the Federal Government for tax reporting purposes. It is also known as a tax identification number (TIN) or an employer identification number (EIN).,,"Based on the sample data, in some cases only one of the NPI number or Federal Tax Number are populated; in some cases both fields are populated.",N,"10 digits, alphanumeric",FSRCCLXB,,,,,,
+FISS,Bill Frequency,FREQ-CD,fiss_claims.freq_cd,Claim information,n/a,This field contains the frequency code indicating the adjustment type. This is the last position of the Bill Type Code group field.,,This field can be used to determine if a claim is an adjustment to a previous claim.,,"Alphanumeric, 1 digit
+
+See the FISS Quick Reference, Table 151, copied in tab C for convenience.",FSRCCLXS,0.4,,,,,
+FISS,Fully or Partially Denied Indicator,FULL-PART-DEN-IND,fiss_claims.full_part_den_ind,Claim processing,n/a,This is a field that indicates whether a claim was fully or partially denied; for the record depending on the copybook it is used in.,,,N,"Alphanumeric, 1 characters
+",FSRCCLXS,0.5,,,,,
+FISS,Health Insurance Claim Number,HIC-NO,fiss_claims.hic_no,Beneficiary information,n/a,"This field identifies the patient/beneficiary number associated with a claim record, which is assigned to the beneficiary by the Centers for Medicare and Medicaid Services (CMS), and may be used to access data for the record depending on the copybook it is used in.",,"HIC numbers have been replaced by MBIs on Medicare cards and all claims since 1/1/20 must provide an MBI. However, HIC numbers are still used for internal processing, and can be used in certain situations, such as appeals, adjustments, and claim status queries. (Reference: https://www.cms.gov/Medicare/New-Medicare-Card)",N,"12 digits, alphanumeric 
+
+HIC numbers are up to 11 digits (usually 10 or 11, consisting of an SSN followed by 1 or 2 alphanumeric characters)",FSRCCLXS,0.1,,,,,"Why is this field 12 characters if a HICN is usually 10 or 11 digits, never 12? "
+FISS,Location of Bill Code,LOB-CD,fiss_claims.lob_cd,Claim information,n/a,This field indicates the type of facility of the corresponding Bill Type Code group field.,,,,"Numeric, 1 digit
+
+See the FISS Quick Reference, Table 147, copied on tab C for convenience",FSRCCLXS,0.4,,,,,
+FISS,Medicare Beneficiary Identifier,MBI,fiss_claims.mbi,Beneficiary information,n/a,This field identifies the Medicare Beneficiary Identifier assigned to the beneficiary by CMS.,,"All FISS claims will have an MBI.
+A beneficiary should only have 1 MBI, except in rare cases.  
+Per this CMS webpage on MBIs, claims with a service date from 1/1/20 or later need to use MBI.",N,"11 digits, alphanumeric
+
+MBI are always 11 digits",FSRCCLXS,0.1,,,,,
+FISS,Health Insurance Claim (HIC) Number or Medicare Beneficiary Identify (MBI),MBI-SUBM-BENE-IND,fiss_claims.mbi_subm_bene_ind,Beneficiary information,n/a,This field describes the HIC or MBI Beneficiary indicator.,,,Y,"Alphanumeric, 1 character
+
+H = HIC
+
+M = MBI
+Blank = Unknown",FSRCCLXB,0.5,,,,,
+FISS,Medicare Provider Number 1-6,MEDA-PROV-6,fiss_claims.meda_prov_6,Provider information,n/a,This group level field contains the locality state code and the identification number of the provider.,,"The locality state code is 2 digits (PROV-STATE-CD), the identification number is 4 digits and is comprised of PROV-TYPE-FACIL-CD, PROV-EMER-IND, and two filler fields.",N,"6 digits, alphanumeric",FSRCCLXS,,,,,,
+FISS,Medicare Provider ID,MEDA-PROV-ID,fiss_claims.meda_prov_id,Provider information,n/a,This field identifies the Medicare Provider number as assigned by CMS for identification of the provider rendering Medicare services.,,"The Medicare Provider ID consists of the following:
+Provider State Code
+Provider Type Facility Code
+Provider Emergency Indicator
+Provider Department Identification",N,"Up to 13 digits, alphanumeric",FSRCCLXS,0.1,,,,,
+FISS,Medical Record Number,MEDICAL-RECORD-NO,fiss_claims.medical_record_no,Beneficiary information,n/a,This field identifies the number assigned to the patient’s medical/health record by the provider.,,,N,"Alphanumeric, 17 characters",FSRCCLXB,0.5,,,,,
+FISS,New Health Insurance Claim Number,NEW-HIC,fiss_claims.new_hic,Beneficiary information,n/a,"This field identifies the correct HIC number to be entered, when a Y has been entered in the Process New Health Insurance Claim field. The system processes the claim based on this HIC number entered and establishes a Beneficiary File for this new HIC number.",,,Y,"Alphanumeric, 12 characters",FSRCCLXB,0.5,,,,,
+FISS,Non-Pay Code Indicator,NON-PAY-IND,fiss_claims.non_pay_ind,Claim processing,n/a,"This field identifies the reason for Medicare's decision not to make payment. The code had been expanded from one to two position field, and the second position can be a blank.",,,N,"Alphanumeric, 2 characters
+Refer to Table 59 in the FISS Quick Reference, copied in tab C for convenience.",FSRCCLXS,0.5,,,,,
+FISS,National Provider Identification (NPI) Number,NPI-NUMBER,fiss_claims.npi_number,Provider information,n/a,"This field contains the number as assigned by the Centers for Medicare and Medicaid Services (CMS) and is used to identify health plans, providers, and clearinghouses for the copybook it is used in, and may be used to access data for the record. The NPI, which contains no embedded information about the health care provider it identifies, never changes. It may be deactivated and then reactivated, but it does not expire. Individual providers will be assigned one NPI number and organizations will be assigned one NPI number; however, organizations may define themselves as having subparts and receive multiple NPIs. This field may be used to Cross walk to the Online Survey Certification and Reporting System (OSCAR) number.",,"NPIs are issued by the National Plan and Provider Enumeration System (NPPES). 
+
+Medicare Provider Numbers are still issued but have been renamed ""CMS Certification Numbers"" or CCN to avoid confusion with the NPI. 
+
+Reference: DHHS guidance on NPI and CCN",N,"10 digits, numeric",FSRCCLXS,0.1,,,,,
+FISS,Operating Physician Flag,OPER-PHYS-FLAG,fiss_claims.oper_phys_flag,Provider information,n/a,This field identifies whether an operating physician identification number is present.,,,Y,"Alphanumeric, 1 character
+
+'N' = No",FSRCCLXB,0.5,,,,,
+FISS,Operating Physician First Name,OPER-PHYS-FNAME,fiss_claims.oper_phys_fname,Provider information,n/a,This field identifies the first name of the operating physician.,,,N,"Alphanumeric, 18 characters",FSRCCLXB,0.5,,,,,
+FISS,Operating Physician Last Name,OPER-PHYS-LNAME,fiss_claims.oper_phys_lname,Provider information,n/a,This field identifies the last name of the operating physician.,,,N,"Alphanumeric, 17 characters",FSRCCLXB,0.5,,,,,
+FISS,Operating Physician Middle Initial,OPER-PHYS-MINT,fiss_claims.oper_phys_mint,Provider information,n/a,This field identifies the middle initial of the operating physician.,,,N,"Alphanumeric, 1 character",FSRCCLXB,0.5,,,,,
+FISS,Operating Physician NPI,OPER-PHYS-NPI-NUM,fiss_claims.oper_phys_npi_num,Provider information,n/a,"This field identifies the attending physician NPI number assigned by the Centers for Medicare and Medicaid Services (CMS). This is an intelligence free number; meaning that the numbers do not carry information about health care providers, such as the state in which they practice or their provider type or specialization. The provider’s NPI will not change and will remain with the provider regardless of job or location changes.",,,N,"Numeric, 10 characters",FSRCCLXB,0.5,,,,,
+FISS,Original Cross-Reference Document Control Number,ORIGINAL-XREF-DCN,fiss_claims.original_xref_dcn,Claim processing,n/a,This field identifies an internal field containing the original XREF DCN found on claim page 6.,,Need more research here to understand what this field means,N,"Alphanumeric, 23 characters",FSRCCLXB,0.5,,,,,
+FISS,Other Physician Flag,OTH-PHYS-FLAG,fiss_claims.oth_phys_flag,Provider information,n/a,This field identifies whether an assisting licensed physician identification number is present.,,,Y,"Alphanumeric, 1 character
+
+'N' = No",FSRCCLXB,0.5,,,,,
+FISS,Other Physician First Name,OTH-PHYS-FNAME,fiss_claims.oth_phys_fname,Provider information,n/a,This field identifies the first name of the assisting licensed physician.,,,N,"Alphanumeric, 18 characters",FSRCCLXB,0.5,,,,,
+FISS,Other Physician Last Name,OTH-PHYS-LNAME,fiss_claims.oth_phys_lname,Provider information,n/a,This field identifies the last name of the assisting licensed physician.,,,N,"Alphanumeric, 17 characters",FSRCCLXB,0.5,,,,,
+FISS,Other Physician Middle Initial,OTH-PHYS-MINT,fiss_claims.oth_phys_mint,Provider information,n/a,This field identifies the middle initial of the assisting licensed physician.,,,N,"Alphanumeric, 1 character",FSRCCLXB,0.5,,,,,
+FISS,Other Physician NPI,OTH-PHYS-NPI-NUM,fiss_claims.oth_phys_npi_num,Provider information,n/a,"This field identifies the assisting licensed physician NPI number assigned by the Centers for Medicare and Medicaid Services (CMS. This is an intelligence free number; meaning that the numbers do not carry information about health care providers, such as the state in which they practice or their provider type or specialization. The provider’s NPI will not change and will remain with the provider regardless of job or location changes.",,,N,"Numeric, 10 characters",FSRCCLXB,0.5,,,,,
+FISS,Paid Date,PAID-DT-CYMD,fiss_claims.paid_dt_cymd,Claim processing,n/a,This is a group level field that identifies the date the claim is paid; for the record depending on the copybook it is used in.,,,N,Date format,FSRCCLXS,0.5,,,,,
+FISS,Practice Location Address 1,PRAC_LOC-ADDR1,fiss_claims.prac_loc_addr1,Service information,n/a,This field identifies the first address of the Provider practice hospital location extracted from the Provider Enrollment Chain and Ownership System (PECOS) file.,,These practice location fields are blank in most of the sample data that the RDA API team has received as of August 2021.,N,"55 characters, alphanumeric",FSRCCLXB,0.2,,,,,
+FISS,Practice Location Address 2,PRAC_LOC-ADDR2,fiss_claims.prac_loc_addr2,Service information,n/a,This field identifies the second address of the Provider practice hospital location extracted from the Provider Enrollment Chain and Ownership System (PECOS) file.,,"This field should be interpreted as ""Address Line 2"" for the Provider location.",N,"55 characters, alphanumeric",FSRCCLXB,0.2,,,,,
+FISS,Practice Location City,PRAC-LOC-CITY,fiss_claims.prac_loc_city,Service information,n/a,This field identifies the city address of the Provider practice hospital location extracted from the Provider Enrollment Chain and Ownership System (PECOS) file.,,,N,"30 characters, alphanumeric",FSRCCLXB,0.2,,,,,
+FISS,Practice Location State,PRAC-LOC-STATE,fiss_claims.prac_loc_state,Service information,n/a,This field identifies the state address of the Provider practice hospital location extracted from the Provider Enrollment Chain and Ownership System (PECOS) file.,,,N,"2 characters, alphanumeric",FSRCCLXB,0.2,,,,,
+FISS,Practice Location Zip,PRAC-LOC-ZIP,fiss_claims.prac_loc_zip,Service information,n/a,This field identifies the zip code address of the Provider practice hospital location extracted from the Provider Enrollment Chain and Ownership System (PECOS) file.,,,N,"15 characters, alphanumeric",FSRCCLXB,0.2,,,,,
+FISS,Primary Payer Code,PRIMARY-PAYER-CODE,fiss_claims.primary_payer_code,Payer and insured information,n/a,"This field identifies the primary payer as qualified by the payer. For example: When a 'Z' is entered as the primary payer code identifying Medicare as a payer, and the payer name Medicare must be entered as well.",,,,"Alphanumeric, 1 characters
+1 = Medicaid
+2 = Blue Cross
+3 = Other
+4 = None
+A = Working Aged
+B = End Stage Renal Disease (ESRD) beneficiary in 12 month coordination period with an EGHP (employer group health plan)
+C = Conditional Payment
+D = Auto No-Fault
+E = Workers Compensation
+F = Public Health Service or Other Federal Agency
+G = Disabled
+H = Black lung
+I = Veterans Administration
+L = Liability
+Z = Medicare",FSRCCLXS,0.4,,,,,
+FISS,Principal Diagnosis Code,PRINCIPLE-DIAG,fiss_claims.principle_diag,Service information,n/a,This field identifies the ICD-9-CM code relating to the condition established after study to be chiefly responsible for treatment identified in the claim; for the record depending on the copybook it is used in.,,"This field should correspond to the first entry in the Diagnosis Codes table. 
+
+",N,"7 digits, alphanumeric
+Refer to the ICD manual for valid codes.",FSRCCLXS,0.1,,,,,This field is blank in all the FISS de-identified records obtained by RDA API team as of 11/22/2021. 
+FISS,Process new Health Insurance Claim Number,PROC-NEW-HIC-IND,fiss_claims.proc_new_hic_ind,Beneficiary information,n/a,This field identifies that an entry is required in this field when the HIC number is incorrect on the claim that is being entered.,,,Y,"Alphanumeric, 1 character
+E = The new HIC entered is cross-referenced on the Beneficiary file and this cross-reverenced HIC is also cross-referenced. The chain continues for 25 HICs, or the NEW HIC number is in a cross-reference loop.
+
+Y = Incorrect HIC number, process new HIC number.
+
+S = The cross-referenced HIC number on the beneficiary file is the same as the original HIC number on the claim.",FSRCCLXB,0.5,,,,,
+FISS,Provider Department Identification,PROV-DEPT-ID,fiss_claims.prov_dept_id,Provider information,n/a,"This field is the 7th through 9th positions of the Provider Identification group level field, indicating the department identification of the provider.",,,N,"3 digits, alphanumeric",FSRCCLXS,0.1,,,,,"Some sample FISS claims have values of A,B, C, and 001 (or blank). What do these values indicate?"
+FISS,Provider Emergency Indicator,PROV-EMER-IND,fiss_claims.prov_emer_ind,Provider information,n/a,"This field is the 4th position of the Provider Identification group level field, it identifies the code indicating the priority of the admission.",,Positions 2 and 3 within the Provider Identification group level field are filler.,N,"1 digit, alphanumeric",FSRCCLXS,0.1,,,,,
+FISS,Provider State Code,PROV-STATE-CD,fiss_claims.prov_state_cd,Provider information,n/a,This field contains the locality state code of the provider portion of the provider identification.,,State codes are listed in section 2779A1 of the CMS State Operations Manual,N,"2 digits, alphanumeric",FSRCCLXS,0.1,,,,,
+FISS,Provider Type Facility Code,PROV-TYP-FACIL-CD,fiss_claims.prov_typ_facil_cd,Provider information,n/a,"This field is the first position within the Provider Identification group level field, it identifies the provider facility type code.",,Positions 2 and 3 within the Provider Identification group level field are filler.,N,"1 digit, alphanumeric",FSRCCLXS,0.1,,,,,
+FISS,Received Date,RECD-DT-CYMD,fiss_claims.recd_dt_cymd,Claim processing,n/a,This field is the group level name for the date the claim was received by the Intermediary.,,"For the vast majority of claims received electronically, this date is a timestamp from when the Combined Common Enhancement Module (CCEM) receives the claim.  
+For claims received via Direct Data Entry (DDE), this field is the timestamp for the entry.
+For claims entered manually by MACs, they can set the received date to whatever they want.",N,Date,FSRCCLXS,0.1,,,,,
+FISS,Reject Code,REJECT-CD,fiss_claims.reject_cd,Claim processing,n/a,This field contains the reason code that identifies why the claim is being denied; for the record depending on the copybook it is used in.,,,N,"Alphanumeric, 5 characters",FSRCCLXS,0.5,,,,,
+FISS,Repository HIC,REPOS-HIC,fiss_claims.repos_hic,Beneficiary information,n/a,"If the claim is submitted electronically, this field identifies the submitted subscriber primary identifier. This value may or may not be the beneficiary’s valid HIC number.",,,N,"Alphanumeric, 12 characters",FSRCCLXB,0.5,,,,,
+FISS,Repository Indicator,REPOS-IND,fiss_claims.repos_ind,Beneficiary information,n/a,"If the claim is submitted electronically and the submitted subscriber primary identifier has been moved to the repository HIC field, this field indicates this move was made.",,,Y,"Alphanumeric, 1 character
+
+Y = Repository HIC number has been moved
+
+Space = Not applicable",FSRCCLXB,0.5,,,,,
+FISS,Service Type Code,SERV-TYP-CD,fiss_claims.serv_typ_cd,Claim information,n/a,This field indicates the bill classification of the corresponding Bill Type Code group field.,,,,"Numeric, 1 digit
+
+See the FISS Quick Reference, Table 148, Table 149, Table 150, copied on tab C for convenience.",FSRCCLXS,0.4,,,,,
+FISS,Statement Covered From Date,STMT-COV-FROM-DATE-CYMD,fiss_claims.stmt_cov_from_date_cymd,Claim information,n/a,This field is the group level name comprised the statement covered from date. This is the beginning date of service of the period included on the claim; for the record depending on the copybook it is used in.,,This field is also provided as raw string text in the field fiss_claims.stmt_cov_from_cymd_text in case an invalid date is provided by the system,N,Date,FSRCCLXS,0.3,,,,,
+FISS,Statement Covered To Date,STMT-COV-TO-DATE-CYMD,fiss_claims.stmt_cov_to_date_cymd,Claim information,n/a,This field is the group level name for the statement covers to date. This is the ending date of service of the period included on the claim; for the record depending on the copybook it is used in.,,This field is also provided as raw string text in the field fiss_claims.stmt_cov_to_cymd_text in case an invalid date is provided by the system,N,Date,FSRCCLXS,0.3,,,,,
+FISS,Total Charge Amount,TOTAL-CHARGE-AMOUNT,fiss_claims.total_charge_amount,Billing information,n/a,This field identifies the total billed charges for the claims in the indicated bill category.,,This amount may not be equal to the sum of all the revenue lines.,N,Decimal,FSRCCLXS,0.1,,,,,"Does 0.00 mean ""we know this resulted in no charge"" or could it mean ""we don't have a value for this""? Does it even make sense for a claim to have no charge? "
+FISS,Cross-reference Document Control Number,XREF-DCN-NBR,fiss_claims.xref_dcn_nbr,Claim processing,n/a,"This field is the identification number of the claim to be adjusted. This is only used on cancel and adjustment transactions. It provides a cross-reference number for the control and monitoring of specific claims, and to differentiate between claims for the beneficiary. This is a unique field created by the system.",,"This field is populated on the ""new"" claim that is performing the adjustment or cancelation. It refers to the parent claim that is being adjusted or canceled.",N,"Alphanumeric, 23 characters",FSRCCXLB,0.5,,,,,
+FISS,Cross-Reference Health Insurance Claim Number,XREF-HIC-NBR,fiss_claims.xref_hic_nbr,Beneficiary information,n/a,This field identifies an internal field used to hold the original HIC number when a cross-reference HIC is utilized.,,,N,"Alphanumeric, 12 characters",FSRCCLXB,0.5,,,,,
+FISS,Bit Flags,BIT-FLAGS,fiss_diagnosis_codes.bit_flags,Service information,n/a,This field identifies the reason for a cancel without a corresponding repayment.,,,,"4 characters, alphanumeric",FSRCCLXB,0.2,,,,,
+FISS,Diagnosis Code Two,DIAG-CD-2,fiss_diagnosis_codes.diag_cd_2,Service information,n/a,"This field identifies the International Classification of Diseases (ICD) -9 or ICD-10 code describing the condition of the patient for a particular claim record, which co-exist at the time of admission, or develop subsequently. For copybooks where this field contains up to twenty five diagnosis’ occurrences, the first occurrence describes the principle diagnosis, the second through twenty fifth occurrences describe the additional/secondary diagnosis. Other copybooks identify this field as the patient’s second diagnosis code.",,,N,"7 characters, alphanumeric",FSRCCLXB,0.2,,,,,
+FISS,Diagnosis Present On Admission (POA) Indicator,DIAG-POA-IND,fiss_diagnosis_codes.poa_ind,Service information,n/a,"This field identifies the patient’s condition that is present at the time the order for inpatient admission to a general acute care hospital occurs. This indicator is assigned to every principal and secondary diagnosis on an inpatient acute care hospital claim, and the external cause of injury codes. Conditions that develop during an outpatient encounter, including emergency department, observation, or outpatient surgery, are considered as present on admission. The Centers for Medicare and Medicaid Services (CMS) does not require a POA indicator for the external cause of injury code unless it is being reported as another diagnosis. Effective with discharges on or after 10/01/07.",,,N,"1 character, alphanumeric
+
+N = No, not present at the time of inpatient admission.U = Unknown, the documentation is insufficient to determine if the condition was present at the time of inpatient admission.
+W = Clinically undetermined, the provider is unable to clinically determine whether the condition was present at the time of inpatient admission or not.
+Y = Yes, Present at the time of inpatient admission.
+1 = Unreported/not used, exempt from POA reporting - This code is the equivalent code of a blank on the UB04, however, it is determined that blanks are undesirable when submitting the data via the 4010A1.
+Blank space = Not acute care, POA does not apply.",FSRCCLXB,0.2,,,,,
+FISS,Beneficiary Date of Birth,BENE-DOB,fiss_patients.bene_dob,Beneficiary information,n/a,"The field identifies the century, year, month, and day of the beneficiary/patient’s date of birth.",,,N,"8 characters, alphanumeric",FSRCCLXB,0.4,,,,,
+FISS,Beneficiary First Name,BENE-FIRST-NAME,fiss_patients.bene_first_name,Beneficiary information,n/a,This field identifies the first name of the beneficiary/patient.,,,N,"10 characters, alphanumeric",FSRCCLXB,0.4,,,,,
+FISS,Beneficiary Last Name,BENE-LAST-NAME,fiss_patients.bene_last_name,Beneficiary information,n/a,This field identifies the last name of the beneficiary/patient.,,,N,"15 characters, alphanumeric",FSRCCLXB,0.4,,,,,
+FISS,Beneficiary Middle Initial,BENE-MID-INIT,fiss_patients.bene_mid_init,Beneficiary information,n/a,This field identifies the middle initial of the beneficiary/patient.,,,N,"1 character, alphanumeric",FSRCCLXB,0.4,,,,,
+FISS,Beneficiary Relationship,BENE-REL,fiss_patients.bene_rel,Beneficiary information,n/a,This field identifies the beneficiary/patient relationship to the insured.,,,Y,"2 digits, numeric
+
+The value of this field is always ""01"" which means ""self."" 
+See Table 156 from the FISS Quick Reference, copied into Tab C for convenience. ",FSRCCLXB,0.4,,,,,
+FISS,Beneficiary Sex,BENE-SEX,fiss_patients.bene_sex,Beneficiary information,n/a,The field identifies the sex of the beneficiary/patient for the record.,,,Y,"1 character, alphanumeric
+F = Female
+M = Male
+U = Unknown",FSRCCLXB,0.4,,,,,
+FISS,Beneficiary SSN/HIC,BENE-SSN-HIC,fiss_patients.bene_ssn_hic,Beneficiary information,n/a,This field identifies the Social Security Number (SSN)/Health Insurance Claim (HIC) number of the beneficiary.,,,N,"19 characters, alphanumeric",FSRCCLXB,0.4,,,,,We'd like to understand why this field is 19 characters long. SSNs are 9 char and HICNs are 11 characters. 
+FISS,Adjusting Document Control Number,ADJ-DCN-ICN,fiss_payers.adj_dcn_icn,Payer and insured information,n/a,"This field identifies the document control number of the claim being adjusted. This is the DCN to be adjusted according to the provider. This field matches the XREF DCN on claim page 6, if the provider gave the correct DCN to be adjusted.",,,N,"Alphanumeric, 23 digits",FSRCCXLB,0.4,,,,,
+FISS,Assignment of Benefits Indicator,ASSIGN-IND,fiss_payers.assign_ind,Payer and insured information,n/a,This field identifies whether or not the provider has on file a signed form authorizing the third-party payer to pay the provider for claim benefits.,,,Y,"Alphanumeric, 1 digit
+
+Y = Benefits assigned
+N = No benefits assigned",FSRCCXLB,0.4,,,,,
+FISS,Estimated Amount Due,EST-AMT-DUE,fiss_payers.est_amt_due,Payer and insured information,n/a,This field identifies the amount estimated by the provider that is still due from the indicated payer (estimated responsibility less prior payments.,,,N,"Numeric, dollar amount",FSRCCXLB,0.4,,,,,
+FISS,Insured Date of Birth,INSURED-DOB,"fiss_payers.insured_dob,
+
+fiss_payers.insured_dob_text",Payer and insured information,n/a,"This field identifies the insured’s date of birth, in MMDDCCYY format.",,"The FISS definition of the field refers to the format in the FISS copybook. RDA API provides this field in two different formats, described in the column to the right.",N,"RDA API provides this field in two different formats.
+fiss_payers.insured_dob is in CCYY-MM-DD format.
+fiss_payers.insured_dob_text provides the DOB as a single string rather than a series of digit fields, so that if the DOB parsing fails, users have the original string for reference.",FSRCCXLB,0.4,,,,,
+FISS,Insured Group Name,INSURED-GROUP-NAME,fiss_payers.insured_group_name,Payer and insured information,n/a,This field identifies the name of the group or plan through which the insurance is provided to the insured.,,,N,"Alphanumeric, 17 characters",FSRCCXLB,0.4,,,,,
+FISS,Insurance Group Number,INSURED-GROUP-NBR,fiss_payers.insured_group_nbr,Payer and insured information,n/a,"This field identifies the policy number (identification number, control number, or code) assigned by the carrier or administrator to identify the group number through which the insurance is provided to the insured.",,,N,"Alphanumeric, 20 characters",FSRCCXLB,0.4,,,,,
+FISS,Insured Name,INSURED-NAME,fiss_payers.insured_name,Payer and insured information,n/a,"This field identifies the insured’s name (last, and first) carrying health care coverage. This name can be the beneficiary/patient’s and/or an individual with a relationship to the beneficiary/patient.",,,N,"Alphanumeric, Last name is 15 characters, first name is 10 characters",FSRCCXLB,0.4,,,,,
+FISS,Insured Relationship,INSURED-REL,fiss_payers.insured_rel,Payer and insured information,n/a,This field identifies the insured’s relationship to the beneficiary/patient,,This field uses codes specified for the UB-04 form.,Y,"Numeric, 2 digits 
+
+See Table 156, UB-04 Patient Relationship Codes, from the FISS Quick Reference, copied in tab C for convenience.",FSRCCXLB,0.4,,,,,There are two similar fields with slightly different encodings: INSURED-REL and INSURED-REL-X12. Are they both useful or is one of them more useful than the other? 
+FISS,Patient Relationship to the Insured,INSURED-REL-X12,fiss_payers.insured_rel_x12,Payer and insured information,n/a,This field identifies the relationship of the patient to the identified insured.,,This field uses codes specified by the X12 consortium.,Y,"Numeric, 2 digits.
+See Table 164, X12 Patient Relationships Codes, from the FISS Quick Reference, copied below for convenience.",FSRCCXLB,0.4,,,,,There are two similar fields with slightly different encodings: INSURED-REL and INSURED-REL-X12. Are they both useful or is one of them more useful than the other? 
+FISS,Insured Sex,INSURED-SEX,fiss_payers.insured_sex,Payer and insured information,n/a,This field identifies the gender of the beneficiary.,,,Y,"Alphanumeric, 1 character
+
+F = Female, M = Male, U = Unknown",FSRCCXLB,0.4,,,,,"Is this field ever populated for the insured, or just for the beneficiary? "
+FISS,Certification-Social Security Number-Health Insurance Claim,INSURED-SSN-HIC,fiss_payers.insured_ssn_hic,Payer and insured information,n/a,This field identifies the insurer assigned beneficiary number or the Centers for Medicare and Medicaid Services (CMS) assigned Health Insurance Claim (HIC) number used in all correspondence and to facilitate the payment of claims.,,,N,"Alphanumeric, 19 characters",FSRCCXLB,0.4,,,,,
+FISS,Payers Identification,PAYERS-ID,fiss_payers.payers_id,Payer and insured information,n/a,This field identifies the primary insurer’s payer code associated with the claim.,,"Medicare could be the primary, secondary, or tertiary payer.
+
+A key value to know is that PAYERS-ID = 'Z' refers to Medicare. So if the PAYERS-ID field in the first position of the table is Z, that means Medicare is the primary payer.",,"Alphanumeric, 1 digit 
+See Table 91, Payer Codes, in the FISS Quick Reference, copied in tab C for convenience.
+",FSRCCXLB,0.4,,,,,"Should we note here or elsewhere that Medicare beneficaries will appear twice in the FISS claim, but under the bene fields but also in whatever payer record the Medicare bene information is recorded in (might be primary, secondary or tertiary)"
+FISS,Payers Name,PAYERS-NAME,fiss_payers.payers_name,Payer and insured information,n/a,This field identifies the primary insurer’s payer name associated with the claim.,,"The insurer named in this field could be primary, secondary, or tertiary.",,"Alphanumeric, 32 digits",FSRCCXLB,0.4,,,,,
+FISS,Prior Payments,PRIOR-PMT,fiss_payers.prior_pmt,Payer and insured information,n/a,This field is not used by FISS.,,,,"Numeric, dollar amount",FSRCCXLB,0.4,,,,,
+FISS,Provider Number,PROVIDER-NUMBER,fiss_payers.provider_number,Payer and insured information,n/a,This field contains the Medicare number as assigned by the Centers for Medicare and Medicaid Services (CMS) and is used to identify the provider rendering Medicare services. This field may be used to access data for the record.,,This field refers to the provider of the services to the patient.,,"Alphanumeric, 13 digits",FSRCCXLB,,,,,,
+FISS,Release of Information,REL-IND,fiss_payers.rel_ind,Payer and insured information,n/a,This field identifies whether or not the provider has on file a signed statement permitting the provider to release data to other organizations in order to adjudicate the claim.,,,,"Alphanumeric, 1 digit
+
+N = No release on file
+R = Signed statement is restricted or limited
+Y = Signed statement was obtained",FSRCCXLB,0.4,,,,,
+FISS,Home Health Prospective Payment System Treatment Authorization Code,TREAT-AUTH-CD,fiss_payers.treat_auth_cd,Payer and insured information,n/a,"This field identifies a matching key to the Outcome Assessment Information Set (OASIS) of the patient. This field is also used to report the Unique Tracking Number (UTN) for Prior Authorization. For Home Health 32X claims, report the UTN immediately after the HHPPS OASIS Treatment Authorization code. For all other bill types, the UTN is keyed in positions 1-14. This field is also used to identify a Center for Excellence or Provider Partnership Demonstration for NOA Type of Bill '11A' and '11D' or CJR Demonstration 75 for SNF Type of Bill 21X.",,,,"Alphanumeric, 18 characters long 
+
+
+Valid values:
+07 = Centers for Excellence
+08 = Providers Partnership Demonstration
+SPN65 = Re-billed claims due to auditor denials
+
+SPN66 = Re-billed claims due to provider self-audit after claim submission/payment
+SPN67 = Re-billed claims due to provider self-audit after the patient has been discharged, but prior to submission for payment
+
+
+75 = Demonstration 75 for SNF claims for the CRJ Model",FSRCCXLB,0.4,,,,,
+FISS,Procedure Code,PROC-CD,fiss_proc_codes.proc_cd,Service information,n/a,This field identifies the principal procedure (first code) and other procedures (codes two through twenty five) performed during the billing period covered by the claim. This field is required for inpatient claims.,,"Part A claims will not necessarily have a procedure specified. 
+Procedure codes are conditionally required based on other items (HCPC, diagnosis, condition codes, value codes) billed on the claim. At least one diagnosis is required while procedure codes are conditional.",N,"10 digits, alphanumeric",FSRCCLXB,0.1,,,,,
+FISS,Procedure Date,PROC-DT,fiss_proc_codes.proc_dt,Service information,n/a,"This field is the group level name for the date (year, month and day) of the Procedure Code on the claim.",,"Procedure dates are a single date, not a date range. If the procedure happened to span two days (E.g. an operation that started before midnight and ended after midnight), only one date would be captured on the claim.",N,Date,FSRCCLXB,0.1,,,,,
+FISS,Procedure Flag,PROC-FLAG,fiss_proc_codes.proc_flag,Service information,n/a,This field identifies a set of flags returned from the Medicare Code Editor (MCE) module to indicate claim procedure code errors.,,,,"4 digits, alphanumeric",FSRCCLXB,0.1,,,,,
+MCS,Adjust Claim Beneficiary EOMB Amount,IDR-ADJ-B-EOMB-AMT,mcs_adjustments.idr_adj_b_eomb_amt,Claim processing,ADJ-B-EOMB-AMT,"For each adjusted claim, this is the net amount of payment to the beneficiary of all payments and previous adjustments to the claim. Net amount equals total beneficiary previous payment minus total beneficiary return checks.
+This amount appears only on the original claim.",,This field is in the XTRL-TBL in the X Trailer. The table occurs 17 times.,,"Dollar amount, 7 characters",H99YBID1,0.5,,,,,
+MCS,Check Write Date,IDR-ADJ-CHK-WRT-DT,mcs_adjustments.idr_adj_chk_wrt_dt,Claim processing,ADJ-CHK-WRT-DT,The date on which the adjustment claim check was written. This field is populated only on the original claim X Trailer.,,This field is in the XTRL-TBL in the X Trailer. The table occurs 17 times.,,Date,H99YBID1,0.5,,,,,
+MCS,Adjustment Clerk Identifier,IDR-ADJ-CLERK,mcs_adjustments.idr_adj_clerk,Claim processing,ADJ-CLERK,This field contains the identification number of the clerk initiating the change.,,This field is in the XTRL-TBL in the X Trailer. The table occurs 17 times.,,"Alphanumeric, 4 characters",H99YBID1,0.5,,,,,
+MCS,Date the Trailer Was Modified,IDR-ADJ-DATE,mcs_adjustments.idr_adj_date,Claim processing,ADJ-DATE,This is the date on which the last change was made on the adjustment information contained within the X Trailer segment.,,This field is in the XTRL-TBL in the X Trailer. The table occurs 17 times.,,Date format,H99YBID1,0.5,,,,,
+MCS,Adjust Claim Provider EOMB Amount,IDR-ADJ-P-EOMB-AMT,mcs_adjustments.idr_adj_p_eomb_amt,Claim processing,ADJ-P-EOMB-AMT,"For each adjusted claim, this is the net amount of payment to the provider of all payments and previous adjustments to the claim. Net amount equals total provider previous payment minus total provider return checks.
+This amount appears only on the original claim.",,This field is in the XTRL-TBL in the X Trailer. The table occurs 17 times.,,"Dollar amount, 7 characters",H99YBID1,0.5,,,,,
+MCS,Initiating Correspondence Control Number (CCN) Number,IDR-INIT-CCN,mcs_adjustments.idr_init_ccn,Claim processing,INIT-CCN,This field is used for adjustment claims only. It carries the correspondence control number associated to the review request letter.,,In a table that occurs 17 times.,,"Numeric, 15 characters",H99YBID1,0.5,,,,,
+MCS,Cross-reference Internal Control Number,IDR-XREF-ICN,mcs_adjustments.idr_xref_icn,Claim processing,XREF-ICN,"XREF-ICN: This field is used on split claims and/or full-claim adjustments. For all other instances the field is zero filled.
+One of the following ICN values display in this field:
+For adjustment claims, this field carries the ICN of the claim it replaced.
+For split claims this field carries the ICN of the mother claim.",,In a table that occurs 17 times. ,,"Numeric, 15 characters",H99YBID1,0.5,,,,,
+MCS,Cutback Audit Disposition,IDR-J-AUDIT-DISP,mcs_audits.idr_j_audit_disp,Claim processing,J-AUDIT-DISP,This item is used to identify the disposition of the J-AUDIT-NUM field.,,In a table that occurs 12 times.,,"Alphanumeric, 1 character. 
+See Audit Disposition table in tab C. ",H99YBID1,0.5,,,,,
+MCS,Cutback Audit Indicator,IDR-J-AUDIT-IND,mcs_audits.idr_j_audit_ind,Claim processing,J-AUDIT-IND,The value in this field indicates if the number displayed in the J-AUDIT-NUM field is an audit or edit,,In a table that occurs 12 times.,,"Alphanumeric, 1 character
+A = Audit number
+H = Edit number
+Space = J-AUDIT-NUM is zeroes",H99YBID1,0.5,,,,,
+MCS,Cutback Audit,IDR-J-AUDIT-NUM,mcs_audits.idr_j_audit_num,Claim processing,J-AUDIT-NUM,"This item is used to identify the audit number, which indicates the reason for denial.",,In a table that occurs 12 times.,,"Numeric, 3 characters",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off First Address Line,IDR-AMB-DROPOFF-ADDR-LINE1,mcs_claims.idr_amb_dropoff_addr_line1,Service information,AMB-DROPOFF-ADDR-LINE1,This field contains the ambulance drop-off first address line.,,,,"Alphanumeric, 25 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off Second Address Line,IDR-AMB-DROPOFF-ADDR-LINE2,mcs_claims.idr_amb_dropoff_addr_line2,Service information,AMB-DROPOFF-ADDR-LINE2,This field contains the ambulance drop-off second address line.,,,,"Alphanumeric, 20 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off City,IDR-AMB-DROPOFF-CITY,mcs_claims.idr_amb_dropoff_city,Service information,AMB-DROPOFF-CITY,This field contains the ambulance drop-off location's city.,,,,"Alphanumeric, 20 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off Location Name,IDR-AMB-DROPOFF-NAME,mcs_claims.idr_amb_dropoff_name,Service information,AMB-DROPOFF-NAME,This field contains the name of the ambulance drop-off location.,,,,"Alphanumeric, 24 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off State,IDR-AMB-DROPOFF-STATE,mcs_claims.idr_amb_dropoff_state,Service information,AMB-DROPOFF-STATE,This field contains the ambulance drop-off location's State code.,,,,"Alphanumeric, 2 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off Location ZIP Code,IDR-AMB-DROPOFF-ZIPCODE,mcs_claims.idr_amb_dropoff_zipcode,Service information,AMB-DROPOFF-ZIPCODE,This field contains the ambulance drop-off location's zip code.,,,,"Alphanumeric, 9 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Pick Up Address - First Line,IDR-AMB-PICKUP-ADDRES-LINE1,mcs_claims.idr_amb_pickup_addres_line1,Service information,AMB-PICKUP-ADDRES-LINE1,This field contains the first line of the address for the ambulance pick up location.,,,,"Alphanumeric, 25 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Pick Up Address - Second Line,IDR-AMB-PICKUP-ADDRES-LINE2,mcs_claims.idr_amb_pickup_addres_line2,Service information,AMB-PICKUP-ADDRES-LINE2,This field contains the second line of the address for the ambulance pick up location.,,,,"Alphanumeric, 20 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Pick Up City,IDR-AMB-PICKUP-CITY,mcs_claims.idr_amb_pickup_city,Service information,AMB-PICKUP-CITY,This field contains the ambulance pickup location's city.,,,,"Alphanumeric, 20 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Pick Up State,IDR-AMB-PICKUP-STATE,mcs_claims.idr_amb_pickup_state,Service information,AMB-PICKUP-STATE,This field contains the ambulance pickup location's State code.,,,,"Alphanumeric, 2 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Pick Up ZIP Code,IDR-AMB-PICKUP-ZIPCODE,mcs_claims.idr_amb_pickup_zipcode,Service information,AMB-PICKUP-ZIPCODE,This field contains the ambulance pickup location's zip code.,,,,"Alphanumeric, 9 char",H99YBID1,0.5,,,,,
+MCS,Claim Assignment Code,IDR-ASSIGNMENT,mcs_claims.idr_assignment,Claim processing,ASSIGNMENT,"This code identifies the assignment code, as indicated on the submitted claim. For online claim entry, this value may be system generated, based on the assignment code value entered with a specific range of ICN codes via the Entry Screen. However, the value can be manually generated, as necessary.",,,,"Alphanumeric, 1 character
+
+A = Assigned 
+B = Non-assigned claim submitted with both clinical lab and non-clinical lab services (the system will auto split these during the batch process and revise the assignment indicator to ‘A’ and ‘N’). This value applies only to pending claim records.G = Group assigned
+N = Non-assigned",H99YBID1,0.5,,,,,
+MCS,Beneficiary First Initial,IDR-BENE-FIRST-INIT,mcs_claims.idr_bene_first_init,Beneficiary information,BENE-FIRST-INIT,The field contains the first character of the beneficiary’s first name.,,,N,"1 character, alphanumeric",H99YBID1,0.2,,,,BENE-FIRST-NAME,
+MCS,Beneficiary Middle Initial,IDR-BENE-MID-INIT,mcs_claims.idr_bene_first_init,Beneficiary information,BENE-MID-INIT,"This field carries the beneficiary's middle initial..
+On the Pending Claim record, this data may be system generated on the Claim Entry screen if a HIC number or beneficiary alpha look-up transaction is performed and a matching record exists on file. Or the data may be manually entered.",,,N,"1 character, alphanumeric.",H99YBID1,0.2,,,,BENE-MID-INIT,
+MCS,Beneficiary Last Name,IDR-BENE-LAST-1-6,mcs_claims.idr_bene_last_1_6,Beneficiary information,BENE-LAST-1-6,This field contains the first six characters of the beneficiary's last name,,,N,"6 characters, alphanumeric",H99YBID1,0.2,,,,BENE-LAST-NAME,
+MCS,Beneficiary Sex,IDR-BENE-SEX,mcs_claims.idr_bene_sex,Beneficiary information,BENE-SEX,The field identifies the sex of the beneficiary/patient for the record.,,,Y,"1 character, alphanumeric
+F = Female
+M = Male
+O = Unknown",H99YBID1,0.2,,,,BENE-SEX,
+MCS,Billing Provider County,IDR-BILL-PROV-COUNTY,mcs_claims.idr_bill_prov_county,Provider information,BILL-PROV-COUNTY,This field identifies the county in which the provider's office is located.,,,,,H99YBID1,0.2,,,,,"What codes are used to indicate the county? 
+A from Shared System Maintainers: The county code relates to provider localities and are MAC/region specific, so there is no common list of county codes. It is from the provider record and not used in claims processing."
+MCS,Billing Provider EIN,IDR-BILL-PROV-EIN,mcs_claims.idr_bill_prov_ein,Provider information,BILL-PROV-EIN,This field must be filled with either the Social Security Number or the Tax Identification Number/Employer Identification Number to identify the provider on payment records and to accumulate payment data for the Internal Revenue Service. The 10th character is set to ‘E’ if EIN or ‘S’ if SSN.,,,,"10 digits, alphanumeric.",H99YBID1,0.2,,,,,
+MCS,Billing Provider Group Indicator,IDR-BILL-PROV-GROUP-IND,mcs_claims.idr_bill_prov_group_ind,Provider information,BILL-PROV-GROUP-IND,This field is used to identify an individual provider as a member of a specific group or clinic whose members share a common payee name and address. It allows charges from group members to be paid on the same assigned claim and is used for accumulation of payment data for summary check preparation. Each member of the group must have the same clinic code.,,"Per S1450000, this value is not passed to Phase I.",,"Per S145000, valid values are:
+G – if Group Provider, otherwise blank",H99YBID1,0.2,,,,,
+MCS,Billing Provider Locality,IDR-BILL-PROV-LOC,mcs_claims.idr_bill_prov_loc,Provider information,BILL-PROV-LOC,This field is a two-character code that is used to designate the provider’s pricing locality or area. The pricing locality code is assigned to the provider by the area A/B MAC/Legacy Contractor (hereafter referred to as Medicare Contractor) which has Part B Medicare jurisdiction. It is used when accessing area specific fee schedule information.,,,,"01 – 99
+The definition of the value is unique for each MAC.",H99YBID1,0.2,,,,,
+MCS,National Provider Identification,IDR-BILL-PROV-NPI,mcs_claims.idr_bill_prov_npi,Provider information,BILL-PROV-NPI,This segment of data carries the National Provider Identification (NPI) number for the billing provider.,,"NPIs are issued by the National Plan and Provider Enumeration System (NPPES). 
+
+In 2007, the DHHS issued guidance that the NPI will replace the Medicare/Medicaid Provider Number as the primary identifier on Medicare claims. Per the linked guidance above, ""The Medicare/Medicaid Provider Number will continue to be issued and used to verify Medicare/Medicaid certification. The Medicare/Medicaid Provider Number was also renamed as the CMS Certification Number, or CCN.""",,"10 characters, alphanumeric",H99YBID1,0.2,,,,,
+MCS,Billing Provider Number,IDR-BILL-PROV-NUM,mcs_claims.idr_bill_prov_num,Provider information,BILL-PROV-NUM,This is the number identifying the billing provider for this claim the EMC Submitter File number assigned to providers authorized to submit Medicare claims by electronic media. This number is retained in the submitted file of authorized billing providers.,,"Per S1450000, this is the ""legacy provider number"" also known as the PIN or PTAN of the Group of Individual Billing Provider for this claim.",,"10 characters, alphanumeric",H99YBID1,0.2,,,,,
+MCS,Billing Provider Pricing Specialty,IDR-BILL-PROV-PRICE-SPEC,mcs_claims.idr_bill_prov_price_spec,Provider information,BILL-PROV-PRICE-SPEC,"The billing provider pricing specialty code is a two-character code that identifies the provider's specialty. This field is used to store the provider's specialty code used for reasonable charge computation and on-line pricing purposes. 
+
+In the B-States and RRB, the field on the provider data base is populated with an internally assigned value that represents a combination of similar specialty codes which are grouped together for reasonable charge computation purposes. In the RI, RRB and DMERC regions the value is the same as the CMS-maintained specialty code.",,,,"See MCS document S0106010 for details on provider values. 
+A list of the provider specialties can be obtained by accessing the CMS IOM 100-04, Chapter 26, Section 10.8 – Requirements for Specialty Codes, in the Medicare Claims Processing Manual.
+The list is too lengthy to be pasted on this page but the RDA API team will explore the best ways to provide this information to downstream users.",H99YBID1,0.2,,,,,"The data dictionary entries for both these fields point to S0106010.docx, which points to the Medicare claims processing manual but also includes a table of additional references other than the Medicare Claims Processing Manual. Can you explain how the values in the S0106010 document relate to the values in the Medicare claims processing manual? "
+MCS,Billing Provider Speciality,IDR-BILL-PROV-SPEC,mcs_claims.idr_bill_prov_spec,Provider information,BILL-PROV-SPEC,This field is used to store the two-character provider’s primary specialty code.,,,,"2 characters, alphanumeric 
+
+Refer to Spec S0106010 for general input criteria information and a listing of the acceptable entries.",H99YBID1,0.2,,,,,
+MCS,Billing Provider Status Code,IDR-BILL-PROV-STATUS-CD,mcs_claims.idr_bill_prov_status_cd,Provider information,BILL-PROV-STATUS-CD,"This field carries an indicator identifying participating providers. This status code is used in calculation of workload and CPT reporting.
+A participating provider is a provider who signs an agreement with Medicare accepting assignment for services. A participating provider agrees to accept the Medicare payment on a claim as payment in full, and will not charge the beneficiary for any amounts over the Medicare allowed charge.",,"Per 1450000, this value is not passed in the Phase I extract.",,"1 character, alphanumeric
+N = Non-participating provider
+P = Participating provider",H99YBID1,0.2,,,,,
+MCS,Billing Provider Type,IDR-BILL-PROV-TYPE,mcs_claims.idr_bill_prov_type,Provider information,BILL-PROV-TYPE,This field is a two-number code that identifies the type of tax payer identification number that is on the provider’s record.,,,,"2 characters, numeric 
+See Table 1, Provider Type Codes, from the MCS document S0105010, copied in tab C for convenience. ",H99YBID1,0.2,,,,,
+MCS,Medicare Beneficiary Identifier,IDR-CLAIM-MBI,mcs_claims.idr_claim_mbi,Beneficiary information,CLAIM-MBI,This field carries the Medicare Beneficiary Identifier (MBI) number.,,"Specified under ""General Input Criteria"": ""This data is supplied by CMS on the MFSDB file. The acceptable values are unique to each Medicare Contractor.""",,"Format: C A AN N A AN N A A N N
+
+
+Where C = 1 through 9 
+A = Alphanumeric A thru Z
+N = 0 thru 9
+AN = Either A or N",H99YBID1,0.2,,,,FISS = MBI-NUMBER,
+MCS,Claim Receipt Date,IDR-CLAIM-RECEIPT-DATE,mcs_claims.idr_claim_receipt_date,Claim processing,CLAIM-RECEIPT-DATE,This field carries the claim receipt date.,,,,Date format,H99YBID1,0.2,,,,,
+MCS,Claim Type,IDR-CLAIM-TYPE,mcs_claims.idr_claim_type,Claim information,CLAIM-TYPE,This field contains a value that identifies the type of claim being processed.,,,,"1 digit 
+2 = Adjustment
+3 = Claim 
+Space if no data value",H99YBID1,0.2,,,,"BILL-TYP-CD (comprised of LOB-CD, SERV-TYP-CD, FREQ-CD)",
+MCS,Internal Claim Control Number,IDR-CLM-HD-ICN,mcs_claims.idr_clm_hd_icn,Claim information,ICN,This field contains a numeric value that identifies a claim throughout the processing cycle and allows for a linkage between the claim and the beneficiary for whom it was submitted.,,"Per the S1450000, adjustment ICNs begin with these values: 83, 96, 97, 46, 47, 48, 56, 57, 58, 66, 67, 68",N,"15 digits, alphanumeric",H99YBID1,0.2,,,,FISS = DCN,
+MCS,Claim Level Indicator,IDR-CLM-LEVEL-IND,mcs_claims.idr_clm_level_ind,Claim processing,CLM-LEVEL-IND,"This field carries the claim level indicator; indicating the claim is either adjusted, original or voided.",,,,"Alphanumeric, 1 character
+
+A = Adjusted
+O = Original
+V = Void
+
+Treat as enum",H99YBID1,0.5,,,,,
+MCS,Coinsurance,IDR-COINSURANCE,mcs_claims.idr_coinsurance,Billing information,COINSURANCE,"The dollar amount, per line item, that is the responsibility of the beneficiary for payment. This amount is calculated based on the claim assignment and the type of service being rendered. The beneficiary responsibility amount for applied deductible is not reflected in this field. This amount is also known as the coinsurance amount.",,,,$$$$$.¢¢,H99YBID1,0.2,,,,,
+MCS,Contractor Number,IDR-CONTR-ID,mcs_claims.idr_contr_id,Claim information,IDR-CONTR-ID,This field contains the contractor number.,,"Based on the below text from the S1450000, this field refers to the claims processing contractor. 
+""If a Legacy Contractor is now an A/B MAC, it would be the CMS assigned workload ID number. There are still some Legacy Contractors. They are all 5 digits long.
+MCS does not house the A/B MAC/Legacy number so the workload ID will always be used.""",,"1 digit 
+2 = Adjustment
+3 = Claim 
+Space if no data value",H99YBID1,0.2,,,,,
+MCS,Deductible,IDR-DEDUCTIBLE,mcs_claims.idr_deductible,Billing information,DEDUCTIBLE,The portion of the final charge allowed on a claim that is used to satisfy the amount of Part B Medicare cash deductible remaining.,,,,$$$.¢¢ or: $$$$$.¢¢,H99YBID1,0.2,,,,,
+MCS,Detail Segment Count,IDR-DTL-CNT,mcs_claims.idr_dtl_cnt,Claim information,DTL-CNT,This field contains the count of detail segments for a pending or paid history claim record. Also see specification S2816010.,,,,"2 characters, numeric",H99YBID1,0.2,,,,,
+MCS,Non-covered Audit Number,IDR-HDR-AUDIT,mcs_claims.idr_hdr_audit,Claim processing,HDR-AUDIT,This field carries the primary SCC audit number encounter as the claim was processed.,,,,"Numeric, 3 characters",H99YBID1,0.5,,,,,
+MCS,Audit Indicator,IDR-HDR-AUDIT-IND,mcs_claims.idr_hdr_audit_ind,Claim processing,HDR-AUDIT-IND,"The value in this field indicates if the number displayed in the INT-HDR-AUDIT field is a header edit, detail edit, or an audit.",,,,"Alphanumeric, 1 character
+
+A = Audit number
+D = Detail edit number
+H = Header edit number
+Space = IDR-HDR-AUDIT is zeroes ",H99YBID1,0.5,,,,,
+MCS,Header From Date of Service,IDR-HDR-FROM-DOS,mcs_claims.idr_hdr_from_dos,Claim information,HDR-FROM-DOS,"For claims that have suspended from the batch cycle for manual review, this field carries the earliest from-date-of-service on the claim.",,,,,H99YBID1,0.3,,,,,
+MCS,Header To Date of Service,IDR-HDR-TO-DOS,mcs_claims.idr_hdr_to_dos,Claim information,HDR-TO-DOS,"For claims that have suspended from the batch cycle for manual review, this field carries the latest to-date-of-service on the claim.",,,,,H99YBID1,0.3,,,,,
+MCS,Health Insurance Claim Number,IDR-HIC,mcs_claims.idr_hic,Beneficiary information,HIC,"This field identifies the patient/beneficiary number associated with a claim record, which is assigned to the beneficiary by the Centers for Medicare and Medicaid Services (CMS), and may be used to access data for the record depending on the copybook it is used in.",,"Per the S145000 specification, this field will display spaces if the MBI is submitted and the HICN is not found.",N,"12 characters, alphanumeric",H99YBID1,0.2,,,,FISS = HIC-NO,
+MCS,Facility Provider National Provider Identifier (NPI),IDR-J-FAC-PROV-NPI,mcs_claims.idr_j_fac_prov_npi,Provider information,J-FAC-PROV-NPI,"This field carries the National Provider Identifier (NPI) number of the facility or laboratory where services were performed, if applicable.",,,,"Alphanumeric, 10 characters",H99YBID1,0.5,,,,,
+MCS,Referring Provider’s National Provider Identifier (NPI),IDR-J-REFERRING-PROV-NPI,mcs_claims.idr_j_referring_prov_npi,Provider information,J-REFERRING-PROV-NPI,This field carries the referring or ordering provider’s National Provider Identifier (NPI) number.,,,,"Alphanumeric, 10 characters",H99YBID1,0.5,,,,,
+MCS,Status Code,IDR-STATUS-CODE,mcs_claims.idr_status_code,Claim processing,STATUS-CODE,"For the H99YB338, H99MB338, and H99YBID1 files, this field contains current status information for the pending and paid claims currently in the system. Pending and paid claims information is updated during each processing cycle with current status information. This information is accessible online, providing the Medicare Contractor with the most recent status available for each claim ICN or correspondence CCN.",,Phase I files will contain a space. ,,"1 character, alphanumeric
+See Status Codes table in tab C. ",H99YBID1,0.2,,,,,
+MCS,Status Date,IDR-STATUS-DATE,mcs_claims.idr_status_date,Claim processing,STATUS-DATE,The claim status/paid date is the last date on which activity against this claim occurred the date that this claim was placed in the current status.,,"From S1450000
+The status date will always report even though pending claims will contain a space in the Status Code field.",,"8 characters, numeric
+Format: YYYYMMDD",H99YBID1,0.2,,,,,
+MCS,Total Allowed Amount,IDR-TOT-ALLOWED,mcs_claims.idr_tot_allowed,Billing information,TOT-ALLOWED,"This field documents the total amount allowed by Medicare for all of the submitted charges on a particular claim. Allowed charges can be system generated from fee databases, reasonable charge screens, or manual entry.",,,,$$$$$.¢¢,H99YBID1,0.2,,,,,
+MCS,Total Billed Amount,IDR-TOT-BILLED-AMT,mcs_claims.idr_tot_billed_amt,Billing information,TOT-BILLED-AMT,This field contains the total amount of all charges submitted by the provider on a given claim. The total charge submitted must equal the sum of the charges submitted for each line item. It must not be less than the paid by beneficiary amount.,,,,"Format: $$$$$.¢¢
+Numeric packed decimal, signed.",H99YBID1,0.2,,,,FISS = TOTAL-CHARGE-AMOUNT,Would a 0 value in this field mean that no information is available or that there is nothing to be billed?
+MCS,Demonstration National Provider Identifier (NPI),IDR-U-DEMO-PROV-NPI,mcs_claims.idr_u_demo_prov_npi,Provider information,U-DEMO-PROV-NPI,"For certain demonstration projects, this field carries the demonstration provider’s National Provider Identifier (NPI) number from the census file. The field is filled based on SCF records.",,,,"Alphanumeric, 10 characters",H99YBID1,0.5,,,,,
+MCS,Billing Provider NPI Number,IDR-U-FCADJ-BIL-NPI,mcs_claims.idr_u_fcadj_bil_npi,Provider information,U-FCADJ-BIL-NPI,This segment of data carries the National Provider Identification (NPI) number for the billing provider.,,,,"Alphanumeric, 10 characters",H99YBID1,0.5,,,,,
+MCS,Split Reason Code,IDR-U-SPLIT-REASON,mcs_claims.idr_u_split_reason,Claim processing,U-SPLIT-REASON,The split reason code is used to indicate that the claim has been separated for processing either for a mandated split situation or replicated for internal processing situations. This indicator is at the claim level,,,,"Alphanumeric, 1 character
+
+See Split Reason codes in tab C. ",H99YBID1,0.5,,,,,
+MCS,Supervising Physician National Provider Identifier (NPI),IDR-U-SUPER-NPI,mcs_claims.idr_u_super_npi,Provider information,U-SUPER-NPI,This field carries the supervising provider’s National Provider Identifier (NPI) number.,,,,"Alphanumeric, 10 characters",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off First Address Line,IDR-DTL-AMB-DROPOFF-ADDR-LINE1,mcs_details.idr_dtl_amb_dropoff_addr_line1,Service information,AMB-DROPOFF-ADDR-LINE1,This field contains the ambulance drop-off first address line.,,,,"Alphanumeric, 25 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off Second Address Line,IDR-DTL-AMB-DROPOFF-ADDR-LINE2,mcs_details.idr_dtl_amb_dropoff_addr_line2,Service information,AMB-DROPOFF-ADDR-LINE2,This field contains the ambulance drop-off second address line.,,,,"Alphanumeric, 20 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off City,IDR-DTL-AMB-DROPOFF-CITY,mcs_details.idr_dtl_amb_dropoff_city,Service information,AMB-DROPOFF-CITY,This field contains the ambulance drop-off location's city.,,,,"Alphanumeric, 20 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off Location Name,IDR-DTL-AMB-DROPOFF-NAME,mcs_details.idr_dtl_amb_dropoff_name,Service information,AMB-DROPOFF-NAME,This field contains the name of the ambulance drop-off location.,,,,"Alphanumeric, 24 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off State,IDR-DTL-AMB-DROPOFF-STATE,mcs_details.idr_dtl_amb_dropoff_state,Service information,AMB-DROPOFF-STATE,This field contains the ambulance drop-off location's State code.,,,,"Alphanumeric, 2 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Drop-off Location ZIP Code,IDR-DTL-AMB-DROPOFF-ZIPCODE,mcs_details.idr_dtl_amb_dropoff_zipcode,Service information,AMB-DROPOFF-ZIPCODE,This field contains the ambulance drop-off location's zip code.,,,,"Alphanumeric, 9 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Pick Up Address - First Line,IDR-DTL-AMB-PICKUP-ADDRES-LINE1,mcs_details.idr_dtl_amb_pickup_addres_line1,Service information,AMB-PICKUP-ADDRES-LINE1,This field contains the first line of the address for the ambulance pick up location.,,,,"Alphanumeric, 25 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Pick Up Address - Second Line,IDR-DTL-AMB-PICKUP-ADDRES-LINE2,mcs_details.idr_dtl_amb_pickup_addres_line2,Service information,AMB-PICKUP-ADDRES-LINE2,This field contains the second line of the address for the ambulance pick up location.,,,,"Alphanumeric, 20 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Pick Up City,IDR-DTL-AMB-PICKUP-CITY,mcs_details.idr_dtl_amb_pickup_city,Service information,AMB-PICKUP-CITY,This field contains the ambulance pickup location's city.,,,,"Alphanumeric, 20 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Pick Up State,IDR-DTL-AMB-PICKUP-STATE,mcs_details.idr_dtl_amb_pickup_state,Service information,AMB-PICKUP-STATE,This field contains the ambulance pickup location's State code.,,,,"Alphanumeric, 2 char",H99YBID1,0.5,,,,,
+MCS,Ambulance Pick Up ZIP Code,IDR-DTL-AMB-PICKUP-ZIPCODE,mcs_details.idr_dtl_amb_pickup_zipcode,Service information,AMB-PICKUP-ZIPCODE,This field contains the ambulance pickup location's zip code.,,,,"Alphanumeric, 9 char",H99YBID1,0.5,,,,,
+MCS,Diagnosis ICD Type,IDR-DTL-DIAG-ICD-TYPE,mcs_details.idr_dtl_diag_icd_type,Service information,DTL-DIAG-ICD-TYPE,This field identifies diagnosis code as ICD 10 or ICD 9.,,,,"1 digit, alphanumeric",H99YBID2,0.2,,,,,
+MCS,Starting Date of Service,IDR-DTL-FROM-DATE,mcs_details.idr_dtl_from_date,Service information,DTL-FROM-DATE,This field carries the date on which a particular service was first rendered.,,,,Date,H99YBID2,0.2,,,,,
+MCS,Detail Number,IDR-DTL-NUMBER,mcs_details.idr_dtl_number,Service information,DTL-NUMBER,This field contains the sequence number of the detail record. Up to 50 detail records can be included.,,,,"2 digits, numeric
+valid values 1 through 50",H99YBID2,0.2,,,,,"The current range of valid values is 1 to 50, not 51 or 52 as stated in some documentation. Source: https://confluenceent.cms.gov/display/MPSM/Questions+about+FISS+and+MCS+Claims"
+MCS,Primary Detail Diagnosis Code,IDR-DTL-PRIMARY-DIAG-CODE,mcs_details.idr_dtl_primary_diag_code,Service information,DTL-PRIMARY-DIAG-CODE,This field carries the primary detail diagnosis code.,,,,"7 digits, alphanumeric",H99YBID2,0.2,,,,,
+MCS,Rendering Provider’s National Provider Identifier (NPI),IDR-DTL-REND-NPI,mcs_details.idr_dtl_rend_npi,Provider information,DTL-REND-NPI,This field carries the rendering or ordering provider’s National Provider Identifier (NPI) number.,,,,"Alphanumeric, 10 characters
+
+Any valid 10-character identification number.",H99YBID2,0.5,,,,,
+MCS,Detail Rendering Provider Number,IDR-DTL-REND-PROV,mcs_details.idr_dtl_rend_prov,Provider information,DTL-REND-PROV,"This field is used to record a unique identification number assigned to each provider who renders or refers services to, or orders services for, a Medicare beneficiary.",,,,"Alphanumeric, 10 characters
+
+Any valid 10-character provider number.",H99YBID2,0.5,,,,,
+MCS,Detail Rendering Provider Specialty,IDR-DTL-REND-SPEC,mcs_details.idr_dtl_rend_spec,Provider information,DTL-REND-SPEC,The rendering provider specialty code is a two-character code that identifies the rendering provider's specialty.,,,,"Alphanumeric, 2 characters
+
+Refer to Spec S0106010 for general input criteria information and a listing of the acceptable provider specialty codes.",H99YBID2,0.5,,,,,How do the values in the specification document relate to the values in the Medicare claims processing manual?
+MCS,Detail Rendering Provider Type Code,IDR-DTL-REND-TYPE,mcs_details.idr_dtl_rend_type,Provider information,DTL-REND-TYPE,This field displays a two-number code that is associated with identifying the rendering provider's type code.,,,,"Alphanumeric, 2 characters
+
+See the Provider Type table from MCS specification S0105010, copied in tab C for convenience. 
+",H99YBID2,0.5,,,,,
+MCS,Detail Status,IDR-DTL- STATUS,mcs_details.idr_dtl_status,Service information,DTL-STATUS,"The Multi-Carrier System contains current status information for all pending and paid claims currently in the system. Pending and paid claims information is updated during each processing cycle with current status information. This information is accessible on-line, providing the Medicare Contractor with the most recent status available for each claim ICN or correspondence CCN. The codes identify any adjustment or change to a line item.",,,,"1 digit, alphanumeric
+
+See the Status Codes table from MCS specification S0209000, copied in tab C for convenience.",H99YBID1,0.2,,,,,
+MCS,Ending Date of Service,IDR-DTL-TO-DATE,mcs_details.idr_dtl_to_date,Service information,DTL-TO-DATE,This field indicates the last date on which a particular service was rendered for a specific claim case.,,,,Date,H99YBID2,0.2,,,,,
+MCS,Facility Provider National Provider Identifier (NPI),IDR-K-DTL-FAC-PROV-NPI,mcs_details.idr_k_dtl_fac_prov_npi,Provider information,FAC-PROV-NPI,"This field carries the National Provider Identifier (NPI) number of the facility or laboratory where services were performed, if applicable.",,,,"Alphanumeric, 10 characters",H99YBID2,0.5,,,,,
+MCS,POS First Address Line,IDR-K-POS-ADDR1,mcs_details.idr_k_pos_addr1,Service information,POS-ADDR1,This field carries the POS first address line.,,,,"55 characters, alphanumeric",H99YBID2,0.2,,,,,
+MCS,POS Second Address Line – First Part,IDR-K-POS-ADDR2-1ST,mcs_details.idr_k_pos_addr2_1st,Service information,POS-ADDR2-1ST,This field carries the first half of the POS second address line.,,,,"30 characters, alphanumeric",H99YBID2,0.2,,,,,
+MCS,POS Second Address Line – First Part,IDR-KPOS-ADDR2-2ND,mcs_details.idr_k_pos_addr2_2nd,Service information,POS-ADDR2-2ND,This field carries the second half of the POS second address line.,,,,"25 characters, alphanumeric",H99YBID2,0.2,,,,,
+MCS,POS City,IDR-K-POS-CITY,mcs_details.idr_k_pos_city,Service information,POS-CITY,This field carries the city portion of the POS address.,,,,"30 characters, alphanumeric",H99YBID2,0.2,,,,,
+MCS,POS First Name,IDR-K-POS-FNAME,mcs_details.idr_k_pos_fname,Service information,POS-FNAME,This field carries the POS first name.,,,,"35 characters, alphanumeric",H99YBID2,0.2,,,,,
+MCS,POS Last Name or Facility Name,IDR-K-POS-LNAME-ORG,mcs_details.idr_k_pos_lname_org,Service information,POS-LNAME-ORG,This field carries the POS last name.,,POS = place of service,,"60 characters, alphanumeric",H99YBID2,0.2,,,,,
+MCS,POS Middle Name,IDR-K-POS-MNAME,mcs_details.idr_k_pos_mname,Service information,POS-MNAME,This field carries the POS middle name.,,,,"25 characters, alphanumeric",H99YBID2,0.2,,,,,
+MCS,POS State,IDR-K-POS-STATE,mcs_details.idr_k_pos_state,Service information,POS-STATE,This field carries the state portion of the POS address.,,,,"2 characters, alphanumeric",H99YBID2,0.2,,,,,
+MCS,POS Zip Code,IDR-K-POS-ZIP,mcs_details.idr_k_pos_zip,Service information,POS-ZIP,This field carries the zip code portion of the POS address.,,,,"15 characters, alphanumeric",H99YBID2,0.2,,,,,
+MCS,Fourth Procedure Code Modifier,IDR-MOD-FOUR,mcs_details.idr_mod_four,Service information,MOD-FOUR,"This is the fourth procedure modifier. In addition to the normal pricing criteria, the system allows claims examiners to use modifier codes to further qualify billed procedures. In some cases, the modifier requires special handling for pricing the service; in other cases, the modifier is used for further documentation of the performed service.
+The two types of modifiers, as referred to in the MCS, are statistical and pricing. There are two types of statistical modifiers. Some statistical modifiers are documentation modifiers and do not affect pricing although they may affect processing. Other statistical modifiers affect pricing by causing the established reasonable charge or fee to be modified in the same way every time. In both cases, statistical modifiers are not established on the procedure or pricing files as part of the procedure code key. On the other hand, pricing modifiers are considered by the system as part of the seven-digit procedure code key and are used for obtaining established reasonable charge or fee amounts. The reasonable charge or fee amounts for procedure codes with pricing modifiers are established independently of the same procedure without the modifier.
+This field may contain multiple procedure code modifiers or spaces. A procedure code modifier will further define the procedure code as a unique and different service/supply.",,,,See Modifiers table in Tab C,H99YBID2,0.2,,,,,
+MCS,First Procedure Code Modifier,IDR-MOD-ONE,mcs_details.idr_mod_one,Service information,MOD-ONE,"This is first procedure modifier. In addition to the normal pricing criteria, the system allows claims examiners to use modifier codes to further qualify billed procedures. In some cases, the modifier requires special handling for pricing the service; in other cases, the modifier is used for further documentation of the performed service.
+The two types of modifiers, as referred to in the MCS, are statistical and pricing. There are two types of statistical modifiers. Some statistical modifiers are documentation modifiers and do not affect pricing although they may affect processing. Other statistical modifiers affect pricing by causing the established reasonable charge or fee to be modified in the same way every time. In both cases, statistical modifiers are not established on the procedure or pricing files as part of the procedure code key. On the other hand, pricing modifiers are considered by the system as part of the seven-digit procedure code key and are used for obtaining established reasonable charge or fee amounts. The reasonable charge or fee amounts for procedure codes with pricing modifiers are established independently of the same procedure without the modifier.
+This field may contain multiple procedure code modifiers or spaces. A procedure code modifier will further define the procedure code as a unique and different service/supply.",,,,See Modifiers table in Tab C,H99YBID2,0.2,,,,,
+MCS,Third Procedure Code Modifier,IDR-MOD-THREE,mcs_details.idr_mod_three,Service information,MOD-THREE,"This is the second procedure modifier. In addition to the normal pricing criteria, the system allows claims examiners to use modifier codes to further qualify billed procedures. In some cases, the modifier requires special handling for pricing the service; in other cases, the modifier is used for further documentation of the performed service.
+The two types of modifiers, as referred to in the MCS, are statistical and pricing. There are two types of statistical modifiers. Some statistical modifiers are documentation modifiers and do not affect pricing although they may affect processing. Other statistical modifiers affect pricing by causing the established reasonable charge or fee to be modified in the same way every time. In both cases, statistical modifiers are not established on the procedure or pricing files as part of the procedure code key. On the other hand, pricing modifiers are considered by the system as part of the seven-digit procedure code key and are used for obtaining established reasonable charge or fee amounts. The reasonable charge or fee amounts for procedure codes with pricing modifiers are established independently of the same procedure without the modifier.
+This field may contain multiple procedure code modifiers or spaces. A procedure code modifier will further define the procedure code as a unique and different service/supply.""",,,,See Modifiers table in Tab C,H99YBID1,0.2,,,,,
+MCS,Second Procedure Code Modifier,IDR-MOD-TWO,mcs_details.idr_mod_two,Service information,MOD-TWO,"This is the second procedure modifier. In addition to the normal pricing criteria, the system allows claims examiners to use modifier codes to further qualify billed procedures. In some cases, the modifier requires special handling for pricing the service; in other cases, the modifier is used for further documentation of the performed service.
+The two types of modifiers, as referred to in the MCS, are statistical and pricing. There are two types of statistical modifiers. Some statistical modifiers are documentation modifiers and do not affect pricing although they may affect processing. Other statistical modifiers affect pricing by causing the established reasonable charge or fee to be modified in the same way every time. In both cases, statistical modifiers are not established on the procedure or pricing files as part of the procedure code key. On the other hand, pricing modifiers are considered by the system as part of the seven-digit procedure code key and are used for obtaining established reasonable charge or fee amounts. The reasonable charge or fee amounts for procedure codes with pricing modifiers are established independently of the same procedure without the modifier.
+This field may contain multiple procedure code modifiers or spaces. A procedure code modifier will further define the procedure code as a unique and different service/supply.",,,,See Modifiers table in Tab C,H99YBID1,0.2,,,,,
+MCS,Procedure Code,IDR-PROC-CODE,mcs_details.idr_proc_code,Service information,PROC-CODE,This field carries the procedure code received from CWF in the 13-trailer.,,,,"5 characters, alphanumeric",H99YBID2,0.2,,,,,
+MCS,Procedure Code - Type of Service,IDR-TOS,mcs_details.idr_tos,Service information,TOS,"TOS: This is a one-character code that identifies the type of service designated to a particular procedure code and modifier. This value may further define the procedure code/modifier combination allowing it to carry multiple definitions and allowed charge values.
+
+
+Refer to Spec S0102010 and MCSBBV manual for general input criteria information and a listing of the acceptable entries.",,,,"Alphanumeric, 1 character",H99YBID2,0.5,,,,,
+MCS,Place of Service - Second Position,IDR-TWO-DIGIT-POS,mcs_details.idr_two_digit_pos,Service information,TWO-DIGIT-POS,"TWO-DIGIT-POS: This is a CMS-defined, two-byte code that identifies where the service was rendered. On claims, the system uses the two-digit HCFA 1500 value. For SCC/procedure file maintenance, the system uses the one-digit value.",,,,"Alphanumeric, 2 characters
+
+See Place of Service codes from MCS specification S0101010, copied in tab C for convenience. ",H99YBID2,0.5,,,,,
+MCS,Location of diagnosis code,n/a,mcs_diagnosis_codes._j_diagnosis,Service information,n/a,True if the diagnosis came from the J-DIAG-3-12 table,,This field was created for RDA API,,boolean,H99YBID1,0.2,,,,,
+MCS,Diagnosis Code - Primary and Secondary,IDR-DIAG-CODE,mcs_diagnosis_codes.idr_diag_code,Service information,DIAG-CODE,"For the H99YB338 and H99YBID1 copybooks, this is the number of the diagnosis code(s) used on the service for which that line item was performed. The primary and secondary fields denote the ICD-9 diagnosis codes in the Diagnosis fields numbers 1 and 2 of 4 (the first and second Diagnosis Codes listed by the provider), at the claim level.",,This field repeats up to 12 times for each diagnosis code.,,"7 digits, alphanumeric",H99YBID1,0.2,,,,,
+MCS,Claim Diagnosis Code Qualifier,IDR-DIAG-ICD-TYPE,mcs_diagnosis_codes.idr_diag_icd_type,Service information,DIAG-ICD-TYPE,This field carries a claim diagnosis code qualifier.,,This field repeats up to 12 times for each diagnosis code.,,"1 character, alphanumeric
+0 – ICD10
+9 – ICD9",H99YBID1,0.2,,,,,
+MCS,Location Activity Code,IDR-LOC-ACTV-CODE,mcs_locations.idr_loc_actv_code,Claim processing,LOC-ACTV-CODE,"This field carries a system-assigned activity code, indicating the activity performed on the pending claim record for the indicated location segment.",,In a table that occurs 11 times.,,"Alphanumeric, 1 character.
+
+See Location Activity Codes table in tab C. ",H99YBID1,0.5,,,,,
+MCS,Clerk ID,IDR-LOC-CLERK,mcs_locations.idr_loc_clerk,Claim processing,LOC-CLERK,This item is used to identify the operator who last updated the information on the location audit trailer.,,In a table that occurs 11 times.,,"Alphanumeric, 4 characters",H99YBID1,0.5,,,,,
+MCS,Location Code,IDR-LOC-CODE,mcs_locations.idr_loc_code,Claim processing,LOC-CODE:,"This value represents the completion /pending status of a claim. Values, with assigned definitions, define the point at which a claim resides during the entire adjudication process.
+Locations are used to control the path the claim will take through the system from the initial activation to finalization. The system automatically moves claims from one location to another during the batch cycle. A claim may also be manually transferred from one location to another.",,In a table that occurs 11 times.,,"Alphanumeric, 3 characters
+Refer to Spec S0119010 for general input criteria information and a listing of the acceptable entries.",H99YBID1,0.5,,,,,
+MCS,Location Date,IDR-LOC-DATE,mcs_locations.idr_loc_date,Claim processing,LOC-DATE,This field contains the date that the claim was in a specific location in the system (as noted in the related location field W-INT-LOC-CODE). There are 11 occurrences of this field on the claim history record. It provides the date for the audit trail of the locations that the claim has passed through during processing.,,In a table that occurs 11 times.,,Date,H99YBID1,0.5,,,,,
+MCS,Detail Number,IDR-DTL-NUMBER,mcs_details.idr_dtl_number,Claim information,DTL-NUMBER,This field contains the sequence number of the detail record. Up to 52 detail records can be included.,,"Each MCS claim has a header and multiple ""detail"" records ",,Date,H99YBID2,0.8,,,,,
+FISS,Claim Type Indicator,CLM-TYP-IND,fiss_claims.clm_typ_ind,Claim information,n/a,"This field identifies the type of claim, which is system generated.",,,,"1 character, alphanumeric
+
+1 = Inpatient
+2 = SNF (Skilled Nursing Facility)
+3 = Outpatient
+4 = Home-Health
+5 = Hospice
+6 = Part-B
+A  = TOB-X20-X28
+B = TOB-130-138",FSSCIDRC,0.12,,,,,
+FISS,Group Code,GROUP-CODE,fiss_claims.group_code,Claim information,n/a,This field identifies the American National Standards Institute (ANSI) group code at the claim level.,,,,"2 characters, alphanumeric
+
+CO = Group CO Contract Obligation
+CR = Group CR Correction
+OA = Group OA Other Adjustment
+PR = Group PR Patient Responsibility ",FSSCIDRC,0.12,,,,,
+FISS,Accountable Care Organization (ACO) Reduction Remittance Advice Remark Code,ACO-RED-RARC,fiss_revenue_lines.aco_red_rarc,Claim processing,n/a,"If the claim has a demonstration code equal to “59” (Pioneer ACO Demonstration) or “68” (Pioneer ACO SNF), and provided service is from an outpatient provider (TOB equal to 12, 13, 14, 22, 23, 34, 71, 72, 74, 75, 76, 77, 81, 82, 85) or the service is for home health Part B; this field will identify the Remittance Advice Remark Code (RARC) returned to the provider advising this decision and possible appeal rights.",,,,"5 characters, alphanumeric 
+
+N83 = No appeal rights. Adjudicative decision based on the provisions of a demonstration project.",FSSCIDRC,0.12,,,,,
+FISS,Pioneer Accountable Care Organization (ACO) Reduction CARC,ACO-RED-CARC,fiss_revenue_lines.aco_red_carc,Claim processing,n/a,"If the claim has a demonstration code equal to “59” (Pioneer ACO Demonstration) or “68” (Pioneer ACO SNF), and provided service is from an outpatient provider (TOB equal to 12, 13, 14, 22, 23, 34, 71, 72, 74, 75, 76, 77, 81, 82, 85) or the service is for home health Part B; this field will identify the applicable Claim Adjustment Reason Code (CARC) that defines why the service was paid differently than billed.",,,,"3, characters alphanumeric
+
+132 = Prearranged demonstration project adjustment
+Space = Not Applicable",FSRCCLXL,0.12,,,,,
+FISS,Pioneer Accountable Care Organization (ACO) Reduction Group Code,ACO-RED-CAGC,fiss_revenue_lines.aco_red_cagc,Claim processing,n/a,"If the claim has a demonstration code equal to “59” (Pioneer ACO Demonstration) or “68” (Pioneer ACO SNF), and provided service is from an outpatient provider (TOB equal to 12, 13, 14, 22, 23, 34, 71, 72, 74, 75, 76, 77, 81, 82, 85) or the service is for home health Part B; this field will identify the applicable adjustment group code that defines the liability for adjustments in charges occurring from this payment reduction.",,,,"2 characters, alphanumeric
+
+CO = Contractual Obligations – this group code should be used when a contractual agreement between the payer and payee, or a regulatory requirement, resulted in an adjustment.  Generally, these adjustments are considered a write-off for the provider and are not billed to the patient.
+Space = Not Applicable",FSRCCLXL,0.12,,,,,
+FISS,DRG,DRG-CD,fiss_claims.drg_cd,Claim processing,n/a,"This field identifies the diagnosis related group code assigned by the grouper program using the length of stay, covered days, sex, age, diagnosis, procedure codes, discharge date and total charges.",,,,"3 characters, alphanumeric
+
+Demo 07 = Exceptions are for claims with a condition code of B1.
+Demo 08 = All DRG codes are valid, except when one of the following DRGs are paid on a per diem basis: 14, 113, 209, 210, 211, 236, 264, 429, 483
+104/105 = Cardiac Valve Procedure   
+106/107, 109 = Heart Bypass Graft Surgery
+112 = Angioplasty
+124/125 = Cardiac Catheterization
+209/471 = Hip and Knee Joint Replacement
+469 = Major joint replacement or reattachment of lower extremity with Major Complications
+470 = Major joint replacement or reattachment of lower extremity without Major Complications
+",FSSCIDRC,0.12,,,,,
+FISS,Non Billable Code,NON-BILL-REV-CODE,fiss_revenue_lines.non_bill_rev_code,Claim processing,n/a,This field identifies whether the revenue code and/or the HCPCS code are valid.,,,,"1 character, alphanumeric
+
+E = End Stage Renal Disease (ESRD) attachment line items with zero allowed charges.
+H = Invalid HCPCS code (system generated on EMC [Electronic Media Claims] claims).
+I = Invalid HCPCS code (system generated on hard copy claims).
+N = Invalid revenue code.
+R = System generated under the following conditions: The claim is an EMC claim, the TOB is equal to ‘34x”, the revenue code is equal to ‘0636’, a HCPC code is present which is not a chemo, anti-emetic, influenza, or J0630 injection code, and the line item is not denied.
+S = Systen generated under the following conditions: The claim is an EMC claim, the revenue code is equal to ‘0601-0604’ (oxygen), the revenue code is being billed for more than the allowable number of services, and the line item is not denied.
+T  = Manually generated under the following conditions: The claim is not EMC, the revenue code is equal to ‘0601-0604’ (oxygen), the revenue code is being billed for more than the allowable number of services, and the line item is not denied.
+Y or Spaces = Valid Revenue Code and/or HCPCS Code.
+","FSSCIDRC
+
+",0.12,,,,,
+FISS,Revenue Code,REV-CD,fiss_revenue_lines.rev_cd,Claim processing,n/a,"This field identifies the payment code used for the specific service or item billed on a claim, and may be used to access data for the record, depending on the copybook it is used in.",,,,"4 characters, numeric
+
+See Revenue Codes table",FSSCIDRC,0.12,,,,,
+FISS,Total Units/Number of Service Billed,REV-UNITS-BILLED,fiss_revenue_lines.rev_units_billed,Billing information,n/a,This field identifies the total of units/number of services billed for each Healthcare Common Procedure Coding System (HCPCS) code and/or revenue code.,,,,"5 characters
+
+None = Not Applicable",FSSCIDRC,0.12,,,,,
+FISS,Total Units/Number of Service Billed,REV-SERV-UNIT-CNT,fiss_revenue_lines.rev_serv_unit_cnt,Billing information,n/a,This field identifies the total of units/number of services billed for each HCPCS code and/or revenue code.,,,,"5 characters
+
+None = Not Applicable",FSSCIDRC,0.12,,,,,
+FISS,Service Date – CYMD,SERV-DT-CYMD,fiss_revenue_lines.serv_dt_cymd,Claim information,n/a,"This is a group level field comprised of the service date elements (including century, year, month and day) for each line item",,,,"8 characters
+
+Date
+
+None = Not Applicable",FSSCIDRC,0.12,,,,,
+FISS,Service Date – CYMD - Text,SERV-DT-CYMD-TEXT,fiss_revenue_lines.serv_dt_cymd_text,Claim information,n/a,This is an RDA added text field in which we pass FISS provided values in SERV_DT_CYMD_FIELD_NUMBER when they don't meet  the expected date format,,,,Varies as what the RDA passes here are exceptions to what was expected,N/A,0.12,,,,,
+FISS,Healthcare Common Procedure Coding (HCPC) Code,HCPC-CD,fiss_revenue_lines.hcpc_cd,Service information,n/a,"This field contains the code assigned by the Centers for Medicare and Medicaid Services (CMS) to identify the specific medical procedures, medications, supplies, or equipment being provided; for the record depending on the copybooks it is used in.",,,,"5 characters, alphanumeric
+
+None = Not Applicable
+
+RDA Note: No source for HCPCS codes was shared in the source system documentation. However, a search on Google turned this up: https://www.cms.gov/medicare/fraud-and-abuse/physicianselfreferral/list_of_codes",FSSCIDRC,0.12,,,,,
+FISS,HCPC Indicator,HCPC-IND,fiss_revenue_lines.hcpc_ind,Service information,n/a,This field identifies the HCPC Indicator.,,,,"1 character, alphanumeric
+
+R = Rural Home Health Intermediary (RHHI)
+H = Rural DME
+Space/blank = All others",FSSCIDRC,0.12,,,,,
+FISS,HCPCS Modifier,HCPC-MODIFIER,fiss_revenue_lines.hcpc_modifier,Service information,n/a,"This field contains a qualifier of the HCPCS procedure code that enables more specific procedure identification, first occurrence.",,,,"2 characters, alphanumeric
+
+Spaces or a valid alphanumeric value.  
+None = Not Applicable
+
+See HCPC Modifiers table",FSSCIDRC,0.12,,,,,
+FISS,HCPC Modifier - Second Occurrence,HCPC-MODIFIER2,fiss_revenue_lines.hcpc_modifier2,Service information,n/a,"This field carries a qualifier of the HCPCS procedure code that enables more specific procedure identification, second occurrence.",,,,"2 characters, alphanumeric
+
+Spaces or a valid alphanumeric value.  
+None = Not Applicable
+
+Note: An entry must appear in the first occurrence of the modifier sequence for an entry to be made in the second occurance.
+
+RDA Note: Though the documentation for the source system does not include a table or source for codes, we assume that these were intended to be referenced: See HCPC Modifiers table",FSSCIDRC,0.12,,,,,
+FISS,HCPC Modifier - Third Occurrence,HCPC-MODIFIER3,fiss_revenue_lines.hcpc_modifier3,Service information,n/a,"This field carries a qualifier of the HCPCS procedure code that enables more specific procedure identification, third occurrence.",,,,"2 characters, alphanumeric
+
+Spaces or a valid alphanumeric value.  
+None = Not Applicable
+
+Note: An entry must appear in the first and second occurrences of the modifier sequence for an entry to be made in the third occurance.
+
+RDA Note: Though the documentation for the source system does not include a table or source for codes, we assume that these were intended to be referenced: See HCPC Modifiers table",FSSCIDRC,0.12,,,,,
+FISS,HCPC Modifier - Fourth Occurrence,HCPC-MODIFIER4,fiss_revenue_lines.hcpc_modifier4,Service information,n/a,"This field carries a qualifier of the HCPCS procedure code that enables more specific procedure identification, fourth occurrence.",,,,"2 characters, alphanumeric
+
+Spaces or a valid alphanumeric value.  
+None = Not Applicable
+
+Note: An entry must appear in the first three occurrences of the modifier sequence for an entry to be made in the fourth occurance.
+
+RDA Note: Though the documentation for the source system does not include a table or source for codes, we assume that these were intended to be referenced: See HCPC Modifiers table",FSSCIDRC,0.12,,,,,
+FISS,HCPC Modifier - Fifth Occurrence,HCPC-MODIFIER5,fiss_revenue_lines.hcpc_modifier5,Service information,n/a,"This field carries a qualifier of the HCPCS procedure code that enables more specific procedure identification, fifth occurrence.",,,,"2 characters, alphanumeric
+
+Spaces or a valid alphanumeric value.  
+None = Not Applicable
+
+Note: An entry must appear in the first four occurrences of the modifier sequence for an entry to be made in the fifth occurance.
+
+RDA Note: Though the documentation for the source system does not include a table or source for codes, we assume that these were intended to be referenced: See HCPC Modifiers table",FSSCIDRC,0.12,,,,,
+FISS,Ambulatory Payment Classification (APC) Healthcare Common Procedure Coding System (HCPCS) APC,APC-HCPCS-APC,fiss_revenue_lines.apc_hcpcs_apc,Service information,n/a,"This field identifies the HCPCS APC group code, which is assigned to the billed HCPCS code in the Outpatient Code Editor (OCE) module.",,If there is a value in the HIPPS-APC-LINES it will be passed in this field rather than represented as a separate field. To accomodate that shift required making the APC-HCPCS-APC 5 characters alphanumeric though it is 5 characters numeric in FISS. Jose note: pull context from the bottom of the techspec,,"5 characters, alphanumeric
+
+None = Not Applicable
+
+RDA Note: Though the documentation for the source system does not include a table or source for codes. A search on Google turned this up: https://www.cms.gov/medicare/fraud-and-abuse/physicianselfreferral/list_of_codes",FSSCIDRC,0.12,,,,,
+FISS,Fiscal Intermediary Number,INTERMEDIARY-NB,fiss_claims.intermediary_nb,Claim processing information,n/a,This field identifies the identification number of the fiscal intermediary as designated by the Centers for Medicare and Medicaid Services (CMS).,,,,"5 characters, alphanumeric
+
+None = Not Applicable",FSSCIDRC,0.13,,,,,
+,RDA Claim Key,N/A,fiss_claims.rda_claim_key,Field created for RDA API,n/a,n/a,,This field contains the primary key employed by the RDA API database to help distinguish unique FISS claims; as DCN was established to be insufficient for uniquess. It was added with the release of RDA API 0.13.0 and is a concatenation of the fields Document Control Number (DCN) and Fiscal Intermediary Number (INTERMEDIARY-NB),,,n/a,0.13,,,,,
+FISS,NDC,NDC,fiss_revenue_lines.ndc,Service information,n/a,This field identifies the NDC assigned to each medication.,,,,11 characters,,0.14.1,,,,,
+FISS,NDC_QTY,NDC_QTY,fiss_revenue_lines.ndc_qty,Service information,n/a,This field identifies the quantity of the NDC medication administered.,,,,Numeric 9(7).999,,0.14.1,,,,,
+FISS,NDC_QTY_QUAL,NDC_QTY_QUAL,fiss_revenue_lines.ndc_qty_qual,Service information,n/a,This field identifies the measurement qualifier for the quantity of the NDC medication administered.,,,,2 characters,,0.14.1,,,,,
+FISS,ADM_TYPE_CD,ADM_TYPE_CD,fiss_claims.adm_type_cd,Claim processing,n/a,,,,,,,0.14.1,,,,,
+MCS,DTL_NDC,DTL_NDC,mcs_details.dtl_ndc,Service information,n/a,This field holds the data from segment 2410-LIN03 of claims submitted in 5010A1 format.,,,,"48 characters, alphanumeric",,0.14.1,,,,,
+MCS,NDC_UNIT_COUNT,NDC_UNIT_COUNT,mcs_details.dtc_ndc_unit_count,Service information,n/a,This field holds the data from 5010A format 2410 CTP04 claims.,,,,"15 characters, alphanumeric",,0.14.1,,,,,
