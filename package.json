@@ -18,7 +18,9 @@
     "astro-typesafe-routes": "^5.0.0",
     "class-variance-authority": "^0.7.1",
     "cva": "^1.0.0-beta.4",
-    "sass": "^1.86.3"
+    "fast-xml-parser": "^5.2.5",
+    "sass": "^1.86.3",
+    "tinyglobby": "^0.2.15"
   },
   "devDependencies": {
     "@astrojs/ts-plugin": "^1.10.4",

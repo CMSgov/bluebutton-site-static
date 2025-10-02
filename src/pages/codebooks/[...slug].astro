@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("codeBooks");
+    return posts.map((post) => ({
+        params: { slug: post.id },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+---
+
+<BaseLayout
+    title={post.id}
+    description=""
+    showSideNav={false}
+    showInPageNav={false}
+>
+
+    <div class="usa-prose margin-y-6">
+        <h1>Variable: {post.data.title}</h1>
+        <p class="usa-intro">{post.data.label}</p>
+
+        <h2>Description</h2>
+        <p>{post.data.description || "n/a"}</p>
+
+        <h2>Comment</h2>
+        <p>{post.data.comment || "n/a"}</p>
+
+        <h2>Values</h2>
+        {
+            (post.data.values && post.data.values.length > 0) ? (
+                <p>
+                    This variable is coded, and will contain one of the
+                    following values.
+                </p>
+                <table>
+                    <caption>Values for</caption>
+                    <thead>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        {post.data.values.map((val) => (
+                            <tr>
+                                <td>{val.code}</td>
+                                <td>{val.text}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            ) : (
+                <p>n/a</p>
+            )
+        }
+
+        <h2>Other Info</h2>
+        <p>Some additional information on this variable:</p>
+
+        <ul>
+            <li><strong>Short Name: </strong>{post.data.shortName}</li>
+            <li><strong>Long Name: </strong>{post.data.longName}</li>
+            <li><strong>Type: </strong>{post.data.type}</li>
+            <li><strong>Length: </strong>{post.data.length}</li>
+            <li><strong>Source: </strong>{post.data.source}</li>
+            <li><strong>Value Format: </strong>{post.data.valueFormat}</li>
+        </ul>
+    </div>
+</BaseLayout>
