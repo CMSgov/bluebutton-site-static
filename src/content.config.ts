@@ -63,22 +63,21 @@ const codeBooksCollection = defineCollection({
     id: z.string(),
     title: z.string(),
     label: z.string(),
-    shortName: z.string(),
-    longName: z.string(),
-    type: z.string(),
-    length: z.string(),
-    source: z.string(),
-    valueFormat: z.string(),
-    description: z.string(),
+    shortName: z.string().optional(),
+    longName: z.string().optional(),
+    type: z.string().optional(),
+    length: z.string().optional(),
+    source: z.string().optional(),
+    valueFormat: z.string().optional(),
+    description: z.string().optional(),
     comment: z.string().optional(),
-    values: z.array(z.object({
-      code: z.string(),
-      text: z.string()
-    })).optional()
+    values: z.object({
+      code: z.string().optional(),
+      text: z.string().optional()
+    }).array().optional()
   })
 })
 
-// 4. Export a single `collections` object to register your collection(s)
 export const collections = {
   pages: pageCollection,
   resources: resourcesCollection,

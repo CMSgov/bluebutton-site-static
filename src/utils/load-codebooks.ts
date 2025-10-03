@@ -61,20 +61,20 @@ export async function loadCodebooks({ pattern, base }: { pattern: string | [stri
         id: val['@_id'].toLowerCase(),
         title: val['@_id'],
         label: val['@_label'],
-        shortName: val['@_shortName'] || '',
-        longName: val['@_longName'] || '',
-        type: val['@_type'] || '',
-        length: val['@_length'] || '',
-        source: val['@_source'] || '',
-        valueFormat: val['@_valueFormat'] || '',
+        shortName: val['@_shortName'],
+        longName: val['@_longName'],
+        type: val['@_type'],
+        length: val['@_length'],
+        source: val['@_source'],
+        valueFormat: val['@_valueFormat'],
         description: val.description.p.join(' '),
         comment: val.comment?.p.join(' '),
         values: val.valueGroups?.valueGroup.flatMap(vg =>
           vg.value.map(v => ({
-            code: v['@_code'] || '',
-            text: v['#text'] || '',
+            code: v['@_code'],
+            text: v['#text'],
           })),
-        ) || [],
+        ),
       }))
     }
   })
