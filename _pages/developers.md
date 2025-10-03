@@ -130,10 +130,6 @@ We currently support 2 BB2.0 API versions:
 
 BB2.0 Version 2 (V2) is based on [FHIR release (R4)](http://hl7.org/fhir/R4/){:target="_blank"} and the [CARIN CDPDE Implementation Guide (Carin for Blue Button)](http://hl7.org/fhir/us/carin-bb/STU1.1/){:target="_blank"} and was released in July 2021\. To learn about migrating to BB2.0 V2, go to [Migrating to V2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-V2-FAQ)
 
-#### Version 1 
-
-Version 1 (V1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/){:target="_blank"}. Development on V1 is limited to bug fixes and basic maintenance. If you're developing a new app, use V2\. For information about BB2.0 V1, see the [V1 Documentation](/v1/). 
-
 ### Environments
 
 We currently maintain production and sandbox environments for developing with the BB2.0 API. For technical information about our environments, see [Base FHIR URLs](#base-fhir-urls). 
