@@ -13,25 +13,25 @@
   <body>
     <div id="app"></div>
     <script>
-      import { createApiReference } from "@scalar/api-reference";
+      import { createApiReference } from '@scalar/api-reference'
 
-      document.addEventListener("DOMContentLoaded", () => {
-        createApiReference("#app", {
+      document.addEventListener('DOMContentLoaded', () => {
+        createApiReference('#app', {
           // The URL of the OpenAPI/Swagger document
-          url: "/openapi.yaml",
+          url: '/openapi.yaml',
           // Avoid CORS issues
-          proxyUrl: "https://proxy.scalar.com",
+          proxyUrl: 'https://proxy.scalar.com',
           hideClientButton: true,
-          theme: "deepSpace",
+          theme: 'deepSpace',
           // hiddenClients: ['libcurl', 'clj_http', 'httpclient', 'restsharp', 'native', 'http1.1', 'asynchttp', 'nethttp', 'okhttp', 'unirest', 'xhr', 'axios', 'fetch', 'jquery', 'okhttp', 'native', 'request', 'unirest', 'axios', 'fetch', 'nsurlsession', 'cohttp', 'curl', 'guzzle', 'http1', 'http2', 'webrequest', 'restmethod', 'python3', 'requests', 'httr', 'native', 'curl', 'httpie', 'wget', 'nsurlsession', 'undici'],
-          hiddenClients: ["undici"],
+          hiddenClients: ['undici'],
           defaultHttpClient: {
-            targetKey: "node",
-            clientKey: "fetch",
+            targetKey: 'node',
+            clientKey: 'fetch',
           },
           hideModels: true,
-        });
-      });
+        })
+      })
     </script>
   </body>
 </html>

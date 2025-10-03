@@ -1,26 +1,26 @@
 ---
-import DocsLayout from "../layouts/DocsLayout.astro";
-import "#assets/sass/styles.scss";
-import Link from "components/link.astro";
-import { getEntry } from "astro:content";
-import { render } from "astro:content";
-import CopySnippet from "components/copy-snippet.astro";
+import { getEntry, render } from 'astro:content'
+import CopySnippet from 'components/copy-snippet.astro'
+import Link from 'components/link.astro'
 
-const entry = await getEntry("pages", "bb2-data");
+import DocsLayout from '../layouts/DocsLayout.astro'
+import '#assets/sass/styles.scss'
+
+const entry = await getEntry('pages', 'bb2-data')
 if (!entry) {
-	throw new Error("Page not found");
+  throw new Error('Page not found')
 }
 
-const { Content, headings } = await render(entry);
+const { Content, headings } = await render(entry)
 ---
 
 <DocsLayout title="BB2 Data" description="" headings={headings}>
-	<main id="main-content">
-		<Content
-			components={{
-				a: Link,
-				CopySnippet,
-			}}
-		/>
-	</main>
+  <main id="main-content">
+    <Content
+      components={{
+        a: Link,
+        CopySnippet,
+      }}
+    />
+  </main>
 </DocsLayout>

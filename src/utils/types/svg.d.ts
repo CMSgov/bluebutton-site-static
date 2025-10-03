@@ -1,6 +1,6 @@
-type SvgImport = typeof import("*.svg");
+type SvgImport = typeof import('*.svg')
 export type SvgComponent = SvgImport extends {
-  default: infer Component;
+  default: infer Component
 }
   ? Component
-  : never;
+  : never

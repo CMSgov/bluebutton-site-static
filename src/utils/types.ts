@@ -1,13 +1,13 @@
-type LinkItem = {
-  href: string,
+interface LinkItem {
+  href: string
   label: string
 }
 
 export type PrimaryNavLinks = (LinkItem & {
   children?: never
 } | {
-  href?: never,
-  label: string,
+  href?: never
+  label: string
   children: LinkItem[]
 })[]
 

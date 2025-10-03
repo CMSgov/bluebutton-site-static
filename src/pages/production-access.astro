@@ -1,34 +1,34 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import "#assets/sass/styles.scss";
-import { getEntry } from "astro:content";
-import { render } from "astro:content";
-import ProcessList from "components/process-list.astro";
-import ProcessListItem from "components/process-list-item.astro";
-import Link from "components/link.astro";
-import Accordion from "#components/accordion.astro";
-import Button from "#components/button.astro";
+import Accordion from '#components/accordion.astro'
+import Button from '#components/button.astro'
+import { getEntry, render } from 'astro:content'
+import Link from 'components/link.astro'
+import ProcessListItem from 'components/process-list-item.astro'
+import ProcessList from 'components/process-list.astro'
 
-const entry = await getEntry("pages", "production-access");
+import BaseLayout from '../layouts/BaseLayout.astro'
+import '#assets/sass/styles.scss'
+
+const entry = await getEntry('pages', 'production-access')
 if (!entry) {
-	throw new Error("Page not found");
+  throw new Error('Page not found')
 }
 
-const { Content, headings } = await render(entry);
+const { Content, headings } = await render(entry)
 ---
 
 <BaseLayout title="Production Access" description="" headings={headings} showSideNav={false}>
-	<main id="main-content">
-		<h1 class="margin-top-6">{entry.data.title}</h1>
+  <main id="main-content">
+    <h1 class="margin-top-6">{entry.data.title}</h1>
 
-		<Content
-			components={{
-				a: Link,
-				ProcessList,
-				ProcessListItem,
-				Accordion,
-				Button,
-			}}
-		/>
-	</main>
+    <Content
+      components={{
+        a: Link,
+        ProcessList,
+        ProcessListItem,
+        Accordion,
+        Button,
+      }}
+    />
+  </main>
 </BaseLayout>

@@ -1,23 +1,21 @@
 ---
-import Icon from "./icon.astro";
-import Github from "@uswds/uswds/img/usa-icons/github.svg";
-import Code from "@uswds/uswds/img/usa-icons/code.svg";
-import Swagger from "#assets/images/swagger.svg";
-import ArrowForward from "@uswds/uswds/img/usa-icons/arrow_forward.svg";
+import Swagger from '#assets/images/swagger.svg'
+import ArrowForward from '@uswds/uswds/img/usa-icons/arrow_forward.svg'
+import Code from '@uswds/uswds/img/usa-icons/code.svg'
+
+import Icon from './icon.astro'
 
 type Props = {
-  h1: string;
-  description: string;
-};
+  h1: string
+  description: string
+}
 
-const { h1, description } = Astro.props;
+const { h1, description } = Astro.props
 ---
 
 <div class="usa-section--dark bg-primary-gradient">
   <div class="grid-container padding-y-8">
-    <h1
-      class="hero-title font-body-3xl measure-1 margin-bottom-0 line-height-sans-2 text-semibold text-balance"
-    >
+    <h1 class="hero-title font-body-3xl measure-1 margin-bottom-0 line-height-sans-2 text-semibold text-balance">
       {h1}
     </h1>
     <p class="hero-paragraph line-height-sans-4 measure-5">
@@ -25,10 +23,7 @@ const { h1, description } = Astro.props;
     </p>
     <div class="grid-row grid-gap margin-top-2">
       <div class="tablet:grid-col-auto margin-top-2">
-        <a
-          href="/api-documentation"
-          class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
-        >
+        <a href="/api-documentation" class="hero-button usa-button usa-button--inverse usa-button--outline width-full">
           Get started
           <Icon icon={ArrowForward} color="white" size={3} />
         </a>
@@ -38,7 +33,7 @@ const { h1, description } = Astro.props;
           href="https://sandbox.bluebutton.cms.gov/docs/openapi"
           target="_blank"
           rel="noopener noreferrer"
-          class="hero-button usa-button  usa-button--inverse usa-button--outline width-full"
+          class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
         >
           API reference <Icon icon={Swagger} color="white" size={3} />
         </a>
@@ -48,7 +43,7 @@ const { h1, description } = Astro.props;
           href="https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login"
           target="_blank"
           rel="noopener noreferrer"
-          class="hero-button usa-button  usa-button--inverse usa-button--outline width-full"
+          class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
         >
           Visit the sandbox <Icon icon={Code} color="white" size={3} />
         </a>

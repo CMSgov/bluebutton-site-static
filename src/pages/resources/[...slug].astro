@@ -1,19 +1,19 @@
 ---
-import { getCollection, render } from "astro:content";
-import DocsLayout from "layouts/DocsLayout.astro";
-import Link from "#components/link.astro";
-import Alert from "#components/alert.astro";
+import Alert from '#components/alert.astro'
+import Link from '#components/link.astro'
+import { getCollection, render } from 'astro:content'
+import DocsLayout from 'layouts/DocsLayout.astro'
 
 export async function getStaticPaths() {
-  const posts = await getCollection("resources");
+  const posts = await getCollection('resources')
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },
-  }));
+  }))
 }
 
-const { post } = Astro.props;
-const { Content, headings } = await render(post);
+const { post } = Astro.props
+const { Content, headings } = await render(post)
 ---
 
 <DocsLayout title={post.data.title} description="" headings={headings} showSideNav={false}>

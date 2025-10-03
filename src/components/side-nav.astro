@@ -1,36 +1,34 @@
 ---
-import { getCollection } from "astro:content";
-import Link from "./link.astro";
-import Icon from "./icon.astro";
-import type { RouteId, RouteOptions } from "astro-typesafe-routes/path";
-import Github from "@uswds/uswds/img/usa-icons/github.svg";
-import Swagger from "#assets/images/swagger.svg";
+import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
 
-type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[];
+import Swagger from '#assets/images/swagger.svg'
+import Github from '@uswds/uswds/img/usa-icons/github.svg'
+import { getCollection } from 'astro:content'
 
-const { pathname } = Astro.url;
+import Icon from './icon.astro'
+import Link from './link.astro'
 
-const apiDocs = (await getCollection("apiDocs")).sort(
-  (a, b) => a.data.sortOrder - b.data.sortOrder,
-);
+type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]
+
+const { pathname } = Astro.url
+
+const apiDocs = (await getCollection('apiDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
 const docsnavLinks = apiDocs.map((doc) => ({
-  to: "/api-docs/[...slug]",
+  to: '/api-docs/[...slug]',
   params: {
     slug: doc.id,
   },
   label: doc.data.title,
-})) satisfies RoutesArray<"/api-docs/[...slug]">;
+})) satisfies RoutesArray<'/api-docs/[...slug]'>
 
-const dataDocs = (await getCollection("dataDocs")).sort(
-  (a, b) => a.data.sortOrder - b.data.sortOrder,
-);
+const dataDocs = (await getCollection('dataDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
 const datanavLinks = dataDocs.map((doc) => ({
-  to: "/data/[...slug]",
+  to: '/data/[...slug]',
   params: {
     slug: doc.id,
   },
   label: doc.data.title,
-})) satisfies RoutesArray<"/data/[...slug]">;
+})) satisfies RoutesArray<'/data/[...slug]'>
 ---
 
 <div
@@ -41,13 +39,7 @@ const datanavLinks = dataDocs.map((doc) => ({
     <nav aria-label="Side navigation">
       <ul class="usa-sidenav">
         <li class="usa-sidenav__item">
-          <Link
-            to="/api-documentation"
-            class="if current page"
-            data-tealium="left-rail"
-          >
-            Get Started
-          </Link>
+          <Link to="/api-documentation" class="if current page" data-tealium="left-rail"> Get Started </Link>
         </li>
         <ul class="usa-sidenav__sublist">
           {
@@ -56,7 +48,7 @@ const datanavLinks = dataDocs.map((doc) => ({
                 <Link
                   to={link.to}
                   params={link.params}
-                  class={pathname.startsWith(link.to) ? "usa-current" : null}
+                  class={pathname.startsWith(link.to) ? 'usa-current' : null}
                   data-tealium="left-rail"
                 >
                   {link.label}
@@ -75,7 +67,7 @@ const datanavLinks = dataDocs.map((doc) => ({
                 <Link
                   to={link.to}
                   params={link.params}
-                  class={pathname.startsWith(link.to) ? "usa-current" : null}
+                  class={pathname.startsWith(link.to) ? 'usa-current' : null}
                   data-tealium="left-rail"
                 >
                   {link.label}
@@ -85,35 +77,33 @@ const datanavLinks = dataDocs.map((doc) => ({
           }
         </ul>
         <li class="usa-sidenav__item">
-      <a
-        href="https://github.com/CMSgov/bluebutton-web-server"
-        class="usa-nav-link"
-        target="blank"
-        rel="noopener noreferrer"
-        data-tealium="left-rail"
-
-      >
-        <span class="display-flex flex-align-center">
-          <span class="padding-right-1">GitHub</span>
-          <Icon icon={Github} color="base-dark" size={3} />
-        </span>
-      </a>
-    </li>
-    <li class="usa-sidenav__item">
-      <a
-        href="https://sandbox.bluebutton.cms.gov/docs/openapi"
-        class="usa-nav-link"
-        target="blank"
-        rel="noopener noreferrer"
-        data-tealium="left-rail"
-
-      >
-        <span class="display-flex flex-align-center">
-          <span class="padding-right-1">Swagger</span>
-          <Icon icon={Swagger} color="base-dark" size={3} />
-        </span>
-      </a>
-    </li>
+          <a
+            href="https://github.com/CMSgov/bluebutton-web-server"
+            class="usa-nav-link"
+            target="blank"
+            rel="noopener noreferrer"
+            data-tealium="left-rail"
+          >
+            <span class="display-flex flex-align-center">
+              <span class="padding-right-1">GitHub</span>
+              <Icon icon={Github} color="base-dark" size={3} />
+            </span>
+          </a>
+        </li>
+        <li class="usa-sidenav__item">
+          <a
+            href="https://sandbox.bluebutton.cms.gov/docs/openapi"
+            class="usa-nav-link"
+            target="blank"
+            rel="noopener noreferrer"
+            data-tealium="left-rail"
+          >
+            <span class="display-flex flex-align-center">
+              <span class="padding-right-1">Swagger</span>
+              <Icon icon={Swagger} color="base-dark" size={3} />
+            </span>
+          </a>
+        </li>
       </ul>
     </nav>
   </div>

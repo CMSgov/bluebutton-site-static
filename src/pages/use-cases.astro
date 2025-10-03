@@ -1,35 +1,30 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import "#assets/sass/styles.scss";
-import { getEntry } from "astro:content";
-import { render } from "astro:content";
-import Link from "components/link.astro";
-import Icon from "#components/icon.astro";
-import IconList from "#components/icon-list.astro";
+import IconList from '#components/icon-list.astro'
+import Icon from '#components/icon.astro'
+import { getEntry, render } from 'astro:content'
+import Link from 'components/link.astro'
 
-const entry = await getEntry("pages", "use-cases");
+import BaseLayout from '../layouts/BaseLayout.astro'
+import '#assets/sass/styles.scss'
+
+const entry = await getEntry('pages', 'use-cases')
 if (!entry) {
-	throw new Error("Page not found");
+  throw new Error('Page not found')
 }
 
-const { Content, headings } = await render(entry);
+const { Content, headings } = await render(entry)
 ---
 
-<BaseLayout
-	title="Use Cases"
-	description=""
-	headings={headings}
-	showSideNav={false}
->
-	<main id="main-content">
-		<h1 class="margin-top-6">{entry.data.title}</h1>
+<BaseLayout title="Use Cases" description="" headings={headings} showSideNav={false}>
+  <main id="main-content">
+    <h1 class="margin-top-6">{entry.data.title}</h1>
 
-		<Content
-			components={{
-				a: Link,
-				Icon,
-				IconList,
-			}}
-		/>
-	</main>
+    <Content
+      components={{
+        a: Link,
+        Icon,
+        IconList,
+      }}
+    />
+  </main>
 </BaseLayout>

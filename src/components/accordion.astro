@@ -1,35 +1,31 @@
 ---
-import Icon from "#components/icon.astro";
-import Add from "@uswds/uswds/img/usa-icons/add.svg";
-import Remove from "@uswds/uswds/img/usa-icons/remove.svg";
+import Icon from '#components/icon.astro'
+import Add from '@uswds/uswds/img/usa-icons/add.svg'
 
 type Props = {
-  heading: string;
-  id: string;
-};
+  heading: string
+  id: string
+}
 
-const { heading, id } = Astro.props;
+const { heading, id } = Astro.props
 ---
 
 <div class="grid-container padding-x-0">
-    <div class="usa-accordion margin-y-2 maxw-tablet-lg">
-        <h4 class="usa-accordion__heading">
-            <button
-                type="button"
-                class="usa-accordion__button flex-justify flex-align-center"
-                aria-expanded="false"
-                aria-controls={id}
-                data-tealium="accordion"
-            >
-                {heading}
-                <Icon icon={Add} color="base-dark" size={3} />
-            </button>
-        </h4>
-        <div
-            id={id}
-            class="usa-accordion__content usa-prose"
-        >
-            <slot />
-        </div>
+  <div class="usa-accordion margin-y-2 maxw-tablet-lg">
+    <h4 class="usa-accordion__heading">
+      <button
+        type="button"
+        class="usa-accordion__button flex-justify flex-align-center"
+        aria-expanded="false"
+        aria-controls={id}
+        data-tealium="accordion"
+      >
+        {heading}
+        <Icon icon={Add} color="base-dark" size={3} />
+      </button>
+    </h4>
+    <div id={id} class="usa-accordion__content usa-prose">
+      <slot />
     </div>
+  </div>
 </div>

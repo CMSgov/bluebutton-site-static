@@ -1,16 +1,16 @@
 ---
-import { Code } from "astro:components";
+import { Code } from 'astro:components'
 
-type CodeProps = Parameters<typeof Code>[0];
+type CodeProps = Parameters<typeof Code>[0]
 
 type Props = {
-  code: string;
-  lang: CodeProps["lang"];
-  canCopy?: boolean;
-};
+  code: string
+  lang: CodeProps['lang']
+  canCopy?: boolean
+}
 
-const { code = "", lang, canCopy = true } = Astro.props;
-const nanosecond = crypto.randomUUID();
+const { code = '', lang, canCopy = true } = Astro.props
+const nanosecond = crypto.randomUUID()
 ---
 
 <div class="bg-base-lightest border-1px border-base-lighter margin-y-2 position-relative">
@@ -43,23 +43,24 @@ const nanosecond = crypto.randomUUID();
   </div>
 </div>
 
-{canCopy 
-  ? <script
+<script
   is:inline
   define:vars={{
+    canCopy,
     nanosecond,
   }}
 >
-  let buttonEl = document.getElementById(`copybutton-${nanosecond}`);
-  buttonEl.addEventListener("click", () => {
-    /* Get the text field */
-    var copyText = document.getElementById(`code-${nanosecond}`);
+  if (canCopy) {
+    const buttonEl = document.getElementById(`copybutton-${nanosecond}`)
+    buttonEl.addEventListener('click', () => {
+      /* Get the text field */
+      const copyText = document.getElementById(`code-${nanosecond}`)
 
-    /* Select the text field */
-    copyText.select();
+      /* Select the text field */
+      copyText.select()
 
-    /* Copy the text inside the text field */
-    document.execCommand("copy");
-  });
-</script> 
-  : null}
+      /* Copy the text inside the text field */
+      document.execCommand('copy')
+    })
+  }
+</script>

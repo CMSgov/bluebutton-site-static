@@ -1,32 +1,32 @@
 ---
-import DocsLayout from "../layouts/DocsLayout.astro";
-import "#assets/sass/styles.scss";
-import Link from "components/link.astro";
-import { getEntry } from "astro:content";
-import { render } from "astro:content";
-import ProcessList from "components/process-list.astro";
-import ProcessListItem from "components/process-list-item.astro";
-import CopySnippet from "components/copy-snippet.astro";
-import Button from "#components/button.astro"
+import Button from '#components/button.astro'
+import { getEntry, render } from 'astro:content'
+import CopySnippet from 'components/copy-snippet.astro'
+import Link from 'components/link.astro'
+import ProcessListItem from 'components/process-list-item.astro'
+import ProcessList from 'components/process-list.astro'
 
-const entry = await getEntry("pages", "api-documentation");
+import DocsLayout from '../layouts/DocsLayout.astro'
+import '#assets/sass/styles.scss'
+
+const entry = await getEntry('pages', 'api-documentation')
 if (!entry) {
-	throw new Error("Page not found");
+  throw new Error('Page not found')
 }
 
-const { Content, headings } = await render(entry);
+const { Content, headings } = await render(entry)
 ---
 
-<DocsLayout title="API Documentation" description=""  headings={headings}>
-	<main id="main-content">
-		<Content
-			components={{
-				a: Link,
-				ProcessList,
-				ProcessListItem,
-				CopySnippet,
-				Button,
-			}}
-		/>
-	</main>
+<DocsLayout title="API Documentation" description="" headings={headings}>
+  <main id="main-content">
+    <Content
+      components={{
+        a: Link,
+        ProcessList,
+        ProcessListItem,
+        CopySnippet,
+        Button,
+      }}
+    />
+  </main>
 </DocsLayout>

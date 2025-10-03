@@ -1,28 +1,23 @@
 ---
 type Props = {
-    image: string;
-    imageLast?: boolean;
-};
+  image: string
+  imageLast?: boolean
+}
 
-const {
-    image,
-    imageLast,
-} = Astro.props;
-
+const { image, imageLast } = Astro.props
 ---
 
 <div class="minw-15 padding-y-5 padding-x-3 grid-container">
-    <div class="grid-row grid-gap-4 desktop:grid-gap-6 padding-y-7">
-        <div class={`tablet:grid-col display-flex flex-align-center tablet:flex-justify-center${imageLast ? " desktop:order-last" : null}`}
-        >
-            <img class="width-auto height-full" src={image} alt="" />
-        </div>
-        <div
-            class="tablet:grid-col padding-top-4 tablet:padding-top-0 display-flex flex-align-center"
-        >
-            <div>
-                  <slot />
-            </div>
-        </div>
+  <div class="grid-row grid-gap-4 desktop:grid-gap-6 padding-y-7">
+    <div
+      class={`tablet:grid-col display-flex flex-align-center tablet:flex-justify-center${imageLast ? ' desktop:order-last' : null}`}
+    >
+      <img class="width-auto height-full" src={image} alt="" />
     </div>
+    <div class="tablet:grid-col padding-top-4 tablet:padding-top-0 display-flex flex-align-center">
+      <div>
+        <slot />
+      </div>
+    </div>
+  </div>
 </div>

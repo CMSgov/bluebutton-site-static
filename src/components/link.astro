@@ -1,16 +1,16 @@
 ---
-import LaunchSvg from "@uswds/uswds/img/usa-icons/launch.svg";
-import type { RouteId } from "astro-typesafe-routes/path";
-import type { RouteOptions } from "astro-typesafe-routes/path";
-import { $path } from "astro-typesafe-routes/path";
-import type { HTMLAttributes } from "astro/types";
+import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
+import type { HTMLAttributes } from 'astro/types'
+
+import LaunchSvg from '@uswds/uswds/img/usa-icons/launch.svg'
+import { $path } from 'astro-typesafe-routes/path'
 
 type Props<T extends RouteId> =
-  | (HTMLAttributes<"a"> & { isExternal: boolean })
-  | (Omit<HTMLAttributes<"a">, "href"> &
+  | (HTMLAttributes<'a'> & { isExternal: boolean })
+  | (Omit<HTMLAttributes<'a'>, 'href'> &
       RouteOptions<T> & {
-        showIcon?: boolean;
-      });
+        showIcon?: boolean
+      })
 
 const {
   href,
@@ -23,12 +23,12 @@ const {
   showIcon = true,
   isExternal = false,
   ...props
-} = Astro.props;
-const site = Astro.site;
+} = Astro.props
+const site = Astro.site
 
-let computedIsExternal = isExternal;
+let computedIsExternal = isExternal
 // Default to plain href first to support markdown
-let computedHref = href; 
+let computedHref = href
 
 if (to) {
   computedHref = $path({
@@ -38,37 +38,30 @@ if (to) {
     searchParams,
     hash,
     trailingSlash,
-  });
+  })
 }
 
 if (href) {
   try {
-    const { hostname } = new URL(href || "");
+    const { hostname } = new URL(href || '')
     if (hostname === site?.hostname) {
-      throw new Error(
-        `${to}`,
-      );
+      throw new Error(`${to}`)
     }
   } catch {
-    computedIsExternal = true;
+    computedIsExternal = true
   }
 }
 ---
 
 <a
   href={computedHref}
-  target={computedIsExternal ? "_blank" : undefined}
-  rel={computedIsExternal ? "noopener" : undefined}
+  target={computedIsExternal ? '_blank' : undefined}
+  rel={computedIsExternal ? 'noopener' : undefined}
   {...props}
 >
   <slot />{
     computedIsExternal && showIcon ? (
-      <LaunchSvg
-        height={16}
-        width={16}
-        fill="currentColor"
-        style="vertical-align:middle;"
-        class="margin-left-2px"
-      />
+      <LaunchSvg height={16} width={16} fill="currentColor" style="vertical-align:middle;" class="margin-left-2px" />
     ) : null
-  }</a>
+  }</a
+>

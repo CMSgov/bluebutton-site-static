@@ -1,20 +1,16 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "#components/hero.astro";
-import Card from "#components/card.astro";
-import Browsers from "#assets/images/browsers.svg?url";
-import Home from "#assets/images/home.svg?url";
-import Whiteboard from "#assets/images/whiteboard.svg?url";
-import TwoColumn from "#components/two-column.astro";
-import Button from "#components/button.astro";
+import Browsers from '#assets/images/browsers.svg?url'
+import Home from '#assets/images/home.svg?url'
+import Whiteboard from '#assets/images/whiteboard.svg?url'
+import Button from '#components/button.astro'
+import Card from '#components/card.astro'
+import Hero from '#components/hero.astro'
+import TwoColumn from '#components/two-column.astro'
+
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<BaseLayout
-  title="Blue Button 2.0 (BB2)"
-  description=""
-  showSideNav={false}
-  showInPageNav={false}
->
+<BaseLayout title="Blue Button 2.0 (BB2)" description="" showSideNav={false} showInPageNav={false}>
   <main id="main-content">
     <Hero
       h1="CMS BlueButton 2.0"
@@ -22,59 +18,43 @@ import Button from "#components/button.astro";
     />
     <h2>Medicare claims data at your fingertips</h2>
     <ul class="usa-card-group flex-justify-center padding-y-4">
-      <Card
-        heading="For Developers"
-        img={Browsers}
-      >
-        Explore the developer sandbox to build amazing tools and services with
-        the Blue Button 2.0 API.
-        <Button 
-          slot="buttonSlot" 
-          link="https://sandbox.bluebutton.cms.gov/v1/accounts/create"
-          sandbox={true}>
-          Sign up for the sandbox</Button>
+      <Card heading="For Developers" img={Browsers}>
+        Explore the developer sandbox to build amazing tools and services with the Blue Button 2.0 API.
+        <Button slot="buttonSlot" link="https://sandbox.bluebutton.cms.gov/v1/accounts/create" sandbox={true}>
+          Sign up for the sandbox</Button
+        >
       </Card>
-      <Card
-        heading="For Organizations"
-        img={Whiteboard}
-      >
+      <Card heading="For Organizations" img={Whiteboard}>
         Discover how your company or organization could use Blue Button 2.0.
-        <Button 
-          slot="buttonSlot" 
-          link="#value-for-organizations"
-          outline={true}>
-          See the power of Blue Button 2.0</Button>
+        <Button slot="buttonSlot" link="#value-for-organizations" outline={true}>
+          See the power of Blue Button 2.0</Button
+        >
       </Card>
-      <Card
-        heading="For People with Medicare"
-        img={Home}
-      >
+      <Card heading="For People with Medicare" img={Home}>
         Learn about Medicare's Blue Button & find apps you can use.
-        <Button 
-          slot="buttonSlot" 
+        <Button
+          slot="buttonSlot"
           link="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
-          outline={true}>
-          Get details on Medicare.gov</Button>
+          outline={true}
+        >
+          Get details on Medicare.gov</Button
+        >
       </Card>
     </ul>
     <TwoColumn image={Whiteboard}>
       <h2>Value for organizations</h2>
       <h3>What does Blue Button 2.0 allow you to do?</h3>
       <p>
-        Whether you are a health plan market place, a non-profit research
-        organization, or a healthcare startup - integration with Blue Button 2.0
-        provides value to organizations that deliver services to people with
-        Medicare.
+        Whether you are a health plan market place, a non-profit research organization, or a healthcare startup -
+        integration with Blue Button 2.0 provides value to organizations that deliver services to people with Medicare.
       </p>
       <p>
-        People with Medicare can allow access to their data, which can improve
-        data accuracy and efficiency over manual data entry. Faster, more
-        accurate data can lead to better service recommendations and health
-        outcomes for beneficiaries.
+        People with Medicare can allow access to their data, which can improve data accuracy and efficiency over manual
+        data entry. Faster, more accurate data can lead to better service recommendations and health outcomes for
+        beneficiaries.
       </p>
       <p>
-        Learn more about using Blue Button 2.0, or go ahead and create your
-        Sandbox account to explore our sample data.
+        Learn more about using Blue Button 2.0, or go ahead and create your Sandbox account to explore our sample data.
       </p>
       <p>
         <Button unstyled={true} icon={true} link="/use-cases">Learn more about use cases</Button>
@@ -84,22 +64,21 @@ import Button from "#components/button.astro";
       <h2>Value for people with Medicare</h2>
       <h3>What does Blue Button 2.0 allow you to do?</h3>
       <p>
-        Blue Button 2.0 allows you to share your data with third-party
-        applications, doctors, research programs, and more! It also gives
-        beneficiaries and their caregivers more options and control over their
-        claims data.
+        Blue Button 2.0 allows you to share your data with third-party applications, doctors, research programs, and
+        more! It also gives beneficiaries and their caregivers more options and control over their claims data.
       </p>
       <p>
-        Our team is working on new features that allow people with Medicare to
-        have more control over the types of data third-party applications can
-        see and use.
+        Our team is working on new features that allow people with Medicare to have more control over the types of data
+        third-party applications can see and use.
       </p>
+      <p>Follow the link below to learn about the third-party applications using Blue Button.</p>
       <p>
-        Follow the link below to learn about the third-party applications using
-        Blue Button.
-      </p>
-      <p>
-        <Button unstyled={true} icon={true} link="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps">View Blue Button apps</Button>
+        <Button
+          unstyled={true}
+          icon={true}
+          link="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
+          >View Blue Button apps</Button
+        >
       </p>
     </TwoColumn>
   </main>

@@ -1,9 +1,9 @@
 ---
-import Link from "./link.astro";
+import LogoAB2D from '#assets/images/logo-ab2d-sm.svg'
+import LogoBCDA from '#assets/images/logo-bcda.svg'
+import LogoDPC from '#assets/images/logo-dpc.svg'
 
-import LogoDPC from "#assets/images/logo-dpc.svg";
-import LogoBCDA from "#assets/images/logo-bcda.svg";
-import LogoAB2D from "#assets/images/logo-ab2d-sm.svg";
+import Link from './link.astro'
 ---
 
 <footer class="usa-footer usa-footer--big">
@@ -31,68 +31,47 @@ import LogoAB2D from "#assets/images/logo-ab2d-sm.svg";
           </div>
           <div class="desktop:grid-col-auto tablet:padding-x-3">
             <div class="grid-row tablet:grid-gap-6">
-              <div
-                class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2"
-              >
+              <div class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2">
                 <Link
-                  to="https://dpc.cms.gov/"
+                  href="https://dpc.cms.gov/"
                   class="grid-row grid-gap-1 flex-align-center text-no-underline"
                   showIcon={false}
                   isExternal
                 >
                   <span class="grid-col-auto"
-                    ><LogoDPC
-                      class="usa-icon--size-5 display-block"
-                      aria-label="DPC logo"
-                    /></span
+                    ><LogoDPC class="usa-icon--size-5 display-block" aria-label="DPC logo" /></span
                   >
-                  <p
-                    class="grid-col-fill font-sans-2xs text-bold text-black line-height-sans-2"
-                  >
+                  <p class="grid-col-fill font-sans-2xs text-bold text-black line-height-sans-2">
                     Data at the Point of Care
                   </p>
                 </Link>
               </div>
-              <div
-                class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2"
-              >
+              <div class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2">
                 <Link
-                  to="https://bcda.cms.gov/"
+                  href="https://bcda.cms.gov/"
                   class="grid-row grid-gap-1 flex-align-center text-no-underline"
                   showIcon={false}
                   isExternal
                 >
-                  <span class="grid-col-auto"
-                    ><LogoBCDA
-                      class="usa-icon--size-5 display-block"
-                      aria-label="BCDA logo"
-                    /></span
+                  <span class="grid-col-auto">
+                    <LogoBCDA class="usa-icon--size-5 display-block" aria-label="BCDA logo" /></span
                   >
-                  <p
-                    class="grid-col-fill font-sans-2xs text-bold text-black line-height-sans-2"
-                  >
+                  <p class="grid-col-fill font-sans-2xs text-bold text-black line-height-sans-2">
                     Beneficiary Claims Data API
                   </p>
                 </Link>
               </div>
-              <div
-                class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2"
-              >
+              <div class="tablet:grid-col-fill desktop:grid-col-auto margin-y-2">
                 <Link
-                  to="https://ab2d.cms.gov/"
+                  href="https://ab2d.cms.gov/"
                   class="grid-row grid-gap-1 flex-align-center text-no-underline"
                   showIcon={false}
                   isExternal
                 >
                   <span class="grid-col-auto"
-                    ><LogoAB2D
-                      class="usa-icon--size-5 display-block"
-                      aria-label="AB2D logo"
-                    /></span
+                    ><LogoAB2D class="usa-icon--size-5 display-block" aria-label="AB2D logo" /></span
                   >
-                  <p
-                    class="grid-col-fill font-sans-2xs text-bold text-black line-height-sans-2"
-                  >
+                  <p class="grid-col-fill font-sans-2xs text-bold text-black line-height-sans-2">
                     Claims Data to Part D Sponsors API
                   </p>
                 </Link>

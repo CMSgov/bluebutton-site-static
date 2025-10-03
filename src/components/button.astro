@@ -1,37 +1,24 @@
 ---
-import Icon from "./icon.astro";
+import type { HTMLAttributes } from 'astro/types'
 
-import type { HTMLAttributes } from "astro/types";
-import ArrowForward from "@uswds/uswds/img/usa-icons/arrow_forward.svg";
+import ArrowForward from '@uswds/uswds/img/usa-icons/arrow_forward.svg'
 
-interface Props extends HTMLAttributes<"a"> {
-    link: string;
-    unstyled?: boolean;
-    outline?: boolean;
-    icon?: boolean;
-    sandbox?: boolean;
+import Icon from './icon.astro'
+
+interface Props extends HTMLAttributes<'a'> {
+  link: string
+  unstyled?: boolean
+  outline?: boolean
+  icon?: boolean
+  sandbox?: boolean
 }
 
-const {
-    link = "",
-    unstyled = false,
-    outline = false,
-    icon = false,
-    sandbox = false,
-} = Astro.props;
+const { link = '', unstyled = false, outline = false, icon = false, sandbox = false } = Astro.props
 ---
 
 <a
-    href={link}
-    class={`margin-y-2 usa-button${outline ? " usa-button--outline" : ""} ${unstyled ? " usa-button--unstyled" : ""} ${sandbox ? " usa-button--secondary" : ""}`}
-    ><slot />
-    {
-        icon ? (
-            <Icon
-                icon={ArrowForward}
-                color={`${unstyled ? "base-darkest" : "white"}`}
-                size={3}
-            />
-        ) : null
-    }
+  href={link}
+  class={`margin-y-2 usa-button${outline ? ' usa-button--outline' : ''} ${unstyled ? ' usa-button--unstyled' : ''} ${sandbox ? ' usa-button--secondary' : ''}`}
+  ><slot />
+  {icon ? <Icon icon={ArrowForward} color={`${unstyled ? 'base-darkest' : 'white'}`} size={3} /> : null}
 </a>

@@ -1,8 +1,8 @@
-import { z } from 'astro/zod';
-import { XMLParser } from 'fast-xml-parser';
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
-import { glob as tinyglobby } from "tinyglobby";
+import { z } from 'astro/zod'
+import { XMLParser } from 'fast-xml-parser'
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
+import { glob as tinyglobby } from 'tinyglobby'
 
 function coerceToArray<T extends z.ZodTypeAny>(schema: T): z.ZodEffects<z.ZodArray<T>, z.infer<T>[], unknown> {
   return z.preprocess(v => Array.isArray(v) ? v : [v], z.array(schema))

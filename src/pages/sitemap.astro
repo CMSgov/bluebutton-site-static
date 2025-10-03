@@ -1,27 +1,19 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { getEntry } from "astro:content";
-import { render } from "astro:content";
+import { getEntry, render } from 'astro:content'
 
-const entry = await getEntry("pages", "sitemap");
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+const entry = await getEntry('pages', 'sitemap')
 if (!entry) {
-	throw new Error("Page not found");
+  throw new Error('Page not found')
 }
 
-const { Content, headings } = await render(entry);
+const { Content, headings } = await render(entry)
 ---
 
-
-<BaseLayout 
-    title="Sitemap" 
-    description="" 
-    headings={headings} 
-    showSideNav={false}
-	showInPageNav={false}>
-	<main id="main-content">
-        <h1 class="margin-top-6">Sitemap</h1>
-		<Content
-		/>
-	</main>
+<BaseLayout title="Sitemap" description="" headings={headings} showSideNav={false} showInPageNav={false}>
+  <main id="main-content">
+    <h1 class="margin-top-6">Sitemap</h1>
+    <Content />
+  </main>
 </BaseLayout>
-
