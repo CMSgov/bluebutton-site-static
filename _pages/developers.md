@@ -132,7 +132,7 @@ BB2.0 Version 2 (V2) is based on [FHIR release (R4)](http://hl7.org/fhir/R4/){:t
 
 #### Version 1 
 
-Version 1 (V1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/){:target="_blank"}. Development on V1 is limited to bug fixes and basic maintenance. If you're developing a new app, use V2\. For information about BB2.0 V1, see the [V1 Documentation](/v1/). 
+Version 1 (V1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/){:target="_blank"}. Development on V1 is limited to bug fixes and basic maintenance. If you're developing a new app, use V2\.
 
 ### Environments
 
