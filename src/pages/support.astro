@@ -6,6 +6,7 @@ import TwoColumn from 'components/two-column.astro'
 
 import BaseLayout from '../layouts/BaseLayout.astro'
 import '#assets/sass/styles.scss'
+import DocsLayout from '#layouts/DocsLayout.astro'
 
 const entry = await getEntry('pages', 'support')
 if (!entry) {
@@ -15,10 +16,9 @@ if (!entry) {
 const { Content } = await render(entry)
 ---
 
-<BaseLayout title="Support" description="" showSideNav={false} showInPageNav={false}>
-  <main id="main-content">
-    <h1 class="margin-top-6">{entry.data.title}</h1>
-
+<BaseLayout title="Support" description="">
+  <DocsLayout showSideNav={false}>
+    <h1>{entry.data.title}</h1>
     <Content
       components={{
         a: Link,
@@ -26,5 +26,5 @@ const { Content } = await render(entry)
         Button,
       }}
     />
-  </main>
+  </DocsLayout>
 </BaseLayout>

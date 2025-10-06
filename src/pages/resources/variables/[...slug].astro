@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props
 ---
 
-<BaseLayout title={post.id} description="" showSideNav={false} showInPageNav={false}>
+<BaseLayout title={post.id} description="">
   <div class="usa-prose margin-y-6">
     <h1>Variable: {post.data.title}</h1>
     <p class="usa-intro">{post.data.label}</p>

@@ -5,6 +5,7 @@ import Link from 'components/link.astro'
 
 import DocsLayout from '../layouts/DocsLayout.astro'
 import '#assets/sass/styles.scss'
+import BaseLayout from 'layouts/BaseLayout.astro'
 
 const entry = await getEntry('pages', 'bb2-data')
 if (!entry) {
@@ -14,13 +15,14 @@ if (!entry) {
 const { Content, headings } = await render(entry)
 ---
 
-<DocsLayout title="BB2 Data" description="" headings={headings}>
-  <main id="main-content">
+<BaseLayout title="BB2 Data" description="">
+  <DocsLayout headings={headings}>
+    <h1>{entry.data.title}</h1>
     <Content
       components={{
         a: Link,
         CopySnippet,
       }}
     />
-  </main>
-</DocsLayout>
+  </DocsLayout>
+</BaseLayout>

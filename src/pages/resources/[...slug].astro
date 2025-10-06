@@ -2,6 +2,7 @@
 import Alert from '#components/alert.astro'
 import Link from '#components/link.astro'
 import { getCollection, render } from 'astro:content'
+import BaseLayout from 'layouts/BaseLayout.astro'
 import DocsLayout from 'layouts/DocsLayout.astro'
 
 export async function getStaticPaths() {
@@ -13,14 +14,16 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props
-const { Content, headings } = await render(post)
+const { Content } = await render(post)
 ---
 
-<DocsLayout title={post.data.title} description="" headings={headings} showSideNav={false}>
-  <Content
-    components={{
-      a: Link,
-      Alert,
-    }}
-  />
-</DocsLayout>
+<BaseLayout title={post.data.title} description="">
+  <DocsLayout>
+    <Content
+      components={{
+        a: Link,
+        Alert,
+      }}
+    />
+  </DocsLayout>
+</BaseLayout>

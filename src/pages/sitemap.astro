@@ -2,18 +2,19 @@
 import { getEntry, render } from 'astro:content'
 
 import BaseLayout from '../layouts/BaseLayout.astro'
+import DocsLayout from 'layouts/DocsLayout.astro'
 
 const entry = await getEntry('pages', 'sitemap')
 if (!entry) {
   throw new Error('Page not found')
 }
 
-const { Content, headings } = await render(entry)
+const { Content } = await render(entry)
 ---
 
-<BaseLayout title="Sitemap" description="" headings={headings} showSideNav={false} showInPageNav={false}>
-  <main id="main-content">
-    <h1 class="margin-top-6">Sitemap</h1>
+<BaseLayout title="Sitemap" description="">
+  <DocsLayout showSideNav={false}>
+    <h1>Sitemap</h1>
     <Content />
-  </main>
+  </DocsLayout>
 </BaseLayout>

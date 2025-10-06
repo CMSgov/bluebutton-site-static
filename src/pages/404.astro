@@ -1,17 +1,13 @@
 ---
+import DocsLayout from 'layouts/DocsLayout.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<BaseLayout
-  title="Page Not Found"
-  description="The page you are looking for can't be found or does not exist."
-  showSideNav={false}
-  showInPageNav={false}
->
-  <script type="text/javascript">
+<BaseLayout title="Page Not Found" description="The page you are looking for can't be found or does not exist.">
+  <script is:inline type="text/javascript">
     utag_data.page_type = true
   </script>
-  <div class="margin-y-7">
+  <DocsLayout>
     <h1>Page Not Found</h1>
     <p class="usa-intro">
       We're sorry, we can't find the page you're looking for. It may have been removed, changed location, or become
@@ -36,5 +32,5 @@ import BaseLayout from '../layouts/BaseLayout.astro'
       </ul>
     </div>
     <p class="text-base"><strong>Error code:</strong> 404</p>
-  </div>
+  </DocsLayout>
 </BaseLayout>

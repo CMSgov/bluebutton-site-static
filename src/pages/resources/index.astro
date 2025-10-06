@@ -1,12 +1,13 @@
 ---
 import { getEntry, render } from 'astro:content'
-import CopySnippet from 'components/copy-snippet.astro'
-import Link from 'components/link.astro'
-import ProcessListItem from 'components/process-list-item.astro'
-import ProcessList from 'components/process-list.astro'
+import CopySnippet from '#components/copy-snippet.astro'
+import Link from '#components/link.astro'
+import ProcessListItem from '#components/process-list-item.astro'
+import ProcessList from '#components/process-list.astro'
 
-import BaseLayout from '../layouts/BaseLayout.astro'
+import BaseLayout from '#layouts/BaseLayout.astro'
 import '#assets/sass/styles.scss'
+import DocsLayout from '#layouts/DocsLayout.astro'
 
 const entry = await getEntry('pages', 'resources')
 if (!entry) {
@@ -17,9 +18,8 @@ const { Content } = await render(entry)
 ---
 
 <BaseLayout title="API Documentation" description="">
-  <main id="main-content">
-    <h1 class="margin-top-6">{entry.data.title}</h1>
-
+  <DocsLayout showSideNav={false}>
+    <h1>{entry.data.title}</h1>
     <Content
       components={{
         a: Link,
@@ -28,5 +28,5 @@ const { Content } = await render(entry)
         CopySnippet,
       }}
     />
-  </main>
+  </DocsLayout>
 </BaseLayout>

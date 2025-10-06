@@ -3,6 +3,7 @@ import Button from '#components/button.astro'
 import CopySnippet from '#components/copy-snippet.astro'
 import Link from '#components/link.astro'
 import { getCollection, render } from 'astro:content'
+import BaseLayout from 'layouts/BaseLayout.astro'
 import DocsLayout from 'layouts/DocsLayout.astro'
 
 // 1. Generate a new path for every collection entry
@@ -18,12 +19,15 @@ const { post } = Astro.props
 const { Content, headings } = await render(post)
 ---
 
-<DocsLayout title={post.data.title} description="" headings={headings}>
-  <Content
-    components={{
-      a: Link,
-      CopySnippet,
-      Button,
-    }}
-  />
-</DocsLayout>
+<BaseLayout title={post.data.title} description="">
+  <DocsLayout headings={headings}>
+    <h1>{post.data.title}</h1>
+    <Content
+      components={{
+        a: Link,
+        CopySnippet,
+        Button,
+      }}
+    />
+  </DocsLayout>
+</BaseLayout>

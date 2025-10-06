@@ -6,6 +6,7 @@ import Link from 'components/link.astro'
 
 import BaseLayout from '../layouts/BaseLayout.astro'
 import '#assets/sass/styles.scss'
+import DocsLayout from 'layouts/DocsLayout.astro'
 
 const entry = await getEntry('pages', 'use-cases')
 if (!entry) {
@@ -15,10 +16,9 @@ if (!entry) {
 const { Content, headings } = await render(entry)
 ---
 
-<BaseLayout title="Use Cases" description="" headings={headings} showSideNav={false}>
-  <main id="main-content">
-    <h1 class="margin-top-6">{entry.data.title}</h1>
-
+<BaseLayout title="Use Cases" description="">
+  <DocsLayout showSideNav={false}>
+    <h1>{entry.data.title}</h1>
     <Content
       components={{
         a: Link,
@@ -26,5 +26,5 @@ const { Content, headings } = await render(entry)
         IconList,
       }}
     />
-  </main>
+  </DocsLayout>
 </BaseLayout>

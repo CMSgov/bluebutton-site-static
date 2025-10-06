@@ -8,6 +8,7 @@ import ProcessList from 'components/process-list.astro'
 
 import DocsLayout from '../layouts/DocsLayout.astro'
 import '#assets/sass/styles.scss'
+import BaseLayout from 'layouts/BaseLayout.astro'
 
 const entry = await getEntry('pages', 'api-documentation')
 if (!entry) {
@@ -17,8 +18,9 @@ if (!entry) {
 const { Content, headings } = await render(entry)
 ---
 
-<DocsLayout title="API Documentation" description="" headings={headings}>
-  <main id="main-content">
+<BaseLayout title="API Documentation" description="">
+  <DocsLayout headings={headings}>
+    <h1>{entry.data.title}</h1>
     <Content
       components={{
         a: Link,
@@ -28,5 +30,5 @@ const { Content, headings } = await render(entry)
         Button,
       }}
     />
-  </main>
-</DocsLayout>
+  </DocsLayout>
+</BaseLayout>

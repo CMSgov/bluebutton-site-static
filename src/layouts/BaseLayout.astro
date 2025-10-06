@@ -1,31 +1,25 @@
 ---
-import type { MarkdownHeading } from 'astro'
-
 import LogoBlueButton from '#assets/images/logo-bluebutton.svg'
 import Banner from '#components/banner.astro'
 import Footer from '#components/Footer.astro'
 import Header from '#components/Header.astro'
 import Identifier from '#components/Identifier.astro'
-import SideNav from '#components/side-nav.astro'
-import TableOfComponents from '#components/toc.astro'
 import { SEO } from 'astro-seo'
 import '@fontsource-variable/open-sans'
+import openSansWoff2 from '@fontsource-variable/open-sans/files/open-sans-latin-wght-normal.woff2?url'
 import '#assets/sass/styles.scss'
 
 type Props = {
   title: string
   description: string
   image?: string
-  showSideNav?: boolean
-  showInPageNav?: boolean
-  headings?: MarkdownHeading[]
 }
 
-const { title, description, image, showSideNav = true, showInPageNav = true, headings = [] } = Astro.props
+const { title, description, image } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="usa-js-loading">
   <SEO
     charset="utf-8"
     title={title}
@@ -62,6 +56,12 @@ const { title, description, image, showSideNav = true, showInPageNav = true, hea
           type: 'image/svg+xml+png',
           href: LogoBlueButton.src,
         },
+        {
+          rel: 'preload',
+          as: 'font',
+          type: 'font/woff2',
+          href: openSansWoff2,
+        },
       ],
       meta: [
         {
@@ -77,18 +77,16 @@ const { title, description, image, showSideNav = true, showInPageNav = true, hea
   <body id="page-top">
     <a class="usa-skipnav z-top" href="#main-content">Skip to main content</a>
     <Banner />
-    <div class="position-relative">
-      <Header />
-      <div class="grid-container">
-        <div class="grid-row flex-align-start">
-          {showSideNav && <SideNav />}
-          <main id="main-content" class="main-content position-relative grid-col-fill">
-            <slot />
-          </main>
-          {showInPageNav && headings.length > 0 && <TableOfComponents headings={headings} />}
-        </div>
-      </div>
-    </div>
+    <!-- <div class="position-relative"> -->
+    <Header />
+    <!-- <div class="grid-container"> -->
+    <!-- <div class="grid-row flex-align-start"> -->
+    <!-- <main id="main-content" class="main-content position-relative grid-col-fill"> -->
+    <slot />
+    <!-- </main> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
 
     <Footer />
     <Identifier />
