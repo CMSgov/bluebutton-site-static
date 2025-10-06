@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
