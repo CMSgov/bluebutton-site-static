@@ -414,7 +414,6 @@ To retrieve an access token, POST to the BB2.0 /token endpoint providing the cod
 curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 -u "<client_id>:<client_secret>" \
 -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost:8080/testclient/callback&
-scope=profile patient/Patient.rs patient/ExplanationOfBenefit.rs patient/Coverage.rs&
 code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
 ~~~
 ##### Token response
