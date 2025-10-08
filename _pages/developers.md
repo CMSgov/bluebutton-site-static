@@ -488,33 +488,6 @@ Valid requests to the `/revoke` endpoint will always result in a 200 response, r
 
 #### Common token endpoint errors
 
-##### Handling Invalid Parameters in Token Endpoint Requests
-
-If a token request includes parameters that are **not supported** by the token endpoint, the server will reject the request with an `invalid_request` error.
-
-For example, the following request includes the unsupported parameter `scope`:
-
-~~~
-curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
--u "<client_id>:<client_secret>" \
--d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost:8080/testclient/callback&
-scope=profile patient/Patient.rs patient/ExplanationOfBenefit.rs patient/Coverage.rs&
-code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
-~~~
-
-**Response (HTTP 400 Bad Request):**
-
-~~~
-{
-  "status_code": 400,
-  "error": "invalid_request",
-  "error_description": "Invalid parameters in request: {'scope'}"
-}
-~~~
-
-In this example, the `scope` parameter is **not allowed** in the token request body.
-Only the parameters defined by the OAuth 2.0 token endpoint specification—such as `grant_type`, `code`, `redirect_uri`, `client_id`, and `code_verifier` should be included.
-
 ##### Reused refresh token
 
 A refresh token can only be used one time. The following is an example of an error response when attempting to reuse a refresh token:
