@@ -9,10 +9,10 @@ import { IDENTIFIER_LINKS } from 'utils/constants'
   <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier,">
     <div class="usa-identifier__container">
       <div class="usa-identifier__logos">
-        <Link href="https://www.hhs.gov/" showIcon={false} isExternal class="usa-identifier__logo">
+        <Link href="https://www.hhs.gov/" showIcon={false} class="usa-identifier__logo">
           <LogoHHS class="usa-identifier__logo-img" aria-label="HHS logo" /></Link
         >
-        <Link href="https://www.cms.gov/" showIcon={false} isExternal class="usa-identifier__logo"
+        <Link href="https://www.cms.gov/" showIcon={false} class="usa-identifier__logo"
           ><LogoCMS class="usa-identifier__logo-img padding-x-2" aria-label="CMS logo" /></Link
         >
       </div>
@@ -20,8 +20,8 @@ import { IDENTIFIER_LINKS } from 'utils/constants'
         <p class="usa-identifier__identity-domain">cms.gov</p>
         <p class="usa-identifier__identity-disclaimer">
           <span aria-hidden="true">An </span>official website of the
-          <Link href="https://www.hhs.gov/" isExternal>U.S. Department of Health and Human Services</Link> and the
-          <Link href="https:www.cms.gov" isExternal>Centers for Medicare & Medicaid Services</Link>.
+          <Link href="https://www.hhs.gov/">U.S. Department of Health and Human Services</Link> and the
+          <Link href="https://www.cms.gov">Centers for Medicare & Medicaid Services</Link>.
         </p>
       </section>
     </div>
@@ -32,9 +32,9 @@ import { IDENTIFIER_LINKS } from 'utils/constants'
         {
           IDENTIFIER_LINKS.map((link) => (
             <li class="usa-identifier__required-links-item">
-              <Link href={link.href} isExternal class="usa-identifier__required-link usa-link">
+              <a href={link.to || link.href} class="usa-identifier__required-link usa-link">
                 {link.label}
-              </Link>
+              </a>
             </li>
           ))
         }
@@ -48,7 +48,7 @@ import { IDENTIFIER_LINKS } from 'utils/constants'
           >
         </li>
         <li class="usa-identifier__required-links-item">
-          <a href="/sitemap" data-tealium="identifier" class="usa-identifier__required-link usa-link">Sitemap</a>
+          <Link to="/sitemap" data-tealium="identifier" class="usa-identifier__required-link usa-link">Sitemap</Link>
         </li>
       </ul>
     </div>
@@ -58,7 +58,7 @@ import { IDENTIFIER_LINKS } from 'utils/constants'
     >
       <div class="usa-identifier__container">
         <div class="usa-identifier__usagov-description">Looking for U.S. government information and services?</div>
-        <Link href="https://www.usa.gov/" isExternal class="usa-link">Visit USA.gov</Link>
+        <Link href="https://www.usa.gov/" class="usa-link">Visit USA.gov</Link>
       </div>
     </section>
   </nav>

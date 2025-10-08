@@ -6,11 +6,11 @@ export const PRIMARY_NAV_LINKS: PrimaryNavLinks = [
     children: [
       {
         label: 'About BCDA',
-        href: '/about',
+        to: '/about',
       },
       {
         label: 'Announcements',
-        href: '/announcements',
+        to: '/announcements',
       },
     ],
   },
@@ -19,19 +19,19 @@ export const PRIMARY_NAV_LINKS: PrimaryNavLinks = [
     children: [
       {
         label: 'Get Started',
-        href: '/api-documentation',
+        to: '/api-documentation',
       },
       {
         label: 'How to Get a Bearer Token',
-        href: '/api-documentation/get-a-bearer-token',
+        to: '/api-documentation/get-a-bearer-token',
       },
       {
         label: 'How to Access Claims Data',
-        href: '/api-documentation/access-claims-data',
+        to: '/api-documentation/access-claims-data',
       },
       {
         label: 'How to Filter Claims Data',
-        href: '/api-documentation/filter-claims-data',
+        to: '/api-documentation/filter-claims-data',
       },
     ],
   },
@@ -40,29 +40,29 @@ export const PRIMARY_NAV_LINKS: PrimaryNavLinks = [
     children: [
       {
         label: 'BCDA Data',
-        href: '/bcda-data',
+        to: '/bcda-data',
       },
       {
         label: 'Guide to Partially Adjudicated Claims Data',
-        href: '/bcda-data/partially-adjudicated-claims-data',
+        to: '/bcda-data/partially-adjudicated-claims-data',
       },
       {
         label: 'Comparison of BCDA and CCLF',
-        href: '/bcda-data/comparison-bcda-cclf-files',
+        to: '/bcda-data/comparison-bcda-cclf-files',
       },
       {
         label: 'Difference Between V1 and V2',
-        href: '/bcda-data/difference-between-v1-v2',
+        to: '/bcda-data/difference-between-v1-v2',
       },
     ],
   },
   {
     label: 'Production Access',
-    href: '/production-access',
+    to: '/production-access',
   },
   {
     label: 'Support',
-    href: '/support',
+    to: '/support',
   },
 ]
 
@@ -128,7 +128,7 @@ export const IDENTIFIER_LINKS: IdentifierLinks = [
     label: 'Performance Reports',
   },
   {
-    href: '/resources/terms',
+    to: '/resources/terms',
     label: 'Terms of Service',
   },
 ]

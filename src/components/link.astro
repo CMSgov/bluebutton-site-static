@@ -1,16 +1,11 @@
 ---
-import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
-import type { HTMLAttributes } from 'astro/types'
+import LaunchSvg from '#assets/uswds/img/usa-icons/launch.svg'
+import { $path, type RouteId } from 'astro-typesafe-routes/path'
+import { undefined } from 'astro:schema'
+import { button } from 'utils/cva/button'
+import type { LinkProps } from 'utils/types'
 
-import LaunchSvg from '@uswds/uswds/img/usa-icons/launch.svg'
-import { $path } from 'astro-typesafe-routes/path'
-
-type Props<T extends RouteId> =
-  | (HTMLAttributes<'a'> & { isExternal: boolean })
-  | (Omit<HTMLAttributes<'a'>, 'href'> &
-      RouteOptions<T> & {
-        showIcon?: boolean
-      })
+type Props<T extends RouteId> = LinkProps<T>
 
 const {
   href,
@@ -20,48 +15,58 @@ const {
   searchParams,
   hash,
   trailingSlash,
+  variant = 'link',
+  size = 'medium',
   showIcon = true,
-  isExternal = false,
   ...props
 } = Astro.props
-const site = Astro.site
 
-let computedIsExternal = isExternal
-// Default to plain href first to support markdown
+let isExternal = false
 let computedHref = href
+let computedTo = to
 
-if (to) {
+if (href) {
+  try {
+    const { hostname } = new URL(href || '')
+
+    if (hostname === Astro.site?.hostname) {
+      console.warn(`${href} is an internal link! Use 'to' instead of 'href'.`)
+    } else {
+      isExternal = true
+    }
+  } catch {
+    // new URL() throws when it recieves a relative path
+    isExternal = false
+    computedTo = href
+  }
+}
+
+if (!isExternal) {
   computedHref = $path({
-    to,
+    to: computedTo,
     params,
     search,
     searchParams,
     hash,
     trailingSlash,
   })
-}
 
-if (href) {
-  try {
-    const { hostname } = new URL(href || '')
-    if (hostname === site?.hostname) {
-      throw new Error(`${to}`)
-    }
-  } catch {
-    computedIsExternal = true
+  if (typeof computedHref === 'undefined') {
+    throw new Error(`${computedTo} is a bad link!`)
   }
 }
 ---
 
 <a
   href={computedHref}
-  target={computedIsExternal ? '_blank' : undefined}
-  rel={computedIsExternal ? 'noopener' : undefined}
+  target={isExternal ? '_blank' : undefined}
+  rel={isExternal && !computedHref.includes('cms.gov') ? 'noopener' : undefined}
+  class={button({ variant, size })}
   {...props}
 >
   <slot />{
-    computedIsExternal && showIcon ? (
-      <LaunchSvg height={16} width={16} fill="currentColor" style="vertical-align:middle;" class="margin-left-2px" />
+    isExternal && showIcon ? (
+      <LaunchSvg height={16} width={16} fill="currentColor" style="vertical-align:middle;" class="margin-left-05" />
     ) : null
   }</a
 >

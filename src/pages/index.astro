@@ -2,9 +2,9 @@
 import Browsers from '#assets/images/browsers.svg?url'
 import Home from '#assets/images/home.svg?url'
 import Whiteboard from '#assets/images/whiteboard.svg?url'
-import Button from '#components/button.astro'
 import Card from '#components/card.astro'
 import Hero from '#components/hero.astro'
+import Link from '#components/link.astro'
 import TwoColumn from '#components/two-column.astro'
 
 import BaseLayout from '../layouts/BaseLayout.astro'
@@ -22,24 +22,24 @@ import BaseLayout from '../layouts/BaseLayout.astro'
         <ul class="usa-card-group flex-justify-center padding-top-4">
           <Card heading="For Developers" img={Browsers}>
             Explore the developer sandbox to build amazing tools and services with the Blue Button 2.0 API.
-            <Button slot="buttonSlot" link="https://sandbox.bluebutton.cms.gov/v1/accounts/create" sandbox={true}>
-              Sign up for the sandbox</Button
+            <Link slot="buttonSlot" variant="primary" href="https://sandbox.bluebutton.cms.gov/v1/accounts/create">
+              Sign up for the sandbox</Link
             >
           </Card>
           <Card heading="For Organizations" img={Whiteboard}>
             Discover how your company or organization could use Blue Button 2.0.
-            <Button slot="buttonSlot" link="#value-for-organizations" outline={true}>
-              See the power of Blue Button 2.0</Button
+            <Link slot="buttonSlot" to="/" hash="#value-for-organizations" variant="primary">
+              See the power of Blue Button 2.0</Link
             >
           </Card>
           <Card heading="For People with Medicare" img={Home}>
             Learn about Medicare's Blue Button & find apps you can use.
-            <Button
+            <Link
               slot="buttonSlot"
-              link="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
-              outline={true}
+              href="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
+              variant="primary"
             >
-              Get details on Medicare.gov</Button
+              Get details on Medicare.gov</Link
             >
           </Card>
         </ul>
@@ -62,7 +62,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
             data.
           </p>
           <p>
-            <Button unstyled={true} icon={true} link="/use-cases">Learn more about use cases</Button>
+            <Link to="/use-cases">Learn more about use cases</Link>
           </p>
         </TwoColumn>
         <TwoColumn image={Home} dir="rtl" class="padding-y-7">
@@ -78,12 +78,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
           </p>
           <p>Follow the link below to learn about the third-party applications using Blue Button.</p>
           <p>
-            <Button
-              unstyled={true}
-              icon={true}
-              link="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
-              >View Blue Button apps</Button
-            >
+            <Link href="https://www.hhs.gov/">View Blue Button apps</Link>
           </p>
         </TwoColumn>
       </div>

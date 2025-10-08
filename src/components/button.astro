@@ -1,24 +1,14 @@
 ---
+import { type VariantProps } from 'cva'
+import { button } from '../utils/cva/button'
+
 import type { HTMLAttributes } from 'astro/types'
 
-import ArrowForward from '@uswds/uswds/img/usa-icons/arrow_forward.svg'
+export interface Props extends HTMLAttributes<'button'>, VariantProps<typeof button> {}
 
-import Icon from './icon.astro'
-
-interface Props extends HTMLAttributes<'a'> {
-  link: string
-  unstyled?: boolean
-  outline?: boolean
-  icon?: boolean
-  sandbox?: boolean
-}
-
-const { link = '', unstyled = false, outline = false, icon = false, sandbox = false } = Astro.props
+const { variant = 'primary', size = 'medium', ...props } = Astro.props
 ---
 
-<a
-  href={link}
-  class={`margin-y-2 usa-button${outline ? ' usa-button--outline' : ''} ${unstyled ? ' usa-button--unstyled' : ''} ${sandbox ? ' usa-button--secondary' : ''}`}
-  ><slot />
-  {icon ? <Icon icon={ArrowForward} color={`${unstyled ? 'base-darkest' : 'white'}`} size={3} /> : null}
-</a>
+<button class={button({ variant, size })} {...props}>
+  <slot />
+</button>
