@@ -2,12 +2,17 @@
 import LaunchSvg from '#assets/uswds/img/usa-icons/launch.svg'
 import { $path } from 'astro-typesafe-routes/path'
 import { button } from 'utils/cva/button'
-import type { LinkProps } from 'utils/types'
 import type { RouteId } from 'astro-typesafe-routes/path'
+import type { HTMLAttributes } from 'astro/types'
+import type { VariantProps } from 'cva'
+import type { HrefOrTo } from '../utils/types'
 
-type Props<T extends RouteId> = LinkProps<T>
+type Props<T extends RouteId> = Omit<HTMLAttributes<'a'>, 'href'> &
+  VariantProps<typeof button> & {
+    showIcon?: boolean
+  } & HrefOrTo<T>
 
-const props = Astro.props
+const props = Astro.props as Props<RouteId>
 
 let isExternal = false
 let computedHref: string
@@ -33,17 +38,16 @@ if ('to' in props && props.to) {
   throw new Error('Link component requires either "href" or "to" prop')
 }
 
-const { variant = 'primary', size = 'medium', showIcon = true, ...restProps } = props
+const { variant = 'link', size, showIcon = true, class: className, ...restProps } = props
 ---
 
 <a
   href={computedHref}
   target={isExternal ? '_blank' : undefined}
   rel={isExternal && !computedHref?.includes('cms.gov') ? 'noopener' : undefined}
-  class={button({ variant, size })}
+  class:list={[button({ variant, size }), className]}
   {...restProps}
->
-  <slot />{
+  ><slot />{
     isExternal && showIcon ? (
       <LaunchSvg height={16} width={16} fill="currentColor" style="vertical-align:middle;" class="margin-left-05" />
     ) : null

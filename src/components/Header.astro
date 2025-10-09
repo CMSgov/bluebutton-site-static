@@ -56,10 +56,10 @@ const datanavLinks = dataDocs.map((doc) => ({
             </button>
             <ul id="basic-nav-section-zero" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/about" class="" data-tealium="main_nav"> About </Link>
+                <Link to="/about" data-tealium="main_nav"> About </Link>
               </li>
               <li class="usa-nav__submenu-item">
-                <Link to="/use-cases" class="" data-tealium="main_nav"> Use Cases </Link>
+                <Link to="/use-cases" data-tealium="main_nav"> Use Cases </Link>
               </li>
             </ul>
           </li>
@@ -74,12 +74,12 @@ const datanavLinks = dataDocs.map((doc) => ({
             </button>
             <ul id="basic-nav-section-one" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/api-documentation" class="" data-tealium="main_nav"> Get Started </Link>
+                <Link to="/api-documentation" data-tealium="main_nav">Get Started</Link>
               </li>
               {
                 docsnavLinks.map((link) => (
                   <li class="usa-nav__submenu-item">
-                    <Link to={link.to} params={link.params} class="" data-tealium="main_nav">
+                    <Link to={link.to} params={link.params} data-tealium="main_nav">
                       {link.label}
                     </Link>
                   </li>
@@ -98,12 +98,12 @@ const datanavLinks = dataDocs.map((doc) => ({
             </button>
             <ul id="basic-nav-section-two" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/bb2-data" class="" data-tealium="main_nav"> BB2 Data </Link>
+                <Link to="/bb2-data" data-tealium="main_nav"> BB2 Data </Link>
               </li>
               {
                 datanavLinks.map((link) => (
                   <li class="usa-nav__submenu-item">
-                    <Link to={link.to} params={link.params} class="" data-tealium="main_nav">
+                    <Link to={link.to} params={link.params} data-tealium="main_nav">
                       {link.label}
                     </Link>
                   </li>
@@ -123,7 +123,7 @@ const datanavLinks = dataDocs.map((doc) => ({
           </li>
         </ul>
         <div class="padding-left-1">
-          <Link to="/api-documentation" class="usa-button" data-tealium="navigation">Get Started </Link>
+          <Link to="/api-documentation" variant="primary" data-tealium="navigation">Get Started</Link>
         </div>
       </nav>
     </div>

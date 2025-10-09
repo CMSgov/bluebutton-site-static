@@ -2,7 +2,6 @@
 import LogoBlueButton from '#assets/images/logo-bluebutton.svg'
 import Banner from '#components/banner.astro'
 import Footer from '#components/Footer.astro'
-import Header from '#components/Header.astro'
 import Identifier from '#components/Identifier.astro'
 import { SEO } from 'astro-seo'
 import '@fontsource-variable/open-sans'
@@ -77,17 +76,7 @@ const { title, description, image } = Astro.props
   <body id="page-top">
     <a class="usa-skipnav z-top" href="#main-content">Skip to main content</a>
     <Banner />
-    <!-- <div class="position-relative"> -->
-    <Header />
-    <!-- <div class="grid-container"> -->
-    <!-- <div class="grid-row flex-align-start"> -->
-    <!-- <main id="main-content" class="main-content position-relative grid-col-fill"> -->
     <slot />
-    <!-- </main> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-
     <Footer />
     <Identifier />
     <script src="#assets/uswds/js/uswds.js"></script>

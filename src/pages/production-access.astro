@@ -1,6 +1,5 @@
 ---
 import Accordion from '#components/accordion.astro'
-import Button from '#components/button.astro'
 import { getEntry, render } from 'astro:content'
 import Link from 'components/link.astro'
 import ProcessListItem from 'components/process-list-item.astro'
@@ -24,10 +23,10 @@ const { Content, headings } = await render(entry)
     <Content
       components={{
         a: Link,
+        Link,
         ProcessList,
         ProcessListItem,
         Accordion,
-        Button,
       }}
     />
   </DocsLayout>

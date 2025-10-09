@@ -1,8 +1,4 @@
 ---
-import LogoAB2D from '#assets/images/logo-ab2d-sm.svg?url'
-import LogoBCDA from '#assets/images/logo-bcda.svg?url'
-import LogoDPC from '#assets/images/logo-dpc.svg?url'
-import Button from '#components/button.astro'
 import Card from '#components/card.astro'
 import CopySnippet from '#components/copy-snippet.astro'
 import Link from '#components/link.astro'
@@ -29,12 +25,9 @@ const { Content, headings } = await render(post)
     <Content
       components={{
         a: Link,
+        Link,
         CopySnippet,
-        Button,
         Card,
-        LogoAB2D,
-        LogoBCDA,
-        LogoDPC,
       }}
     />
   </DocsLayout>

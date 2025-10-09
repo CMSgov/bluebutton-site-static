@@ -1,10 +1,6 @@
 import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
-import type { HTMLAttributes } from 'astro/types'
-import type { VariantProps } from 'cva'
 
-import type { button } from './cva/button'
-
-type HrefOrTo<T extends RouteId> = {
+export type HrefOrTo<T extends RouteId> = {
   // External links
   href: string | URL
 } | (RouteOptions<T> & {
@@ -12,14 +8,6 @@ type HrefOrTo<T extends RouteId> = {
   href?: never
 })
 
-type LinkItem = {
+export type IdentifierLinks = ({
   label: string
-} & HrefOrTo<RouteId>
-
-export type IdentifierLinks = LinkItem[]
-
-type BaseLinkProps = Omit<HTMLAttributes<'a'>, 'href'> & VariantProps<typeof button> & {
-  showIcon?: boolean
-}
-
-export type LinkProps<T extends RouteId> = BaseLinkProps & HrefOrTo<T>
+} & HrefOrTo<RouteId>)[]

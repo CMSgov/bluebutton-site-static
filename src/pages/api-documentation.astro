@@ -1,5 +1,4 @@
 ---
-import Button from '#components/button.astro'
 import { getEntry, render } from 'astro:content'
 import CopySnippet from 'components/copy-snippet.astro'
 import Link from 'components/link.astro'
@@ -28,7 +27,6 @@ const { Content, headings } = await render(entry)
         ProcessList,
         ProcessListItem,
         CopySnippet,
-        Button,
       }}
     />
   </DocsLayout>

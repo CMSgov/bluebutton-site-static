@@ -1,5 +1,4 @@
 ---
-import Button from '#components/button.astro'
 import CopySnippet from '#components/copy-snippet.astro'
 import Link from '#components/link.astro'
 import { getCollection, render } from 'astro:content'
@@ -27,7 +26,6 @@ const { Content, headings } = await render(post)
         a: Link,
         Link,
         CopySnippet,
-        Button,
       }}
     />
   </DocsLayout>
