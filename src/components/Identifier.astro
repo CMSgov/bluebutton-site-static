@@ -32,9 +32,9 @@ import { IDENTIFIER_LINKS } from 'utils/constants'
         {
           IDENTIFIER_LINKS.map((link) => (
             <li class="usa-identifier__required-links-item">
-              <a href={link.to || link.href} class="usa-identifier__required-link usa-link">
+              <Link {...link} class="usa-identifier__required-link usa-link">
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))
         }

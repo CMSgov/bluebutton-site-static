@@ -13,7 +13,7 @@ if (!entry) {
   throw new Error('Page not found')
 }
 
-const { Content, headings } = await render(entry)
+const { Content } = await render(entry)
 ---
 
 <BaseLayout title="Use Cases" description="">

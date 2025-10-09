@@ -4,36 +4,22 @@ import type { VariantProps } from 'cva'
 
 import type { button } from './cva/button'
 
-type LinkItem = ({
+type HrefOrTo<T extends RouteId> = {
+  // External links
   href: string | URL
-} | {
+} | (RouteOptions<T> & {
+  // Internal links with full route options
   href?: never
-  to: RouteId
-}) & {
-  label: string
-}
+})
 
-export type PrimaryNavLinks = (LinkItem & {
-  children?: never
-} | {
-  href?: never
-  to?: never
+type LinkItem = {
   label: string
-  children: LinkItem[]
-})[]
+} & HrefOrTo<RouteId>
 
 export type IdentifierLinks = LinkItem[]
 
-type InternalLinkProps<T extends RouteId> = Omit<HTMLAttributes<'a'>, 'href'> & {
-  path: RouteOptions<T>
-  href?: false
+type BaseLinkProps = Omit<HTMLAttributes<'a'>, 'href'> & VariantProps<typeof button> & {
+  showIcon?: boolean
 }
 
-type ExternalLinkProps = Omit<HTMLAttributes<'a'>, 'href'> & {
-  href: string | URL
-}
-
-export type LinkProps<T extends RouteId> = (InternalLinkProps<T> | ExternalLinkProps)
-  & VariantProps<typeof button> & {
-    showIcon?: boolean
-  }
+export type LinkProps<T extends RouteId> = BaseLinkProps & HrefOrTo<T>
