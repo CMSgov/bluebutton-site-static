@@ -264,13 +264,13 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
 3. Select the top-level folder in the collection, **CMS BlueButton 2.0 API Sandbox**.
 4. Select the **Variables** tab.
 5. Copy your application's **Client ID** and **Client Secret** from your Sandbox account into both the **Initial Value** and **Current Value** cells for the corresponding Postman variables, `clientId` and `clientSecret`.
-6. Select the **Auth** tab.
-7. Verify the following settings:
+6. After copying and pasting your API credentials, log out of the Blue Button sandbox in your browser. Being logged into the sandbox can cause errors during authorization in Postman.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-12.png" alt="Sandbox Logout button" />
+7. Select the **Auth** tab.
+8. Verify the following settings:
     - **Grant type** : Authorization Code (With PKCE)
     - **Code Challenge Method** : SHA-256
-    - **State** : any-string-will-do (this value can be any sufficiently long string)
-8. After copying and pasting your API credentials, log out of the Blue Button sandbox in your browser. Being logged into the sandbox can cause errors during authorization in Postman.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-12.png" alt="Sandbox Logout button" />
-9. In the **Auth** tab, click **Get New Access Token**.
+    - **State** : examplestringgoeshere (this value can be any opaque string value at least 16 charaters in length)
+9. At the bottom of the **Auth** tab, click **Get New Access Token**.
 10. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.<br><img src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-10.png" alt="Medicare login window" />
 11. Click **Connect**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-11.png" alt="Connect button" />
 12. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.
