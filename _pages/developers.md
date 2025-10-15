@@ -265,12 +265,16 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
 4. Select the **Variables** tab.
 5. Copy your application's **Client ID** and **Client Secret** from your Sandbox account into both the **Initial Value** and **Current Value** cells for the corresponding Postman variables, `clientId` and `clientSecret`.
 6. After copying and pasting your API credentials, log out of the Blue Button sandbox in your browser. Being logged into the sandbox can cause errors during authorization in Postman.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-12.png" alt="Sandbox Logout button" />
-7. In Postman, select the **Authorization** tab.
-8. Click **Get New Access Token**.
-9. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.<br><img src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-10.png" alt="Medicare login window" />
-10. Click **Connect**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-11.png" alt="Connect button" />
-11. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.
-12. Make any desired Blue Button 2.0 API calls from the endpoints listed under the **Patient**, **Explanation of Benefit**, and **Coverage** folders. For example, to retrieve explanation of benefits information for the authenticated patient:
+7. Select the **Auth** tab.
+8. Verify the following settings:
+    - **Grant type** : Authorization Code (With PKCE)
+    - **Code Challenge Method** : SHA-256
+    - **State** : examplestringgoeshere (this value can be any opaque string value at least 16 charaters in length)
+9. At the bottom of the **Auth** tab, click **Get New Access Token**.
+10. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.<br><img src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-10.png" alt="Medicare login window" />
+11. Click **Connect**.<br><img style="width: 100%;" src="{{ site.baseurl }}/assets/img/docs/v2/bb-postman-11.png" alt="Connect button" />
+12. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.
+13. Make any desired Blue Button 2.0 API calls from the endpoints listed under the **Patient**, **Explanation of Benefit**, and **Coverage** folders. For example, to retrieve explanation of benefits information for the authenticated patient:
     1. Select the **Explanation of Benefits** folder, then **GET Search Explanation of Benefits**.
     2. Click **Send**.
     3. The API will return a FHIR bundle with explanation of benefits information.

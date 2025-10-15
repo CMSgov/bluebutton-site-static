@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "739f0a4a-58b4-4627-9b43-d27c1f4a7d55",
 		"name": "CMS Blue Button 2.0 API Sandbox",
-		"description": "To use this Postman collection to query the Blue Button 2.0 Sandbox, follow the instructions below.\n\n1. Create a Sandbox account and application by following the instructions in the [Blue Button 2.0 developer documentation](https://bluebutton.cms.gov/developers/#getting-started-in-the-developer-sandbox). When configuring your Sandbox application:\n    1. Choose \"Yes\" for the question, \"Does your application need to collect beneficiary demographic information (Name, address, date of birth, race, and sex)?\"\n    2. Enter the following URLs into the **Callback URLs / Redirect URIs** field, separated by a carriage return:\n        1. `https://oauth.pstmn.io/v1/callback`\n        2. `https://oauth.pstmn.io/v1/browser-callback`\n2. Select the top-level folder in this Postman collection (**CMS Blue Button 2.0 API Sandbox**).\n3. Select the **Variables** tab.\n4. Copy the **Client ID** and **Client Secret** from your Sandbox application into both the **Initial Value** and **Current Value** cels for the corresponding Postman variables (`clientId` and `clientSecret`).\n5. Select the **Authorization** tab.\n6. Click **Get New Access Token**.\n7. A Medicare login screen will open. Enter the username and password for a Sandbox synthetic user account (e.g., user = \"BBUser00000\" and password = \"PW00000!\"), and click **Log in**.\n8. Click **Connect**.\n9. Click **Use Token**.\n10. Make any desired Blue Button 2.0 API calls under the **Patient**, **Explanation of Benefit**, and **Coverage** folders.",
+		"description": "To use this Postman collection to query the Blue Button 2.0 Sandbox, follow the instructions below.\n\n1. Create a Sandbox account and application by following the instructions in the [Blue Button 2.0 developer documentation](https://bluebutton.cms.gov/developers/#getting-started-in-the-developer-sandbox). When configuring your Sandbox application:\n    1. Choose \"Yes\" for the question, \"Does your application need to collect beneficiary demographic information (Name, address, date of birth, race, and sex)?\"\n        \n    2. Enter the following URLs into the **Callback URLs / Redirect URIs** field, separated by a carriage return:\n        1. `https://oauth.pstmn.io/v1/callback`\n            \n        2. `https://oauth.pstmn.io/v1/browser-callback`\n            \n2. Select the top-level folder in this Postman collection (**CMS Blue Button 2.0 API Sandbox**).\n    \n3. Select the **Variables** tab.\n    \n4. Copy the **Client ID** and **Client Secret** from your Sandbox application into both the **Initial Value** and **Current Value** cels for the corresponding Postman variables (`clientId` and `clientSecret`).\n    \n5. Select the **Auth** tab.\n    \n6. Click **Get New Access Token**.\n    \n7. A Medicare login screen will open. Enter the username and password for a Sandbox synthetic user account (e.g., user = \"BBUser00000\" and password = \"PW00000!\"), and click **Log in**.\n    \n8. Click **Connect**.\n    \n9. Click **Use Token**.\n    \n10. Make any desired Blue Button 2.0 API calls under the **Patient**, **Explanation Of Benefit**, and **Coverage** folders.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17161995",
 		"_collection_link": "https://adhoc-pan.postman.co/workspace/Blue-Button-2.0~f5966132-7453-4559-ba60-1a72942353e2/collection/17161995-739f0a4a-58b4-4627-9b43-d27c1f4a7d55?action=share&source=collection_link&creator=17161995"
@@ -366,6 +366,26 @@
 		"type": "oauth2",
 		"oauth2": [
 			{
+				"key": "accessTokenUrl",
+				"value": "{{baseUrl}}/v2/o/token/",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{baseUrl}}/v2/o/authorize/",
+				"type": "string"
+			},
+			{
+				"key": "state",
+				"value": "1234567890abcdefghijklmnopqrstuvwxyz",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code_with_pkce",
+				"type": "string"
+			},
+			{
 				"key": "redirect_uri",
 				"value": "https://oauth.pstmn.io/v1/callback",
 				"type": "string"
@@ -396,23 +416,8 @@
 				"type": "string"
 			},
 			{
-				"key": "state",
-				"value": "",
-				"type": "string"
-			},
-			{
-				"key": "authUrl",
-				"value": "{{baseUrl}}/v2/o/authorize/",
-				"type": "string"
-			},
-			{
 				"key": "challengeAlgorithm",
 				"value": "S256",
-				"type": "string"
-			},
-			{
-				"key": "grant_type",
-				"value": "authorization_code",
 				"type": "string"
 			},
 			{
@@ -429,11 +434,6 @@
 				"key": "addTokenTo",
 				"value": "header",
 				"type": "string"
-			},
-			{
-				"key": "accessTokenUrl",
-				"value": "{{baseUrl}}/v2/o/token/",
-				"type": "string"
 			}
 		]
 	},
@@ -442,6 +442,7 @@
 			"listen": "prerequest",
 			"script": {
 				"type": "text/javascript",
+				"requests": {},
 				"exec": [
 					""
 				]
@@ -451,6 +452,7 @@
 			"listen": "test",
 			"script": {
 				"type": "text/javascript",
+				"requests": {},
 				"exec": [
 					""
 				]
@@ -460,18 +462,15 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "https://sandbox.bluebutton.cms.gov",
-			"type": "string"
+			"value": "https://sandbox.bluebutton.cms.gov"
 		},
 		{
 			"key": "clientId",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
 			"key": "clientSecret",
-			"value": "",
-			"type": "string"
+			"value": ""
 		}
 	]
 }
