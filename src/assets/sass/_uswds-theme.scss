@@ -44,4 +44,7 @@ in the form $setting: value,
     active: true
   ), 
   $theme-process-list-connector-width: 4,
+  $theme-utility-breakpoints: (
+    desktop-lg: true
+  )
 );

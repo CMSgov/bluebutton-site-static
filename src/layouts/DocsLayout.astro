@@ -11,12 +11,24 @@ type Props = {
 const { showSideNav = true, headings = [] } = Astro.props
 ---
 
-<div class="grid-container padding-y-8">
+<div class="grid-container">
   <div class="grid-row">
     {showSideNav && <SideNav />}
-    <main id="main-content" class="main-content position-relative grid-col-fill">
-      <slot />
+    <main id="main-content" class="grid-col-fill">
+      <div class="grid-row">
+        {
+          headings && headings.length > 0 ? (
+            <div class="grid-col-auto order-last margin-left-auto">
+              <TableOfContents headings={headings} />
+            </div>
+          ) : null
+        }
+        <div id="page-content" class="grid-col-fill">
+          <div class="padding-y-6">
+            <slot />
+          </div>
+        </div>
+      </div>
     </main>
-    {headings && headings.length > 0 ? <TableOfContents headings={headings} /> : null}
   </div>
 </div>
