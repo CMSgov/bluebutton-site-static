@@ -10,7 +10,10 @@ import TwoColumn from '#components/two-column.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<BaseLayout title="CMS Blue Button" description="Helping Medicare enrollees connect their Medicare claims data to trusted health applications, services, and research programs.">
+<BaseLayout
+  title="CMS Blue Button"
+  description="Helping Medicare enrollees connect their Medicare claims data to trusted health applications, services, and research programs."
+>
   <main id="main-content">
     <Hero
       title="CMS Blue Button"
@@ -43,45 +46,45 @@ import BaseLayout from '../layouts/BaseLayout.astro'
             >
           </Card>
         </ul>
-
-        <TwoColumn image={Whiteboard} class="padding-y-7">
-          <h2>Value for organizations</h2>
-          <h3>What does Blue Button 2.0 allow you to do?</h3>
-          <p>
-            Whether you are a health plan market place, a non-profit research organization, or a healthcare startup -
-            integration with Blue Button 2.0 provides value to organizations that deliver services to people with
-            Medicare.
-          </p>
-          <p>
-            People with Medicare can allow access to their data, which can improve data accuracy and efficiency over
-            manual data entry. Faster, more accurate data can lead to better service recommendations and health outcomes
-            for beneficiaries.
-          </p>
-          <p>
-            Learn more about using Blue Button 2.0, or go ahead and create your Sandbox account to explore our sample
-            data.
-          </p>
-          <p>
-            <Link to="/use-cases">Learn more about use cases</Link>
-          </p>
-        </TwoColumn>
-        <TwoColumn image={Home} dir="rtl" class="padding-y-7">
-          <h2>Value for people with Medicare</h2>
-          <h3>What does Blue Button 2.0 allow you to do?</h3>
-          <p>
-            Blue Button 2.0 allows you to share your data with third-party applications, doctors, research programs, and
-            more! It also gives beneficiaries and their caregivers more options and control over their claims data.
-          </p>
-          <p>
-            Our team is working on new features that allow people with Medicare to have more control over the types of
-            data third-party applications can see and use.
-          </p>
-          <p>Follow the link below to learn about the third-party applications using Blue Button.</p>
-          <p>
-            <Link href="https://www.hhs.gov/">View Blue Button apps</Link>
-          </p>
-        </TwoColumn>
       </div>
+
+      <TwoColumn image={Whiteboard} class="padding-y-7">
+        <h2>Value for organizations</h2>
+        <h3>What does Blue Button 2.0 allow you to do?</h3>
+        <p>
+          Whether you are a health plan market place, a non-profit research organization, or a healthcare startup -
+          integration with Blue Button 2.0 provides value to organizations that deliver services to people with
+          Medicare.
+        </p>
+        <p>
+          People with Medicare can allow access to their data, which can improve data accuracy and efficiency over
+          manual data entry. Faster, more accurate data can lead to better service recommendations and health outcomes
+          for beneficiaries.
+        </p>
+        <p>
+          Learn more about using Blue Button 2.0, or go ahead and create your Sandbox account to explore our sample
+          data.
+        </p>
+        <p>
+          <Link to="/use-cases">Learn more about use cases</Link>
+        </p>
+      </TwoColumn>
+      <TwoColumn image={Home} dir="rtl" class="padding-y-7">
+        <h2>Value for people with Medicare</h2>
+        <h3>What does Blue Button 2.0 allow you to do?</h3>
+        <p>
+          Blue Button 2.0 allows you to share your data with third-party applications, doctors, research programs, and
+          more! It also gives beneficiaries and their caregivers more options and control over their claims data.
+        </p>
+        <p>
+          Our team is working on new features that allow people with Medicare to have more control over the types of
+          data third-party applications can see and use.
+        </p>
+        <p>Follow the link below to learn about the third-party applications using Blue Button.</p>
+        <p>
+          <Link href="https://www.hhs.gov/">View Blue Button apps</Link>
+        </p>
+      </TwoColumn>
     </div>
   </main>
 </BaseLayout>
