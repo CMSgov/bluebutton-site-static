@@ -10,21 +10,23 @@ const { headings = [] } = Astro.props
 
 <aside
   id="toc"
-  class="margin-top-0 overflow-y-auto padding-y-6 position-sticky display-none desktop-lg:display-block margin-left-4"
-  style="top: 5.75rem; height: calc(100vh - 6rem); max-width: 15rem;"
+  class="margin-top-0 overflow-y-auto padding-y-6 position-sticky display-none desktop-lg:display-block margin-left-4 maxw-card-lg"
+  style="top: 5.75rem; height: calc(100vh - 6rem);"
 >
-  <h3 class="margin-bottom-2 font-sans-2xs">On this page</h3>
-  <ul class="usa-in-page-nav__list">
-    {
-      headings.map((heading) => (
-        <li class:list={['usa-in-page-nav__item', heading.depth < 3 ? 'usa-in-page-nav__item--primary' : '']}>
-          <a href={`#${heading.slug}`} class="usa-in-page-nav__link">
-            {heading.text}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+  <nav class="padding-1" aria-labelledby="toc-heading">
+    <h3 class="margin-bottom-2 font-sans-2xs" id="toc-heading">On this page</h3>
+    <ul class="usa-in-page-nav__list">
+      {
+        headings.map((heading) => (
+          <li class:list={['usa-in-page-nav__item', heading.depth < 3 ? 'usa-in-page-nav__item--primary' : '']}>
+            <a href={`#${heading.slug}`} class="usa-in-page-nav__link">
+              {heading.text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
 </aside>
 
 <script>
