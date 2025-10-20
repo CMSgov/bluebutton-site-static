@@ -17,7 +17,7 @@ To get started integrating with the Blue Button 2.0 API, you'll need to register
 
 When you add or edit a sandbox application, you'll enter various required configuration details.
 
-<img class="padding-top-4" style="width: 100%;" src="/src/assets/images/register-new-application.png" alt="New application registration screen" />
+![New application registration screen](/src/assets/images/register-new-application.png)
 
 ### Application Name
 
@@ -37,20 +37,17 @@ This is an API endpoint on your system that receives the callback after a user s
 
 Sample format: 
 
-<CopySnippet
-  lang="json"
-  canCopy={false}
-  code={
-`URIscheme://[sub-domain.]domain_name[:port]/path`
-}
-/>
+```http
+URIscheme://[sub-domain.]domain_name[:port]/path
+```
 
 ### Does my application need to collect enrollee demographic data?
 
 This setting determines 2 things:
 
-* What [scopes](/api-docs/authorization#scopes) are applied to your application (determines which API calls your application can execute).
-* The information and options displayed on the authorization screen Medicare enrollees use to allow or deny your application access to their data
+- What [scopes](/api-docs/authorization#scopes) are applied to your application (determines which API calls your application can execute).
+- The information and options displayed on the authorization screen Medicare enrollees use to allow or deny your application access to their data
+
 
 <table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-4">
   <caption class="usa-sr-only">Demographic data settings</caption>
@@ -64,16 +61,16 @@ This setting determines 2 things:
     <tr>
       <th scope="row">Yes</th>
       <td>
-        <p>Allows your application to request access to a Medicare enrollee’s claims data AND personal information such as name, date of birth, race, and sex. (Scopes: <code>patient/Patient.rs, patient/Coverage.rs, patient/ExplanationOfBenefit.rs, profile</code>)</p>
-        <p>Note: When an enrollee is authorizing your application, they will have the ability to omit the patient/Patient.rs scope. Be sure that you build your application accordingly to handle a 403 error if an enrollee decides to filter their demographic information.</p>
-        <img class="padding-top-4" style="width: 100%;" src="/src/assets/images/demographic-info-yes.png" alt="Authorization screen with demographic info option" />
+        <p>Allows your application to request access to a Medicare enrollee’s claims data AND personal information such as name, date of birth, race, and sex. (Scopes: `patient/Patient.rs`, `patient/Coverage.rs`, `patient/ExplanationOfBenefit.rs`, `profile`)</p>
+        <p>**Note:** When an enrollee is authorizing your application, they will have the ability to omit the patient/Patient.rs scope. Be sure that you build your application accordingly to handle a 403 error if an enrollee decides to filter their demographic information.</p>
+        ![Authorization screen with demographic info option](/src/assets/images/demographic-info-yes.png)
       </td>
     </tr>
     <tr>
       <th scope="row">No</th>
       <td>
-        <p>Allows your application to request access to the <code>patient/Coverage.rs and patient/ExplanationOfBenefit.rs</code> scopes.</p>
-        <img class="padding-top-4" style="width: 100%;" src="/src/assets/images/demographic-info-no.png" alt="Authorization screen without demographic info option" />
+        <p>Allows your application to request access to the `patient/Coverage.rs` and `patient/ExplanationOfBenefit.rs` scopes.</p>
+        ![Authorization screen without demographic info option](/src/assets/images/demographic-info-no.png)
       </td>
     </tr>
   </tbody>
@@ -87,8 +84,8 @@ Click **Save Application**.
 
 After you register your sandbox application, you'll get a Client ID and Client Secret.
 
-* Client ID: an alphanumeric string used to identify your application. Use this in your code when you call the Blue Button 2.0 API.
-* Client Secret: an alphanumeric string used by your application to authenticate with the Blue Button server.  
+- Client ID: an alphanumeric string used to identify your application. Use this in your code when you call the Blue Button 2.0 API.
+- Client Secret: an alphanumeric string used by your application to authenticate with the Blue Button server.  
 
 Note: Client credentials from the developer sandbox only work in the sandbox environment. To get production credentials, you need to complete the [production access requirements](/production-access) and be approved.  
 
@@ -104,29 +101,20 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
 1. Configure your Sandbox application to work with Postman:
     - Log into the [Blue Button 2.0 Sandbox](https://sandbox.bluebutton.cms.gov/).
     - Click **View/Edit App** for the app you want to use with Postman.
-    <img style="width: 100%;" src="/src/assets/images/bb-postman-02.png" alt="View/Edit App link" />
+    ![View/Edit App link](/src/assets/images/bb-postman-02.png)
     - Click **Edit Application**.
-    <img style="width: 100%;" src="/src/assets/images/bb-postman-03.png" alt="Edit Application button" />
+    ![Edit Application button](/src/assets/images/bb-postman-03.png)
     - Enter the following URLs into the **Callback URLs / Redirect URIs** field, separated by a carriage return.
 
-        <CopySnippet
-          lang="json"
-          code={
-        `https://oauth.pstmn.io/v1/callback`
-        }
-        />
-        <CopySnippet
-          lang="json"
-          code={
-        `https://oauth.pstmn.io/v1/browser-callback`
-        }
-        />
+      ```txt
+      https://oauth.pstmn.io/v1/callback
+      https://oauth.pstmn.io/v1/browser-callback
+      ```
 
-        <img style="width: 100%;" src="/src/assets/images/bb-postman-04.png" alt="Callback URLs / Redirect URIs field, populated with callback URLs listed text" />
     - Click **Save Application**.
-    <img style="width: 100%;" src="/src/assets/images/bb-postman-05.png" alt="Save Application button" />
+    ![Save Application button](/src/assets/images/bb-postman-05.png)
 
-2. Download the <a href="/assets/files/CMS-BlueButton-2.0-API-Sandbox.postman_collection.json" download>Blue Button 2.0 API Sandbox Postman collection</a> and import it into the Postman desktop or web application. 
+2. Download the [Blue Button 2.0 API Sandbox Postman collection](/assets/files/CMS-BlueButton-2.0-API-Sandbox.postman_collection.json) and import it into the Postman desktop or web application. 
     - To import the collection, either click the **Import** button in Postman and select the collection file, or drag the file into the Postman window. 
 
 3. Select the top-level folder in the collection, **CMS BlueButton 2.0 API Sandbox**.
@@ -136,16 +124,17 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
 5. Copy your application's **Client ID** and **Client Secret** from your Sandbox account into both the **Initial Value** and **Current Value** cells for the corresponding Postman variables, `clientId` and `clientSecret`.
 
 6. After copying and pasting your API credentials, log out of the Blue Button sandbox in your browser. Being logged into the sandbox can cause errors during authorization in Postman.
-<img style="width: 100%;" src="/src/assets/images/bb-postman-12.png" alt="Sandbox Logout button" />
+  ![Sandbox Logout button](/src/assets/images/bb-postman-12.png)
 
 7. In Postman, select the **Authorization** tab.
 
 8. Click **Get New Access Token**.
 
 9. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](/data/understanding-the-data#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.
-<img src="/src/assets/images/bb-postman-10.png" alt="Medicare login window" />
+  ![Medicare login window](/src/assets/images/bb-postman-10.png)
 
-10. Click **Connect**.<img style="width: 100%;" src="/src/assets/images/bb-postman-11.png" alt="Connect button" />
+10. Click **Connect**.
+  ![Connect button](/src/assets/images/bb-postman-11.png)
 
 11. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.
 
@@ -163,30 +152,30 @@ First, obtain an access token. To test using your sandbox application, you can u
 1. Navigate to the [Blue Button 2.0 API Test Client](https://sandbox.bluebutton.cms.gov/testclient/).
 
 2. If you are currently logged into the Blue Button 2.0 sandbox, click **Log Out to Continue**.
-<img style="width: 100%;" src="/src/assets/images/bb-postman-06.png" alt="Log Out to Continue button" />
+  ![Log Out to Continue button](/src/assets/images/bb-postman-06.png)
 
 3. Click **Get a Sample Authorization Token**.
-<img style="width: 100%;" src="/src/assets/images/bb-postman-07.png" alt="Get a Sample Authorization button" />
+  ![Get a Sample Authorization button](/src/assets/images/bb-postman-07.png)
 
 4. Click **Authorize as a Beneficiary**.
-<img style="width: 100%;" src="/src/assets/images/bb-postman-08.png" alt="Authorize as a Beneficiary button" />
+  ![Authorize as a Beneficiary button](/src/assets/images/bb-postman-08.png)
 
 5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](/data/understanding-the-data#authenticating-as-a-synthetic-user) (e.g., user = `BBUser00000` and password = `PW00000!`), and click **Log in**.
-<img src="/src/assets/images/bb-postman-10.png" alt="Medicare login window" />
+  ![Medicare login window](/src/assets/images/bb-postman-10.png)
 
-6. Click **Connect**.<img style="width: 100%;" src="/src/assets/images/bb-postman-11.png" alt="Connect button" />
+6. Click **Connect**.
+  ![Connect button](/src/assets/images/bb-postman-11.png)
 
 7. A new page will open. Copy the access token from the JSON shown under **Step 1: Sample Authorization** for use in your cURL command.
-<img style="width: 100%;" src="/src/assets/images/bb-postman-09.png" alt="JSON object with access token highlighted" />
+  ![JSON object with access token highlighted](/src/assets/images/bb-postman-09.png)
 
 Once you have an access token, you can start making API calls with cURL. For example, the following command will retrieve explanation of benefit information for the authenticated patient (replace `<YOUR ACCESS TOKEN>` with your actual access token):  
-<CopySnippet
-  lang="json"
-  canCopy={false}
-  code={
-`curl --location "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/" --header "Accept: application/json" --header "Authorization: Bearer <YOUR ACCESS TOKEN>"`
-}
-/>
+
+```bash title=Terminal
+curl --location "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit/" \ 
+  --header "Accept: application/json" \
+  --header "Authorization: Bearer <YOUR ACCESS TOKEN>" 
+```
 
 ## 5. Next steps
 
@@ -196,12 +185,12 @@ If you're ready to start building, check out our Sample Applications or SDKs:
 
 Our SDKs provide a comprehensive set of tools to help you build applications faster and in a more standardized way. The SDKs are available for Node and Python.  
 
-* [Node SDK](https://www.npmjs.com/package/cms-bluebutton-sdk)
-* [Python SDK](https://pypi.org/project/cms-bluebutton-sdk/)
+- [Node SDK](https://www.npmjs.com/package/cms-bluebutton-sdk)
+- [Python SDK](https://pypi.org/project/cms-bluebutton-sdk/)
 
 ### Sample Apps
 
 Our sample applications provide examples of basic use of the BB2.0 API.  
 
-* [Node & React](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react)
-* [Python & React](https://github.com/CMSgov/bluebutton-sample-client-python-react)
+- [Node & React](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react)
+- [Python & React](https://github.com/CMSgov/bluebutton-sample-client-python-react)

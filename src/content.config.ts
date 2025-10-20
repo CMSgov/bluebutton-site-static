@@ -27,7 +27,7 @@ const resourcesCollection = defineCollection({
 const apiDocsCollection = defineCollection({
   loader: glob({
     pattern: '**\/[^_]*.(md|mdx)',
-    base: './src/content/api-docs',
+    base: './src/content/api-documentation',
   }),
   schema: z.object({
     title: z.string(),

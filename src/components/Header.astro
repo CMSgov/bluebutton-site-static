@@ -11,12 +11,12 @@ type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]
 
 const apiDocs = (await getCollection('apiDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
 const docsnavLinks = apiDocs.map((doc) => ({
-  to: '/api-docs/[...slug]',
+  to: '/api-documentation/[...slug]',
   params: {
     slug: doc.id,
   },
   label: doc.data.title,
-})) satisfies RoutesArray<'/api-docs/[...slug]'>
+})) satisfies RoutesArray<'/api-documentation/[...slug]'>
 
 const dataDocs = (await getCollection('dataDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
 const datanavLinks = dataDocs.map((doc) => ({

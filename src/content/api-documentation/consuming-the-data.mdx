@@ -16,14 +16,11 @@ Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search) (l
 
 FHIR `Bundle` example:
 
-<CopySnippet
-  lang="json"
-  code={
-`{
+```json
+{
     "resourceType": "Bundle",
     "id": "123",
-    ....
-    ....
+    ...
     "type": "searchset",
     "total": 99,
     "entry": [
@@ -31,20 +28,19 @@ FHIR `Bundle` example:
             "resource": {
                 "resourceType": "ExplanationOfBenefit",
                 "id": "carrier--123",
-                ....
+                ...
             }
-        }
+        },
         {
             "resource": {
                 "resourceType": "ExplanationOfBenefit",
                 "id": "carrier--456",
-                ....
+                ...
             }
         }  
     ]
-}`
 }
-/>
+```
 
 ## Navigating through a bundle
 
@@ -86,34 +82,33 @@ For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle
 
 Bundle navigation example:
 
-<CopySnippet
-  lang="json"
-  code={
-`"resourceType": "Bundle",
-    "id": "5e5844c4-d3e2-44ca-8c87-77efccc5d60d",
-    ...
-    ...
-    "total": 89,
-    "link": [
-        {
-            "relation": "first",
-            "url": "{host}/v2/fhir/ExplanationOfBenefit?startIndex=0&_count=10&patient=......
-        },
-        {
-            "relation": "next",
-            "url": "{host}/v2/fhir/ExplanationOfBenefit?startIndex=10&_count=10&patient=......
-        },
-        {
-            "relation": "last",
-            "url": "{host}/v2/fhir/ExplanationOfBenefit?&startIndex=.....
-        },
-        {
-            "relation": "self",
-            "url": "{host}/v2/fhir/ExplanationOfBenefit?&startIndex=.....
-         }
-    ],`
+
+```json
+{
+  "resourceType": "Bundle",
+  "id": "5e5844c4-d3e2-44ca-8c87-77efccc5d60d",
+  // ...
+  "total": 89,
+  "link": [
+    {
+      "relation": "first",
+      "url": "{host}/v2/fhir/ExplanationOfBenefit?startIndex=0&_count=10&patient=..."
+    },
+    {
+      "relation": "next",
+      "url": "{host}/v2/fhir/ExplanationOfBenefit?startIndex=10&_count=10&patient=..."
+    },
+    {
+      "relation": "last",
+      "url": "{host}/v2/fhir/ExplanationOfBenefit?&startIndex=..."
+    },
+    {
+      "relation": "self",
+      "url": "{host}/v2/fhir/ExplanationOfBenefit?&startIndex=..."
+    }
+  ],
 }
-/>
+```
 
 ## Working with identifiers
 
@@ -131,64 +126,56 @@ For example, you can use discriminators to pull the current MBI from a Patient r
 
 Patient identifier example:
 
-<CopySnippet
-  lang="json"
-  code={
-    `"identifier": [
-        {
-            "system": "http://hl7.org/fhir/sid/us-mbi",
-            "type": {
-                "coding": [
-                    {
-                        "code": "MC",
-                        "extension": [
-                            {
-                                "url": "https://bluebutton.cms.gov/resources/codesystem/identifier-currency",
-                                "valueCoding": {
-                                    "code": "current",
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            "value": "<CURRENT MBI HERE>"
-        },
-        {
-            "system": "http://hl7.org/fhir/sid/us-mbi",
-            "type": {
-                "coding": [
-                    {
-                        "code": "MC",
-                        "extension": [
-                            {
-                                "url": "https://bluebutton.cms.gov/resources/codesystem/identifier-currency",
-                                "valueCoding": {
-                                    "code": "historic",
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            "value": "<HISTORIC MBI HERE>"
-        }
-    ],
-`
+```json
+{
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/sid/us-mbi",
+      "type": {
+        "coding": [
+          {
+            "code": "MC",
+            "extension": [
+              {
+                "url": "https://bluebutton.cms.gov/resources/codesystem/identifier-currency",
+                "valueCoding": {
+                  "code": "current"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "value": "<CURRENT MBI HERE>"
+    },
+    {
+      "system": "http://hl7.org/fhir/sid/us-mbi",
+      "type": {
+        "coding": [
+          {
+            "code": "MC",
+            "extension": [
+              {
+                "url": "https://bluebutton.cms.gov/resources/codesystem/identifier-currency",
+                "valueCoding": {
+                  "code": "historic"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "value": "<HISTORIC MBI HERE>"
+    }
+  ]
 }
-/>
+```
 
 Example [FHIRPath expression](https://hl7.org/fhir/fhirpath.html)  for pulling the current MBI:
 
-<CopySnippet
-  lang="json"
-  code={
-    `Patient.identifier.where(type.coding.extension('https://bluebutton.cms.gov/
-resources/codesystem/identifier-currency').valueCoding.code =
-'current').where(system = 'http://hl7.org/fhir/sid/us-mbi').value
-`
-}
-/>
+```ruby
+Patient.identifier.where(type.coding.extension('https://bluebutton.cms.gov/resources/codesystem/identifier-currency').valueCoding.code ='current').where(system = 'http://hl7.org/fhir/sid/us-mbi').value
+```
 
 ## Working with references
 
@@ -200,20 +187,19 @@ For literal references, relative URLs are provided.  In the sample EOB resource 
 
 Literal reference example:
 
-<CopySnippet
-  lang="json"
-  code={
-    `"resource": {
+
+```json
+{
+  "resource": {
     "resourceType": "ExplanationOfBenefit",
     "id": "carrier--10045426206",
-    ....
-    ....
+    // ...
     "patient": {
-        "reference": "Patient/123"
-    },
-`
+      "reference": "Patient/123"
+    }
+  }
 }
-/>
+```
 
 ### Contained resources
 
@@ -221,29 +207,32 @@ The Blue Button API also uses fragments and [contained resources](https://www.hl
 
 Contained resource example:
 
-<CopySnippet
-  lang="json"
-  code={
-    `"contained": [
-    {
-        "active": true,
-        "id": "provider-org",
-        "identifier": [
-            {
-                "type": {
-                    "coding": [
-                        {
-                            "code": "PRN",
-                            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-....
-....           
-....
-"provider": {
-    "reference": "#provider-org"
+```json
+{ 
+	"contained": [
+		{
+			"active": true,
+			"id": "provider-org",
+			"identifier": [
+				{
+					"type": {
+						"coding": [
+							{
+								"code": "PRN",
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	// ...
+	"provider": {
+		"reference": "#provider-org"
+	}
 },
-`
-}
-/>
+```
 
 ### Logical references
 
@@ -253,28 +242,28 @@ In the example below, the `Eob.careTeam.provider` attribute contains a reference
 
 Logical reference example:
 
-<CopySnippet
-  lang="json"
-  code={
-    `"careTeam": [
-        {
-            "provider": {
-                "identifier": {
-                    "type": {
-                        "coding": [
-                            {
-                                "code": "npi",
-                                "display": "National Provider Identifier",
-                                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType"
-                            }
-                        ]
-                    },
-                    "value": "123"
-                }
-            },
-`
+```json
+{
+  "careTeam": [
+    {
+      "provider": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "npi",
+                "display": "National Provider Identifier",
+                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType"
+              }
+            ]
+          },
+          "value": "123"
+        }
+      }
+    }
+  ]
 }
-/>
+```
 
 ## Extensions and SupportingInfo
 
@@ -290,28 +279,27 @@ In the example below, there are two extensions:
 
 Extension example:
 
-<CopySnippet
-  lang="json"
-  code={
-    `"extension": [
+```json
+{
+  "extension": [
     {
-        "url": "https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd",
-        "valueCoding": {
-            "code": "O",
-            "display": "Part B physician/supplier claim record (processed by local carriers; can include DMEPOS services)",
-            "system": "https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd"
-        }
+      "url": "https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd",
+      "valueCoding": {
+        "code": "O",
+        "display": "Part B physician/supplier claim record (processed by local carriers; can include DMEPOS services)",
+        "system": "https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd"
+      }
     },
     {
-        "url": "https://bluebutton.cms.gov/resources/variables/carr_num",
-        "valueIdentifier": {
-            "system": "https://bluebutton.cms.gov/resources/variables/carr_num",
-            "value": "15202"
-        }
-    },
-`
+      "url": "https://bluebutton.cms.gov/resources/variables/carr_num",
+      "valueIdentifier": {
+        "system": "https://bluebutton.cms.gov/resources/variables/carr_num",
+        "value": "15202"
+      }
+    }
+  ]
 }
-/>
+```
 
 ### SupportingInfo attribute
 
@@ -329,27 +317,24 @@ Each entry is a code from a given codesystem or valueset with information about 
 
 Claim type example:
 
-<CopySnippet
-  lang="json"
-  code={
-    `"type": {
+```json
+{
+  "type": {
     "coding": [
-        {
-            "code": "71",
-            "display": "Local carrier non-durable medical equipment, prosthetics, orthotics, and supplies (DMEPOS) claim",
-            "system": "https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd"
-        },
-        {
-            "code": "CARRIER",
-            "system": "https://bluebutton.cms.gov/resources/codesystem/eob-type"
-        },
-        .....
-        .....
+      {
+        "code": "71",
+        "display": "Local carrier non-durable medical equipment, prosthetics, orthotics, and supplies (DMEPOS) claim",
+        "system": "https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd"
+      },
+      {
+        "code": "CARRIER",
+        "system": "https://bluebutton.cms.gov/resources/codesystem/eob-type"
+      }
+      // ...
     ]
-},
-`
+  }
 }
-/>
+```
 
 For more information about determining claim types, see the following coding system reference links:
 - [EOB type](/resources/codesystem/eob-type/)
@@ -364,63 +349,61 @@ For example, `Eob.item.diagnosisSequence` links to `Eob.diagnosis.sequence`, whi
 
 Linking item example:
 
-<CopySnippet
-  lang="json"
-  code={
-`"item": [
+```json
+{
+  "item": [
     {
-        "adjudication": [
-        ....
-        ....
-        "diagnosisSequence": [
-            1
-        ],
-        "careTeamSequence": [
-            3
-        ],
-        ....
-        ....
+      "adjudication": [
+        // ...
+      ],
+      "diagnosisSequence": [
+        1
+      ],
+      "careTeamSequence": [
+        3
+      ]
+      // ...
     }
-]
- 
-"diagnosis": [
+  ],
+  "diagnosis": [
     {
-        "sequence": 1,
-        "diagnosisCodeableConcept": {
-            "coding": [
-                {
-                    "code": "Z0000",
-                    "display": "ENCNTR FOR GENERAL ADULT MEDICAL EXAM W/O ABNORMAL FINDINGS",
-        ....
-        ....
+      "sequence": 1,
+      "diagnosisCodeableConcept": {
+        "coding": [
+          {
+            "code": "Z0000",
+            "display": "ENCNTR FOR GENERAL ADULT MEDICAL EXAM W/O ABNORMAL FINDINGS"
+          }
+        ]
+        // ...
+      }
+    }
+  ],
+  "careTeam": [
+    {
+      "sequence": 1
+      // ...
     },
-     
-"careTeam": [
-        {
-            "sequence": 1
-            ....
-            ....
-        },
-        {
-            "sequence": 2
-            ....
-            ....
-        },
-        {
-        {
-            "sequence": 3,
-            "provider": {
-                "identifier": {
-                ....
-                ....
-            },
-            "role": {
-                "coding": [
-                    {
-                        "code": "performing",
-                        "display": "Performing provider",
-            ....
-            ....       
-`
+    {
+      "sequence": 2
+      // ...
+    },
+    {
+      "sequence": 3,
+      "provider": {
+        "identifier": {}
+        // ...
+      },
+      "role": {
+        "coding": [
+          {
+            "code": "performing",
+            "display": "Performing provider"
+            // ...
+          }
+        ]
+      }
+    }
+  ]
 }
-/>
+```

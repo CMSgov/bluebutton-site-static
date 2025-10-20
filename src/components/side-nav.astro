@@ -1,5 +1,5 @@
 ---
-import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
+import { $path, type RouteId, type RouteOptions } from 'astro-typesafe-routes/path'
 
 import Swagger from '#assets/images/swagger.svg'
 import Github from '@uswds/uswds/img/usa-icons/github.svg'
@@ -14,12 +14,12 @@ const { pathname } = Astro.url
 
 const apiDocs = (await getCollection('apiDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
 const docsnavLinks = apiDocs.map((doc) => ({
-  to: '/api-docs/[...slug]',
+  to: '/api-documentation/[...slug]',
   params: {
     slug: doc.id,
   },
   label: doc.data.title,
-})) satisfies RoutesArray<'/api-docs/[...slug]'>
+})) satisfies RoutesArray<'/api-documentation/[...slug]'>
 
 const dataDocs = (await getCollection('dataDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
 const datanavLinks = dataDocs.map((doc) => ({
@@ -29,6 +29,8 @@ const datanavLinks = dataDocs.map((doc) => ({
   },
   label: doc.data.title,
 })) satisfies RoutesArray<'/data/[...slug]'>
+
+const isActive = (path: string) => path === pathname
 ---
 
 <div
@@ -39,7 +41,11 @@ const datanavLinks = dataDocs.map((doc) => ({
     <nav aria-label="Side navigation">
       <ul class="usa-sidenav">
         <li class="usa-sidenav__item">
-          <Link to="/api-documentation" class="if current page" data-tealium="left-rail"> Get Started </Link>
+          <Link
+            to="/api-documentation"
+            class={isActive('/api-documentation') ? 'usa-current' : null}
+            data-tealium="left-rail">Get Started</Link
+          >
         </li>
         <ul class="usa-sidenav__sublist">
           {
@@ -48,7 +54,7 @@ const datanavLinks = dataDocs.map((doc) => ({
                 <Link
                   to={link.to}
                   params={link.params}
-                  class={pathname.startsWith(link.to) ? 'usa-current' : null}
+                  class={isActive($path({ to: link.to, params: link.params })) ? 'usa-current' : null}
                   data-tealium="left-rail"
                 >
                   {link.label}
@@ -58,7 +64,9 @@ const datanavLinks = dataDocs.map((doc) => ({
           }
         </ul>
         <li class="usa-sidenav__item">
-          <Link to="/bb2-data" data-tealium="left-rail">BB2 Data </Link>
+          <Link to="/bb2-data" class={isActive('/bb2-data') ? 'usa-current' : null} data-tealium="left-rail"
+            >BB2 Data</Link
+          >
         </li>
         <ul class="usa-sidenav__sublist">
           {
@@ -67,7 +75,7 @@ const datanavLinks = dataDocs.map((doc) => ({
                 <Link
                   to={link.to}
                   params={link.params}
-                  class={pathname.startsWith(link.to) ? 'usa-current' : null}
+                  class={isActive($path({ to: link.to, params: link.params })) ? 'usa-current' : null}
                   data-tealium="left-rail"
                 >
                   {link.label}
@@ -77,32 +85,20 @@ const datanavLinks = dataDocs.map((doc) => ({
           }
         </ul>
         <li class="usa-sidenav__item">
-          <a
-            href="https://github.com/CMSgov/bluebutton-web-server"
-            class="usa-nav-link"
-            target="blank"
-            rel="noopener noreferrer"
-            data-tealium="left-rail"
-          >
+          <Link href="https://github.com/CMSgov/bluebutton-web-server" showIcon={false} data-tealium="left-rail">
             <span class="display-flex flex-align-center">
               <span class="padding-right-1">GitHub</span>
-              <Icon icon={Github} color="base-dark" size={3} />
+              <Icon icon={Github} size={3} />
             </span>
-          </a>
+          </Link>
         </li>
         <li class="usa-sidenav__item">
-          <a
-            href="https://sandbox.bluebutton.cms.gov/docs/openapi"
-            class="usa-nav-link"
-            target="blank"
-            rel="noopener noreferrer"
-            data-tealium="left-rail"
-          >
+          <Link href="https://sandbox.bluebutton.cms.gov/docs/openapi" showIcon={false} data-tealium="left-rail">
             <span class="display-flex flex-align-center">
               <span class="padding-right-1">Swagger</span>
-              <Icon icon={Swagger} color="base-dark" size={3} />
+              <Icon icon={Swagger} size={3} />
             </span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
