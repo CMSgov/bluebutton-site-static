@@ -16,11 +16,10 @@
     "astro": "^5.7.5",
     "astro-seo": "^0.8.4",
     "astro-typesafe-routes": "^5.0.0",
-    "class-variance-authority": "^0.7.1",
     "cva": "^1.0.0-beta.4",
     "fast-xml-parser": "^5.2.5",
     "prettier-plugin-astro": "^0.14.1",
-    "sass": "^1.86.3",
+    "sass-embedded": "^1.93.2",
     "tinyglobby": "^0.2.15"
   },
   "devDependencies": {

@@ -2,6 +2,7 @@
 import LogoBlueButton from '#assets/images/logo-bluebutton.svg'
 import Banner from '#components/banner.astro'
 import Footer from '#components/Footer.astro'
+import Header from '#components/Header.astro'
 import Identifier from '#components/Identifier.astro'
 import { SEO } from 'astro-seo'
 import '@fontsource-variable/open-sans'
@@ -60,6 +61,7 @@ const { title, description, image } = Astro.props
           as: 'font',
           type: 'font/woff2',
           href: openSansWoff2,
+          crossorigin: 'anonymous',
         },
       ],
       meta: [
@@ -76,6 +78,7 @@ const { title, description, image } = Astro.props
   <body id="page-top">
     <a class="usa-skipnav z-top" href="#main-content">Skip to main content</a>
     <Banner />
+    <Header />
     <slot />
     <Footer />
     <Identifier />

@@ -17,7 +17,7 @@ const { headings = [] } = Astro.props
     <ul class="usa-in-page-nav__list">
       {
         headings.map((heading) => (
-          <li class="usa-in-page-nav__item usa-in-page-nav__item--primary">
+          <li class:list={['usa-in-page-nav__item', heading.depth < 3 ? 'usa-in-page-nav__item--primary' : '']}>
             <a href={`#${heading.slug}`} class="usa-in-page-nav__link">
               {heading.text}
             </a>
@@ -41,7 +41,8 @@ const { headings = [] } = Astro.props
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           visibleHeadingIds.add(entry.target.id)
-        } else {
+        }
+ else {
           visibleHeadingIds.delete(entry.target.id)
         }
       })

@@ -13,12 +13,14 @@ type Props = {
 const { title, description } = Astro.props
 ---
 
-<div class="usa-section--dark bg-primary-gradient">
+<div class="bg-primary-gradient">
   <div class="grid-container padding-y-8">
-    <h1 class="hero-title font-body-3xl measure-1 margin-bottom-0 line-height-sans-2 text-semibold text-balance">
+    <h1
+      class="hero-title text-white font-body-3xl measure-1 margin-bottom-0 line-height-sans-2 text-semibold text-balance"
+    >
       {title}
     </h1>
-    <p class="hero-paragraph line-height-sans-4 measure-5">
+    <p class="hero-paragraph line-height-sans-4 measure-5 text-white">
       {description}
     </p>
     <div class="grid-row grid-gap margin-top-2">
