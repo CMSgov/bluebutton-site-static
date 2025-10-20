@@ -18,12 +18,14 @@ const { Content } = await render(entry)
 <BaseLayout title="Support" description="">
   <DocsLayout showSideNav={false}>
     <h1>{entry.data.title}</h1>
-    <Content
-      components={{
-        a: Link,
-        Link,
-        TwoColumn,
-      }}
-    />
+    <div class="usa-prose">
+      <Content
+        components={{
+          a: Link,
+          Link,
+          TwoColumn,
+        }}
+      />
+    </div>
   </DocsLayout>
 </BaseLayout>

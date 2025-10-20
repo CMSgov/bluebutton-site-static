@@ -19,12 +19,14 @@ const { Content } = await render(entry)
 <BaseLayout title="Use Cases" description="">
   <DocsLayout showSideNav={false}>
     <h1>{entry.data.title}</h1>
-    <Content
-      components={{
-        a: Link,
-        Icon,
-        IconList,
-      }}
-    />
+    <div class="usa-prose">
+      <Content
+        components={{
+          a: Link,
+          Icon,
+          IconList,
+        }}
+      />
+    </div>
   </DocsLayout>
 </BaseLayout>

@@ -1,5 +1,6 @@
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
+import expressiveCode from 'astro-expressive-code'
 import typesafeRoutes from 'astro-typesafe-routes'
 // @ts-check
 import { defineConfig } from 'astro/config'
@@ -9,6 +10,12 @@ export default defineConfig({
   site: 'https://bluebutton.cms.gov',
   prefetch: {
     prefetchAll: true,
+  },
+
+  markdown: {
+    shikiConfig: {
+      theme: 'github-light',
+    },
   },
 
   vite: {
@@ -22,5 +29,18 @@ export default defineConfig({
     },
   },
 
-  integrations: [mdx(), sitemap(), typesafeRoutes()],
+  integrations: [expressiveCode({
+    themes: ['github-light'],
+    styleOverrides: {
+      frames: {
+        editorBackground: '#f7f9fa',
+        terminalBackground: '#f7f9fa',
+        frameBoxShadowCssValue: '0',
+      },
+      codeBackground: '#f7f9fa',
+      uiFontSize: '0.85rem',
+      codeFontSize: '1rem',
+    },
+
+  }), mdx(), sitemap(), typesafeRoutes()],
 })

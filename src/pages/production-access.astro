@@ -20,14 +20,16 @@ const { Content, headings } = await render(entry)
 <BaseLayout title="Production Access" description="">
   <DocsLayout headings={headings} showSideNav={false}>
     <h1>{entry.data.title}</h1>
-    <Content
-      components={{
-        a: Link,
-        Link,
-        ProcessList,
-        ProcessListItem,
-        Accordion,
-      }}
-    />
+    <div class="usa-prose">
+      <Content
+        components={{
+          a: Link,
+          Link,
+          ProcessList,
+          ProcessListItem,
+          Accordion,
+        }}
+      />
+    </div>
   </DocsLayout>
 </BaseLayout>

@@ -9,7 +9,7 @@ type Props = {
   canCopy?: boolean
 }
 
-const { code = '', lang, canCopy = true } = Astro.props
+const { code = '', lang, canCopy } = Astro.props
 const nanosecond = crypto.randomUUID()
 ---
 
@@ -31,15 +31,21 @@ const nanosecond = crypto.randomUUID()
         defaultColor={false}
         theme="github-light"
         style="background-color: transparent;"
-        class="padding-left-2 padding-right-15 margin-y-0 padding-y-3"
+        class="padding-left-2 padding-right-15 margin-y-0 padding-y-2"
       />
     </div>
-    <div class="position-absolute top-1 right-1 z-100">
-      <button
-        class="usa-button usa-button--outline margin-0 bg-base-lightest hover:bg-base-lightest active:bg-base-lightest"
-        id={`copybutton-${nanosecond}`}>Copy</button
-      >
-    </div>
+    {
+      canCopy ? (
+        <div class="position-absolute top-1 right-1 z-100">
+          <button
+            class="usa-button usa-button--outline margin-0 bg-base-lightest hover:bg-base-lightest active:bg-base-lightest"
+            id={`copybutton-${nanosecond}`}
+          >
+            Copy
+          </button>
+        </div>
+      ) : null
+    }
   </div>
 </div>
 

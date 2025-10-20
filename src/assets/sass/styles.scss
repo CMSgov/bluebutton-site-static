@@ -22,3 +22,14 @@ main h5,
 main h6 {
   scroll-margin-top: 6.5rem;
 }
+
+#page-content .expressive-code{
+  margin-top: 1rem;
+}
+
+.usa-prose code {
+  background-color: #f0f0f0;
+  padding: .125rem .5rem;
+  word-wrap: break-word;
+  color: #B9323F;
+}
