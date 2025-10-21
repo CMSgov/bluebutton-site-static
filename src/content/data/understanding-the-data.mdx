@@ -28,7 +28,7 @@ The Explanation of Benefit resource provides data for the following claim types:
 Request:
 
 ```http
-HTTP GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id]
+GET /v2/fhir/ExplanationOfBenefit/?patient=[fhir_id]
 ```
 
 This request returns claims as [Explanation of Benefit Resources](https://hl7.org/fhir/R4/explanationofbenefit.html) inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html).   
@@ -75,7 +75,7 @@ Example response excerpt:
 ### Patient  
 
 ```http
-HTTP GET /v2/fhir/Patient/[fhir_id]
+GET /v2/fhir/Patient/[fhir_id]
 ```
 
 The above URL returns demographic and other administrative information as a [Patient FHIR Resource](http://hl7.org/fhir/R4/patient.html). This information is mostly demographic information, not medical data. Note that users can choose to allow or deny access to the /Patient endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](/api-docs/authorization#scopes).  
@@ -83,7 +83,7 @@ The above URL returns demographic and other administrative information as a [Pat
 Request:
 
 ```bash title=Terminal
-curl --header "Authorization:Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325"
+curl --header "Authorization:Bearer AUTHORIZATION_TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Patient/-20140000008325"
 ```
 
 Example response excerpt:
@@ -143,7 +143,7 @@ Example response excerpt:
 ### Coverage  
 
 ```http
-HTTP GET /v2/fhir/Coverage/?beneficiary=[fhir_id]
+GET /v2/fhir/Coverage/?beneficiary=[fhir_id]
 ```
 
 The above URL returns Coverage information as [Coverage resources](http://hl7.org/fhir/R4/coverage.html) inside a [FHIR Bundle](http://hl7.org/fhir/R4/bundle.html). One coverage resource is supplied for each coverage type.
@@ -151,7 +151,7 @@ The above URL returns Coverage information as [Coverage resources](http://hl7.or
 Request: 
 
 ```bash title=Terminal
-curl --header "Authorization:Bearer AUTHORIZATION TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325"
+curl --header "Authorization:Bearer AUTHORIZATION_TOKEN" "https://sandbox.bluebutton.cms.gov/v2/fhir/Coverage/?beneficiary=-20140000008325"
 ```
 
 
@@ -204,14 +204,16 @@ The UserInfo endpoint is an OAuth 2.0 Protected Resource that returns informatio
 
 Note that users can choose to allow or deny access to the UserInfo endpoint in the Medicare.gov authorization flow. For more information, go to [Scopes](/api-docs/authorization#scopes). 
 
-`HTTP GET /connect/userinfo`  
+```http
+GET /connect/userinfo
+```
 
 The above URL returns basic information about the user, given an authorization token. An HTTP GET is called and the response is returned as JSON.  
 
 Request:
 
 ```bash title=Terminal
-curl --header "Authorization: Bearer <AUTHORIZATION_TOKEN\>" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"
+curl --header "Authorization: Bearer AUTHORIZATION_TOKEN" "https://sandbox.bluebutton.cms.gov/v2/connect/userinfo"
 ```
 
 Example response:

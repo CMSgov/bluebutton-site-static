@@ -40,11 +40,11 @@ For a complete listing of Blue Button API calls, see our [Swagger documentation]
   </thead>
   <tbody>
     <tr>
-      <td>`HTTP GET {baseURL}/Patient`</td>
+      <td>`GET {baseURL}/Patient`</td>
       <td>Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Patient resources](https://www.hl7.org/fhir/patient.html) with one entry (one patient resource). You can use the resource ID `Bundle.entry.resource.id` in later queries. For synthetic data, the ID is a negative number.</td>
     </tr>
     <tr>
-      <td>`HTTP GET {baseURL}/Patient/{id}`</td>
+      <td>`GET {baseURL}/Patient/{id}`</td>
       <td>Returns a single Patient resource.  Replace `{id}` with a valid patient resource ID.  See `/Patient` call above.</td>
     </tr>
   </tbody>
@@ -62,11 +62,11 @@ For a complete listing of Blue Button API calls, see our [Swagger documentation]
   </thead>
   <tbody>
     <tr>
-      <td>`HTTP GET {baseURL}/Coverage`</td>
+      <td>`GET {baseURL}/Coverage`</td>
       <td>Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Coverage resources](https://www.hl7.org/fhir/coverage.html)</td>
     </tr>
     <tr>
-      <td>`HTTP GET {baseURL}/Coverage?beneficiary={id}`</td>
+      <td>`GET {baseURL}/Coverage?beneficiary={id}`</td>
       <td>Replace `{id}` with the patient resource ID.  Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Coverage resources](https://www.hl7.org/fhir/coverage.html)</td>
     </tr>
   </tbody>
@@ -84,15 +84,15 @@ For a complete listing of Blue Button API calls, see our [Swagger documentation]
   </thead>
   <tbody>
     <tr>
-      <td>`HTTP GET {baseURL}/ExplanationOfBenefit`</td>
+      <td>`GET {baseURL}/ExplanationOfBenefit`</td>
       <td>Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html).  The bundle should contain one or more EOBs. You can use the resource ID located at `Bundle.entry.resource.id` (the explanation of benefit resource ID) in later queries.  For synthetic data, the ID is typically formatted as `[claimtype]`–`[number]` Example: `carrier--10114937820`</td>
     </tr>
     <tr>
-      <td>`HTTP GET {baseURL}/ExplanationOfBenefit?patient={id}`</td>
+      <td>`GET {baseURL}/ExplanationOfBenefit?patient={id}`</td>
       <td>Replace `{id}` with patient resource ID. Returns a [bundle](https://www.hl7.org/fhir/bundle.html) of [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html).  The bundle should contain one or more EOBs. You can use the resource ID located at `Bundle.entry.resource.id` (the explanation of benefit resource ID) in later queries.  For synthetic data, the ID is typically formatted as `[claimtype]`–`[number]` Example: `carrier--10114937820`</td>
     </tr>
     <tr>
-      <td>`HTTP GET {baseURL}/ExplanationOfBenefit/{id}`</td>
+      <td>`GET {baseURL}/ExplanationOfBenefit/{id}`</td>
       <td>Returns a single [Explanation of Benefit resources](https://www.hl7.org/fhir/explanationofbenefit.html).  Replace `{id}` with a valid EOB resource ID.  See `/ExplanationOfBenefit` call above.</td>
     </tr>
   </tbody>
@@ -110,7 +110,7 @@ For a complete listing of Blue Button API calls, see our [Swagger documentation]
   </thead>
   <tbody>
     <tr>
-      <td>`HTTP GET {baseURL}/metadata`</td>
+      <td>`GET {baseURL}/metadata`</td>
       <td>Returns the [FHIR capability statement](https://www.hl7.org/fhir/capabilitystatement.html) (Example: the FHIR features and operations supported by this server)</td>
     </tr>
   </tbody>
@@ -128,7 +128,7 @@ For a complete listing of Blue Button API calls, see our [Swagger documentation]
   </thead>
   <tbody>
     <tr>
-      <td>`HTTP GET {host}/{version}/connect/userinfo`</td>
+      <td>`GET {host}/{version}/connect/userinfo`</td>
       <td>If the user grants access to access to their personal information, `UserInfo` returns name, family name and email. If the user denies access to their personal information, `UserInfo` returns `You do not have permission.`</td>
     </tr>
   </tbody>
