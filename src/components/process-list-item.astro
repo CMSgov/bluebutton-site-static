@@ -7,7 +7,9 @@ type Props = {
 const { heading, className } = Astro.props
 ---
 
-<li class={`usa-process-list__item ${className}`}>
+<li class:list={['usa-process-list__item', className]}>
   <p class="usa-process-list__heading">{heading}</p>
-  <slot />
+  <div class="usa-prose">
+    <slot />
+  </div>
 </li>

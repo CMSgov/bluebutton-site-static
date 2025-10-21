@@ -4,6 +4,7 @@ import ArrowForward from '@uswds/uswds/img/usa-icons/arrow_forward.svg'
 import Code from '@uswds/uswds/img/usa-icons/code.svg'
 
 import Icon from './icon.astro'
+import Link from './link.astro'
 
 type Props = {
   title: string
@@ -25,30 +26,32 @@ const { title, description } = Astro.props
     </p>
     <div class="grid-row grid-gap margin-top-2">
       <div class="tablet:grid-col-auto margin-top-2">
-        <a href="/api-documentation" class="hero-button usa-button usa-button--inverse usa-button--outline width-full">
+        <Link
+          href="/api-documentation"
+          class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
+          showIcon={false}
+        >
           Get started
           <Icon icon={ArrowForward} color="white" size={3} />
-        </a>
+        </Link>
       </div>
       <div class="tablet:grid-col-auto margin-top-2">
-        <a
+        <Link
           href="https://sandbox.bluebutton.cms.gov/docs/openapi"
-          target="_blank"
-          rel="noopener noreferrer"
           class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
+          showIcon={false}
         >
           API reference <Icon icon={Swagger} color="white" size={3} />
-        </a>
+        </Link>
       </div>
       <div class="tablet:grid-col-auto margin-top-2">
-        <a
+        <Link
           href="https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login"
-          target="_blank"
-          rel="noopener noreferrer"
           class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
+          showIcon={false}
         >
           Visit the sandbox <Icon icon={Code} color="white" size={3} />
-        </a>
+        </Link>
       </div>
     </div>
   </div>
