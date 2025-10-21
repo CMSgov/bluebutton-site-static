@@ -1,5 +1,4 @@
 ---
-import CopySnippet from '#components/copy-snippet.astro'
 import Link from '#components/link.astro'
 import { getCollection, render } from 'astro:content'
 import BaseLayout from 'layouts/BaseLayout.astro'
@@ -26,7 +25,6 @@ const { Content, headings } = await render(post)
         components={{
           a: Link,
           Link,
-          CopySnippet,
         }}
       />
     </div>
