@@ -44,7 +44,7 @@ const { variant = 'link', size, showIcon = true, class: className, ...restProps 
 <a
   href={computedHref}
   target={isExternal ? '_blank' : undefined}
-  rel={isExternal && !computedHref?.includes('cms.gov') ? 'noopener' : undefined}
+  rel={isExternal && !computedHref?.includes('cms.gov') ? 'noreferrer' : undefined}
   class:list={[button({ variant, size }), className]}
   {...restProps}
   ><slot />{
