@@ -1,31 +1,43 @@
 ---
-import { getEntry, render } from 'astro:content'
-import Link from 'components/link.astro'
-import TwoColumn from 'components/two-column.astro'
-
-import BaseLayout from '../layouts/base-layout.astro'
-import '#assets/sass/styles.scss'
+import Link from '#components/link.astro'
+import TwoColumn from '#components/two-column.astro'
+import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 
-const entry = await getEntry('pages', 'support')
-if (!entry) {
-  throw new Error('Page not found')
-}
-
-const { Content } = await render(entry)
+import discussion from '/src/assets/images/discussion.svg'
+import experts from '/src/assets/images/experts.svg'
 ---
 
-<BaseLayout title="Support" description="">
+<BaseLayout
+  title="Support"
+  description="Contact the CMS Blue Button team with questions about the CMS Blue Button API and join our Google Group community to connect with fellow developers."
+>
   <DocsLayout showSideNav={false}>
-    <h1>{entry.data.title}</h1>
-    <div class="usa-prose">
-      <Content
-        components={{
-          a: Link,
-          Link,
-          TwoColumn,
-        }}
-      />
-    </div>
+    <h1>Support</h1>
+    <TwoColumn image={discussion} class="padding-bottom-8 usa-prose">
+      <div class="usa-prose">
+        <h2>Join the Community</h2>
+        <p>
+          Get the latest updates from the Blue Button 2.0 API team and talk with fellow developers in the Google
+          Developer Group for CMS Blue Button 2.0 API.
+        </p>
+
+        <Link variant="primary" href="https://groups.google.com/g/developer-group-for-cms-blue-button-api"
+          >Join the Google Group</Link
+        >
+      </div>
+    </TwoColumn>
+
+    <TwoColumn image={experts} class="padding-top-8" dir="rtl">
+      <div class="usa-prose">
+        <h2>Contact Us</h2>
+        <p>
+          To get help with questions specific to your integration or ask questions about the production API approval
+          process, email <a href="mailto:BlueButtonAPI@cms.hhs.gov">BlueButtonAPI@cms.hhs.gov</a>. We respond to emails
+          within 3 business days.
+        </p>
+        <Link variant="primary" href="mailto:BlueButtonAPI@cms.hhs.gov">Email us</Link>
+      </div>
+    </TwoColumn>
   </DocsLayout>
 </BaseLayout>
