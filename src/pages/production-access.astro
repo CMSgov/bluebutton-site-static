@@ -1,13 +1,13 @@
 ---
-import Accordion from '#components/accordion.astro'
 import { getEntry, render } from 'astro:content'
-import Link from 'components/link.astro'
-import ProcessListItem from 'components/process-list-item.astro'
-import ProcessList from 'components/process-list.astro'
+import Link from '#components/link.astro'
+import ProcessListItem from '#components/process-list/process-list-item.astro'
+import ProcessList from '#components/process-list/process-list.astro'
+import AccordionList from '#components/accordion/accordion-list.astro'
+import AccordionItem from '#components/accordion/accordion-item.astro'
 
-import BaseLayout from '../layouts/base-layout.astro'
-import '#assets/sass/styles.scss'
-import DocsLayout from 'layouts/docs-layout.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
 
 const entry = await getEntry('pages', 'production-access')
 if (!entry) {
@@ -27,7 +27,8 @@ const { Content, headings } = await render(entry)
           Link,
           ProcessList,
           ProcessListItem,
-          Accordion,
+          AccordionList,
+          AccordionItem,
         }}
       />
     </div>

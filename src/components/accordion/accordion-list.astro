@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+import { type VariantProps } from 'cva'
+import { accordion } from '#utils/cva/accordion'
+
+type Props = {
+  class?: string
+  multiselectable?: boolean
+} & VariantProps<typeof accordion> &
+  HTMLAttributes<'div'>
+
+const { class: className, multiselectable, bordered, ...props } = Astro.props
+---
+
+<div {...props} class={accordion({ className, multiselectable, bordered })} data-allow-multiple={multiselectable}>
+  <slot />
+</div>

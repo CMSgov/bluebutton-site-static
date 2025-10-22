@@ -11,6 +11,9 @@
       ],
       "#layouts/*": [
         "layouts/*"
+      ],
+      "#utils/*": [
+        "utils/*"
       ]
     },
     "allowJs": true,
