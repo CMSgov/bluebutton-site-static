@@ -1,15 +1,16 @@
 ---
-type Props = {
-  heading: string
-  img: string
-}
+// type Props = {
+//   heading: string
+//   img: string
+// }
 
-const { heading, img } = Astro.props
+// const { heading, img } = Astro.props
 ---
 
 <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
   <div class="usa-card__container">
-    <div class="usa-card__header">
+    <slot />
+    <!-- <div class="usa-card__header">
       <h3 class="usa-card__heading">{heading}</h3>
     </div>
     <div class="usa-card__media usa-card__media--inset">
@@ -22,6 +23,6 @@ const { heading, img } = Astro.props
     </div>
     <div class="usa-card__footer">
       <slot name="buttonSlot" />
-    </div>
+    </div> -->
   </div>
 </li>

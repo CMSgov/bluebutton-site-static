@@ -1,13 +1,18 @@
 ---
-import Browsers from '#assets/images/browsers.svg?url'
-import Home from '#assets/images/home.svg?url'
-import Whiteboard from '#assets/images/whiteboard.svg?url'
-import Card from '#components/card.astro'
+import Browsers from '#assets/images/browsers.svg'
+import Home from '#assets/images/home.svg'
+import Whiteboard from '#assets/images/whiteboard.svg'
 import Hero from '#components/hero.astro'
 import Link from '#components/link.astro'
 import TwoColumn from '#components/two-column.astro'
 
-import BaseLayout from '../layouts/base-layout.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+import CardHeader from '#components/card/card-header.astro'
+import CardFooter from '#components/card/card-footer.astro'
+import CardBody from '#components/card/card-body.astro'
+import CardMedia from '#components/card/card-media.astro'
+import CardItem from '#components/card/card-item.astro'
+import CardGroup from '#components/card/card-group.astro'
 ---
 
 <BaseLayout
@@ -22,30 +27,41 @@ import BaseLayout from '../layouts/base-layout.astro'
     <div class="grid-container padding-y-10">
       <div class="grid-row">
         <h2>Medicare claims data at your fingertips</h2>
-        <ul class="usa-card-group flex-justify-center padding-top-4">
-          <Card heading="For Developers" img={Browsers}>
-            Explore the developer sandbox to build amazing tools and services with the Blue Button 2.0 API.
-            <Link slot="buttonSlot" variant="primary" href="https://sandbox.bluebutton.cms.gov/v1/accounts/create">
-              Sign up for the sandbox</Link
+        <CardGroup class="padding-top-4">
+          <CardItem>
+            <CardHeader headingAs="h3" heading="For Developers" />
+            <CardMedia src={Browsers} alt="" class="add-aspect-4x3" style="object-fit: contain;" />
+            <CardBody
+              >Explore the developer sandbox to build amazing tools and services with the Blue Button 2.0 API.</CardBody
             >
-          </Card>
-          <Card heading="For Organizations" img={Whiteboard}>
-            Discover how your company or organization could use Blue Button 2.0.
-            <Link slot="buttonSlot" to="/" hash="#value-for-organizations" variant="primary">
-              See the power of Blue Button 2.0</Link
-            >
-          </Card>
-          <Card heading="For People with Medicare" img={Home}>
-            Learn about Medicare's Blue Button & find apps you can use.
-            <Link
-              slot="buttonSlot"
-              href="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
-              variant="primary"
-            >
-              Get details on Medicare.gov</Link
-            >
-          </Card>
-        </ul>
+            <CardFooter>
+              <Link variant="primary" href="https://sandbox.bluebutton.cms.gov/v1/accounts/create">
+                Sign up for the sandbox</Link
+              >
+            </CardFooter>
+          </CardItem>
+          <CardItem>
+            <CardHeader headingAs="h3" heading="For Organizations" />
+            <CardMedia src={Whiteboard} alt="" class="add-aspect-4x3" style="object-fit: contain;" />
+            <CardBody>Discover how your company or organization could use Blue Button 2.0.</CardBody>
+            <CardFooter>
+              <Link to="/" hash="#value-for-organizations" variant="primary"> See the power of Blue Button 2.0</Link>
+            </CardFooter>
+          </CardItem>
+          <CardItem>
+            <CardHeader headingAs="h3" heading="For People with Medicare" />
+            <CardBody>Learn about Medicare's Blue Button & find apps you can use.</CardBody>
+            <CardMedia src={Home} alt="" class="add-aspect-4x3" style="object-fit: contain;" />
+            <CardFooter>
+              <Link
+                href="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
+                variant="primary"
+              >
+                Get details on Medicare.gov</Link
+              >
+            </CardFooter>
+          </CardItem>
+        </CardGroup>
       </div>
 
       <TwoColumn image={Whiteboard} class="padding-y-7">

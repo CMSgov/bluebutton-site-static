@@ -1,0 +1,13 @@
+---
+type Props = {
+  heading: string
+  headingAs?: 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+}
+
+const { heading, headingAs = 'div' } = Astro.props
+const Element = headingAs
+---
+
+<div class="usa-card__header">
+  <Element class="usa-card__heading">{heading}</Element>
+</div>

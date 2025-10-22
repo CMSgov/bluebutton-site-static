@@ -1,0 +1,15 @@
+---
+import type { ComponentProps } from 'astro/types'
+import { Image } from 'astro:assets'
+
+type Props = ComponentProps<typeof Image>
+
+const props = Astro.props
+---
+
+<div class="usa-card__media usa-card__media--inset">
+  <div class="usa-card__img">
+    <Image {...props} />
+    <slot />
+  </div>
+</div>

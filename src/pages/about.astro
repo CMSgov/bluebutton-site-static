@@ -1,14 +1,19 @@
 ---
-import LogoAB2D from '#assets/images/logo-ab2d-sm.svg?url'
-import LogoBCDA from '#assets/images/logo-bcda.svg?url'
-import LogoDPC from '#assets/images/logo-dpc.svg?url'
-import Programmer from '#assets/images/programmer.svg?url'
-import Card from '#components/card.astro'
-import TwoColumn from 'components/two-column.astro'
+import LogoAB2D from '#assets/images/logo-ab2d-sm.svg'
+import LogoBCDA from '#assets/images/logo-bcda.svg'
+import LogoDPC from '#assets/images/logo-dpc.svg'
+import Programmer from '#assets/images/programmer.svg'
+import TwoColumn from '#components/two-column.astro'
 
-import BaseLayout from '../layouts/base-layout.astro'
-import DocsLayout from 'layouts/docs-layout.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
 import Link from '#components/link.astro'
+import CardFooter from '#components/card/card-footer.astro'
+import CardBody from '#components/card/card-body.astro'
+import CardMedia from '#components/card/card-media.astro'
+import CardHeader from '#components/card/card-header.astro'
+import CardGroup from '#components/card/card-group.astro'
+import CardItem from '#components/card/card-item.astro'
 ---
 
 <BaseLayout
@@ -26,22 +31,40 @@ import Link from '#components/link.astro'
       </p>
     </TwoColumn>
     <h2>What are the other CMS claims-based FHIR APIs?</h2>
-    <ul class="usa-card-group flex-justify-center padding-top-4">
-      <Card heading="Data at the Point of Care" img={LogoDPC}>
-        The Data at the Point of Care (DPC) API enables healthcare providers with claims data to fill in gaps in patient
-        history at the point of care and deliver high-quality care to Medicare enrollees.
-        <Link slot="buttonSlot" variant="primary" href="https://dpc.cms.gov/">Visit DPC </Link>
-      </Card>
-      <Card heading="Beneficiary Claims Data API" img={LogoBCDA}>
-        The Beneficiary Claims Data API (BCDA) helps Alternative Payment Model participants provide high-quality,
-        coordinated care by making it easier to access bulk Medicare Parts A, B, and D claims data.
-        <Link slot="buttonSlot" variant="primary" href="https://bcda.cms.gov/">Visit BCDA </Link>
-      </Card>
-      <Card heading="Claims Data to Part D Sponsors" img={LogoAB2D}>
-        The AB2D API provides stand-alone Prescription Drug Plan sponsors with claims data to enhance the use of
-        medications and improve the long term health of enrollees.
-        <Link slot="buttonSlot" variant="primary" href="https://ab2d.cms.gov/">Visit AB2D </Link>
-      </Card>
-    </ul>
+    <CardGroup class="padding-top-4">
+      <CardItem img={LogoDPC}>
+        <CardHeader headingAs="h3" heading="Data at the Point of Care" />
+        <CardMedia src={LogoDPC} class="width-full height-full maxw-15 margin-x-auto display-block" alt="" />
+        <CardBody>
+          The Data at the Point of Care (DPC) API enables healthcare providers with claims data to fill in gaps in
+          patient history at the point of care and deliver high-quality care to Medicare enrollees.
+        </CardBody>
+        <CardFooter>
+          <Link variant="primary" href="https://dpc.cms.gov/">Visit DPC</Link>
+        </CardFooter>
+      </CardItem>
+      <CardItem img={LogoBCDA}>
+        <CardHeader headingAs="h3" heading="Beneficiary Claims Data API" />
+        <CardMedia src={LogoBCDA} class="width-full height-full maxw-15 margin-x-auto display-block" alt="" />
+        <CardBody>
+          The Beneficiary Claims Data API (BCDA) helps Alternative Payment Model participants provide high-quality,
+          coordinated care by making it easier to access bulk Medicare Parts A, B, and D claims data.
+        </CardBody>
+        <CardFooter>
+          <Link variant="primary" href="https://bcda.cms.gov/">Visit BCDA</Link>
+        </CardFooter>
+      </CardItem>
+      <CardItem>
+        <CardHeader headingAs="h3" heading="Claims Data to Part D Sponsors" />
+        <CardMedia src={LogoAB2D} class="width-full height-full maxw-15 margin-x-auto display-block" alt="" />
+        <CardBody>
+          The AB2D API provides stand-alone Prescription Drug Plan sponsors with claims data to enhance the use of
+          medications and improve the long term health of enrollees.
+        </CardBody>
+        <CardFooter>
+          <Link variant="primary" href="https://ab2d.cms.gov/">Visit AB2D</Link>
+        </CardFooter>
+      </CardItem>
+    </CardGroup>
   </DocsLayout>
 </BaseLayout>

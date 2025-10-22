@@ -1,0 +1,11 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = HTMLAttributes<'ul'>
+
+const { class: className, ...props } = Astro.props
+---
+
+<ul class:list={['usa-card-group flex-justify-center', className]} {...props}>
+  <slot />
+</ul>
