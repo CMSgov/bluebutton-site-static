@@ -4,9 +4,9 @@ import Link from '#components/link.astro'
 import ProcessListItem from '#components/process-list-item.astro'
 import ProcessList from '#components/process-list.astro'
 
-import BaseLayout from '#layouts/BaseLayout.astro'
+import BaseLayout from '#layouts/base-layout.astro'
 import '#assets/sass/styles.scss'
-import DocsLayout from '#layouts/DocsLayout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
 
 const entry = await getEntry('pages', 'resources')
 if (!entry) {

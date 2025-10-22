@@ -2,9 +2,9 @@
 import { getEntry, render } from 'astro:content'
 import Link from 'components/link.astro'
 
-import DocsLayout from '../layouts/DocsLayout.astro'
+import DocsLayout from '../layouts/docs-layout.astro'
 import '#assets/sass/styles.scss'
-import BaseLayout from 'layouts/BaseLayout.astro'
+import BaseLayout from 'layouts/base-layout.astro'
 
 const entry = await getEntry('pages', 'bb2-data')
 if (!entry) {
