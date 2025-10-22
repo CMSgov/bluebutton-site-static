@@ -1,11 +1,11 @@
 ---
 import LaunchSvg from '#assets/uswds/img/usa-icons/launch.svg'
 import { $path } from 'astro-typesafe-routes/path'
-import { button } from 'utils/cva/button'
+import { button } from '#utils/cva/button'
 import type { RouteId } from 'astro-typesafe-routes/path'
 import type { HTMLAttributes } from 'astro/types'
 import type { VariantProps } from 'cva'
-import type { HrefOrTo } from '../utils/types'
+import type { HrefOrTo } from '#utils/types'
 
 type Props<T extends RouteId> = Omit<HTMLAttributes<'a'>, 'href'> &
   VariantProps<typeof button> & {

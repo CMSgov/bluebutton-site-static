@@ -1,7 +1,10 @@
 ---
+import type { ComponentProps } from 'astro/types'
+import { Image } from 'astro:assets'
+
 type Props = {
   class?: string
-  image: string
+  image: ComponentProps<typeof Image>['src']
   dir?: 'ltr' | 'rtl'
 }
 
@@ -15,7 +18,7 @@ const { image, dir = 'ltr', class: className } = Astro.props
       dir === 'ltr' ? 'desktop:order-last' : null,
     ]}
   >
-    <img class="width-auto height-full" src={image} alt="" />
+    <Image class="width-auto height-full" src={image} alt="" />
   </div>
   <div class="tablet:grid-col padding-top-4 tablet:padding-top-0 display-flex flex-align-center">
     <div>

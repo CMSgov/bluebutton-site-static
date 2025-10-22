@@ -2,8 +2,8 @@
 import Alert from '#components/alert.astro'
 import Link from '#components/link.astro'
 import { getCollection, render } from 'astro:content'
-import BaseLayout from 'layouts/base-layout.astro'
-import DocsLayout from 'layouts/docs-layout.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('resources')

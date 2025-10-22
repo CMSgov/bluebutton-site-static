@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-
-import BaseLayout from '../../../layouts/base-layout.astro'
+import BaseLayout from '#layouts/base-layout.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('codeBooks')

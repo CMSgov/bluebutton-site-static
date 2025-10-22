@@ -2,11 +2,11 @@
 import IconList from '#components/icon-list.astro'
 import Icon from '#components/icon.astro'
 import { getEntry, render } from 'astro:content'
-import Link from 'components/link.astro'
+import Link from '#components/link.astro'
 
-import BaseLayout from '../layouts/base-layout.astro'
-import '#assets/sass/styles.scss'
-import DocsLayout from 'layouts/docs-layout.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+
+import DocsLayout from '#layouts/docs-layout.astro'
 
 const entry = await getEntry('pages', 'use-cases')
 if (!entry) {

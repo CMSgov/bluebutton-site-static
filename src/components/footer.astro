@@ -16,9 +16,16 @@ import Link from './link.astro'
     <div>
       <div class="grid-container tablet:padding-x-3">
         <div class="grid-row grid-gap tablet:grid-gap-6">
-          <div class="usa-footer__logo grid-row desktop:grid-col-fill">
+          <div class="usa-footer__logo desktop:grid-col-auto">
             <div class="mobile-lg:grid-col-auto">
-              <Link href="https://groups.google.com/g/bc-api" variant="primary">Join the Google Group</Link>
+              <div class="padding-y-2">
+                <Link
+                  href="https://groups.google.com/g/bc-api"
+                  variant="primary"
+                  style="white-space:nowrap;"
+                  class="margin-0">Join the Google Group</Link
+                >
+              </div>
             </div>
           </div>
           <div class="desktop:grid-col-auto tablet:padding-x-3">

@@ -1,6 +1,6 @@
 import { glob } from 'astro/loaders'
 import { defineCollection, z } from 'astro:content'
-import { loadCodebooks } from 'utils/load-codebooks'
+import { loadCodebooks } from '#utils/load-codebooks'
 
 const pageCollection = defineCollection({
   loader: glob({
