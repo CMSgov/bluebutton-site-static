@@ -23,12 +23,12 @@ const docsnavLinks = apiDocs.map((doc) => ({
 
 const dataDocs = (await getCollection('dataDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
 const datanavLinks = dataDocs.map((doc) => ({
-  to: '/data/[...slug]',
+  to: '/bb2-data/[...slug]',
   params: {
     slug: doc.id,
   },
   label: doc.data.title,
-})) satisfies RoutesArray<'/data/[...slug]'>
+})) satisfies RoutesArray<'/bb2-data/[...slug]'>
 
 const isActive = (path: string) => path === pathname
 ---
