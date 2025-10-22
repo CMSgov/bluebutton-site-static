@@ -178,3 +178,9 @@ main {
 .usa-prose > * + * {
   margin-bottom: 1rem;
 }
+
+@media (min-width: 64em) {
+  .usa-header--basic .usa-nav {
+    padding: 0 0 .25rem .5rem;
+  }
+}
