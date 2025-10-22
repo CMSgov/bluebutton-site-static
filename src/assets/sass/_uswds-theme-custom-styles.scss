@@ -174,3 +174,7 @@ main {
 .h1 {
   margin-top: 32px;
 }
+
+.usa-prose > * + * {
+  margin-bottom: 1rem;
+}
