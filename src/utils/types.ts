@@ -11,3 +11,5 @@ export type HrefOrTo<T extends RouteId> = {
 export type IdentifierLinks = ({
   label: string
 } & HrefOrTo<RouteId>)[]
+
+export type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]

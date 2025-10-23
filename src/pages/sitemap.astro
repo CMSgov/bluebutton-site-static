@@ -1,15 +1,63 @@
 ---
-import { getEntry, render } from 'astro:content'
+import { getCollection, getEntry, render } from 'astro:content'
 
 import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
+import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
+import Link from '#components/link.astro'
+import { $path } from 'astro-typesafe-routes/path'
+import { type RoutesArray } from '#utils/types'
 
-const entry = await getEntry('pages', 'sitemap')
-if (!entry) {
-  throw new Error('Page not found')
-}
+type SitemapLinks = {
+  title: string
+  to: RouteId
+  params?: RouteOptions<RouteId>
+  children?: {
+    title: string
+    to: RouteId
+    params?: RouteOptions<RouteId>
+  }[]
+}[]
 
-const { Content } = await render(entry)
+const dataPages = await getCollection('dataDocs')
+const apiPages = await getCollection('apiDocs')
+
+const sitemapLinks: SitemapLinks = [
+  {
+    title: 'Home',
+    to: '/',
+  },
+  {
+    title: 'About',
+    to: '/about',
+  },
+  {
+    title: 'API Documentation',
+    to: '/api-documentation',
+    children: apiPages.map((page) => ({
+      title: page.data.title,
+      to: '/api-documentation/[...slug]',
+      params: { slug: page.id },
+    })) as RoutesArray<'/api-documentation/[...slug]'>,
+  },
+  {
+    title: 'BB2 Data',
+    to: '/bb2-data',
+    children: dataPages.map((page) => ({
+      title: page.data.title,
+      to: '/bb2-data/[...slug]',
+      params: { slug: page.id },
+    })) as RoutesArray<'/bb2-data/[...slug]'>,
+  },
+  {
+    title: 'Production Access',
+    to: '/production-access',
+  },
+  {
+    title: 'Support',
+    to: '/support',
+  },
+]
 ---
 
 <BaseLayout title="Sitemap" description="">
@@ -18,7 +66,25 @@ const { Content } = await render(entry)
       <h1>Sitemap</h1>
     </div>
     <div class="usa-prose">
-      <Content />
+      <ul>
+        {
+          sitemapLinks.map((link) => (
+            <li>
+              <Link href={$path({ to: link.to, params: link.params })}>{link.title}</Link>
+
+              {link.children ? (
+                <ul>
+                  {link.children.map((child) => (
+                    <li>
+                      <Link href={$path({ to: child.to, params: child.params })}>{child.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </DocsLayout>
 </BaseLayout>
