@@ -16,6 +16,8 @@ type Props = {
   image?: string
 }
 
+const SITE_TITLE = 'CMS Blue Button 2.0'
+
 const { title, description, image } = Astro.props
 ---
 
@@ -25,7 +27,7 @@ const { title, description, image } = Astro.props
     <SEO
       charset="utf-8"
       title={title}
-      titleTemplate="%s - Blue Button 2.0"
+      titleTemplate={SITE_TITLE === title ? undefined : `%s - CMS Blue Button 2.0`}
       description={description}
       openGraph={{
         basic: {
