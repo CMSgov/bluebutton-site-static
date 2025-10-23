@@ -18,7 +18,9 @@ const { Content } = await render(entry)
 
 <BaseLayout title="Use Cases" description="">
   <DocsLayout showSideNav={false}>
-    <h1>{entry.data.title}</h1>
+    <div class="margin-bottom-4">
+      <h1>{entry.data.title}</h1>
+    </div>
     <div class="usa-prose">
       <Content
         components={{

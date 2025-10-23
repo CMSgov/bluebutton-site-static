@@ -8,6 +8,7 @@ import { SEO } from 'astro-seo'
 import openSansWoff2 from '@fontsource-variable/open-sans/files/open-sans-latin-wght-normal.woff2?url'
 import '@fontsource-variable/open-sans'
 import '#assets/sass/styles.scss'
+import { ClientRouter } from 'astro:transitions'
 
 type Props = {
   title: string
@@ -20,60 +21,63 @@ const { title, description, image } = Astro.props
 
 <!doctype html>
 <html lang="en" class="usa-js-loading">
-  <SEO
-    charset="utf-8"
-    title={title}
-    titleTemplate="%s - Blue Button 2.0"
-    description={description}
-    openGraph={{
-      basic: {
+  <head>
+    <SEO
+      charset="utf-8"
+      title={title}
+      titleTemplate="%s - Blue Button 2.0"
+      description={description}
+      openGraph={{
+        basic: {
+          title,
+          type: 'Website',
+          image: '/',
+          url: Astro.url,
+        },
+        optional: {
+          description,
+          locale: 'en_US',
+          siteName: 'Blue Button 2.0',
+        },
+        image: {
+          width: 1200,
+          height: 630,
+          alt: '',
+        },
+      }}
+      twitter={{
+        card: 'summary_large_image',
         title,
-        type: 'Website',
-        image: '/',
-        url: Astro.url,
-      },
-      optional: {
         description,
-        locale: 'en_US',
-        siteName: 'Blue Button 2.0',
-      },
-      image: {
-        width: 1200,
-        height: 630,
-        alt: '',
-      },
-    }}
-    twitter={{
-      card: 'summary_large_image',
-      title,
-      description,
-      image: image || '',
-    }}
-    extend={{
-      link: [
-        {
-          rel: 'icon',
-          type: 'image/svg+xml+png',
-          href: LogoBlueButton.src,
-        },
-        {
-          rel: 'preload',
-          as: 'font',
-          type: 'font/woff2',
-          href: openSansWoff2,
-          crossorigin: 'anonymous',
-        },
-      ],
-      meta: [
-        {
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1.0',
-        },
-        { name: 'generator', content: Astro.generator },
-      ],
-    }}
-  />
-  <script src="#assets/uswds/js/uswds-init.js"></script>
+        image: image || '',
+      }}
+      extend={{
+        link: [
+          {
+            rel: 'icon',
+            type: 'image/svg+xml+png',
+            href: LogoBlueButton.src,
+          },
+          {
+            rel: 'preload',
+            as: 'font',
+            type: 'font/woff2',
+            href: openSansWoff2,
+            crossorigin: 'anonymous',
+          },
+        ],
+        meta: [
+          {
+            name: 'viewport',
+            content: 'width=device-width, initial-scale=1.0',
+          },
+          { name: 'generator', content: Astro.generator },
+        ],
+      }}
+    />
+    <script src="#assets/uswds/js/uswds-init.js"></script>
+    <!-- <ClientRouter /> -->
+  </head>
 
   <body id="page-top">
     <a class="usa-skipnav z-top" href="#main-content">Skip to main content</a>

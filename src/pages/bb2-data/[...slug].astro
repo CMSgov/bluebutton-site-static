@@ -19,7 +19,9 @@ const { Content, headings } = await render(post)
 
 <BaseLayout title={post.data.title} description="">
   <DocsLayout headings={headings}>
-    <h1>{post.data.title}</h1>
+    <div class="margin-bottom-4">
+      <h1>{post.data.title}</h1>
+    </div>
     <Content
       components={{
         a: Link,
