@@ -19,7 +19,8 @@ main h2,
 main h3,
 main h4,
 main h5,
-main h6 {
+main h6, 
+[data-footnote-ref] {
   scroll-margin-top: 6.5rem;
 }
 
@@ -32,4 +33,9 @@ main h6 {
   padding: .125rem .5rem;
   word-wrap: break-word;
   color: #B9323F;
+}
+
+[data-footnote-backref]{
+  // Prevents '↩' character (used in footnotes) from rendering as an emoji
+  font-family: sans-serif;
 }

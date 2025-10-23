@@ -2,7 +2,6 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import expressiveCode from 'astro-expressive-code'
 import typesafeRoutes from 'astro-typesafe-routes'
-// @ts-check
 import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
@@ -13,6 +12,11 @@ export default defineConfig({
   },
 
   markdown: {
+    remarkRehype: {
+      footnoteLabelProperties: {
+        class: 'usa-sr-only',
+      },
+    },
     shikiConfig: {
       theme: 'github-light',
     },
