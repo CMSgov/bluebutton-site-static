@@ -16,6 +16,7 @@ type Props = {
 
 const { title, description } = Astro.props
 
+const TEALIUM_ENV = import.meta.env.PROD ? 'prod' : 'dev'
 const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toString()
 ---
 
@@ -42,7 +43,7 @@ const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toStri
         image: {
           width: 1200,
           height: 630,
-          alt: '',
+          alt: 'Blue Button 2.0',
         },
       }}
       twitter={{
@@ -74,7 +75,7 @@ const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toStri
       }}
     />
     <script src="#assets/uswds/js/uswds-init.js"></script>
-    <!-- <ClientRouter /> -->
+    <script is:inline src={`https://tealium-tags.cms.gov/cms-bluebutton/${TEALIUM_ENV}/utag.sync.js`}></script>
   </head>
 
   <body id="page-top">
@@ -85,5 +86,21 @@ const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toStri
     <Footer />
     <Identifier />
     <script src="#assets/uswds/js/uswds.js"></script>
+    <!-- Tealium -->
+    <script is:inline define:vars={{ TEALIUM_ENV }}>
+      ;(function (a, b, c, d) {
+        a = `https://tealium-tags.cms.gov/cms-bluebutton/${TEALIUM_ENV}/utag.js`
+        b = document
+        c = 'script'
+        d = b.createElement(c)
+        d.src = a
+        d.type = `text/java${c}`
+        d.async = true
+        e = document.body.insertBefore(d, document.body.firstChild)
+        f = document.createElement('script')
+        f.text = 'utag_data = {}'
+        e.parentNode.insertBefore(f, e)
+      })()
+    </script>
   </body>
 </html>

@@ -34,7 +34,7 @@ export const SITE_METADATA: {
       sizes: '180x180',
       href: '/meta/apple-touch-icon.png',
     },
-  ] as const,
+  ],
 }
 
 export const IDENTIFIER_LINKS: IdentifierLinks = [
