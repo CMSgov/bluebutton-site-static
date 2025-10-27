@@ -1,4 +1,41 @@
+import type { Link } from 'astro-seo'
+
 import type { IdentifierLinks } from './types'
+
+export const SITE_METADATA: {
+  title: string
+  description: string
+  url: string
+  image: string
+  favicon: Partial<Link>[]
+} = {
+  title: 'CMS Blue Button 2.0',
+  description: 'The CMS Blue Button 2.0 API enables beneficiaries to connect their Medicare claims data to the applications, services, and research programs they trust.',
+  url: 'https://bluebutton.cms.gov',
+  image: '/meta/og.jpg',
+  favicon: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: '/meta/favicon.ico',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/meta/favicon-96x96.png',
+      sizes: '96x96',
+    },
+    {
+      rel: 'shortcut icon',
+      href: '/meta/favicon.ico',
+    },
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      href: '/meta/apple-touch-icon.png',
+    },
+  ] as const,
+}
 
 export const IDENTIFIER_LINKS: IdentifierLinks = [
   {

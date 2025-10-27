@@ -13,12 +13,10 @@ import CardBody from '#components/card/card-body.astro'
 import CardMedia from '#components/card/card-media.astro'
 import CardItem from '#components/card/card-item.astro'
 import CardGroup from '#components/card/card-group.astro'
+import { SITE_METADATA } from '#utils/constants'
 ---
 
-<BaseLayout
-  title="CMS Blue Button 2.0"
-  description="Helping Medicare enrollees connect their Medicare claims data to trusted health applications, services, and research programs."
->
+<BaseLayout title={SITE_METADATA.title} description={SITE_METADATA.description}>
   <main id="main-content">
     <Hero
       title="CMS Blue Button 2.0"

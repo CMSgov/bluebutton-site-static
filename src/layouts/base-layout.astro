@@ -1,5 +1,4 @@
 ---
-import LogoBlueButton from '#assets/images/logo-bluebutton.svg'
 import Banner from '#components/banner.astro'
 import Footer from '#components/footer.astro'
 import Header from '#components/header.astro'
@@ -8,17 +7,16 @@ import { SEO } from 'astro-seo'
 import openSansWoff2 from '@fontsource-variable/open-sans/files/open-sans-latin-wght-normal.woff2?url'
 import '@fontsource-variable/open-sans'
 import '#assets/sass/styles.scss'
-import { ClientRouter } from 'astro:transitions'
+import { SITE_METADATA } from '#utils/constants'
 
 type Props = {
   title: string
   description: string
-  image?: string
 }
 
-const SITE_TITLE = 'CMS Blue Button 2.0'
+const { title, description } = Astro.props
 
-const { title, description, image } = Astro.props
+const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toString()
 ---
 
 <!doctype html>
@@ -27,13 +25,13 @@ const { title, description, image } = Astro.props
     <SEO
       charset="utf-8"
       title={title}
-      titleTemplate={SITE_TITLE === title ? undefined : `%s - CMS Blue Button 2.0`}
+      titleTemplate={SITE_METADATA.title === title ? undefined : `%s - ${SITE_METADATA.title}`}
       description={description}
       openGraph={{
         basic: {
           title,
           type: 'Website',
-          image: '/',
+          image: getAbsolutePath(SITE_METADATA.image).toString(),
           url: Astro.url,
         },
         optional: {
@@ -51,15 +49,11 @@ const { title, description, image } = Astro.props
         card: 'summary_large_image',
         title,
         description,
-        image: image || '',
+        image: getAbsolutePath(SITE_METADATA.image).toString(),
       }}
       extend={{
         link: [
-          {
-            rel: 'icon',
-            type: 'image/svg+xml+png',
-            href: LogoBlueButton.src,
-          },
+          ...SITE_METADATA.favicon,
           {
             rel: 'preload',
             as: 'font',
@@ -67,6 +61,7 @@ const { title, description, image } = Astro.props
             href: openSansWoff2,
             crossorigin: 'anonymous',
           },
+          { rel: 'manifest', href: '/meta/site.webmanifest' },
         ],
         meta: [
           {
@@ -74,6 +69,7 @@ const { title, description, image } = Astro.props
             content: 'width=device-width, initial-scale=1.0',
           },
           { name: 'generator', content: Astro.generator },
+          { name: 'apple-mobile-web-app-title', content: SITE_METADATA.title },
         ],
       }}
     />

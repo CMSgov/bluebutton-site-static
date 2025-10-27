@@ -4,9 +4,11 @@ import expressiveCode from 'astro-expressive-code'
 import typesafeRoutes from 'astro-typesafe-routes'
 import { defineConfig } from 'astro/config'
 
+import { SITE_METADATA } from './src/utils/constants'
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://bluebutton.cms.gov',
+  site: SITE_METADATA.url,
   prefetch: {
     prefetchAll: true,
   },
