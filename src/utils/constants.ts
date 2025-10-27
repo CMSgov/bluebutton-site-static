@@ -98,8 +98,9 @@ export const IDENTIFIER_LINKS: IdentifierLinks = [
     href: 'https://www.cms.gov/about-cms/performance-budget/current',
     label: 'Performance Reports',
   },
-  // {
-  //   to: '/resources/terms',
-  //   label: 'Terms of Service',
-  // },
+  {
+    to: '/terms',
+    // params: null,
+    label: 'Terms of Service',
+  },
 ]
