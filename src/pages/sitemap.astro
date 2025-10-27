@@ -6,55 +6,56 @@ import DocsLayout from '#layouts/docs-layout.astro'
 import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
 import Link from '#components/link.astro'
 import { type RoutesArray } from '#utils/types'
+import { getApiCollection, getDataCollection } from '#utils/collections'
 
 type SitemapLink<T extends RouteId> = RouteOptions<T> & {
-  title: string
-  children?: (RouteOptions<T> & { title: string })[]
+  label: string
+  children?: (RouteOptions<T> & { label: string })[]
 }
 
 type SitemapLinks = SitemapLink<RouteId>[]
 
-const dataPages = await getCollection('dataDocs')
-const apiPages = await getCollection('apiDocs')
+const docsnavLinks = (await getApiCollection()).map((doc) => ({
+  to: '/api-documentation/[...slug]',
+  params: { slug: doc.id },
+  label: doc.data.title,
+})) satisfies RoutesArray<'/api-documentation/[...slug]'>
+const datanavLinks = (await getDataCollection()).map((doc) => ({
+  to: '/bb2-data/[...slug]',
+  params: { slug: doc.id },
+  label: doc.data.title,
+})) satisfies RoutesArray<'/bb2-data/[...slug]'>
 
 const sitemapLinks = [
   {
-    title: 'Home',
+    label: 'Home',
     to: '/' as const,
     params: null,
   },
   {
-    title: 'About',
+    label: 'About',
     to: '/about',
     params: null,
   },
   {
-    title: 'API Documentation',
+    label: 'API Documentation',
     to: '/api-documentation',
     params: null,
-    children: apiPages.map((page) => ({
-      title: page.data.title,
-      to: '/api-documentation/[...slug]',
-      params: { slug: page.id },
-    })) satisfies RoutesArray<'/api-documentation/[...slug]'>,
+    children: docsnavLinks,
   },
   {
-    title: 'BB2 Data',
+    label: 'BB2 Data',
     to: '/bb2-data',
     params: null,
-    children: dataPages.map((page) => ({
-      title: page.data.title,
-      to: '/bb2-data/[...slug]',
-      params: { slug: page.id },
-    })) satisfies RoutesArray<'/bb2-data/[...slug]'>,
+    children: datanavLinks,
   },
   {
-    title: 'Production Access',
+    label: 'Production Access',
     to: '/production-access',
     params: null,
   },
   {
-    title: 'Support',
+    label: 'Support',
     to: '/support',
     params: null,
   },
@@ -71,14 +72,14 @@ const sitemapLinks = [
         {
           sitemapLinks.map((link) => (
             <li>
-              <Link to={link.to}>{link.title}</Link>
+              <Link to={link.to}>{link.label}</Link>
 
               {link?.children ? (
                 <ul>
                   {link.children.map((child) => (
                     <li>
                       <Link to={child.to} params={child.params}>
-                        {child.title}
+                        {child.label}
                       </Link>
                     </li>
                   ))}

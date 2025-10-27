@@ -3,26 +3,23 @@ import { $path, type RouteId, type RouteOptions } from 'astro-typesafe-routes/pa
 
 import Swagger from '#assets/images/swagger.svg'
 import Github from '@uswds/uswds/img/usa-icons/github.svg'
-import { getCollection } from 'astro:content'
 
 import Icon from './icon.astro'
 import Link from './link.astro'
+import { getApiCollection, getDataCollection } from '#utils/collections'
 
 type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]
 
 const { pathname } = Astro.url
 
-const apiDocs = (await getCollection('apiDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
-const docsnavLinks = apiDocs.map((doc) => ({
+const docsnavLinks = (await getApiCollection()).map((doc) => ({
   to: '/api-documentation/[...slug]',
   params: {
     slug: doc.id,
   },
   label: doc.data.title,
 })) satisfies RoutesArray<'/api-documentation/[...slug]'>
-
-const dataDocs = (await getCollection('dataDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
-const datanavLinks = dataDocs.map((doc) => ({
+const datanavLinks = (await getDataCollection()).map((doc) => ({
   to: '/bb2-data/[...slug]',
   params: {
     slug: doc.id,
