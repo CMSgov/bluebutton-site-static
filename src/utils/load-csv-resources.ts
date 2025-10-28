@@ -14,11 +14,13 @@ function camelize(str: string) {
     .join('')
 }
 
+const regex = /^[A-Z]+-[A-Z]+$/ // Matches HEY-THERE (UPPERCASE hyphen UPPERCASE)
+
 const csvSchema = z.array(z.object({
   'sourceSystem': z.string().nullable().optional().transform(v => v || ''),
   'fieldName': z.string().optional().transform(v => v || ''),
   'sourceCopybookFieldLabel': z.string().optional().transform(v => v || ''),
-  'copybookDataDictionaryName(ifDifferent)': z.string().optional().transform(val => val === 'n/a' ? '' : val),
+  'copybookDataDictionaryName(ifDifferent)': z.string().optional().transform(val => regex.test(val || '') ? val : ''),
   'sourceSystemDefinition': z.string().nullable().optional().transform(v => v || ''),
   'versionAdded': z.coerce.string().transform(val => Number(val) || null),
 }))
