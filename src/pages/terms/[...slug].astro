@@ -28,7 +28,7 @@ const { post, isCurrent } = Astro.props
 const { Content, headings } = await render(post)
 ---
 
-<BaseLayout title={post.data.title} description="">
+<BaseLayout title={isCurrent ? post.data.title : `${post.data.title} (deprecated ${post.id})`} description="">
   <DocsLayout showSideNav={false} headings={headings}>
     <div class="margin-bottom-4">
       <h1>{post.data.title}</h1>
