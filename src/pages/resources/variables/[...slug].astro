@@ -7,28 +7,10 @@ export async function getStaticPaths() {
   const posts = await getCollection('codebooks')
   const csvVars = await getCollection('csvVariables')
 
-  const addl = csvVars.map((post) => {
-    const fieldLabel = post.data['copybookDataDictionaryName(ifDifferent)'] || post.data['sourceCopybookFieldLabel']
-    return {
-      params: {
-        slug: `${post.data.sourceSystem?.toLowerCase()}/${fieldLabel?.toLowerCase()}`,
-      },
-      props: {
-        post: {
-          ...post,
-          data: {
-            fieldLabel,
-            sourceSystem: post.data.sourceSystem,
-            field: post.data.fieldName,
-            sourceField: post.data.sourceCopybookFieldLabel,
-            altSourceField: post.data['copybookDataDictionaryName(ifDifferent)'],
-            sourceDefinition: post.data.sourceSystemDefinition?.split('\n'),
-            version: post.data.versionAdded,
-          },
-        },
-      },
-    }
-  })
+  const addl = csvVars.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
 
   const cbs = posts.map((post) => ({
     params: { slug: post.id },
@@ -110,8 +92,8 @@ const { post } = Astro.props
           </Fragment>
         ) : post.collection === 'csvVariables' ? (
           <Fragment>
-            <h1>Variable: {post.data.fieldLabel}</h1>
-            <p class="usa-intro">{post.data.field}</p>
+            <h1>Variable: {post.data.fieldName}</h1>
+            <p class="usa-intro">{post.data.fieldLabel}</p>
             {post.data.sourceDefinition?.map((sd) => (
               <p>{sd}</p>
             ))}
@@ -120,10 +102,10 @@ const { post } = Astro.props
                 <strong>Source System:</strong> {post.data.sourceSystem}
               </li>
               <li>
-                <strong>Source Field:</strong> {post.data.field}
+                <strong>Source Field:</strong> {post.data.fieldName}
               </li>
               <li>
-                <strong>Version:</strong> {post.data.version}
+                <strong>Version:</strong> {post.data.versionAdded}
               </li>
             </ul>
           </Fragment>
