@@ -9,6 +9,7 @@
     "lint:fix": "eslint 'src/**/*.{astro,js,jsx,ts,tsx,md,mdx,json}' --fix"
   },
   "dependencies": {
+    "@ascorbic/csv-loader": "^2.0.3",
     "@astrojs/mdx": "^4.3.8",
     "@astrojs/sitemap": "^3.6.0",
     "@fontsource-variable/open-sans": "^5.2.7",

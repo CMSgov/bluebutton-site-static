@@ -1,4 +1,5 @@
 import { loadCodebooks } from '#utils/load-codebooks'
+import { csvLoader } from '@ascorbic/csv-loader'
 import { glob } from 'astro/loaders'
 import { defineCollection, z } from 'astro:content'
 
@@ -74,10 +75,28 @@ const codeBooksCollection = defineCollection({
   }),
 })
 
+const csvVariablesCollection = defineCollection({
+  loader: csvLoader({
+    fileName: './src/content/resources/variables/rda_api_data_dictionary.csv',
+    idField: 'fieldName',
+  }),
+  schema: z.object({
+    'sourceSystem': z.string().nullable().optional(),
+    'fieldName': z.string().optional(),
+    'sourceCopybookFieldLabel': z.string().optional(),
+    'copybookDataDictionaryName(ifDifferent)': z.string().optional().transform(val => val === 'n/a' ? '' : val),
+    // altSourceField: z.string().optional(),
+    'sourceSystemDefinition': z.string().nullable().optional(),
+    'versionAdded': z.coerce.string().transform(val => Number.isNaN(val) ? Number.NaN : val),
+    // field_label: z.string().optional(),
+  }),
+})
+
 export const collections = {
   pages: pageCollection,
   resources: resourcesCollection,
   apiDocs: apiDocsCollection,
   dataDocs: dataDocsCollection,
   codebooks: codeBooksCollection,
+  csvVariables: csvVariablesCollection,
 }
