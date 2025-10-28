@@ -61,7 +61,7 @@ This setting determines 2 things:
     <tr>
       <th scope="row">Yes</th>
       <td>
-        <p>Allows your application to request access to a Medicare enrollee’s claims data AND personal information such as name, date of birth, race, and sex. (Scopes: `patient/Patient.rs`, `patient/Coverage.rs`, `patient/ExplanationOfBenefit.rs`, `profile`)</p>
+        <p>Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race, and sex. (Scopes: `patient/Patient.rs`, `patient/Coverage.rs`, `patient/ExplanationOfBenefit.rs`, `profile`)</p>
         <p>**Note:** When an enrollee is authorizing your application, they will have the ability to omit the patient/Patient.rs scope. Be sure that you build your application accordingly to handle a 403 error if an enrollee decides to filter their demographic information.</p>
         ![Authorization screen with demographic info option](/src/assets/images/demographic-info-yes.png)
       </td>
