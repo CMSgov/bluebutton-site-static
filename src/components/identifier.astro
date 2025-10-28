@@ -10,11 +10,11 @@ import { IDENTIFIER_LINKS } from 'utils/constants'
     <div class="usa-identifier__container">
       <div class="usa-identifier__logos">
         <Link href="https://www.hhs.gov/" showIcon={false} class="usa-identifier__logo">
-          <LogoHHS class="usa-identifier__logo-img" aria-label="HHS logo" /></Link
-        >
-        <Link href="https://www.cms.gov/" showIcon={false} class="usa-identifier__logo"
-          ><LogoCMS class="usa-identifier__logo-img padding-x-2" aria-label="CMS logo" /></Link
-        >
+          <LogoHHS class="usa-identifier__logo-img" aria-label="HHS logo" />
+        </Link>
+        <Link href="https://www.cms.gov/" showIcon={false} class="usa-identifier__logo">
+          <LogoCMS class="usa-identifier__logo-img padding-x-2" aria-label="CMS logo" />
+        </Link>
       </div>
       <section class="usa-identifier__identity" aria-label="Agency description">
         <p class="usa-identifier__identity-domain">cms.gov</p>
@@ -45,8 +45,8 @@ import { IDENTIFIER_LINKS } from 'utils/constants'
             data-privacy-policy="modal-trigger-footer"
             onclick="utag.gdpr.showConsentPreferences()"
           >
-            Privacy Settings</button
-          >
+            Privacy Settings
+          </button>
         </li>
         <li class="usa-identifier__required-links-item">
           <Link to="/sitemap" data-tealium="identifier" class="usa-identifier__required-link usa-link">Sitemap</Link>
