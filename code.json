@@ -1,0 +1,53 @@
+{
+  "name": "bluebutton-site-static",
+  "description": "A static Jekyll site for the Blue Button 2.0 API splash page: https://bluebutton.cms.gov.",
+  "status": "Production",
+  "permissions": {
+    "licenses": [
+      {
+        "name": "CC0-1.0",
+        "URL": "https://github.com/CMSgov/bluebutton-site-static/blob/master/LICENSE"
+      }
+    ],
+    "usageType": [
+      "openSource"
+    ]
+  },
+  "organization": "Centers for Medicare & Medicaid Services",
+  "repositoryURL": "https://github.com/CMSgov/bluebutton-site-static",
+  "repositoryVisibility": "public",
+  "vcs": "git",
+  "laborHours": 63072,
+  "reuseFrequency": {
+    "forks": 10
+  },
+  "languages": [
+    "HTML",
+    "CSS",
+    "Shell",
+    "SCSS",
+    "JavaScript"
+  ],
+  "maintenance": "internal",
+  "contractNumber": [
+    "0"
+  ],
+  "date": {
+    "created": "2017-10-29T15:24:45Z",
+    "lastModified": "2025-09-09T01:46:58Z",
+    "metaDataLastUpdated": "2025-09-09T17:10:11.126Z"
+  },
+  "tags": [
+    "css",
+    "bluebutton",
+    "scss",
+    "html",
+    "javascript"
+  ],
+  "contact": {
+    "email": "jimmyfagan@navapbc.com",
+    "name": "Jimmy Fagan"
+  },
+  "feedbackMechanism": "https://github.com/CMSgov/bluebutton-site-static/issues",
+  "AIUseCaseID": "0"
+}
