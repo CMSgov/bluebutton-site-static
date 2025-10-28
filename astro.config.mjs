@@ -49,4 +49,10 @@ export default defineConfig({
     },
 
   }), mdx(), sitemap(), typesafeRoutes()],
+
+  redirects: {
+    '/developers': '/api-documentation',
+    '/guide': '/production-access',
+    '/resources': '/bb2-data/resources',
+  },
 })
