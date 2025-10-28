@@ -13,17 +13,6 @@ const pageCollection = defineCollection({
   }),
 })
 
-const resourcesCollection = defineCollection({
-  loader: glob({
-    pattern: '**\/[^_]*.(md|mdx)',
-    base: './src/content/resources',
-  }),
-  schema: z.object({
-    title: z.string(),
-    // description: z.string()
-  }),
-})
-
 const apiDocsCollection = defineCollection({
   loader: glob({
     pattern: '**\/[^_]*.(md|mdx)',
@@ -31,7 +20,7 @@ const apiDocsCollection = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
-    // description: z.string(),
+    description: z.string(),
     sortOrder: z.number(),
   }),
 })
@@ -43,8 +32,21 @@ const dataDocsCollection = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
-    // description: z.string(),
+    description: z.string(),
     sortOrder: z.number(),
+  }),
+})
+
+const resourcesCollection = defineCollection({
+  loader: glob({
+    pattern: '**\/[^_]*.(md|mdx)',
+    base: './src/content/resources',
+  }),
+  schema: z.object({
+    title: z.string(),
+    seo: z.object({
+      title: z.string(),
+    }),
   }),
 })
 
@@ -77,5 +79,5 @@ export const collections = {
   resources: resourcesCollection,
   apiDocs: apiDocsCollection,
   dataDocs: dataDocsCollection,
-  codeBooks: codeBooksCollection,
+  codebooks: codeBooksCollection,
 }

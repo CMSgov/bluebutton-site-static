@@ -4,7 +4,7 @@ import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 
 export async function getStaticPaths() {
-  const posts = await getCollection('codeBooks')
+  const posts = await getCollection('codebooks')
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },

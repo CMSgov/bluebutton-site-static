@@ -1,8 +1,8 @@
 ---
-title: 'HCPCS Coding'
+title: "Coding System: HCPCS"
+seo: 
+  title: HCPCS Coding
 ---
-
-# Coding System: HCPCS
 
 ## Usage
 
@@ -10,10 +10,10 @@ title: 'HCPCS Coding'
 
 **Appears In:**
 
-- `[ExplanationOfBenefit.item.service](http://hl7.org/fhir/STU3/explanationofbenefit-definitions.html#ExplanationOfBenefit.item.service)`
-- `[ExplanationOfBenefit.item.modifier](http://hl7.org/fhir/STU3/explanationofbenefit-definitions.html#ExplanationOfBenefit.item.modifier)`
+- [ExplanationOfBenefit.item.service](http://hl7.org/fhir/STU3/explanationofbenefit-definitions.html#ExplanationOfBenefit.item.service)
+- [ExplanationOfBenefit.item.modifier](http://hl7.org/fhir/STU3/explanationofbenefit-definitions.html#ExplanationOfBenefit.item.modifier)
 
-This FHIR `[Coding.system](http://hl7.org/fhir/STU3/datatypes.html#coding)` value is used for the `Coding`s that identify the procedures, supplies, products, and services for each `ExplanationOfBenefit.item` (EOB.item) in the PAI results. Such `Coding`s are used in all `ExplanationOfBenefit` resources returned by the API, excepting those for Part D events.
+This FHIR [Coding.system](http://hl7.org/fhir/STU3/datatypes.html#coding) value is used for the `Coding`s that identify the procedures, supplies, products, and services for each `ExplanationOfBenefit.item` (EOB.item) in the PAI results. Such `Coding`s are used in all `ExplanationOfBenefit` resources returned by the API, excepting those for Part D events.
 
 This `Coding` is simply a combination of these two variables, as received from the source Medicare records system:
 

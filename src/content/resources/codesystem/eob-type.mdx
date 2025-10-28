@@ -1,16 +1,16 @@
 ---
-title: 'EOB Type Coding'
+title: "Coding System: EOB Type"
+seo: 
+  title: EOB Type Coding
 ---
-
-# Coding System: EOB Type
 
 ## Usage
 
 **System URI**: `https://bluebutton.cms.gov/resources/codesystem/eob-type`
 
-**Appears In:** `[ExplanationOfBenefit.type](http://hl7.org/fhir/STU3/explanationofbenefit-definitions.html#ExplanationOfBenefit.type)`
+**Appears In:** [ExplanationOfBenefit.type](http://hl7.org/fhir/STU3/explanationofbenefit-definitions.html#ExplanationOfBenefit.type)
 
-This FHIR `[Coding.system](http://hl7.org/fhir/STU3/datatypes.html#coding)` value is used for the `Coding`s that best identifies the claim/event for each `ExplanationOfBenefit` (EOB) resource. Such `ExplanationOfBenefit.type` `Coding`s will be present for all `ExplanationOfBenefit` resources returned by the API.
+This FHIR [Coding.system](http://hl7.org/fhir/STU3/datatypes.html#coding) value is used for the `Coding`s that best identifies the claim/event for each `ExplanationOfBenefit` (EOB) resource. Such `ExplanationOfBenefit.type` `Coding`s will be present for all `ExplanationOfBenefit` resources returned by the API.
 
 The `ExplanationOfBenefit.type` field will contain multiple `Coding`s, based on the type of claim/event that the EOB represents. At the moment, only the BBAPI-specific `eob-type` `Coding` is guaranteed to be present for every EOB, and so it's the one that API authors are recommended to make the most use of. This is particularly critical since the data/fields available in the EOBs vary dramatically for each `eob-type`. For example, API users should not expect that the fields present in a "`CARRIER`" EOB will also be present in an "`HHA`" EOB; **the data schema for each claim/event type is quite different!**
 
@@ -22,10 +22,10 @@ The following table lists all of the claim/event EOB types, along with how they'
   <caption>ExplanationOfBenefit.type Coding Values</caption>
   <thead>
     <tr>
-      <th scope="col">BBAPI <br /> `[eob-type](https://bluebutton.cms.gov/resources/codesystem/eob-type)` </th>
-      <th scope="col">FHIR <br /> `[ex-claimtype](http://hl7.org/fhir/STU3/valueset-claim-type.html)` </th>
-      <th scope="col">Medicare <br /> `[nch_clm_type_cd](https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd)` </th>
-      <th scope="col">Medicare <br /> `[nch_near_line_rec_ident_cd](https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd)` </th>
+      <th scope="col">BBAPI <br /> [eob-type](https://bluebutton.cms.gov/resources/codesystem/eob-type) </th>
+      <th scope="col">FHIR <br /> [ex-claimtype](http://hl7.org/fhir/STU3/valueset-claim-type.html) </th>
+      <th scope="col">Medicare <br /> [nch_clm_type_cd](https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd) </th>
+      <th scope="col">Medicare <br /> [nch_near_line_rec_ident_cd](https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd) </th>
       <th scope="col">Description</th>
     </tr>
   </thead>
