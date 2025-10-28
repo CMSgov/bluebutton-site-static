@@ -82,13 +82,13 @@ const csvVariablesCollection = defineCollection({
   }),
   schema: z.object({
     id: z.string(),
-    sourceSystem: z.string(),
+    sourceSystem: z.string().nullable(),
     fieldName: z.string(),
-    sourceField: z.string(),
-    altSourceField: z.string(),
+    sourceField: z.string().nullable(),
+    altSourceField: z.string().nullable(),
     sourceDefinition: z.array(z.string()),
     versionAdded: z.number().nullable(),
-    fieldLabel: z.string(),
+    fieldLabel: z.string().nullable(),
   }),
 })
 

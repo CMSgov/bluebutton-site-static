@@ -14,14 +14,14 @@ function camelize(str: string) {
     .join('')
 }
 
-const regex = /^[A-Z]+-[A-Z]+$/ // Matches HEY-THERE (UPPERCASE hyphen UPPERCASE)
+const regex = /^[A-Z]+(?:-[A-Z]+)*$/ // Matches: HEY, HEY-THERE, A-B-C. Does not match: hey, HEY-1, HEY-
 
 const csvSchema = z.array(z.object({
-  'sourceSystem': z.string().nullable().optional().transform(v => v || ''),
+  'sourceSystem': z.string().nullable().optional().transform(v => v || null),
   'fieldName': z.string().optional().transform(v => v || ''),
-  'sourceCopybookFieldLabel': z.string().optional().transform(v => v || ''),
-  'copybookDataDictionaryName(ifDifferent)': z.string().optional().transform(val => regex.test(val || '') ? val : ''),
-  'sourceSystemDefinition': z.string().nullable().optional().transform(v => v || ''),
+  'sourceCopybookFieldLabel': z.string().optional().transform(val => val || null),
+  'copybookDataDictionaryName(ifDifferent)': z.string().optional().transform(val => val && regex.test(val) ? val : null),
+  'sourceSystemDefinition': z.string().nullable().optional().transform(v => v || null),
   'versionAdded': z.coerce.string().transform(val => Number(val) || null),
 }))
 
@@ -47,18 +47,20 @@ export async function loadCsvResources({ pattern, base }: { pattern: string | [s
       throw new Error(`Failed to parse: ${filePath} `)
     }
 
-    return parsed.data.map((d) => {
-      const fieldLabel = d['copybookDataDictionaryName(ifDifferent)'] || d.sourceCopybookFieldLabel
-      return {
-        id: `${d.sourceSystem?.toLowerCase()}/${fieldLabel?.toLowerCase()}`,
-        sourceSystem: d.sourceSystem,
-        fieldName: d.fieldName,
-        sourceField: d.sourceCopybookFieldLabel,
-        altSourceField: d['copybookDataDictionaryName(ifDifferent)'],
-        sourceDefinition: d.sourceSystemDefinition.split('\n'),
-        versionAdded: d.versionAdded,
-        fieldLabel,
-      }
-    })
+    return parsed.data
+      .filter(d => d.sourceSystem && (d['copybookDataDictionaryName(ifDifferent)'] || d.sourceCopybookFieldLabel))
+      .map((d) => {
+        const fieldLabel = d['copybookDataDictionaryName(ifDifferent)'] || d.sourceCopybookFieldLabel
+        return {
+          id: `${d.sourceSystem?.toLowerCase()}/${fieldLabel?.toLowerCase()}`,
+          sourceSystem: d.sourceSystem,
+          fieldName: d.fieldName,
+          sourceField: d.sourceCopybookFieldLabel,
+          altSourceField: d['copybookDataDictionaryName(ifDifferent)'],
+          sourceDefinition: (d.sourceSystemDefinition || '').split('\n'),
+          versionAdded: d.versionAdded,
+          fieldLabel,
+        }
+      })
   })
 }
