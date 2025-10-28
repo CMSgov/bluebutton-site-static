@@ -10,10 +10,12 @@ import { IDENTIFIER_LINKS } from 'utils/constants'
     <div class="usa-identifier__container">
       <div class="usa-identifier__logos">
         <Link href="https://www.hhs.gov/" showIcon={false} class="usa-identifier__logo">
-          <LogoHHS class="usa-identifier__logo-img" aria-label="HHS logo" />
+          <LogoHHS class="usa-identifier__logo-img" aria-hidden />
+          <span class="usa-sr-only">HHS logo</span>
         </Link>
         <Link href="https://www.cms.gov/" showIcon={false} class="usa-identifier__logo">
-          <LogoCMS class="usa-identifier__logo-img padding-x-2" aria-label="CMS logo" />
+          <LogoCMS class="usa-identifier__logo-img padding-x-2" aria-hidden />
+          <span class="usa-sr-only">CMS logo</span>
         </Link>
       </div>
       <section class="usa-identifier__identity" aria-label="Agency description">
