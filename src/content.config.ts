@@ -1,4 +1,5 @@
-import { loadCodebooks, loadCsvResources } from '#utils/load-codebooks'
+import { loadCodebooks } from '#utils/load-codebooks'
+import { loadCsvResources } from '#utils/load-csv-resources'
 import { glob } from 'astro/loaders'
 import { defineCollection, z } from 'astro:content'
 
