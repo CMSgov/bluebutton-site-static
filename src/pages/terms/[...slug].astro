@@ -1,0 +1,51 @@
+---
+import Alert from '#components/alert.astro'
+import Link from '#components/link.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+import { getTermsCollection } from '#utils/collections'
+import { render } from 'astro:content'
+
+export async function getStaticPaths() {
+  const allTerms = await getTermsCollection()
+
+  const currentTerms = allTerms[0]
+  const restTerms = allTerms.slice(1).map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
+
+  return [
+    {
+      params: { slug: undefined },
+      props: { post: currentTerms, isCurrent: true },
+    },
+    ...restTerms,
+  ]
+}
+
+const { post, isCurrent } = Astro.props
+const { Content, headings } = await render(post)
+---
+
+<BaseLayout title={post.data.title} description="">
+  <DocsLayout showSideNav={false} headings={headings}>
+    <div class="margin-bottom-4">
+      <h1>{post.data.title}</h1>
+      <p class="usa-intro">
+        {isCurrent ? 'Current Version' : 'Previous Version'}{' '}({post.id}), published {
+          post.data.published_date.toLocaleDateString()
+        }
+      </p>
+    </div>
+    <div class="usa-prose">
+      <Content
+        components={{
+          a: Link,
+          Link,
+          Alert,
+        }}
+      />
+    </div>
+  </DocsLayout>
+</BaseLayout>

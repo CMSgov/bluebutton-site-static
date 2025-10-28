@@ -92,6 +92,17 @@ const csvVariablesCollection = defineCollection({
   }),
 })
 
+const termsCollection = defineCollection({
+  loader: glob({
+    pattern: '**\/[^_]*.(md|mdx)',
+    base: './src/content/terms',
+  }),
+  schema: z.object({
+    title: z.string(),
+    published_date: z.coerce.date(),
+  }),
+})
+
 export const collections = {
   pages: pageCollection,
   resources: resourcesCollection,
@@ -99,4 +110,5 @@ export const collections = {
   dataDocs: dataDocsCollection,
   codebooks: codeBooksCollection,
   csvVariables: csvVariablesCollection,
+  terms: termsCollection,
 }
