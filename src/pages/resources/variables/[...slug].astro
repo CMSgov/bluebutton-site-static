@@ -4,20 +4,20 @@ import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 
 export async function getStaticPaths() {
-  const posts = await getCollection('codebooks')
-  const csvVars = await getCollection('csvVariables')
+  const codebookResources = await getCollection('codebooks')
+  const csvResources = await getCollection('csvVariables')
 
-  const addl = csvVars.map((post) => ({
+  const csvVars = csvResources.map((post) => ({
     params: { slug: post.id },
     props: { post },
   }))
 
-  const cbs = posts.map((post) => ({
+  const codebooksVars = codebookResources.map((post) => ({
     params: { slug: post.id },
     props: { post },
   }))
 
-  return [...cbs, ...addl]
+  return [...codebooksVars, ...csvVars]
 }
 
 const { post } = Astro.props
@@ -94,8 +94,9 @@ const { post } = Astro.props
           <Fragment>
             <h1>Variable: {post.data.fieldName}</h1>
             <p class="usa-intro">{post.data.fieldLabel}</p>
-            {post.data.sourceDefinition?.map((sd) => (
-              <p>{sd}</p>
+
+            {post.data.sourceDefinition?.map((srcDef) => (
+              <p>{srcDef}</p>
             ))}
             <ul>
               <li>
