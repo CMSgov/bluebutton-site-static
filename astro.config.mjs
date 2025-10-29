@@ -54,5 +54,8 @@ export default defineConfig({
     '/developers': '/api-documentation',
     '/guide': '/production-access',
     '/resources': '/bb2-data/resources',
+    // legacy redirects
+    '/v2': '/api-documentation',
+    '/blog': '/bb2-data/resources',
   },
 })
