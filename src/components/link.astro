@@ -45,11 +45,6 @@ const { variant = 'link', size, showIcon = true, class: className, ...restProps 
   href={computedHref}
   target={isExternal ? '_blank' : undefined}
   rel={isExternal && !computedHref?.includes('cms.gov') ? 'noreferrer' : undefined}
-  class:list={[button({ variant, size }), className]}
-  {...restProps}
-  ><slot />{
-    isExternal && showIcon ? (
-      <LaunchSvg height={16} width={16} fill="currentColor" style="vertical-align:middle;" class="margin-left-05" />
-    ) : null
-  }</a
+  class:list={[button({ variant, size }), isExternal && showIcon ? 'usa-link--external' : '', className]}
+  {...restProps}><slot /></a
 >

@@ -40,3 +40,12 @@ main h6,
   // Prevents '↩' character (used in footnotes) from rendering as an emoji
   font-family: sans-serif;
 }
+
+.usa-link--external::after {
+  margin-top: 0;
+}
+
+// This is added to better display links with underscores
+.usa-link {
+  text-underline-offset: 4px
+}
