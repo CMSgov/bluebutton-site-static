@@ -32,7 +32,7 @@ const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toStri
         basic: {
           title,
           type: 'Website',
-          image: getAbsolutePath(SITE_METADATA.image).toString(),
+          image: getAbsolutePath(SITE_METADATA.image),
           url: Astro.url,
         },
         optional: {
@@ -50,7 +50,7 @@ const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toStri
         card: 'summary_large_image',
         title,
         description,
-        image: getAbsolutePath(SITE_METADATA.image).toString(),
+        image: getAbsolutePath(SITE_METADATA.image),
       }}
       extend={{
         link: [
@@ -71,6 +71,10 @@ const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toStri
           },
           { name: 'generator', content: Astro.generator },
           { name: 'apple-mobile-web-app-title', content: SITE_METADATA.title },
+          {
+            name: 'google-site-verification',
+            content: SITE_METADATA.googleSiteVerification,
+          },
         ],
       }}
     />

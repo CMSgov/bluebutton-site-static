@@ -8,6 +8,7 @@ export const SITE_METADATA: {
   url: string
   image: string
   favicon: Partial<Link>[]
+  googleSiteVerification: string
 } = {
   title: 'CMS Blue Button 2.0',
   description: 'The CMS Blue Button 2.0 API enables beneficiaries to connect their Medicare claims data to the applications, services, and research programs they trust.',
@@ -35,6 +36,7 @@ export const SITE_METADATA: {
       href: '/meta/apple-touch-icon.png',
     },
   ],
+  googleSiteVerification: '4BKCcWU84KzkBcBHkIMbVUWpM5_UWoee6k8YZtMc8SM',
 }
 
 export const IDENTIFIER_LINKS: IdentifierLinks = [
