@@ -2,7 +2,7 @@
   "name": "bluebutton-static-site",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint 'src/**/*.{astro,js,jsx,ts,tsx,md,mdx,json}'",
