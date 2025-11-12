@@ -44,7 +44,7 @@ pipeline {
       steps {
           sh '''
             git fetch
-            git switch uswds-redesign
+            git checkout uswds-redesign
           '''
       }
     }
