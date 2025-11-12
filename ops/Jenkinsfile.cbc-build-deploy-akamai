@@ -70,7 +70,7 @@ pipeline {
         sh '''
           # Check if Node.js is already installed
           if ! command -v node &> /dev/null; then
-            echo "Installing Node.js 18.x..."
+            echo "Installing Node.js..."
             
             # Install Node.js from NodeSource
             curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
