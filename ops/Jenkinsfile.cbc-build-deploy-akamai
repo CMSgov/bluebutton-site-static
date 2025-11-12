@@ -65,6 +65,29 @@ pipeline {
       }
     }
 
+    stage("Install Node.js and npm") {
+      steps {
+        sh '''
+          # Check if Node.js is already installed
+          if ! command -v node &> /dev/null; then
+            echo "Installing Node.js 18.x..."
+            
+            # Install Node.js from NodeSource
+            curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
+            apt-get install -y nodejs
+            
+            # Verify installation
+            node --version
+            npm --version
+          else
+            echo "Node.js is already installed:"
+            node --version
+            npm --version
+          fi
+        '''
+      }
+    }
+
     stage("Run NPM Install") {
       steps {
         sh """
