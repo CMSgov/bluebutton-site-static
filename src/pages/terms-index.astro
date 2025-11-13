@@ -15,7 +15,7 @@ const restTerms = allTerms.slice(1)
     <div class="margin-bottom-4">
       <h1>Terms of Service Index</h1>
       <p class="usa-intro">
-        Listed below are the historical versions of the Blue Button 2.0 API Terms of Service, including the current
+        Listed below are the historical versions of the Blue Button API Terms of Service, including the current
         version. Please note that only the current version is binding for production access.
       </p>
     </div>
@@ -24,7 +24,7 @@ const restTerms = allTerms.slice(1)
       <ul>
         <li>
           <Link to="/terms/[...slug]" params={{ slug: '' }}>
-            Blue Button 2.0 {currentTerms.data.title}. Published {currentTerms.data.published_date.toLocaleDateString()}
+            Blue Button {currentTerms.data.title}. Published {currentTerms.data.published_date.toLocaleDateString()}
             {` `}({currentTerms.id} - Current Version)
           </Link>
         </li>
@@ -32,7 +32,7 @@ const restTerms = allTerms.slice(1)
           restTerms.map((terms) => (
             <li>
               <Link to="/terms/[...slug]" params={{ slug: terms.id }}>
-                Blue Button 2.0 {terms.data.title}. Published {terms.data.published_date.toLocaleDateString()}
+                Blue Button {terms.data.title}. Published {terms.data.published_date.toLocaleDateString()}
                 {` `}({terms.id})
               </Link>
             </li>
