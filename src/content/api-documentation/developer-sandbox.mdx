@@ -17,7 +17,7 @@ To get started integrating with the Blue Button 2.0 API, you'll need to register
 
 When you add or edit a sandbox application, you'll enter various required configuration details.
 
-![New application registration screen](/src/assets/images/register-new-application.png)
+![New application registration screen](#assets/images/register-new-application.png)
 
 ### Application Name
 
@@ -63,14 +63,14 @@ This setting determines 2 things:
       <td>
         <p>Allows your application to request access to a Medicare enrollee's claims data AND personal information such as name, date of birth, race, and sex. (Scopes: `patient/Patient.rs`, `patient/Coverage.rs`, `patient/ExplanationOfBenefit.rs`, `profile`)</p>
         <p>**Note:** When an enrollee is authorizing your application, they will have the ability to omit the patient/Patient.rs scope. Be sure that you build your application accordingly to handle a 403 error if an enrollee decides to filter their demographic information.</p>
-        ![Authorization screen with demographic info option](/src/assets/images/demographic-info-yes.png)
+        ![Authorization screen with demographic info option](#assets/images/demographic-info-yes.png)
       </td>
     </tr>
     <tr>
       <th scope="row">No</th>
       <td>
         <p>Allows your application to request access to the `patient/Coverage.rs` and `patient/ExplanationOfBenefit.rs` scopes.</p>
-        ![Authorization screen without demographic info option](/src/assets/images/demographic-info-no.png)
+        ![Authorization screen without demographic info option](#assets/images/demographic-info-no.png)
       </td>
     </tr>
   </tbody>
@@ -101,9 +101,9 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
 1. Configure your Sandbox application to work with Postman:
     - Log into the [Blue Button 2.0 Sandbox](https://sandbox.bluebutton.cms.gov/).
     - Click **View/Edit App** for the app you want to use with Postman.
-    ![View/Edit App link](/src/assets/images/bb-postman-02.png)
+    ![View/Edit App link](#assets/images/bb-postman-02.png)
     - Click **Edit Application**.
-    ![Edit Application button](/src/assets/images/bb-postman-03.png)
+    ![Edit Application button](#assets/images/bb-postman-03.png)
     - Enter the following URLs into the **Callback URLs / Redirect URIs** field, separated by a carriage return.
 
       ```txt
@@ -112,7 +112,7 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
       ```
 
     - Click **Save Application**.
-    ![Save Application button](/src/assets/images/bb-postman-05.png)
+    ![Save Application button](#assets/images/bb-postman-05.png)
 
 2. Download the [Blue Button 2.0 API Sandbox Postman collection](/assets/files/CMS-BlueButton-2.0-API-Sandbox.postman_collection.json) and import it into the Postman desktop or web application. 
     - To import the collection, either click the **Import** button in Postman and select the collection file, or drag the file into the Postman window. 
@@ -124,17 +124,17 @@ Once you've created a Blue Button 2.0 sandbox application, you can start making 
 5. Copy your application's **Client ID** and **Client Secret** from your Sandbox account into both the **Initial Value** and **Current Value** cells for the corresponding Postman variables, `clientId` and `clientSecret`.
 
 6. After copying and pasting your API credentials, log out of the Blue Button sandbox in your browser. Being logged into the sandbox can cause errors during authorization in Postman.
-  ![Sandbox Logout button](/src/assets/images/bb-postman-12.png)
+  ![Sandbox Logout button](#assets/images/bb-postman-12.png)
 
 7. In Postman, select the **Authorization** tab.
 
 8. Click **Get New Access Token**.
 
 9. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](/data/understanding-the-data#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.
-  ![Medicare login window](/src/assets/images/bb-postman-10.png)
+  ![Medicare login window](#assets/images/bb-postman-10.png)
 
 10. Click **Connect**.
-  ![Connect button](/src/assets/images/bb-postman-11.png)
+  ![Connect button](#assets/images/bb-postman-11.png)
 
 11. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.
 
@@ -152,22 +152,22 @@ First, obtain an access token. To test using your sandbox application, you can u
 1. Navigate to the [Blue Button 2.0 API Test Client](https://sandbox.bluebutton.cms.gov/testclient/).
 
 2. If you are currently logged into the Blue Button 2.0 sandbox, click **Log Out to Continue**.
-  ![Log Out to Continue button](/src/assets/images/bb-postman-06.png)
+  ![Log Out to Continue button](#assets/images/bb-postman-06.png)
 
 3. Click **Get a Sample Authorization Token**.
-  ![Get a Sample Authorization button](/src/assets/images/bb-postman-07.png)
+  ![Get a Sample Authorization button](#assets/images/bb-postman-07.png)
 
 4. Click **Authorize as a Beneficiary**.
-  ![Authorize as a Beneficiary button](/src/assets/images/bb-postman-08.png)
+  ![Authorize as a Beneficiary button](#assets/images/bb-postman-08.png)
 
 5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](/data/understanding-the-data#authenticating-as-a-synthetic-user) (e.g., user = `BBUser00000` and password = `PW00000!`), and click **Log in**.
-  ![Medicare login window](/src/assets/images/bb-postman-10.png)
+  ![Medicare login window](#assets/images/bb-postman-10.png)
 
 6. Click **Connect**.
-  ![Connect button](/src/assets/images/bb-postman-11.png)
+  ![Connect button](#assets/images/bb-postman-11.png)
 
 7. A new page will open. Copy the access token from the JSON shown under **Step 1: Sample Authorization** for use in your cURL command.
-  ![JSON object with access token highlighted](/src/assets/images/bb-postman-09.png)
+  ![JSON object with access token highlighted](#assets/images/bb-postman-09.png)
 
 Once you have an access token, you can start making API calls with cURL. For example, the following command will retrieve explanation of benefit information for the authenticated patient (replace `<YOUR ACCESS TOKEN>` with your actual access token):  
 
