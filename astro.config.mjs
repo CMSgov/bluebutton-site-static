@@ -12,6 +12,7 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true,
   },
+  trailingSlash: 'always',
 
   markdown: {
     remarkRehype: {
@@ -51,11 +52,11 @@ export default defineConfig({
   }), mdx(), sitemap(), typesafeRoutes()],
 
   redirects: {
-    '/developers': '/api-documentation',
-    '/guide': '/production-access',
-    '/resources': '/bb2-data/resources',
+    '/developers': '/api-documentation/',
+    '/guide': '/production-access/',
+    '/resources': '/bb2-data/resources/',
     // legacy redirects
-    '/v2': '/api-documentation',
-    '/blog': '/bb2-data/resources',
+    '/v2': '/api-documentation/',
+    '/blog': '/bb2-data/resources/',
   },
 })
