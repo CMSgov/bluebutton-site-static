@@ -1,6 +1,6 @@
 {
   "name": "bluebutton-site-static",
-  "description": "A static Jekyll site for the Blue Button 2.0 API splash page: https://bluebutton.cms.gov.",
+  "description": "A static Jekyll site for the Blue Button API splash page: https://bluebutton.cms.gov.",
   "status": "Production",
   "permissions": {
     "licenses": [
