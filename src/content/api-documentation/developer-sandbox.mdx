@@ -126,22 +126,27 @@ Once you've created a Blue Button sandbox application, you can start making requ
 6. After copying and pasting your API credentials, log out of the Blue Button sandbox in your browser. Being logged into the sandbox can cause errors during authorization in Postman.
   ![Sandbox Logout button](#assets/images/bb-postman-12.png)
 
-7. In Postman, select the **Authorization** tab.
+7. Select the **Auth** tab.
 
-8. Click **Get New Access Token**.
+8. Verify the following settings:
+  - **Grant type**: Authorization Code (With PKCE)
+  - **Code Challenge Method**: SHA-256
+  - **State**: `example_string_goes_here` (this value can be any opaque string value at least 16 charaters in length)
 
-9. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](/data/understanding-the-data#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.
+9. At the bottom of the **Auth** tab, click **Get New Access Token**.
+
+10. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](/data/understanding-the-data#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.
   ![Medicare login window](#assets/images/bb-postman-10.png)
 
-10. Click **Connect**.
+11. Click **Connect**.
   ![Connect button](#assets/images/bb-postman-11.png)
 
-11. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.
+12. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.
 
-12. Make any desired Blue Button API calls from the endpoints listed under the **Patient**, **Explanation of Benefit**, and **Coverage** folders. For example, to retrieve explanation of benefits information for the authenticated patient:
-    - Select the **Explanation of Benefits** folder, then **GET Search Explanation of Benefits**.
-    - Click **Send**.
-    - The API will return a FHIR bundle with explanation of benefits information.
+13. Make any desired Blue Button API calls from the endpoints listed under the **Patient**, **Explanation of Benefit**, and **Coverage** folders. For example, to retrieve explanation of benefits information for the authenticated patient:
+  - Select the **Explanation of Benefits** folder, then **GET Search Explanation of Benefits**.
+  - Click **Send**.
+  - The API will return a FHIR bundle with explanation of benefits information.
 
 ### cURL
 

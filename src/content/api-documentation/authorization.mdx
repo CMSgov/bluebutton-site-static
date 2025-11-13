@@ -186,7 +186,7 @@ To retrieve an access token, POST to the Blue Button /token endpoint providing t
 ```bash title=Terminal
 curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
   -u "<client_id>:<client_secret>" \
-  -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost:8080/testclient/callback&scope=profile%20patient/Patient.rs%20patient/ExplanationOfBenefit.rs%20patient/Coverage.rs&code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
+  -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http://localhost:8080/testclient/callback&code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
 ```
 
 #### Token response
