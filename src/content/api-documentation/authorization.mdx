@@ -4,11 +4,11 @@ description: ""
 sortOrder: 3
 ---
 
-The BB2.0 API uses the [OAuth 2 authorization flow](https://www.oauth.com/). To initiate an integration, you'll need the client ID and client secret for your application that were generated when you registered your application.
+The Blue Button API uses the [OAuth 2 authorization flow](https://www.oauth.com/). To initiate an integration, you'll need the client ID and client secret for your application that were generated when you registered your application.
 
 ## Web applications
 
-BB2.0 API supports the Authorization Code flow for web applications running on a server. Use the following settings when registering your application: 
+The Blue Button API supports the Authorization Code flow for web applications running on a server. Use the following settings when registering your application: 
 
 - Client Type: Confidential
 - Grant Type: Authorization code
@@ -23,7 +23,7 @@ There are several reasons to use the PKCE extension:
 - Mitigates the impact of a compromised Authorization Code by a malicious actor.
 - Follows the [OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#section-2.1.1)
 
-PKCE uses a code challenge that is derived from a code-verifier. The BB2.0 API supports the S256 style code challenge:
+PKCE uses a code challenge that is derived from a code-verifier. The Blue Button API supports the S256 style code challenge:
 
 `code_challenge = BASE64URL-ENCODE(SHA256(ASCII(codeverifier)))`
 
@@ -36,7 +36,7 @@ These required parameters will be used in the examples in the following sections
 
 ### User authorization
 
-To allow a user to authorize your application, direct them to the BB2.0 API `/authorize` endpoint with the appropriate parameters. 
+To allow a user to authorize your application, direct them to the Blue Button API `/authorize` endpoint with the appropriate parameters. 
 
 Example call:
 
@@ -134,7 +134,7 @@ Note: The authorization in the example is started by an HTTP GET operation. For 
 
 #### Authorization screen language selection
 
-The BB2.0 user authorization screens are available in both English (the default)  and Spanish. Language selection for these screens works as follows:
+The Blue Button user authorization screens are available in both English (the default)  and Spanish. Language selection for these screens works as follows:
 
 - To explicitly specify the language for the Blue Button authorization screens, add the optional `lang` parameter to your `/authorize` request. Valid values are `en` (English) and `es` (Spanish). For example: 
 
@@ -162,9 +162,9 @@ https://api.bluebutton.cms.gov/v2/o/token/
 
 ### Exchange code for token
 
-If the user authorizes your application, the BB2.0 API redirects back to the `redirect_uri` registered with your application with an authorization code and state parameter appended to it. 
+If the user authorizes your application, the Blue Button API redirects back to the `redirect_uri` registered with your application with an authorization code and state parameter appended to it. 
 
-For example, if the Redirect URI is `http://localhost:8080/testclient/callback`, BB2.0 API will redirect with this request:
+For example, if the Redirect URI is `http://localhost:8080/testclient/callback`, the Blue Button API will redirect with this request:
 
 ```http
 GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&state=8e896a59f0744a8e93bf2f1f13230
@@ -172,7 +172,7 @@ GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z
 
 Your application can now exchange the code provided in the redirected request for an access token. 
 
-To retrieve an access token, POST to the BB2.0 /token endpoint providing the code with the following parameters: 
+To retrieve an access token, POST to the Blue Button /token endpoint providing the code with the following parameters: 
 
 - `client_id`
 - `client_secret`
@@ -202,7 +202,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 }
 ```
 
-Applications in the "10 hours" access category do not receive a refresh token in the BB2.0 token response.
+Applications in the "10 hours" access category do not receive a refresh token in the Blue Button token response.
 
 Note that for applications in the "10 hours" or "13 months" access expiration categories, the response includes the `access_grant_expiration` date for that user.
 
@@ -212,7 +212,7 @@ Access tokens expire after 10 hours. You can't use an expired access token to ac
 
 You can use a refresh token at any time in your application's workflow, even before an access token expires.
 
-To retrieve a new refresh token, POST to the BB2.0 API `/token` endpoint with the following parameters:
+To retrieve a new refresh token, POST to the Blue Button API `/token` endpoint with the following parameters:
 
 - `client_id`
 - `client_secret`
@@ -247,7 +247,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 
 Developers can revoke an enrollee's previously granted access. To invalidate the ability to generate new access tokens without authorization, developers can revoke an access token and the underlying data access grant. 
 
-To revoke an access token, POST to the BB2.0 API `/revoke` endpoint with the following parameters:
+To revoke an access token, POST to the Blue Button API `/revoke` endpoint with the following parameters:
 
 - `client_id`
 - `client_secret`
@@ -322,7 +322,7 @@ For testing in our sandbox, you can use the `/expire_authenticated_user` endpoin
 - When a patient revokes access to your application
 - When access granted to a patient's data has expired
 
-POST to the BB2.0 API `/expire_authenticated_user` endpoint with the following parameters:
+POST to the Blue Button API `/expire_authenticated_user` endpoint with the following parameters:
 
 - `client_id`
 - `client_secret`
@@ -379,9 +379,9 @@ To mitigate security risks, use a proxy middleware server following a Backend Fo
 
 ## Scopes
 
-Scopes define the API endpoints that your application is allowed to access. The BB2.0 API uses [HL7 FHIR Scopes](https://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html) to manage access to Medicare enrollee data. 
+Scopes define the API endpoints that your application is allowed to access. The Blue Button API uses [HL7 FHIR Scopes](https://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html) to manage access to Medicare enrollee data. 
 
-### BB2.0 API HL7 FHIR 
+### Blue Button API HL7 FHIR 
 
 <table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-4">
   <caption class="usa-sr-only">HL7 FHIR scopes and permissions</caption>

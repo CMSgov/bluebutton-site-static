@@ -10,7 +10,7 @@ For complete implementation guidance, see the [FHIR specification](http://www.hl
 
 ## Understanding the payload
 
-Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search) (like `/Patient`, `/ExplanationOfBenefit`, and `/ExplanationOfBenefit?patient=123`)  return data in [FHIR Bundles](http://www.hl7.org/fhir/bundle.html). A FHIR bundle is a container resource that includes a collection of FHIR resources. You can grab each resource by looping through the `Bundle.entry` list attribute.  
+Blue Button API [search operations](http://www.hl7.org/fhir/http.html#search) (like `/Patient`, `/ExplanationOfBenefit`, and `/ExplanationOfBenefit?patient=123`) return data in [FHIR Bundles](http://www.hl7.org/fhir/bundle.html). A FHIR bundle is a container resource that includes a collection of FHIR resources. You can grab each resource by looping through the `Bundle.entry` list attribute.  
 
 [Read calls](http://www.hl7.org/fhir/http.html#read) such as `/Patient/123` return a single resource.
 

@@ -233,7 +233,7 @@ Example response:
 
 ## Terminology and coding systems
 
-BB2.0 API supplies codified data using several different terminology and coding systems, defined by various standards bodies, along with locally defined CMS coding systems: 
+The Blue Button API supplies codified data using several different terminology and coding systems, defined by various standards bodies, along with locally defined CMS coding systems: 
 
 - [ICD-10](https://www.cms.gov/Medicare/Coding/ICD10)
 - [HCPCS](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo)
@@ -243,12 +243,12 @@ BB2.0 API supplies codified data using several different terminology and coding 
 
 Additional information about coding systems can be found on the [terminology page](http://www.hl7.org/fhir/us/carin-bb/artifacts.html#5) of the [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html) and in the [Blue Button Code System Listing (CSV 77KB)](/assets/csv/bluebutton_system_listing.csv).  
 
-BB2.0 API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html). FHIR extensions are custom data elements that are not found in the FHIR standard:
+The Blue Button API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html). FHIR extensions are custom data elements that are not found in the FHIR standard:
 
 - [Blue Button extensions in v2 (CSV 96KB)](/assets/csv/BB_V2_extension_listing.csv)
 
 ## Refresh rate and rate limiting
 
-Data from the CCW is pulled into the BB2.0 API database on a weekly basis. The weekly data pull may be delayed for maintenance or because of delayed delivery of claims to the CCW.  
+Data from the CCW is pulled into the Blue Button API database on a weekly basis. The weekly data pull may be delayed for maintenance or because of delayed delivery of claims to the CCW.  
 
-Our rate limit is high enough to accommodate the needs of anyone integrating with the BB2.0 API. The BB2.0 API is one of 4 CMS APIs that share the same data from the CCW. BB2.0 is for single data calls for an individual Medicare enrollee and the other 3 APIs are designed for bulk data calls. Because the rate limit is set based on the needs the bulk data APIs, the rate limit is higher than required for an application making single API calls using BB2.0\.  
+Our rate limit is high enough to accommodate the needs of anyone integrating with the Blue Button API. The Blue Button API is one of 4 CMS APIs that share the same data from the CCW. Blue Button is for single data calls for an individual Medicare enrollee and the other 3 APIs are designed for bulk data calls. Because the rate limit is set based on the needs the bulk data APIs, the rate limit is higher than required for an application making single API calls using Blue Button.
