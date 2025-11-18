@@ -1,0 +1,213 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_MDCR_NPMT_RSN_CD",
+  "id": "CLM-MDCR-NPMT-RSN-CD",
+  "title": "Clm Mdcr Npmt Rsn Cd",
+  "description": "Code system for clm mdcr npmt rsn cd",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-MDCR-NPMT-RSN-CD",
+  "concept": [
+    {
+      "code": "!",
+      "display": "MSP COST AVOIDED - COB CONTRACTOR (00 2-BYTE CODE)"
+    },
+    {
+      "code": "#",
+      "display": "MSP COST AVOIDED - OFFICE OF PERSONNEL MANAGEMENT (13 2-BYTE CODE)"
+    },
+    {
+      "code": "$",
+      "display": "MSP COST AVOIDED - WORKMAN'S COMPENSATION (WC) DATA MATCH (14 2-BYTE CODE)"
+    },
+    {
+      "code": "%",
+      "display": "MSP COST AVOIDED - RECOVERY AUDIT CONTRACTOR - CALIFORNIA (25 2-BYTE CODE) (EFF. 10/2005)"
+    },
+    {
+      "code": "&",
+      "display": "MSP COST AVOIDED - RECOVERY AUDIT CONTRACTOR - FLORIDA (26 2-BYTE CODE) (EFF. 10/2005)"
+    },
+    {
+      "code": "(",
+      "display": "MSP COST AVOIDED - LIABILITY INSURER VDSA (16 2-BYTE CODE) (EFF. 4/2006)"
+    },
+    {
+      "code": ")",
+      "display": "MSP COST AVOIDED - NO-FAULT INSURER VDSA (17 2-BYTE CODE) (EFF. 4/2006)"
+    },
+    {
+      "code": "*",
+      "display": "MSP COST AVOIDED - WORKMAN'S COMPENSATION INSURER VOLUNTARY DATA SHARING AGREEMENTS (WC VDSA) ('15' 2-BYTE CODE) (EFF. 4/2006)"
+    },
+    {
+      "code": "+",
+      "display": "MSP COST AVOIDED - PHARMACY BENEFIT MANAGER DATA SHARING AGREEMENT (18 2 -BYTE CODE) (EFF. 4/2006)"
+    },
+    {
+      "code": "00",
+      "display": "MEDICARE SECONDARY PAYER (MSP) COST AVOIDED - COORDINATOR OF BENEFITS (COB) CONTRACTOR 11100"
+    },
+    {
+      "code": "12",
+      "display": "MSP COST AVOIDED - BLUE CROSS - BLUE SHIELD VOLUNTARY AGREEMENTS COB CONTRACTOR 11112"
+    },
+    {
+      "code": "13",
+      "display": "MSP COST AVOIDED - OFFICE OF PERSONNEL MANAGEMENT (OPM) DATA MATCH COB CONTRACTOR 11113"
+    },
+    {
+      "code": "14",
+      "display": "MSP COST AVOIDED - WORKERS COMPENSATION (WC) DATA MATCH COB CONTRACTOR 11114"
+    },
+    {
+      "code": "15",
+      "display": "MSP COST AVOIDED - WORKERS COMPENSATION INSURER VOLUNTARY DATA SHARING AGREEMENTS (WC VDSA) COB CONTRACTOR 11115"
+    },
+    {
+      "code": "16",
+      "display": "MSP COST AVOIDED - LIABILITY INSURER VDSA COB CONTRACTOR 11116"
+    },
+    {
+      "code": "17",
+      "display": "MSP COST AVOIDED - NO-FAULT INSURER VDSA COB CONTRACTOR 11117"
+    },
+    {
+      "code": "18",
+      "display": "MSP COST AVOIDED - PHARMACY BENEFIT MANAGER DATA SHARING AGREEMENT COB CONTRACTOR 11118"
+    },
+    {
+      "code": "19",
+      "display": "MSP COST AVOIDED - WC MEDICARE SET-ASIDE ARRANGEMENT COB CONTRACTOR 11119"
+    },
+    {
+      "code": "21",
+      "display": "MSP COST AVOIDED - MANDATORY INSURER REPORTING (MIR) GROUP HEALTH PLAN (EFF. 1/2009) COB CONTRACTOR 11121"
+    },
+    {
+      "code": "22",
+      "display": "MSP COST AVOIDED - MIR NON-GROUP HEALTH PLAN (EFF. 1/2009) COB CONTRACTOR 11122"
+    },
+    {
+      "code": "25",
+      "display": "MSP COST AVOIDED - RECOVERY AUDIT CONTRACTOR (RAC)  CALIFORNIA (EFF. 10/2005) COB CONTRACTOR 11125"
+    },
+    {
+      "code": "26",
+      "display": "MSP COST AVOIDED - RAC MSP FLORIDA (EFF. 10/2005) COB CONTRACTOR 11126"
+    },
+    {
+      "code": "39",
+      "display": "MSP COST AVOIDED - GROUP HEALTH PLAN (GHP) RECOVERY COB CONTRACTOR 11139"
+    },
+    {
+      "code": "41",
+      "display": "MSP COST AVOIDED - NON-GROUP HEALTH PLAN (NGHP) NON-ONGOING RESPONSIBILITY FOR MEDICALS (ORM) COB CONTRACTOR 11141"
+    },
+    {
+      "code": "42",
+      "display": "MSP COST AVOIDED - NGHP ORM RECOVERY COB CONTRACTOR 11142"
+    },
+    {
+      "code": "43",
+      "display": "MEDICARE PART C/MEDICARE ADVANTAGE/ COB CONTRACTOR 11143"
+    },
+    {
+      "code": "<",
+      "display": "MSP COST AVOIDED - MIR GROUP HEALTH PLAN ('21' 2-BYTE CODE) (EFF. 1/2009)"
+    },
+    {
+      "code": ">",
+      "display": "MSP COST AVOIDED - MIR NON-GROUP HEALTH PLAN ('22' 2-BYTE CODE) (EFF. 1/2009)"
+    },
+    {
+      "code": "@",
+      "display": "MSP COST AVOIDED - BC/BS VOLUNTARY AGREEMENTS (12 2-BYTE CODE)"
+    },
+    {
+      "code": "A",
+      "display": "COVERED WORKERS COMPENSATION (OBSOLETE)"
+    },
+    {
+      "code": "B",
+      "display": "BENEFITS EXHAUSTED"
+    },
+    {
+      "code": "C",
+      "display": "CUSTODIAL CARE- NON-COVERED CARE  (INCLUDES ALL 'BENEFICIARY AT FAULT' WAIVER CASES) (OBSOLETE)"
+    },
+    {
+      "code": "E",
+      "display": "MSP COST AVOIDED - INTERNAL REVENUE SERVICE (IRS)/ SOCIAL SECURITY ADMINISTRATION (SSA)/ HEALTH CARE FINANCING ADMINISTRATION (HCFA) DATA MATCH (EFF. 7/00)"
+    },
+    {
+      "code": "F",
+      "display": "MSP COST AVOIDED - HEALTH MAINTENANCE ORGANIZATION (HMO) RATE CELL (EFF. 7/00)"
+    },
+    {
+      "code": "G",
+      "display": "MSP COST AVOIDED - LITIGATION SETTLEMENT (EFF. 7/00)"
+    },
+    {
+      "code": "H",
+      "display": "MSP COST AVOIDED - EMPLOYER VOLUNTARY REPORTING (EFF. 7/00)"
+    },
+    {
+      "code": "J",
+      "display": "MSP COST AVOIDED - INSURER VOLUNTARY REPORTING (EFF. 7/00)"
+    },
+    {
+      "code": "K",
+      "display": "MSP COST AVOIDED - INITIAL ENROLLMENT QUESTIONNAIRE (IEQ) (EFF. 7/00)"
+    },
+    {
+      "code": "N",
+      "display": "ALL OTHER REASONS FOR NONPAYMENT"
+    },
+    {
+      "code": "P",
+      "display": "PAYMENT REQUESTED"
+    },
+    {
+      "code": "Q",
+      "display": "MSP COST AVOIDED - VOLUNTARY AGREEMENT (EFF. 7/00)"
+    },
+    {
+      "code": "R",
+      "display": "BENEFITS REFUSED, OR EVIDENCE NOT SUBMITTED"
+    },
+    {
+      "code": "T",
+      "display": "MSP COST AVOIDED - IEQ CONTRACTOR (EFF. 9/76) (OBSOLETE 6/30/00)"
+    },
+    {
+      "code": "U",
+      "display": "MSP COST AVOIDED - HMO RATE CELL ADJUSTMENT (EFF. 9/76) (OBSOLETE 6/30/00)"
+    },
+    {
+      "code": "V",
+      "display": "MSP COST AVOIDED - LITIGATION SETTLEMENT (EFF. 9/76) (OBSOLETE 6/30/00)"
+    },
+    {
+      "code": "W",
+      "display": "WORKER'S COMPENSATION (OBSOLETE)"
+    },
+    {
+      "code": "X",
+      "display": "MSP COST AVOIDED - GENERIC"
+    },
+    {
+      "code": "Y",
+      "display": "MSP COST AVOIDED - IRS/SSA DATA MATCH PROJECT (OBSOLETE 6/30/00)"
+    },
+    {
+      "code": "Z",
+      "display": "ZERO REIMBURSEMENT REQUEST FOR ANTICIPATED PAYMENTS (RAPS) - ZERO REIMBURSEMENT MADE DUE TO MEDICAL REVIEW INTERVENTION OR WHERE PROVIDER SPECIFIC ZERO PAYMENT HAS BEEN DETERMINED. (EFFECTIVE WITH HHPPS - 10/00)"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 50
+}

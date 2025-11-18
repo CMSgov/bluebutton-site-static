@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_RNDRG_PRVDR_PRTCPTG_CD",
+  "id": "CLM-RNDRG-PRVDR-PRTCPTG-CD",
+  "title": "Provider Participating Indicator Code",
+  "description": "Code indicating whether or not a provider is participating (accepting assignment) for this line-item service on the non-institutional claim.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-RNDRG-PRVDR-PRTCPTG-CD",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Participating"
+    },
+    {
+      "code": "2",
+      "display": "All or some covered and allowed expenses applied to deductible Participating"
+    },
+    {
+      "code": "3",
+      "display": "Assignment accepted/non-participating"
+    },
+    {
+      "code": "4",
+      "display": "Assignment not accepted/non-participating"
+    },
+    {
+      "code": "5",
+      "display": "Assignment accepted but all or some covered and allowed expenses applied to deductible Non-participating."
+    },
+    {
+      "code": "6",
+      "display": "Assignment not accepted and all covered and allowed expenses applied to deductible non- participating."
+    },
+    {
+      "code": "7",
+      "display": "Participating provider not accepting assignment"
+    }
+  ],
+  "count": 7
+}

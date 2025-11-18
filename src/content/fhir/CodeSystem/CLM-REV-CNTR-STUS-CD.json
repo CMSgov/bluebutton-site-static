@@ -1,0 +1,145 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_REV_CNTR_STUS_CD",
+  "id": "CLM-REV-CNTR-STUS-CD",
+  "title": "Revenue Center Payment Method Indicator Code",
+  "description": "THE DOMAIN OF CLAIM PAYMENT METHOD CODES.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-REV-CNTR-STUS-CD",
+  "concept": [
+    {
+      "code": "A",
+      "display": "SERVICES NOT PAID UNDER OPPS; PAID UNDER FEE SCHEDULE OR OTHER PAYMENT SYSTEM (EFFECTIVE 1/1/2023- INCLUDES UNCLASSIFIED DRUGS AND BIOLOGICALS REPORTABLE UNDER HCPCS CODE C9399)"
+    },
+    {
+      "code": "B",
+      "display": "NON-ALLOWED ITEM OR SERVICE FOR OPPS"
+    },
+    {
+      "code": "C",
+      "display": "INPATIENT PROCEDURE"
+    },
+    {
+      "code": "E",
+      "display": "NON-ALLOWED ITEM OR SERVICE"
+    },
+    {
+      "code": "E1",
+      "display": "NON-ALLOWED ITEM OR SERVICE"
+    },
+    {
+      "code": "E2",
+      "display": "ITEMS AND SERVICES FOR WHICH PRICING INFORMATION AND CLAIMS DATA ARE NOT AVAILABLE"
+    },
+    {
+      "code": "F",
+      "display": "CORNEAL TISSUE ACQUISITION; CERTAIN CRNA SERVICES"
+    },
+    {
+      "code": "G",
+      "display": "DRUG/BIOLOGICAL PASS-THROUGH"
+    },
+    {
+      "code": "H",
+      "display": "PASS-THROUGH DEVICE CATEGORIES"
+    },
+    {
+      "code": "I",
+      "display": "INPATIENT REHABILITATION FACILITY (IRF) PPS - SUBMITTED AND PRICED HIPPS/CMG CODES ARE DIFFERENT, CHANGED BY IRF PPS PRICER  NOTE: THE PRICED HIPPS/CMG CODE IS DISPLAYED ON THE REVENUE CODE 0024 LINE IN THE PAY/HCPC/APC CD FIELD WHEN DIFFERENT FROM THE SUBMITTED HIPPS/CMG CODE DISPLAYED IN THE HCPC FIELD"
+    },
+    {
+      "code": "J",
+      "display": "NEW DRUG OR NEW BIOLOGICAL PASS-THROUGH"
+    },
+    {
+      "code": "J1",
+      "display": "HOSPITAL PART B SERVICES PAID THROUGH A COMPREHENSIVE APC"
+    },
+    {
+      "code": "J2",
+      "display": "HOSPITAL PART B SERVICES THAT MAY BE PAID THROUGH A COMPREHENSIVE APC"
+    },
+    {
+      "code": "K",
+      "display": "NON-PASS-THROUGH DRUGS AND NON-IMPLANTABLE BIOLOGICALS , INCLUDING THERAPEUTIC RADIOPHARMACEUTICALS"
+    },
+    {
+      "code": "L",
+      "display": "INFLUENZA VACCINE; PNEUMOCOCCAL PNEUMONIA VACCINE; HEPATITIS B VACCINES; COVID-19 VACCINE; MONOCLONAL ANTIBODY THERAPY PRODUCT"
+    },
+    {
+      "code": "M",
+      "display": "SERVICE NOT BILLABLE TO THE MAC; FOR HOME HEALTH - MEDICAL REVIEW CHANGES A HIPPS CODE"
+    },
+    {
+      "code": "N",
+      "display": "ITEMS AND SERVICES PACKAGED INTO APC RATES"
+    },
+    {
+      "code": "P",
+      "display": "FOR OUTPATIENT CLAIMS - PARTIAL HOSPITALIZATION; FOR HOME HEALTH - CLAIM CONTAINS LESS THAN 10 THERAPY REVENUE CODES AND NO MEDICAL REVIEW INTERVENTION"
+    },
+    {
+      "code": "Q",
+      "display": "PACKAGED SERVICES SUBJECT TO SEPARATE PAYMENT BASED ON PAYMENT CRITERIA (DISCONTINUED 01/01/2009 AND REPLACED BY STATUS INDICATORS Q1,Q2,Q3,Q4)"
+    },
+    {
+      "code": "Q1",
+      "display": "STV-PACKAGED CODES"
+    },
+    {
+      "code": "Q2",
+      "display": "T-PACKAGED CODES"
+    },
+    {
+      "code": "Q3",
+      "display": "CODES THAT MAY BE PAID THROUGH A COMPOSITE APC"
+    },
+    {
+      "code": "Q4",
+      "display": "CONDITIONALLY PACKAGED LABORATORY SERVICES"
+    },
+    {
+      "code": "R",
+      "display": "BLOOD AND BLOOD PRODUCTS"
+    },
+    {
+      "code": "S",
+      "display": "PROCEDURE OR SERVICE , NOT DISCOUNTED WHEN MULTIPLE"
+    },
+    {
+      "code": "T",
+      "display": "PROCEDURE OR SERVICE , MULTIPLE REDUCTION APPLIES"
+    },
+    {
+      "code": "U",
+      "display": "BRACHYTHERAPY SOURCES"
+    },
+    {
+      "code": "V",
+      "display": "CLINIC OR EMERGENCY DEPARTMENT VISIT"
+    },
+    {
+      "code": "W",
+      "display": "INVALID HCPCS OR INVALID REVENUE CODE WITH BLANK HCPCS"
+    },
+    {
+      "code": "X",
+      "display": "ANCILLARY SERVICE* (DEACTIVATED AS OF V16.0)"
+    },
+    {
+      "code": "Y",
+      "display": "NON-IMPLANTABLE DME"
+    },
+    {
+      "code": "Z",
+      "display": "VALID REVENUE CODE WITH BLANK HCPCS AND NO OTHER SI ASSIGNED"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 33
+}

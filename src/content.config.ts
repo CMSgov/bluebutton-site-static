@@ -103,6 +103,14 @@ const termsCollection = defineCollection({
   }),
 })
 
+const fhirJsonCollection = defineCollection({
+  loader: glob({
+    pattern: '**/*.json',
+    base: './src/content/fhir',
+  }),
+  schema: z.any(),
+})
+
 export const collections = {
   pages: pageCollection,
   resources: resourcesCollection,
@@ -111,4 +119,5 @@ export const collections = {
   codebooks: codeBooksCollection,
   csvVariables: csvVariablesCollection,
   terms: termsCollection,
+  fhir: fhirJsonCollection,
 }

@@ -1,0 +1,33 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_NRLN_RIC_CD",
+  "id": "CLM-NRLN-RIC-CD",
+  "title": "Clm Nrln Ric Cd",
+  "description": "Code system for clm nrln ric cd",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-NRLN-RIC-CD",
+  "concept": [
+    {
+      "code": "M",
+      "display": "Part B DMEPOS claim record (processed by DME Regional Carrier)"
+    },
+    {
+      "code": "O",
+      "display": "Part B physician/supplier claim record (processed by local carriers; can include DMEPOS services)"
+    },
+    {
+      "code": "U",
+      "display": "Both Part A and B institutional home health agency (HHA) claim records"
+    },
+    {
+      "code": "V",
+      "display": "Part A institutional claim record (inpatient [IP], skilled nursing facility [SNF], hospice [HOS], or home health agency [HHA])"
+    },
+    {
+      "code": "W",
+      "display": "Part B institutional claim record (outpatient [HOP], HHA)"
+    }
+  ],
+  "count": 5
+}

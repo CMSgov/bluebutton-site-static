@@ -1,0 +1,269 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_CARR_PMT_DNL_CD",
+  "id": "CLM-CARR-PMT-DNL-CD",
+  "title": "Claim Payment Denial Code",
+  "description": "The code on a non-institutional claim indicating who receives payment or if the claim was denied.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-CARR-PMT-DNL-CD",
+  "concept": [
+    {
+      "code": "!",
+      "display": "MSP COST AVOIDED - COB CONTRACTOR ('00' 2-BYTE CODE)"
+    },
+    {
+      "code": "#",
+      "display": "MSP COST AVOIDED - OFFICE OF PERSONNEL MANAGEMENT ('13' 2-BYTE CODE)"
+    },
+    {
+      "code": "$",
+      "display": "MSP COST AVOIDED - WORKMAN'S COMPENSATION (WC) DATA MATCH ('14' 2-BYTE CODE)"
+    },
+    {
+      "code": "%",
+      "display": "MSP COST AVOIDED - RAC - CALIFORNIA ('25' 2-BYTE CODE) (EFF. 10/2005)"
+    },
+    {
+      "code": "&",
+      "display": "MSP COST AVOIDED - RAC - FLORIDA ('26' 2-BYTE CODE) (EFF. 10/2005)"
+    },
+    {
+      "code": "(",
+      "display": "MSP COST AVOIDED - LIABILITY INSURER VDSA ('16' 2-BYTE CODE) (EFF. 4/2006)"
+    },
+    {
+      "code": ")",
+      "display": "MSP COST AVOIDED - NO-FAULT INSURER VDSA ('17' 2-BYTE CODE) (EFF. 4/2006)"
+    },
+    {
+      "code": "*",
+      "display": "MSP COST AVOIDED - WORKMAN'S COMPENSATION INSURER VOLUNTARY DATA SHARING AGREEMENTS (WC VDSA)   ('15' 2-BYTE CODE) (EFF. 4/2006)"
+    },
+    {
+      "code": "+",
+      "display": "MSP COST AVOIDED - PHARMACY BENEFIT MANAGER DATA SHARING AGREEMENT ('18' 2 -BYTE CODE) (EFF. 4/2006)"
+    },
+    {
+      "code": "0",
+      "display": "DENIED"
+    },
+    {
+      "code": "00",
+      "display": "MEDICARE SECONDARY PAYER (MSP) COST AVOIDED - COORDINATOR OF BENEFITS (COB) CONTRACTOR 11100"
+    },
+    {
+      "code": "1",
+      "display": "PHYSICIAN/SUPPLIER"
+    },
+    {
+      "code": "12",
+      "display": "MSP COST AVOIDED - BLUE CROSS (BC)/ BLUE SHIELD (BS) VOLUNTARY AGREEMENTS COB CONTRACTOR 11112"
+    },
+    {
+      "code": "13",
+      "display": "MSP COST AVOIDED - OFFICE OF PERSONNEL MANAGEMENT COB CONTRACTOR 11113"
+    },
+    {
+      "code": "14",
+      "display": "MSP COST AVOIDED - WORKMAN'S COMPENSATION (WC) DATA MATCH COB CONTRACTOR 11114"
+    },
+    {
+      "code": "15",
+      "display": "MSP COST AVOIDED - WORKMAN'S COMPENSATION INSURER VOLUNTARY DATA SHARING AGREEMENTS (WC VDSA) (EFF. 4/2006) COB CONTRACTOR 11115"
+    },
+    {
+      "code": "16",
+      "display": "MSP COST AVOIDED - LIABILITY INSURER VDSA (EFF.4/2006) COB CONTRACTOR 11116"
+    },
+    {
+      "code": "17",
+      "display": "MSP COST AVOIDED - NO-FAULT INSURER VDSA (EFF.4/2006) COB CONTRACTOR 11117"
+    },
+    {
+      "code": "18",
+      "display": "MSP COST AVOIDED - PHARMACY BENEFIT MANAGER DATA SHARING AGREEMENT (EFF.4/2006) COB CONTRACTOR 11118"
+    },
+    {
+      "code": "19",
+      "display": "MSP COST AVOIDED - WC MEDICARE SET-ASIDE ARRANGEMENT COB CONTRACTOR 11119"
+    },
+    {
+      "code": "2",
+      "display": "BENEFICIARY"
+    },
+    {
+      "code": "21",
+      "display": "MSP COST AVOIDED - MANDATORY INSURER REPORTING (MIR) GROUP HEALTH PLAN (EFF.1/2009) COB CONTRACTOR 11121"
+    },
+    {
+      "code": "22",
+      "display": "MSP COST AVOIDED - MIR NON-GROUP HEALTH PLAN (EFF.1/2009) COB CONTRACTOR 11122"
+    },
+    {
+      "code": "25",
+      "display": "MSP COST AVOIDED - RECOVERY AUDIT CONTRACTOR (RAC)- CALIFORNIA  (EFF.10/2005) COB CONTRACTOR 11125"
+    },
+    {
+      "code": "26",
+      "display": "MSP COST AVOIDED - RAC- FLORIDA (EFF.10/2005) COB CONTRACTOR 11126"
+    },
+    {
+      "code": "3",
+      "display": "BOTH PHYSICIAN/SUPPLIER AND BENEFICIARY"
+    },
+    {
+      "code": "39",
+      "display": "MSP COST AVOIDED - GROUP HEALTH PLAN (GHP) RECOVERY COB CONTRACTOR 11139"
+    },
+    {
+      "code": "4",
+      "display": "HOSPITAL (HOSPITAL BASED PHYSICIANS)"
+    },
+    {
+      "code": "41",
+      "display": "MSP COST AVOIDED - NON-GROUP HEALTH PLAN (NGHP) NON-ONGOING RESPONSIBILITY FOR MEDICALS (ORM) COB CONTRACTOR 11141"
+    },
+    {
+      "code": "42",
+      "display": "MSP COST AVOIDED - NGHP ORM RECOVERY COB CONTRACTOR 11142"
+    },
+    {
+      "code": "43",
+      "display": "MEDICARE PART C/ MEDICARE ADVANTAGE/ COB CONTRACTOR 11143"
+    },
+    {
+      "code": "5",
+      "display": "BOTH HOSPITAL AND BENEFICIARY"
+    },
+    {
+      "code": "6",
+      "display": "GROUP PRACTICE PREPAYMENT PLAN"
+    },
+    {
+      "code": "7",
+      "display": "OTHER ENTRIES (E.G. EMPLOYER , UNION)"
+    },
+    {
+      "code": "8",
+      "display": "FEDERALLY FUNDED"
+    },
+    {
+      "code": "9",
+      "display": "PA SERVICE"
+    },
+    {
+      "code": "<",
+      "display": "MSP COST AVOIDED - MIR GROUP HEALTH PLAN ('21' 2-BYTE CODE) (EFF. 1/2009)"
+    },
+    {
+      "code": ">",
+      "display": "MSP COST AVOIDED - MIR NON-GROUP HEALTH PLAN ('22' 2-BYTE CODE) (EFF. 1/2009)"
+    },
+    {
+      "code": "@",
+      "display": "MSP COST AVOIDED - BC/BS VOLUNTARY AGREEMENTS ('12' 2-BYTE CODE)"
+    },
+    {
+      "code": "A",
+      "display": "ALLOWED"
+    },
+    {
+      "code": "B",
+      "display": "BENEFITS EXHAUSTED"
+    },
+    {
+      "code": "C",
+      "display": "NON-COVERED CARE"
+    },
+    {
+      "code": "D",
+      "display": "DENIED DUE TO DEMONSTRATION INVOLVEMENT (EFF. 5/97)"
+    },
+    {
+      "code": "E",
+      "display": "FIRST CLAIM DEVELOPMENT"
+    },
+    {
+      "code": "F",
+      "display": "TRAUMA CODE DEVELOPMENT"
+    },
+    {
+      "code": "G",
+      "display": "SECONDARY CLAIMS INVESTIGATION"
+    },
+    {
+      "code": "H",
+      "display": "SELF REPORTS"
+    },
+    {
+      "code": "J",
+      "display": "411.25"
+    },
+    {
+      "code": "K",
+      "display": "INSURER VOLUNTARY REPORTING"
+    },
+    {
+      "code": "L",
+      "display": "CLINICAL LAB IMPROVEMENT AMENDMENT (CLIA)"
+    },
+    {
+      "code": "M",
+      "display": "MULTIPLE SUBMITTAL (I.E. DUPLICATE LINE ITEM)"
+    },
+    {
+      "code": "N",
+      "display": "MEDICAL NECESSITY"
+    },
+    {
+      "code": "O",
+      "display": "OTHER"
+    },
+    {
+      "code": "P",
+      "display": "PHYSICIAN OWNERSHIP DENIAL (EFF 3/92)"
+    },
+    {
+      "code": "Q",
+      "display": "EMPLOYER VOLUNTARY REPORTING"
+    },
+    {
+      "code": "R",
+      "display": "REPROCESSED ADJUSTMENT BASED ON SUBSEQUENT REPROCESSING OF CLAIM"
+    },
+    {
+      "code": "S",
+      "display": "SECONDARY PAYER"
+    },
+    {
+      "code": "T",
+      "display": "MSP COST AVOIDED - INITIAL ENROLLMENT QUESTIONNAIRE (IEQ) CONTRACTOR  (EFF. 7/96)"
+    },
+    {
+      "code": "U",
+      "display": "MSP COST AVOIDED - HEALTH MAINTENANCE ORGANIZATION (HMO) RATE CELL ADJUSTMENT (EFF. 7/96)"
+    },
+    {
+      "code": "V",
+      "display": "MSP COST AVOIDED - LITIGATION SETTLEMENT (EFF. 7/96)"
+    },
+    {
+      "code": "X",
+      "display": "MSP COST AVOIDED - GENERIC"
+    },
+    {
+      "code": "Y",
+      "display": "MSP COST AVOIDED - IRS/SSA DATA MATCH PROJECT"
+    },
+    {
+      "code": "Z",
+      "display": "ZERO PAYMENT , ALLOWED TEST"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 64
+}

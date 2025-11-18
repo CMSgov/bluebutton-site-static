@@ -1,0 +1,93 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BENE_ENRLMT_RSN_CD",
+  "id": "BENE-ENRLMT-RSN-CD",
+  "title": "Beneficiary Enrollment Reason Code",
+  "description": "CODES AND DESCRIPTIONS THAT IDENTIFY THE REASON A BENEFICIARY ENROLLED IN A SERVICE ELECTION.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-ENRLMT-RSN-CD",
+  "concept": [
+    {
+      "code": "S",
+      "display": "STATE BUY-IN"
+    },
+    {
+      "code": "G",
+      "display": "GENERAL ENROLLMENT PERIOD"
+    },
+    {
+      "code": "N",
+      "display": "AGE 65 AND UNINSURED"
+    },
+    {
+      "code": "K",
+      "display": "RENAL DISEASE WAS THE REASON FOR ENTITLEMENT PRIOR TO AGE 65 OR THE 25TH MONTH OF DISABILITY"
+    },
+    {
+      "code": "F",
+      "display": "WORKING AGED"
+    },
+    {
+      "code": "U",
+      "display": "UNKNOWN = NOT APPLICABLE; E.G. PART A DATA IS GENERATED AT AGE 64 YEARS, 8 MONTHS."
+    },
+    {
+      "code": "I",
+      "display": "INITIAL ENROLLMENT PERIOD"
+    },
+    {
+      "code": "P",
+      "display": "POTENTIALLY INSURED BENEFICIARY IS ENROLLED FOR MEDICARE COVERAGE ONLY"
+    },
+    {
+      "code": "Q",
+      "display": "QUARTERS OF COVERAGE REQUIREMENTS ARE INVOLVED"
+    },
+    {
+      "code": "L",
+      "display": "LATE FILING"
+    },
+    {
+      "code": "A",
+      "display": "ATTAINMENT OF AGE 65"
+    },
+    {
+      "code": "H",
+      "display": "ENTITLED BASED ON HEALTH HAZARD"
+    },
+    {
+      "code": "R",
+      "display": "RESIDENCY REQUIREMENTS ARE INVOLVED"
+    },
+    {
+      "code": "C",
+      "display": "GOOD CAUSE"
+    },
+    {
+      "code": "D",
+      "display": "DISABILITY (UNDER AGE 65 ENTITLEMENT)  OR DEEMED DATE OF BIRTH"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    },
+    {
+      "code": "J",
+      "display": "MQGE ENTITLEMENT"
+    },
+    {
+      "code": "M",
+      "display": "TERMINATION BASED ON RENAL ENTITLEMENT, BUT DISABILITY BASED ENTITLEMENT CONTINUES"
+    },
+    {
+      "code": "B",
+      "display": "EQUITABLE RELIEF"
+    },
+    {
+      "code": "T",
+      "display": "DISABLED WORKING INDIVIDUAL"
+    }
+  ],
+  "count": 20
+}

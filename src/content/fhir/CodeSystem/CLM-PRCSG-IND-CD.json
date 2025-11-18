@@ -1,0 +1,153 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_PRCSG_IND_CD",
+  "id": "CLM-PRCSG-IND-CD",
+  "title": "Processing Indicator Code",
+  "description": "The code on a non-institutional claim indicating to whom payment was made or if the claim was denied.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PRCSG-IND-CD",
+  "concept": [
+    {
+      "code": "A",
+      "display": "Allowed"
+    },
+    {
+      "code": "B",
+      "display": "Benefits exhausted"
+    },
+    {
+      "code": "C",
+      "display": "Non-covered care"
+    },
+    {
+      "code": "D",
+      "display": "Denied (from BMAD)"
+    },
+    {
+      "code": "G",
+      "display": "MSP cost avoided â€” Secondary Claims Investigation"
+    },
+    {
+      "code": "H",
+      "display": "MSP cost avoided â€” Self Reports"
+    },
+    {
+      "code": "I",
+      "display": "Invalid data"
+    },
+    {
+      "code": "J",
+      "display": "MSP cost avoided â€” 411.25"
+    },
+    {
+      "code": "K",
+      "display": "MSP cost avoided â€” Insurer Voluntary Reporting"
+    },
+    {
+      "code": "L",
+      "display": "CLIA"
+    },
+    {
+      "code": "M",
+      "display": "Multiple submittal-duplicate line item"
+    },
+    {
+      "code": "N",
+      "display": "Medically unnecessary"
+    },
+    {
+      "code": "O",
+      "display": "Other"
+    },
+    {
+      "code": "P",
+      "display": "Physician ownership denial"
+    },
+    {
+      "code": "Q",
+      "display": "MSP cost avoided (contractor #88888) â€” voluntary agreement"
+    },
+    {
+      "code": "R",
+      "display": "Reprocessed adjustments based on subsequent reprocessing of claim"
+    },
+    {
+      "code": "S",
+      "display": "Secondary payer"
+    },
+    {
+      "code": "T",
+      "display": "MSP cost avoided â€” IEQ contractor"
+    },
+    {
+      "code": "U",
+      "display": "MSP cost avoided â€” HMO rate cell adjustment"
+    },
+    {
+      "code": "V",
+      "display": "MSP cost avoided â€” litigation settlement"
+    },
+    {
+      "code": "X",
+      "display": "MSP cost avoided â€” generic"
+    },
+    {
+      "code": "Y",
+      "display": "MSP cost avoided â€” IRS/SSA data match project"
+    },
+    {
+      "code": "Z",
+      "display": "Bundled test, no payment"
+    },
+    {
+      "code": "00",
+      "display": "MSP cost avoided â€” COB Contractor"
+    },
+    {
+      "code": "12",
+      "display": "MSP cost avoided â€” BC/BS Voluntary Agreements"
+    },
+    {
+      "code": "13",
+      "display": "MSP cost avoided â€” Office of Personnel Management"
+    },
+    {
+      "code": "14",
+      "display": "MSP cost avoided â€” Workman's Compensation (WC) Datamatch"
+    },
+    {
+      "code": "15",
+      "display": "MSP cost avoided â€” Workman's Compensation Insurer Voluntary Data Sharing Agreements (WC VDSA) (eff. 4/2006)"
+    },
+    {
+      "code": "16",
+      "display": "MSP cost avoided â€” Liability Insurer VDSA (eff.4/2006)"
+    },
+    {
+      "code": "17",
+      "display": "MSP cost avoided â€” No-Fault Insurer VDSA (eff.4/2006)"
+    },
+    {
+      "code": "18",
+      "display": "MSP cost avoided â€” Pharmacy Benefit Manager Data Sharing Agreement (eff.4/2006)"
+    },
+    {
+      "code": "21",
+      "display": "MSP cost avoided â€” MIR Group Health Plan (eff.1/2009)"
+    },
+    {
+      "code": "22",
+      "display": "MSP cost avoided â€” MIR non-Group Health Plan (eff.1/2009)"
+    },
+    {
+      "code": "25",
+      "display": "MSP cost avoided â€” Recovery Audit Contractor â€” California (eff.10/2005)"
+    },
+    {
+      "code": "26",
+      "display": "MSP cost avoided â€” Recovery Audit Contractor â€” Florida (eff.10/2005)"
+    }
+  ],
+  "count": 35
+}

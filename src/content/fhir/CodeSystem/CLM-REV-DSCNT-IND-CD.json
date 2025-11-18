@@ -1,0 +1,49 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_REV_DSCNT_IND_CD",
+  "id": "CLM-REV-DSCNT-IND-CD",
+  "title": "Claim Revenue Discount Indicator Code",
+  "description": "THE DOMAIN OF CLAIM REVENUE DISCOUNT INDICATOR CODES.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-REV-DSCNT-IND-CD",
+  "concept": [
+    {
+      "code": "1",
+      "display": "1.0"
+    },
+    {
+      "code": "2",
+      "display": "(1.0+D(U-1))/U, WHERE D=DISCOUNTING FRACTION (CURRENTLY 0.5), U=NUMBER OF UNITS"
+    },
+    {
+      "code": "3",
+      "display": "T/U, WHERE T=TERMINATED PROCEDURE DISCOUNT (CURRENTLY 0.5), U=NUMBER OF UNITS"
+    },
+    {
+      "code": "4",
+      "display": "(1+D)/U, WHERE D=DISCOUNTING FRACTION (CURRENTLY 0.5), U=NUMBER OF UNITS"
+    },
+    {
+      "code": "5",
+      "display": "D, WHERE D=DISCOUNTING FRACTION (CURRENTLY 0.5)"
+    },
+    {
+      "code": "6",
+      "display": "TD/U, WHERE T=TERMINATED PROCEDURE DISCOUNT (CURRENTLY 0.5), D=DISCOUNTING FRACTION (CURRENTLY 0.5), U=NUMBER OF UNITS"
+    },
+    {
+      "code": "7",
+      "display": "D(1+D)/U, WHERE D=DISCOUNTING FRACTION (CURRENTLY 0.5), U=NUMBER OF UNITS"
+    },
+    {
+      "code": "8",
+      "display": "2.0/U, WHERE U=NUMBER OF UNITS"
+    },
+    {
+      "code": "~",
+      "display": "No Description Available"
+    }
+  ],
+  "count": 9
+}

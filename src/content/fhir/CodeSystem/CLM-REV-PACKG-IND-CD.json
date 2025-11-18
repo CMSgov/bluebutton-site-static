@@ -1,0 +1,33 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_REV_PACKG_IND_CD",
+  "id": "CLM-REV-PACKG-IND-CD",
+  "title": "Claim Revenue Discount Indicator Code",
+  "description": "THE DOMAIN OF CLAIM REVENUE PACKAGE INDICATOR CODES.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-REV-PACKG-IND-CD",
+  "concept": [
+    {
+      "code": "1",
+      "display": "PACKAGED SERVICE (SERVICE INDICATOR N)"
+    },
+    {
+      "code": "2",
+      "display": "ARTIFICIAL CHARGES FOR SURGICAL PROCEDURE  (EFF. 7/2004)"
+    },
+    {
+      "code": "3",
+      "display": "PACKAGED AS PART OF PARTIAL HOSPITALIZATION PER DIEM OR DAILY MENTAL HEALTH SERVICE PER DIEM"
+    },
+    {
+      "code": "4",
+      "display": "NOT PACKAGED"
+    },
+    {
+      "code": "~",
+      "display": "No Description Available"
+    }
+  ],
+  "count": 5
+}

@@ -1,0 +1,53 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BENE_BUYIN_CD",
+  "id": "BENE-BUYIN-CD",
+  "title": "Beneficiary Buy-in Code",
+  "description": "Monthly Part A and/or Part B entitlement indicator CodeSystem.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-BUYIN-CD",
+  "concept": [
+    {
+      "code": "A",
+      "display": "Aged recipient of SSI payments (CMS to State)."
+    },
+    {
+      "code": "B",
+      "display": "Blind recipient of SSI payments (CMS to State)."
+    },
+    {
+      "code": "C",
+      "display": "Entitled to Part A of Title IV (AFDC) (State to CMS)."
+    },
+    {
+      "code": "D",
+      "display": "Disabled recipient of SSI payments (CMS to State)."
+    },
+    {
+      "code": "E",
+      "display": "Aged recipient of supplemental payment administered by SSA (CMS to State)."
+    },
+    {
+      "code": "F",
+      "display": "Blind recipient of supplemental payment administered by SSA (CMS to State)."
+    },
+    {
+      "code": "G",
+      "display": "Disabled recipient of supplemental payment administered by SSA (CMS to State)."
+    },
+    {
+      "code": "H",
+      "display": "Aged, blind, or disabled recipient."
+    },
+    {
+      "code": "M",
+      "display": "Entitled to Medical Assistance only (MAO), non-cash recipient (State to CMS)."
+    },
+    {
+      "code": "Z",
+      "display": "Deemed categorically needy (State to CMS)."
+    }
+  ],
+  "count": 10
+}

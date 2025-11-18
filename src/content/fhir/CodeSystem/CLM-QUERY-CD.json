@@ -1,0 +1,49 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_QUERY_CD",
+  "id": "CLM-QUERY-CD",
+  "title": "Clm Query Cd",
+  "description": "Code system for clm query cd",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-QUERY-CD",
+  "concept": [
+    {
+      "code": "0",
+      "display": "CREDIT ADJUSTMENT"
+    },
+    {
+      "code": "1",
+      "display": "INTERIM BILL"
+    },
+    {
+      "code": "2",
+      "display": "HOME HEALTH AGENCY (HHA) BENEFITS EXHAUSTED (OBSOLETE 7/98)"
+    },
+    {
+      "code": "3",
+      "display": "FINAL BILL"
+    },
+    {
+      "code": "4",
+      "display": "DISCHARGE NOTICE (OBSOLETE 7/98)"
+    },
+    {
+      "code": "5",
+      "display": "DEBIT ADJUSTMENT"
+    },
+    {
+      "code": "C",
+      "display": "CREDIT"
+    },
+    {
+      "code": "D",
+      "display": "DEBIT"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 9
+}

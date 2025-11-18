@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BENE_DSBLD_STUS_ID",
+  "id": "BENE-DSBLD-STUS-ID",
+  "title": "Beneficiary Disabled Status Indicator",
+  "description": "AN IDENTIFIER INDICATING WHETHER DISABILITY IS A REASON FOR A BENEFICIARYS ENTITLEMENT TO MEDICARE.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-DSBLD-STUS-ID",
+  "concept": [
+    {
+      "code": "U",
+      "display": "UNKNOWN"
+    },
+    {
+      "code": "N",
+      "display": "NO"
+    },
+    {
+      "code": "Y",
+      "display": "YES"
+    }
+  ],
+  "count": 3
+}

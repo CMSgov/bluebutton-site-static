@@ -1,0 +1,117 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_DISP_CD",
+  "id": "CLM-DISP-CD",
+  "title": "Claim Disposition Code",
+  "description": "Code indicating the disposition or outcome of the processing of the claim record.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-DISP-CD",
+  "concept": [
+    {
+      "code": "1",
+      "display": "DEBIT ACCEPTED"
+    },
+    {
+      "code": "2",
+      "display": "DEBIT ACCEPTED (AUTOMATIC ADJUSTMENT) APPLICABLE THROUGH 4/4/93"
+    },
+    {
+      "code": "3",
+      "display": "CANCEL ACCEPTED"
+    },
+    {
+      "code": "4",
+      "display": "OUTPATIENT HISTORY ONLY ACCEPTED"
+    },
+    {
+      "code": "50",
+      "display": "BENEFICIARY NOT IN FILE"
+    },
+    {
+      "code": "51",
+      "display": "TRUE NOT IN FILE"
+    },
+    {
+      "code": "52",
+      "display": "MASTER RECORD AT ANOTHER CWF SITE"
+    },
+    {
+      "code": "53",
+      "display": "RECORD IN CMS ALPHA MATCH"
+    },
+    {
+      "code": "54",
+      "display": "CROSS-REFERENCE HIC"
+    },
+    {
+      "code": "55",
+      "display": "NAME/SEX MIS-MATCH"
+    },
+    {
+      "code": "57",
+      "display": "BENEFICIARY RECORD ARCHIVED, ONLY SKELETON EXISTS"
+    },
+    {
+      "code": "58",
+      "display": "BENEFICIARY RECORD BLOCKED FOR CROSS-REFERENCE"
+    },
+    {
+      "code": "59",
+      "display": "BENEFICIARY RECORD FROZEN FOR CLERICAL CORRECTION"
+    },
+    {
+      "code": "60",
+      "display": "ABEND ERROR"
+    },
+    {
+      "code": "61",
+      "display": "CROSS-REFERENCE/DATA BASE PROBLEM"
+    },
+    {
+      "code": "AA",
+      "display": "AUTOMATIC ADJUSTMENT"
+    },
+    {
+      "code": "AB",
+      "display": "TRANSACTION CAUSED CICS ABNORMAL END OF JOB"
+    },
+    {
+      "code": "BT",
+      "display": "HISTORY CLAIM NOT PRESENT TO SUPPORT SPELL OF ILLNESS"
+    },
+    {
+      "code": "CI",
+      "display": "CICS PROCESSING ERROR"
+    },
+    {
+      "code": "CR",
+      "display": "CROSSOVER REJECT"
+    },
+    {
+      "code": "ER",
+      "display": "CONSISTENCY EDIT REJECT"
+    },
+    {
+      "code": "RD",
+      "display": "TRANSACTION ERROR"
+    },
+    {
+      "code": "RT",
+      "display": "RETRIEVE PENDING"
+    },
+    {
+      "code": "SV",
+      "display": "SECURITY VIOLATION"
+    },
+    {
+      "code": "UR",
+      "display": "UTILIZATION REJECT"
+    },
+    {
+      "code": "~",
+      "display": "MISSING"
+    }
+  ],
+  "count": 26
+}

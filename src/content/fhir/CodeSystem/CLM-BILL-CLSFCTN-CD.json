@@ -1,0 +1,341 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_BILL_CLSFCTN_CD",
+  "id": "CLM-BILL-CLSFCTN-CD",
+  "title": "Clm Bill Clsfctn Cd",
+  "description": "Code system for clm bill clsfctn cd",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-BILL-CLSFCTN-CD",
+  "concept": [
+    {
+      "code": "11",
+      "display": "HOSPITAL INPATIENT (INCLUDING MEDICARE PART A)"
+    },
+    {
+      "code": "16",
+      "display": "HOSPITAL-INTERMEDIATE CARE - LEVEL II (OBSOLETE)"
+    },
+    {
+      "code": "17",
+      "display": "HOSPITAL-INTERMEDIATE CARE - LEVEL III (OBSOLETE)"
+    },
+    {
+      "code": "15",
+      "display": "HOSPITAL-INTERMEDIATE CARE - LEVEL I (OBSOLETE)"
+    },
+    {
+      "code": "14",
+      "display": "HOSPITAL - LABORATORY SERVICES PROVIDED TO NON-PATIENTS"
+    },
+    {
+      "code": "12",
+      "display": "HOSPITAL INPATIENT (MEDICARE PART B ONLY)"
+    },
+    {
+      "code": "19",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "18",
+      "display": "HOSPITAL - SWING BEDS"
+    },
+    {
+      "code": "13",
+      "display": "HOSPITAL OUTPATIENT"
+    },
+    {
+      "code": "23",
+      "display": "SKILLED NURSING - OUTPATIENT"
+    },
+    {
+      "code": "26",
+      "display": "SNF-INTERMEDIATE CARE - LEVEL II (OBSOLETE)"
+    },
+    {
+      "code": "25",
+      "display": "SNF-INTERMEDIATE CARE - LEVEL I (OBSOLETE)"
+    },
+    {
+      "code": "24",
+      "display": "SNF-OTHER (PART B) - (OBSOLETE)"
+    },
+    {
+      "code": "27",
+      "display": "SNF-INTERMEDIATE CARE - LEVEL III (OBSOLETE)"
+    },
+    {
+      "code": "28",
+      "display": "SKILLED NURSING - SWING BEDS"
+    },
+    {
+      "code": "22",
+      "display": "SKILLED NURSING - INPATIENT (MEDICARE PART B ONLY)"
+    },
+    {
+      "code": "21",
+      "display": "SKILLED NURSING - INPATIENT (INCLUDING MEDICARE PART A)"
+    },
+    {
+      "code": "29",
+      "display": "SNF-RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "32",
+      "display": "HOME HEALTH SERVICES UNDER A PLAN OF TREATMENT (EFFECTIVE ON 10/1/13)]"
+    },
+    {
+      "code": "38",
+      "display": "HHA-SWING BEDS (OBSOLETE)"
+    },
+    {
+      "code": "36",
+      "display": "HHA-INTERMEDIATE CARE - LEVEL II (OBSOLETE)"
+    },
+    {
+      "code": "33",
+      "display": "HHA-OUTPATIENT (PLAN OF TREATMENT UNDER PART A,INCLUDING DME UNDER PART A) (TERM. 10/2013)"
+    },
+    {
+      "code": "37",
+      "display": "HHA-INTERMEDIATE CARE - LEVEL III (OBSOLETE)"
+    },
+    {
+      "code": "31",
+      "display": "HHA-INPATIENT (INCLUDING PART A) (OBSOLETE)"
+    },
+    {
+      "code": "39",
+      "display": "HHA-RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "35",
+      "display": "HHA-INTERMEDIATE CARE - LEVEL I (OBSOLETE)"
+    },
+    {
+      "code": "34",
+      "display": "HOME HEALTH SERVICES NOT UNDER A PLAN OF TREATMENT (EFFECTIVE 10/1/13)]"
+    },
+    {
+      "code": "45",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) HOSPITAL-INTERMEDIATE CARE - LEVEL I (OBSOLETE)"
+    },
+    {
+      "code": "42",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) HOSPITAL-INPATIENT OR HOME HEALTH VISITS (PART B ONLY)"
+    },
+    {
+      "code": "47",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) HOSPITAL-INTERMEDIATE CARE - LEVEL III (OBSOLETE)"
+    },
+    {
+      "code": "49",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) HOSPITAL-RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "44",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) HOSPITAL-OTHER (PART B) - (OBSOLETE)"
+    },
+    {
+      "code": "48",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) HOSPITAL-SWING BEDS (OBSOLETE)"
+    },
+    {
+      "code": "41",
+      "display": "RELIGIOUS NON-MEDICAL HEALTH CARE INSTITUTIONS - INPATIENT"
+    },
+    {
+      "code": "46",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) HOSPITAL-INTERMEDIATE CARE - LEVEL II (OBSOLETE)"
+    },
+    {
+      "code": "43",
+      "display": "RELIGIOUS NON-MEDICAL RELIGIOUS NON-MEDICAL HEALTH CARE INSTITUTIONS - OUTPATIENT SERVICES"
+    },
+    {
+      "code": "51",
+      "display": "CS EXTENDED CARE-INPATIENT (INCLUDING PART A) OBSOLETE EFF. 7/00 - IMPLEMENTATION OF RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS (RNHCI)"
+    },
+    {
+      "code": "55",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) EXTENDED CARE-INTERMEDIATE CARE - LEVEL I (EFF. 7/00) OBSOLETE - PRIOR TO 7/00 REFERENCED CS"
+    },
+    {
+      "code": "56",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) EXTENDED CARE-INTERMEDIATE CARE - LEVEL II (EFF. 7/00) OBSOLETE - PRIOR TO 7/00 REFERENCED CS"
+    },
+    {
+      "code": "57",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) EXTENDED CARE-INTERMEDIATE CARE - LEVEL III (EFF. 7/00) OBSOLETE - PRIOR TO 7/00 REFERENCED CS"
+    },
+    {
+      "code": "54",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) EXTENDED CARE-OTHER (PART B)(EFF. 7/00) - OBSOLETE; PRIOR TO 7/00 REFERENCED CS"
+    },
+    {
+      "code": "59",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) EXTENDED CARE-RESERVED FOR NATIONAL ASSIGNMENT (EFF. 7/00) - OBSOLETE; PRIOR TO 7/00 REFERENCED CS"
+    },
+    {
+      "code": "52",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) EXTENDED CARE-INPATIENT OR HOME HEALTH VISITS (PART B ONLY) (EFF. 7/00) - OBSOLETE; PRIOR TO 7/00 CHRISTIAN SCIENCE (CS)"
+    },
+    {
+      "code": "58",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) EXTENDED CARE-SWING BEDS (EFF. 7/00) - OBSOLETE PRIOR TO 7/00 REFERENCED CS"
+    },
+    {
+      "code": "53",
+      "display": "RNHCI (RELIGIOUS NONMEDICAL HEALTH CARE INSTITUTIONS) EXTENDED CARE-OUTPATIENT (HHA-A ALSO) (EFF. 7/00); OBSOLETE - PRIOR TO 7/00 REFERENCED CS"
+    },
+    {
+      "code": "67",
+      "display": "INTERMEDIATE CARE-INTERMEDIATE CARE - LEVEL III - OBSOLETE"
+    },
+    {
+      "code": "66",
+      "display": "INTERMEDIATE CARE - LEVEL II"
+    },
+    {
+      "code": "69",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "68",
+      "display": "INTERMEDIATE CARE-SWING BEDS - OBSOLETE"
+    },
+    {
+      "code": "65",
+      "display": "INTERMEDIATE CARE - LEVEL I"
+    },
+    {
+      "code": "61",
+      "display": "INTERMEDIATE CARE-INPATIENT (INCLUDING PART A) OBSOLETE"
+    },
+    {
+      "code": "62",
+      "display": "INTERMEDIATE CARE-INPATIENT OR HOME HEALTH VISITS (PART B ONLY) OBSOLETE"
+    },
+    {
+      "code": "63",
+      "display": "INTERMEDIATE CARE-OUTPATIENT (HHA-A ALSO) - OBSOLETE"
+    },
+    {
+      "code": "64",
+      "display": "INTERMEDIATE CARE-OTHER (PART B)- OBSOLETE"
+    },
+    {
+      "code": "76",
+      "display": "CLINIC - COMMUNITY MENTAL HEALTH CENTER"
+    },
+    {
+      "code": "72",
+      "display": "CLINIC - HOSPITAL BASED OR INDEPENDENT RENAL DIALYSIS CENTER"
+    },
+    {
+      "code": "78",
+      "display": "LICENSED FREESTANDING EMERGENCY MEDICAL FACILITY (EFFECTIVE 7/1/12)"
+    },
+    {
+      "code": "73",
+      "display": "CLINIC - FREESTANDING"
+    },
+    {
+      "code": "71",
+      "display": "CLINIC - RURAL HEALTH"
+    },
+    {
+      "code": "77",
+      "display": "CLINIC - FEDERALLY QUALIFIED HEALTH CENTER (FQHC)"
+    },
+    {
+      "code": "79",
+      "display": "CLINIC - OTHER"
+    },
+    {
+      "code": "74",
+      "display": "CLINIC - OUTPATIENT REHABILITATION FACILITY (ORF)"
+    },
+    {
+      "code": "75",
+      "display": "CLINIC - COMPREHENSIVE OUTPATIENT REHABILITATION FACILITY (CORF)"
+    },
+    {
+      "code": "87",
+      "display": "FREESTANDING NON-RESIDENTIAL OPIOID TREATMENT PROGRAM (EFFECTIVE 1/1/21)"
+    },
+    {
+      "code": "83",
+      "display": "AMBULATORY SURGERY CENTER"
+    },
+    {
+      "code": "84",
+      "display": "FREE STRANDING BIRTHING CENTER"
+    },
+    {
+      "code": "86",
+      "display": "RESIDENTIAL FACILITY"
+    },
+    {
+      "code": "81",
+      "display": "HOSPICE (NON-HOSPITAL BASED)"
+    },
+    {
+      "code": "85",
+      "display": "CRITICAL ACCESS HOSPITAL"
+    },
+    {
+      "code": "82",
+      "display": "HOSPICE (HOSPITAL BASED)"
+    },
+    {
+      "code": "89",
+      "display": "SPECIAL FACILITY - OTHER"
+    },
+    {
+      "code": "88",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "91",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "96",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "99",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "92",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "93",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "98",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "94",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "97",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "95",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "~~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 82
+}
