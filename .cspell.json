@@ -1,0 +1,53 @@
+{
+  "version": "0.2",
+  "language": "en-US",
+  "words": [
+    "PKCE",
+    "codeverifier",
+    "FHIR",
+    "claimtype",
+    "CARIN",
+    "searchset",
+    "resultset",
+    "valueset",
+    "databanks",
+    "conveniens",
+    "CNTL",
+    "HICN",
+    "hicn",
+    "HCPCS",
+    "MDFR",
+    "codeset",
+    "CSPINV",
+    "codeable",
+    "DMEPOS",
+    "codesystem",
+    "ENCNTR",
+    "PWXXXXX",
+    "billableperiod",
+    "flinstone",
+    "fflinstone",
+    "CPCDS",
+    "SUBSIDIZ",
+    "pseudonymized",
+    "PRVDR",
+    "CDPDE",
+    "BCDA",
+    "FISS"
+  ],
+  "files": [
+    "./src/**/*.{md,mdx}"
+  ],
+  "ignorePaths": [
+    ".cspell.json",
+    "dist/",
+    "*.min.*",
+    "**/*rtl*",
+    "**/tests/**"
+  ],
+  "useGitignore": true,
+  "ignoreRegExpList": [
+    // Ignores long random tokens
+    "/[A-Za-z0-9]{24,}/"
+  ]
+}
