@@ -1,6 +1,22 @@
 {
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
   "language": "en-US",
+  "files": [
+    "./src/**/*.{md,mdx}"
+  ],
+  "ignorePaths": [
+    ".cspell.json",
+    "dist/",
+    "*.min.*",
+    "**/*rtl*",
+    "**/tests/**"
+  ],
+  "useGitignore": true,
+  "ignoreRegExpList": [
+    // Ignores long random tokens
+    "/[A-Za-z0-9]{24,}/"
+  ],
   "words": [
     "PKCE",
     "codeverifier",
@@ -34,20 +50,5 @@
     "CDPDE",
     "BCDA",
     "FISS"
-  ],
-  "files": [
-    "./src/**/*.{md,mdx}"
-  ],
-  "ignorePaths": [
-    ".cspell.json",
-    "dist/",
-    "*.min.*",
-    "**/*rtl*",
-    "**/tests/**"
-  ],
-  "useGitignore": true,
-  "ignoreRegExpList": [
-    // Ignores long random tokens
-    "/[A-Za-z0-9]{24,}/"
   ]
 }
