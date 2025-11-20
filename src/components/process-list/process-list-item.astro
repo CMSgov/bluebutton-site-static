@@ -2,13 +2,13 @@
 type Props = {
   heading: string
   className?: string
+  headingAs?: 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
-const { heading, className } = Astro.props
+const { className } = Astro.props
 ---
 
 <li class:list={['usa-process-list__item', className]}>
-  <p class="usa-process-list__heading">{heading}</p>
   <div class="usa-prose">
     <slot />
   </div>

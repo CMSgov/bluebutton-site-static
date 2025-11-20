@@ -6,6 +6,8 @@ interface Props {
 }
 
 const { headings = [] } = Astro.props
+// Only show headings up to h3 in sidebar
+const filteredHeadings = headings.filter((h) => h.depth < 4)
 ---
 
 <aside
@@ -17,7 +19,7 @@ const { headings = [] } = Astro.props
     <h3 class="margin-bottom-2 font-sans-2xs" id="toc-heading">On this page</h3>
     <ul class="usa-in-page-nav__list">
       {
-        headings.map((heading) => (
+        filteredHeadings.map((heading) => (
           <li class:list={['usa-in-page-nav__item', heading.depth < 3 ? 'usa-in-page-nav__item--primary' : '']}>
             <a href={`#${heading.slug}`} class="usa-in-page-nav__link">
               {heading.text}
