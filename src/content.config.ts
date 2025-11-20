@@ -1,3 +1,4 @@
+import { codeSystemSchema, structureDefinitionSchema } from '#utils/collections'
 import { loadCodebooks } from '#utils/load-codebooks'
 import { loadCsvResources } from '#utils/load-csv-resources'
 import { glob } from 'astro/loaders'
@@ -108,7 +109,7 @@ const fhirJsonCollection = defineCollection({
     pattern: '**/*.json',
     base: './src/content/fhir',
   }),
-  schema: z.any(),
+  schema: z.discriminatedUnion('resourceType', [structureDefinitionSchema, codeSystemSchema]),
 })
 
 export const collections = {
