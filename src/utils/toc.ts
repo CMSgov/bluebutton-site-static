@@ -3,6 +3,8 @@ const tocLinks = document.querySelectorAll<HTMLAnchorElement>('#toc a')
 const headings = document.querySelectorAll('main :is(h2,h3,h4,h5,h6)[id]')
 
 let didScroll = false
+let didClick = false
+let activeId: string | undefined
 window.addEventListener('scroll', () => (didScroll = true), { once: true })
 
 const headingsObserver = new IntersectionObserver(
@@ -16,13 +18,17 @@ const headingsObserver = new IntersectionObserver(
       }
     })
 
-    // As a user scrolls, get the latest id to enter the viewport
-    // When the page first loads, get the first/top-most id in the viewport
-    const activeId = didScroll ? [...visibleHeadingIds].pop() : [...visibleHeadingIds][0]
+    if (!didClick) {
+      // As a user scrolls, get the latest id to enter the viewport
+      // When the page first loads, get the first/top-most id in the viewport
+      activeId = didScroll ? [...visibleHeadingIds].pop() : [...visibleHeadingIds][0]
+    }
 
     if (visibleHeadingIds.size > 0) {
       tocLinks.forEach(el => el.classList.toggle('usa-current', el.getAttribute('href') === `#${activeId}`))
     }
+
+    didClick = false
   },
   {
     rootMargin: '-100px 0px',
@@ -40,9 +46,12 @@ Array.from(headings)
 
 tocLinks.forEach((el) => {
   el.addEventListener('click', (e) => {
+    didClick = true
+    const href = el.getAttribute('href') || '#'
+    activeId = href?.replace('#', '') || undefined
     // Prevent USWDS event from firing
     e.stopImmediatePropagation()
     // Restore native click behavior, since USWDS overrides this by default on this component
-    document.location.href = el.getAttribute('href') || '#'
+    document.location.href = href
   })
 })
