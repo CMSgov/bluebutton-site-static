@@ -6,6 +6,7 @@ import DocsLayout from '#layouts/docs-layout.astro'
 
 import discussion from '#assets/images/discussion.svg'
 import experts from '#assets/images/experts.svg'
+import { GOOGLE_GROUP_LINK } from '#utils/constants'
 ---
 
 <BaseLayout
@@ -24,9 +25,7 @@ import experts from '#assets/images/experts.svg'
           Group for CMS Blue Button.
         </p>
 
-        <Link variant="primary" href="https://groups.google.com/g/developer-group-for-cms-blue-button-api"
-          >Join the Google Group</Link
-        >
+        <Link variant="primary" href={GOOGLE_GROUP_LINK}>Join the Google Group</Link>
       </div>
     </TwoColumn>
 

@@ -39,6 +39,8 @@ export const SITE_METADATA: {
   googleSiteVerification: '4BKCcWU84KzkBcBHkIMbVUWpM5_UWoee6k8YZtMc8SM',
 }
 
+export const GOOGLE_GROUP_LINK = 'https://groups.google.com/g/developer-group-for-cms-blue-button-api'
+
 export const IDENTIFIER_LINKS: IdentifierLinks = [
   {
     href: 'https://www.cms.gov/about-cms',
