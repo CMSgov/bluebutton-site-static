@@ -188,3 +188,10 @@ main {
     padding: 0 0 .25rem .5rem;
   }
 }
+
+.usa-identifier__required-links-item {
+  line-height: 1.6;
+  // @include at-media("desktop") {
+    // margin-bottom: units(1.5);
+  // }
+}
