@@ -40,7 +40,7 @@ const isActive = (path: string) => path === pathname
         <li class="usa-sidenav__item">
           <Link
             to="/api-documentation"
-            class={isActive('/api-documentation') ? 'usa-current' : null}
+            class={isActive($path({ to: '/api-documentation' })) ? 'usa-current' : null}
             data-tealium="left-rail">Get Started</Link
           >
         </li>
@@ -61,8 +61,8 @@ const isActive = (path: string) => path === pathname
           }
         </ul>
         <li class="usa-sidenav__item">
-          <Link to="/bb2-data" class={isActive('/bb2-data') ? 'usa-current' : null} data-tealium="left-rail"
-            >BB2 Data</Link
+          <Link to="/data" class={isActive($path({ to: '/data' })) ? 'usa-current' : null} data-tealium="left-rail"
+            >Data</Link
           >
         </li>
         <ul class="usa-sidenav__sublist">
