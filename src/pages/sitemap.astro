@@ -21,10 +21,10 @@ const docsnavLinks = (await getApiCollection()).map((doc) => ({
   label: doc.data.title,
 })) satisfies RoutesArray<'/api-documentation/[...slug]'>
 const datanavLinks = (await getDataCollection()).map((doc) => ({
-  to: '/bb2-data/[...slug]',
+  to: '/data/[...slug]',
   params: { slug: doc.id },
   label: doc.data.title,
-})) satisfies RoutesArray<'/bb2-data/[...slug]'>
+})) satisfies RoutesArray<'/data/[...slug]'>
 
 const sitemapLinks = [
   {
@@ -44,8 +44,8 @@ const sitemapLinks = [
     children: docsnavLinks,
   },
   {
-    label: 'BB2 Data',
-    to: '/bb2-data',
+    label: 'Data',
+    to: '/data',
     params: null,
     children: datanavLinks,
   },

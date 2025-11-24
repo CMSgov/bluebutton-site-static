@@ -16,12 +16,12 @@ const docsnavLinks = (await getApiCollection()).map((doc) => ({
   label: doc.data.title,
 })) satisfies RoutesArray<'/api-documentation/[...slug]'>
 const datanavLinks = (await getDataCollection()).map((doc) => ({
-  to: '/bb2-data/[...slug]',
+  to: '/data/[...slug]',
   params: {
     slug: doc.id,
   },
   label: doc.data.title,
-})) satisfies RoutesArray<'/bb2-data/[...slug]'>
+})) satisfies RoutesArray<'/data/[...slug]'>
 
 const isActive = (path: string) => Astro.url.pathname.startsWith(path)
 ---
@@ -100,15 +100,15 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
           <li class="usa-nav__primary-item">
             <button
               type="button"
-              class:list={['usa-accordion__button usa-nav__link', isActive('/bb2-data') ? 'usa-current' : null]}
+              class:list={['usa-accordion__button usa-nav__link', isActive('/data') ? 'usa-current' : null]}
               aria-expanded="false"
               aria-controls="basic-nav-section-two"
             >
-              <span>BB2 Data</span>
+              <span>Data</span>
             </button>
             <ul id="basic-nav-section-two" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/bb2-data" data-tealium="main_nav"> BB2 Data </Link>
+                <Link to="/data" data-tealium="main_nav">Blue Button Data</Link>
               </li>
               {
                 datanavLinks.map((link) => (
