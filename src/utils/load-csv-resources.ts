@@ -48,7 +48,7 @@ export async function loadCsvResources({ pattern, base }: { pattern: string | [s
     }
 
     return parsed.data
-      .filter(d => d.sourceSystem && (d['copybookDataDictionaryName(ifDifferent)'] || d.sourceCopybookFieldLabel))
+      .filter(d => d.sourceSystem && (d['copybookDataDictionaryName(ifDifferent)'] || (d.sourceCopybookFieldLabel && d.sourceCopybookFieldLabel !== 'not in source copybook ')))
       .map((d) => {
         const fieldLabel = d['copybookDataDictionaryName(ifDifferent)'] || d.sourceCopybookFieldLabel
         return {
