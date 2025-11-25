@@ -8,6 +8,7 @@ export const button = cva({
       secondary: 'usa-button usa-button--secondary',
       outline: 'usa-button usa-button--outline',
       unstyled: 'usa-button usa-button--unstyled',
+      inverse: 'usa-button usa-button--outline usa-button--inverse',
       link: 'usa-link',
     },
     size: {

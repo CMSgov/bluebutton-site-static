@@ -26,11 +26,7 @@ const { title, description } = Astro.props
     </p>
     <div class="grid-row grid-gap margin-top-2">
       <div class="tablet:grid-col-auto margin-top-2">
-        <Link
-          href="/api-documentation"
-          class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
-          showIcon={false}
-        >
+        <Link href="/api-documentation" variant="inverse" class="hero-button width-full" showIcon={false}>
           Get started
           <Icon icon={ArrowForward} color="white" size={3} />
         </Link>
@@ -38,19 +34,11 @@ const { title, description } = Astro.props
       <div class="tablet:grid-col-auto margin-top-2">
         <Link
           href="https://sandbox.bluebutton.cms.gov/docs/openapi"
-          class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
+          variant="inverse"
+          class="hero-button width-full"
           showIcon={false}
         >
           API reference <Icon icon={Swagger} color="white" size={3} />
-        </Link>
-      </div>
-      <div class="tablet:grid-col-auto margin-top-2">
-        <Link
-          href="https://sandbox.bluebutton.cms.gov/v1/accounts/mfa/login"
-          class="hero-button usa-button usa-button--inverse usa-button--outline width-full"
-          showIcon={false}
-        >
-          Visit the sandbox <Icon icon={Code} color="white" size={3} />
         </Link>
       </div>
     </div>
