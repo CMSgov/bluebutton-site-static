@@ -14,6 +14,8 @@ import CardMedia from '#components/card/card-media.astro'
 import CardItem from '#components/card/card-item.astro'
 import CardGroup from '#components/card/card-group.astro'
 import { SITE_METADATA } from '#utils/constants'
+
+const VALUE_FOR_ORGS = 'value-for-organizations'
 ---
 
 <BaseLayout title={SITE_METADATA.title} description={SITE_METADATA.description}>
@@ -33,7 +35,11 @@ import { SITE_METADATA } from '#utils/constants'
               >Explore the developer sandbox to build amazing tools and services with the Blue Button API.</CardBody
             >
             <CardFooter>
-              <Link variant="primary" href="https://sandbox.bluebutton.cms.gov/v1/accounts/create">
+              <Link
+                variant="primary"
+                class="display-block"
+                href="https://sandbox.bluebutton.cms.gov/v1/accounts/create"
+              >
                 Sign up for the sandbox</Link
               >
             </CardFooter>
@@ -43,7 +49,9 @@ import { SITE_METADATA } from '#utils/constants'
             <CardMedia src={Whiteboard} alt="" class="add-aspect-4x3" style="object-fit: contain;" />
             <CardBody>Discover how your company or organization could use Blue Button.</CardBody>
             <CardFooter>
-              <Link to="/" hash="#value-for-organizations" variant="primary"> See the power of Blue Button</Link>
+              <Link to="/" hash={VALUE_FOR_ORGS} class="display-block" variant="primary">
+                See the power of Blue Button</Link
+              >
             </CardFooter>
           </CardItem>
           <CardItem>
@@ -53,6 +61,7 @@ import { SITE_METADATA } from '#utils/constants'
             <CardFooter>
               <Link
                 href="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
+                class="display-block"
                 variant="primary"
               >
                 Get details on Medicare.gov</Link
@@ -63,7 +72,7 @@ import { SITE_METADATA } from '#utils/constants'
       </div>
 
       <TwoColumn image={Whiteboard} class="padding-y-7">
-        <h2>Value for organizations</h2>
+        <h2 id={VALUE_FOR_ORGS}>Value for organizations</h2>
         <h3>What does Blue Button allow you to do?</h3>
         <p>
           Whether you are a health plan market place, a non-profit research organization, or a healthcare startup -
