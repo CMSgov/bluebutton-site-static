@@ -7,17 +7,19 @@
  */
 
 // Remove Node's built-in `warning` listener which outputs all warnings to stderr
-process.removeAllListeners('warning');
+process.removeAllListeners('warning')
 
 // Add our own version that skips known warnings
 process.on('warning', (warning) => {
-	let { name, message } = warning;
-	if (
-		name === 'ExperimentalWarning' &&
-		(message.indexOf('--experimental-loader') > -1 || message.indexOf('Custom ESM Loaders') > -1)
-	)
-		return;
-	if (name === 'DeprecationWarning' && message.indexOf('Obsolete loader hook') > -1) return;
+  let { name, message } = warning
+  if (
+    name === 'ExperimentalWarning'
+    && (message.includes('--experimental-loader') || message.includes('Custom ESM Loaders'))
+  ) {
+    return
+  }
+  if (name === 'DeprecationWarning' && message.includes('Obsolete loader hook'))
+    return
 
-	console.warn(warning);
-});
+  console.warn(warning)
+})

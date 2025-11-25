@@ -1,5 +1,6 @@
 import core from '@actions/core'
 import kleur from 'kleur'
+import process from 'node:process'
 
 import type { LinkCheckerState } from '../base/base'
 import type { IssueType, LinkIssue } from '../base/issue'
