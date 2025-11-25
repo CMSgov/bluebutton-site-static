@@ -41,7 +41,7 @@ const { variant = 'link', size, showIcon = true, class: className, ...restProps 
 ---
 
 <a
-  href={computedHref.replace(/\/+/g, '/')}
+  href={computedHref.replace(/\/+$/g, '/')}
   target={isExternal ? '_blank' : undefined}
   rel={isExternal && !computedHref?.includes('cms.gov') ? 'noreferrer' : undefined}
   class:list={[button({ variant, size }), isExternal && showIcon ? 'usa-link--external' : '', className]}
