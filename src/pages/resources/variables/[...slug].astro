@@ -21,9 +21,11 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props
+
+const title = post.collection === 'codebooks' ? `Variable: ${post.data.title}` : `Variable: ${post.data.sourceField}`
 ---
 
-<BaseLayout title={post.id} description="">
+<BaseLayout title={title} description="">
   <DocsLayout showSideNav={false}>
     <div class="usa-prose margin-y-6">
       {
@@ -92,22 +94,33 @@ const { post } = Astro.props
           </Fragment>
         ) : post.collection === 'csvVariables' ? (
           <Fragment>
-            <h1>Variable: {post.data.fieldName}</h1>
-            <p class="usa-intro">{post.data.fieldLabel}</p>
+            <h1>Variable: {post.data.sourceField}</h1>
+            <p class="usa-intro">{post.data.fieldName}</p>
 
-            {post.data.sourceDefinition?.map((srcDef) => (
-              <p>{srcDef}</p>
-            ))}
+            {post.data.sourceDefinition && post.data.sourceDefinition.length ? (
+              <Fragment>
+                <h2>Source System Definition</h2>
+                {post.data.sourceDefinition.map((srcDef) => (
+                  <p>{srcDef}</p>
+                ))}
+              </Fragment>
+            ) : null}
+
+            <h2>Other Info</h2>
             <ul>
-              <li>
-                <strong>Source System:</strong> {post.data.sourceSystem}
-              </li>
+              {post.data.sourceSystem ? (
+                <li>
+                  <strong>Source System:</strong> {post.data.sourceSystem}
+                </li>
+              ) : null}
               <li>
                 <strong>Source Field:</strong> {post.data.fieldName}
               </li>
-              <li>
-                <strong>Version:</strong> {post.data.versionAdded}
-              </li>
+              {post.data.versionAdded ? (
+                <li>
+                  <strong>Version:</strong> {post.data.versionAdded}
+                </li>
+              ) : null}
             </ul>
           </Fragment>
         ) : null
