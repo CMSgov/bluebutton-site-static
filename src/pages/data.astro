@@ -13,10 +13,7 @@ if (!entry) {
 const { Content, headings } = await render(entry)
 ---
 
-<BaseLayout
-  title="Blue Button Data"
-  description="Blue Button uses the Hl7 FHIR standard for pulling Medicare Part A, B, and D enrollee data and the OAuth 2.0 standard for enrollee authorization"
->
+<BaseLayout title={entry.data.seo.title || entry.data.title} description={entry.data.seo.description || ''}>
   <DocsLayout headings={headings}>
     <div class="margin-bottom-4">
       <h1>{entry.data.title}</h1>

@@ -17,7 +17,7 @@ const { post } = Astro.props
 const { Content, headings } = await render(post)
 ---
 
-<BaseLayout title={post.data.title} description="">
+<BaseLayout title={post.data.seo.title || post.data.title} description={post.data.seo.description || ''}>
   <DocsLayout headings={headings}>
     <div class="margin-bottom-4">
       <h1>{post.data.title}</h1>

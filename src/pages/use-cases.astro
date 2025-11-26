@@ -1,11 +1,11 @@
 ---
+import { getEntry, render } from 'astro:content'
+
 import IconList from '#components/icon-list.astro'
 import Icon from '#components/icon.astro'
-import { getEntry, render } from 'astro:content'
 import Link from '#components/link.astro'
 
 import BaseLayout from '#layouts/base-layout.astro'
-
 import DocsLayout from '#layouts/docs-layout.astro'
 
 const entry = await getEntry('pages', 'use-cases')
@@ -16,10 +16,7 @@ if (!entry) {
 const { Content, headings } = await render(entry)
 ---
 
-<BaseLayout
-  title="Use Cases"
-  description="Blue Button helps Medicare entrollees securely share their health data with trusted applications such as insurance plan finders, personal health aggregators, clinical research studies, and more"
->
+<BaseLayout title={entry.data.seo.title || entry.data.title} description={entry.data.seo.description || ''}>
   <DocsLayout headings={headings} showSideNav={false}>
     <div class="margin-bottom-4">
       <h1>{entry.data.title}</h1>

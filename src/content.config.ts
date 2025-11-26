@@ -11,7 +11,10 @@ const pageCollection = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
-    description: z.string(),
+    seo: z.object({
+      description: z.string(),
+      title: z.string(),
+    }).partial(),
   }),
 })
 
@@ -22,7 +25,10 @@ const apiDocsCollection = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
-    description: z.string(),
+    seo: z.object({
+      title: z.string(),
+      description: z.string(),
+    }).partial(),
     sortOrder: z.number(),
   }),
 })
@@ -34,7 +40,10 @@ const dataDocsCollection = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
-    description: z.string(),
+    seo: z.object({
+      title: z.string(),
+      description: z.string(),
+    }).partial(),
     sortOrder: z.number(),
   }),
 })
@@ -48,7 +57,8 @@ const resourcesCollection = defineCollection({
     title: z.string(),
     seo: z.object({
       title: z.string(),
-    }),
+      description: z.string(),
+    }).partial(),
   }),
 })
 
