@@ -16,7 +16,10 @@ if (!entry) {
 const { Content, headings } = await render(entry)
 ---
 
-<BaseLayout title="Use Cases" description="">
+<BaseLayout
+  title="Use Cases"
+  description="Blue Button helps Medicare entrollees securely share their health data with trusted applications such as insurance plan finders, personal health aggregators, clinical research studies, and more"
+>
   <DocsLayout headings={headings} showSideNav={false}>
     <div class="margin-bottom-4">
       <h1>{entry.data.title}</h1>

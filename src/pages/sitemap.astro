@@ -1,11 +1,8 @@
 ---
-import { getCollection } from 'astro:content'
-
 import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
-import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
+import { $path, type RouteId, type RouteOptions } from 'astro-typesafe-routes/path'
 import Link from '#components/link.astro'
-import { type RoutesArray } from '#utils/types'
 import { getApiCollection, getDataCollection } from '#utils/collections'
 
 type SitemapLink<T extends RouteId> = RouteOptions<T> & {
@@ -16,53 +13,48 @@ type SitemapLink<T extends RouteId> = RouteOptions<T> & {
 type SitemapLinks = SitemapLink<RouteId>[]
 
 const docsnavLinks = (await getApiCollection()).map((doc) => ({
-  to: '/api-documentation/[...slug]',
-  params: { slug: doc.id },
+  href: $path({ to: '/api-documentation/[...slug]', params: { slug: doc.id } }),
   label: doc.data.title,
-})) satisfies RoutesArray<'/api-documentation/[...slug]'>
+}))
 const datanavLinks = (await getDataCollection()).map((doc) => ({
-  to: '/data/[...slug]',
-  params: { slug: doc.id },
+  href: $path({ to: '/data/[...slug]', params: { slug: doc.id } }),
   label: doc.data.title,
-})) satisfies RoutesArray<'/data/[...slug]'>
+}))
 
 const sitemapLinks = [
   {
     label: 'Home',
-    to: '/' as const,
-    params: null,
+    href: $path({ to: '/' }),
   },
   {
     label: 'About',
-    to: '/about',
-    params: null,
+    href: $path({ to: '/about' }),
   },
   {
     label: 'API Documentation',
-    to: '/api-documentation',
-    params: null,
+    href: $path({ to: '/api-documentation' }),
     children: docsnavLinks,
   },
   {
     label: 'Data',
-    to: '/data',
-    params: null,
+    href: $path({ to: '/data' }),
     children: datanavLinks,
   },
   {
     label: 'Production Access',
-    to: '/production-access',
-    params: null,
+    href: $path({ to: '/production-access' }),
   },
   {
     label: 'Support',
-    to: '/support',
-    params: null,
+    href: $path({ to: '/support' }),
   },
-] satisfies SitemapLinks
+]
 ---
 
-<BaseLayout title="Sitemap" description="">
+<BaseLayout
+  title="Sitemap"
+  description="Navigate the Blue Button website with our sitemap, containing all the pages including API documentation, data resources, production access process, and support options"
+>
   <DocsLayout showSideNav={false}>
     <div class="margin-bottom-4">
       <h1>Sitemap</h1>
@@ -72,15 +64,13 @@ const sitemapLinks = [
         {
           sitemapLinks.map((link) => (
             <li>
-              <Link to={link.to}>{link.label}</Link>
+              <Link href={link.href}>{link.label}</Link>
 
               {link?.children ? (
                 <ul>
                   {link.children.map((child) => (
                     <li>
-                      <Link to={child.to} params={child.params}>
-                        {child.label}
-                      </Link>
+                      <Link href={child.href}>{child.label}</Link>
                     </li>
                   ))}
                 </ul>
