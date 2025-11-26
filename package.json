@@ -7,7 +7,7 @@
     "astro": "astro",
     "lint": "eslint 'src/**/*.{astro,js,jsx,ts,tsx,md,mdx,json}'",
     "lint:fix": "eslint 'src/**/*.{astro,js,jsx,ts,tsx,md,mdx,json}' --fix",
-    "lint:linkcheck": "astro build && tsm --require=./scripts/lib/filter-warnings.cjs ./scripts/linkcheck.ts",
+    "lint:linkcheck": "astro build && tsm --require=./scripts/linkcheck/lib/filter-warnings.cjs ./scripts/linkcheck/index.ts",
     "spellcheck": "cspell"
   },
   "dependencies": {

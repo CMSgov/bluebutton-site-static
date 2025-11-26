@@ -57,13 +57,13 @@ class LinkChecker {
       // If we just performed an autofix, repeat our entire run
       // to show the user what's left for them to fix manually
       this.run()
-      return
+      // return
     }
 
-    // If we're being run by a CI workflow, output annotations in GitHub format
-    if (process.env.CI) {
-      outputAnnotationsForGitHub(linkIssues)
-    }
+    // // If we're being run by a CI workflow, output annotations in GitHub format
+    // if (process.env.CI) {
+    //   outputAnnotationsForGitHub(linkIssues)
+    // }
   }
 }
 
