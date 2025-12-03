@@ -22,11 +22,13 @@ const { Content, headings } = await render(post)
     <div class="margin-bottom-4">
       <h1>{post.data.title}</h1>
     </div>
-    <Content
-      components={{
-        a: Link,
-        Link,
-      }}
-    />
+    <div class="usa-prose">
+      <Content
+        components={{
+          a: Link,
+          Link,
+        }}
+      />
+    </div>
   </DocsLayout>
 </BaseLayout>
