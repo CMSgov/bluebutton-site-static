@@ -5,10 +5,14 @@ import TableOfContents from '#components/toc.astro'
 
 type Props = {
   showSideNav?: boolean
+  showToc?: boolean
   headings?: MarkdownHeading[]
 }
 
-const { showSideNav = true, headings = [] } = Astro.props
+const { showSideNav = true, showToc = true, headings = [] } = Astro.props
+
+// Filters out "Footnotes" heading that gets automatically added by remarkRehype plugin
+const filteredHeadings = headings.filter((h) => h.slug !== 'footnote-label')
 ---
 
 <div class="grid-container">
@@ -17,9 +21,9 @@ const { showSideNav = true, headings = [] } = Astro.props
     <main id="main-content" class="grid-col-fill">
       <div class="grid-row">
         {
-          headings && headings.length > 0 ? (
-            <div class="grid-col-auto order-last margin-left-auto">
-              <TableOfContents headings={headings} />
+          showToc ? (
+            <div class="grid-col-auto order-last margin-left-auto width-full maxw-card-lg">
+              {filteredHeadings && filteredHeadings.length > 0 ? <TableOfContents headings={filteredHeadings} /> : null}
             </div>
           ) : null
         }

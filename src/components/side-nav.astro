@@ -32,7 +32,7 @@ const isActive = (path: string) => path === pathname
 
 <div
   class="display-none position-sticky tablet:display-block tablet:grid-col-auto overflow-y-auto overflow-x-hidden padding-top-5 desktop:padding-top-7 padding-bottom-6 padding-right-205 padding-left-05 margin-left-neg-05"
-  style="top: 4rem; height: calc(100vh - 4.5rem);"
+  style="top: 4rem; max-height: calc(100vh - 4.5rem);"
 >
   <div class="width-card-lg">
     <nav aria-label="Side navigation">
@@ -62,7 +62,7 @@ const isActive = (path: string) => path === pathname
         </ul>
         <li class="usa-sidenav__item">
           <Link to="/data" class={isActive($path({ to: '/data' })) ? 'usa-current' : null} data-tealium="left-rail"
-            >Data</Link
+            >Data Overview</Link
           >
         </li>
         <ul class="usa-sidenav__sublist">

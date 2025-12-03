@@ -50,25 +50,13 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
         </button>
         <ul class="usa-nav__primary usa-accordion">
           <li class="usa-nav__primary-item">
-            <button
-              type="button"
-              class:list={[
-                'usa-accordion__button usa-nav__link',
-                isActive('/about') || isActive('/use-cases') ? 'usa-current' : null,
-              ]}
-              aria-expanded="false"
-              aria-controls="basic-nav-section-zero"
+            <Link
+              to="/use-cases"
+              class:list={['usa-nav-link', isActive('/use-cases') ? 'usa-current' : null]}
+              data-tealium="navigation"
             >
-              <span>About</span>
-            </button>
-            <ul id="basic-nav-section-zero" class="usa-nav__submenu" hidden>
-              <li class="usa-nav__submenu-item">
-                <Link to="/about" data-tealium="main_nav">About</Link>
-              </li>
-              <li class="usa-nav__submenu-item">
-                <Link to="/use-cases" data-tealium="main_nav">Use Cases</Link>
-              </li>
-            </ul>
+              <span>Use Cases</span>
+            </Link>
           </li>
           <li class="usa-nav__primary-item">
             <button
@@ -108,7 +96,7 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             </button>
             <ul id="basic-nav-section-two" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/data" data-tealium="main_nav">Blue Button Data</Link>
+                <Link to="/data" data-tealium="main_nav">Overview</Link>
               </li>
               {
                 datanavLinks.map((link) => (

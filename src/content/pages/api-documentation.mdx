@@ -4,6 +4,8 @@ seo:
   description: "Get comprehensive API documentation for Blue Button, including instuctions on how to access sandbox and production claims data"
 ---
 
+The Blue Button API enables software developers to build trusted applications, services, and research programs that benefit Medicare enrollees. As a [standards-based API](/api-documentation/#technical-specifications-and-standards), Blue Button provides claims data for more than 64 million people with Medicare.
+
 Blue Button uses [Fast Healthcare Interoperability Resources (FHIR)](https://hl7.org/fhir/R4/overview.html) to share claims data. You can use a variety of tools or client software programs to access the sandbox and production environments.
 
 ## Getting started
@@ -25,6 +27,47 @@ Blue Button uses [Fast Healthcare Interoperability Resources (FHIR)](https://hl7
   </ProcessListItem>
 </ProcessList>
 
+## Technical Specifications and Standards 
+
+The Blue Button API is a RESTful API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
+
+- [HL7 FHIR Standard](http://www.hl7.org/fhir/index.html)
+- [CARIN Consumer Directed Payer Data Exchange Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html)
+- [OAuth 2.0 protocol](https://oauth.net/)
+- [RESTful API Overview](https://restfulapi.net/)
+
+## Versions
+
+We currently support two Blue Button API versions:
+
+### Version 2 
+
+Blue Button Version 2 (v2) is based on [FHIR release (R4)](http://hl7.org/fhir/R4/) and the [CARIN CDPDE Implementation Guide (Carin for Blue Button)](http://hl7.org/fhir/us/carin-bb/STU1.1/) and was released in July 2021. To learn about migrating to Blue Button v2, go to [Migrating to v2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-v2-FAQ)
+
+### Version 1 
+
+Version 1 (v1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/). Development on v1 is limited to bug fixes and basic maintenance. If you're developing a new app, use v2. 
+
+## Environments
+
+We currently maintain production and sandbox environments for developing with the Blue Button API. For technical information about our environments, see [Base FHIR URLs](/api-documentation/calling-the-api/#sandbox-vs-production-environments). 
+
+### Sandbox
+
+Develop your application using our sandbox environment. It provides access to synthetic Medicare enrollee data and includes all the same endpoints, resource types, and parameters as production. You can complete all of the same operations in the sandbox as in the production environment.
+
+It's helpful to know that:
+
+- Sandbox credentials will not work in production. 
+- While we strive to provide a synthetic data set relevant to most use cases, our synthetic data set is not as comprehensive as production data.
+
+To get started in the developer sandbox, [create an account](https://sandbox.bluebutton.cms.gov/v2/accounts/mfa/login).
+
+### Production
+
+Once your development is nearing completion, get access to live data in our production environment by following the instructions in our [production access user guide](/production-access/). After you complete the requirements in the production access guide and your app is approved, we'll give you credentials for the production environment.
+
+
 ## Access to Medicare enrollee data
 
 ### Scope of access
@@ -38,7 +81,6 @@ Medicare enrollees may always opt to omit personal data such as name, date of bi
 The length of time that an application can continue to pull new claims data from Medicare depends on the application's use case and category. The Blue Button API team determines your application's access duration category during the [production access process](/production-access/). 
 
 There are 3 categories for data access duration:
-
 
 <table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-4">
   <caption class="usa-sr-only">Categories for data access duration</caption>
@@ -84,43 +126,3 @@ There are 3 categories for data access duration:
     </tr>
   </tbody>
 </table>
-
-## Technical Specifications and Standards 
-
-The Blue Button API is a RESTful API, based on the HL7 FHIR standard and the CARIN Consumer Directed Payer Data Exchange Implementation Guide. It supplies data in JSON format, and uses the OAuth 2.0 protocol for authorization.
-
-- [HL7 FHIR Standard](http://www.hl7.org/fhir/index.html)
-- [CARIN Consumer Directed Payer Data Exchange Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html)
-- [OAuth 2.0 protocol](https://oauth.net/)
-- [RESTful API Overview](https://restfulapi.net/)
-
-## Versions
-
-We currently support two Blue Button API versions:
-
-### Version 2 
-
-Blue Button Version 2 (v2) is based on [FHIR release (R4)](http://hl7.org/fhir/R4/) and the [CARIN CDPDE Implementation Guide (Carin for Blue Button)](http://hl7.org/fhir/us/carin-bb/STU1.1/) and was released in July 2021. To learn about migrating to Blue Button v2, go to [Migrating to v2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-v2-FAQ)
-
-### Version 1 
-
-Version 1 (v1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/). Development on v1 is limited to bug fixes and basic maintenance. If you're developing a new app, use v2. 
-
-## Environments
-
-We currently maintain production and sandbox environments for developing with the Blue Button API. For technical information about our environments, see [Base FHIR URLs](/api-documentation/calling-the-api/#sandbox-vs-production-environments). 
-
-### Sandbox
-
-Develop your application using our sandbox environment. It provides access to synthetic Medicare enrollee data and includes all the same endpoints, resource types, and parameters as production. You can complete all of the same operations in the sandbox as in the production environment.
-
-It's helpful to know that:
-
-- Sandbox credentials will not work in production. 
-- While we strive to provide a synthetic data set relevant to most use cases, our synthetic data set is not as comprehensive as production data.
-
-To get started in the developer sandbox, [create an account](https://sandbox.bluebutton.cms.gov/v2/accounts/mfa/login).
-
-### Production
-
-Once your development is nearing completion, get access to live data in our production environment by following the instructions in our [production access user guide](/production-access/). After you complete the requirements in the production access guide and your app is approved, we'll give you credentials for the production environment.
