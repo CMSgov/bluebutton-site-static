@@ -5,7 +5,7 @@ import Link from '#components/link.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 import BaseLayout from '#layouts/base-layout.astro'
 
-const entry = await getEntry('pages', 'data')
+const entry = await getEntry('pages', 'data-overview')
 if (!entry) {
   throw new Error('Page not found')
 }
