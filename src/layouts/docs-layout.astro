@@ -22,7 +22,7 @@ const filteredHeadings = headings.filter((h) => h.slug !== 'footnote-label')
       <div class="grid-row">
         {
           showToc ? (
-            <div class="grid-col-auto order-last margin-left-auto width-full maxw-card-lg">
+            <div class="grid-col-auto order-last margin-left-auto width-full maxw-card-lg display-none desktop-lg:display-block">
               {filteredHeadings && filteredHeadings.length > 0 ? <TableOfContents headings={filteredHeadings} /> : null}
             </div>
           ) : null
