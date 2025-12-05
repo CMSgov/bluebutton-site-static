@@ -10,7 +10,7 @@ export const SITE_METADATA: {
   favicon: Partial<Link>[]
   googleSiteVerification: string
 } = {
-  title: 'CMS Blue Button',
+  title: 'CMS Blue Button API',
   description: 'The CMS Blue Button API enables beneficiaries to connect their Medicare claims data to the applications, services, and research programs they trust.',
   url: 'https://bluebutton.cms.gov',
   image: '/meta/og.jpg',
