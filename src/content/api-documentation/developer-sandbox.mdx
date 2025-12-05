@@ -136,17 +136,17 @@ Once you've created a Blue Button sandbox application, you can start making requ
 9. At the bottom of the **Auth** tab, click **Get New Access Token**.
 
 10. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](/data/understanding-the-data/#authenticating-as-a-synthetic-user) (e.g., user = "BBUser00000" and password = "PW00000!"), and click **Log in**.
-  ![Medicare login window](#assets/images/bb-postman-10.png)
+    ![Medicare login window](#assets/images/bb-postman-10.png)
 
 11. Click **Connect**.
-  ![Connect button](#assets/images/bb-postman-11.png)
+    ![Connect button](#assets/images/bb-postman-11.png)
 
 12. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.
 
 13. Make any desired Blue Button API calls from the endpoints listed under the **Patient**, **Explanation of Benefit**, and **Coverage** folders. For example, to retrieve explanation of benefits information for the authenticated patient:
-  - Select the **Explanation of Benefits** folder, then **GET Search Explanation of Benefits**.
-  - Click **Send**.
-  - The API will return a FHIR bundle with explanation of benefits information.
+    - Select the **Explanation of Benefits** folder, then **GET Search Explanation of Benefits**.
+    - Click **Send**.
+    - The API will return a FHIR bundle with explanation of benefits information.
 
 ### cURL
 
