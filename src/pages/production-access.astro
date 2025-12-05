@@ -14,15 +14,15 @@ if (!entry) {
   throw new Error('Page not found')
 }
 
-const { Content, headings } = await render(entry)
+const { Content } = await render(entry)
 ---
 
 <BaseLayout title={entry.data.seo.title || entry.data.title} description={entry.data.seo.description || ''}>
-  <DocsLayout headings={headings} showSideNav={false} showToc={false}>
+  <DocsLayout showSideNav={false}>
     <div class="margin-bottom-4">
       <h1>{entry.data.title}</h1>
     </div>
-    <div class="usa-prose">
+    <div class="usa-prose measure-5">
       <Content
         components={{
           a: Link,
