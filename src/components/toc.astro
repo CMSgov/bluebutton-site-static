@@ -21,7 +21,18 @@ const filteredHeadings = headings.filter((h) => h.depth < 4)
       {
         filteredHeadings.map((heading) => (
           <li class:list={['usa-in-page-nav__item', heading.depth < 3 ? 'usa-in-page-nav__item--primary' : '']}>
-            <a href={`#${heading.slug}`} class="usa-in-page-nav__link">
+            <a
+              href={`#${heading.slug}`}
+              class="usa-in-page-nav__link"
+              style={
+                heading.depth >= 3
+                  ? {
+                      // We use inline styles here because the USWDS sidebar link styles have a higher specificity than the utility classes
+                      paddingLeft: '1.5rem',
+                    }
+                  : null
+              }
+            >
               {heading.text}
             </a>
           </li>
