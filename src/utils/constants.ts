@@ -18,7 +18,7 @@ export const SITE_METADATA: {
     {
       rel: 'icon',
       type: 'image/svg+xml',
-      href: '/meta/favicon.ico',
+      href: '/meta/favicon.svg',
     },
     {
       rel: 'icon',
