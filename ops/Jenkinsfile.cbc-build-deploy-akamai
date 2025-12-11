@@ -17,7 +17,7 @@ pipeline {
   parameters {
     choice(
       name: "SITE_ENV",
-      choices: ["test", "staging", "prod"],
+      choices: ["test", "staging"],
       description: "The environment to build and deploy to."
     )
   }
@@ -58,10 +58,8 @@ pipeline {
             UPLOAD_LOCATION = "/1197010/test.static.bluebutton.cms.gov/"
           } else if (params.SITE_ENV == "staging") {
             UPLOAD_LOCATION = "/1197010/staging.bluebutton.cms.gov/"
-          } else if (params.SITE_ENV == "prod") {
-            UPLOAD_LOCATION = "/1197010/bluebutton.cms.gov/"
           } else {
-            error("Please set SITE_ENV to one of: [test, staging, prod]")
+            error("Please set SITE_ENV to one of: [test, staging]")
           }
         }
       }
