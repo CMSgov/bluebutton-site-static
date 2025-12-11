@@ -58,8 +58,10 @@ pipeline {
             UPLOAD_LOCATION = "/1197010/test.static.bluebutton.cms.gov/"
           } else if (params.SITE_ENV == "staging") {
             UPLOAD_LOCATION = "/1197010/staging.bluebutton.cms.gov/"
+          } else if (params.SITE_ENV == "prod") {
+            UPLOAD_LOCATION = "/1197010/bluebutton.cms.gov/"
           } else {
-            error("Please set SITE_ENV to one of: [test, staging]")
+            error("Please set SITE_ENV to one of: [test, staging, prod]")
           }
         }
       }
