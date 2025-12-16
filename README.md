@@ -188,11 +188,11 @@ For more information about our governance, see [GOVERNANCE.md](GOVERNANCE.md).
 
 If you have ideas for how we can improve or add to our capacity building efforts and methods for welcoming people into our community, please let us know at **opensource@cms.hhs.gov**. If you would like to comment on the tool itself, please let us know by filing an **issue on our GitHub repository.**
 
-## Policites
+## Policies
 
 ### Open Source Policy
 
-We adhere to the [CMS Open Source Policy](https://github.com/CMSGov/cms-open-source-policy). If you have any questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
+We adhere to the [CMS Open Source Policy](https://github.com/CMSGov/cms-open-source-policy). If you have any questions, just [send us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
 
