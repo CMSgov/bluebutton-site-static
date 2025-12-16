@@ -52,9 +52,9 @@ This project requires you to use [Node.js](https://nodejs.org/en). Once installe
 ### Setup
 
 1. Run `npm install` to install required dependencies
-2. If this is your first time setting up the repo, run `npx gulp copyAssets` (yes, **npx**). This will copy assets from USWDS's `node_modules` directory into the correct project directory.
-3. Then, run `npm run dev` to start you local development server.
-4. Once you're ready to test a build, run `npm run build`. If this process fails, there are errors you'll need to resolve before you'll be able to deploy.
+   - If this is your first time setting up the repo, run `npx gulp copyAssets` (yes, **npx**). This will copy assets from USWDS's `node_modules` directory into the correct project directory.
+2. Then, run `npm run dev` to start you local development server.
+3. Once you're ready to test a build, run `npm run build`. If this process fails, there are errors you'll need to resolve before you'll be able to deploy.
 
 ### Additional Scripts
 
