@@ -140,7 +140,7 @@ The "frontmatter" is where the any variables are defined. These files are static
 
 Like all other content, these resources live in `./src/content` under a path that matches the pattern of the live URL path. For example, `https://bluebutton.cms.gov/resources/codesystem/eob-type/` content can be found at `./src/content/resources/codesystem/eob-type`.
 
-Any resource that is defined as `.mdx` or `.json` will automatically be processed just like any other content. However, other "data" content lives as `.csv` or `.xml` which require custom loaders. These loaders can be found in `utils/loaders`. These types of files undergo multiple steps of processing:
+Any resource that is defined as `.mdx` or `.json` will automatically be processed just like any other content. However, other "data" content lives as `.csv` or `.xml` which require custom loaders. These loaders can be found in `./src/utils/loaders`. These types of files undergo multiple steps of processing:
 
 1. Data is ingested and initially parsed with a [`Zod`](https://zod.dev/) schema. This turns ambiguous data files into strongly typed data which ensures consistency and prevents unexpected bugs.
    1. We typically return the processed data with a more terse schema that is easier consume in our page templates.
