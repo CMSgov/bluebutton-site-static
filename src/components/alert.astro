@@ -1,0 +1,83 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+import { cva, type VariantProps } from 'cva'
+
+const infoBox = cva({
+  base: 'usa-alert',
+  variants: {
+    variant: {
+      info: 'usa-alert--info',
+      warning: 'usa-alert--warning',
+      success: 'usa-alert--success',
+      error: 'usa-alert--error',
+      emergency: 'usa-alert--emergency',
+    },
+    size: {
+      slim: 'usa-alert--slim',
+    },
+    noIcon: {
+      true: 'usa-alert--no-icon',
+    },
+  },
+  defaultVariants: {
+    variant: 'info',
+    noIcon: false,
+  },
+})
+
+type Props = (
+  | {
+      role: 'region'
+      'aria-labelledby'?: string
+    }
+  | {
+      role: 'alert' | 'status'
+      'aria-labelledby'?: never
+    }
+) &
+  (
+    | {
+        size: 'slim'
+        heading?: never
+        headingAs?: never
+      }
+    | {
+        size?: never
+        heading: string
+        headingAs: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
+      }
+  ) &
+  VariantProps<typeof infoBox> &
+  HTMLAttributes<'div'>
+
+const { heading, class: className, headingAs = 'p', noIcon, role = 'alert', size, variant, ...props } = Astro.props
+
+const Element = headingAs
+const uniqueId = 'alert-' + Math.random().toString(36).substring(6)
+const itemId = role === 'region' ? uniqueId : undefined
+---
+
+<div
+  {...props}
+  class={infoBox({
+    variant,
+    size,
+    noIcon,
+    className,
+  })}
+  role={role}
+  aria-labelledby={itemId}
+>
+  <div class="usa-alert__body">
+    {
+      heading && size !== 'slim' ? (
+        <Element class="usa-alert__heading text-bold" id={itemId}>
+          {heading}
+        </Element>
+      ) : null
+    }
+    <div class="usa-alert__text">
+      <slot />
+    </div>
+  </div>
+</div>

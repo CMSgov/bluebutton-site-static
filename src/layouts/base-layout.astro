@@ -1,0 +1,110 @@
+---
+import Banner from '#components/banner.astro'
+import Footer from '#components/footer.astro'
+import Header from '#components/header.astro'
+import Identifier from '#components/identifier.astro'
+import { SEO } from 'astro-seo'
+import openSansWoff2 from '@fontsource-variable/open-sans/files/open-sans-latin-wght-normal.woff2?url'
+import '@fontsource-variable/open-sans'
+import '#assets/sass/styles.scss'
+import { SITE_METADATA } from '#utils/constants'
+
+type Props = {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+
+const TEALIUM_ENV = import.meta.env.PROD ? 'prod' : 'dev'
+const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toString()
+---
+
+<!doctype html>
+<html lang="en" class="usa-js-loading">
+  <head>
+    <SEO
+      charset="utf-8"
+      title={title}
+      titleTemplate={SITE_METADATA.title === title ? undefined : `%s - ${SITE_METADATA.title}`}
+      description={description}
+      openGraph={{
+        basic: {
+          title,
+          type: 'Website',
+          image: getAbsolutePath(SITE_METADATA.image),
+          url: Astro.url,
+        },
+        optional: {
+          description,
+          locale: 'en_US',
+          siteName: 'Blue Button',
+        },
+        image: {
+          width: 1200,
+          height: 630,
+          alt: 'Blue Button',
+        },
+      }}
+      twitter={{
+        card: 'summary_large_image',
+        title,
+        description,
+        image: getAbsolutePath(SITE_METADATA.image),
+      }}
+      extend={{
+        link: [
+          ...SITE_METADATA.favicon,
+          {
+            rel: 'preload',
+            as: 'font',
+            type: 'font/woff2',
+            href: openSansWoff2,
+            crossorigin: 'anonymous',
+          },
+          { rel: 'manifest', href: '/meta/site.webmanifest' },
+        ],
+        meta: [
+          {
+            name: 'viewport',
+            content: 'width=device-width, initial-scale=1.0',
+          },
+          { name: 'generator', content: Astro.generator },
+          { name: 'apple-mobile-web-app-title', content: SITE_METADATA.title },
+          {
+            name: 'google-site-verification',
+            content: SITE_METADATA.googleSiteVerification,
+          },
+        ],
+      }}
+    />
+    <script src="#assets/uswds/js/uswds-init.js"></script>
+    <script is:inline src={`https://tealium-tags.cms.gov/cms-bluebutton/${TEALIUM_ENV}/utag.sync.js`}></script>
+  </head>
+
+  <body id="page-top">
+    <a class="usa-skipnav z-top" href="#main-content">Skip to main content</a>
+    <Banner />
+    <Header />
+    <slot />
+    <Footer />
+    <Identifier />
+    <script src="#assets/uswds/js/uswds.js"></script>
+    <!-- Tealium -->
+    <script is:inline define:vars={{ TEALIUM_ENV }}>
+      ;(function (a, b, c, d) {
+        a = `https://tealium-tags.cms.gov/cms-bluebutton/${TEALIUM_ENV}/utag.js`
+        b = document
+        c = 'script'
+        d = b.createElement(c)
+        d.src = a
+        d.type = `text/java${c}`
+        d.async = true
+        e = document.body.insertBefore(d, document.body.firstChild)
+        f = document.createElement('script')
+        f.text = 'utag_data = {}'
+        e.parentNode.insertBefore(f, e)
+      })()
+    </script>
+  </body>
+</html>

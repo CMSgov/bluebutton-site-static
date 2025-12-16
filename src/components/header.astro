@@ -1,0 +1,142 @@
+---
+import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
+
+import LogoBlueButton from '#assets/images/logo-bluebutton.svg'
+import IconClose from '@uswds/uswds/img/usa-icons/close.svg'
+import Link from './link.astro'
+import { getApiCollection, getDataCollection } from '#utils/collections'
+
+type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]
+
+const docsnavLinks = (await getApiCollection()).map((doc) => ({
+  to: '/api-documentation/[...slug]',
+  params: {
+    slug: doc.id,
+  },
+  label: doc.data.title,
+})) satisfies RoutesArray<'/api-documentation/[...slug]'>
+const datanavLinks = (await getDataCollection()).map((doc) => ({
+  to: '/data/[...slug]',
+  params: {
+    slug: doc.id,
+  },
+  label: doc.data.title,
+})) satisfies RoutesArray<'/data/[...slug]'>
+
+const isActive = (path: string) => Astro.url.pathname.startsWith(path)
+---
+
+<div class="position-sticky top-0 bg-white shadow-1 z-500">
+  <div class="usa-overlay"></div>
+  <header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo">
+          <Link
+            to="/"
+            data-tealium="navigation"
+            class="display-flex flex-align-center height-6 maxw-card-lg"
+            style="gap: 0.5rem;"
+          >
+            <LogoBlueButton aria-hidden class="width-5 height-5" />
+            <span class="font-sans-md text-bold text-black text-balance line-height-sans-2">CMS Blue Button API</span>
+          </Link>
+        </div>
+        <button type="button" class="usa-menu-btn">Menu</button>
+      </div>
+      <nav aria-label="Primary navigation" class="usa-nav">
+        <button type="button" class="usa-nav__close">
+          <IconClose aria-label="close" />
+        </button>
+        <ul class="usa-nav__primary usa-accordion">
+          <li class="usa-nav__primary-item">
+            <Link
+              to="/use-cases"
+              class:list={['usa-nav-link', isActive('/use-cases') ? 'usa-current' : null]}
+              data-tealium="navigation"
+            >
+              <span>Use Cases</span>
+            </Link>
+          </li>
+          <li class="usa-nav__primary-item">
+            <button
+              type="button"
+              class:list={[
+                'usa-accordion__button usa-nav__link',
+                isActive('/api-documentation') ? 'usa-current' : null,
+              ]}
+              aria-expanded="false"
+              aria-controls="basic-nav-section-one"
+            >
+              <span>API Documentation</span>
+            </button>
+            <ul id="basic-nav-section-one" class="usa-nav__submenu" hidden>
+              <li class="usa-nav__submenu-item">
+                <Link to="/api-documentation" data-tealium="main_nav">Get Started</Link>
+              </li>
+              {
+                docsnavLinks.map((link) => (
+                  <li class="usa-nav__submenu-item">
+                    <Link to={link.to} params={link.params} data-tealium="main_nav">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </li>
+          <li class="usa-nav__primary-item">
+            <button
+              type="button"
+              class:list={['usa-accordion__button usa-nav__link', isActive('/data') ? 'usa-current' : null]}
+              aria-expanded="false"
+              aria-controls="basic-nav-section-two"
+            >
+              <span>Data</span>
+            </button>
+            <ul id="basic-nav-section-two" class="usa-nav__submenu" hidden>
+              <li class="usa-nav__submenu-item">
+                <Link to="/data" data-tealium="main_nav">Overview</Link>
+              </li>
+              {
+                datanavLinks.map((link) => (
+                  <li class="usa-nav__submenu-item">
+                    <Link to={link.to} params={link.params} data-tealium="main_nav">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </li>
+          <li class="usa-nav__primary-item">
+            <Link
+              to="/production-access"
+              class:list={['usa-nav-link', isActive('/production-access') ? 'usa-current' : null]}
+              data-tealium="navigation"
+            >
+              <span>Production Access</span>
+            </Link>
+          </li>
+          <li class="usa-nav__primary-item">
+            <Link
+              to="/support"
+              class:list={['usa-nav-link', isActive('/support') ? 'usa-current' : null]}
+              data-tealium="navigation"
+            >
+              <span>Support</span>
+            </Link>
+          </li>
+        </ul>
+        <div class="desktop:padding-left-1 margin-top-4 desktop:margin-top-0">
+          <Link
+            href="https://sandbox.bluebutton.cms.gov/v1/accounts/login"
+            variant="primary"
+            data-tealium="navigation"
+            class="width-full desktop:width-auto">Sandbox</Link
+          >
+        </div>
+      </nav>
+    </div>
+  </header>
+</div>

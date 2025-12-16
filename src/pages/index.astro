@@ -1,0 +1,112 @@
+---
+import Browsers from '#assets/images/browsers.svg'
+import Home from '#assets/images/home.svg'
+import Whiteboard from '#assets/images/whiteboard.svg'
+import Hero from '#components/hero.astro'
+import Link from '#components/link.astro'
+import TwoColumn from '#components/two-column.astro'
+
+import BaseLayout from '#layouts/base-layout.astro'
+import CardHeader from '#components/card/card-header.astro'
+import CardFooter from '#components/card/card-footer.astro'
+import CardBody from '#components/card/card-body.astro'
+import CardMedia from '#components/card/card-media.astro'
+import CardItem from '#components/card/card-item.astro'
+import CardGroup from '#components/card/card-group.astro'
+import { SITE_METADATA } from '#utils/constants'
+
+const VALUE_FOR_ORGS = 'value-for-organizations'
+---
+
+<BaseLayout title={SITE_METADATA.title} description={SITE_METADATA.description}>
+  <main id="main-content">
+    <Hero
+      title="CMS Blue Button API"
+      description="Blue Button is a standards-based application programming interface (API) that delivers Medicare Part A, B, and D data for over 60 million people with Medicare."
+    />
+    <div class="grid-container padding-y-10">
+      <div class="grid-row">
+        <h2>Medicare claims data at your fingertips</h2>
+        <CardGroup class="padding-top-4">
+          <CardItem>
+            <CardHeader headingAs="h3" heading="For Developers" />
+            <CardMedia src={Browsers} alt="" class="add-aspect-4x3" style="object-fit: contain;" />
+            <CardBody
+              >Explore the developer sandbox to build amazing tools and services with the Blue Button API.</CardBody
+            >
+            <CardFooter>
+              <Link
+                variant="primary"
+                class="display-block"
+                href="https://sandbox.bluebutton.cms.gov/v1/accounts/create"
+              >
+                Sign up for the sandbox</Link
+              >
+            </CardFooter>
+          </CardItem>
+          <CardItem>
+            <CardHeader headingAs="h3" heading="For Organizations" />
+            <CardMedia src={Whiteboard} alt="" class="add-aspect-4x3" style="object-fit: contain;" />
+            <CardBody>Discover how your company or organization could use Blue Button.</CardBody>
+            <CardFooter>
+              <Link to="/" hash={VALUE_FOR_ORGS} class="display-block" variant="primary">
+                See the power of Blue Button</Link
+              >
+            </CardFooter>
+          </CardItem>
+          <CardItem>
+            <CardHeader headingAs="h3" heading="For People with Medicare" />
+            <CardBody>Learn about Medicare's Blue Button & find apps you can use.</CardBody>
+            <CardMedia src={Home} alt="" class="add-aspect-4x3" style="object-fit: contain;" />
+            <CardFooter>
+              <Link
+                href="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
+                class="display-block"
+                variant="primary"
+              >
+                Get details on Medicare.gov</Link
+              >
+            </CardFooter>
+          </CardItem>
+        </CardGroup>
+      </div>
+
+      <TwoColumn image={Whiteboard} class="padding-y-7">
+        <h2 id={VALUE_FOR_ORGS}>Value for organizations</h2>
+        <p>
+          Whether you are a health plan market place, a non-profit research organization, or a healthcare startup -
+          integration with Blue Button provides value to organizations that deliver services to people with Medicare.
+        </p>
+        <p>
+          People with Medicare can allow access to their data, which can improve data accuracy and efficiency over
+          manual data entry. Faster, more accurate data can lead to better service recommendations and health outcomes
+          for beneficiaries.
+        </p>
+        <p>
+          Learn more about using Blue Button, or go ahead and create your Sandbox account to explore our sample data.
+        </p>
+        <p>
+          <Link to="/use-cases">Learn more about use cases</Link>
+        </p>
+      </TwoColumn>
+      <TwoColumn image={Home} dir="rtl" class="padding-y-7">
+        <h2>Value for people with Medicare</h2>
+        <p>
+          Blue Button allows you to share your data with third-party applications, doctors, research programs, and more!
+          It also gives beneficiaries and their caregivers more options and control over their claims data.
+        </p>
+        <p>
+          Our team is working on new features that allow people with Medicare to have more control over the types of
+          data third-party applications can see and use.
+        </p>
+        <p>Follow the link below to learn about the third-party applications using Blue Button.</p>
+        <p>
+          <Link
+            href="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
+            >View Blue Button apps</Link
+          >
+        </p>
+      </TwoColumn>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+import Alert from '#components/alert.astro'
+import Link from '#components/link.astro'
+import { getCollection, render } from 'astro:content'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('resources')
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
+}
+
+const { post } = Astro.props
+const { Content } = await render(post)
+---
+
+<BaseLayout title={post.data.seo.title || post.data.title} description={post.data.seo.description || ''}>
+  <DocsLayout showSideNav={false}>
+    <div class="margin-bottom-4">
+      <h1>{post.data.title}</h1>
+    </div>
+    <div class="usa-prose">
+      <Content
+        components={{
+          a: Link,
+          Link,
+          Alert,
+        }}
+      />
+    </div>
+  </DocsLayout>
+</BaseLayout>

@@ -1,0 +1,103 @@
+---
+import { $path, type RouteId, type RouteOptions } from 'astro-typesafe-routes/path'
+
+import Swagger from '#assets/images/swagger.svg'
+import Github from '@uswds/uswds/img/usa-icons/github.svg'
+
+import Icon from './icon.astro'
+import Link from './link.astro'
+import { getApiCollection, getDataCollection } from '#utils/collections'
+
+type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]
+
+const { pathname } = Astro.url
+
+const docsnavLinks = (await getApiCollection()).map((doc) => ({
+  to: '/api-documentation/[...slug]',
+  params: {
+    slug: doc.id,
+  },
+  label: doc.data.title,
+})) satisfies RoutesArray<'/api-documentation/[...slug]'>
+const datanavLinks = (await getDataCollection()).map((doc) => ({
+  to: '/data/[...slug]',
+  params: {
+    slug: doc.id,
+  },
+  label: doc.data.title,
+})) satisfies RoutesArray<'/data/[...slug]'>
+
+const isActive = (path: string) => path === pathname
+---
+
+<div
+  class="display-none position-sticky tablet:display-block tablet:grid-col-auto overflow-y-auto overflow-x-hidden padding-top-5 desktop:padding-top-7 padding-bottom-6 padding-right-205 padding-left-05 margin-left-neg-05"
+  style="top: 4rem; max-height: calc(100vh - 4.5rem);"
+>
+  <div class="width-card-lg">
+    <nav aria-label="Side navigation">
+      <ul class="usa-sidenav">
+        <li class="usa-sidenav__item">
+          <Link
+            to="/api-documentation"
+            class={isActive($path({ to: '/api-documentation' })) ? 'usa-current' : null}
+            data-tealium="left-rail">API Documentation</Link
+          >
+        </li>
+        <ul class="usa-sidenav__sublist">
+          {
+            docsnavLinks.map((link) => (
+              <li class="usa-sidenav__item">
+                <Link
+                  to={link.to}
+                  params={link.params}
+                  class={isActive($path({ to: link.to, params: link.params })) ? 'usa-current' : null}
+                  data-tealium="left-rail"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
+        <li class="usa-sidenav__item">
+          <Link to="/data" class={isActive($path({ to: '/data' })) ? 'usa-current' : null} data-tealium="left-rail"
+            >Data Overview</Link
+          >
+        </li>
+        <ul class="usa-sidenav__sublist">
+          {
+            datanavLinks.map((link) => (
+              <li class="usa-sidenav__item">
+                <Link
+                  to={link.to}
+                  params={link.params}
+                  class={isActive($path({ to: link.to, params: link.params })) ? 'usa-current' : null}
+                  data-tealium="left-rail"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
+        <li class="usa-sidenav__item">
+          <Link href="https://github.com/CMSgov/bluebutton-web-server" showIcon={false} data-tealium="left-rail">
+            <span class="display-flex flex-align-center">
+              <span class="padding-right-1">GitHub</span>
+              <Icon icon={Github} size={3} />
+            </span>
+          </Link>
+        </li>
+        <li class="usa-sidenav__item">
+          <Link href="https://sandbox.bluebutton.cms.gov/docs/openapi" showIcon={false} data-tealium="left-rail">
+            <span class="display-flex flex-align-center">
+              <span class="padding-right-1">Swagger</span>
+              <Icon icon={Swagger} size={3} />
+            </span>
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

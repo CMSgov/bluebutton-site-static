@@ -1,0 +1,35 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "#assets/*": [
+        "assets/*"
+      ],
+      "#components/*": [
+        "components/*"
+      ],
+      "#layouts/*": [
+        "layouts/*"
+      ],
+      "#utils/*": [
+        "utils/*"
+      ]
+    },
+    "allowJs": true,
+    "strictNullChecks": true,
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
+  },
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist",
+    "src/assets/uswds"
+  ]
+}

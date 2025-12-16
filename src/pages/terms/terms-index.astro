@@ -1,0 +1,47 @@
+---
+import Link from '#components/link.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+import { getTermsCollection } from '#utils/collections'
+
+const allTerms = await getTermsCollection()
+
+const currentTerms = allTerms[0]
+const restTerms = allTerms.slice(1)
+---
+
+<BaseLayout
+  title="Terms of Service Index"
+  description="View historical versions of the Blue Button API Terms of Service, including the current binding version for production access"
+>
+  <DocsLayout showSideNav={false}>
+    <div class="margin-bottom-4">
+      <h1>Terms of Service Index</h1>
+      <p class="usa-intro">
+        Listed below are the historical versions of the Blue Button API Terms of Service, including the current version.
+        Please note that only the current version is binding for production access.
+      </p>
+    </div>
+
+    <div class="usa-prose">
+      <ul>
+        <li>
+          <Link to="/terms/[...slug]" params={{ slug: '' }}>
+            Blue Button {currentTerms.data.title}. Published {currentTerms.data.published_date.toLocaleDateString()}
+            {` `}({currentTerms.id} - Current Version)
+          </Link>
+        </li>
+        {
+          restTerms.map((terms) => (
+            <li>
+              <Link to="/terms/[...slug]" params={{ slug: terms.id }}>
+                Blue Button {terms.data.title}. Published {terms.data.published_date.toLocaleDateString()}
+                {` `}({terms.id})
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </DocsLayout>
+</BaseLayout>

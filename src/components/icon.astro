@@ -1,0 +1,29 @@
+---
+import type { SvgComponent } from 'astro/types'
+import type { VariantProps } from 'cva'
+import { cva } from 'cva'
+
+const iconStyles = cva({
+  base: 'usa-icon',
+  variants: {
+    size: {
+      3: 'usa-icon--size-3',
+      4: 'usa-icon--size-4',
+      5: 'usa-icon--size-5',
+    },
+    color: {
+      white: 'text-white',
+      'base-darkest': 'text-base-darkest',
+      'base-dark': 'text-base-dark',
+    },
+  },
+})
+
+type Props = VariantProps<typeof iconStyles> & {
+  icon: SvgComponent
+}
+
+const { icon: Component, color, size, ...props } = Astro.props
+---
+
+<Component {...props} class={iconStyles({ size, color })} aria-hidden="true" />

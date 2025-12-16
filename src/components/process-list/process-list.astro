@@ -1,0 +1,11 @@
+---
+type Props = {
+  class?: string
+}
+
+const { class: className } = Astro.props
+---
+
+<ol class:list={['usa-process-list margin-top-1', className]}>
+  <slot />
+</ol>

@@ -1,0 +1,39 @@
+---
+title: "Data Overview"
+seo: 
+  description: "Blue Button uses the Hl7 FHIR standard for pulling Medicare Part A, B, and D enrollee data and the OAuth 2.0 standard for enrollee authorization"
+---
+
+The Blue Button database pulls data from the [CMS Chronic Conditions Warehouse (CCW)](https://www2.ccwdata.org/web/guest/home/), which contains Medicare Part A, B and D claims data going back to 2014. 
+
+<table class="usa-table usa-table--borderless usa-table--stacked margin-bottom-4">
+  <caption class="usa-sr-only">Definitions of Part A, B, and D claims data</caption>
+  <thead>
+    <tr>
+      <th scope="col">Data type</th>
+      <th scope="col">Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Medicare Part A claims data</th>
+      <td>
+        Inpatient hospital stays, care in skilled nursing facilities, and hospice care
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Medicare Part B claims data</th>
+      <td>
+        Doctors' services, outpatient care, preventive services, and durable medical equipment (DME)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Medicare Part D claims data</th>
+      <td>
+         Prescription drugs prescribed by healthcare providers
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Note: Blue Button API does not provide Medicare Part C claims (Medicare Advantage). However, if a Medicare Advantage enrollee has a Part D plan, the API includes those claims.

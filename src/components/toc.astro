@@ -1,0 +1,47 @@
+---
+import type { MarkdownHeading } from 'astro'
+
+interface Props {
+  headings: MarkdownHeading[]
+}
+
+const { headings = [] } = Astro.props
+// Only show headings up to h3 in sidebar
+const filteredHeadings = headings.filter((h) => h.depth < 4)
+---
+
+<aside
+  id="toc"
+  class="margin-top-0 overflow-y-auto padding-y-6 position-sticky margin-left-4"
+  style="top: 5.75rem; max-height: calc(100vh - 6rem);"
+>
+  <nav class="padding-1" aria-labelledby="toc-heading">
+    <h3 class="margin-bottom-2 font-sans-2xs" id="toc-heading">On this page</h3>
+    <ul class="usa-in-page-nav__list">
+      {
+        filteredHeadings.map((heading) => (
+          <li class:list={['usa-in-page-nav__item', heading.depth < 3 ? 'usa-in-page-nav__item--primary' : '']}>
+            <a
+              href={`#${heading.slug}`}
+              class="usa-in-page-nav__link"
+              style={
+                heading.depth >= 3
+                  ? {
+                      // We use inline styles here because the USWDS sidebar link styles have a higher specificity than the utility classes
+                      paddingLeft: '1.5rem',
+                    }
+                  : null
+              }
+            >
+              {heading.text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</aside>
+
+<script>
+  import '#utils/toc'
+</script>

@@ -1,0 +1,90 @@
+---
+title: "Coding System: EOB Type"
+seo: 
+  title: EOB Type Coding
+---
+
+## Usage
+
+**System URI**: `https://bluebutton.cms.gov/resources/codesystem/eob-type`
+
+**Appears In:** [ExplanationOfBenefit.type](http://hl7.org/fhir/STU3/explanationofbenefit-definitions.html#ExplanationOfBenefit.type)
+
+This FHIR [Coding.system](http://hl7.org/fhir/STU3/datatypes.html#coding) value is used for the `Coding`s that best identifies the claim/event for each `ExplanationOfBenefit` (EOB) resource. Such `ExplanationOfBenefit.type` `Coding`s will be present for all `ExplanationOfBenefit` resources returned by the API.
+
+The `ExplanationOfBenefit.type` field will contain multiple `Coding`s, based on the type of claim/event that the EOB represents. At the moment, only the BBAPI-specific `eob-type` `Coding` is guaranteed to be present for every EOB, and so it's the one that API authors are recommended to make the most use of. This is particularly critical since the data/fields available in the EOBs vary dramatically for each `eob-type`. For example, API users should not expect that the fields present in a "`CARRIER`" EOB will also be present in an "`HHA`" EOB; **the data schema for each claim/event type is quite different!**
+
+## Values
+
+The following table lists all of the claim/event EOB types, along with how they're mapped for each of the possible `ExplanationOfBenefit.type` `Coding`s.
+
+<table class="ds-c-table">
+  <caption>ExplanationOfBenefit.type Coding Values</caption>
+  <thead>
+    <tr>
+      <th scope="col">BBAPI <br /> [eob-type](https://bluebutton.cms.gov/resources/codesystem/eob-type) </th>
+      <th scope="col">FHIR <br /> [ex-claimtype](http://hl7.org/fhir/STU3/valueset-claim-type.html) </th>
+      <th scope="col">Medicare <br /> [nch_clm_type_cd](https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd) </th>
+      <th scope="col">Medicare <br /> [nch_near_line_rec_ident_cd](https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd) </th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>`CARRIER`</th>
+      <td>`professional`</td>
+      <td>`71` or `72`</td>
+      <td>`O`</td>
+      <td>[What Part B Covers](https://www.medicare.gov/what-medicare-covers/part-b/what-medicare-part-b-covers.html)</td>
+    </tr>
+    <tr>
+      <th>`DME`</th>
+      <td>_(no coding)_</td>
+      <td>`81` or `82`</td>
+      <td>`M`</td>
+      <td>[What Part B Covers: Durable Medical Equipment](https://www.medicare.gov/coverage/durable-medical-equipment-dme-coverage)</td>
+    </tr>
+    <tr>
+      <th>`HHA`</th>
+      <td>_(no coding)_</td>
+      <td>`10`</td>
+      <td>`U` or `V` or `W`</td>
+      <td>[What Part A Covers: Home Health Services](https://www.medicare.gov/coverage/home-health-services.html)</td>
+    </tr>
+    <tr>
+      <th>`HOSPICE`</th>
+      <td>`institutional`</td>
+      <td>`50`</td>
+      <td>`V`</td>
+      <td>[What Part A Covers: Hospice](https://www.medicare.gov/what-medicare-covers/part-a/part-a-coverage-hospice.html)</td>
+    </tr>
+    <tr>
+      <th>`INPATIENT`</th>
+      <td>`institutional`</td>
+      <td>`60`</td>
+      <td>`V`</td>
+      <td>[What Part A Covers: Inpatient Hospital Care](https://www.medicare.gov/coverage/hospital-care-inpatient.html)</td>
+    </tr>
+    <tr>
+      <th>`OUTPATIENT`</th>
+      <td>`professional`</td>
+      <td>`40`</td>
+      <td>`W`</td>
+      <td>[What Part B Covers](https://www.medicare.gov/what-medicare-covers/part-b/what-medicare-part-b-covers.html)</td>
+    </tr>
+    <tr>
+      <th>`PDE`</th>
+      <td>`pharmacy`</td>
+      <td>_(no coding)_</td>
+      <td>_(no coding)_</td>
+      <td>[What Drug Plans Cover](https://www.medicare.gov/drug-coverage-part-d)</td>
+    </tr>
+    <tr>
+      <th>`SNF`</th>
+      <td>`institutional`</td>
+      <td>`20` or `30`</td>
+      <td>`V`</td>
+      <td>[What Part A Covers: Skilled Nursing Facility Care](https://www.medicare.gov/what-medicare-covers/part-a/part-a-coverage-skilled-nursing-facilities.html)</td>
+    </tr>
+  </tbody>
+</table>

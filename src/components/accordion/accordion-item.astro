@@ -1,0 +1,25 @@
+---
+type Props = {
+  isExpanded?: boolean
+  heading: string
+  id?: string
+  headingAs?: 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+}
+
+const { isExpanded, heading, id, headingAs = 'div', ...props } = Astro.props
+
+const Element = headingAs
+const uniqueId = 'accordion-' + Math.random().toString(36).substring(6)
+const itemId = id || uniqueId
+---
+
+<Fragment>
+  <Element class="usa-accordion__heading">
+    <button class="usa-accordion__button" type="button" aria-expanded={isExpanded} aria-controls={itemId}>
+      {heading}
+    </button>
+  </Element>
+  <div {...props} id={itemId} class="usa-accordion__content usa-prose" hidden={!isExpanded}>
+    <slot />
+  </div>
+</Fragment>

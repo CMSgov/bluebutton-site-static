@@ -1,12 +1,12 @@
 {
   "name": "bluebutton-site-static",
-  "description": "A static Jekyll site for the Blue Button 2.0 API splash page: https://bluebutton.cms.gov.",
+  "description": "A static Jekyll site for the Blue Button API splash page: https://bluebutton.cms.gov.",
   "status": "Production",
   "permissions": {
     "licenses": [
       {
         "name": "CC0-1.0",
-        "URL": "https://github.com/CMSgov/bluebutton-sample-client-nodejs-react/blob/main/LICENSE"
+        "URL": "https://github.com/CMSgov/bluebutton-site-static/blob/master/LICENSE"
       }
     ],
     "usageType": [
@@ -24,14 +24,9 @@
   "languages": [
     "HTML",
     "CSS",
-    "Python",
-    "Ruby",
     "Shell",
     "SCSS",
-    "JavaScript",
-    "Groovy",
-    "Dockerfile",
-    "Batchfile"
+    "JavaScript"
   ],
   "maintenance": "internal",
   "contractNumber": [

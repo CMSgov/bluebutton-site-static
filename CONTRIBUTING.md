@@ -17,7 +17,7 @@ The Blue Button Web Server project is maintained by the CMS team and welcomes co
 # Building Dependencies
 First, you'll need to clone the CSS for this application
 
-We've moved the CSS for this application and our Sandbox application into a consolidated [Blue Button 2.0 API CSS repository](https://github.com/CMSgov/bluebutton-css) so that we can more easily keep things consistent and deploy changes more quickly.
+We've moved the CSS for this application and our Sandbox application into a consolidated [Blue Button API CSS repository](https://github.com/CMSgov/bluebutton-css) so that we can more easily keep things consistent and deploy changes more quickly.
 
 You'll need to clone/download the BlueButton CSS repository to get started. If you're using a terminal on a Mac/Linux machine, navigate into the `bluebutton-site-static` repository and then run the following command:
 

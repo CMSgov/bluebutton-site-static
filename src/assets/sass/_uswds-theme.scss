@@ -1,0 +1,51 @@
+/*
+----------------------------------------
+USWDS with settings overrides
+----------------------------------------
+Uncomment the following lines and add a list of changed settings
+in the form $setting: value,
+----------------------------------------
+*/
+
+@use "uswds-core" with (
+  $theme-show-notifications: false,
+  $theme-color-secondary: "indigo-warm-60v",
+  $theme-color-secondary-dark: "indigo-warm-70v",
+  $theme-focus-color: "cyan-30v",
+  $theme-font-role-heading: "sans",
+  $theme-font-type-sans: "open-sans",
+  $theme-lead-line-height: 3,
+  $theme-text-measure: 5,
+  $top-palettes: (
+    "palette-top-default",
+    "palette-units-system-positive-medium",
+  ),
+  $background-color-settings: (
+    active: true
+  ), 
+  $theme-utility-breakpoints: (
+    desktop-lg: true
+  ),
+  // Banner
+  $theme-banner-max-width: "desktop-lg",
+  // Card
+  $theme-card-gap: 4,
+  // Footer
+  $theme-footer-max-width: "desktop-lg",
+  // Grid
+  $theme-grid-container-max-width: "desktop-lg",
+  // Header
+  $theme-header-max-width: "desktop-lg",
+  // Identifier
+  $theme-identifier-max-width: "desktop-lg",
+  $theme-identifier-background-color: "blue-warm-80v",
+  $theme-identifier-identity-domain-color: "gray-cool-20", 
+  $theme-identifier-secondary-link-color: "gray-cool-20",
+  // Process List
+  $theme-process-list-connector-width: 4,
+  // Site Alert
+  $theme-site-alert-max-width: "desktop-lg",
+  // In Page Nav
+  $theme-in-page-nav-top: 10,
+  $theme-in-page-nav-main-content-max-width: "desktop-lg",
+);

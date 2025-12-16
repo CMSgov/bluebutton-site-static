@@ -1,0 +1,44 @@
+---
+import Link from '#components/link.astro'
+import TwoColumn from '#components/two-column.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+
+import discussion from '#assets/images/discussion.svg'
+import experts from '#assets/images/experts.svg'
+import { GOOGLE_GROUP_LINK } from '#utils/constants'
+---
+
+<BaseLayout
+  title="Support"
+  description="Contact the CMS Blue Button team with questions about the CMS Blue Button API and join our Google Group community to connect with fellow developers."
+>
+  <DocsLayout showSideNav={false} showToc={false}>
+    <div class="margin-bottom-4">
+      <h1>Support</h1>
+    </div>
+    <TwoColumn image={discussion} class="padding-bottom-8 usa-prose">
+      <div class="usa-prose">
+        <h2>Join the Community</h2>
+        <p>
+          Get the latest updates from the Blue Button API team and talk with fellow developers in the Google Developer
+          Group for CMS Blue Button.
+        </p>
+
+        <Link variant="primary" href={GOOGLE_GROUP_LINK}>Join the Google Group</Link>
+      </div>
+    </TwoColumn>
+
+    <TwoColumn image={experts} class="padding-top-8" dir="rtl">
+      <div class="usa-prose">
+        <h2>Contact Us</h2>
+        <p>
+          To get help with questions specific to your integration or ask questions about the production API approval
+          process, email <a href="mailto:BlueButtonAPI@cms.hhs.gov">BlueButtonAPI@cms.hhs.gov</a>. We respond to emails
+          within 3 business days.
+        </p>
+        <Link variant="primary" href="mailto:BlueButtonAPI@cms.hhs.gov">Email us</Link>
+      </div>
+    </TwoColumn>
+  </DocsLayout>
+</BaseLayout>

@@ -1,0 +1,84 @@
+---
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+import { $path, type RouteId, type RouteOptions } from 'astro-typesafe-routes/path'
+import Link from '#components/link.astro'
+import { getApiCollection, getDataCollection } from '#utils/collections'
+
+type SitemapLink<T extends RouteId> = RouteOptions<T> & {
+  label: string
+  children?: (RouteOptions<T> & { label: string })[]
+}
+
+type SitemapLinks = SitemapLink<RouteId>[]
+
+const docsnavLinks = (await getApiCollection()).map((doc) => ({
+  href: $path({ to: '/api-documentation/[...slug]', params: { slug: doc.id } }),
+  label: doc.data.title,
+}))
+const datanavLinks = (await getDataCollection()).map((doc) => ({
+  href: $path({ to: '/data/[...slug]', params: { slug: doc.id } }),
+  label: doc.data.title,
+}))
+
+const sitemapLinks = [
+  {
+    label: 'Home',
+    href: $path({ to: '/' }),
+  },
+  {
+    label: 'Use Cases',
+    href: $path({ to: '/use-cases' }),
+  },
+  {
+    label: 'API Documentation',
+    href: $path({ to: '/api-documentation' }),
+    children: docsnavLinks,
+  },
+  {
+    label: 'Data Overview',
+    href: $path({ to: '/data' }),
+    children: datanavLinks,
+  },
+  {
+    label: 'Production Access',
+    href: $path({ to: '/production-access' }),
+  },
+  {
+    label: 'Support',
+    href: $path({ to: '/support' }),
+  },
+]
+---
+
+<BaseLayout
+  title="Sitemap"
+  description="Navigate the Blue Button website with our sitemap, containing all the pages including API documentation, data resources, production access process, and support options"
+>
+  <DocsLayout showSideNav={false}>
+    <div class="margin-bottom-4">
+      <h1>Sitemap</h1>
+    </div>
+    <div class="usa-prose">
+      <ul>
+        {
+          sitemapLinks.map((link) => (
+            <li>
+              <Link href={link.href}>{link.label}</Link>
+
+              {link?.children ? (
+                <ul>
+                  {link.children.map((child) => (
+                    <li>
+                      <Link href={child.href}>{child.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </DocsLayout>
+</BaseLayout>

@@ -1,0 +1,130 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+
+export async function getStaticPaths() {
+  const codebookResources = await getCollection('codebooks')
+  const csvResources = await getCollection('csvVariables')
+
+  const csvVars = csvResources.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
+
+  const codebooksVars = codebookResources.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
+
+  return [...codebooksVars, ...csvVars]
+}
+
+const { post } = Astro.props
+
+const title = post.collection === 'codebooks' ? `Variable: ${post.data.title}` : `Variable: ${post.data.sourceField}`
+---
+
+<BaseLayout title={title} description="">
+  <DocsLayout showSideNav={false}>
+    <div class="usa-prose margin-y-6">
+      {
+        post?.collection === 'codebooks' ? (
+          <Fragment>
+            <h1>Variable: {post.data.title}</h1>
+            <p class="usa-intro">{post.data.label}</p>
+
+            <h2>Description</h2>
+            <p>{post.data.description || 'n/a'}</p>
+
+            <h2>Comment</h2>
+            <p>{post.data.comment || 'n/a'}</p>
+
+            <h2>Values</h2>
+            {post.data.values && post.data.values.length > 0 ? (
+              <>
+                <p>This variable is coded, and will contain one of the following values.</p>
+                <table>
+                  <caption>Values for</caption>
+                  <thead>
+                    <th>Value</th>
+                    <th>Description</th>
+                  </thead>
+                  <tbody>
+                    {post.data.values.map((val) => (
+                      <tr>
+                        <td>{val.code}</td>
+                        <td>{val.text}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </>
+            ) : (
+              <p>n/a</p>
+            )}
+            <h2>Other Info</h2>
+            <p>Some additional information on this variable:</p>
+            <ul>
+              <li>
+                <strong>Short Name: </strong>
+                {post.data.shortName}
+              </li>
+              <li>
+                <strong>Long Name: </strong>
+                {post.data.longName}
+              </li>
+              <li>
+                <strong>Type: </strong>
+                {post.data.type}
+              </li>
+              <li>
+                <strong>Length: </strong>
+                {post.data.length}
+              </li>
+              <li>
+                <strong>Source: </strong>
+                {post.data.source}
+              </li>
+              <li>
+                <strong>Value Format: </strong>
+                {post.data.valueFormat}
+              </li>
+            </ul>
+          </Fragment>
+        ) : post.collection === 'csvVariables' ? (
+          <Fragment>
+            <h1>Variable: {post.data.sourceField}</h1>
+            <p class="usa-intro">{post.data.fieldName}</p>
+
+            {post.data.sourceDefinition && post.data.sourceDefinition.length ? (
+              <Fragment>
+                <h2>Source System Definition</h2>
+                {post.data.sourceDefinition.map((srcDef) => (
+                  <p>{srcDef}</p>
+                ))}
+              </Fragment>
+            ) : null}
+
+            <h2>Other Info</h2>
+            <ul>
+              {post.data.sourceSystem ? (
+                <li>
+                  <strong>Source System:</strong> {post.data.sourceSystem}
+                </li>
+              ) : null}
+              <li>
+                <strong>Source Field:</strong> {post.data.fieldName}
+              </li>
+              {post.data.versionAdded ? (
+                <li>
+                  <strong>Version:</strong> {post.data.versionAdded}
+                </li>
+              ) : null}
+            </ul>
+          </Fragment>
+        ) : null
+      }
+    </div>
+  </DocsLayout>
+</BaseLayout>

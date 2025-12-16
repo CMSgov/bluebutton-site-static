@@ -1,0 +1,28 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+type Props = {
+  class?: string
+  image: ImageMetadata
+  dir?: 'ltr' | 'rtl'
+}
+
+const { image, dir = 'ltr', class: className } = Astro.props
+---
+
+<div class:list={['grid-row grid-gap-4 desktop:grid-gap-6', className]}>
+  <div
+    class:list={[
+      'tablet:grid-col display-flex flex-align-center tablet:flex-justify-center',
+      dir === 'ltr' ? 'desktop:order-last' : null,
+    ]}
+  >
+    <Image class="add-aspect-16x9 width-full" style="object-fit:contain;" src={image} alt="" />
+  </div>
+  <div class="tablet:grid-col padding-top-4 tablet:padding-top-0 display-flex flex-align-center">
+    <div>
+      <slot />
+    </div>
+  </div>
+</div>
