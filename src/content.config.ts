@@ -1,6 +1,6 @@
 import { codeSystemSchema, structureDefinitionSchema } from '#utils/collections'
-import { loadCodebooks } from '#utils/load-codebooks'
-import { loadCsvResources } from '#utils/load-csv-resources'
+import { loadCodebooks } from '#utils/loaders/load-codebooks'
+import { loadCsvResources } from '#utils/loaders/load-csv-resources'
 import { glob } from 'astro/loaders'
 import { defineCollection, z } from 'astro:content'
 
