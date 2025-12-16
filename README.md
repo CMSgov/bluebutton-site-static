@@ -66,57 +66,57 @@ This project requires you to use [Node.js](https://nodejs.org/en). Once installe
 
 ## Directories
 
-### `ops`
+### `./ops`
 
 This is where our files related to deploying the site live.
 
-### `scripts`
+### `./scripts`
 
 Any reusable scripts we use for development will use this directory. Typically, these scripts will be referenced in a defined `npm` script, inside `package.json`.
 
-### `public`
+### `./public`
 
 This is where static, uncompiled files are stored. Things like the site's meta image, resources like PDF's and text documents, and any other files that are served "as-is".
 
-### `public/img`
+### `./public/img`
 
 This is the default directory where USWDS's CSS expects icons to be. We only reference a few, so they're manually added into this location rather than running USWDS's `gulp` scripts.
 
-### `src`
+### `./src`
 
 This is where the bulk of the project lives. Everything in here is bundled into the project files
 
-### `src/assets`
+### `./src/assets`
 
 Assets that are used by and bundled into the site. These files are optimized and compiled at "build time".
 
-### `src/components`
+### `./src/components`
 
 Reusable pieces of code that are referenced regularly throughout the site. Can be `.astro` or `.tsx` components.
 
-### `src/content`
+### `./src/content`
 
-Where our site's content lives. This can be (mostly) any data type: `markdown`, `json`, `csv`, etc. It's reference and loaded into our site as defined in `src/content.config.ts`.
+Where our site's content lives. This can be (mostly) any data type: `markdown`, `json`, `csv`, etc. It's reference and loaded into our site as defined in `./src/content.config.ts`.
 
-### `src/layouts`
+### `./src/layouts`
 
-Similar to `src/components` in that it's a reusable piece of code. Except these components are used to "wrap around" rather than "injected into".
+Similar to `./src/components` in that it's a reusable piece of code. Except these components are used to "wrap around" rather than "injected into".
 
-### `src/pages`
+### `./src/pages`
 
 This is where Astro looks to create all the pages on the site. Pages can be `.astro` or `markdown` files. In our case, we're using `.astro` and pulling in `markdown` content manually. Each page is exposed as a route based on its file name.
 
-- `src/pages/blog.astro` creates a `/blog` route.
-- `src/pages/blog/[slug]` creates a dynamic `/blog/blog-slug` route.
-- `src/pages/blog/[...slug]` creates a dynamic `/blog/a/b/c` route.
+- `./src/pages/blog.astro` creates a `/blog` route.
+- `./src/pages/blog/[slug]` creates a dynamic `/blog/blog-slug` route.
+- `./src/pages/blog/[...slug]` creates a dynamic `/blog/a/b/c` route.
 
 [More details on Astro routing](https://docs.astro.build/en/guides/routing/)
 
-### `src/utils`
+### `./src/utils`
 
 Various reusable functions that we use throught the site.
 
-### `src/content.config.ts`
+### `./src/content.config.ts`
 
 Where we define the site's content schemas. This let's us know the "shape" of our various content as we're working with it in our templates and components.
 
@@ -138,13 +138,13 @@ The "frontmatter" is where the any variables are defined. These files are static
 
 ## Codebook, Resources, FHIR Responses, and Data Dictionary
 
-Like all other content, these resources live in `src/content` under a path that matches the pattern of the live URL path. For example, `https://bluebutton.cms.gov/resources/codesystem/eob-type/` content can be found at `src/content/resources/codesystem/eob-type`.
+Like all other content, these resources live in `./src/content` under a path that matches the pattern of the live URL path. For example, `https://bluebutton.cms.gov/resources/codesystem/eob-type/` content can be found at `./src/content/resources/codesystem/eob-type`.
 
 Any resource that is defined as `.mdx` or `.json` will automatically be processed just like any other content. However, other "data" content lives as `.csv` or `.xml` which require custom loaders. These loaders can be found in `utils/loaders`. These types of files undergo multiple steps of processing:
 
 1. Data is ingested and initially parsed with a [`Zod`](https://zod.dev/) schema. This turns ambiguous data files into strongly typed data which ensures consistency and prevents unexpected bugs.
    1. We typically return the processed data with a more terse schema that is easier consume in our page templates.
-2. These files are processed again for Astro's specific content schema generation. You can see this defined in `src/content.config.ts`.
+2. These files are processed again for Astro's specific content schema generation. You can see this defined in `./src/content.config.ts`.
 
 ## Deployment
 
