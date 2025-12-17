@@ -54,13 +54,13 @@ pipeline {
     }
 
     stage("Checkout release tag") {
-      steps {
+       steps {
           sh '''
             git fetch --tags
             git checkout tags/\${RELEASE_TAG}
           '''
-      }
-    }
+       }
+     }
 
     stage("Determine Akamai NetStorage path") {
       steps {
@@ -79,16 +79,41 @@ pipeline {
       }
     }
 
-    stage("Run Bundle Install") {
+    stage("Install Node.js and npm") {
       steps {
-        sh 'bundle install'
+        sh '''
+          # Check if Node.js is already installed
+          if ! command -v node &> /dev/null; then
+            echo "Installing Node.js..."
+            
+            # Install Node.js from NodeSource
+            curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
+            apt-get install -y nodejs
+            
+            # Verify installation
+            node --version
+            npm --version
+          else
+            echo "Node.js is already installed:"
+            node --version
+            npm --version
+          fi
+        '''
       }
     }
 
-    stage("Run Jekyll Build") {
+    stage("Run NPM Install") {
       steps {
         sh """
-        bundle exec jekyll build --config _config.yml,_config-${params.SITE_ENV}.yml
+        npm install
+        """
+      }
+    }
+    
+    stage("Run Build script") {
+      steps {
+        sh """
+        npm run build
         """
       }
     }
@@ -96,25 +121,7 @@ pipeline {
     stage("Deploy Static Site to Akamai NetStorage (rsync)") {
       steps {
         sh """
-        rsync -av -e "ssh -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i '${AKAMAI_SCP_SSH_KEY}'" ./_site/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION} --delete
-        """
-      }
-    }
-
-    stage("Checkout CSS Repo") {
-      steps {
-        checkout([
-            $class: "GitSCM",
-            branches: [[name: "refs/tags/${params.CSS_RELEASE_TAG}"]],
-            userRemoteConfigs: [[url: "https://github.com/CMSgov/bluebutton-css.git"]]
-        ])
-      }
-    }
-
-    stage("Deploy CSS to Akamai NetStorage (rsync)") {
-      steps {
-        sh """
-        rsync -av -e "ssh -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i '${AKAMAI_SCP_SSH_KEY}'" ./dist/static-main.css ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION}assets/css/
+        rsync -av -e "ssh -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -i '${AKAMAI_SCP_SSH_KEY}'" ./dist/ ${AKAMAI_SSH_USER}@bluebuttoncms.rsync.upload.akamai.com:${UPLOAD_LOCATION} --delete
         """
       }
     }
