@@ -40,16 +40,6 @@ pipeline {
       }
     }
 
-    stage("Checkout release tag") {
-      steps {
-          sh '''
-            git config --add remote.origin.fetch +refs/heads/uswds-redesign:refs/remotes/origin/uswds-redesign
-            git fetch
-            git checkout uswds-redesign
-          '''
-      }
-    }
-
     stage("Determine Akamai NetStorage path") {
       steps {
         script {
