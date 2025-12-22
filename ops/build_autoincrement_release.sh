@@ -113,7 +113,7 @@ GITHUB_REPO="$(git ls-remote --get-url | grep -o '[^:/]\{1,\}/bluebutton-site-st
 
 # Test running from root of repository
 #
-if [[ ! -f "404.html" ]]; then
+if [[ ! -f "LICENSE" ]]; then
     echo "Please run script from the root of repository: ./ops/build_autoincrement_release.sh"
     exit 1
 fi

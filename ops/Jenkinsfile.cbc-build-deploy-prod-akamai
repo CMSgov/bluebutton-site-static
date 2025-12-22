@@ -23,12 +23,6 @@ pipeline {
       defaultValue: "",
       description: "The release tag of the site-static repo to deploy."
     )
-
-    string(
-      name: "CSS_RELEASE_TAG",
-      defaultValue: "",
-      description: "The release tag of the CSS repo to deploy."
-    )
   }
 
   stages {
@@ -44,7 +38,7 @@ pipeline {
     stage("Check parameter values") {
       steps {
         script {
-          if (params.RELEASE_TAG && params.CSS_RELEASE_TAG) {
+          if (params.RELEASE_TAG) {
             echo "Release tag parameters are set, Proceeding to next stage..."
           } else {
             error "Release tag values must be set, exiting pipeline..."
