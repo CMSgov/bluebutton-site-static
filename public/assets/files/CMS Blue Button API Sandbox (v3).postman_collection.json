@@ -266,7 +266,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/v2/fhir/Coverage/:resource_id",
+							"raw": "{{baseUrl}}/v3/fhir/Coverage/:resource_id",
 							"host": [
 								"{{baseUrl}}"
 							],
