@@ -226,7 +226,7 @@
 								"{{baseUrl}}"
 							],
 							"path": [
-								"v2",
+								"v3",
 								"fhir",
 								"Coverage",
 								""
