@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "48394880-3f25-4d29-b799-2466f8bcfc94",
+		"_postman_id": "38dabd65-03d6-4724-8850-32b3bf257469",
 		"name": "CMS Blue Button API Sandbox (v3)",
 		"description": "To use this Postman collection to query the Blue Button Sandbox, follow the instructions below.\n\n1. Create a Sandbox account and application by following the instructions in the [Blue Button developer documentation](https://bluebutton.cms.gov/developers/#getting-started-in-the-developer-sandbox). When configuring your Sandbox application:\n    1. Choose \"Yes\" for the question, \"Does your application need to collect beneficiary demographic information (Name, address, date of birth, race, and sex)?\"\n        \n    2. Enter the following URLs into the **Callback URLs / Redirect URIs** field, separated by a carriage return:\n        1. `https://oauth.pstmn.io/v1/callback`\n            \n        2. `https://oauth.pstmn.io/v1/browser-callback`\n            \n2. Select the top-level folder in this Postman collection (**CMS Blue Button API Sandbox**).\n    \n3. Select the **Variables** tab.\n    \n4. Copy the **Client ID** and **Client Secret** from your Sandbox application into both the **Initial Value** and **Current Value** cels for the corresponding Postman variables (`clientId` and `clientSecret`).\n    \n5. Select the **Auth** tab.\n    \n6. Click **Get New Access Token**.\n    \n7. A Medicare login screen will open. Enter the username and password for a Sandbox synthetic user account (e.g., user = \"BBUser00000\" and password = \"PW00000!\"), and click **Log in**.\n    \n8. Click **Connect**.\n    \n9. Click **Use Token**.\n    \n10. Make any desired Blue Button API calls under the **Patient**, **Explanation Of Benefit**, and **Coverage** folders.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -99,6 +99,69 @@
 									"key": "resource_id",
 									"value": "",
 									"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Digital Insurance Card",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v3/fhir/Patient/$generate-insurance-card",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v3",
+								"fhir",
+								"Patient",
+								"$generate-insurance-card"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "",
+									"description": "The patient identifier to search for",
+									"disabled": true
+								},
+								{
+									"key": "_lastUpdated",
+									"value": "",
+									"description": "Include resources last updated in the given range",
+									"disabled": true
+								},
+								{
+									"key": "startIndex",
+									"value": "",
+									"description": "The offset used for result pagination",
+									"disabled": true
+								},
+								{
+									"key": "_has:Coverage",
+									"value": "",
+									"description": "Part D coverage type/year",
+									"disabled": true
+								},
+								{
+									"key": "cursor",
+									"value": "",
+									"description": "The cursor used for result pagination",
+									"disabled": true
+								},
+								{
+									"key": "_id",
+									"value": "",
+									"description": "The patient identifier to search for",
+									"disabled": true
 								}
 							]
 						}
