@@ -4,9 +4,10 @@ import type { VariantProps } from 'cva'
 import { cva } from 'cva'
 
 const iconStyles = cva({
-  base: 'usa-icon',
+  base: 'usa-icon text-middle',
   variants: {
     size: {
+      2: 'usa-icon--size-2',
       3: 'usa-icon--size-3',
       4: 'usa-icon--size-4',
       5: 'usa-icon--size-5',
@@ -20,10 +21,11 @@ const iconStyles = cva({
 })
 
 type Props = VariantProps<typeof iconStyles> & {
-  icon: SvgComponent
+  icon: SvgComponent,
+  class?: string
 }
 
-const { icon: Component, color, size, ...props } = Astro.props
+const { icon: Component, color, size, class: className, ...props } = Astro.props
 ---
 
-<Component {...props} class={iconStyles({ size, color })} aria-hidden="true" />
+<Component {...props} class={iconStyles({ size, color, className })} aria-hidden="true" />
