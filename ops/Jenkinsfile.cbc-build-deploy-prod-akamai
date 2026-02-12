@@ -105,6 +105,9 @@ pipeline {
     }
     
     stage("Run Build script") {
+      environment {
+        SITE_ENV = params.SITE_ENV
+      }
       steps {
         sh """
         npm run build

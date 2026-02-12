@@ -2,7 +2,7 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import expressiveCode from 'astro-expressive-code'
 import typesafeRoutes from 'astro-typesafe-routes'
-import { defineConfig } from 'astro/config'
+import { defineConfig, envField } from 'astro/config'
 
 import { SITE_METADATA } from './src/utils/constants'
 
@@ -13,6 +13,18 @@ export default defineConfig({
     prefetchAll: true,
   },
   trailingSlash: 'always',
+
+  env: {
+    schema: {
+      // The deployed environment, set in Jenkins script
+      SITE_ENV: envField.enum({
+        context: 'client',
+        access: 'public',
+        values: ['test', 'staging', 'prod'],
+        default: 'prod',
+      }),
+    },
+  },
 
   markdown: {
     remarkRehype: {
