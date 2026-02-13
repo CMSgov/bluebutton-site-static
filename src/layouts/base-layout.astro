@@ -80,6 +80,16 @@ const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toStri
       }}
     />
     <script src="#assets/uswds/js/uswds-init.js"></script>
+    <script is:inline define:vars={{ TEALIUM_ENV, title }}>
+      // eslint-disable-next-line unused-imports/no-unused-vars, prefer-const
+      let utag_data = {
+        content_language: 'en',
+        logged_in: false,
+        page_type: false,
+        page_name: title,
+        site_environment: TEALIUM_ENV,
+      }
+    </script>
     <script is:inline src={`https://tealium-tags.cms.gov/cms-bluebutton/${TEALIUM_ENV}/utag.sync.js`}></script>
   </head>
 

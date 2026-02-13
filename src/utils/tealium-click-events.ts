@@ -1,4 +1,5 @@
-import { SITE_METADATA } from "./constants"
+import { SITE_METADATA } from './constants'
+
 const baseUrl = SITE_METADATA.url
 
 // Wait for USWDS js to finish
