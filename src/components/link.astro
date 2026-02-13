@@ -8,13 +8,12 @@ import type { HrefOrTo } from '#utils/types'
 import Icon from './icon.astro'
 import FileDownload from '@uswds/uswds/img/usa-icons/file_download.svg'
 
-
 type Props<T extends RouteId> = Omit<HTMLAttributes<'a'>, 'href'> &
   VariantProps<typeof button> & {
     showIcon?: boolean
   } & HrefOrTo<T>
-    
-const downloadExts = ['.csv', '.pdf', '.json', '.docx', '.xlsx', '.xls']
+
+const downloadExts = ['.csv', '.pdf', '.json', '.docx', '.xlsx', '.xls', '.zip']
 
 const props = Astro.props as Props<RouteId>
 
@@ -43,7 +42,7 @@ if ('to' in props && props.to) {
   throw new Error('Link component requires either "href" or "to" prop')
 }
 
-if(isExternal === false && downloadExts.some(ext => computedHref.endsWith(ext))){
+if (isExternal === false && downloadExts.some((ext) => computedHref.endsWith(ext))) {
   isDownload = true
 }
 
@@ -52,14 +51,9 @@ const { variant = 'link', size, showIcon = true, class: className, ...restProps 
 
 <a
   href={computedHref.replace(/\/+$/g, '/')}
-  target={(isExternal || isDownload) ? '_blank' : undefined}
+  target={isExternal || isDownload ? '_blank' : undefined}
   rel={isExternal && !computedHref?.includes('cms.gov') ? 'noreferrer' : undefined}
-  class:list={[
-    button({ variant, size }), 
-    isExternal && showIcon ? 'usa-link--external' : '', 
-    className
-  ]}
+  class:list={[button({ variant, size }), isExternal && showIcon ? 'usa-link--external' : '', className]}
   data-tealium={isDownload ? 'download' : undefined}
-  {...restProps}
-  ><slot />{isDownload ? (<Icon icon={FileDownload} size={2} class="margin-left-05" />) : null}</a
+  {...restProps}><slot />{isDownload ? <Icon icon={FileDownload} size={2} class="margin-left-05" /> : null}</a
 >
