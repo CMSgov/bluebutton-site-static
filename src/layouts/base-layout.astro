@@ -81,13 +81,14 @@ const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toStri
     />
     <script src="#assets/uswds/js/uswds-init.js"></script>
     <script is:inline define:vars={{ TEALIUM_ENV, title }}>
-      // eslint-disable-next-line unused-imports/no-unused-vars, prefer-const
-      let utag_data = {
+      // window is required, otherwise utag_data is locally scoped to this script block
+      window.utag_data = {
         content_language: 'en',
         logged_in: false,
         page_type: false,
         page_name: title,
-        site_environment: TEALIUM_ENV,
+        // default site_environment is 'production', only overwrite in non-prod
+        ...(TEALIUM_ENV !== 'prod' ? { site_environment: TEALIUM_ENV } : {}),
       }
     </script>
     <script is:inline src={`https://tealium-tags.cms.gov/cms-bluebutton/${TEALIUM_ENV}/utag.sync.js`}></script>
@@ -111,10 +112,8 @@ const getAbsolutePath = (path: string) => new URL(path, Astro.url.origin).toStri
         d.src = a
         d.type = `text/java${c}`
         d.async = true
-        e = document.body.insertBefore(d, document.body.firstChild)
-        f = document.createElement('script')
-        f.text = 'utag_data = {}'
-        e.parentNode.insertBefore(f, e)
+        a = b.getElementsByTagName(c)[0]
+        a.parentNode.insertBefore(d, a)
       })()
     </script>
     <script>
