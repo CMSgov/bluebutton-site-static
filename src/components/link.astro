@@ -13,7 +13,8 @@ type Props<T extends RouteId> = Omit<HTMLAttributes<'a'>, 'href'> &
     showIcon?: boolean
   } & HrefOrTo<T>
 
-const downloadExts = ['.csv', '.pdf', '.json', '.docx', '.xlsx', '.xls', '.zip']
+const downloadExtsRegex =
+  /\.(doc|docx|xls|xlsx|xlsm|ppt|pptx|exe|zip|pdf|js|txt|csv|dxf|dwgd|rfa|rvt|dwfx|dwg|wmv|jpg|msi|7z|gz|tgz|wma|mov|avi|mp3|mp4|csv|mobi|epub|swf|rar|json)$/
 
 const props = Astro.props as Props<RouteId>
 
@@ -42,7 +43,7 @@ if ('to' in props && props.to) {
   throw new Error('Link component requires either "href" or "to" prop')
 }
 
-if (isExternal === false && downloadExts.some((ext) => computedHref.endsWith(ext))) {
+if (isExternal === false && downloadExtsRegex.test(computedHref)) {
   isDownload = true
 }
 
