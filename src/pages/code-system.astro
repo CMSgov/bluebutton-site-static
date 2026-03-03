@@ -1,0 +1,34 @@
+---
+import clmMdcrNpmtRsnCd from '../content/fhir/CodeSystem/CLM-MDCR-NPMT-RSN-CD.json';
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+---
+
+<BaseLayout title=`Variable: ${clmMdcrNpmtRsnCd.name} - CMS Blue Button API` description={clmMdcrNpmtRsnCd.description || ''}>
+  <DocsLayout>
+    <div class="usa-prose">
+      <h2>Variable: {clmMdcrNpmtRsnCd.name}</h2>
+      <p>{clmMdcrNpmtRsnCd.title}</p>
+      <h2>Description:</h2>
+      <p>{clmMdcrNpmtRsnCd.description}</p>
+      <h2>Values</h2>
+      <p>
+      This variable is coded, and will contain one of the following values.
+      </p>
+      <table>
+        <thead><tr>
+          <td>Value</td>
+          <td>Description</td>
+        </tr></thead>
+        <tbody>
+        {clmMdcrNpmtRsnCd.concept.map((item) => (
+          <tr>
+            <td>{item.code}</td>
+            <td>{item.display}</td>
+          </tr>
+        ))}
+        </tbody>
+      </table>
+    </div>
+  </DocsLayout>
+</BaseLayout>
