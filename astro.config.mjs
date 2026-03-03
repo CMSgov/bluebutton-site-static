@@ -12,7 +12,7 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true,
   },
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
 
   markdown: {
     remarkRehype: {
