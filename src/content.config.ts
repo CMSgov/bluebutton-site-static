@@ -122,14 +122,6 @@ const fhirJsonCollection = defineCollection({
   schema: z.discriminatedUnion('resourceType', [structureDefinitionSchema, codeSystemSchema]),
 })
 
-const fhirCodeSystemJsonCollection = defineCollection({
-  loader: glob({
-    pattern: '**/*.json',
-    base: './src/content/fhir/CodeSystem',
-  }),
-  schema: codeSystemSchema,
-})
-
 export const collections = {
   pages: pageCollection,
   resources: resourcesCollection,
@@ -139,5 +131,4 @@ export const collections = {
   csvVariables: csvVariablesCollection,
   terms: termsCollection,
   fhir: fhirJsonCollection,
-  fhirCodeSystem: fhirCodeSystemJsonCollection,
 }
