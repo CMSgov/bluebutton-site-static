@@ -5,15 +5,21 @@ import type { RouteId } from 'astro-typesafe-routes/path'
 import type { HTMLAttributes } from 'astro/types'
 import type { VariantProps } from 'cva'
 import type { HrefOrTo } from '#utils/types'
+import Icon from './icon.astro'
+import FileDownload from '@uswds/uswds/img/usa-icons/file_download.svg'
 
 type Props<T extends RouteId> = Omit<HTMLAttributes<'a'>, 'href'> &
   VariantProps<typeof button> & {
     showIcon?: boolean
   } & HrefOrTo<T>
 
+const downloadExtsRegex =
+  /\.(doc|docx|xls|xlsx|xlsm|ppt|pptx|exe|zip|pdf|js|txt|csv|dxf|dwgd|rfa|rvt|dwfx|dwg|wmv|jpg|msi|7z|gz|tgz|wma|mov|avi|mp3|mp4|csv|mobi|epub|swf|rar|json)$/
+
 const props = Astro.props as Props<RouteId>
 
 let isExternal = false
+let isDownload = false
 let computedHref: string
 
 if ('to' in props && props.to) {
@@ -37,13 +43,18 @@ if ('to' in props && props.to) {
   throw new Error('Link component requires either "href" or "to" prop')
 }
 
+if (isExternal === false && downloadExtsRegex.test(computedHref)) {
+  isDownload = true
+}
+
 const { variant = 'link', size, showIcon = true, class: className, ...restProps } = props
 ---
 
 <a
   href={computedHref.replace(/\/+$/g, '/')}
-  target={isExternal ? '_blank' : undefined}
+  target={isExternal || isDownload ? '_blank' : undefined}
   rel={isExternal && !computedHref?.includes('cms.gov') ? 'noreferrer' : undefined}
   class:list={[button({ variant, size }), isExternal && showIcon ? 'usa-link--external' : '', className]}
-  {...restProps}><slot /></a
+  data-tealium={isDownload ? 'download' : undefined}
+  {...restProps}><slot />{isDownload ? <Icon icon={FileDownload} size={2} class="margin-left-05" /> : null}</a
 >
