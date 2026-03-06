@@ -1,0 +1,52 @@
+---
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+
+type CodeSystemPost = CollectionEntry<'fhir'> & { data: { resourceType: 'CodeSystem' } }
+
+export async function getStaticPaths() {
+  const posts = await getCollection('fhir')
+  return posts
+    .filter((post): post is CodeSystemPost => post.data.resourceType === 'CodeSystem')
+    .map((post) => ({
+      // This preserves the correct casing for these files. Forcing them to lowercase, alhough preferred, could cause 404 errors on Cloudfront/Akamai
+      params: { slug: `/${post.data.resourceType}/${post.data.id}` },
+      props: { post },
+    }))
+}
+
+const { post } = Astro.props
+---
+
+<BaseLayout title={`Variable: ${post.data.title}`} description={post.data.description || ''}>
+  <DocsLayout>
+    <div class="usa-prose">
+      <h2>Variable: {post.data.name}</h2>
+      <p>{post.data.title}</p>
+      <h2>Description:</h2>
+      <p>{post.data.description}</p>
+      <h2>Values</h2>
+      <p>This variable is coded, and will contain one of the following values.</p>
+      <table>
+        <thead
+          ><tr>
+            <td>Value</td>
+            <td>Description</td>
+          </tr></thead
+        >
+        <tbody>
+          {
+            post.data.concept.map((item) => (
+              <tr>
+                <td>{item.code}</td>
+                <td>{item.display}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </DocsLayout>
+</BaseLayout>
