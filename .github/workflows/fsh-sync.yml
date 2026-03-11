@@ -1,0 +1,22 @@
+name: Generate JSON from BFD FSH Files
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-json:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    # Checkout BFD Repo (public repo)
+    - name: Checkout BFD Repo
+      uses: actions/checkout@v4
+      with:
+        repository: CMSgov/beneficiary-fhir-data
+        path: beneficiary-fhir-data
+
+    - name: Verify BFD Repo Checkout
+      run:  |
+        ls
+        ls beneficiary-fhir-data
