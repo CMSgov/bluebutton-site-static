@@ -2,8 +2,8 @@ name: Generate JSON from BFD FSH Files
 
 on:
   schedule:
-    # Run on day 1 and day 15 of the month at 9:00 AM UTC
-    - cron: '0 2 1,15 * *'
+    # Run on day 1 and day 15 of the month at 8:00 AM UTC
+    - cron: '0 8 1,15 * *'
   workflow_dispatch:
 
 jobs:
