@@ -2,6 +2,9 @@ name: Generate JSON from BFD FSH Files
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - ryanm/bb2-4595-pt-2-fsh-generated-workflow/fsh-sync.yml
 
 jobs:
   generate-json:
