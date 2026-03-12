@@ -2,9 +2,6 @@ name: Generate JSON from BFD FSH Files
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - ryanm/bb2-4595-pt-2-fsh-generated-workflow/fsh-sync.yml
 
 jobs:
   generate-json:
@@ -23,3 +20,36 @@ jobs:
       run:  |
         ls
         ls beneficiary-fhir-data
+
+    # Setup Node
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    # Verify Node/npm was installed
+    - name: Verify Node Installation
+      run:  |
+        node --version
+        npm --version
+
+    # Install Sushi
+    - name: Install Sushi
+      run: npm install -g fsh-sushi fhirpath
+
+    # Verify sushi was installed
+    - name: Verify Sushi Install
+      run: sushi --version
+
+    # Generate JSON from FSH
+    - name: Generate JSON
+      run: |
+        cd beneficiary-fhir-data/apps/bfd-model-idr/sushi
+        sushi build
+
+    # Confirm JSON Output
+    - name: Verify generated JSON
+      run: |
+        echo "Checking output directory"
+        ls beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources
+
