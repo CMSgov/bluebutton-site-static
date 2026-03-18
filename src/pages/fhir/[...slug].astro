@@ -21,7 +21,7 @@ const { post } = Astro.props
 ---
 
 <BaseLayout title={`Variable: ${post.data.title}`} description={post.data.description || ''}>
-  <DocsLayout>
+  <DocsLayout showSideNav={false} showToc={true}>
     <div class="usa-prose">
       <h2>Variable: {post.data.name}</h2>
       <p>{post.data.title}</p>
