@@ -5,6 +5,7 @@ on:
     # Run on day 1 and day 15 of the month at 8:00 AM UTC
     - cron: '0 8 1,15 * *'
   workflow_dispatch:
+  push:
 
 jobs:
   generate-json:
@@ -38,11 +39,9 @@ jobs:
 
     # Install Sushi
     - name: Install Sushi
-      run: npm install -g fsh-sushi fhirpath
-
-    # Verify sushi was installed
-    - name: Verify Sushi Install
-      run: sushi --version
+      run:  |
+        npm install -g fsh-sushi fhirpath
+        sushi --version
 
     # Generate JSON from FSH
     - name: Generate JSON
@@ -55,4 +54,3 @@ jobs:
       run: |
         echo "Checking output directory"
         ls beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources
-
