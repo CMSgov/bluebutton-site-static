@@ -203,13 +203,13 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
 }
 ```
 
-Applications in the "10 hours" access category do not receive a refresh token in the Blue Button token response.
+Applications in the "1 hour" access category do not receive a refresh token in the Blue Button token response.
 
-Note that for applications in the "10 hours" or "13 months" access expiration categories, the response includes the `access_grant_expiration` date for that user.
+Note that for applications in the "1 hour" or "13 months" access expiration categories, the response includes the `access_grant_expiration` date for that user.
 
 ### Exchange refresh token for new access token
 
-Access tokens expire after 10 hours. You can't use an expired access token to access data. To access data after an access token expires, request a new access token using a refresh token. Refresh tokens are available to applications in the "13 months" and "Research" access duration categories.
+Access tokens expire after 1 hour. You can't use an expired access token to access data. To access data after an access token expires, request a new access token using a refresh token. Refresh tokens are available to applications in the "13 months" and "Research" access duration categories.
 
 You can use a refresh token at any time in your application's workflow, even before an access token expires.
 
@@ -319,7 +319,7 @@ For testing in our sandbox, you can use the `/expire_authenticated_user` endpoin
 
 `/expire_authenticated_user` can be used to test your code for the following conditions that produce the same error responses via the API:
 
-- When an access token expires, without needing to wait for the expiration in 10 hours
+- When an access token expires, without needing to wait for the expiration in 1 hour
 - When a patient revokes access to your application
 - When access granted to a patient's data has expired
 
