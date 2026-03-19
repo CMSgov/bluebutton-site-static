@@ -88,7 +88,8 @@ jobs:
           echo "Changes detected, committing and pushing"
           echo "changed=true" >> $GITHUB_OUTPUT
         fi
-
+    
+    # Commit and push changes if there are any
     - name: Commit and Push Changes
       if: steps.check-for-changes.outputs.changed == 'true'
       run: |
