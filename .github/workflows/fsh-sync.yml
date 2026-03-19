@@ -106,6 +106,7 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "Update JSON from BFD FSH files - $(date +%Y-%m-%d)"
+        branch: json-update-$(date +%Y-%m-%d)
         title: "Update JSON from BFD FSH files - $(date +%Y-%m-%d)"
         body: "This PR updates the JSON files generated from the BFD FSH files. Please review and merge if everything looks good."
         base: master
