@@ -1,0 +1,21 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_DSPNSNG_STUS_CD",
+  "id": "CLM-DSPNSNG-STUS-CD",
+  "title": "Claim Dispensing Status Code",
+  "description": "Indicates the status of prescription fulfillment.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-DSPNSNG-STUS-CD",
+  "concept": [
+    {
+      "code": "P",
+      "display": "Partially filled"
+    },
+    {
+      "code": "C",
+      "display": "Completely filled"
+    }
+  ],
+  "count": 2
+}

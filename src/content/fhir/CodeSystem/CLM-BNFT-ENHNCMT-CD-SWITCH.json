@@ -1,0 +1,21 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_BNFT_ENHNCMT_CD_SWITCH",
+  "id": "CLM-BNFT-ENHNCMT-CD-SWITCH",
+  "title": "Claim Benefit Enhancement Code Switch",
+  "description": "Claim Benefit Enhancement Code Switch.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-BNFT-ENHNCMT-CD-SWITCH",
+  "concept": [
+    {
+      "code": "Y",
+      "display": "This benefit enhancement is present for this claim/claim line."
+    },
+    {
+      "code": "N",
+      "display": "This benefit enhancement is not present for this claim/claim line."
+    }
+  ],
+  "count": 2
+}

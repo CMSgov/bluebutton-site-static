@@ -5,7 +5,7 @@
   "name": "Benefit_Balance",
   "id": "Benefit-Balance",
   "title": "Benefit Balance",
-  "description": "This code system includes a selection of codes which convey information about the claim balance by benefit category.",
+  "description": "Deprecated 2026-01-06. This code system includes a selection of codes which convey information about the claim balance by benefit category.",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/Benefit-Balance",
   "concept": [
     {
@@ -89,36 +89,6 @@
       "definition": "The amount of the deductible the beneficiary paid for inpatient services, as originally submitted on the institutional claim. Under Part A, the deductible applies only to inpatient hospital care (whether in an acute care facility, Inpatient psychiatric facility [IPF], inpatient rehabilitation facility [IRF], or long term care hospital [LTCH]) and is charged only at the beginning of each benefit period, which is similar to an episode of illness. This variable is null/missing for skilled nursing facility (SNF), home health, and hospice claims."
     },
     {
-      "code": "CLM_MDCR_COINSRNC_AMT",
-      "display": "Beneficiary Part A Coinsurance Liability Amount",
-      "definition": "The amount of money for which the intermediary has determined that the beneficiary is liable for Part A coinsurance on the institutional claim. Under Part A, beneficiaries pay coinsurance starting with the 61st day of an inpatient hospital stay (one daily amount for days 61-90, and a higher daily amount for any days after that, which count towards a beneficiary's 60 lifetime reserve days) or the 21st day of a skilled nursing facility (SNF) stay (a daily amount for days 21-100, after which SNF coverage ends). This variable is null/missing for home health and hospice claims."
-    },
-    {
-      "code": "CLM_BLOOD_LBLTY_AMT",
-      "display": "Beneficiary Blood Deductible Liability Amount",
-      "definition": "The amount of money for which the intermediary determined the beneficiary is liable for the blood deductible. A blood deductible amount applies to the first 3 pints of blood (or equivalent units; applies only to whole blood or packed red cells - not platelets, fibrinogen, plasma, etc. which are considered biologicals). However, blood processing is not subject to a deductible. Calculation of the deductible amount considers both Part A and Part B claims combined. The blood deductible does not count toward meeting the inpatient hospital deductible or any other applicable deductible and coinsurance amounts for which the patient is responsible."
-    },
-    {
-      "code": "CLM_NCVRD_CHRG_AMT",
-      "display": "Inpatient(or other Part A) Non-covered Charge Amount",
-      "definition": "The non-covered charges for all accommodations and services, reported on an inpatient claim."
-    },
-    {
-      "code": "CLM_MDCR_DDCTBL_AMT",
-      "display": "Beneficiary Part B Deductible Amount",
-      "definition": "The amount of money for which the intermediary or carrier has determined that the beneficiary is liable for the Part B cash deductible on the claim."
-    },
-    {
-      "code": "CLM_OPRTNL_IME_AMT",
-      "display": "Operating Indirect Medical Education Amount",
-      "definition": "This is one component of the total amount that is payable on PPS claims, and reflects the IME (indirect medical education) payments for operating expenses (such as labor) for the claim."
-    },
-    {
-      "code": "CLM_OPRTNL_DSPRTNT_AMT",
-      "display": "Operating Disproportionate Share Amount",
-      "definition": "This is one component of the total amount that is payable on prospective payment system (PPS) claims and reflects the DSH (disproportionate share hospital) payments for operating expenses (such as labor) for the claim."
-    },
-    {
       "code": "CLM_HIPPS_UNCOMPD_CARE_AMT",
       "display": "Claim Uncompensated Care Payment Amount",
       "definition": "This field identifies the payment for disproportionate share hospitals (DSH). It represents the uncompensated care amount of the payment."
@@ -140,5 +110,5 @@
       "display": "The count of the number of HHA visits as derived by CMS."
     }
   ],
-  "count": 27
+  "count": 21
 }

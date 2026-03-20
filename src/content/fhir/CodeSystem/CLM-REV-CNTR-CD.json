@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "CLM_REV_CNTR_CD",
   "id": "CLM-REV-CNTR-CD",
-  "title": "Clm Rev Cntr Cd",
-  "description": "Code system for clm rev cntr cd",
+  "title": "Claim Revenue Center Code",
+  "description": "Domain of Revenue Center Codes",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-REV-CNTR-CD",
   "concept": [
     {
@@ -2163,11 +2163,7 @@
     {
       "code": "3109",
       "display": "ADULT CARE - OTHER ADULT CARE"
-    },
-    {
-      "code": "~",
-      "display": "NO DESCRIPTION AVAILABLE"
     }
   ],
-  "count": 540
+  "count": 539
 }

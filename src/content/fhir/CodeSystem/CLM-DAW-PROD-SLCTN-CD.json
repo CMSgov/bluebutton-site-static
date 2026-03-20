@@ -1,0 +1,53 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_DAW_PROD_SLCTN_CD",
+  "id": "CLM-DAW-PROD-SLCTN-CD",
+  "title": "Dispense as Written Selection Code.",
+  "description": "Indicates the prescriber's instructions regarding generic substitution or how those instructions were followed",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-DAW-PROD-SLCTN-CD",
+  "concept": [
+    {
+      "code": "0",
+      "display": "No product selection indicated"
+    },
+    {
+      "code": "1",
+      "display": "Supplemental drugs (reported by plans that provide Enhanced Alternative coverage)"
+    },
+    {
+      "code": "2",
+      "display": "Substitution allowed – Patient requested that brand be dispensed"
+    },
+    {
+      "code": "3",
+      "display": "Substitution allowed – Pharmacist selected product dispensed"
+    },
+    {
+      "code": "4",
+      "display": "Substitution allowed - Generic not in stock"
+    },
+    {
+      "code": "5",
+      "display": "Substitution allowed – Brand drug dispensed as generic"
+    },
+    {
+      "code": "6",
+      "display": "Override"
+    },
+    {
+      "code": "7",
+      "display": "Substitution not allowed – Brand drug mandated by law"
+    },
+    {
+      "code": "8",
+      "display": "Substitution allowed – Generic drug not available in marketplace"
+    },
+    {
+      "code": "9",
+      "display": "Other"
+    }
+  ],
+  "count": 10
+}
