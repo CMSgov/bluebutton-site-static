@@ -93,16 +93,20 @@ jobs:
           echo "Changes detected, committing and pushing"
           echo "changed=true" >> $GITHUB_OUTPUT
         fi
-    
+
+    # Configure Git so that we can authenticate and push changes back to the BB Static Site repo
+    - name: Configure Git
+      run: |
+        cd bluebutton-site-static
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
     # Commit and push changes if there were any. Won't run if no changesare detected.
     - name: Commit and Push Changes in BB Static Site Repo
       if: steps.check-for-changes.outputs.changed == 'true'
       run: |
         cd bluebutton-site-static
-        # git fetch origin master
         git checkout -B ${{ steps.branch.outputs.branch_name }}
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
         git commit -m "Update JSON from BFD FSH files"
         git push --set-upstream origin ${{ steps.branch.outputs.branch_name }}
       env:
