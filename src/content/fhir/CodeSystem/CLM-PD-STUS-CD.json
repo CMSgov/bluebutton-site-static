@@ -1,0 +1,53 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_PD_STUS_CD",
+  "id": "CLM-PD-STUS-CD",
+  "title": "Claim Paid Status Code",
+  "description": "A PAYMENT STATUS OF A CLAIM.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PD-STUS-CD",
+  "concept": [
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    },
+    {
+      "code": "P",
+      "display": "PAID"
+    },
+    {
+      "code": "I",
+      "display": "INACTIVE/DELETED"
+    },
+    {
+      "code": "1",
+      "display": "VOIDED"
+    },
+    {
+      "code": "R",
+      "display": "REJECTED"
+    },
+    {
+      "code": "T",
+      "display": "RETURN TO PROVIDER"
+    },
+    {
+      "code": "2",
+      "display": "REPLACED"
+    },
+    {
+      "code": "D",
+      "display": "DENIED"
+    },
+    {
+      "code": "S",
+      "display": "SUSPENDED"
+    },
+    {
+      "code": "Y",
+      "display": "DENIED - MCS ONLY"
+    }
+  ],
+  "count": 10
+}

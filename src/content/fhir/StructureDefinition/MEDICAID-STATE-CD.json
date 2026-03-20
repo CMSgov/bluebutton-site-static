@@ -1,0 +1,56 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MEDICAID-STATE-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/MEDICAID-STATE-CD",
+  "name": "MEDICAID_STATE_CD",
+  "title": "Medicaid State Code",
+  "status": "draft",
+  "description": "The USPS state code associated with the beneficiary's dual eligible status.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Coverage"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Medicaid State Code",
+        "definition": "The USPS state code associated with the beneficiary's dual eligible status."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/MEDICAID-STATE-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://www.usps.com"
+      }
+    ]
+  }
+}
