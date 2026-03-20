@@ -104,12 +104,24 @@ jobs:
 
     - name: Create Pull Request
       if: steps.check-for-changes.outputs.changed == 'true'
-      uses: peter-evans/create-pull-request@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: "Update JSON from BFD FSH files"
-        branch: json-update
-        title: "Update JSON from BFD FSH files"
-        body: "This PR updates the JSON files generated from the BFD FSH files. Please review and merge if everything looks good."
-        base: master
-        path: bluebutton-site-static
+      run:  |
+        cd bluebutton-site-static
+        gh pr create \
+          --title "Update JSON from BFD FSH files" \
+          --body "This PR updates the JSON files generated from the BFD FSH files. Please review and merge if everything looks good." \
+          --base master \
+          --head json-update
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # - name: Create Pull Request
+    #   
+    #   uses: peter-evans/create-pull-request@v4
+    #   with:
+    #     token: 
+    #     commit-message: "Update JSON from BFD FSH files"
+    #     branch: json-update
+    #     title: "Update JSON from BFD FSH files"
+    #     body: "This PR updates the JSON files generated from the BFD FSH files. Please review and merge if everything looks good."
+    #     base: master
+    #     path: bluebutton-site-static
