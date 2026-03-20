@@ -1,0 +1,4157 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_RLT_COND_CD",
+  "id": "CLM-RLT-COND-CD",
+  "title": "Claim Related Condition Code",
+  "description": "This code indicates information about how a claim should be processed.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-RLT-COND-CD",
+  "concept": [
+    {
+      "code": "01",
+      "display": "MILITARY SERVICE RELATED"
+    },
+    {
+      "code": "02",
+      "display": "CONDITION IS EMPLOYMENT RELATED"
+    },
+    {
+      "code": "03",
+      "display": "PATIENT COVERED BY INSURANCE NOT REFLECTED HERE"
+    },
+    {
+      "code": "04",
+      "display": "INFORMATION ONLY BILL"
+    },
+    {
+      "code": "05",
+      "display": "LIEN HAS BEEN FILED"
+    },
+    {
+      "code": "06",
+      "display": "ESRD PATIENT IN FIRST 30 MONTHS OF ENTITLEMENT COVERED BY EMPLOYER GROUP HEALTH INSURANCE"
+    },
+    {
+      "code": "07",
+      "display": "TREATMENT OF NON-TERMINAL CONDITION FOR HOSPICE PATIENT"
+    },
+    {
+      "code": "08",
+      "display": "BENEFICIARY WOULD NOT PROVIDE INFORMATION CONCERNING OTHER INSURANCE COVERAGE"
+    },
+    {
+      "code": "09",
+      "display": "NEITHER PATIENT NOR SPOUSE IS EMPLOYED"
+    },
+    {
+      "code": "10",
+      "display": "PATIENT AND/OR SPOUSE IS EMPLOYED BUT NO EGHP COVERAGE EXISTS OR (EFF 9/93) OTHER EMPLOYER SPONSORED/PROVIDEDHEALTH INSURANCE COVERING PATIENT."
+    },
+    {
+      "code": "11",
+      "display": "THE DISABLED BENEFICIARY AND/OR FAMILYMEMBER HAS NO GROUP COVERAGE FROM A LGHP OR (EFF 9/93) OTHER EMPLOYER SPONSORED/PROVIDED HEALTH INSURANCE"
+    },
+    {
+      "code": "12",
+      "display": "PAYER CODE/NOT CURRENTLY USED BY MEDICARE."
+    },
+    {
+      "code": "13",
+      "display": "PAYER CODE/NOT CURRENTLY USED BY MEDICARE."
+    },
+    {
+      "code": "14",
+      "display": "PAYER CODE/NOT CURRENTLY USED BY MEDICARE."
+    },
+    {
+      "code": "15",
+      "display": "PAYER CODE/CLEAN CLAIM IS DELAYED IN CMS PROCESSING SYSTEM."
+    },
+    {
+      "code": "16",
+      "display": "PAYER CODE/SNF TRANSITION EXCEPTION."
+    },
+    {
+      "code": "17",
+      "display": "PATIENT IS HOMELESS (EFF. 3/07). PRIOR TO3/07, CODE INDICATED PATIENT IS OVER 100 YEARS OLD - PATIENT WAS OVER 100 YEARS OLD AT THE DATE OF ADMISSION."
+    },
+    {
+      "code": "18",
+      "display": "MAIDEN NAME RETAINED"
+    },
+    {
+      "code": "19",
+      "display": "CHILD RETAINS MOTHER'S NAME"
+    },
+    {
+      "code": "20",
+      "display": "BENEFICIARY REQUESTED BILLING"
+    },
+    {
+      "code": "21",
+      "display": "BILLING FOR DENIAL NOTICE"
+    },
+    {
+      "code": "22",
+      "display": "PATIENT ON MULTIPLE DRUG REGIMEN"
+    },
+    {
+      "code": "23",
+      "display": "HOME CARE GIVER AVAILABLE"
+    },
+    {
+      "code": "24",
+      "display": "HOME IV PATIENT ALSO RECEIVING HHA SERVICES"
+    },
+    {
+      "code": "25",
+      "display": "PATIENT IS NON-U.S. RESIDENT"
+    },
+    {
+      "code": "26",
+      "display": "VA ELIGIBLE PATIENT CHOOSES TO RECEIVE SERVICES IN A MEDICARE CERTIFIED FACILITY"
+    },
+    {
+      "code": "27",
+      "display": "PATIENT REFERRED TO A SOLE COMMUNITY HOSPITAL FOR A DIAGNOSTIC LABORATORY TEST"
+    },
+    {
+      "code": "28",
+      "display": "PATIENT AND/OR SPOUSE'S EGHP IS SECONDARY TO MEDICARE"
+    },
+    {
+      "code": "29",
+      "display": "DISABLED BENEFICIARY AND/OR FAMILY MEMBER'S LGHP IS SECONDARY TO MEDICARE"
+    },
+    {
+      "code": "30",
+      "display": "QUALIFYING CLINICAL TRIALS"
+    },
+    {
+      "code": "31",
+      "display": "PATIENT IS STUDENT (FULL TIME -- DAY)"
+    },
+    {
+      "code": "32",
+      "display": "PATIENT IS STUDENT (COOPERATIVE/WORK STUDY PROGRAM)"
+    },
+    {
+      "code": "33",
+      "display": "PATIENT IS STUDENT (FULL TIME -- NIGHT)"
+    },
+    {
+      "code": "34",
+      "display": "PATIENT IS STUDENT (PART TIME)"
+    },
+    {
+      "code": "35",
+      "display": "PACE ELIGIBLE PATIENT DISENROLLS DURING AN INPATIENT ADMISSION (EFFECTIVE 1/1/24)"
+    },
+    {
+      "code": "36",
+      "display": "GENERAL CARE PATIENT IN A SPECIAL UNIT"
+    },
+    {
+      "code": "37",
+      "display": "WARD ACCOMMODATION AT PATIENT REQUEST"
+    },
+    {
+      "code": "38",
+      "display": "SEMI-PRIVATE ROOM NOT AVAILABLE"
+    },
+    {
+      "code": "39",
+      "display": "PRIVATE ROOM MEDICALLY NECESSARY"
+    },
+    {
+      "code": "40",
+      "display": "SAME DAY TRANSFER"
+    },
+    {
+      "code": "41",
+      "display": "PARTIAL HOSPITALIZATION - EFF 3/92,INDICATES CLAIM IS FOR PARTIALHOSPITALIZATION SERVICES.  FOR OP SERVICES, THIS INCLUDES A VARIETYOF PSYCH PROGRAMS."
+    },
+    {
+      "code": "42",
+      "display": "CONTINUING CARE NOT RELATED TO INPATIENTADMISSION - CONTINUING CARE NOT RELATEDTO THE CONDITION OR DIAGNOSIS FOR WHICHTHE BENEFICIARY RECEIVED INPATIENTHOSPITAL SERVICES. (EFF. 10/01)"
+    },
+    {
+      "code": "43",
+      "display": "CONTINUING CARE NOT PROVIDED WITHINPRESCRIBED POSTDISCHARGE WINDOW -CONTINUING CARE WAS RELATED TO THEINPATIENT ADMISSION BUT THE PRESCRIBEDCARE WAS NOT PROVIDED WITHIN THE POST-DISCHARGE WINDOW.(EFF. 10/01)"
+    },
+    {
+      "code": "44",
+      "display": "INPATIENT ADMISSION CHANGED TO OUTPATIENT -FOR USE ON OUTPATIENT CLAIMS ONLY, WHEN THE PHYSICIAN ORDERED INPATIENT SERVICES, BUT UPON INTERNAL REVIEW PERFORMED BEFORE THE CLAIM WAS INITIALLY SUBMITTED, THE HOSPITALDETERMINED THE SERVICES DID NOT MEET ITS INPATIENT CRITERIA. (EFF. 4/1/04)"
+    },
+    {
+      "code": "45",
+      "display": "GENDER INCONGRUENCE (EFFECTIVE 7/1/23)"
+    },
+    {
+      "code": "46",
+      "display": "NON AVAILABILITY STATEMENT ON FILE FOR CHAMPUS CLAIM FOR NON-EMERGENCY IP CARE FOR CHAMPUS BENE RESIDING WITHIN THE CATCHMENT AREA (USUALLY A 40 MILE RADIUS) OF A UNIFORM SERVICES HOSPITAL.TRANSFER FROM ANOTHER HOME HEALTH AGENCY.(EFF. 7/1/10)"
+    },
+    {
+      "code": "47",
+      "display": "TRANSFER FROM ANOTHER HOME HEALTH AGENCY (EFF. 7/1/10)"
+    },
+    {
+      "code": "48",
+      "display": "PSYCHIATRIC RESIDENTIAL TREATMENT CENTERS FOR CHILDREN AND ADOLESCENTS (RTCS)"
+    },
+    {
+      "code": "49",
+      "display": "PRODUCT REPLACEMENT WITHIN PRODUCT LIFECYCLE (EFFECTIVE 1/1/15)"
+    },
+    {
+      "code": "50",
+      "display": "PRODUCT REPLACEMENT FOR KNOWN RECALL OF A PRODUCT (EFF. 4/2006)"
+    },
+    {
+      "code": "51",
+      "display": "ATTESTATION OF UNRELATED OUTPATIENT NONDIAGNOSTIC SERVICES (EFFECTIVE 4/1/11)"
+    },
+    {
+      "code": "52",
+      "display": "OUT OF HOSPICE SERVICE AREA (EFFECTIVE 7/1/12)"
+    },
+    {
+      "code": "53",
+      "display": "INITIAL PLACEMENT OF A MEDICAL DEVICE PROVIDED AS PART OF A CLINICAL TRIAL OR A FREE SAMPLE (EFFECTIVE 7/1/15)"
+    },
+    {
+      "code": "54",
+      "display": "NO SKILLED HOME HEALTH VISITS IN BILLING PERIOD. POLICY EXCEPTION DOCUMENTED AT THE HOME HEALTH AGENCY (EFFECTIVE 7/1/16)"
+    },
+    {
+      "code": "55",
+      "display": "SNF BED NOT AVAILABLE"
+    },
+    {
+      "code": "56",
+      "display": "MEDICAL APPROPRIATENESS"
+    },
+    {
+      "code": "57",
+      "display": "SNF READMISSION"
+    },
+    {
+      "code": "58",
+      "display": "PAYMENT OF SNF CLAIMS FOR BENEFICIARIES DISENROLLING FROM TERMINATING M+C PLANS. PLANS WHO HAVE NOT MET THE 3-DAY HOSPITAL STAY REQUIREMENT (EFF. 10/1/00)"
+    },
+    {
+      "code": "59",
+      "display": "NON-PRIMARY ESRD FACILITY"
+    },
+    {
+      "code": "60",
+      "display": "PAYER CODE/OPERATING COST DAY OUTLIER."
+    },
+    {
+      "code": "61",
+      "display": "PAYER CODE/OPERATING COST OUTLIER."
+    },
+    {
+      "code": "62",
+      "display": "PAYER CODE/PIP BILL."
+    },
+    {
+      "code": "63",
+      "display": "PAYER CODE/BYPASS CWF EDITS FOR INCARCERATED BENEFICIARIES. INDICATES SERVICES RENDERED TO A PRISONER OR A PATIENT IN STATE OR LOCAL CUSTODY MEETS THE REQUIREMENT OF 42 CFR 411.4(B) FOR PAYMENT."
+    },
+    {
+      "code": "64",
+      "display": "PAYER CODE/OTHER THAN CLEAN CLAIM."
+    },
+    {
+      "code": "65",
+      "display": "PAYER CODE/NON-PPS BILL."
+    },
+    {
+      "code": "66",
+      "display": "OUTLIER NOT CLAIMED - BILL MAY MEET THE CRITERIA FOR COST OUTLIER, BUT THE HOSPITAL DID NOT CLAIM THE COST OUTLIER (PPS)"
+    },
+    {
+      "code": "67",
+      "display": "BENEFICIARY ELECTS NOT TO USE LIFE TIME RESERVE (LTR) DAYS"
+    },
+    {
+      "code": "68",
+      "display": "BENEFICIARY ELECTS TO USE LIFE TIME RESERVE (LTR) DAYS"
+    },
+    {
+      "code": "69",
+      "display": "IME/DGME/N&AH PAYMENT ONLY"
+    },
+    {
+      "code": "70",
+      "display": "SELF-ADMINISTERED EPO - BILLING IS FOR A HOME DIALYSIS PATIENT WHO SELF ADMINISTERS EPO."
+    },
+    {
+      "code": "71",
+      "display": "FULL CARE IN UNIT - BILLING IS FOR A PATIENT WHO RECEIVED STAFF ASSISTED DIALYSIS SERVICES IN A HOSPITAL OR RENAL DIALYSIS FACILITY."
+    },
+    {
+      "code": "72",
+      "display": "SELF CARE IN UNIT - BILLING IS FOR A PATIENT WHO MANAGED HIS OWN DIALYSIS SERVICES WITHOUT STAFF ASSISTANCE IN A HOSPITAL OR RENAL DIALYSIS FACILITY."
+    },
+    {
+      "code": "73",
+      "display": "SELF CARE TRAINING - BILLING IS FOR SPECIAL DIALYSIS SERVICES WHERE THE PATIENT AND HELPER (IF NECESSARY) WERE LEARNING TO PERFORM DIALYSIS."
+    },
+    {
+      "code": "74",
+      "display": "HOME-PROVIDERS ENTER THIS CODE TO INDICATE THE BILLING IS FOR A PATIENT WHO RECEIVED DIALYSIS SERVICES AT HOME"
+    },
+    {
+      "code": "75",
+      "display": "HOME 100% REIMBURSEMENT -(NOT TO BE USED FOR SERVICES AFTER 4/15/90) THE BILLING IS FOR HOME DIALSIS PATIENT USING A DIALYSIS MACHINE THAT WAS PURCHASEDUNDER THE 100% PROGRAM."
+    },
+    {
+      "code": "76",
+      "display": "BACK-UP FACILITY - BILLING IS FOR A PATIENT WHO RECEIVED DIALYSIS SERVICES IN A BACK-UP FACILITY."
+    },
+    {
+      "code": "77",
+      "display": "PROVIDER ACCEPTS OR IS OBLIGATED/REQUIRED DUE TO A CONTRACTUAL ARRANGEMENT OR LAW TO ACCEPT PAYMENT BY A PRIMARY PAYER AS PAYMENT IN FULL."
+    },
+    {
+      "code": "78",
+      "display": "NEW COVERAGE NOT IMPLEMENTED BY HMO -EFF 3/92, INDICATES NEWLY COVERED SERVICE UNDER MEDICARE FOR WHICH HMO DOES NOT PAY."
+    },
+    {
+      "code": "79",
+      "display": "CORF SERVICES PROVIDED OFFSITE"
+    },
+    {
+      "code": "80",
+      "display": "HOME DIALYSIS-NURSING FACILITY – HOME DIALYSIS FURNISHED IN A SNF OR NURSING FACILITY (REPORT WITH CONDITION CODE 74)"
+    },
+    {
+      "code": "81",
+      "display": "C-SECTIONS/INDUCTIONS < 39 WEEKS - MEDICAL NECESSITY (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "82",
+      "display": "C-SECTIONS/INDUCTIONS < 39 WEEKS - ELECTIVE (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "83",
+      "display": "C-SECTIONS/INDUCTIONS 39 WEEKS OR GREATER (EFFECTIVE 10/1/13)"
+    },
+    {
+      "code": "84",
+      "display": "DIALYSIS FOR ACUTE KIDNEY INJURY (AKI) (EFFECTIVE 1/1/17)"
+    },
+    {
+      "code": "85",
+      "display": "DELAYED RECERTIFICATION OF HOSPICE TERMINAL ILLNESS (EFFECTIVE 1/1/17)"
+    },
+    {
+      "code": "86",
+      "display": "ADDITIONAL HEMODIALYSIS TREATMENTS WITH MEDICAL JUSTIFICATION (EFFECTIVE DATE TBD)"
+    },
+    {
+      "code": "87",
+      "display": "ESRD SELF CARE RETRAINING (EFFECTIVE 7/1/17)"
+    },
+    {
+      "code": "88",
+      "display": "ALLOGENEIC STEM CELL TRANSPLANT RELATED DONOR CHARGES (EFFECTIVE 7/1/20)"
+    },
+    {
+      "code": "89",
+      "display": "OPIOID TREATMENT PROGRAM (EFFECTIVE 1/1/21)"
+    },
+    {
+      "code": "90",
+      "display": "EXPANDED ACCESS APPROVAL (EFFECTIVE 2/1/21)"
+    },
+    {
+      "code": "91",
+      "display": "EMERGENCY USE AUTHORIZATION (EFFECTIVE 2/1/21)"
+    },
+    {
+      "code": "92",
+      "display": "INTENSIVE OUTPATIENT PROGRAM (IOP) (EFFECTIVE 1/1/24)"
+    },
+    {
+      "code": "93",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "94",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "95",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "96",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "97",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "98",
+      "display": "PAYER CODE/DATA ASSOCIATED WITH DRG 468 HAS BEEN VALIDATED."
+    },
+    {
+      "code": "99",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "A0",
+      "display": "TRICARE EXTERNAL PARTNERSHIP PROGRAM"
+    },
+    {
+      "code": "A1",
+      "display": "EPSDT/CHAP"
+    },
+    {
+      "code": "A2",
+      "display": "PHYSICALLY HANDICAPPED CHILDREN'S PROGRAM"
+    },
+    {
+      "code": "A3",
+      "display": "SPECIAL FEDERAL FUNDING"
+    },
+    {
+      "code": "A4",
+      "display": "FAMILY PLANNING"
+    },
+    {
+      "code": "A5",
+      "display": "DISABILITY"
+    },
+    {
+      "code": "A6",
+      "display": "VACCINES/MEDICARE 100% PAYMENT"
+    },
+    {
+      "code": "A7",
+      "display": "HOSPITAL SERVICES PROVIDED IN A MOBILE FACILITY OR WITH PORTABLE UNITS (EFFECTIVE 4/1/20)"
+    },
+    {
+      "code": "A8",
+      "display": "INDUCED ABORTION - VICTIM OF RAPE/INCEST"
+    },
+    {
+      "code": "A9",
+      "display": "SECOND OPINION SURGERY"
+    },
+    {
+      "code": "AA",
+      "display": "ABORTION PERFORMED DUE TO RAPE (EFF. 10/1/02)"
+    },
+    {
+      "code": "AB",
+      "display": "ABORTION PERFORMED DUE TO INCEST (EFF. 10/1/02)"
+    },
+    {
+      "code": "AC",
+      "display": "ABORTION PERFORMED DUE TO SERIOUS FETAL GENETIC DEFECT, DEFORMITY, OR ABNORMALITY (EFF. 10/1/02)"
+    },
+    {
+      "code": "AD",
+      "display": "ABORTION PERFORMED DUE TO A LIFE ENDANGERING PHYSICAL CONDITION (EFF. 10/1/02)"
+    },
+    {
+      "code": "AE",
+      "display": "ABORTION PERFORMED DUE TO PHYSICAL HEALTH OF MOTHER THAT IS NOT LIFE ENDANGERING (EFF. 10/1/02)"
+    },
+    {
+      "code": "AF",
+      "display": "ABORTION PERFORMED DUE TO EMOTIONAL/PSYCHOLOGICAL HEALTH OF THE MOTHER (EFF. 10/1/02)"
+    },
+    {
+      "code": "AG",
+      "display": "ABORTION PERFORMED DUE TO SOCIAL OR ECONOMIC REASONS (EFF. 10/1/02)"
+    },
+    {
+      "code": "AH",
+      "display": "ELECTIVE ABORTION (EFF. 10/1/02)"
+    },
+    {
+      "code": "AI",
+      "display": "STERILIZATION (EFF. 10/1/02)"
+    },
+    {
+      "code": "AJ",
+      "display": "PAYER RESPONSIBLE FOR COPAYMENT (EFF 04/01/03)"
+    },
+    {
+      "code": "AK",
+      "display": "AIR AMBULANCE REQUIRED (EFF. 10/16/03)"
+    },
+    {
+      "code": "AL",
+      "display": "SPECIALIZED TREATMENT/BED UNAVAILABLE - ALTERNATE FACILITY TRANSPORT (EFF. 10/16/03)"
+    },
+    {
+      "code": "AM",
+      "display": "NON-EMERGENCY MEDICALLY NECESSARY STRETCHER TRANSPORT REQUIRED (EFF. 10/16/03)"
+    },
+    {
+      "code": "AN",
+      "display": "PREADMISSION SCREENING NOT REQUIRED (EFF. 1/1/04)"
+    },
+    {
+      "code": "AO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "AZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "B0",
+      "display": "MEDICARE COORDINATED CARE DEMONSTRATION CLAIM (EFF. 10/01)"
+    },
+    {
+      "code": "B1",
+      "display": "BENEFICIARY IS INELIGIBLE FOR DEMONSTRATION PROGRAM (EFF. 10/01)"
+    },
+    {
+      "code": "B2",
+      "display": "CRITICAL ACCESS HOSPITAL AMBULANCE ATTESTATION"
+    },
+    {
+      "code": "B3",
+      "display": "PREGNANCY INDICATOR (EFF. 10/16/03)"
+    },
+    {
+      "code": "B4",
+      "display": "ADMISSION UNRELATED TO DISCHARGE ON SAME DAY"
+    },
+    {
+      "code": "B5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "B6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "B7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "B8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "B9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BP",
+      "display": "GULF OIL SPILL OF 2010 (EFFECTIVE 4/20/10)"
+    },
+    {
+      "code": "BQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "BZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "C0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "C1",
+      "display": "APPROVED AS BILLED- NOTE: BEGINNING JULY 2005, THIS CODE ISRELEVANT TO TYPE OF BILLS OTHER THAN INPATIENT(18X, 21X, 22X, 32X, 33X, 34X, 75X, 81X, 82X)."
+    },
+    {
+      "code": "C2",
+      "display": "AUTOMATIC APPROVAL AS BILLED BASED ON FOCUSED REVIEW- NOTE: BEGINNING JULY 2005, THIS CODE ISRELEVANT TO TYPE OF BILLS OTHER THAN INPATIENT(18X, 21X, 22X, 32X, 33X, 34X, 75X, 81X, 82X). (NO LONGER USED FOR MEDICARE)."
+    },
+    {
+      "code": "C3",
+      "display": "PARTIAL APPROVAL - NOTE: BEGINNING JULY 2005, THIS CODE ISRELEVANT TO TYPE OF BILLS OTHER THAN INPATIENT(18X, 21X, 22X, 32X, 33X, 34X, 75X, 81X, 82X)."
+    },
+    {
+      "code": "C4",
+      "display": "ADMISSION/SERVICES DENIED - NOTE: BEGINNING JULY 2005, THIS CODE ISRELEVANT TO TYPE OF BILLS OTHER THAN INPATIENT(18X, 21X, 22X, 32X, 33X, 34X, 75X, 81X, 82X)."
+    },
+    {
+      "code": "C5",
+      "display": "POST PAYMENT REVIEW APPLICABLE- NOTE: BEGINNING JULY 2005, THIS CODE ISRELEVANT TO TYPE OF BILLS OTHER THAN INPATIENT(18X, 21X, 22X, 32X, 33X, 34X, 75X, 81X, 82X)."
+    },
+    {
+      "code": "C6",
+      "display": "ADMISSION PREAUTHORIZATION - NOTE: BEGINNING JULY 2005, THIS CODE ISRELEVANT TO TYPE OF BILLS OTHER THAN INPATIENT(18X, 21X, 22X, 32X, 33X, 34X, 75X, 81X, 82X)."
+    },
+    {
+      "code": "C7",
+      "display": "EXTENDED AUTHORIZATION -NOTE: BEGINNING JULY 2005, THIS CODE ISRELEVANT TO TYPE OF BILLS OTHER THAN INPATIENT(18X, 21X, 22X, 32X, 33X, 34X, 75X, 81X, 82X)."
+    },
+    {
+      "code": "C8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "C9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "CZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "D0",
+      "display": "CHANGES TO SERVICE DATES"
+    },
+    {
+      "code": "D1",
+      "display": "CHANGES TO CHARGES"
+    },
+    {
+      "code": "D2",
+      "display": "CHANGES IN REVENUE CODES/HCPCS/HIPPS RATE CODES"
+    },
+    {
+      "code": "D3",
+      "display": "SECOND OR SUBSEQUENT INTERIM PPS BILL"
+    },
+    {
+      "code": "D4",
+      "display": "CHANGE IN CLINICAL CODES (ICD) AND/OR PROCEDURE CODES"
+    },
+    {
+      "code": "D5",
+      "display": "CANCEL ONLY TO CORRECT A BENEFICIARYCLAIM ACCOUNT NUMBER OR PROVIDERIDENTIFICATION NUMBER"
+    },
+    {
+      "code": "D6",
+      "display": "CANCEL ONLY TO REPAY A DUPLICATE OR OIG OVERPAYMENT"
+    },
+    {
+      "code": "D7",
+      "display": "CHANGE TO MAKE MEDICARE THE SECONDARY PAYER"
+    },
+    {
+      "code": "D8",
+      "display": "CHANGE TO MAKE MEDICARE THE PRIMARY PAYER"
+    },
+    {
+      "code": "D9",
+      "display": "ANY OTHER CHANGE"
+    },
+    {
+      "code": "DA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DR",
+      "display": "DISASTER RELATED  (EFF. 10/2005)"
+    },
+    {
+      "code": "DS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "DZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "E0",
+      "display": "CHANGE IN PATIENT STATUS"
+    },
+    {
+      "code": "E1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "E2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "E3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "E4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "E5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "E6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "E7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "E8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "E9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "ED",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "ER",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "ES",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "ET",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "EY",
+      "display": "PAYER CODE/LUNG REDUCTION STUDY DEMONSTRATION CLAIMS."
+    },
+    {
+      "code": "EZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "F0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "F1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "F2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "F3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "F4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "F5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "F6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "F7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "F8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "F9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "FZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "G0",
+      "display": "MULTIPLE MEDICAL VISITS OCCUR ON THE SAME DAY IN THE SAME REVENUE CENTER BUT VISITS ARE DISTINCT AND CONSTITUTE INDEPENDENT VISITS (ALLOWS FOR PAYMENT UNDER OUTPATIENT PPS -- EFF. 7/3/00)."
+    },
+    {
+      "code": "G1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "G2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "G3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "G4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "G5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "G6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "G7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "G8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "G9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "GZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "H0",
+      "display": "DELAYED FILING; STATEMENT OF INTENT SUBMITTED (EFF. 09/01)"
+    },
+    {
+      "code": "H1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "H2",
+      "display": "DISCHARGE BY A HOSPICE PROVIDER FOR CAUSE (EFFECTIVE 1/1/09)"
+    },
+    {
+      "code": "H3",
+      "display": "REOCCURRENCE OF GI BLEED COMORBID CATEGORY  (EFFECTIVE 1/1/11)"
+    },
+    {
+      "code": "H4",
+      "display": "REOCCURRENCE OF PNEUMONIA CATEGORY  (EFFECTIVE 1/1/11)"
+    },
+    {
+      "code": "H5",
+      "display": "REOCCURRENCE OF PERICARDITIS COMORBID CATEGORY (EFFECTIVE 1/1/11)"
+    },
+    {
+      "code": "H6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "H7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "H8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "H9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "HZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "I0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "I1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "I2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "I3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "I4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "I5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "I6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "I7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "I8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "I9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "ID",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "II",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "IZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "J0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "J1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "J2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "J3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "J4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "J5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "J6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "J7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "J8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "J9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "JZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "K0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "K1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "K2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "K3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "K4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "K5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "K6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "K7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "K8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "K9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "KZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "L0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "L1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "L2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "L3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "L4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "L5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "L6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "L7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "L8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "L9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "LZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "M0",
+      "display": "PAYER CODE/ALL-INCLUSIVE RATE FOR OUTPATIENT - USED BY A CRITICAL ACCESS HOSPITAL ELECTING TO BE PAID AN ALL-INCLUSIVE RATE FOR OUTPATIENT SERVICES."
+    },
+    {
+      "code": "M1",
+      "display": "PAYER CODE/ROSTER BILLED INFLUENZA VIRUS VACCINE OR PNEUMOCOCCAL PNEUMONIA VACCINE (PPV).CODE INDICATES THE INFLUENZA VIRUS VACCINE OR PNEUMONIA VACCINE (PPV) IS BEING BILLED VIA THE ROSTER BILLING METHOD BY PROVIDERS THAT MASS IMMUNIZE."
+    },
+    {
+      "code": "M2",
+      "display": "PAYER CODE/ALLOWS HOME HEALTH CLAIMS TO PROCESS IF PROVIDER REIMBURSEMENT > $150,000.00.HHA PAYMENT SIGNIFICANTLY EXCEEDS TOTAL CHARGES. USED WHEN PAYMENT TO AN HHA IS SIGNIFICANTLY IN EXCESS OF COVERED BILLED CHARGES."
+    },
+    {
+      "code": "M3",
+      "display": "PAYER CODE/SNF 3 DAY STAY BYPASS FOR NG/PIONEER ACO WAIVER."
+    },
+    {
+      "code": "M4",
+      "display": "PAYER CODE/PRESENCE OF INFECTED WOUND OR WOUND WITH MORBID OBESITY."
+    },
+    {
+      "code": "M5",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "M6",
+      "display": "PAYER CODE/PA RURAL HEALTH MODEL."
+    },
+    {
+      "code": "M7",
+      "display": "PAYER ONLY - SHARED SYSTEM MEDICARE DEDUCTIBLE BYPASS"
+    },
+    {
+      "code": "M8",
+      "display": "PAYER ONLY - SHARED SYSTEM MEDICARE COINSURANCE BYPASS"
+    },
+    {
+      "code": "M9",
+      "display": "PAYER ONLY - SHARED SYSTEM MEDICARE DEDUCTIBLE/COINSURANCE BYPASS"
+    },
+    {
+      "code": "MA",
+      "display": "PAYER CODE/GI BLEED. (BILL TYPE 72X) / MANAGED CARE ENROLLEE (BILL TYPE 12X, 13X, AND 76X)"
+    },
+    {
+      "code": "MB",
+      "display": "PAYER CODE/PNEUMONIA. (BILL TYPE 72X)"
+    },
+    {
+      "code": "MC",
+      "display": "PAYER CODE/PERICARDITIS. (BILL TYPE 72X)"
+    },
+    {
+      "code": "MD",
+      "display": "PAYER CODE/MYELODYSPLASTIC SYNDROME. (BILL TYPE 72X)"
+    },
+    {
+      "code": "ME",
+      "display": "PAYER CODE/HEREDITARY HEMOLYTIC AND SICKLE CELL ANEMIA. (BILL TYPE 72X)"
+    },
+    {
+      "code": "MF",
+      "display": "PAYER CODE/MONOCLONAL GAMMOPATHY. (BILL TYPE 72X)"
+    },
+    {
+      "code": "MG",
+      "display": "PAYER CODE/GRANDFATHERED TRIBAL FEDERALLY QUALIFIED HEALTH CENTERS."
+    },
+    {
+      "code": "MH",
+      "display": "PAYER ONLY - MAC MEDICARE DEDUCTIBLE BYPASS"
+    },
+    {
+      "code": "MI",
+      "display": "PAYER ONLY - MAC MEDICARE COINSURANCE BYPASS"
+    },
+    {
+      "code": "MJ",
+      "display": "PAYER ONLY - MAC MEDICARE DEDUCTIBLE/COINSURANCE BYPASS"
+    },
+    {
+      "code": "MK",
+      "display": "PAYER CODE/NOT CURRENTLY USED BY MEDICARE."
+    },
+    {
+      "code": "ML",
+      "display": "PAYER CODE/NOT CURRENTLY USED BY MEDICARE."
+    },
+    {
+      "code": "MM",
+      "display": "PAYER CODE/NOT CURRENTLY USED BY MEDICARE."
+    },
+    {
+      "code": "MN",
+      "display": "PAYER CODE/NOT CURRENTLY USED BY MEDICARE."
+    },
+    {
+      "code": "MO",
+      "display": "PAYER CODE - MAC OVERRIDE APPEAL TIMELINESS."
+    },
+    {
+      "code": "MP",
+      "display": "PAYER CODE/PARTIAL HOSPITALIZATION PROGRAM (PHP) CLAIM CONTAINS INITIAL ADMIT WEEK."
+    },
+    {
+      "code": "MQ",
+      "display": "PAYER CODE/PARTIAL HOSPITALIZATION PROGRAM (PHP) CLAIM CONTAINS FINAL DISCHARGE WEEK."
+    },
+    {
+      "code": "MR",
+      "display": "PAYER CODE/NOT CURRENTLY USED BY MEDICARE."
+    },
+    {
+      "code": "MS",
+      "display": "PAYER ONLY - MEDICARE SNF 3-DAY EDIT BYPASS"
+    },
+    {
+      "code": "MT",
+      "display": "PAYER CODE/NOT CURRENTLY USED BY MEDICARE."
+    },
+    {
+      "code": "MU",
+      "display": "MEDICARE PART A CWF BYPASS"
+    },
+    {
+      "code": "MV",
+      "display": "PAYER CODE - 20 HOURS FOR PARTIAL PHP SUBSEQUENT WEEK NOT MET"
+    },
+    {
+      "code": "MW",
+      "display": "PAYER CODE - 20 HOURS FOR PARTIAL PHP INITIAL WEEK NET MET"
+    },
+    {
+      "code": "MX",
+      "display": "PAYER CODE/WRONG SURGERY ON PATIENT (INPATIENT)"
+    },
+    {
+      "code": "MY",
+      "display": "PAYER CODE/SURGERY WRONG BODY PART (INPATIENT) / OUTLIER CAP BYPASS (CMHC)"
+    },
+    {
+      "code": "MZ",
+      "display": "PAYER CODE/IOCE ERROR CODE BYPASS / SURGERY WRONG PATIENT (INPATIENT)"
+    },
+    {
+      "code": "N0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "N1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "N2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "N3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "N4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "N5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "N6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "N7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "N8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "N9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "ND",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "NZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "O0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "O1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "O2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "O3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "O4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "O5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "O6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "O7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "O8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "O9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "ON",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "OZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "P0",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "P1",
+      "display": "DO NOT RESUSCITATE ORDER (DNR) - FOR PUBLIC HEALTH REPORTING ONLY"
+    },
+    {
+      "code": "P2",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "P3",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "P4",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "P5",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "P6",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "P7",
+      "display": "DIRECT INPATIENT ADMISSION TO EMERGENCY ROOM - FOR PUBLIC HEALTH REPORTING ONLY (EFF. 07/01/10)"
+    },
+    {
+      "code": "P8",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "P9",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PA",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PB",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PC",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PD",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PE",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PF",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PG",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PH",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PI",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PJ",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PK",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PL",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PM",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PN",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PO",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PP",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PQ",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PR",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PS",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PT",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PU",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PV",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PW",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PX",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PY",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "PZ",
+      "display": "RESERVED FOR PUBLIC HEALTH DATA REPORTING"
+    },
+    {
+      "code": "Q0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Q1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Q2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Q3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Q4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Q5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Q6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Q7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Q8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Q9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "QZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "R0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "R1",
+      "display": "REQUEST FOR REOPENING REASON CODE - MATHEMATICAL OR COMPUTATIONAL MISTAKES (EFFECTIVE 1/1/16)"
+    },
+    {
+      "code": "R2",
+      "display": "REQUEST FOR REOPENING REASON CODE - INACCURATE DATA ENTRY (EFFECTIVE 1/1/16)"
+    },
+    {
+      "code": "R3",
+      "display": "REQUEST FOR REOPENING REASON CODE - MISAPPLICATION OF A FEE SCHEDULE  (EFFECTIVE 1/1/16)"
+    },
+    {
+      "code": "R4",
+      "display": "REQUEST FOR REOPENING REASON CODE - COMPUTER ERRORS (EFFECTIVE 1/1/16)"
+    },
+    {
+      "code": "R5",
+      "display": "REQUEST FOR REOPENING REASON CODE - INCORRECTLY IDENTIFIED DUPLICATE CLAIM (EFFECTIVE 1/1/16)"
+    },
+    {
+      "code": "R6",
+      "display": "REQUEST FOR REOPENING REASON CODE - OTHER CLERICAL ERRORS OR MINOR ERRORS AND OMISSIONS NOT SPECIFIED IN R1-R5 ABOVE  (EFFECTIVE 1/1/16)"
+    },
+    {
+      "code": "R7",
+      "display": "REQUEST FOR REOPENING REASON CODE - CORRECTIONS OTHER THAN CLERICAL ERRORS (EFFECTIVE 1/1/16)"
+    },
+    {
+      "code": "R8",
+      "display": "REQUEST FOR REOPENING REASON CODE - NEW AND MATERIAL EVIDENCE (EFFECTIVE 1/1/16)"
+    },
+    {
+      "code": "R9",
+      "display": "REQUEST FOR REOPENING REASON CODE - FAULTY EVIDENCE (EFFECTIVE 1/1/16)"
+    },
+    {
+      "code": "RA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "RZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "S0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "S1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "S2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "S3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "S4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "S5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "S6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "S7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "S8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "S9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "ST",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "SZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "T0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "T1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "T2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "T3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "T4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "T5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "T6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "T7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "T8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "T9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "TZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "U0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "U1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "U2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "U3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "U4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "U5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "U6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "U7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "U8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "U9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "US",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UU",
+      "display": "PAYER CODE/NOT CURRENTLY USED BY MEDICARE."
+    },
+    {
+      "code": "UV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "UZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "V0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "V1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "V2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "V3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "V4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "V5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "V6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "V7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "V8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "V9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "VZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "W0",
+      "display": "UNITED MINE WORKERS OF AMERICA (UMWA) SNF DEMONSTRATION INDICATOR (EFF 1/97);BUT NO CLAIMS TRANSMITTED UNTIL 2/98)"
+    },
+    {
+      "code": "W1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "W2",
+      "display": "DUPLICATE OF ORIGINAL BILL - (EFF. 10/1/08)"
+    },
+    {
+      "code": "W3",
+      "display": "LEVEL I APPEAL"
+    },
+    {
+      "code": "W4",
+      "display": "LEVEL II APPEAL (EFFECTIVE 10/1/08)"
+    },
+    {
+      "code": "W5",
+      "display": "LEVEL III APPEAL (EFFECTIVE 10/1/08)"
+    },
+    {
+      "code": "W6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "W7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "W8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "W9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "WZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "X0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "X1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "X2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "X3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "X4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "X5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "X6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "X7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "X8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "X9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XX",
+      "display": "TRANSGENDER/HERMAPHRODITE BENEFICIARIES (EFF. 1/2/07) OBSOLETE"
+    },
+    {
+      "code": "XY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "XZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Y0",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Y1",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Y2",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Y3",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Y4",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Y5",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Y6",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Y7",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Y8",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Y9",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YA",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YB",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YC",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YD",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YE",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YF",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YG",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YH",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YI",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YJ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YK",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YL",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YM",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YN",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YO",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YP",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YQ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YR",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YS",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YT",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YU",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YV",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YW",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YX",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YY",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "YZ",
+      "display": "RESERVED FOR NATIONAL ASSIGNMENT"
+    },
+    {
+      "code": "Z0",
+      "display": "PACE STRADDLE CLAIM"
+    },
+    {
+      "code": "Z1",
+      "display": "PAYER CODE (EFFECTIVE 8/11/2020)"
+    },
+    {
+      "code": "Z2",
+      "display": "PAYER CODE (EFFECTIVE 8/11/2020)"
+    },
+    {
+      "code": "Z3",
+      "display": "PAYER CODE (EFFECTIVE 8/11/2020)"
+    },
+    {
+      "code": "Z4",
+      "display": "PAYER CODE (EFFECTIVE 8/11/2020)"
+    },
+    {
+      "code": "Z5",
+      "display": "PAYER CODE (EFFECTIVE 8/11/2020)"
+    },
+    {
+      "code": "Z6",
+      "display": "PAYER CODE (EFFECTIVE 8/11/2020)"
+    },
+    {
+      "code": "Z7",
+      "display": "PAYER CODE (EFFECTIVE 8/11/2020)"
+    },
+    {
+      "code": "Z8",
+      "display": "PAYER CODE (EFFECTIVE 8/11/2020)"
+    },
+    {
+      "code": "Z9",
+      "display": "PAYER CODE (EFFECTIVE 8/11/2020)"
+    },
+    {
+      "code": "ZA",
+      "display": "PAYER CODE - NO POSITIVE COVID-19 TEST RESULT IN MEDICAL RECORD"
+    },
+    {
+      "code": "ZB",
+      "display": "PAYER CODE - EXPANDED ACCESS APPROVAL"
+    },
+    {
+      "code": "ZC",
+      "display": "PAYER CODE - CLINICAL TRIAL OF A DIFFERENT PRODUCT"
+    },
+    {
+      "code": "ZD",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZE",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZF",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZG",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZH",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZI",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZJ",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZK",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZL",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZM",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZN",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZO",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZP",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZQ",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZR",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZS",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZT",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZU",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZV",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZW",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZX",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZY",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "ZZ",
+      "display": "PAYER CODE - NOT CURRENTLY USED BY MEDICARE"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 1036
+}

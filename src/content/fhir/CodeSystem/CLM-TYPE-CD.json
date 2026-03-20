@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "CLM_TYPE_CD",
   "id": "CLM-TYPE-CD",
-  "title": "Clm Type Cd",
-  "description": "Code system for clm type cd",
+  "title": "Claim Type Code",
+  "description": "CA CODE IDENTIFYING THE SOURCE AND TYPE OF CLAIM SUBMITTED THROUGH THE MEDICARE OR MEDICAID PROGRAM.",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-TYPE-CD",
   "concept": [
     {

@@ -5,7 +5,7 @@
   "name": "CLM_CNTRCTR_NUM",
   "title": "Claim Contractor Number",
   "status": "draft",
-  "description": "The identification number assigned by CMS to a fiscal intermediary (FI) authorized to process claim records.",
+  "description": "Deprecated 2026-01-14. The identification number assigned by CMS to a fiscal intermediary (FI) authorized to process claim records.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -24,7 +24,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Claim Contractor Number",
-        "definition": "The identification number assigned by CMS to a fiscal intermediary (FI) authorized to process claim records."
+        "definition": "Deprecated 2026-01-14. The identification number assigned by CMS to a fiscal intermediary (FI) authorized to process claim records."
       },
       {
         "id": "Extension.extension",
