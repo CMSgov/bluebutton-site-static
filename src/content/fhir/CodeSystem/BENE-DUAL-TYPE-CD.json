@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BENE_DUAL_TYPE_CD",
+  "id": "BENE-DUAL-TYPE-CD",
+  "title": "Beneficiary Dual Type Code",
+  "description": "A code identifying the dual eligibility type for a beneficiary.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-DUAL-TYPE-CD",
+  "concept": [
+    {
+      "code": "N",
+      "display": "NONE"
+    },
+    {
+      "code": "F",
+      "display": "FULL DUAL"
+    },
+    {
+      "code": "U",
+      "display": "UNKNOWN"
+    },
+    {
+      "code": "P",
+      "display": "PARTIAL DUAL"
+    }
+  ],
+  "count": 4
+}

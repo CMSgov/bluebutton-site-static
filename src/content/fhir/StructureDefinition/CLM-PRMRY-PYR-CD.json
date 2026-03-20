@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-PRMRY-PYR-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PRMRY-PYR-CD",
+  "name": "CLM_PRMRY_PYR_CD",
+  "title": "Line Primary Payer Code",
+  "status": "draft",
+  "description": "The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's medical bills relating to the line-item service on the non-institutional claim.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Line Primary Payer Code",
+        "definition": "The code specifying a federal non-Medicare program or other source that has primary responsibility for the payment of the Medicare beneficiary's medical bills relating to the line-item service on the non-institutional claim."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PRMRY-PYR-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PRMRY-PYR-CD"
+      }
+    ]
+  }
+}

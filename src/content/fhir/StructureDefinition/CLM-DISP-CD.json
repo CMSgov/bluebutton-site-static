@@ -5,7 +5,7 @@
   "name": "CLM_DISP_CD",
   "title": "Claim Disposition Code",
   "status": "draft",
-  "description": "Code indicating the disposition or outcome of the processing of the claim record.",
+  "description": "Deprecated 2026-01-14. Code indicating the disposition or outcome of the processing of the claim record.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -24,7 +24,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Claim Disposition Code",
-        "definition": "Code indicating the disposition or outcome of the processing of the claim record."
+        "definition": "Deprecated 2026-01-14. Code indicating the disposition or outcome of the processing of the claim record."
       },
       {
         "id": "Extension.extension",

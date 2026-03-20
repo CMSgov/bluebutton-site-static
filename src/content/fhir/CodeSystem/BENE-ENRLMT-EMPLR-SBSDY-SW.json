@@ -1,0 +1,21 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BENE_ENRLMT_EMPLR_SBSDY_SW",
+  "id": "BENE-ENRLMT-EMPLR-SBSDY-SW",
+  "title": "Beneficiary Retiree Drug Subsidy Switch",
+  "description": "A switch indicating enrollment by a beneficiary who has an employer subsidy.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-ENRLMT-EMPLR-SBSDY-SW",
+  "concept": [
+    {
+      "code": "Y",
+      "display": "Yes"
+    },
+    {
+      "code": "N",
+      "display": "No"
+    }
+  ],
+  "count": 2
+}

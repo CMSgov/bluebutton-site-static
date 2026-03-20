@@ -1,0 +1,73 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BENE_CVRG_TYPE_CD",
+  "id": "BENE-CVRG-TYPE-CD",
+  "title": "Beneficiary Coverage Type Code",
+  "description": "A code identifying the type of Medicare coverage for a beneficiary.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-CVRG-TYPE-CD",
+  "concept": [
+    {
+      "code": "10",
+      "display": "CHCCP"
+    },
+    {
+      "code": "11",
+      "display": "PDP"
+    },
+    {
+      "code": "12",
+      "display": "CCDM"
+    },
+    {
+      "code": "13",
+      "display": "MSADM"
+    },
+    {
+      "code": "14",
+      "display": "MMP"
+    },
+    {
+      "code": "3",
+      "display": "CCP"
+    },
+    {
+      "code": "4",
+      "display": "MSA"
+    },
+    {
+      "code": "5",
+      "display": "PFFS"
+    },
+    {
+      "code": "6",
+      "display": "PACE"
+    },
+    {
+      "code": "7",
+      "display": "PCE"
+    },
+    {
+      "code": "8",
+      "display": "DEMO"
+    },
+    {
+      "code": "9",
+      "display": "FFS"
+    },
+    {
+      "code": "NF",
+      "display": "NF"
+    },
+    {
+      "code": "U",
+      "display": "UNK"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 15
+}
