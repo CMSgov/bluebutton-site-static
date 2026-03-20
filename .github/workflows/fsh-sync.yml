@@ -57,11 +57,11 @@ jobs:
         path: bluebutton-site-static
         ref: master
     
-    # Create a new branch name for the changes
+    # Create a new branch name for the changes. Includes the date it was created.
     - name: Generate a branch name
       id: branch
       run: |
-        BRANCH_NAME="fsh-json-generation-update-$(date +%Y%m%d%H%M%S)"
+        BRANCH_NAME="fsh-json-generation-update-$(date +%Y-%m-%d)"
         echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
     
     # Rename only the StructureDefinition and CodeSystem JSON files to remove the prefix and copy them to the 
@@ -106,7 +106,7 @@ jobs:
       if: steps.check-for-changes.outputs.changed == 'true'
       run: |
         cd bluebutton-site-static
-        git checkout -B ${{ steps.branch.outputs.branch_name }}
+        git checkout -b ${{ steps.branch.outputs.branch_name }}
         git commit -m "Update JSON from BFD FSH files"
         git push --set-upstream origin ${{ steps.branch.outputs.branch_name }}
       env:
@@ -121,10 +121,10 @@ jobs:
         cd bluebutton-site-static
         gh pr create \
           --title "Update JSON from BFD FSH files $(date +%Y-%m-%d)" \
-          --body "This PR updates the JSON files generated from the BFD FSH files on $(date +%Y-%m-%d). Please review and merge if everything looks good." \
+          --body "This PR updates the JSON files inside the bluebutton-site-static repo generated from the BFD FSH files on $(date +%Y-%m-%d). Please review and merge if everything looks good." \
           --base master \
           --head ${{ steps.branch.outputs.branch_name }}
       env:
-    # Need a github token with permissions to create branches and PRs in the BB Static Site repo. 
+        # Need a github token with permissions to create branches and PRs in the BB Static Site repo. 
         # Using the default GITHUB_TOKEN provided by GitHub Actions, which should have the necessary permissions for this repo.
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
