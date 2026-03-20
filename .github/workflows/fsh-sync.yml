@@ -59,7 +59,7 @@ jobs:
     - name: Create and checkout branch
       run: |
         cd bluebutton-site-static
-        git checkout -b json-update
+        git checkout -b json-update-$(date +%Y%m%d%H%M%S)
         git status
 
     - name: Copy + rename JSON CodeSystem files
@@ -110,11 +110,14 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git commit -m "Update JSON from BFD FSH files"
-        git push origin json-update
+        git push origin json-update-$(date +%Y%m%d%H%M%S)
         sleep 5 # Wait for the push to complete before creating the PR
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    # Originally tried just reusing a github action peter-evans/create-pull-request action,
+    # but it was never creating a PR for me
+    # So switched to using gh cli to create the PR only if there are changes.
     - name: Create Pull Request
       if: steps.check-for-changes.outputs.changed == 'true'
       run:  |
@@ -123,6 +126,6 @@ jobs:
           --title "Update JSON from BFD FSH files" \
           --body "This PR updates the JSON files generated from the BFD FSH files. Please review and merge if everything looks good." \
           --base master \
-          --head json-update
+          --head json-update-$(date +%Y%m%d%H%M%S)
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
