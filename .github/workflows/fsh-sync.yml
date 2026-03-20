@@ -12,14 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-    # Checkout BFD Repo (public repo)
-    - name: Checkout BFD Repo
-      uses: actions/checkout@v4
-      with:
-        repository: CMSgov/beneficiary-fhir-data
-        path: beneficiary-fhir-data
-
     # Setup Node
     - name: Setup Node
       uses: actions/setup-node@v4
@@ -31,6 +23,13 @@ jobs:
       run:  |
         node --version
         npm --version
+
+    # Checkout BFD Repo (public repo)
+    - name: Checkout BFD Repo
+      uses: actions/checkout@v4
+      with:
+        repository: CMSgov/beneficiary-fhir-data
+        path: beneficiary-fhir-data
 
     # Install Sushi
     - name: Install Sushi
@@ -50,44 +49,43 @@ jobs:
         echo "Checking output directory"
         ls beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources
 
-   # Checkout BB Static Site Repo Repo (public repo)
+    # Checkout BB Static Site Repo Repo (public repo)
     - name: Checkout BB Static Site Repo
       uses: actions/checkout@v4
       with:
         path: bluebutton-site-static
-
-    - name: Generate a branch name for use later
+    # Create a new branch name for the changes
+    - name: Generate a branch name
       id: branch
       run: |
         BRANCH_NAME="json-update-$(date +%Y%m%d%H%M%S)"
         echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
-
+    
+    # Rename the CodeSystem JSON files to remove the prefix and copy them to the 
+    # appropriate location in the bluebutton-site-static repo
     - name: Copy + rename JSON CodeSystem files
       run:  |
-        cd beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources
-        ls -la
-        ls -la ../../../../..
-        for file in CodeSystem-*.json; do
+        for file in beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources/CodeSystem-*.json; do
           [ -e "$file" ] || continue
           filename=$(basename "$file")
           new_filename="${filename#CodeSystem-}"
           echo "Copying $file to bluebutton-site-static/src/content/fhir/CodeSystem/$new_filename"
-          cp "$file" "../../../../../../bluebutton-site-static/src/content/fhir/CodeSystem/$new_filename"
+          cp "$file" "bluebutton-site-static/src/content/fhir/CodeSystem/$new_filename"
         done
 
+    # Rename the StructureDefinition JSON files to remove the prefix and copy them to the 
+    # appropriate location in the bluebutton-site-static repo
     - name: Copy + rename JSON Structure Definition files
       run:  |
-        cd beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources
-        ls -la
-        ls -la ../../../../..
-        for file in StructureDefinition-*.json; do
+        for file in beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources/StructureDefinition-*.json; do
           [ -e "$file" ] || continue
           filename=$(basename "$file")
           new_filename="${filename#StructureDefinition-}"
           echo "Copying $file to bluebutton-site-static/src/content/fhir/StructureDefinition/$new_filename"
-          cp "$file" "../../../../../../bluebutton-site-static/src/content/fhir/StructureDefinition/$new_filename"
+          cp "$file" "bluebutton-site-static/src/content/fhir/StructureDefinition/$new_filename"
         done
 
+    # See if there were any changes to the JSON files that were copied over
     - name: Check for changes
       id: check-for-changes
       run: |
@@ -102,7 +100,7 @@ jobs:
           echo "changed=true" >> $GITHUB_OUTPUT
         fi
     
-    # Commit and push changes if there are any
+    # Commit and push changes if there were any
     - name: Commit and Push Changes
       if: steps.check-for-changes.outputs.changed == 'true'
       run: |
@@ -116,9 +114,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    # Originally tried just reusing a github action peter-evans/create-pull-request action,
-    # but it was never creating a PR for me
-    # So switched to using gh cli to create the PR only if there are changes.
+    # Create a PR if there were changes
     - name: Create Pull Request
       if: steps.check-for-changes.outputs.changed == 'true'
       run:  |
