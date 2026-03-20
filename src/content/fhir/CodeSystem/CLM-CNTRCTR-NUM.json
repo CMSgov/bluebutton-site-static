@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "CLM_CNTRCTR_NUM",
   "id": "CLM-CNTRCTR-NUM",
-  "title": "Clm Cntrctr Num",
-  "description": "Code system for clm cntrctr num",
+  "title": "Claim Contractor Number",
+  "description": "A number assigned by CMS identifying a MAC authorized to process Medicare claims.",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-CNTRCTR-NUM",
   "concept": [
     {

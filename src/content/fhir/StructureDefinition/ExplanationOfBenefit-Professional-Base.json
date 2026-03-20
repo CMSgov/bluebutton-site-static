@@ -1,0 +1,63 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ExplanationOfBenefit-Professional-Base",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/ExplanationOfBenefit-Professional-Base",
+  "name": "ExplanationOfBenefit-Professional-Base",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "ExplanationOfBenefit-Professional-Base",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ExplanationOfBenefit-Professional-Base",
+        "path": "ExplanationOfBenefit-Professional-Base",
+        "label": "Explanation of Benefit Institutional Base Resource for IDR. Ignore in DD Generation",
+        "short": "ExplanationOfBenefit-Professional-Base",
+        "definition": "ExplanationOfBenefit-Professional-Base"
+      },
+      {
+        "id": "ExplanationOfBenefit-Professional-Base.CLM_MDCR_PRFNL_PRMRY_PYR_AMT",
+        "path": "ExplanationOfBenefit-Professional-Base.CLM_MDCR_PRFNL_PRMRY_PYR_AMT",
+        "short": "Carrier Primary Payer Paid Amount",
+        "definition": "Carrier Primary Payer Paid Amount",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Professional-Base.CLM_AUDT_TRL_STUS_CD",
+        "path": "ExplanationOfBenefit-Professional-Base.CLM_AUDT_TRL_STUS_CD",
+        "short": "Claim Status Code",
+        "definition": "Claim Status Code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Professional-Base.CLM_PRVDR_ACNT_RCVBL_OFST_AMT",
+        "path": "ExplanationOfBenefit-Professional-Base.CLM_PRVDR_ACNT_RCVBL_OFST_AMT",
+        "short": "Provider Account Receivable Offset Amount",
+        "definition": "Provider Account Receivable Offset Amount",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

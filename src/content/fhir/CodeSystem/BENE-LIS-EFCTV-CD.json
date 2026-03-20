@@ -1,0 +1,28 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BENE_LIS_EFCTV_CD",
+  "id": "BENE-LIS-EFCTV-CD",
+  "title": "Beneficiary LIS Effective Code",
+  "description": "Codes indicating the effective status of Low Income Subsidy (LIS) for a beneficiary",
+  "version": "1.0.0",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-LIS-EFCTV-CD",
+  "concept": [
+    {
+      "code": "Y",
+      "display": "Yes"
+    },
+    {
+      "code": "N",
+      "display": "No"
+    },
+    {
+      "code": "U",
+      "display": "Unknown"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true,
+  "count": 3
+}
