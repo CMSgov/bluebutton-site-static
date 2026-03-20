@@ -36,6 +36,7 @@ jobs:
       with:
         repository: CMSgov/beneficiary-fhir-data
         path: beneficiary-fhir-data
+        ref: master
 
     # Generate JSON from FSH
     - name: Generate JSON in BFD Repo
@@ -54,6 +55,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         path: bluebutton-site-static
+        ref: master
     
     # Create a new branch name for the changes
     - name: Generate a branch name
@@ -97,7 +99,8 @@ jobs:
       if: steps.check-for-changes.outputs.changed == 'true'
       run: |
         cd bluebutton-site-static
-        git checkout -b ${{ steps.branch.outputs.branch_name }}
+        git fetch origin main
+        git checkout -B ${{ steps.branch.outputs.branch_name }} origin/main
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git commit -m "Update JSON from BFD FSH files"
