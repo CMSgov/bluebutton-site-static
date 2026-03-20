@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-IDR-LD-DT",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-IDR-LD-DT",
+  "name": "CLM_IDR_LD_DT",
+  "title": "Claim IDR Load Date",
+  "status": "draft",
+  "description": "Deprecated 2026-01-14. When the claim was loaded into the IDR.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Claim IDR Load Date",
+        "definition": "Deprecated 2026-01-14. When the claim was loaded into the IDR."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-IDR-LD-DT"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      }
+    ]
+  }
+}
