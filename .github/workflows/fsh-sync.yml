@@ -104,6 +104,8 @@ jobs:
       run: |
         cd bluebutton-site-static
         git checkout -B ${{ steps.branch.outputs.branch_name }}
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
         git commit -m "Update JSON from BFD FSH files"
         git push --set-upstream origin ${{ steps.branch.outputs.branch_name }}
         sleep 5 # Wait for the push to complete before creating the PR
