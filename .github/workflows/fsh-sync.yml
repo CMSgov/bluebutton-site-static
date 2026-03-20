@@ -62,7 +62,7 @@ jobs:
         git checkout -b json-update
         git status
 
-    - name: Copy + rename JSON files
+    - name: Copy + rename JSON CodeSystem files
       run:  |
         cd beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources
         ls -la
@@ -73,6 +73,19 @@ jobs:
           new_filename="${filename#CodeSystem-}"
           echo "Copying $file to bluebutton-site-static/src/content/fhir/CodeSystem/$new_filename"
           cp "$file" "../../../../../../bluebutton-site-static/src/content/fhir/CodeSystem/$new_filename"
+        done
+
+    - name: Copy + rename JSON Structure Definition files
+      run:  |
+        cd beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources
+        ls -la
+        ls -la ../../../../..
+        for file in StructureDefinition-*.json; do
+          [ -e "$file" ] || continue
+          filename=$(basename "$file")
+          new_filename="${filename#StructureDefinition-}"
+          echo "Copying $file to bluebutton-site-static/src/content/fhir/StructureDefinition/$new_filename"
+          cp "$file" "../../../../../../bluebutton-site-static/src/content/fhir/StructureDefinition/$new_filename"
         done
 
     - name: Check for changes
@@ -113,15 +126,3 @@ jobs:
           --head json-update
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    # - name: Create Pull Request
-    #   
-    #   uses: peter-evans/create-pull-request@v4
-    #   with:
-    #     token: 
-    #     commit-message: "Update JSON from BFD FSH files"
-    #     branch: json-update
-    #     title: "Update JSON from BFD FSH files"
-    #     body: "This PR updates the JSON files generated from the BFD FSH files. Please review and merge if everything looks good."
-    #     base: master
-    #     path: bluebutton-site-static
