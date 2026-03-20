@@ -8,7 +8,7 @@ on:
   push:
 
 jobs:
-  generate-json:
+  fsh-to-json-generation:
     runs-on: ubuntu-latest
 
     steps:
