@@ -1,0 +1,77 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BENE_DUAL_STUS_CD",
+  "id": "BENE-DUAL-STUS-CD",
+  "title": "Beneficiary Dual Status Code",
+  "description": "A code identifying the dual eligibility status for a beneficiary.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-DUAL-STUS-CD",
+  "concept": [
+    {
+      "code": "*",
+      "display": "MAINFRAME BENEFICIARY DENOMINATOR FILE SHOWS MEDICARE ENROLLMENT FOR THE MONTH BUT IDR DATA DOES NOT."
+    },
+    {
+      "code": "00",
+      "display": "NOT MEDICARE ENROLLED FOR THE MONTH."
+    },
+    {
+      "code": "01",
+      "display": "ELIGIBLE IS ENTITLED TO MEDICARE – QUALIFIED MEDICARE BENEFICIARY (QMB) ONLY."
+    },
+    {
+      "code": "02",
+      "display": "ELIGIBLE IS ENTITLED TO MEDICARE – QUALIFIED MEDICARE BENEFICIARY (QMB) AND MEDICAID COVERAGE INCLUDING PRESCRIPTION DRUGS (RX). MEDICAID DRUG COVERAGE CRITERION ONLY APPLIES THROUGH DECEMBER 2005."
+    },
+    {
+      "code": "03",
+      "display": "ELIGIBLE IS ENTITLED TO MEDICARE – SPECIFIED LOW-INCOME MEDICARE BENEFICIARY (SLMB) ONLY."
+    },
+    {
+      "code": "04",
+      "display": "ELIGIBLE IS ENTITLED TO MEDICARE – SPECIFIED LOW-INCOME MEDICARE BENEFICIARY (SLMB) AND MEDICAID COVERAGE INCLUDING PRESCRIPTION DRUGS (RX). MEDICAID DRUG COVERAGE CRITERION ONLY APPLIES THROUGH DECEMBER 2005."
+    },
+    {
+      "code": "05",
+      "display": "ELIGIBLE IS ENTITLED TO MEDICARE – QUALIFIED DISABLED AND WORKING INDIVIDUAL (QDWI)."
+    },
+    {
+      "code": "06",
+      "display": "ELIGIBLE IS ENTITLED TO MEDICARE – QUALIFYING INDIVIDUAL (QI)."
+    },
+    {
+      "code": "07",
+      "display": "ELIGIBLE IS ENTITLED TO MEDICARE – QUALIFYING INDIVIDUAL (QI). THIS GROUP IS EFFECTIVE 1/1/98 - 12/31/02."
+    },
+    {
+      "code": "08",
+      "display": "ELIGIBLE IS ENTITLED TO MEDICARE – OTHER DUAL ELIGIBLE WITH MEDICAID COVERAGE INCLUDING PRESCRIPTION DRUGS (RX). MEDICAID DRUG COVERAGE CRITERION ONLY APPLIES THROUGH DECEMBER 2005. NON-QUALIFIED MEDICARE BENEFICIARY (QMB), SPECIFIED LOW-INCOME MEDICARE BENEFICIARY (SLMB), QUALIFIED DISABLED AND WORKING INDIVIDUAL (QDWI) OR QUALIFYING INDIVIDUAL (QI)."
+    },
+    {
+      "code": "09",
+      "display": "ELIGIBLE IS ENTITLED TO MEDICARE – OTHER DUAL ELIGIBLE BUT WITHOUT MEDICAID COVERAGE."
+    },
+    {
+      "code": "10",
+      "display": "OTHER FULL DUAL (APPLIES TO DUALS) TERRITORY BUY INS (APPLIES TO MEDICARE) SEPARATE CHIP ELIGIBLE ENTITLED TO MEDICARE (APPLIES TO MEDICAID)"
+    },
+    {
+      "code": "99",
+      "display": "UNKNOWN"
+    },
+    {
+      "code": "NA",
+      "display": "NON-MEDICAID"
+    },
+    {
+      "code": "XX",
+      "display": "ENROLLED IN MEDICARE A AND/OR B, BUT NO MANAGEMENT INFORMATION INTEGRATED REPOSITORY (MIIR) RECORD FOR THE MONTH"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 16
+}

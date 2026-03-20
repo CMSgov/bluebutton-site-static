@@ -1,0 +1,21 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "Final-Action",
+  "id": "Final-Action",
+  "title": "Final Action",
+  "description": "Tag codes indicating whether or not a claim has been marked as final action.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/Final-Action",
+  "concept": [
+    {
+      "code": "FinalAction",
+      "display": "Final Action"
+    },
+    {
+      "code": "NotFinalAction",
+      "display": "Not Final Action"
+    }
+  ],
+  "count": 2
+}

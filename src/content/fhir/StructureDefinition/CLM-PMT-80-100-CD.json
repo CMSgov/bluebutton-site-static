@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-PMT-80-100-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PMT-80-100-CD",
+  "name": "CLM_PMT_80_100_CD",
+  "title": "Payment Code",
+  "status": "draft",
+  "description": "The code indicating that the amount shown in the payment field on the non-institutional line item represents either 80% or 100% of the allowed charges less any deductible, or 100% limitation of liability only.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Payment Code",
+        "definition": "The code indicating that the amount shown in the payment field on the non-institutional line item represents either 80% or 100% of the allowed charges less any deductible, or 100% limitation of liability only."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PMT-80-100-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PMT-80-100-CD"
+      }
+    ]
+  }
+}

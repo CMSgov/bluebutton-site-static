@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-LINE-RX-NUM",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-LINE-RX-NUM",
+  "name": "CLM_LINE_RX_NUM",
+  "title": "Claim Line RX Number",
+  "status": "draft",
+  "description": "The number used to identify the prescription order number for drugs and biologicals purchased through the competitive acquisition program (CAP).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Claim Line RX Number",
+        "definition": "The number used to identify the prescription order number for drugs and biologicals purchased through the competitive acquisition program (CAP)."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-LINE-RX-NUM"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

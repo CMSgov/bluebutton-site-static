@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "PRVDR_ID_QLFYR_CD",
+  "id": "PRVDR-ID-QLFYR-CD",
+  "title": "Provider ID Qualifier Code",
+  "description": "Indicates the type of number used to identify the provider.",
+  "url": "http://bluebutton.cms.gov/fhir/CodeSystem/PRVDR-ID-QLFYR-CD",
+  "concept": [
+    {
+      "code": "01",
+      "display": "NPI Number"
+    },
+    {
+      "code": "06",
+      "display": "UPIN"
+    },
+    {
+      "code": "07",
+      "display": "NCPDP Number"
+    },
+    {
+      "code": "08",
+      "display": "State License Number"
+    },
+    {
+      "code": "11",
+      "display": "TIN"
+    },
+    {
+      "code": "12",
+      "display": "DEA"
+    },
+    {
+      "code": "99",
+      "display": "Other mandatory for Standard Data Format"
+    }
+  ],
+  "count": 7
+}

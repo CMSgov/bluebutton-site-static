@@ -5,7 +5,7 @@
   "name": "CLM_CMS_PROC_DT",
   "title": "FI Claim Process Date",
   "status": "draft",
-  "description": "The date the fiscal intermediary completes processing and releases the institutional claim to the CMS common working file (CWF; stored in the NCH).",
+  "description": "Deprecated 2026-01-14. The date the fiscal intermediary completes processing and releases the institutional claim to the CMS common working file (CWF; stored in the NCH).",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -24,7 +24,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "FI Claim Process Date",
-        "definition": "The date the fiscal intermediary completes processing and releases the institutional claim to the CMS common working file (CWF; stored in the NCH)."
+        "definition": "Deprecated 2026-01-14. The date the fiscal intermediary completes processing and releases the institutional claim to the CMS common working file (CWF; stored in the NCH)."
       },
       {
         "id": "Extension.extension",
