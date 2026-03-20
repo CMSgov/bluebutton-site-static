@@ -5,7 +5,7 @@
   "name": "CLM_FI_ACTN_CD",
   "title": "FI or MAC Claim Action Code",
   "status": "draft",
-  "description": "The type of action requested by the intermediary to be taken on an institutional claim.",
+  "description": "Deprecated 2026-01-14. The type of action requested by the intermediary to be taken on an institutional claim.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -24,7 +24,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "FI or MAC Claim Action Code",
-        "definition": "The type of action requested by the intermediary to be taken on an institutional claim."
+        "definition": "Deprecated 2026-01-14. The type of action requested by the intermediary to be taken on an institutional claim."
       },
       {
         "id": "Extension.extension",

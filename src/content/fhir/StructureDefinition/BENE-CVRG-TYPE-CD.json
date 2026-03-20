@@ -1,0 +1,56 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BENE-CVRG-TYPE-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-CVRG-TYPE-CD",
+  "name": "BENE_CVRG_TYPE_CD",
+  "title": "Beneficiary Coverage Type Code",
+  "status": "draft",
+  "description": "A code identifying the type of Medicare coverage for a beneficiary.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Coverage"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Beneficiary Coverage Type Code",
+        "definition": "A code identifying the type of Medicare coverage for a beneficiary."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-CVRG-TYPE-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-CVRG-TYPE-CD"
+      }
+    ]
+  }
+}

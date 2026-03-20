@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_CMPND_CD",
+  "id": "CLM-CMPND-CD",
+  "title": "Compound Code",
+  "description": "This field indicates whether or not the dispensed drug was compounded or mixed.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-CMPND-CD",
+  "concept": [
+    {
+      "code": "0",
+      "display": "Not specified (missing values are also possible)"
+    },
+    {
+      "code": "1",
+      "display": "Not a compound"
+    },
+    {
+      "code": "2",
+      "display": "Compound"
+    }
+  ],
+  "count": 3
+}

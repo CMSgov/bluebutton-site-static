@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "BENE_PTNT_STUS_CD",
   "id": "BENE-PTNT-STUS-CD",
-  "title": "Bene Ptnt Stus Cd",
-  "description": "Code system for bene ptnt stus cd",
+  "title": "Beneficiary Patient Status Code",
+  "description": "Indicates the patient’s discharge status as of the Claim Through Date",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-PTNT-STUS-CD",
   "concept": [
     {

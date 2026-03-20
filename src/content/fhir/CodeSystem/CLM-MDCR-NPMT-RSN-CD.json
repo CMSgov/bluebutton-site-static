@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "CLM_MDCR_NPMT_RSN_CD",
   "id": "CLM-MDCR-NPMT-RSN-CD",
-  "title": "Clm Mdcr Npmt Rsn Cd",
-  "description": "Code system for clm mdcr npmt rsn cd",
+  "title": "Claim Nonpayment Reason Code",
+  "description": "THE REASON THAT NO MEDICARE PAYMENT IS MADE FOR SERVICES ON AN INSTITUTIONAL CLAIM.",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-MDCR-NPMT-RSN-CD",
   "concept": [
     {
