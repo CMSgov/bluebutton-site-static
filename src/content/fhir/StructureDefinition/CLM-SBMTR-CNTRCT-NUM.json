@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-SBMTR-CNTRCT-NUM",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-SBMTR-CNTRCT-NUM",
+  "name": "CLM_SBMTR_CNTRCT_NUM",
+  "title": "Submitter Contract Number",
+  "status": "active",
+  "description": "Deprecated 2026-01-14. The contract number of the submitter.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.insurance"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Submitter Contract Number",
+        "definition": "Deprecated 2026-01-14. The contract number of the submitter."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-SBMTR-CNTRCT-NUM"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}
