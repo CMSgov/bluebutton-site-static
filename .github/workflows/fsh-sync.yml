@@ -24,18 +24,18 @@ jobs:
         node --version
         npm --version
 
+    # Install Sushi
+    - name: Install Sushi
+      run:  |
+        npm install -g fsh-sushi fhirpath
+        sushi --version
+
     # Checkout BFD Repo (public repo)
     - name: Checkout BFD Repo
       uses: actions/checkout@v4
       with:
         repository: CMSgov/beneficiary-fhir-data
         path: beneficiary-fhir-data
-
-    # Install Sushi
-    - name: Install Sushi
-      run:  |
-        npm install -g fsh-sushi fhirpath
-        sushi --version
 
     # Generate JSON from FSH
     - name: Generate JSON
@@ -49,7 +49,7 @@ jobs:
         echo "Checking output directory"
         ls beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources
 
-    # Checkout BB Static Site Repo Repo (public repo)
+    # Checkout BB Static Site Repo (public repo)
     - name: Checkout BB Static Site Repo
       uses: actions/checkout@v4
       with:
