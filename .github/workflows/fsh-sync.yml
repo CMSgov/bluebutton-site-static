@@ -54,6 +54,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         path: bluebutton-site-static
+    
     # Create a new branch name for the changes
     - name: Generate a branch name
       id: branch
@@ -66,7 +67,6 @@ jobs:
     - name: Copy + rename JSON CodeSystem files
       run:  |
         for file in beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources/CodeSystem-*.json; do
-          [ -e "$file" ] || continue
           filename=$(basename "$file")
           new_filename="${filename#CodeSystem-}"
           echo "Copying $file to bluebutton-site-static/src/content/fhir/CodeSystem/$new_filename"
@@ -78,7 +78,6 @@ jobs:
     - name: Copy + rename JSON Structure Definition files
       run:  |
         for file in beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources/StructureDefinition-*.json; do
-          [ -e "$file" ] || continue
           filename=$(basename "$file")
           new_filename="${filename#StructureDefinition-}"
           echo "Copying $file to bluebutton-site-static/src/content/fhir/StructureDefinition/$new_filename"
@@ -91,7 +90,6 @@ jobs:
       run: |
         cd bluebutton-site-static
         git add .
-        git status
         if git diff --cached --quiet; then
           echo "changed=false" >> $GITHUB_OUTPUT
           echo "No changes detected, skipping commit and push"
@@ -106,8 +104,6 @@ jobs:
       run: |
         cd bluebutton-site-static
         git checkout -B ${{ steps.branch.outputs.branch_name }}
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
         git commit -m "Update JSON from BFD FSH files"
         git push --set-upstream origin ${{ steps.branch.outputs.branch_name }}
         sleep 5 # Wait for the push to complete before creating the PR
