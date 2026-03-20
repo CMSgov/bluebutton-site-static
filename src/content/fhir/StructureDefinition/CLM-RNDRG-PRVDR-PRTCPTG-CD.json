@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-RNDRG-PRVDR-PRTCPTG-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-RNDRG-PRVDR-PRTCPTG-CD",
+  "name": "CLM_RNDRG_PRVDR_PRTCPTG_CD",
+  "title": "Provider Participating Indicator Code",
+  "status": "draft",
+  "description": "Code indicating whether or not a provider is participating (accepting assignment) for this line-item service on the non-institutional claim.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Provider Participating Indicator Code",
+        "definition": "Code indicating whether or not a provider is participating (accepting assignment) for this line-item service on the non-institutional claim."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-RNDRG-PRVDR-PRTCPTG-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-RNDRG-PRVDR-PRTCPTG-CD"
+      }
+    ]
+  }
+}

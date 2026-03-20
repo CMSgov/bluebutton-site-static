@@ -1,0 +1,102 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DiagnosisComponent",
+  "url": "http://hl7.org/fhir/StructureDefinition/DiagnosisComponent",
+  "name": "Diagnosis info",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "DiagnosisComponent",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosisComponent",
+        "path": "DiagnosisComponent",
+        "label": "Diagnosis Info for IDR. Ignore in DD Generation",
+        "short": "DiagnosisComponent",
+        "definition": "DiagnosisComponent"
+      },
+      {
+        "id": "DiagnosisComponent.CLM_VAL_SQNC_NUM",
+        "path": "DiagnosisComponent.CLM_VAL_SQNC_NUM",
+        "short": "Diagnosis Sequence Number",
+        "definition": "A SYSTEM GENERATED SEQUENCE NUMBER FOR A COMBINATION OF CLAIM KEY AND PRODUCT",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosisComponent.ROW_NUM",
+        "path": "DiagnosisComponent.ROW_NUM",
+        "short": "Generated Row Number",
+        "definition": "This is a non-overlapping number that should be used as the sequence number for a diagnosis on a given claim.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosisComponent.CLM_DGNS_CD",
+        "path": "DiagnosisComponent.CLM_DGNS_CD",
+        "short": "Claim Diagnosis Code",
+        "definition": "A CODE IDENTIFYING AN INTERNATIONAL CLASSIFICATION OF DISEASES, CLINICAL MODIFICATION (ICD_CM) DIAGNOSIS RELEVANT TO THE SERVICE BEING PROVIDED OR THE REASON FOR THE SERVICE.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosisComponent.CLM_DGNS_PRCDR_ICD_IND",
+        "path": "DiagnosisComponent.CLM_DGNS_PRCDR_ICD_IND",
+        "short": "Diagnosis Procedure ICD indicator",
+        "definition": "THIS IS THE CLAIM PROD VERSION CODE WHICH IS SPACES OR 9 FOR ICD 9 AND 0 FOR ICD 10.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosisComponent.CLM_PROD_TYPE_CD",
+        "path": "DiagnosisComponent.CLM_PROD_TYPE_CD",
+        "short": "Diagnosis Prod Type Code",
+        "definition": "UNIQUELY IDENTIFIES A TYPE OF PROCEDURE OR A DIAGNOSIS CATEGORY.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosisComponent.CLM_POA_IND",
+        "path": "DiagnosisComponent.CLM_POA_IND",
+        "short": "Claim Present on Admission Indicator",
+        "definition": "THE CODE USED TO INDICATE A CONDITION WAS PRESENT AT THE TIME THE BENEFICIARY WAS ADMITTED TO A GENERAL ACUTE CARE FACILITY.NOT APPLICABLE TO NON-DIAGNOSTIC PRODUCTS.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}
