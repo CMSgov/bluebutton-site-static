@@ -38,13 +38,13 @@ jobs:
         path: beneficiary-fhir-data
 
     # Generate JSON from FSH
-    - name: Generate JSON
+    - name: Generate JSON in BFD Repo
       run: |
         cd beneficiary-fhir-data/apps/bfd-model-idr/sushi
         sushi build
 
     # Confirm JSON Output
-    - name: Verify generated JSON
+    - name: Verify generated JSON in BFD repo
       run: |
         echo "Checking output directory"
         ls beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources
@@ -59,12 +59,12 @@ jobs:
     - name: Generate a branch name
       id: branch
       run: |
-        BRANCH_NAME="json-update-$(date +%Y%m%d%H%M%S)"
+        BRANCH_NAME="fsh-json-generation-update-$(date +%Y%m%d%H%M%S)"
         echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
     
     # Rename only the StructureDefinition and CodeSystem JSON files to remove the prefix and copy them to the 
     # appropriate location in the bluebutton-site-static repo
-    - name: Copy + rename JSON CodeSystem and StructureDefinition files
+    - name: Rename and copy BFD JSON CodeSystem and StructureDefinition files into BB Static Site Repo
       run:  |
         for file in beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources/*.json; do
           filename=$(basename "$file")
@@ -79,7 +79,7 @@ jobs:
         done
 
     # See if there were any changes to the JSON files that were copied over
-    - name: Check for changes
+    - name: Check for changes in BB Static Site Repo
       id: check-for-changes
       run: |
         cd bluebutton-site-static
@@ -93,7 +93,7 @@ jobs:
         fi
     
     # Commit and push changes if there were any. Won't run if no changesare detected.
-    - name: Commit and Push Changes
+    - name: Commit and Push Changes in BB Static Site Repo
       if: steps.check-for-changes.outputs.changed == 'true'
       run: |
         cd bluebutton-site-static
@@ -102,12 +102,11 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git commit -m "Update JSON from BFD FSH files"
         git push --set-upstream origin ${{ steps.branch.outputs.branch_name }}
-        sleep 5 # Wait for the push to complete before creating the PR
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # Create a PR if there were changes. Won't run if no changesare detected.
-    - name: Create Pull Request
+    - name: Create Pull Request in BB Static Site Repo
       if: steps.check-for-changes.outputs.changed == 'true'
       run:  |
         cd bluebutton-site-static
