@@ -62,26 +62,20 @@ jobs:
         BRANCH_NAME="json-update-$(date +%Y%m%d%H%M%S)"
         echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
     
-    # Rename the CodeSystem JSON files to remove the prefix and copy them to the 
+    # Rename only the StructureDefinition and CodeSystem JSON files to remove the prefix and copy them to the 
     # appropriate location in the bluebutton-site-static repo
-    - name: Copy + rename JSON CodeSystem files
+    - name: Copy + rename JSON CodeSystem and StructureDefinition files
       run:  |
-        for file in beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources/CodeSystem-*.json; do
+        for file in beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources/*.json; do
           filename=$(basename "$file")
-          new_filename="${filename#CodeSystem-}"
-          echo "Copying $file to bluebutton-site-static/src/content/fhir/CodeSystem/$new_filename"
-          cp "$file" "bluebutton-site-static/src/content/fhir/CodeSystem/$new_filename"
-        done
-
-    # Rename the StructureDefinition JSON files to remove the prefix and copy them to the 
-    # appropriate location in the bluebutton-site-static repo
-    - name: Copy + rename JSON Structure Definition files
-      run:  |
-        for file in beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources/StructureDefinition-*.json; do
-          filename=$(basename "$file")
-          new_filename="${filename#StructureDefinition-}"
-          echo "Copying $file to bluebutton-site-static/src/content/fhir/StructureDefinition/$new_filename"
-          cp "$file" "bluebutton-site-static/src/content/fhir/StructureDefinition/$new_filename"
+          prefix="${filename%%-*}" # removes everything after first dash, leaving the prefix
+          if [[ "$prefix" != "CodeSystem" && "$prefix" != "StructureDefinition" ]]; then
+            continue
+          fi
+          new_filename="${filename#*-}" # removes everything before the first dash, leaving the rest of the filename
+          dest_folder="bluebutton-site-static/src/content/fhir/$prefix"
+          echo "Copying $file to $dest_folder/$new_filename"
+          cp "$file" "$dest_folder/$new_filename"
         done
 
     # See if there were any changes to the JSON files that were copied over
@@ -98,7 +92,7 @@ jobs:
           echo "changed=true" >> $GITHUB_OUTPUT
         fi
     
-    # Commit and push changes if there were any
+    # Commit and push changes if there were any. Won't run if no changesare detected.
     - name: Commit and Push Changes
       if: steps.check-for-changes.outputs.changed == 'true'
       run: |
@@ -112,7 +106,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    # Create a PR if there were changes
+    # Create a PR if there were changes. Won't run if no changesare detected.
     - name: Create Pull Request
       if: steps.check-for-changes.outputs.changed == 'true'
       run:  |
