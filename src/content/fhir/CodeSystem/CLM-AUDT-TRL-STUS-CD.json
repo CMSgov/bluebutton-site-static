@@ -1,0 +1,740 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_AUDT_TRL_STUS_CD",
+  "id": "CLM-AUDT-TRL-STUS-CD",
+  "title": "Claim Status Code",
+  "description": "The current status information for the pending and paid claims currently in the system. Augmented to derive using system type + location code + status code.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-AUDT-TRL-STUS-CD",
+  "concept": [
+    {
+      "code": "FS",
+      "display": "A manual update is needed before the claim processing can continue."
+    },
+    {
+      "code": "FD",
+      "display": "Claim has reached final disposition with no reimbursement (medical denial)."
+    },
+    {
+      "code": "FP",
+      "display": "Claim has reached final disposition with reimbursement."
+    },
+    {
+      "code": "FR",
+      "display": "Claim has reached final disposition with no reimbursement (non-medical reject)."
+    },
+    {
+      "code": "FT",
+      "display": "Claim has reached final disposition with no reimbursement and has been returned to the provider with billing errors."
+    },
+    {
+      "code": "FI",
+      "display": "Claim moves from the active processing file to the inactive file."
+    },
+    {
+      "code": "MA",
+      "display": "Current active claim. This is an internal MCS MPAP status, and will only display online in related history."
+    },
+    {
+      "code": "MB",
+      "display": "Suspended. All pending claims will show this status when they are viewed online. All other pending claim statuses are used internally by MCS MPAP only."
+    },
+    {
+      "code": "MC",
+      "display": "Approved awaiting CWF response through MPAP, claim processed with no outstanding edits/audits through MPAP and queried."
+    },
+    {
+      "code": "MD",
+      "display": "Approved and paid; CAP physician no pay detail lines."
+    },
+    {
+      "code": "ME",
+      "display": "Denied; set based on the history usage indicator on the AA segment of a denial edit or audit."
+    },
+    {
+      "code": "MF",
+      "display": "Full claim refund - EGHP, used only when an EGHP accounts receivable has been satisfied (RG type AR). This status is for display purposes only, internally the claim status would be a ‘y’."
+    },
+    {
+      "code": "MG",
+      "display": "Partial refund applied, partial refund was calculated for the claim but was applied to something else outstanding, such as an AR."
+    },
+    {
+      "code": "MJ",
+      "display": "Claim still active. This is an internal MCS MPAP status, and will never display online."
+    },
+    {
+      "code": "MK",
+      "display": "Claim in pending suspense, used as history for duplicate audits but not MPAP (relationship or negative relationship audit). This is an internal MCS MPAP status, and does not display online except as related history or on a bene research document (BRD). The status can be set several ways: claim has no significant claim-level audit failed, but has claim-level edit suspense (does not look at history usage on edit) claim or detail suspends for a post-CWF audit detail suspends with ‘f’ disposition audit that has a history usage of ‘3’"
+    },
+    {
+      "code": "ML",
+      "display": "CWF suspense, no MPAP, the HIC change trailer on the claim has a different cross-reference HIC than the ‘h’ trailer on eligibility. Note: the ‘L’ status is an internal status and will not appear on a claim. While the HIC is being changed, the claim will have an ‘L’ status until the change is complete."
+    },
+    {
+      "code": "MM",
+      "display": "Approved and paid (includes all deductible) - currently not used."
+    },
+    {
+      "code": "MN",
+      "display": "Denied for payment (excludes deductible), set based on the history usage (AA segment) indicator on a denial edit or audit."
+    },
+    {
+      "code": "MP",
+      "display": "Partial claim refund - EGHP, used only when an EGHP accounts receivable has been satisfied (RG type AR). This status is for display purposes only, internally the claim status would be a ‘g’."
+    },
+    {
+      "code": "MQ",
+      "display": "Adjusted - claim has been replaced by a full claim adjustment."
+    },
+    {
+      "code": "MR",
+      "display": "Claim has been deleted from the system. When a claim is deleted (transferred to location 090), the claim status and the detail status are both set to ‘R’."
+    },
+    {
+      "code": "MU",
+      "display": "Paid but not for dup use - currently not used."
+    },
+    {
+      "code": "MV",
+      "display": "Denied, but not for dup use, set based on the history usage indicator on the AA segment of a denial edit or audit."
+    },
+    {
+      "code": "MW",
+      "display": "Rejected. This status is set for Assigned and Non-Assigned claims, based on the receipt date, the bene submission form, and the reject indicator which is MSG ACTION = RJ or R2 on the Narrative Message Usage file (NA). If all details are rejected (status ‘W’) then the claim status is set to rejected (‘W’)."
+    },
+    {
+      "code": "MX",
+      "display": "Partial refund, claim that is a partial void and a split pay."
+    },
+    {
+      "code": "MY",
+      "display": "Full refund, full amount of claim payment was returned."
+    },
+    {
+      "code": "MZ",
+      "display": "Voided, full void has been issued for the claim."
+    },
+    {
+      "code": "M1",
+      "display": "Current active claim, separate history. This is an internal MCS MPAP status, and will only display online in related history. This status applies to the header of claims that contain a demonstration number that has been flagged for separate history in the HXXTDEMO table."
+    },
+    {
+      "code": "M2",
+      "display": "Suspended, separate history. All pending claims will show this status when they are viewed online. All other pending claim statuses are used internally by MCS MPAP only. This status applies to the header of claims that contain a demonstration number that has been flagged for separate history in the HXXTDEMO table."
+    },
+    {
+      "code": "M3",
+      "display": "Approved awaiting CWF response, separate history, through MPAP, claim processed with no outstanding edits/audits through MPAP and queried. This status applies to the header of claims that contain a demonstration number that has been flagged for separate history in the HXXTDEMO table."
+    },
+    {
+      "code": "M4",
+      "display": "Approved and paid, separate history. This status applies to the header of claims that contain a demonstration number that has been flagged for separate history in the HXXTDEMO table."
+    },
+    {
+      "code": "M5",
+      "display": "Denied; separate history, set based on the history usage indicator on the AA segment of a denial edit or audit. This status applies to the header of claims that contain a demonstration number that has been flagged for separate history in the HXXTDEMO table."
+    },
+    {
+      "code": "M6",
+      "display": "Not Used"
+    },
+    {
+      "code": "M8",
+      "display": "Claim moved to another HIC. Claim was submitted and finalized for a HIC prior to the HIC being changed. (This status is internal to MCS only and will not display online.)"
+    },
+    {
+      "code": "M9",
+      "display": "Claim deleted from system. Claim deleted from MPAP due to rework, the ICN is a duplicate of another ICN in the system. (This status is internal to MCS only and will not display online.)"
+    },
+    {
+      "code": "V0008",
+      "display": "Void/Entry Code 3 Claim"
+    },
+    {
+      "code": "V0105",
+      "display": "TPL Suspense/MSP/HMO (Jurisdiction D’s HMO claims suspend to 09/27)"
+    },
+    {
+      "code": "V0109",
+      "display": "TPL Suspense/MSP/HMO (Jurisdiction D’s HMO claims suspend to 09/27)"
+    },
+    {
+      "code": "V0107",
+      "display": "MSP Cost Avoid"
+    },
+    {
+      "code": "V0207",
+      "display": "MSP Denied Lines"
+    },
+    {
+      "code": "V0209",
+      "display": "MSP claims that received CWF edit 6819 and had non-GHP MSP prior to querying CWF"
+    },
+    {
+      "code": "V0306",
+      "display": "Purged"
+    },
+    {
+      "code": "V0307",
+      "display": "MSP Split Claims"
+    },
+    {
+      "code": "V0309",
+      "display": "MSP claims that received CWF edit 6819 and did not have non-GHP MSP prior to querying CWF"
+    },
+    {
+      "code": "V0405",
+      "display": "Clean claim (ready to adjudicate)"
+    },
+    {
+      "code": "V0505",
+      "display": "Line item error"
+    },
+    {
+      "code": "V0506",
+      "display": "Line item error"
+    },
+    {
+      "code": "V0509",
+      "display": "If the system cannot identify a VMS Action Code; the claim suspends to this location/status for review. You need to verify that the FPS Model Number on each claim line appears on the VMAP/4C/ACFPWALK table. If the FPS Model Number/Action Code combination is not on the table, update the table according to the TDL issued by CMS that introduced the FPS Model. After updating the table, deny the claim line or lines as follows:\n         •\tType the Action Code for the FPS Model Number on the claim line or lines.\n         •\tEnsure that the Allowed Amount on the claim is zero.\n         •\tType R in the Claim Review Code field.\n         Refer to entries for FPSD and FPSH in the APEX Reference Manual in the chapter on “Common Working File (CWF) Codes” for additional information."
+    },
+    {
+      "code": "V0606",
+      "display": "Provider problem"
+    },
+    {
+      "code": "V0706",
+      "display": "Medical consultation"
+    },
+    {
+      "code": "V0805",
+      "display": "Edit error"
+    },
+    {
+      "code": "V0806",
+      "display": "Edit error"
+    },
+    {
+      "code": "V0905",
+      "display": "Specialty examination"
+    },
+    {
+      "code": "V0906",
+      "display": "MSP with a primary paid amount from the primary payer"
+    },
+    {
+      "code": "V1004",
+      "display": "Delete"
+    },
+    {
+      "code": "V1105",
+      "display": "Claim referred to supervisor"
+    },
+    {
+      "code": "V1202",
+      "display": "MSP first letter initiated"
+    },
+    {
+      "code": "V1302",
+      "display": "Suspense – Other"
+    },
+    {
+      "code": "V1404",
+      "display": "Suspense – DME"
+    },
+    {
+      "code": "V1405",
+      "display": "Suspense – DME"
+    },
+    {
+      "code": "V1505",
+      "display": "Chiropractor claim"
+    },
+    {
+      "code": "V1602",
+      "display": "MSP first letter sent"
+    },
+    {
+      "code": "V1701",
+      "display": "Activated; not entered"
+    },
+    {
+      "code": "V1802",
+      "display": "Utilization review"
+    },
+    {
+      "code": "V1807",
+      "display": "Utilization review"
+    },
+    {
+      "code": "V1809",
+      "display": "Utilization review"
+    },
+    {
+      "code": "V1907",
+      "display": "Third level review (prior history review)"
+    },
+    {
+      "code": "V2005",
+      "display": "Reject name/sex"
+    },
+    {
+      "code": "V2104",
+      "display": "Adjustment"
+    },
+    {
+      "code": "V2205",
+      "display": "Entitlement termination; quality control"
+    },
+    {
+      "code": "V2305",
+      "display": "No beneficiary address"
+    },
+    {
+      "code": "V2404",
+      "display": "Beneficiary BUDS01 record closed"
+    },
+    {
+      "code": "V2405",
+      "display": "Beneficiary BUDS01 record closed"
+    },
+    {
+      "code": "V2409",
+      "display": "Beneficiary BUDS01 record closed"
+    },
+    {
+      "code": "V2508",
+      "display": "Representative payee"
+    },
+    {
+      "code": "V2509",
+      "display": "Representative payee"
+    },
+    {
+      "code": "V2608",
+      "display": "Welfare; Disposition Code 42"
+    },
+    {
+      "code": "V2609",
+      "display": "Welfare; Disposition Code 42"
+    },
+    {
+      "code": "V2708",
+      "display": "Services prior to entitlement (HMO for Jurisdiction D only)"
+    },
+    {
+      "code": "V2709",
+      "display": "Services prior to entitlement (HMO for Jurisdiction D only)"
+    },
+    {
+      "code": "V2804",
+      "display": "Mass adjustment suspensions"
+    },
+    {
+      "code": "V2906",
+      "display": "Missing data"
+    },
+    {
+      "code": "V3004",
+      "display": "Location/status 04/30 is for estimated interest errors. Batch adjudication program VMSCW273 generates this location/status prior to sending the claim to CWF, based on the absence of valid data in certain fields on the claim. These fields include: the date of receipt, the estimated mail date, the amount paid to the provider, the amount paid to the beneficiary, the provider participation indicator, and the provider specialty."
+    },
+    {
+      "code": "V3005",
+      "display": "Location/status 04/30 is for estimated interest errors. Batch adjudication program VMSCW273 generates this location/status prior to sending the claim to CWF, based on the absence of valid data in certain fields on the claim. These fields include: the date of receipt, the estimated mail date, the amount paid to the provider, the amount paid to the beneficiary, the provider participation indicator, and the provider specialty."
+    },
+    {
+      "code": "V3105"
+    },
+    {
+      "code": "V3305",
+      "display": "Reasonable charge"
+    },
+    {
+      "code": "V3405",
+      "display": "Physician inactive/missing"
+    },
+    {
+      "code": "V3505",
+      "display": "Physician utilization"
+    },
+    {
+      "code": "V3602",
+      "display": "MSP first letter follow-up"
+    },
+    {
+      "code": "V3707",
+      "display": "Duplicate suspect"
+    },
+    {
+      "code": "V3807",
+      "display": "Beneficiary utilization - mandatory assignment for drugs/biologicals"
+    },
+    {
+      "code": "V3902",
+      "display": "Beneficiary information"
+    },
+    {
+      "code": "V3907",
+      "display": "Rebundled claims (Jurisdictions A, B, & C)"
+    },
+    {
+      "code": "V4009",
+      "display": "Premium arrearage; V trailer"
+    },
+    {
+      "code": "V4108",
+      "display": "New jurisdiction; E trailer; Disposition Code 40"
+    },
+    {
+      "code": "V4109",
+      "display": "New jurisdiction; E trailer; Disposition Code 40"
+    },
+    {
+      "code": "V4208",
+      "display": "Unique for CWF resubmits – deny after 4 or 20 days, as appropriate"
+    },
+    {
+      "code": "V4209",
+      "display": "Unique for CWF resubmits – deny after 4 or 20 days, as appropriate"
+    },
+    {
+      "code": "V4308",
+      "display": "Reply Disposition Code 43"
+    },
+    {
+      "code": "V4309",
+      "display": "Reply Disposition Code 43"
+    },
+    {
+      "code": "V4402",
+      "display": "MSP automated development"
+    },
+    {
+      "code": "V4408",
+      "display": "MSP automated development"
+    },
+    {
+      "code": "V4508",
+      "display": "Name error"
+    },
+    {
+      "code": "V4509",
+      "display": "Name error"
+    },
+    {
+      "code": "V4603",
+      "display": "Normal DME record (Cert)"
+    },
+    {
+      "code": "V4707",
+      "display": "Re-suspend the claim from a UR LL/SS; AC operator did not type review code U showing UR review is complete"
+    },
+    {
+      "code": "V4709",
+      "display": "New HICN; C trailer"
+    },
+    {
+      "code": "V4807",
+      "display": "Re-suspend the claim from a UR LL/SS; the PSC/ZPIC operator did not type review code U showing UR review is complete"
+    },
+    {
+      "code": "V4809",
+      "display": "Worker’s Compensation; Y trailer"
+    },
+    {
+      "code": "V4907",
+      "display": "Rebundling (Jurisdiction D only)"
+    },
+    {
+      "code": "V4909",
+      "display": "Reject Travelers, RRB, or UMW"
+    },
+    {
+      "code": "V5003",
+      "display": "Stale cert – automated DME"
+    },
+    {
+      "code": "V5005",
+      "display": "Stale cert – automated DME"
+    },
+    {
+      "code": "V5103",
+      "display": "Stop cert – automated DME"
+    },
+    {
+      "code": "V5205",
+      "display": "Reasonable charge error"
+    },
+    {
+      "code": "V5206",
+      "display": "Reasonable charge error"
+    },
+    {
+      "code": "V5305",
+      "display": "No cert on file – automated DME"
+    },
+    {
+      "code": "V5408",
+      "display": "Alien no pay"
+    },
+    {
+      "code": "V5509",
+      "display": "Hospice involvement"
+    },
+    {
+      "code": "V5608",
+      "display": "Adjustment claim error/09 entry code"
+    },
+    {
+      "code": "V5609",
+      "display": "Adjustment claim error/09 entry code"
+    },
+    {
+      "code": "V5702",
+      "display": "Initiate MSP development"
+    },
+    {
+      "code": "V5705",
+      "display": "Initiate MSP development"
+    },
+    {
+      "code": "V5707",
+      "display": "LMRP/NCD denial by a non-MR edit that is missing LMRP/NCD numbers"
+    },
+    {
+      "code": "V5709",
+      "display": "LMRP/NCD denial by CWF that is missing LMRP/NCD numbers"
+    },
+    {
+      "code": "V5807",
+      "display": "LMRP/NCD denial by a non-MR edit that is missing LMRP/NCD numbers"
+    },
+    {
+      "code": "V5802",
+      "display": "Generate the MSP letter"
+    },
+    {
+      "code": "V5902",
+      "display": "Eligible for denial for MSP"
+    },
+    {
+      "code": "V5905",
+      "display": "Eligible for denial for MSP"
+    },
+    {
+      "code": "V6004",
+      "display": "Excess history"
+    },
+    {
+      "code": "V6104",
+      "display": "Beneficiary paid"
+    },
+    {
+      "code": "V6204",
+      "display": "System error"
+    },
+    {
+      "code": "V6209",
+      "display": "When a claim/CMN has an address that CWF cannot format, CWF returns it with Trailer 12. If the claim/CMN has a 01 disposition, VMS suspends it to this location/status. VMS prints UNFORMATTED in the CITY field of the CW4101-SSA BENE ADDRESS ERROR LISTING REPORT. You must resolve the address problem on the BUDS01 record and type address flag AR in the AF field so that VMS does not update the record with subsequent address information from CWF. After you correct the address, VMS resends the claim/CMN to CWF with Entry Code 05. CWF returns the claim/CMN with an 01 disposition. If applicable, VMS updates the claim/CMN with the correct payment information and processes it to location 10."
+    },
+    {
+      "code": "V6304",
+      "display": "Excess splits"
+    },
+    {
+      "code": "V6402",
+      "display": "Development non-response"
+    },
+    {
+      "code": "V6502",
+      "display": "Development initiated"
+    },
+    {
+      "code": "V6602",
+      "display": "Development sent"
+    },
+    {
+      "code": "V6702",
+      "display": "Development follow-up sent"
+    },
+    {
+      "code": "V6802",
+      "display": "Referral initiated"
+    },
+    {
+      "code": "V6902",
+      "display": "Referral generated"
+    },
+    {
+      "code": "V7002",
+      "display": "Referral sent"
+    },
+    {
+      "code": "V7102",
+      "display": "Follow-up referral generated"
+    },
+    {
+      "code": "V7202",
+      "display": "Follow-up referral sent"
+    },
+    {
+      "code": "V7302",
+      "display": "Referral non-response"
+    },
+    {
+      "code": "V7402",
+      "display": "ADS manual status"
+    },
+    {
+      "code": "V7500",
+      "display": "Paid"
+    },
+    {
+      "code": "V7508",
+      "display": "Claim failed the CARC/RARC/Group Code validation program Claim reprocesses daily through the CARC/RARC/Group Code validation program and moves to location 10 after the validation program makes a successful validation of the claim’s CARCs, RARCs, and Group Codes."
+    },
+    {
+      "code": "V7600",
+      "display": "Not paid, all or partially paid to deductible"
+    },
+    {
+      "code": "V7608",
+      "display": "Claim failed the CARC/RARC/Group Code validation program Claim reprocesses daily through the CARC/RARC/Group Code validation program and moves to location 10 after the validation program makes a successful validation of the claim’s CARCs, RARCs, and Group Codes."
+    },
+    {
+      "code": "V7700",
+      "display": "Denied"
+    },
+    {
+      "code": "V7708",
+      "display": "Claim failed the CARC/RARC/Group Code validation program Claim reprocesses daily through the CARC/RARC/Group Code validation program and moves to location 10 after the validation program makes a successful validation of the claim’s CARCs, RARCs, and Group Codes."
+    },
+    {
+      "code": "V8009",
+      "display": "A/B crossover edits"
+    },
+    {
+      "code": "V8109",
+      "display": "Mammography, pap smear, or cataract lens claims adjusted with Entry Code 3"
+    },
+    {
+      "code": "V8309",
+      "display": "An Oxygen Equipment claim processing against a CMN with the maximum number of rentals in an open status causes the claim to suspend to this location/status. The CMN remains in an open status and the system makes no changes to the rental count of the CMN. Until corrective action is performed, claims continue to suspend to this location/status.\n         Options for corrective action on the CMN are:\n         •\tClose the CMN\n         •\tManually reduce the number of rental payments"
+    },
+    {
+      "code": "V8407",
+      "display": "Global surgery"
+    },
+    {
+      "code": "V8500",
+      "display": "Claim received back from HIGLAS with check number"
+    },
+    {
+      "code": "V8507",
+      "display": "Multiple surgery with UT error, auto denial"
+    },
+    {
+      "code": "V8509",
+      "display": "DOD/REP"
+    },
+    {
+      "code": "V8607",
+      "display": "E/M location"
+    },
+    {
+      "code": "V8609",
+      "display": "UR 11 rejects"
+    },
+    {
+      "code": "V8700",
+      "display": "Claim sent to HIGLAS on the 837 Interface file"
+    },
+    {
+      "code": "V8709",
+      "display": "UR 08 rejects"
+    },
+    {
+      "code": "V8809",
+      "display": "Name incorrect"
+    },
+    {
+      "code": "V8908",
+      "display": "Acknowledgment (Disposition Code 09)"
+    },
+    {
+      "code": "V9003",
+      "display": "OQC"
+    },
+    {
+      "code": "V9007",
+      "display": "Batch repricing process"
+    },
+    {
+      "code": "V9008",
+      "display": "Reply Disposition Code 90"
+    },
+    {
+      "code": "V9103",
+      "display": "OQC"
+    },
+    {
+      "code": "V9203",
+      "display": "OQC"
+    },
+    {
+      "code": "V9403",
+      "display": "OQC"
+    },
+    {
+      "code": "V9503",
+      "display": "OQC"
+    },
+    {
+      "code": "V9508",
+      "display": "S, M, G query"
+    },
+    {
+      "code": "V9603",
+      "display": "OQC"
+    },
+    {
+      "code": "V9608",
+      "display": "T, N, H query"
+    },
+    {
+      "code": "V9609",
+      "display": "CWF Error"
+    },
+    {
+      "code": "V9703",
+      "display": "OQC"
+    },
+    {
+      "code": "V9708",
+      "display": "R, L, I query"
+    },
+    {
+      "code": "V9803",
+      "display": "OQC"
+    },
+    {
+      "code": "V9808",
+      "display": "Resend to CWF"
+    },
+    {
+      "code": "V9903",
+      "display": "OQC"
+    },
+    {
+      "code": "V9904",
+      "display": "Duplicate claim"
+    },
+    {
+      "code": "V9908",
+      "display": "Regular – Entry Code 1 and follow-up claims to CWF"
+    }
+  ],
+  "count": 182
+}

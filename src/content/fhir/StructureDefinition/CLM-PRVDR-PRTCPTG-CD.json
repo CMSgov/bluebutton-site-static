@@ -1,0 +1,56 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-PRVDR-PRTCPTG-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PRVDR-TYPE-CD",
+  "name": "CLM_PRVDR_TYPE_CD",
+  "title": "Provider Type Code",
+  "status": "draft",
+  "description": "Code identifying the type of provider furnishing the service for this line item on the claim. Also used for conveying supplier types.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Provider Type Code",
+        "definition": "Code identifying the type of provider furnishing the service for this line item on the claim. Also used for conveying supplier types."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PRVDR-TYPE-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PRVDR-TYPE-CD"
+      }
+    ]
+  }
+}

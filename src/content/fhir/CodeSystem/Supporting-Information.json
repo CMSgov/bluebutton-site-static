@@ -77,7 +77,187 @@
       "code": "CLM_HHA_RFRL_CD",
       "display": "Claim Referral Code",
       "definition": "The code used to identify the means by which the beneficiary was referred for Home Health services."
+    },
+    {
+      "code": "CLM_PHRMCY_SRVC_TYPE_CD",
+      "display": "Pharmacy Service Type Code",
+      "definition": "The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE."
+    },
+    {
+      "code": "CLM_PTNT_RSDNC_CD",
+      "display": "Patient Residence Code",
+      "definition": "This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record."
+    },
+    {
+      "code": "CLM_LTC_DSPNSNG_MTHD_CD",
+      "display": "Submission Clarification Code",
+      "definition": "For beneficiaries living in long-term care (LTC) facilities, this variable indicates how many days' supply of the medication was dispensed by the long-term care pharmacy and provides some details about the dispensing event."
+    },
+    {
+      "code": "CLM_DRUG_CVRG_STUS_CD",
+      "display": "Drug Coverage Status Code",
+      "definition": "This field indicates whether or not the drug is covered by Medicare Part D."
+    },
+    {
+      "code": "CLM_CTSTRPHC_CVRG_IND_CD",
+      "display": "Catastrophic Coverage Code",
+      "definition": "This variable indicates whether the PDE occurred within the catastrophic benefit phase of the Medicare Part D benefit, according to the source PDE."
+    },
+    {
+      "code": "CLM_LINE_HCT_HGB_RSLT_NUM",
+      "display": "HCT/HGB Test Result",
+      "definition": "The HCT/HGB Test Result"
+    },
+    {
+      "code": "CLM_DSPNSNG_STUS_CD",
+      "display": "Claim Dispensing Status Code",
+      "definition": "Indicates the status of prescription fulfillment."
+    },
+    {
+      "code": "CLM_LINE_RX_NUM",
+      "display": "Claim Line Prescription Service Reference Number",
+      "definition": "Identifies a prescription dispensed by a particular service provider on a particular service date"
+    },
+    {
+      "code": "DGNS_DRG_OUTLIER_CD",
+      "display": "Claim Diagnosis Related Group Outlier Stay Code",
+      "definition": "On an institutional claim, the code that indicates the beneficiary stay under the prospective payment system (PPS) which, although classified into a specific diagnosis related group, has an unusually long length (day outlier) or exceptionally high cost (cost outlier)."
+    },
+    {
+      "code": "CLM_NRLN_RIC_CD",
+      "display": "Near Line Record Identification Code",
+      "definition": "A code defining the type of claim record being processed."
+    },
+    {
+      "code": "CLM_RLT_COND_CD",
+      "display": "Claim Related Condition Code",
+      "definition": "A SET OF RELATED CONDITIONS THAT CO-OCCURRED WITHIN SOME SET OF CLAIMS."
+    },
+    {
+      "code": "CLM_QUERY_CD",
+      "display": "Claim Query Code",
+      "definition": "Code indicating the type of claim record being processed with respect to payment (debit/credit indicator; interim/final indicator)."
+    },
+    {
+      "code": "CLM_SBMT_FRMT_CD",
+      "display": "Claim Submission Format Code",
+      "definition": "A code indicating the method or format used to submit the claim."
+    },
+    {
+      "code": "CLM_CNTRCTR_NUM",
+      "display": "Claim Contractor Number",
+      "definition": "The identification number assigned by CMS to a fiscal intermediary (FI) authorized to process claim records."
+    },
+    {
+      "code": "CLM_ADJSTMT_TYPE_CD",
+      "display": "Claim Adjustment Type Code",
+      "definition": "Domain of claim adjustment types, including denoting original claims"
+    },
+    {
+      "code": "CLM_DISP_CD",
+      "display": "Claim Disposition Code",
+      "definition": "Code indicating the disposition or outcome of the processing of the claim record."
+    },
+    {
+      "code": "CLM_CARR_PMT_DNL_CD",
+      "display": "Claim Payment Denial Code",
+      "definition": "The code on a non-institutional claim indicating who receives payment or if the claim was denied."
+    },
+    {
+      "code": "CLM_MDCR_PRFNL_PRVDR_ASGNMT_SW",
+      "display": "Provider Assignement Indicator",
+      "definition": "Variable indicates whether or not the provider accepts assignment for the noninstitutional claim."
+    },
+    {
+      "code": "CLM_MDCR_NPMT_RSN_CD",
+      "display": "Claim Non Payment Reason Code",
+      "definition": "The reason that no Medicare payment is made for services on an institutional claim."
+    },
+    {
+      "code": "CLM_FI_ACTN_CD",
+      "display": "Claim Fiscal Intermediary Action Code",
+      "definition": "The type of action requested by the intermediary to be taken on an institutional claim."
+    },
+    {
+      "code": "CLM_OP_SRVC_TYPE_CD",
+      "display": "Claim Outpatient Service Type Code",
+      "definition": "A code reported by the provider that indicates the specific type of claim."
+    },
+    {
+      "code": "CLM_IDR_LD_DT",
+      "display": "Claim IDR Load Date",
+      "definition": "A date identifying when data was loaded into the Integrated Data Repository (IDR)."
+    },
+    {
+      "code": "CLM_CMS_PROC_DT",
+      "display": "FI Claim Process Date",
+      "definition": "Date a claim or prescription drug event was processed by a CMS front end system, such as the DDPS Operational Data Store."
+    },
+    {
+      "code": "CLM_CLNCL_TRIL_NUM",
+      "display": "Clinical Trial Number",
+      "definition": "The number used to identify all items and services provided to a beneficiary during their participation in a clinical trial. (from NCH Claim Clinical Trial Number)"
+    },
+    {
+      "code": "CLM_AUDT_TRL_STUS_CD",
+      "display": "Claim Status Code",
+      "definition": "The current status information for the pending and paid claims currently in the system."
+    },
+    {
+      "code": "CLM_LINE_PMD_UNIQ_TRKNG_NUM",
+      "display": "Prior Authorization Unique Tracking Number",
+      "definition": "A unique tracking number (UTN) assigned to each prior authorization (PA) request."
+    },
+    {
+      "code": "CLM_SBMTR_CNTRCT_NUM",
+      "display": "Submitter Contract Number",
+      "definition": "The contract number of the submitter."
+    },
+    {
+      "code": "CLM_SBMTR_CNTRCT_PBP_NUM",
+      "display": "Submitter Contract PBP Number",
+      "definition": "The PBP number of the submitter contract."
+    },
+    {
+      "code": "CLM_BNFT_ENHNCMT_CD",
+      "display": "Claim Benefit Enhancement Code",
+      "definition": "The field identifies the claims/claim lines that qualify for specific claims processing edits related to benefit enhancement."
+    },
+    {
+      "code": "CLM_NGACO_PBPMT_SW",
+      "display": "PBP Benefit Enhancement Indicator",
+      "definition": "A single character code of 'Y' or 'N' that indicates whether a particular claim/claim line is tied to a PBP benefit enhancement"
+    },
+    {
+      "code": "CLM_NGACO_PDSCHRG_HCBS_SW",
+      "display": "Post Discharge Home Visit Benefit Enhancement Indicator",
+      "definition": "A single character code of 'Y”'or 'N' that indicates whether a particular claim/claim line is tied to a Post Discharge Home Visit benefit enhancement."
+    },
+    {
+      "code": "CLM_NGACO_SNF_WVR_SW",
+      "display": "SNF 3-Day Waiver Enhancement",
+      "definition": "A single character code of “Y” or “N” that indicates whether a particular claim/claim line is tied to a SNF 3-Day Waiver benefit enhancement."
+    },
+    {
+      "code": "CLM_NGACO_TLHLTH_SW",
+      "display": "Telehealth Benefit Enhancement Indicator",
+      "definition": "A single character code of “Y” or “N” that indicates whether a particular claim/claime line is tied to a Telehealth benefit enhancement."
+    },
+    {
+      "code": "CLM_NGACO_CPTATN_SW",
+      "display": "AIPBP Benefit Enhancement Indicator",
+      "definition": "A single character code of “Y” or “N” that indicates whether a particular claim/claim line is tied to an AIPBP benefit enhancement."
+    },
+    {
+      "code": "CLM_ACO_CARE_MGMT_HCBS_SW",
+      "display": "Care Management Home Visits Enhancement",
+      "definition": "A single character code of “Y” or “N” that indicates whether a particular claim/claim line is tied to a Care Management Home Visits benefit enhancement."
+    },
+    {
+      "code": "CLM_PD_STUS_CD",
+      "display": "Claim Paid Status Code",
+      "definition": "A status code indicating the paid status of a claim."
     }
   ],
-  "count": 14
+  "count": 50
 }

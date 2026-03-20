@@ -1,0 +1,63 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Bene-MBI",
+  "url": "http://hl7.org/fhir/StructureDefinition/Bene-MBI",
+  "name": "Bene-MBI",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "Bene-MBI",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Bene-MBI",
+        "path": "Bene-MBI",
+        "label": "IDR MBI Base Resource. Ignore in DD Generation",
+        "short": "Bene-MBI",
+        "definition": "Bene-MBI"
+      },
+      {
+        "id": "Bene-MBI.BENE_MBI_ID",
+        "path": "Bene-MBI.BENE_MBI_ID",
+        "short": "Medicare Beneficiary Identifier",
+        "definition": "AN IDENTIFIER THAT UNIQUELY IDENTIFIES A BENEFICIARY AND REPLACES THE HEALTH INSURANCE CLAIM NUMBER (HICN) ON MEDICARE CARDS. THE FORMAT OF THE MEDICARE BENEFICIARY IDENTIFIER (MBI) IS 11-POSITIONS IN LENGTH AND CONTAINS THE FOLLOWING VALUES:  POSITION 1 Ö NUMERIC VALUES: 1 - 9  POSITION 2 Ö ALPHABETIC VALUES: A - Z (MINUS S, L, O, I, B, Z)  POSITION 3 Ö ALPHANUMERIC VALUES: 0 - 9 AND A - Z (MINUS S, L, O, I, B, Z)  POSITION 4 Ö NUMERIC VALUES: 0 - 9  POSITION 5 Ö ALPHABETIC VALUES: A - Z (MINUS S, L, O, I, B, Z)  POSITION 6 Ö ALPHANUMERIC VALUES: 0 - 9 AND A - Z (MINUS S, L, O, I, B, Z)  POSITION 7 Ö NUMERIC VALUES: 0 - 9  POSITION 8 Ö ALPHABETIC VALUES: A - Z (MINUS S, L, O, I, B, Z)  POSITION 9 Ö ALPHABETIC VALUES: A - Z (MINUS S, L, O, I, B, Z)  POSITION 10 Ö NUMERIC VALUES: 0 - 9  POSITION 11 Ö NUMERIC VALUES: 0 - 9",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Bene-MBI.BENE_MBI_EFCTV_DT",
+        "path": "Bene-MBI.BENE_MBI_EFCTV_DT",
+        "short": "MBI Effective Date",
+        "definition": "THE EFFECTIVE DATE WHEN AN MBI IS ASSIGNED TO A BENEFICIARY.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Bene-MBI.BENE_MBI_OBSLT_DT",
+        "path": "Bene-MBI.BENE_MBI_OBSLT_DT",
+        "short": "MBI Obsolete Date",
+        "definition": "THE END DATE WHEN AN MBI PERIOD IS CLOSED DUE TO BEING COMPROMISED OR INVOLVED IN A MERGE CROSS REFERENCE ACTION. (REPLACED BY A NEW MBI).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

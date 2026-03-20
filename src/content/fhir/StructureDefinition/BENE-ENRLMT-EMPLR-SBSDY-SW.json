@@ -1,0 +1,56 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BENE-ENRLMT-EMPLR-SBSDY-SW",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-ENRLMT-EMPLR-SBSDY-SW",
+  "name": "BENE_ENRLMT_EMPLR_SBSDY_SW",
+  "title": "Beneficiary Retiree Drug Subsidy Switch",
+  "status": "draft",
+  "description": "A switch indicating enrollment by a beneficiary who has an employer subsidy.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Coverage"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Beneficiary Retiree Drug Subsidy Switch",
+        "definition": "A switch indicating enrollment by a beneficiary who has an employer subsidy."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-ENRLMT-EMPLR-SBSDY-SW"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-ENRLMT-EMPLR-SBSDY-SW"
+      }
+    ]
+  }
+}

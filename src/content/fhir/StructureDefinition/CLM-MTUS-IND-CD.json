@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-MTUS-IND-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-MTUS-IND-CD",
+  "name": "CLM_MTUS_IND_CD",
+  "title": "Carrier MTUS Indicator Code",
+  "status": "draft",
+  "description": "Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Carrier MTUS Indicator Code",
+        "definition": "Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC)."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-MTUS-IND-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-MTUS-IND-CD"
+      }
+    ]
+  }
+}
