@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "CLM_QUERY_CD",
   "id": "CLM-QUERY-CD",
-  "title": "Clm Query Cd",
-  "description": "Code system for clm query cd",
+  "title": "Claim Query Code",
+  "description": "Code indicating the type of claim record being processed with respect to payment (debit/credit indicator; interim/final indicator).",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-QUERY-CD",
   "concept": [
     {

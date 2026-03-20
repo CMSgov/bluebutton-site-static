@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "System-Type",
+  "id": "System-Type",
+  "title": "Source System Type",
+  "description": "Tag codes indicating whether or not a claim comes from a CMS Shared System or the CMS National Claims History.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/System-Type",
+  "concept": [
+    {
+      "code": "NationalClaimsHistory",
+      "display": "National Claims History"
+    },
+    {
+      "code": "SharedSystem",
+      "display": "Shared System"
+    },
+    {
+      "code": "DDPS",
+      "display": "Drug Data Processing System"
+    },
+    {
+      "code": "EDPS",
+      "display": "Encounter Data Processing System"
+    }
+  ],
+  "count": 4
+}

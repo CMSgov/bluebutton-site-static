@@ -1,0 +1,57 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BENE-LIS-COPMT-LVL-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-LIS-COPMT-LVL-CD",
+  "version": "1.0.0",
+  "name": "BENE_LIS_COPMT_LVL_CD",
+  "title": "Beneficiary LIS Copayment Level Code",
+  "status": "active",
+  "description": "Indicates the copayment level for Low Income Subsidy (LIS) beneficiaries",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Coverage"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Beneficiary LIS Copayment Level Code",
+        "definition": "Indicates the copayment level for Low Income Subsidy (LIS) beneficiaries"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-LIS-COPMT-LVL-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-LIS-COPMT-LVL-CD"
+      }
+    ]
+  }
+}
