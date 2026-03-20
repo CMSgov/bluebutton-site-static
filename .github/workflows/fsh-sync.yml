@@ -56,12 +56,11 @@ jobs:
       with:
         path: bluebutton-site-static
 
-    - name: Create and checkout branch
+    - name: Generate a branch name for use later
+      id: branch
       run: |
-        cd bluebutton-site-static
         BRANCH_NAME="json-update-$(date +%Y%m%d%H%M%S)"
-        git checkout -b $BRANCH_NAME
-        git status
+        echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
     - name: Copy + rename JSON CodeSystem files
       run:  |
@@ -108,10 +107,11 @@ jobs:
       if: steps.check-for-changes.outputs.changed == 'true'
       run: |
         cd bluebutton-site-static
+        git checkout -B ${{ steps.branch.outputs.branch_name }}
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git commit -m "Update JSON from BFD FSH files"
-        git push --set-upstream origin $BRANCH_NAME
+        git push --set-upstream origin ${{ steps.branch.outputs.branch_name }}
         sleep 5 # Wait for the push to complete before creating the PR
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -127,6 +127,6 @@ jobs:
           --title "Update JSON from BFD FSH files" \
           --body "This PR updates the JSON files generated from the BFD FSH files. Please review and merge if everything looks good." \
           --base master \
-          --head $BRANCH_NAME
+          --head ${{ steps.branch.outputs.branch_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
