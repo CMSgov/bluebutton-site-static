@@ -111,7 +111,7 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git commit -m "Update JSON from BFD FSH files"
-        git push origin $BRANCH_NAME
+        git push --set-upstream origin $BRANCH_NAME
         sleep 5 # Wait for the push to complete before creating the PR
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
