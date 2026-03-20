@@ -101,7 +101,7 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git commit -m "Update JSON from BFD FSH files"
-        git push --set-upstream origin ${{ steps.branch.outputs.branch_name }}
+        git push --set-upstream origin ${{ steps.branch.outputs.branch_name }} --force
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
