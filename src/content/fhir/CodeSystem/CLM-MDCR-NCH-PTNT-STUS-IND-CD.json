@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "CLM_MDCR_NCH_PTNT_STUS_IND_CD",
   "id": "CLM-MDCR-NCH-PTNT-STUS-IND-CD",
-  "title": "Clm Mdcr Nch Ptnt Stus Ind Cd",
-  "description": "Code system for clm mdcr nch ptnt stus ind cd",
+  "title": "Patient Status Indicator Code",
+  "description": "EFFECTIVE WITH NCH VERSION H, THE CODE ON AN INPATIENT/SNF AND HOSPICE CLAIM, INDICATING WHETHER THE BENEFICIARY WAS DISCHARGED, DIED OR STILL A PATIENT (USED FOR INTERNAL CWFMQA EDITING PURPOSES.)",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-MDCR-NCH-PTNT-STUS-IND-CD",
   "concept": [
     {

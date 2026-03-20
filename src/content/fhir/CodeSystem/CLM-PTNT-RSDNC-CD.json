@@ -1,0 +1,77 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_PTNT_RSDNC_CD",
+  "id": "CLM-PTNT-RSDNC-CD",
+  "title": "Pharmacy service type code",
+  "description": "This variable indicates where the beneficiary lived when the prescription was filled, as reported on the PDE record. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure convenient access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. This variable is designed to help CMS and plan sponsors monitor beneficiary access to a range of 'in-network' pharmacies.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PTNT-RSDNC-CD",
+  "concept": [
+    {
+      "code": "00",
+      "display": "Not specified, other patient residence not identified below"
+    },
+    {
+      "code": "01",
+      "display": "Home"
+    },
+    {
+      "code": "02",
+      "display": "Skilled Nursing Facility"
+    },
+    {
+      "code": "03",
+      "display": "Nursing facility (long-term care facility)"
+    },
+    {
+      "code": "04",
+      "display": "Assisted living facility"
+    },
+    {
+      "code": "05",
+      "display": "Custodial Care Facility (residential but not medical care)"
+    },
+    {
+      "code": "06",
+      "display": "Group home (e.g., congregate residential foster care)"
+    },
+    {
+      "code": "07",
+      "display": "Inpatient Psychiatric Facility"
+    },
+    {
+      "code": "08",
+      "display": "Psychiatric Facility – Partial Hospitalization"
+    },
+    {
+      "code": "09",
+      "display": "Intermediate care facility for the mentally retarded (ICF/MR)"
+    },
+    {
+      "code": "10",
+      "display": "Residential Substance Abuse Treatment Facility"
+    },
+    {
+      "code": "11",
+      "display": "Hospice"
+    },
+    {
+      "code": "12",
+      "display": "Psychiatric Residential Treatment Facility"
+    },
+    {
+      "code": "13",
+      "display": "Comprehensive Inpatient Rehabilitation Facility"
+    },
+    {
+      "code": "14",
+      "display": "Homeless Shelter"
+    },
+    {
+      "code": "15",
+      "display": "Correctional Institution"
+    }
+  ],
+  "count": 16
+}

@@ -1,0 +1,49 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_ADJSTMT_TYPE_CD",
+  "id": "CLM-ADJSTMT-TYPE-CD",
+  "title": "Claim Adjustment Type Code",
+  "description": "DOMAIN OF CLAIM ADJUSTMENT TYPES, INCLUDING DENOTING ORIGINAL CLAIMS",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-ADJSTMT-TYPE-CD",
+  "concept": [
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    },
+    {
+      "code": "0",
+      "display": "ORIGINAL"
+    },
+    {
+      "code": "1",
+      "display": "VOID"
+    },
+    {
+      "code": "2",
+      "display": "REPLACEMENT"
+    },
+    {
+      "code": "3",
+      "display": "CREDIT ADJUSTMENT (NEGATIVE SUPPLEMENTAL)"
+    },
+    {
+      "code": "4",
+      "display": "DEBIT ADJUSTMENT (POSITIVE SUPPLEMENTAL)"
+    },
+    {
+      "code": "5",
+      "display": "GROSS ADJUSTMENT"
+    },
+    {
+      "code": "8",
+      "display": "BALANCE RECORD"
+    },
+    {
+      "code": "9",
+      "display": "UNKNOWN"
+    }
+  ],
+  "count": 9
+}

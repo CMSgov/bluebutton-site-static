@@ -1,0 +1,325 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Beneficiary",
+  "url": "http://hl7.org/fhir/StructureDefinition/Beneficiary",
+  "name": "Beneficary",
+  "title": "IDR Beneficiary Base. Ignore in DD Generation",
+  "status": "draft",
+  "description": "IDR Beneficiary Base. Ignore in DD Generation",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "Beneficiary",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Beneficiary",
+        "path": "Beneficiary",
+        "label": "IDR Beneficiary Base. Ignore in DD Generation",
+        "short": "IDR Beneficiary Base. Ignore in DD Generation",
+        "definition": "IDR Beneficiary Base. Ignore in DD Generation"
+      },
+      {
+        "id": "Beneficiary.BENE_1ST_NAME",
+        "path": "Beneficiary.BENE_1ST_NAME",
+        "short": "Beneficiary First Name",
+        "definition": "A FIRST NAME FOR A MEDICARE BENEFICIARY.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_LAST_NAME",
+        "path": "Beneficiary.BENE_LAST_NAME",
+        "short": "Beneficiary Last Name",
+        "definition": "A LAST NAME OR SURNAME, INCLUDING ANY FOLLOWING TITLES OR SUFFIXES, FOR A MEDICARE BENEFICIARY.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_MIDL_NAME",
+        "path": "Beneficiary.BENE_MIDL_NAME",
+        "short": "Beneficiary Middle Name",
+        "definition": "THE FIRST INITIAL OF THE MEDICARE BENEFICIARYS MIDDLE NAME.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_BRTH_DT",
+        "path": "Beneficiary.BENE_BRTH_DT",
+        "short": "Beneficiary Date of Birth",
+        "definition": "A DATE IDENTIFYING WHEN A BENEFICIARY IS BORN.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_DEATH_DT",
+        "path": "Beneficiary.BENE_DEATH_DT",
+        "short": "Beneficiary Date of Death",
+        "definition": "A DATE IDENTIFYING WHEN A BENEFICIARY DIED.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_VRFY_DEATH_DAY_SW",
+        "path": "Beneficiary.BENE_VRFY_DEATH_DAY_SW",
+        "short": "Beneficiary Date of Death Verification Switch",
+        "definition": "AN INDICATION IF THE EXACT DATE OF DEATH FOR A MEDICARE BENEFICIARY WAS VERIFIED.  VALID VALUES:  Y = YES, DATE OF DEATH HAS BEEN VERIFIED.  N = NO, DATE OF DEATH HAS NOT BEEN VERIFIED.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.mbi",
+        "path": "Beneficiary.mbi",
+        "short": "Medicare Beneficiary Identifier (MBI)",
+        "definition": "Beneficiary MBI",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Bene-MBI"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_XREF_EFCTV_SK",
+        "path": "Beneficiary.BENE_XREF_EFCTV_SK",
+        "short": "Current Patient FHIR ID",
+        "definition": "AN INTEGRATED DATA REPOSITORY (IDR) DERIVED EFFECTIVE SURROGATE KEY THAT UNIQUELY IDENTIFIES A BENEFICIARY.  NOTE: BENE_XREF_EFCTV_SK REPRESENTS THE MOST CURRENT BENE_SK THAT IS IN EFFECT FOR THE BENEFICIARY. BENE_XREF_EFCTV_SK IS MORE CURRENT THAN BENE_SK AND BENE_XREF_SK ON THE BENE TABLE.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_SK",
+        "path": "Beneficiary.BENE_SK",
+        "short": "Patient FHIR ID",
+        "definition": "A UNIQUE NUMBER ASSIGNED BY THE ENROLLMENT DATA BASE (EDB) TO EACH EDB RECORD TO IDENTIFY A BENEFICIARY.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.ALL_BENE_SKs",
+        "path": "Beneficiary.ALL_BENE_SKs",
+        "short": "Beneficiary Source Key List",
+        "definition": "A list of all source keys for the beneficiary.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.lastUpdated",
+        "path": "Beneficiary.lastUpdated",
+        "short": "Last Updated Time",
+        "definition": "The time the Patient resource was last updated.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.GEO_USPS_STATE_CD",
+        "path": "Beneficiary.GEO_USPS_STATE_CD",
+        "short": "USPS State Code",
+        "definition": "A CODE IDENTIFYING THE TWO-CHARACTER ALPHABETIC ABBREVIATION FOR A STATE IN THE UNITED STATES AS DEFINED BY THE UNITED STATES POSTAL SERVICE (USPS).    REFERENCE TABLE: GEO_USPS_STATE_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.GEO_ZIP5_CD",
+        "path": "Beneficiary.GEO_ZIP5_CD",
+        "short": "Beneficiary Zip Code - First 5",
+        "definition": "A FIVE-DIGIT ZIP CODE DEFINED BY THE UNITED STATES POSTAL SERVICE (USPS) THAT IDENTIFIES THE DESTINATION POST OFFICE OR DELIVERY AREA.     REFERENCE TABLE: GEO_ZIP5_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_LINE_1_ADR",
+        "path": "Beneficiary.BENE_LINE_1_ADR",
+        "short": "Line 1 of Address",
+        "definition": "Line 1 of Address",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_LINE_2_ADR",
+        "path": "Beneficiary.BENE_LINE_2_ADR",
+        "short": "Line 2 of Address",
+        "definition": "Line 2 of Address",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_LINE_3_ADR",
+        "path": "Beneficiary.BENE_LINE_3_ADR",
+        "short": "Line 3 of Address",
+        "definition": "Line 3 of Address",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_LINE_4_ADR",
+        "path": "Beneficiary.BENE_LINE_4_ADR",
+        "short": "Line 4 of Address",
+        "definition": "Line 4 of Address",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_LINE_5_ADR",
+        "path": "Beneficiary.BENE_LINE_5_ADR",
+        "short": "Line 5 of Address",
+        "definition": "Line 5 of Address",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_LINE_6_ADR",
+        "path": "Beneficiary.BENE_LINE_6_ADR",
+        "short": "Line 6 of Address",
+        "definition": "Line 6 of Address",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.GEO_ZIP_PLC_NAME",
+        "path": "Beneficiary.GEO_ZIP_PLC_NAME",
+        "short": "City Name",
+        "definition": "A NAME OF THE CITY FOR A GIVEN ZIP CODE OF A MEDICARE BENEFICIARYS MAILING ADDRESS.    REFERENCE TABLE: GEO_ZIP5_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.CNTCT_LANG_CD",
+        "path": "Beneficiary.CNTCT_LANG_CD",
+        "short": "Contact Language Code",
+        "definition": "A CODE IDENTIFYING THE LANGUAGE THAT THE BENEFICIARY REQUESTED CENTERS FOR MEDICARE AND MEDICAID SERVICES (CMS) USE WHEN SENDING THE MEDICARE HANDBOOK.  ENGLISH AND SPANISH ARE THE ONLY LANGUAGE CHOICES THAT CMS SUPPORTS.  THIS LANGUAGE PREFERENCE CODE IS USED EXCLUSIVELY FOR THE MEDICARE HANDBOOK.  IT IS NOT USED FOR ANY OTHER TYPE OF MAIL SENT TO BENEFICIARIES.    REFERENCE TABLE: CNTCT_LANG_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_SEX_CD",
+        "path": "Beneficiary.BENE_SEX_CD",
+        "short": "Beneficiary Sex Code",
+        "definition": "A CODE IDENTIFYING THE SEX OF A MEDICARE BENEFICIARY.     REFERENCE TABLE: BENE_SEX_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Beneficiary.BENE_RACE_CD",
+        "path": "Beneficiary.BENE_RACE_CD",
+        "short": "Beneficiary Race Code",
+        "definition": "A CODE IDENTIFYING A BENEFICIARYS RACE.  REFERENCE TABLE: BENE_RACE_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}
