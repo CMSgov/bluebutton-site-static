@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DGNS_DRG_OUTLIER_CD",
+  "id": "DGNS-DRG-OUTLIER-CD",
+  "title": "Claim Diagnosis Related Group Outlier Stay Code",
+  "description": "On an institutional claim, the code that indicates the beneficiary stay under the prospective payment system (PPS) which, although classified into a specific diagnosis related group, has an unusually long length (day outlier) or exceptionally high cost (cost outlier).",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/DGNS-DRG-OUTLIER-CD",
+  "concept": [
+    {
+      "code": "0",
+      "display": "No outlier"
+    },
+    {
+      "code": "1",
+      "display": "Day outlier (condition code 60)"
+    },
+    {
+      "code": "2",
+      "display": "Cost outlier (condition code 61)"
+    },
+    {
+      "code": "6",
+      "display": "Valid diagnosis related groups (DRG) received from the intermediary *** Non-PPS Only ***"
+    },
+    {
+      "code": "7",
+      "display": "CMS developed DRG *** Non-PPS Only ***"
+    },
+    {
+      "code": "8",
+      "display": "CMS developed DRG using patient status code *** Non-PPS Only ***"
+    },
+    {
+      "code": "9",
+      "display": "Not groupable *** Non-PPS Only ***"
+    }
+  ],
+  "count": 7
+}

@@ -1,0 +1,129 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_BNFT_ENHNCMT_CD",
+  "id": "CLM-BNFT-ENHNCMT-CD",
+  "title": "Claim Benefit Enhancement Code",
+  "description": "Claim Benefit Enhancement Codes",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-BNFT-ENHNCMT-CD",
+  "concept": [
+    {
+      "code": "0",
+      "display": "THE PROVIDER IS ALIGNED TO THE BENEFICIARY'S ACO FOR THIS CLAIM LINE. APPLICABLE ONLY TO PROFESSIONAL LINES."
+    },
+    {
+      "code": "1",
+      "display": "POPULATION BASED PAYMENTS (PBP)"
+    },
+    {
+      "code": "2",
+      "display": "TELEHEALTH"
+    },
+    {
+      "code": "3",
+      "display": "POST DISCHARGE HOME VISITS"
+    },
+    {
+      "code": "4",
+      "display": "THREE DAY SNF - WAIVER"
+    },
+    {
+      "code": "5",
+      "display": "CAPITATION (AIPBP/TCC)"
+    },
+    {
+      "code": "6",
+      "display": "COMPREHENSIVE ESRD CARE (CEC) TELEHEALTH"
+    },
+    {
+      "code": "7",
+      "display": "CARE MANAGEMENT HOME VISITS"
+    },
+    {
+      "code": "8",
+      "display": "PROSPECTIVE PRIMARY CARE PAYMENT (PPCP)"
+    },
+    {
+      "code": "9",
+      "display": "HOME HEALTH HOMEBOUND WAIVER"
+    },
+    {
+      "code": "A",
+      "display": "DIABETIC SHOES"
+    },
+    {
+      "code": "B",
+      "display": "CONCURRENT CARE FOR BENEFICIARIES THAT ELECT THE MEDICARE HOSPICE BENEFITS"
+    },
+    {
+      "code": "C",
+      "display": "KIDNEY DISEASE EDUCATION (KDE)"
+    },
+    {
+      "code": "D",
+      "display": "SERIOUSLY ILL POPULATION (SIP)"
+    },
+    {
+      "code": "E",
+      "display": "PRIMARY CARE FIRST FLAT VISIT FEE (PCF - FVF)"
+    },
+    {
+      "code": "F",
+      "display": "QUARTERLY CAPITATION PAYMENT (QCP)"
+    },
+    {
+      "code": "G",
+      "display": "PERFORMANCE BASED ADJUSTMENT (PBA)"
+    },
+    {
+      "code": "H",
+      "display": "HOME INFUSION THERAPY"
+    },
+    {
+      "code": "I",
+      "display": "MEDICAL NUTRITION THERAPY"
+    },
+    {
+      "code": "J",
+      "display": "HOSPICE CARE CERTIFICATION"
+    },
+    {
+      "code": "K",
+      "display": "CARDIAC AND PULMONARY REHABILITATION"
+    },
+    {
+      "code": "L",
+      "display": "MCP MODEL TRACK 1 BENEFICIARY OR PROVIDER"
+    },
+    {
+      "code": "M",
+      "display": "MCP MODEL TRACK 2 BENEFICIARY OR PROVIDER"
+    },
+    {
+      "code": "N",
+      "display": "MCP MODEL TRACK 3 BENEFICIARY OR PROVIDER"
+    },
+    {
+      "code": "O",
+      "display": "GUIDE MODEL BENEFICIARY COVERING ALL SERVICES"
+    },
+    {
+      "code": "Q",
+      "display": "AHEAD MODEL -100% REDUCTION (ZERO-PAY)"
+    },
+    {
+      "code": "R",
+      "display": "MDPCP AHEAD MODEL- PERCENTAGE REDUCTION (CAPITATION)"
+    },
+    {
+      "code": "Z0",
+      "display": "PACE STRADDLE CLAIM"
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 29
+}

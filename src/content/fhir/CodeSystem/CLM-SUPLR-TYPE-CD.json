@@ -1,0 +1,53 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_SUPLR_TYPE_CD",
+  "id": "CLM-SUPLR-TYPE-CD",
+  "title": "Claim Supplier Type Code",
+  "description": "THE DOMAIN OF CLAIM SUPPLIER TYPE CODES.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-SUPLR-TYPE-CD",
+  "concept": [
+    {
+      "code": "0",
+      "display": "CLINICS, GROUPS, ASSOCIATIONS, PARTNERSHIPS, OR OTHER ENTITIES FOR WHOM THE CARRIER'S OWN ID NUMBER HAS BEEN ASSIGNED."
+    },
+    {
+      "code": "1",
+      "display": "PHYSICIANS OR SUPPLIERS BILLING AS SOLO PRACTITIONERS FOR WHOM SSN'S ARE SHOWN IN THE PHYSICIAN ID CODE FIELD."
+    },
+    {
+      "code": "2",
+      "display": "PHYSICIANS OR SUPPLIERS BILLING AS SOLO PRACTITIONERS FOR WHOM THE CARRIER'S OWN PHYSICIAN ID CODE IS SHOWN."
+    },
+    {
+      "code": "3",
+      "display": "SUPPLIERS (OTHER THAN SOLE PROPRIETORSHIP)FOR WHOM EI NUMBERS ARE USED IN CODING THE ID FIELD."
+    },
+    {
+      "code": "4",
+      "display": "SUPPLIERS (OTHER THAN SOLE PROPRIETORSHIP)FOR WHOM THE CARRIER'S OWN CODE HAS BEEN SHOWN."
+    },
+    {
+      "code": "5",
+      "display": "INSTITUTIONAL PROVIDERS AND INDEPENDENT LABORATORIES FOR WHOM EI NUMBERS ARE USED IN CODING THE ID FIELD."
+    },
+    {
+      "code": "6",
+      "display": "INSTITUTIONAL PROVIDERS AND INDEPENDENT LABORATORIES FOR WHOM THE CARRIER'S OWN ID NUMBER IS SHOWN."
+    },
+    {
+      "code": "7",
+      "display": "CLINICS, GROUPS, ASSOCIATIONS, OR PARTNERSHIPS FOR WHOM EI NUMBERS ARE USED IN CODING THE ID FIELD."
+    },
+    {
+      "code": "8",
+      "display": "OTHER ENTITIES FOR WHOM EI NUMBERS ARE USED IN CODING THE ID FIELD OR PROPRIETORSHIP FOR WHOM EI NUMBERS ARE USED IN CODING THE ID FIELD."
+    },
+    {
+      "code": "~",
+      "display": "NO DESCRIPTION AVAILABLE"
+    }
+  ],
+  "count": 10
+}
