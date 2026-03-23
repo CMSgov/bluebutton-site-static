@@ -83,6 +83,11 @@ jobs:
           echo "Generated release notes:"
           cat /tmp/release_notes.md
 
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Create release
         env:
           GH_TOKEN: ${{ github.token }}
