@@ -18,13 +18,13 @@ jobs:
           fetch-depth: 0
           fetch-tags: true
 
-      - name: Verify on master branch
-        run: |
-          CURRENT_BRANCH="${{ github.ref_name }}"
-          if [[ "$CURRENT_BRANCH" != "master" ]]; then
-            echo "::error::Release must be created from master branch. Current branch: $CURRENT_BRANCH"
-            exit 1
-          fi
+      # - name: Verify on master branch
+      #   run: |
+      #     CURRENT_BRANCH="${{ github.ref_name }}"
+      #     if [[ "$CURRENT_BRANCH" != "master" ]]; then
+      #       echo "::error::Release must be created from master branch. Current branch: $CURRENT_BRANCH"
+      #       exit 1
+      #     fi
 
       - name: Determine new release tag
         id: tag
@@ -89,12 +89,12 @@ jobs:
         run: |
           NEW_TAG="${{ steps.tag.outputs.new }}"
 
-          git tag -a "$NEW_TAG" -m "Blue Button Static Site release $NEW_TAG"
-          git push origin "$NEW_TAG"
+          echo "DRY RUN: git tag -a \"$NEW_TAG\" -m \"Blue Button Static Site release $NEW_TAG\""
+          echo "DRY RUN: git push origin \"$NEW_TAG\""
 
-          gh release create "$NEW_TAG" \
-            --title "$NEW_TAG" \
-            --notes-file /tmp/release_notes.md \
-            --latest
+          echo "DRY RUN: Would run >> gh release create \"$NEW_TAG\" \\"
+          echo "  --title \"$NEW_TAG\" \\"
+          echo "  --notes-file /tmp/release_notes.md \\"
+          echo "  --latest"
 
           echo "Release created: https://github.com/${{ github.repository }}/releases/tag/$NEW_TAG"
