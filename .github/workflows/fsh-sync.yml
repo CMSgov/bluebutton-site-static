@@ -56,12 +56,19 @@ jobs:
       with:
         path: bluebutton-site-static
         ref: master
+
+    # Create date variable to use in branch name and PR title
+    - name: Create date variable
+      id: date
+      run: |
+        CURRENT_DATE=$(date +%Y-%m-%d)
+        echo "current_date=$CURRENT_DATE" >> $GITHUB_OUTPUT
     
     # Create a new branch name for the changes. Includes the date it was created.
     - name: Generate a branch name
       id: branch
       run: |
-        BRANCH_NAME="fsh-json-generation-update-$(date +%Y-%m-%d)"
+        BRANCH_NAME="fsh-json-generation-update-${{ steps.date.outputs.current_date }}"
         echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
     
     # Rename only the StructureDefinition and CodeSystem JSON files to remove the prefix and copy them to the 
@@ -101,27 +108,27 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
-    # Commit and push changes if there were any. Won't run if no changesare detected.
+    # Commit and push changes if there were any. Won't run if no changes are detected.
     - name: Commit and Push Changes in BB Static Site Repo
       if: steps.check-for-changes.outputs.changed == 'true'
       run: |
         cd bluebutton-site-static
         git checkout -b ${{ steps.branch.outputs.branch_name }}
-        git commit -m "Update JSON from BFD FSH files"
+        git commit -m "Update JSON from BFD FSH files ${{ steps.date.outputs.current_date }}"
         git push --set-upstream origin ${{ steps.branch.outputs.branch_name }}
       env:
         # Need a github token with permissions to create branches and PRs in the BB Static Site repo. 
         # Using the default GITHUB_TOKEN provided by GitHub Actions, which should have the necessary permissions for this repo.
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    # Create a PR if there were changes. Won't run if no changesare detected.
+    # Create a PR if there were changes. Won't run if no changes are detected.
     - name: Create Pull Request in BB Static Site Repo
       if: steps.check-for-changes.outputs.changed == 'true'
       run:  |
         cd bluebutton-site-static
         gh pr create \
-          --title "Update JSON from BFD FSH files $(date +%Y-%m-%d)" \
-          --body "This PR updates the JSON files inside the bluebutton-site-static repo generated from the BFD FSH files on $(date +%Y-%m-%d). Please review and merge if everything looks good." \
+          --title "Update JSON from BFD FSH files ${{ steps.date.outputs.current_date }}" \
+          --body "This PR updates the JSON files inside the bluebutton-site-static repo generated from the BFD FSH files on ${{ steps.date.outputs.current_date }}. Please review and merge if everything looks good." \
           --base master \
           --head ${{ steps.branch.outputs.branch_name }}
       env:
