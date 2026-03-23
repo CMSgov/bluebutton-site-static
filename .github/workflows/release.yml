@@ -10,8 +10,7 @@ permissions:
 jobs:
   release:
     name: Create Release Tag
-    runs-on:
-      - codebuild-bb-test-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ubuntu-24.04-arm
 
     steps:
       - uses: actions/checkout@v4
