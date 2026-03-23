@@ -1,0 +1,49 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_PHRMCY_SRVC_TYPE_CD",
+  "id": "CLM-PHRMCY-SRVC-TYPE-CD",
+  "title": "Pharmacy service type code",
+  "description": "The type of pharmacy used. This variable indicates the type of pharmacy that dispensed the prescription, as recorded on the PDE. CMS requires Part D plans to maintain pharmacy networks that are sufficient to ensure access to Medicare beneficiaries – including retail, home infusion, and long-term care pharmacies. Plan sponsors have contracts with pharmacies to provide 'in-network' services.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PHRMCY-SRVC-TYPE-CD",
+  "concept": [
+    {
+      "code": "01",
+      "display": "Community/retail pharmacy"
+    },
+    {
+      "code": "02",
+      "display": "Compounding pharmacy"
+    },
+    {
+      "code": "03",
+      "display": "Home infusion therapy provider"
+    },
+    {
+      "code": "04",
+      "display": "Institutional pharmacy"
+    },
+    {
+      "code": "05",
+      "display": "Long-term care pharmacy"
+    },
+    {
+      "code": "06",
+      "display": "Mail order pharmacy"
+    },
+    {
+      "code": "07",
+      "display": "Managed care organization (MCO) pharmacy"
+    },
+    {
+      "code": "08",
+      "display": "Specialty care pharmacy"
+    },
+    {
+      "code": "99",
+      "display": "Other"
+    }
+  ],
+  "count": 9
+}

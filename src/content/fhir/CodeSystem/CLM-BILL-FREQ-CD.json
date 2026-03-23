@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "CLM_BILL_FREQ_CD",
   "id": "CLM-BILL-FREQ-CD",
-  "title": "Clm Bill Freq Cd",
-  "description": "Code system for clm bill freq cd",
+  "title": "Claim Bill Frequency Code",
+  "description": "It indicates the sequence of the claim in the beneficiary's current episode of care (e.g., interim or voided).",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-BILL-FREQ-CD",
   "concept": [
     {
