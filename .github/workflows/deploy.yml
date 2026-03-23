@@ -1,0 +1,180 @@
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Environment to deploy to
+        required: true
+        type: choice
+        options:
+          - test
+          - staging
+          - prod
+      release_tag:
+        description: Release tag to deploy (e.g. r33) — required for staging and prod
+        required: false
+        type: string
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build:
+    name: Build (${{ inputs.environment || 'test' }})
+    runs-on:
+      - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+
+    steps:
+      - name: Require release tag for staging and prod
+        if: (inputs.environment == 'staging' || inputs.environment == 'prod') && inputs.release_tag == ''
+        run: |
+          echo "::error::Release tag is required for staging and prod deployments"
+          exit 1
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.release_tag || github.ref_name }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          SITE_ENV: ${{ inputs.environment || 'test' }}
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: dist/
+          retention-days: 3
+
+      - name: Push logs to CloudWatch
+        if: always()
+        run: |
+          ENV="${{ inputs.environment || 'test' }}"
+          LOG_GROUP="/bb2/site-static/${ENV}/deploy"
+          LOG_STREAM="build-${{ github.run_id }}-${{ github.run_attempt }}"
+          TIMESTAMP=$(date +%s000)
+
+          aws logs create-log-group --log-group-name "$LOG_GROUP" 2>/dev/null || true
+          aws logs create-log-stream --log-group-name "$LOG_GROUP" --log-stream-name "$LOG_STREAM" 2>/dev/null || true
+
+          MESSAGE="BUILD ${{ job.status }} | repo=${{ github.repository }} ref=${{ inputs.release_tag || github.ref_name }} env=${ENV} run=${{ github.run_id }} actor=${{ github.actor }}"
+
+          aws logs put-log-events \
+            --log-group-name "$LOG_GROUP" \
+            --log-stream-name "$LOG_STREAM" \
+            --log-events "timestamp=${TIMESTAMP},message=${MESSAGE}"
+
+  deploy:
+    name: Deploy to Akamai (${{ inputs.environment || 'test' }})
+    needs: build
+    runs-on:
+      - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+    environment: ${{ inputs.environment || 'test' }}
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-dist
+          path: dist/
+
+      - name: Determine Akamai upload path
+        id: akamai-path
+        run: |
+          case "${{ inputs.environment || 'test' }}" in
+            test)    echo "path=/1197010/test.static.bluebutton.cms.gov/" >> "$GITHUB_OUTPUT" ;;
+            staging) echo "path=/1197010/staging.bluebutton.cms.gov/" >> "$GITHUB_OUTPUT" ;;
+            prod)    echo "path=/1197010/bluebutton.cms.gov/" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.AKAMAI_SCP_SSH_KEY }}" > ~/.ssh/akamai_key
+          chmod 600 ~/.ssh/akamai_key
+          cat >> ~/.ssh/config <<EOF
+          Host bluebuttoncms.rsync.upload.akamai.com
+            HostKeyAlgorithms +ssh-dss
+            StrictHostKeyChecking no
+            IdentityFile ~/.ssh/akamai_key
+          EOF
+
+      - name: Deploy to Akamai NetStorage
+        run: |
+          rsync -av --delete \
+            -e "ssh" \
+            ./dist/ \
+            ${{ secrets.AKAMAI_SSH_USER }}@bluebuttoncms.rsync.upload.akamai.com:${{ steps.akamai-path.outputs.path }}
+
+      - name: Cleanup SSH key
+        if: always()
+        run: rm -f ~/.ssh/akamai_key
+
+      - name: Push logs to CloudWatch
+        if: always()
+        run: |
+          ENV="${{ inputs.environment || 'test' }}"
+          LOG_GROUP="/bb2/site-static/${ENV}/deploy"
+          LOG_STREAM="deploy-${{ github.run_id }}-${{ github.run_attempt }}"
+          TIMESTAMP=$(date +%s000)
+
+          aws logs create-log-group --log-group-name "$LOG_GROUP" 2>/dev/null || true
+          aws logs create-log-stream --log-group-name "$LOG_GROUP" --log-stream-name "$LOG_STREAM" 2>/dev/null || true
+
+          MESSAGE="DEPLOY ${{ job.status }} | repo=${{ github.repository }} env=${ENV} target=${{ steps.akamai-path.outputs.path }} run=${{ github.run_id }} actor=${{ github.actor }}"
+
+          aws logs put-log-events \
+            --log-group-name "$LOG_GROUP" \
+            --log-stream-name "$LOG_STREAM" \
+            --log-events "timestamp=${TIMESTAMP},message=${MESSAGE}"
+
+  notify:
+    name: Slack Notification
+    needs: deploy
+    if: always()
+    runs-on:
+      - codebuild-bb-test-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+
+    steps:
+      - name: Determine result
+        id: result
+        run: |
+          if [[ "${{ needs.deploy.result }}" == "failure" ]]; then
+            echo "status=FAILURE" >> "$GITHUB_OUTPUT"
+            echo "color=danger" >> "$GITHUB_OUTPUT"
+          elif [[ "${{ needs.deploy.result }}" == "cancelled" ]]; then
+            echo "status=CANCELLED" >> "$GITHUB_OUTPUT"
+            echo "color=warning" >> "$GITHUB_OUTPUT"
+          else
+            echo "status=SUCCESS" >> "$GITHUB_OUTPUT"
+            echo "color=good" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Send Slack notification
+        uses: slackapi/slack-github-action@v2.1.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "channel": "blue-button-api-alert",
+              "attachments": [
+                {
+                  "color": "${{ steps.result.outputs.color }}",
+                  "text": "${{ steps.result.outputs.status }} - Deploy Akamai ENV:${{ inputs.environment || 'test' }}\n${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                }
+              ]
+            }
