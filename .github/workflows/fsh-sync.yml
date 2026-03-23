@@ -103,6 +103,7 @@ jobs:
 
     # Configure Git so that we can authenticate and push changes back to the BB Static Site repo
     - name: Configure Git
+      if: steps.check-for-changes.outputs.changed == 'true'
       run: |
         cd bluebutton-site-static
         git config user.name "github-actions[bot]"
