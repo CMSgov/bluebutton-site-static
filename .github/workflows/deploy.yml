@@ -26,7 +26,7 @@ jobs:
   build:
     name: Build (${{ inputs.environment || 'test' }})
     runs-on:
-      - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
       - name: Require release tag for staging and prod
@@ -81,7 +81,7 @@ jobs:
     name: Deploy to Akamai (${{ inputs.environment || 'test' }})
     needs: build
     runs-on:
-      - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-site-static-${{ github.run_id }}-${{ github.run_attempt }}
     environment: ${{ inputs.environment || 'test' }}
 
     steps:
@@ -146,7 +146,7 @@ jobs:
     needs: deploy
     if: always()
     runs-on:
-      - codebuild-bb-test-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
       - name: Determine result

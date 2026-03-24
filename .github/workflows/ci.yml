@@ -18,7 +18,7 @@ jobs:
   lint:
     name: Lint
     runs-on:
-      - codebuild-bb-test-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
       - uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
   typecheck:
     name: Type Check
     runs-on:
-      - codebuild-bb-test-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
       - uses: actions/checkout@v4
@@ -52,7 +52,7 @@ jobs:
   spellcheck:
     name: Spell Check
     runs-on:
-      - codebuild-bb-test-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
       - uses: actions/checkout@v4
@@ -69,7 +69,7 @@ jobs:
   build:
     name: Build
     runs-on:
-      - codebuild-bb-test-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
       - uses: actions/checkout@v4
@@ -97,7 +97,7 @@ jobs:
     name: Link Check
     needs: build
     runs-on:
-      - codebuild-bb-test-web-server-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
       - uses: actions/checkout@v4
