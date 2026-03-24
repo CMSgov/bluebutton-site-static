@@ -147,7 +147,7 @@ jobs:
   notify:
     name: Slack Notification
     needs: deploy
-    if: always() && secrets.SLACK_TOKEN != ''
+    if: always()
     runs-on:
       - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
@@ -167,6 +167,7 @@ jobs:
           fi
 
       - name: Send Slack notification
+        if: env.SLACK_TOKEN != ''
         env:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           DEPLOY_ENV: ${{ inputs.environment || 'test' }}
