@@ -1,11 +1,8 @@
-name: Deploy
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+name: Build and Deploy Static Site to Akamai
 
 on:
   push:
-    # branches: [master]
+    branches: [master]
   workflow_dispatch:
     inputs:
       environment:
@@ -20,6 +17,10 @@ on:
         description: Release tag to deploy (e.g. r33) — required for staging and prod
         required: false
         type: string
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  DEPLOY_ENV: ${{ inputs.environment || 'test' }}
 
 permissions:
   id-token: write
@@ -53,7 +54,7 @@ jobs:
       - name: Build site
         run: npm run build
         env:
-          SITE_ENV: ${{ inputs.environment || 'test' }}
+          SITE_ENV: ${{ env.DEPLOY_ENV }}
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
@@ -61,24 +62,6 @@ jobs:
           name: site-dist
           path: dist/
           retention-days: 3
-
-      - name: Push logs to CloudWatch
-        if: always()
-        run: |
-          ENV="${{ inputs.environment || 'test' }}"
-          LOG_GROUP="/bb2/site-static/${ENV}/deploy"
-          LOG_STREAM="build-${{ github.run_id }}-${{ github.run_attempt }}"
-          TIMESTAMP=$(date +%s000)
-
-          aws logs create-log-group --log-group-name "$LOG_GROUP" 2>/dev/null || true
-          aws logs create-log-stream --log-group-name "$LOG_GROUP" --log-stream-name "$LOG_STREAM" 2>/dev/null || true
-
-          MESSAGE="BUILD ${{ job.status }} | repo=${{ github.repository }} ref=${{ inputs.release_tag || github.ref_name }} env=${ENV} run=${{ github.run_id }} actor=${{ github.actor }}"
-
-          aws logs put-log-events \
-            --log-group-name "$LOG_GROUP" \
-            --log-stream-name "$LOG_STREAM" \
-            --log-events "timestamp=${TIMESTAMP},message=${MESSAGE}"
 
   deploy:
     name: Deploy to Akamai (${{ inputs.environment || 'test' }})
@@ -94,10 +77,19 @@ jobs:
           name: site-dist
           path: dist/
 
+      - name: Create CloudWatch log group and stream
+        run: |
+          LOG_GROUP="/bb2/site-static/${{ env.DEPLOY_ENV }}/deploy"
+          LOG_STREAM="deploy-${{ github.run_id }}-${{ github.run_attempt }}"
+          aws logs create-log-group --log-group-name "$LOG_GROUP" 2>/dev/null || true
+          aws logs create-log-stream --log-group-name "$LOG_GROUP" --log-stream-name "$LOG_STREAM" 2>/dev/null || true
+          echo "LOG_GROUP=$LOG_GROUP" >> "$GITHUB_ENV"
+          echo "LOG_STREAM=$LOG_STREAM" >> "$GITHUB_ENV"
+
       - name: Determine Akamai upload path
         id: akamai-path
         run: |
-          case "${{ inputs.environment || 'test' }}" in
+          case "${{ env.DEPLOY_ENV }}" in
             test)    echo "path=/1197010/test.static.bluebutton.cms.gov/" >> "$GITHUB_OUTPUT" ;;
             staging) echo "path=/1197010/staging.bluebutton.cms.gov/" >> "$GITHUB_OUTPUT" ;;
             prod)    echo "path=/1197010/bluebutton.cms.gov/" >> "$GITHUB_OUTPUT" ;;
@@ -108,7 +100,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.AKAMAI_SCP_SSH_KEY }}" > ~/.ssh/akamai_key
           chmod 600 ~/.ssh/akamai_key
-          cat >> ~/.ssh/config <<EOF
+          cat > ~/.ssh/config <<'EOF'
           Host bluebuttoncms.rsync.upload.akamai.com
             HostKeyAlgorithms +ssh-dss
             StrictHostKeyChecking no
@@ -120,70 +112,53 @@ jobs:
           rsync -av --delete \
             -e "ssh" \
             ./dist/ \
-            ${{ secrets.AKAMAI_SSH_USER }}@bluebuttoncms.rsync.upload.akamai.com:${{ steps.akamai-path.outputs.path }}
+            ${{ secrets.AKAMAI_SSH_USER }}@bluebuttoncms.rsync.upload.akamai.com:${{ steps.akamai-path.outputs.path }} 2>&1 | tee /tmp/rsync.log
+
+          TIMESTAMP=$(date +%s000)
+          RSYNC_OUTPUT=$(tail -30 /tmp/rsync.log | tr '\n' ' ' | head -c 262000)
+          aws logs put-log-events \
+            --log-group-name "$LOG_GROUP" \
+            --log-stream-name "$LOG_STREAM" \
+            --log-events "timestamp=${TIMESTAMP},message=RSYNC: ${RSYNC_OUTPUT}"
 
       - name: Cleanup SSH key
         if: always()
-        run: rm -f ~/.ssh/akamai_key
+        run: rm -f ~/.ssh/akamai_key ~/.ssh/config
 
-      - name: Push logs to CloudWatch
+      - name: Push deploy summary to CloudWatch
         if: always()
         run: |
-          ENV="${{ inputs.environment || 'test' }}"
-          LOG_GROUP="/bb2/site-static/${ENV}/deploy"
-          LOG_STREAM="deploy-${{ github.run_id }}-${{ github.run_attempt }}"
           TIMESTAMP=$(date +%s000)
-
-          aws logs create-log-group --log-group-name "$LOG_GROUP" 2>/dev/null || true
-          aws logs create-log-stream --log-group-name "$LOG_GROUP" --log-stream-name "$LOG_STREAM" 2>/dev/null || true
-
-          MESSAGE="DEPLOY ${{ job.status }} | repo=${{ github.repository }} env=${ENV} target=${{ steps.akamai-path.outputs.path }} run=${{ github.run_id }} actor=${{ github.actor }}"
-
+          MESSAGE="DEPLOY ${{ job.status }} | repo=${{ github.repository }} env=${{ env.DEPLOY_ENV }} target=${{ steps.akamai-path.outputs.path }} run=${{ github.run_id }} actor=${{ github.actor }}"
           aws logs put-log-events \
             --log-group-name "$LOG_GROUP" \
             --log-stream-name "$LOG_STREAM" \
             --log-events "timestamp=${TIMESTAMP},message=${MESSAGE}"
 
-  notify:
-    name: Slack Notification
-    needs: deploy
-    if: always()
-    runs-on:
-      - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
-
-    steps:
-      - name: Determine result
-        id: result
-        run: |
-          if [[ "${{ needs.deploy.result }}" == "failure" ]]; then
-            echo "status=FAILURE" >> "$GITHUB_OUTPUT"
-            echo "color=danger" >> "$GITHUB_OUTPUT"
-          elif [[ "${{ needs.deploy.result }}" == "cancelled" ]]; then
-            echo "status=CANCELLED" >> "$GITHUB_OUTPUT"
-            echo "color=warning" >> "$GITHUB_OUTPUT"
-          else
-            echo "status=SUCCESS" >> "$GITHUB_OUTPUT"
-            echo "color=good" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Send Slack notification
-        if: env.SLACK_TOKEN != ''
+        if: always()
         env:
-          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
-          DEPLOY_ENV: ${{ inputs.environment || 'test' }}
-          STATUS: ${{ steps.result.outputs.status }}
-          COLOR: ${{ steps.result.outputs.color }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          curl -s -X POST https://slack.com/api/chat.postMessage \
-            -H "Authorization: Bearer ${SLACK_TOKEN}" \
+          if [[ -z "$SLACK_WEBHOOK_URL" ]]; then
+            echo "SLACK_WEBHOOK_URL not set, skipping notification"
+            exit 0
+          fi
+
+          if [[ "${{ job.status }}" == "success" ]]; then
+            COLOR="good"
+          else
+            COLOR="danger"
+          fi
+
+          curl -s -X POST "$SLACK_WEBHOOK_URL" \
             -H "Content-Type: application/json" \
             -d "{
-              \"channel\": \"blue-button-api-alert\",
               \"attachments\": [
                 {
                   \"color\": \"${COLOR}\",
-                  \"text\": \"${STATUS} - Deploy Akamai ENV:${DEPLOY_ENV}\n${RUN_URL}\"
+                  \"text\": \"${{ job.status }} - Deploy Akamai ENV:${{ env.DEPLOY_ENV }}\n${RUN_URL}\"
                 }
               ]
             }"
