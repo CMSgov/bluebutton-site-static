@@ -1,5 +1,8 @@
 name: Deploy
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     # branches: [master]
@@ -144,7 +147,7 @@ jobs:
   notify:
     name: Slack Notification
     needs: deploy
-    if: always()
+    if: always() && secrets.SLACK_TOKEN != ''
     runs-on:
       - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
@@ -164,17 +167,16 @@ jobs:
           fi
 
       - name: Send Slack notification
-        uses: slackapi/slack-github-action@v2.1.0
-        with:
-          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-          webhook-type: incoming-webhook
-          payload: |
-            {
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${{ secrets.SLACK_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
               "channel": "blue-button-api-alert",
               "attachments": [
                 {
                   "color": "${{ steps.result.outputs.color }}",
-                  "text": "${{ steps.result.outputs.status }} - Deploy Akamai ENV:${{ inputs.environment || 'test' }}\n${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                  "text": "${{ steps.result.outputs.status }} - Deploy Akamai ENV:${{ inputs.environment || '\''test'\'' }}\n${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
                 }
               ]
-            }
+            }'
