@@ -167,16 +167,22 @@ jobs:
           fi
 
       - name: Send Slack notification
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          DEPLOY_ENV: ${{ inputs.environment || 'test' }}
+          STATUS: ${{ steps.result.outputs.status }}
+          COLOR: ${{ steps.result.outputs.color }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           curl -s -X POST https://slack.com/api/chat.postMessage \
-            -H "Authorization: Bearer ${{ secrets.SLACK_TOKEN }}" \
+            -H "Authorization: Bearer ${SLACK_TOKEN}" \
             -H "Content-Type: application/json" \
-            -d '{
-              "channel": "blue-button-api-alert",
-              "attachments": [
+            -d "{
+              \"channel\": \"blue-button-api-alert\",
+              \"attachments\": [
                 {
-                  "color": "${{ steps.result.outputs.color }}",
-                  "text": "${{ steps.result.outputs.status }} - Deploy Akamai ENV:${{ inputs.environment || '\''test'\'' }}\n${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                  \"color\": \"${COLOR}\",
+                  \"text\": \"${STATUS} - Deploy Akamai ENV:${DEPLOY_ENV}\n${RUN_URL}\"
                 }
               ]
-            }'
+            }"
