@@ -17,13 +17,13 @@ jobs:
           fetch-depth: 0
           fetch-tags: true
 
-      # - name: Verify on master branch
-      #   run: |
-      #     CURRENT_BRANCH="${{ github.ref_name }}"
-      #     if [[ "$CURRENT_BRANCH" != "master" ]]; then
-      #       echo "::error::Release must be created from master branch. Current branch: $CURRENT_BRANCH"
-      #       exit 1
-      #     fi
+      - name: Verify on master branch
+        run: |
+          CURRENT_BRANCH="${{ github.ref_name }}"
+          if [[ "$CURRENT_BRANCH" != "master" ]]; then
+            echo "::error::Release must be created from master branch. Current branch: $CURRENT_BRANCH"
+            exit 1
+          fi
 
       - name: Determine new release tag
         id: tag
