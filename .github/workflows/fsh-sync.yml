@@ -1,0 +1,137 @@
+name: Generate JSON from BFD FSH Files
+
+on:
+  schedule:
+    # Run on day 1 and day 15 of the month at 8:00 AM UTC
+    - cron: '0 8 1,15 * *'
+  workflow_dispatch:
+
+jobs:
+  fsh-to-json-generation:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Setup Node w/ version 20
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    # Verify Node/npm was installed
+    - name: Verify Node Installation
+      run:  |
+        node --version
+        npm --version
+
+    # Install Sushi
+    - name: Install Sushi
+      run:  |
+        npm install -g fsh-sushi fhirpath
+        sushi --version
+
+    # Checkout BFD Repo (public repo)
+    - name: Checkout BFD Repo
+      uses: actions/checkout@v4
+      with:
+        repository: CMSgov/beneficiary-fhir-data
+        path: beneficiary-fhir-data
+        ref: master
+
+    # Generate JSON from FSH
+    - name: Generate JSON in BFD Repo
+      run: |
+        cd beneficiary-fhir-data/apps/bfd-model-idr/sushi
+        sushi build
+
+    # Confirm JSON Output
+    - name: Verify generated JSON in BFD repo
+      run: |
+        echo "Checking output directory"
+        ls beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources
+
+    # Checkout BB Static Site Repo (public repo)
+    - name: Checkout BB Static Site Repo
+      uses: actions/checkout@v4
+      with:
+        path: bluebutton-site-static
+        ref: master
+
+    # Create date variable to use in branch name and PR title
+    - name: Create date variable
+      id: date
+      run: |
+        CURRENT_DATE=$(date +%Y-%m-%d)
+        echo "current_date=$CURRENT_DATE" >> $GITHUB_OUTPUT
+    
+    # Create a new branch name for the changes. Includes the date it was created.
+    - name: Generate a branch name
+      id: branch
+      run: |
+        BRANCH_NAME="fsh-json-generation-update-${{ steps.date.outputs.current_date }}"
+        echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+    
+    # Rename only the StructureDefinition and CodeSystem JSON files to remove the prefix and copy them to the 
+    # appropriate location in the bluebutton-site-static repo
+    - name: Rename and copy BFD JSON CodeSystem and StructureDefinition files into BB Static Site Repo
+      run:  |
+        for file in beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources/*.json; do
+          filename=$(basename "$file")
+          prefix="${filename%%-*}" # removes everything after first dash, leaving the prefix
+          if [[ "$prefix" != "CodeSystem" && "$prefix" != "StructureDefinition" ]]; then
+            continue
+          fi
+          new_filename="${filename#*-}" # removes everything before the first dash, leaving the rest of the filename
+          dest_folder="bluebutton-site-static/src/content/fhir/$prefix"
+          echo "Copying $file to $dest_folder/$new_filename"
+          cp "$file" "$dest_folder/$new_filename"
+        done
+
+    # See if there were any changes to the JSON files that were copied over
+    - name: Check for changes in BB Static Site Repo
+      id: check-for-changes
+      run: |
+        cd bluebutton-site-static
+        git add .
+        if git diff --cached --quiet; then
+          echo "changed=false" >> $GITHUB_OUTPUT
+          echo "No changes detected, skipping commit and push"
+        else
+          echo "Changes detected, committing and pushing"
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
+
+    # Configure Git so that we can authenticate and push changes back to the BB Static Site repo
+    - name: Configure Git
+      if: steps.check-for-changes.outputs.changed == 'true'
+      run: |
+        cd bluebutton-site-static
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+    # Commit and push changes if there were any. Won't run if no changes are detected.
+    - name: Commit and Push Changes in BB Static Site Repo
+      if: steps.check-for-changes.outputs.changed == 'true'
+      run: |
+        cd bluebutton-site-static
+        git checkout -b ${{ steps.branch.outputs.branch_name }}
+        git commit -m "Update JSON from BFD FSH files ${{ steps.date.outputs.current_date }}"
+        git push --set-upstream origin ${{ steps.branch.outputs.branch_name }}
+      env:
+        # Need a github token with permissions to create branches and PRs in the BB Static Site repo. 
+        # Using the default GITHUB_TOKEN provided by GitHub Actions, which should have the necessary permissions for this repo.
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # Create a PR if there were changes. Won't run if no changes are detected.
+    - name: Create Pull Request in BB Static Site Repo
+      if: steps.check-for-changes.outputs.changed == 'true'
+      run:  |
+        cd bluebutton-site-static
+        gh pr create \
+          --title "Update JSON from BFD FSH files ${{ steps.date.outputs.current_date }}" \
+          --body "This PR updates the JSON files inside the bluebutton-site-static repo generated from the BFD FSH files on ${{ steps.date.outputs.current_date }}. Please review and merge if everything looks good." \
+          --base master \
+          --head ${{ steps.branch.outputs.branch_name }}
+      env:
+        # Need a github token with permissions to create branches and PRs in the BB Static Site repo. 
+        # Using the default GITHUB_TOKEN provided by GitHub Actions, which should have the necessary permissions for this repo.
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
