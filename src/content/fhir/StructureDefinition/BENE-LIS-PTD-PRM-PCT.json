@@ -1,0 +1,52 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BENE-LIS-PTD-PRM-PCT",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-LIS-PTD-PRM-PCT",
+  "version": "1.0.0",
+  "name": "BENE_LIS_PTD_PRM_PCT",
+  "title": "Beneficiary LIS Part D Premium Percentage",
+  "status": "active",
+  "description": "Indicates the percentage of Part D premium covered by Low Income Subsidy (LIS)",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Coverage"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Beneficiary LIS Part D Premium Percentage",
+        "definition": "Indicates the percentage of Part D premium covered by Low Income Subsidy (LIS)"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-LIS-PTD-PRM-PCT"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      }
+    ]
+  }
+}

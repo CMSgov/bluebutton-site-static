@@ -1,0 +1,49 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_OP_SRVC_TYPE_CD",
+  "id": "CLM-OP-SRVC-TYPE-CD",
+  "title": "Claim Outpatient Service Type Code",
+  "description": "A code reported by the provider that indicates the specific type of claim",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-OP-SRVC-TYPE-CD",
+  "concept": [
+    {
+      "code": "0",
+      "display": "Blank"
+    },
+    {
+      "code": "1",
+      "display": "Emergency"
+    },
+    {
+      "code": "2",
+      "display": "Urgent"
+    },
+    {
+      "code": "3",
+      "display": "Elective"
+    },
+    {
+      "code": "5",
+      "display": "Reserved"
+    },
+    {
+      "code": "6",
+      "display": "Reserved"
+    },
+    {
+      "code": "7",
+      "display": "Reserved"
+    },
+    {
+      "code": "8",
+      "display": "Reserved"
+    },
+    {
+      "code": "9",
+      "display": "Unknown (Information not available)"
+    }
+  ],
+  "count": 9
+}
