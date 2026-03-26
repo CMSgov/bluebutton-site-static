@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_SBMT_FRMT_CD",
+  "id": "CLM-SBMT-FRMT-CD",
+  "title": "Claim Submission Format Code",
+  "description": "Code system for claim submission format codes indicating the method or format used to submit the claim.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-SBMT-FRMT-CD",
+  "concept": [
+    {
+      "code": "S",
+      "display": "STATE-TO-PLAN PDES"
+    },
+    {
+      "code": "P",
+      "display": "PAPER CLAIM FROM PROVIDER"
+    },
+    {
+      "code": "X",
+      "display": "X12 837"
+    },
+    {
+      "code": "C",
+      "display": "COB CLAIM"
+    },
+    {
+      "code": "B",
+      "display": "BENEFICIARY SUBMITTED"
+    },
+    {
+      "code": "N",
+      "display": "NCPDP ELECTRONIC SUBMISSION"
+    },
+    {
+      "code": "A",
+      "display": "MEDICAID SUBROGATION CLAIM"
+    }
+  ],
+  "count": 7
+}

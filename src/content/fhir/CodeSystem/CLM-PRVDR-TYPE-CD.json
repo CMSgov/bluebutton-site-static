@@ -5,7 +5,7 @@
   "name": "CLM_PRVDR_TYPE_CD",
   "id": "CLM-PRVDR-TYPE-CD",
   "title": "Carrier Provider Type Code",
-  "description": "Code identifying the type of provider furnishing the service for this line item on the carrier claim. ",
+  "description": "Code identifying the type of provider or supplier furnishing the service for this line item on the carrier claim. Also used for conveying supplier types.",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PRVDR-TYPE-CD",
   "concept": [
     {
