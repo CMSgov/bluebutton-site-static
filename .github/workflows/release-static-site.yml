@@ -1,0 +1,104 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create Release Tag
+    runs-on: ubuntu-24.04-arm
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Verify on master branch
+        run: |
+          CURRENT_BRANCH="${{ github.ref_name }}"
+          if [[ "$CURRENT_BRANCH" != "master" ]]; then
+            echo "::error::Release must be created from master branch. Current branch: $CURRENT_BRANCH"
+            exit 1
+          fi
+
+      - name: Determine new release tag
+        id: tag
+        run: |
+          PREV_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "r0")
+          PREV_NUM=${PREV_TAG#r}
+          NEW_NUM=$((PREV_NUM + 1))
+          NEW_TAG="r${NEW_NUM}"
+          echo "prev=$PREV_TAG" >> "$GITHUB_OUTPUT"
+          echo "new=$NEW_TAG" >> "$GITHUB_OUTPUT"
+          echo "date=$(date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          echo "Previous: $PREV_TAG → New: $NEW_TAG"
+
+      - name: Check for new commits
+        run: |
+          COMMIT_COUNT=$(git rev-list --count ${{ steps.tag.outputs.prev }}..HEAD)
+          if [[ "$COMMIT_COUNT" -eq 0 ]]; then
+            echo "::error::No commits since ${{ steps.tag.outputs.prev }}, nothing to release"
+            exit 1
+          fi
+          echo "$COMMIT_COUNT commits since ${{ steps.tag.outputs.prev }}"
+
+      - name: Generate release notes
+        id: notes
+        run: |
+          PREV_TAG="${{ steps.tag.outputs.prev }}"
+          NEW_TAG="${{ steps.tag.outputs.new }}"
+          RELEASE_DATE="${{ steps.tag.outputs.date }}"
+
+          BODY="${NEW_TAG} - ${RELEASE_DATE}"
+          BODY="${BODY}\n================"
+
+          # Get commits with subject and extract PR numbers
+          while IFS= read -r line; do
+            HASH=$(echo "$line" | cut -d' ' -f1)
+            SUBJECT=$(echo "$line" | cut -d' ' -f2-)
+
+            # Check if subject already has a PR reference like (#123)
+            if echo "$SUBJECT" | grep -qE '\(#[0-9]+\)'; then
+              BODY="${BODY}\n- ${SUBJECT}"
+            else
+              # Try to find PR number from ref names
+              PR_NUM=$(git log --merges --oneline --ancestry-path ${HASH}~1..${HASH} 2>/dev/null \
+                | grep -oE '#[0-9]+' | head -1 || true)
+              if [[ -n "$PR_NUM" ]]; then
+                BODY="${BODY}\n- ${SUBJECT} (${PR_NUM})"
+              else
+                BODY="${BODY}\n- ${SUBJECT}"
+              fi
+            fi
+          done < <(git log --pretty=format:'%H %s' ${PREV_TAG}..HEAD)
+
+          # Write to file for gh release
+          echo -e "$BODY" > /tmp/release_notes.md
+
+          echo "Generated release notes:"
+          cat /tmp/release_notes.md
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NEW_TAG="${{ steps.tag.outputs.new }}"
+
+          git tag -a "$NEW_TAG" -m "Blue Button Static Site release $NEW_TAG"
+          git push origin "$NEW_TAG"
+
+          gh release create "$NEW_TAG" \
+            --title "$NEW_TAG" \
+            --notes-file /tmp/release_notes.md \
+            --latest
+
+          echo "Release created: https://github.com/${{ github.repository }}/releases/tag/$NEW_TAG"
