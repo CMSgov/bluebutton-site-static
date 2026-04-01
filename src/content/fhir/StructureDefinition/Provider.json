@@ -1,0 +1,258 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Provider",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/Provider",
+  "name": "Provider",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "Provider",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Provider",
+        "path": "Provider",
+        "label": "IDR Provider Base. Ignore in DD Generation",
+        "short": "Provider",
+        "definition": "Provider"
+      },
+      {
+        "id": "Provider.PRVDR_SK",
+        "path": "Provider.PRVDR_SK",
+        "short": "Provider SK - (NPI in almost all instances)",
+        "definition": "Provider SK - (NPI in almost all instances)",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.NPI_TYPE",
+        "path": "Provider.NPI_TYPE",
+        "short": "NPI Type - Type 1 for Practitioner, Type 2 for Organization",
+        "definition": "NPI Type - Type 1 for Practitioner, Type 2 for Organization",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.careTeamType",
+        "path": "Provider.careTeamType",
+        "short": "Care Team Type",
+        "definition": "Care Team Type",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.careTeamSequenceNumber",
+        "path": "Provider.careTeamSequenceNumber",
+        "short": "Care Team Sequence Number",
+        "definition": "Care Team Sequence Number",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.PRVDR_1ST_NAME",
+        "path": "Provider.PRVDR_1ST_NAME",
+        "short": "First Name",
+        "definition": "First Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.PRVDR_LGL_NAME",
+        "path": "Provider.PRVDR_LGL_NAME",
+        "short": "Provider Legal Name",
+        "definition": "Provider Legal Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.PRVDR_LAST_OR_LGL_NAME",
+        "path": "Provider.PRVDR_LAST_OR_LGL_NAME",
+        "short": "Provider Last or Legal Name",
+        "definition": "Provider Last or Legal Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.PRVDR_CARETEAM_NAME",
+        "path": "Provider.PRVDR_CARETEAM_NAME",
+        "short": "Provider Name when rendered in a care team.",
+        "definition": "Provider Name when rendered in a care team.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.PRVDR_TYPE_CD",
+        "path": "Provider.PRVDR_TYPE_CD",
+        "short": "Provider Type Code",
+        "definition": "Provider Type Code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.PRVDR_LAST_NAME",
+        "path": "Provider.PRVDR_LAST_NAME",
+        "short": "Provider Last Name",
+        "definition": "Provider Last Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.specialtyCode",
+        "path": "Provider.specialtyCode",
+        "short": "CMS Federal Specialty code.",
+        "definition": "CMS Federal Specialty Code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.PRVDR_OSCAR_NUM",
+        "path": "Provider.PRVDR_OSCAR_NUM",
+        "short": "Provider OSCAR number",
+        "definition": "Provider OSCAR number",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.PRVDR_EMPLR_ID_NUM",
+        "path": "Provider.PRVDR_EMPLR_ID_NUM",
+        "short": "Provider Employer ID Number",
+        "definition": "Provider Employer ID Number",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.isDuplicate",
+        "path": "Provider.isDuplicate",
+        "short": "BFD derived field. If an NPI is present in 2+ fields, this will be 'true' and thus we don't re-create the contained resource.",
+        "definition": "BFD derived field. If an NPI is present in 2+ fields, this will be 'true' and thus we don't re-create the contained resource.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.CLM_BLG_PRVDR_ZIP5_CD",
+        "path": "Provider.CLM_BLG_PRVDR_ZIP5_CD",
+        "short": "Billing Provider Zip 5",
+        "definition": "Billing Provider Zip 5",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.CLM_BLG_PRVDR_TAX_NUM",
+        "path": "Provider.CLM_BLG_PRVDR_TAX_NUM",
+        "short": "Provider Tax Number",
+        "definition": "Provider Tax Number",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.PRVDR_ID_QLFYR_CD",
+        "path": "Provider.PRVDR_ID_QLFYR_CD",
+        "short": "Provider Identifier Qualifier Code",
+        "definition": "Provider Identifier Qualifier Code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Provider.CLM_PRVDR_GNRC_ID_NUM",
+        "path": "Provider.CLM_PRVDR_GNRC_ID_NUM",
+        "short": "Provider Generic ID Number",
+        "definition": "Indicates the ID number submitted for the provider on a claim. The type of the identifier is noted by PRVDR_ID_QLFYR_CD.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

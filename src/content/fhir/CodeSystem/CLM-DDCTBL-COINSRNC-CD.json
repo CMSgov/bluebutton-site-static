@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "CLM_DDCTBL_COINSRNC_CD",
   "id": "CLM-DDCTBL-COINSRNC-CD",
-  "title": "Clm Ddctbl Coinsrnc Cd",
-  "description": "Code system for clm ddctbl coinsrnc cd",
+  "title": "Claim Deductible Coinsurance Code",
+  "description": "CODE INDICATING WHETHER THE REVENUE CENTER CHARGES ARE SUBJECT TO DEDUCTIBLE AND/OR COINSURANCE.",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-DDCTBL-COINSRNC-CD",
   "concept": [
     {

@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-PHYSN-ASTNT-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PHYSN-ASTNT-CD",
+  "name": "CLM_PHYSN_ASTNT_CD",
+  "title": "Reduced Payment Physician Assistant Code",
+  "status": "draft",
+  "description": "The code on the carrier (non-DMERC) line item that identifies the line items that have been paid a reduced fee schedule amount (65%, 75% or 85%) because a physician's assistant performed the service.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Reduced Payment Physician Assistant Code",
+        "definition": "The code on the carrier (non-DMERC) line item that identifies the line items that have been paid a reduced fee schedule amount (65%, 75% or 85%) because a physician's assistant performed the service."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PHYSN-ASTNT-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PHYSN-ASTNT-CD"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-CARR-PMT-DNL-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-CARR-PMT-DNL-CD",
+  "name": "CLM_CARR_PMT_DNL_CD",
+  "title": "Claim Payment Denial Code",
+  "status": "draft",
+  "description": "Deprecated 2026-01-14. The code on a non-institutional claim indicating who receives payment or if the claim was denied.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Claim Payment Denial Code",
+        "definition": "Deprecated 2026-01-14. The code on a non-institutional claim indicating who receives payment or if the claim was denied."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-CARR-PMT-DNL-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      }
+    ]
+  }
+}

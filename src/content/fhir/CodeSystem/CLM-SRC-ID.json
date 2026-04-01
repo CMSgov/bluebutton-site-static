@@ -4,8 +4,8 @@
   "content": "complete",
   "name": "CLM_SRC_ID",
   "id": "CLM-SRC-ID",
-  "title": "Clm Src Id",
-  "description": "Code system for clm src id",
+  "title": "Claim Source ID",
+  "description": "AN IDENTIFIER INDICATING WHERE THE SOURCE OF THE CLAIM DATA IN THE INTEGRATED DATA REPOSITORY (IDR) ORIGINATED FROM.",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-SRC-ID",
   "concept": [
     {
@@ -22,7 +22,7 @@
     },
     {
       "code": "23000",
-      "display": "Viable Information Processing Systems (VIPS)"
+      "display": "Viable Information Processing Systems (ViPS) Medicare Shared System (VMS)"
     }
   ],
   "count": 4
