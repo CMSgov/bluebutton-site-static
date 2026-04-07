@@ -1,0 +1,51 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BENE-PBP-NUM",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-PBP-NUM",
+  "name": "BENE_PBP_NUM",
+  "title": "Beneficiary PBP Number",
+  "status": "draft",
+  "description": "The PBP (Prescription Benefit Plan) number associated with the beneficiary's Medicare coverage.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Coverage"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Beneficiary PBP Number",
+        "definition": "The PBP (Prescription Benefit Plan) number associated with the beneficiary's Medicare coverage."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-PBP-NUM"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

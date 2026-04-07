@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CLM-PRCSG-IND-CD",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PRCSG-IND-CD",
+  "name": "CLM_PRCSG_IND_CD",
+  "title": "Processing Indicator Code",
+  "status": "draft",
+  "description": "The code on a non-institutional claim indicating to whom payment was made or if the claim was denied.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Processing Indicator Code",
+        "definition": "The code on a non-institutional claim indicating to whom payment was made or if the claim was denied."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PRCSG-IND-CD"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PRCSG-IND-CD"
+      }
+    ]
+  }
+}
