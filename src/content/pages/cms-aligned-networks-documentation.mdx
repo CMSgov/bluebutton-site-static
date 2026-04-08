@@ -13,6 +13,8 @@ seo:
 
 For applications that are approved as part of a CMS Aligned Network, Blue Button API will allow for the use of the `client_credentials` grant, in combination with [asymmetric authentication](https://hl7.org/fhir/smart-app-launch/STU2.2/client-confidential-asymmetric.html), to receive an access token. When using this flow, a beneficiary will not be required to log in via medicare.gov. A diagram of the flow is below. This is in contrast to the existing `authorization_code` + symmetric authentication flow requiring a portal login. 
 
+<div class="width-full border-1px border-base-light">![Sequence diagram showing the CMS-Aligned Network authentication flow between Patient, Consumer App, CSP, Blue Button, and BFD, including AAL2 authentication, IAL2 identity verification, token exchange, patient matching, and FHIR data retrieval](#assets/images/cms-aligned-network-flow.png)</div>
+
 ### Technical Requirements
 
 Blue Button API will only accept the `client_credentials` grant type when an extension, `cms_smart`, is present in the authentication JWT claims. 
