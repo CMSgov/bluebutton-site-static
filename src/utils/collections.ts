@@ -19,16 +19,16 @@ export const structureDefinitionSchema = z.object({
   id: z.string(),
   url: z.string().url(),
   name: z.string(),
-  title: z.string(),
+  title: z.string().optional(),
   status: z.string(),
-  description: z.string(),
+  description: z.string().optional(),
   fhirVersion: z.string(),
   kind: z.string(),
   abstract: z.boolean(),
   context: z.array(z.object({
     type: z.string(),
     expression: z.string(),
-  })),
+  })).optional(),
   type: z.string(),
   baseDefinition: z.string(),
   derivation: z.string(),
@@ -59,7 +59,7 @@ export const codeSystemSchema = z.object({
   url: z.string().url(),
   concept: z.array(z.object({
     code: z.string(),
-    display: z.string(),
+    display: z.string().optional(),
   })),
   count: z.number(),
 })
