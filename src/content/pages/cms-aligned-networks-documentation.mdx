@@ -60,7 +60,7 @@ Example Parameters:
 | `kid` | required | Must be a `kid` present in the **JWK Sets** available at the url registered with Blue Button. |
 | `typ` | required | Fixed value: "JWT" |
 
-**Note:** `jku` will be ignored if provided
+<Alert size="slim" noIcon>**Note:** `jku` will be ignored if provided</Alert>
 
 ### Authentication JWT Claims
 
@@ -115,7 +115,7 @@ Example Claims:
 
 ## ID Token Requirements
 
-**Note:** These may require updates depending upon any late-breaking alignment from CSPs and workgroups.
+<Alert size="slim" noIcon>**Note:** These may require updates depending upon any late-breaking alignment from CSPs and workgroups.</Alert>
 
 Blue Button API will perform patient matching based upon the presence of an IAL2 `id_token` provided by a registered client application. It will seek specific fields in the `id_token`'s claims.
 
@@ -130,6 +130,8 @@ Only CLEAR and ID.me are supported at the outset. Blue Button API's sandbox envi
 | `typ` | required | Fixed value: "JWT" |
 
 ### ID Token JWT Claims 
+
+<Alert size="slim" noIcon>**Note:** Contact your Credential Service Provider in order to confirm `identity_assurance_level` and `ssn_itin_short` are present on your application</Alert>
 
 | Element | Optionality | Requirement |
 | :---- | :---- | :---- |
