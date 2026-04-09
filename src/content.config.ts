@@ -69,7 +69,7 @@ const codeBooksCollection = defineCollection({
   }),
   schema: z.object({
     id: z.string(),
-    title: z.string(),
+    title: z.string().optional(),
     label: z.string(),
     shortName: z.string().optional(),
     longName: z.string().optional(),
