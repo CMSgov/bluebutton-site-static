@@ -9,6 +9,7 @@ import AccordionItem from '#components/accordion/accordion-item.astro'
 import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 import Alert from '#components/alert.astro'
+import { Image } from 'astro:assets'
 
 const entry = await getEntry('pages', 'cms-aligned-networks-documentation')
 if (!entry) {
@@ -29,6 +30,7 @@ const { Content, headings } = await render(entry)
           a: Link,
           Link,
           Alert,
+          Image,
         }}
       />
     </div>

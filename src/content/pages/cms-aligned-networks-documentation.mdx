@@ -4,6 +4,8 @@ seo:
   description: A quick reference for application developers seeking to utilize CMS-aligned networks to query the Blue Button API without a beneficiary having to log in via a portal
 ---
 
+import networkFlow from '#assets/images/cms-aligned-network-flow.png';
+
 ## Prerequisites
 
 * Application has met the requirements and has been listed in the Medicare App Library  
@@ -13,7 +15,7 @@ seo:
 
 For applications that are approved as part of a CMS Aligned Network, Blue Button API will allow for the use of the `client_credentials` grant, in combination with [asymmetric authentication](https://hl7.org/fhir/smart-app-launch/STU2.2/client-confidential-asymmetric.html), to receive an access token. When using this flow, a beneficiary will not be required to log in via medicare.gov. A diagram of the flow is below. This is in contrast to the existing `authorization_code` + symmetric authentication flow requiring a portal login. 
 
-<div class="width-full border-1px border-base-light">![Sequence diagram showing the CMS-Aligned Network authentication flow between Patient, Consumer App, CSP, Blue Button, and BFD, including AAL2 authentication, IAL2 identity verification, token exchange, patient matching, and FHIR data retrieval](#assets/images/cms-aligned-network-flow.png)</div>
+<Image class="width-full border-1px border-base-lighter padding-2" src={networkFlow} alt="Sequence diagram showing the CMS-Aligned Network authentication flow between Patient, Consumer App, CSP, Blue Button, and BFD, including AAL2 authentication, IAL2 identity verification, token exchange, patient matching, and FHIR data retrieval" />
 
 ## Technical Requirements
 
