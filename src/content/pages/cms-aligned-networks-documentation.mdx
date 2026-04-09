@@ -26,7 +26,7 @@ Blue Button API will only accept the `client_credentials` grant type when an ext
 
 #### Parameters
 
-Parameters in `POST` request to Blue Button's `/token` endpoint for CMS-aligned networks flow:
+Parameters in `POST` request to Blue Button API's `/token` endpoint for CMS-aligned networks flow:
 
 | Element | Optionality | Requirement |
 | :---- | :---- | :---- |
@@ -35,7 +35,7 @@ Parameters in `POST` request to Blue Button's `/token` endpoint for CMS-aligned 
 | `client_assertion_type` | required | `urn:ietf:params:oauth:client-assertion-type:jwt-bearer` |
 | `client_assertion` | required | Signed Authentication JWT value |
 
-#### POST to Blue Button API TOKEN endpoint:
+#### POST to Blue Button API `/token` endpoint:
 
 Header: `"Content-Type": "application/x-www-form-urlencoded"`
 
@@ -46,7 +46,7 @@ Example Parameters:
   "grant_type": "client_credentials",
   "scope": "patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs launch/patient openid profile",
   "client_assertion_type": "urn:ietf:params:oauth:client-assertion-type:jwt-bearer",
-  "client_assertion": "{JWT_token}"
+  "client_assertion": "{YOUR_JWT_HERE}"
 }
 ```
 
@@ -66,7 +66,7 @@ Example Parameters:
 | :---- | :---- | :---- |
 | `iss` | required | Your Blue Button API Client ID |
 | `sub` | required | Your Blue Button API Client ID |
-| `aud` | required | Blue Button API token endpoint. `https://{environment}.bluebutton.cms.gov/v3/o/token` |
+| `aud` | required | Blue Button API token endpoint. `https://{ENVIRONMENT}.bluebutton.cms.gov/v3/o/token` |
 | `jti` | required | unique  |
 | `exp` | required | JWTs must not be expired. Shall not be > 300 seconds from now (SMART requirement) |
 | `extensions` | required | `cms_smart` extension required. Defined below |
@@ -105,7 +105,7 @@ Example Claims:
     "cms_smart": {
       "version": "1",
       "purpose_of_use": "PATRQT",
-      "id_token": "{JWT_ID_TOKEN}"
+      "id_token": "{YOUR_ID_TOKEN_HERE}"
     }
   }
 }
@@ -115,7 +115,7 @@ Example Claims:
 
 **Note:** These may require updates depending upon any late-breaking alignment from CSPs and workgroups.
 
-Blue Button will perform patient matching based upon the presence of an IAL2 `id_token` provided by a registered client application. Blue Button will seek specific fields in the `id_token`'s claims.
+Blue Button API will perform patient matching based upon the presence of an IAL2 `id_token` provided by a registered client application. It will seek specific fields in the `id_token`'s claims.
 
 Only CLEAR and ID.me are supported at the outset. Blue Button API's sandbox environment will only accept ID tokens issued by CLEAR or ID.me's lower environments, and Blue Button API's production environment will only accept ID tokens issued by CLEAR or ID.me's production environments.
 
@@ -165,7 +165,7 @@ Only CLEAR and ID.me are supported at the outset. Blue Button API's sandbox envi
 
 ### Using the Blue Button API 
 
-After successfully POSTing a token to Blue Button API's token endpoint, Blue Button will attempt to find a unique match using the approved CMS matching algorithms. If a unique match is found, then an access token will be issued, with a token validity of 30 minutes, and refresh capability of up to 24 hours. If no match is found, an error will be returned to that effect. 
+After successfully POSTing a token to Blue Button API's `/token` endpoint, it will attempt to find a unique match using the approved CMS matching algorithms. If a unique match is found, then an access token will be issued, with a token validity of 30 minutes, and refresh capability of up to 24 hours. If no match is found, an error will be returned to that effect. 
 
 Access tokens issued using this flow have the same capabilities of access tokens issued using the portal login `authorization_code` flow. To query for claims, coverage, or patient data, utilize the `Patient`, `ExplanationOfBenefit`, and `Coverage` resource paths:
 
@@ -184,7 +184,7 @@ In addition, a new operation exists to pull in digital insurance card elements p
 
 ### Patient Matching Criteria
 
-Approved field combinations that Blue Button currently supports:
+Approved field combinations that Blue Button API currently supports:
 
 - First Name + Last Name + DOB + Street Line  
 - First Name + Last Name + DOB + SSN Last 4  
