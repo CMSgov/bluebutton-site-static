@@ -33,7 +33,7 @@ Parameters in `POST` request to Blue Button API's `/token` endpoint for CMS-alig
 | Element | Optionality | Requirement |
 | :---- | :---- | :---- |
 | `grant_type` | required | Must be: `client_credentials` |
-| `scope` | required | Any values from Blue Button API's `./well-known/smart-configuration` are valid. <br/><br/>**Example:** <ul><li>`patient/Patient.rs`</li><li>`patient/Coverage.rs`</li><li>`patient/ExplanationOfBenefit.rs`</li> <li>`launch/patient`</li> <li>`openid`</li> <li>`profile`</li></ul> |
+| `scope` | required | Any values from Blue Button API's `./well-known/smart-configuration` are valid. <br/><br/>**Example:** <ul><li>`patient/Patient.rs`</li><li>`patient/Coverage.rs`</li><li>`patient/ExplanationOfBenefit.rs`</li> <li>`launch/patient`</li> <li>`profile`</li></ul> |
 | `client_assertion_type` | required | `urn:ietf:params:oauth:client-assertion-type:jwt-bearer` |
 | `client_assertion` | required | Signed Authentication JWT value |
 
@@ -46,7 +46,7 @@ Example Parameters:
 ```json
 {
   "grant_type": "client_credentials",
-  "scope": "patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs launch/patient openid profile",
+  "scope": "patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs launch/patient profile",
   "client_assertion_type": "urn:ietf:params:oauth:client-assertion-type:jwt-bearer",
   "client_assertion": "{YOUR_JWT_HERE}"
 }
@@ -82,7 +82,7 @@ Example Parameters:
 | `purpose_of_use` | Required | Fixed value: "[PATRQT](https://terminology.hl7.org/en/CodeSystem-v3-ActReason.html#v3-ActReason-PATRQT)" 1   |
 | `consent_policy` | Optional | Not defined for initial implementation  |
 | `consent_reference` | Optional | Not used for initial implementation  |
-| `id_token` | Required | CSP-issued ID token containing identity assertions. **Must be IAL2.** |
+| `id_token` | Required | CSP-issued ID token containing identity assertions. **Must be IAL2** |
 
 #### Example decoded JWT containing the `cms_smart` extension:
 
@@ -100,7 +100,7 @@ Example Claims:
 {
   "iss": "my-client-id-1",
   "sub": "my-client-id-1",
-  "aud": "https://test.bluebutton.cms.gov/v3/o/token",
+  "aud": "https://sandbox.bluebutton.cms.gov/v3/o/token",
   "jti": "8b4b7fab-93ed-4e59-9935-f9244d90b516",
   "exp": 1774651583,
   "extensions": {
@@ -135,13 +135,13 @@ Only CLEAR and ID.me are supported at the outset. Blue Button API's sandbox envi
 
 | Element | Optionality | Requirement |
 | :---- | :---- | :---- |
-| `iss` | required | <ul><li>**Production**: Must be `https://api.id.me/oidc` or `https://verified.clearme.com/integrations`</li><li>**Lower environments**: Must be `https://api.idmelabs.com/oidc`</li></ul>  |
+| `iss` | required | <ul><li>**Production**: Must be `https://api.id.me/oidc` or `https://verified.clearme.com/integrations`</li><li>**Lower environments**: Must be `https://api.idmelabs.com/oidc` or `https://verified.clearme.com/integrations`</li></ul>  |
 | `sub` | required | CSP client-specific ID for the beneficiary. Currently not used.  |
 | `aud` | required | MAY be an array  |
 | `jti` | required | unique  |
 | `exp` | required | JWTs must not be expired |
 | `iat` | required | JWTs must not be more than 5 minutes (300 seconds) old |
-| `identity_assurance_level` | **required** | **Must equal 2 in CSP-signed payload** |
+| `identity_assurance_level` | **required** | **Must > = 2 in CSP-signed payload** |
 | `auth_time` | **required** | **must be < 24 hours old**  |
 | `family_name` | required | Expected Character Space: Latin/ASCII \+ Latin-1 Supp/Ext |
 | `given_name` | required | Expected Character Space: Latin/ASCII \+ Latin-1 Supp/Ext |
@@ -160,7 +160,7 @@ Only CLEAR and ID.me are supported at the outset. Blue Button API's sandbox envi
 | Element | Optionality | Requirement |
 | :---- | :---- | :---- |
 | `street_address` | Optional | Street Address |
-| `address_line2` | Optional | Line 2 - not in TEFCA |
+| `address_line2` | Optional | Line 2 |
 | `locality` | Optional |  |
 | `region` | Optional |  |
 | `postal_code` | Optional |  |
