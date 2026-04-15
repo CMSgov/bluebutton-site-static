@@ -4,7 +4,7 @@
   "content": "complete",
   "name": "CLM_PMT_80_100_CD",
   "id": "CLM-PMT-80-100-CD",
-  "title": "Claim Place of Service Code",
+  "title": "Line Payment 80%/100% Code",
   "description": "The code indicating that the amount shown in the payment field on the non-institutional line item represents either 80% or 100% of the allowed charges less any deductible, or 100% limitation of liability only.",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PMT-80-100-CD",
   "concept": [
