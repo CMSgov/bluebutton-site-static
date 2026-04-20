@@ -6,7 +6,7 @@
   "id": "ANSI-GRP-CD",
   "title": "ANSI Group Code - Claim Adjustment Group Code",
   "description": "The Group Code is combined with the ANSI reason code to demonstrate who has financial responsibility for the amount.",
-  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/ANSI-GRP-CODE",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/ANSI-GRP-CD",
   "concept": [
     {
       "code": "CO",

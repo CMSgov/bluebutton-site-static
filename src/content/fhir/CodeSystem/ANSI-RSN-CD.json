@@ -6,7 +6,7 @@
   "id": "ANSI-RSN-CD",
   "title": "ANSI Reason Code - Claim Adjustment Reason Code",
   "description": "A code used to identify the detailed reason an adjustment was made (e.g. reason for denial or reducing payment).",
-  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/ANSI-RSN-CODE",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/ANSI-RSN-CD",
   "concept": [
     {
       "code": "1",
