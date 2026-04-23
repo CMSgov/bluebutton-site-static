@@ -67,9 +67,28 @@ jobs:
           path: dist/
           retention-days: 3
 
+      - name: Notify Slack on build failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [[ -z "$SLACK_WEBHOOK_URL" ]]; then exit 0; fi
+          curl -s -X POST "$SLACK_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"attachments\": [
+                {
+                  \"color\": \"danger\",
+                  \"text\": \"failure - Build failed ENV:${{ env.DEPLOY_ENV }} TAG:${{ inputs.release_tag || github.ref_name }}\n${RUN_URL}\"
+                }
+              ]
+            }"
+
   deploy:
     name: Deploy to Akamai (${{ inputs.environment || 'test' }})
     needs: build
+    timeout-minutes: 30
     runs-on:
       - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-site-static-${{ github.run_id }}-${{ github.run_attempt }}
     environment: ${{ inputs.environment || 'test' }}
@@ -119,7 +138,9 @@ jobs:
             ./dist/ \
             ${{ secrets.AKAMAI_SSH_USER }}@bluebuttoncms.rsync.upload.akamai.com:${{ steps.akamai-path.outputs.path }} > /tmp/rsync.log 2>&1
 
-          # Push all rsync output to CloudWatch in a single batched call
+      - name: Push rsync log to CloudWatch
+        if: always()
+        run: |
           jq -R -s '
             split("\n") |
             map(select(length > 0)) |

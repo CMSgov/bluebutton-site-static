@@ -35,7 +35,7 @@ jobs:
 
       - name: Verify local and remote tags are in sync
         run: |
-          LOCAL_TAGS="$(git tag | sort -u -V)"
+          LOCAL_TAGS="$(git tag | grep -o 'r[0-9]\{1,\}[-hotfix]*' | sort -u -V)"
           REMOTE_TAGS="$(git ls-remote --quiet --tags origin | grep -o 'r[0-9]\{1,\}[-hotfix]*' | sort -u -V)"
           if [[ "${LOCAL_TAGS}" != "${REMOTE_TAGS}" ]]; then
             echo "::error::Local tags do not match remote tags. Please reconcile before releasing."
