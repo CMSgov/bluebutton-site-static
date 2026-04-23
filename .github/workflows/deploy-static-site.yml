@@ -45,7 +45,7 @@ jobs:
         if: inputs.release_tag != ''
         run: |
           git fetch --tags
-          git checkout tags/${{ inputs.release_tag }}
+          git -c advice.detachedHead=false checkout tags/${{ inputs.release_tag }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
