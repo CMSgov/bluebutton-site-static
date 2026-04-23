@@ -2,6 +2,11 @@ name: Create Release
 
 on:
   workflow_dispatch:
+    inputs:
+      commit_range:
+        description: Optional commit range override (e.g. r91..r92) — leave blank to auto-detect since last tag
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -56,12 +61,13 @@ jobs:
 
       - name: Check for new commits
         run: |
-          COMMIT_COUNT=$(git rev-list --count ${{ steps.tag.outputs.prev }}..HEAD)
+          COMMIT_RANGE="${{ inputs.commit_range || format('{0}..HEAD', steps.tag.outputs.prev) }}"
+          COMMIT_COUNT=$(git rev-list --count "$COMMIT_RANGE")
           if [[ "$COMMIT_COUNT" -eq 0 ]]; then
-            echo "::error::No commits since ${{ steps.tag.outputs.prev }}, nothing to release"
+            echo "::error::No commits in range $COMMIT_RANGE, nothing to release"
             exit 1
           fi
-          echo "$COMMIT_COUNT commits since ${{ steps.tag.outputs.prev }}"
+          echo "$COMMIT_COUNT commits in range $COMMIT_RANGE"
 
       - name: Generate release notes
         id: notes
@@ -69,7 +75,7 @@ jobs:
           PREV_TAG="${{ steps.tag.outputs.prev }}"
           NEW_TAG="${{ steps.tag.outputs.new }}"
           RELEASE_DATE="${{ steps.tag.outputs.date }}"
-          COMMIT_RANGE="${PREV_TAG}..HEAD"
+          COMMIT_RANGE="${{ inputs.commit_range || format('{0}..HEAD', steps.tag.outputs.prev) }}"
 
           # Build hash-to-PR map from ref names (mirrors manual script get_hash2pr_map)
           declare -A hash2pr
