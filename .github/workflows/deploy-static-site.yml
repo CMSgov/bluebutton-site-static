@@ -107,6 +107,11 @@ jobs:
             IdentityFile ~/.ssh/akamai_key
           EOF
 
+      - name: Mask sensitive deployment values
+        run: |
+          echo "::add-mask::bluebuttoncms.rsync.upload.akamai.com"
+          echo "::add-mask::${{ steps.akamai-path.outputs.path }}"
+
       - name: Deploy to Akamai NetStorage
         run: |
           # Redirect all output to log file only — keeps Akamai host/path out of GHA logs
@@ -117,13 +122,14 @@ jobs:
 
           # Push rsync output to CloudWatch line by line
           while IFS= read -r line; do
+            [[ -z "$line" ]] && continue
             TIMESTAMP=$(date +%s000)
             jq -n --argjson ts "$TIMESTAMP" --arg msg "$line" \
               '[{timestamp: $ts, message: $msg}]' > /tmp/rsync_event.json
             aws logs put-log-events \
               --log-group-name "$LOG_GROUP" \
               --log-stream-name "$LOG_STREAM" \
-              --log-events file:///tmp/rsync_event.json
+              --log-events file:///tmp/rsync_event.json > /dev/null
           done < /tmp/rsync.log
 
       - name: Cleanup SSH key
