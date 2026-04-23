@@ -17,6 +17,9 @@ jobs:
           fetch-depth: 0
           fetch-tags: true
 
+      - name: Fetch pull request refs
+        run: git fetch origin '+refs/pull/*/head:refs/remotes/origin/pr/*'
+
       - name: Verify on master branch
         run: |
           CURRENT_BRANCH="${{ github.ref_name }}"
@@ -24,6 +27,20 @@ jobs:
             echo "::error::Release must be created from master branch. Current branch: $CURRENT_BRANCH"
             exit 1
           fi
+
+      - name: Verify local and remote tags are in sync
+        run: |
+          LOCAL_TAGS="$(git tag | sort -u -V)"
+          REMOTE_TAGS="$(git ls-remote --quiet --tags origin | grep -o 'r[0-9]\{1,\}[-hotfix]*' | sort -u -V)"
+          if [[ "${LOCAL_TAGS}" != "${REMOTE_TAGS}" ]]; then
+            echo "::error::Local tags do not match remote tags. Please reconcile before releasing."
+            echo "Local tags:"
+            echo "$LOCAL_TAGS"
+            echo "Remote tags:"
+            echo "$REMOTE_TAGS"
+            exit 1
+          fi
+          echo "Local and remote tags are in sync"
 
       - name: Determine new release tag
         id: tag
@@ -52,31 +69,56 @@ jobs:
           PREV_TAG="${{ steps.tag.outputs.prev }}"
           NEW_TAG="${{ steps.tag.outputs.new }}"
           RELEASE_DATE="${{ steps.tag.outputs.date }}"
+          COMMIT_RANGE="${PREV_TAG}..HEAD"
 
-          BODY="${NEW_TAG} - ${RELEASE_DATE}"
-          BODY="${BODY}\n================"
+          # Build hash-to-PR map from ref names (mirrors manual script get_hash2pr_map)
+          declare -A hash2pr
+          commit_hash_refnames_regex="^([a-f0-9]{40})[[:blank:]]*(.*)"
+          refnames_pr_id_regex="^\(.*/pr/([0-9]+).*\)"
 
-          # Get commits with subject and extract PR numbers
           while IFS= read -r line; do
-            HASH=$(echo "$line" | cut -d' ' -f1)
-            SUBJECT=$(echo "$line" | cut -d' ' -f2-)
-
-            # Check if subject already has a PR reference like (#123)
-            if echo "$SUBJECT" | grep -qE '\(#[0-9]+\)'; then
-              BODY="${BODY}\n- ${SUBJECT}"
-            else
-              # Try to find PR number from ref names
-              PR_NUM=$(git log --merges --oneline --ancestry-path ${HASH}~1..${HASH} 2>/dev/null \
-                | grep -oE '#[0-9]+' | head -1 || true)
-              if [[ -n "$PR_NUM" ]]; then
-                BODY="${BODY}\n- ${SUBJECT} (${PR_NUM})"
-              else
-                BODY="${BODY}\n- ${SUBJECT}"
+            line=$(echo "$line" | xargs)
+            if [[ $line =~ $commit_hash_refnames_regex ]]; then
+              hash=${BASH_REMATCH[1]}
+              nmref=${BASH_REMATCH[2]}
+              pr_link=""
+              if [[ $nmref =~ $refnames_pr_id_regex ]]; then
+                pr_link="(#${BASH_REMATCH[1]})"
               fi
+              hash2pr["$hash"]="$pr_link"
             fi
-          done < <(git log --pretty=format:'%H %s' ${PREV_TAG}..HEAD)
+          done < <(git log --pretty=format:'%H %d' ${COMMIT_RANGE})
 
-          # Write to file for gh release
+          # Generate release history (mirrors manual script generate_release_history)
+          commit_hash_subj_regex="^([a-f0-9]{40})[[:blank:]]+(.+)(\(\#[0-9]+\))?"
+          rel_hist=""
+
+          while IFS= read -r line; do
+            line=$(echo "$line" | xargs)
+            if [[ $line =~ $commit_hash_subj_regex ]]; then
+              hash=${BASH_REMATCH[1]}
+              subj=${BASH_REMATCH[2]}
+              pr_link=${BASH_REMATCH[3]}
+              release_entry="- ${subj}"
+              if [ -z "${pr_link}" ]; then
+                pr_link="${hash2pr[$hash]}"
+                release_entry="- ${subj} ${pr_link}"
+              fi
+              rel_hist="${rel_hist}\n${release_entry}"
+            fi
+          done < <(git log --pretty=format:'%H %s' ${COMMIT_RANGE})
+
+          if [[ -z "${rel_hist}" ]]; then
+            echo "::error::No release history generated, nothing to release"
+            exit 1
+          fi
+
+          # Escape any quotes
+          rel_hist="${rel_hist//\"/\\\"}"
+
+          # Build release body
+          BODY="${NEW_TAG} - ${RELEASE_DATE}\n================\n${rel_hist}"
+
           echo -e "$BODY" > /tmp/release_notes.md
 
           echo "Generated release notes:"
@@ -87,14 +129,21 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Create release
+      - name: Create and push tag
+        id: push-tag
+        run: |
+          NEW_TAG="${{ steps.tag.outputs.new }}"
+          git tag -a "$NEW_TAG" -m "Blue Button Static Site release $NEW_TAG"
+          git push origin "$NEW_TAG"
+          echo "tag_pushed=true" >> "$GITHUB_OUTPUT"
+          echo "Tag $NEW_TAG created and pushed"
+
+      - name: Create GitHub release
+        id: create-release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           NEW_TAG="${{ steps.tag.outputs.new }}"
-
-          git tag -a "$NEW_TAG" -m "Blue Button Static Site release $NEW_TAG"
-          git push origin "$NEW_TAG"
 
           gh release create "$NEW_TAG" \
             --title "$NEW_TAG" \
@@ -102,3 +151,28 @@ jobs:
             --latest
 
           echo "Release created: https://github.com/${{ github.repository }}/releases/tag/$NEW_TAG"
+
+      - name: Rollback on failure
+        if: failure() && steps.push-tag.outputs.tag_pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NEW_TAG="${{ steps.tag.outputs.new }}"
+          echo "::warning::Release failed, rolling back tag $NEW_TAG"
+
+          # Delete the GitHub release if it was partially created
+          gh release delete "$NEW_TAG" --yes 2>/dev/null || true
+
+          # Delete remote tag
+          echo "Deleting remote tag $NEW_TAG"
+          git push -d origin "$NEW_TAG" || true
+
+          # Delete local tag
+          echo "Deleting local tag $NEW_TAG"
+          git tag -d "$NEW_TAG" || true
+
+          echo "::error::Rollback complete. Debug: check release notes below"
+          if [[ -f /tmp/release_notes.md ]]; then
+            echo "Release notes content:"
+            cat /tmp/release_notes.md
+          fi

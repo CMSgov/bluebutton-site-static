@@ -109,17 +109,22 @@ jobs:
 
       - name: Deploy to Akamai NetStorage
         run: |
+          # Redirect all output to log file only — keeps Akamai host/path out of GHA logs
           rsync -av --delete \
             -e "ssh" \
             ./dist/ \
-            ${{ secrets.AKAMAI_SSH_USER }}@bluebuttoncms.rsync.upload.akamai.com:${{ steps.akamai-path.outputs.path }} 2>&1 | tee /tmp/rsync.log
+            ${{ secrets.AKAMAI_SSH_USER }}@bluebuttoncms.rsync.upload.akamai.com:${{ steps.akamai-path.outputs.path }} > /tmp/rsync.log 2>&1
 
-          TIMESTAMP=$(date +%s000)
-          RSYNC_OUTPUT=$(tail -30 /tmp/rsync.log | tr '\n' ' ' | head -c 262000)
-          aws logs put-log-events \
-            --log-group-name "$LOG_GROUP" \
-            --log-stream-name "$LOG_STREAM" \
-            --log-events "timestamp=${TIMESTAMP},message=RSYNC: ${RSYNC_OUTPUT}"
+          # Push rsync output to CloudWatch line by line
+          while IFS= read -r line; do
+            TIMESTAMP=$(date +%s000)
+            jq -n --argjson ts "$TIMESTAMP" --arg msg "$line" \
+              '[{timestamp: $ts, message: $msg}]' > /tmp/rsync_event.json
+            aws logs put-log-events \
+              --log-group-name "$LOG_GROUP" \
+              --log-stream-name "$LOG_STREAM" \
+              --log-events file:///tmp/rsync_event.json
+          done < /tmp/rsync.log
 
       - name: Cleanup SSH key
         if: always()
