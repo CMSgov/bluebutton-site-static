@@ -39,6 +39,12 @@ jobs:
           echo "::error::Release tag is required for all manual deployments"
           exit 1
 
+      - name: Validate release tag exists
+        if: inputs.release_tag != ''
+        run: |
+          git ls-remote --tags origin "refs/tags/${{ inputs.release_tag }}" | grep -q . || \
+            { echo "::error::Tag '${{ inputs.release_tag }}' does not exist"; exit 1; }
+
       - uses: actions/checkout@v4
         with:
           ref: ${{ inputs.release_tag || github.ref_name }}
