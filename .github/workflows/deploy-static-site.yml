@@ -107,14 +107,9 @@ jobs:
             IdentityFile ~/.ssh/akamai_key
           EOF
 
-      - name: Mask sensitive deployment values
-        run: |
-          echo "::add-mask::bluebuttoncms.rsync.upload.akamai.com"
-          echo "::add-mask::${{ steps.akamai-path.outputs.path }}"
-
       - name: Deploy to Akamai NetStorage
         run: |
-          # Redirect all output to log file only — keeps Akamai host/path out of GHA logs
+          echo "::echo::off"
           rsync -av --delete \
             -e "ssh" \
             ./dist/ \
