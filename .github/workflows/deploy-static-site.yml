@@ -115,17 +115,16 @@ jobs:
             ./dist/ \
             ${{ secrets.AKAMAI_SSH_USER }}@bluebuttoncms.rsync.upload.akamai.com:${{ steps.akamai-path.outputs.path }} > /tmp/rsync.log 2>&1
 
-          # Push rsync output to CloudWatch line by line
-          while IFS= read -r line; do
-            [[ -z "$line" ]] && continue
-            TIMESTAMP=$(date +%s000)
-            jq -n --argjson ts "$TIMESTAMP" --arg msg "$line" \
-              '[{timestamp: $ts, message: $msg}]' > /tmp/rsync_event.json
-            aws logs put-log-events \
-              --log-group-name "$LOG_GROUP" \
-              --log-stream-name "$LOG_STREAM" \
-              --log-events file:///tmp/rsync_event.json > /dev/null
-          done < /tmp/rsync.log
+          # Push all rsync output to CloudWatch in a single batched call
+          jq -R -s '
+            split("\n") |
+            map(select(length > 0)) |
+            map({timestamp: (now * 1000 | floor), message: .})
+          ' /tmp/rsync.log > /tmp/rsync_events.json
+          aws logs put-log-events \
+            --log-group-name "$LOG_GROUP" \
+            --log-stream-name "$LOG_STREAM" \
+            --log-events file:///tmp/rsync_events.json > /dev/null
 
       - name: Cleanup SSH key
         if: always()
