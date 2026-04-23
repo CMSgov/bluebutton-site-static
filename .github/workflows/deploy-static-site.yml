@@ -167,7 +167,7 @@ jobs:
               \"attachments\": [
                 {
                   \"color\": \"${COLOR}\",
-                  \"text\": \"${{ job.status }} - Deploy Akamai ENV:${{ env.DEPLOY_ENV }}\n${RUN_URL}\"
+                  \"text\": \"${{ job.status }} - Deploy Akamai ENV:${{ env.DEPLOY_ENV }} TAG:${{ inputs.release_tag || github.ref_name }}\n${RUN_URL}\"
                 }
               ]
             }"
