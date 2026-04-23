@@ -14,7 +14,7 @@ on:
           - staging
           - prod
       release_tag:
-        description: Release tag to deploy (e.g. r33) — required for staging and prod
+        description: Release tag to deploy (e.g. r33) — required for all manual deploys
         required: false
         type: string
 
@@ -33,10 +33,10 @@ jobs:
       - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
-      - name: Require release tag for staging and prod
-        if: (inputs.environment == 'staging' || inputs.environment == 'prod') && inputs.release_tag == ''
+      - name: Require release tag for manual deploys
+        if: github.event_name == 'workflow_dispatch' && inputs.release_tag == ''
         run: |
-          echo "::error::Release tag is required for staging and prod deployments"
+          echo "::error::Release tag is required for all manual deployments"
           exit 1
 
       - uses: actions/checkout@v4
@@ -134,7 +134,7 @@ jobs:
         if: always()
         run: |
           TIMESTAMP=$(date +%s000)
-          MESSAGE="DEPLOY ${{ job.status }} | repo=${{ github.repository }} env=${{ env.DEPLOY_ENV }} target=${{ steps.akamai-path.outputs.path }} run=${{ github.run_id }} actor=${{ github.actor }}"
+          MESSAGE="DEPLOY ${{ job.status }} | repo=${{ github.repository }} env=${{ env.DEPLOY_ENV }} tag=${{ inputs.release_tag || github.ref_name }} target=${{ steps.akamai-path.outputs.path }} run=${{ github.run_id }} actor=${{ github.actor }}"
           aws logs put-log-events \
             --log-group-name "$LOG_GROUP" \
             --log-stream-name "$LOG_STREAM" \
