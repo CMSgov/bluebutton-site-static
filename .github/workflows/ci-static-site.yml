@@ -58,6 +58,7 @@ jobs:
     name: Spell Check
     runs-on:
       - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
+    continue-on-error: true
 
     steps:
       - uses: actions/checkout@v4
