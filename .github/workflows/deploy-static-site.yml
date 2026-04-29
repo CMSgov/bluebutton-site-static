@@ -14,7 +14,7 @@ on:
           - staging
           - prod
       release_tag:
-        description: Release tag to deploy (e.g. r33) — required for staging and prod
+        description: Release tag to deploy (e.g. r33) — required for all manual deploys
         required: false
         type: string
 
@@ -33,15 +33,19 @@ jobs:
       - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
-      - name: Require release tag for staging and prod
-        if: (inputs.environment == 'staging' || inputs.environment == 'prod') && inputs.release_tag == ''
+      - name: Require release tag for manual deploys
+        if: github.event_name == 'workflow_dispatch' && inputs.release_tag == ''
         run: |
-          echo "::error::Release tag is required for staging and prod deployments"
+          echo "::error::Release tag is required for all manual deployments"
           exit 1
 
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ inputs.release_tag || github.ref_name }}
+
+      - name: Checkout release tag
+        if: inputs.release_tag != ''
+        run: |
+          git fetch --tags
+          git -c advice.detachedHead=false checkout tags/${{ inputs.release_tag }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -63,9 +67,28 @@ jobs:
           path: dist/
           retention-days: 3
 
+      - name: Notify Slack on build failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [[ -z "$SLACK_WEBHOOK_URL" ]]; then exit 0; fi
+          curl -s -X POST "$SLACK_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"attachments\": [
+                {
+                  \"color\": \"danger\",
+                  \"text\": \"failure - Build failed ENV:${{ env.DEPLOY_ENV }} TAG:${{ inputs.release_tag || github.ref_name }}\n${RUN_URL}\"
+                }
+              ]
+            }"
+
   deploy:
     name: Deploy to Akamai (${{ inputs.environment || 'test' }})
     needs: build
+    timeout-minutes: 30
     runs-on:
       - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-site-static-${{ github.run_id }}-${{ github.run_attempt }}
     environment: ${{ inputs.environment || 'test' }}
@@ -109,17 +132,24 @@ jobs:
 
       - name: Deploy to Akamai NetStorage
         run: |
+          echo "::echo::off"
           rsync -av --delete \
             -e "ssh" \
             ./dist/ \
-            ${{ secrets.AKAMAI_SSH_USER }}@bluebuttoncms.rsync.upload.akamai.com:${{ steps.akamai-path.outputs.path }} 2>&1 | tee /tmp/rsync.log
+            ${{ secrets.AKAMAI_SSH_USER }}@bluebuttoncms.rsync.upload.akamai.com:${{ steps.akamai-path.outputs.path }} > /tmp/rsync.log 2>&1
 
-          TIMESTAMP=$(date +%s000)
-          RSYNC_OUTPUT=$(tail -30 /tmp/rsync.log | tr '\n' ' ' | head -c 262000)
+      - name: Push rsync log to CloudWatch
+        if: always()
+        run: |
+          jq -R -s '
+            split("\n") |
+            map(select(length > 0)) |
+            map({timestamp: (now * 1000 | floor), message: .})
+          ' /tmp/rsync.log > /tmp/rsync_events.json
           aws logs put-log-events \
             --log-group-name "$LOG_GROUP" \
             --log-stream-name "$LOG_STREAM" \
-            --log-events "timestamp=${TIMESTAMP},message=RSYNC: ${RSYNC_OUTPUT}"
+            --log-events file:///tmp/rsync_events.json > /dev/null
 
       - name: Cleanup SSH key
         if: always()
@@ -129,7 +159,7 @@ jobs:
         if: always()
         run: |
           TIMESTAMP=$(date +%s000)
-          MESSAGE="DEPLOY ${{ job.status }} | repo=${{ github.repository }} env=${{ env.DEPLOY_ENV }} target=${{ steps.akamai-path.outputs.path }} run=${{ github.run_id }} actor=${{ github.actor }}"
+          MESSAGE="DEPLOY ${{ job.status }} | repo=${{ github.repository }} env=${{ env.DEPLOY_ENV }} tag=${{ inputs.release_tag || github.ref_name }} target=${{ steps.akamai-path.outputs.path }} run=${{ github.run_id }} actor=${{ github.actor }}"
           aws logs put-log-events \
             --log-group-name "$LOG_GROUP" \
             --log-stream-name "$LOG_STREAM" \
@@ -158,7 +188,7 @@ jobs:
               \"attachments\": [
                 {
                   \"color\": \"${COLOR}\",
-                  \"text\": \"${{ job.status }} - Deploy Akamai ENV:${{ env.DEPLOY_ENV }}\n${RUN_URL}\"
+                  \"text\": \"${{ job.status }} - Deploy Akamai ENV:${{ env.DEPLOY_ENV }} TAG:${{ inputs.release_tag || github.ref_name }}\n${RUN_URL}\"
                 }
               ]
             }"
