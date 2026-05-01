@@ -910,6 +910,19 @@
             "code": "string"
           }
         ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.GEO_BLG_SSA_STATE_CD",
+        "path": "ExplanationOfBenefit-Base.GEO_BLG_SSA_STATE_CD",
+        "short": "State FIPS Code",
+        "definition": "Identifies the state where the facility providing services is located.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
       }
     ]
   }
