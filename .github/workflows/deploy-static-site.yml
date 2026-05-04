@@ -30,7 +30,7 @@ jobs:
   build:
     name: Build (${{ inputs.environment || 'test' }})
     runs-on:
-      - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-site-static-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
       - name: Require release tag for manual deploys
@@ -90,7 +90,7 @@ jobs:
     needs: build
     timeout-minutes: 30
     runs-on:
-      - codebuild-bb-${{ (inputs.environment || 'test') == 'test' && 'test' || 'prod' }}-site-static-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
     environment: ${{ inputs.environment || 'test' }}
 
     steps:
