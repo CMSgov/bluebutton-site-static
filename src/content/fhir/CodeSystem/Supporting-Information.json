@@ -257,7 +257,17 @@
       "code": "CLM_PD_STUS_CD",
       "display": "Claim Paid Status Code",
       "definition": "A status code indicating the paid status of a claim."
+    },
+    {
+      "code": "PRVDR_FAC_FIPS_ST_CD",
+      "display": "Federal Information Processing Standards (FIPS) State Code",
+      "definition": "Identifies the state where the facility providing services is located."
+    },
+    {
+      "code": "RNDRG_PRVDR_FIPS_ST_CD",
+      "display": "Rendering Provider FIPS State Code",
+      "definition": "Identifies the state that the provider providing the service is located in"
     }
   ],
-  "count": 50
+  "count": 52
 }

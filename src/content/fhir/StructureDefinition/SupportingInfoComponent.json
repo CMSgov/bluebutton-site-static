@@ -903,6 +903,32 @@
             "code": "string"
           }
         ]
+      },
+      {
+        "id": "SupportingInfoComponent.GEO_BLG_SSA_STATE_CD",
+        "path": "SupportingInfoComponent.GEO_BLG_SSA_STATE_CD",
+        "short": "State FIPS Code",
+        "definition": "Identifies the state where the facility providing services is located.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "SupportingInfoComponent.GEO_RNDRG_SSA_STATE_CD",
+        "path": "SupportingInfoComponent.GEO_RNDRG_SSA_STATE_CD",
+        "short": "State FIPS Code",
+        "definition": "Identifies the state that the provider providing the service is located in.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
       }
     ]
   }
