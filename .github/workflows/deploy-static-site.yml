@@ -134,6 +134,7 @@ jobs:
         run: |
           echo "::echo::off"
           rsync -av --delete \
+            --exclude=/bbapi-static/ \
             -e "ssh" \
             ./dist/ \
             ${{ secrets.AKAMAI_SSH_USER }}@bluebuttoncms.rsync.upload.akamai.com:${{ steps.akamai-path.outputs.path }} > /tmp/rsync.log 2>&1
