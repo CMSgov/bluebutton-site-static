@@ -45,6 +45,7 @@ export default defineConfig({
           quietDeps: true,
         },
       },
+      transformer: 'lightningcss',
     },
   },
 

@@ -1,0 +1,55 @@
+---
+import '@pagefind/component-ui/css'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+import { $path } from 'astro-typesafe-routes/path'
+import { getCollection } from 'astro:content'
+
+const fields = (await getCollection('dataDictionary')).splice(0, 100).map((field) => {
+  const slug = field.data.bfdColumnName.replace(/_/g, '-')
+  return {
+    id: field.id,
+    name: field.data.name,
+    description: field.data.description,
+    claimType: field.data.appliesTo,
+    slug: slug || field.id,
+  }
+})
+---
+
+<BaseLayout title={''} description={''}>
+  <DocsLayout showSideNav={false}>
+    <h1>Search</h1>
+    <!-- <p>Search for a field in the data dictionary.</p> -->
+
+    <div>
+      <!-- <pagefind-config bundle-path="/data-dictionary/pagefind/"></pagefind-config> -->
+      <pagefind-input></pagefind-input>
+      <pagefind-results></pagefind-results>
+    </div>
+    <!-- <div>
+      <h2>Data Dictionary Fields</h2>
+      <ul>
+        {
+          fields.map((field) => (
+            <li>
+              <a
+                href={$path({
+                  to: '/data-dictionary/[...slug]',
+                  params: { slug: field.slug },
+                })}
+              >
+                {field.claimType}
+              </a>
+              <div>{field.description}</div>
+            </li>
+          ))
+        }
+      </ul>
+    </div> -->
+  </DocsLayout>
+</BaseLayout>
+
+<script>
+  import '@pagefind/component-ui'
+</script>

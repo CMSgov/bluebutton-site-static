@@ -1,0 +1,42 @@
+---
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+import { createRoute } from 'astro-typesafe-routes/create-route'
+import { $path } from 'astro-typesafe-routes/path'
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+
+export const Route = createRoute({
+  routeId: '/data-dictionary/[...slug]',
+})
+
+export type Props = {
+  post: CollectionEntry<'dataDictionary'>
+}
+
+export const getStaticPaths = Route.createGetStaticPaths<Props>(async () => {
+  const fields = await getCollection('dataDictionary')
+  return fields
+    .filter((field) => field.data.suppliedIn.includes('BB2'))
+    .map((field) => ({
+      params: { slug: field.id },
+      props: { post: field },
+    }))
+})
+
+const { post } = Astro.props
+---
+
+<BaseLayout title={post.data.name} description={post.data.description}>
+  <DocsLayout showSideNav={false}>
+    <nav class="mb-4 text-sm">
+      <a href={$path({ to: '/data-dictionary' })} class="text-blue-600 hover:underline">← All Fields</a>
+    </nav>
+
+    <div data-pagefind-body>
+      <pre>
+        {JSON.stringify(post, null, 2)}
+      </pre>
+    </div>
+  </DocsLayout>
+</BaseLayout>

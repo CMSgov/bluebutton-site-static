@@ -1,6 +1,7 @@
 import { codeSystemSchema, structureDefinitionSchema } from '#utils/collections'
 import { loadCodebooks } from '#utils/loaders/load-codebooks'
 import { loadCsvResources } from '#utils/loaders/load-csv-resources'
+import { dataDictionaryLoader } from '#utils/loaders/load-data-dictionary'
 import { glob } from 'astro/loaders'
 import { z } from 'astro/zod'
 import { defineCollection } from 'astro:content'
@@ -123,6 +124,39 @@ const fhirJsonCollection = defineCollection({
   schema: z.discriminatedUnion('resourceType', [structureDefinitionSchema, codeSystemSchema]),
 })
 
+const fhirMappingSchema = z.object({
+  version: z.string(),
+  resource: z.string(),
+  element: z.string(),
+  fhirPath: z.string().optional(),
+  discriminator: z.array(z.string()).optional(),
+  additional: z.array(z.string()).optional(),
+  derived: z.string().optional(),
+  note: z.string().optional(),
+  example: z.string().optional(),
+})
+
+const dataDictionaryCollection = defineCollection({
+  loader: dataDictionaryLoader({
+    localPath: './data-dictionary.json',
+  }),
+  schema: z.object({
+    id: z.number(),
+    name: z.string(),
+    description: z.string(),
+    appliesTo: z.array(z.string()),
+    suppliedIn: z.array(z.string()),
+    bfdTableType: z.string(),
+    bfdColumnName: z.string(),
+    bfdDbType: z.string(),
+    bfdDbSize: z.number().nullable(),
+    bfdJavaFieldName: z.string(),
+    ccwMapping: z.array(z.string()).optional(),
+    cclfMapping: z.array(z.string()).optional(),
+    fhirMapping: z.array(fhirMappingSchema).optional(),
+  }),
+})
+
 export const collections = {
   pages: pageCollection,
   resources: resourcesCollection,
@@ -132,4 +166,5 @@ export const collections = {
   csvVariables: csvVariablesCollection,
   terms: termsCollection,
   fhir: fhirJsonCollection,
+  dataDictionary: dataDictionaryCollection,
 }
