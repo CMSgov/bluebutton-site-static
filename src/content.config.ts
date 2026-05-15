@@ -2,7 +2,8 @@ import { codeSystemSchema, structureDefinitionSchema } from '#utils/collections'
 import { loadCodebooks } from '#utils/loaders/load-codebooks'
 import { loadCsvResources } from '#utils/loaders/load-csv-resources'
 import { glob } from 'astro/loaders'
-import { defineCollection, z } from 'astro:content'
+import { z } from 'astro/zod'
+import { defineCollection } from 'astro:content'
 
 const pageCollection = defineCollection({
   loader: glob({

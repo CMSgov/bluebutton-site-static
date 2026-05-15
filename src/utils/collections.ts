@@ -1,4 +1,5 @@
-import { getCollection, z } from 'astro:content'
+import { z } from 'astro/zod'
+import { getCollection } from 'astro:content'
 
 export async function getDataCollection() {
   return (await getCollection('dataDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
