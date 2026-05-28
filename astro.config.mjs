@@ -4,6 +4,7 @@ import expressiveCode from 'astro-expressive-code'
 import typesafeRoutes from 'astro-typesafe-routes'
 import { defineConfig, envField } from 'astro/config'
 
+import fhirpathGrammar from './src/grammars/fhirpath.tmLanguage.json' with { type: 'json' }
 import { SITE_METADATA } from './src/utils/constants'
 
 // https://astro.build/config
@@ -51,6 +52,10 @@ export default defineConfig({
 
   integrations: [expressiveCode({
     themes: ['github-light'],
+    shiki: {
+      langs: [fhirpathGrammar],
+      langAlias: { fhirpath: 'Fhirpath' },
+    },
     styleOverrides: {
       frames: {
         editorBackground: '#f7f9fa',

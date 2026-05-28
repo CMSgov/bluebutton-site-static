@@ -32,6 +32,7 @@ const d = post.data
 const description = d.description ?? ''
 
 const fhirPath = d.fhirPath ? formatFhirPath(d.fhirPath) : null
+
 ---
 
 <BaseLayout title={d.fieldName} description={description}>
@@ -76,7 +77,7 @@ const fhirPath = d.fhirPath ? formatFhirPath(d.fhirPath) : null
               <div class="tablet:grid-col-12 margin-bottom-2">
                 <dt class="font-sans-md text-bold" data-pagefind-ignore>FHIR Path</dt>
                 <dd class="margin-left-0">
-                  <Code code={fhirPath.formatted} lang="js" />
+                  <Code code={fhirPath} lang="fhirpath" />
                 </dd>
               </div>
             )
@@ -164,7 +165,7 @@ const fhirPath = d.fhirPath ? formatFhirPath(d.fhirPath) : null
           d.example && (
             <section class="margin-y-3">
               <h2 class="font-sans-lg" data-pagefind-ignore>Example</h2>
-              <Code code={d.example} lang="json" />
+              <Code code={d.example} lang="js" />
             </section>
           )
         }

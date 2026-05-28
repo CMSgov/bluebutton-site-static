@@ -1,0 +1,130 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Fhirpath",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#constants"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.fhirpath.existence",
+          "match": "\\b(empty|exists|all|allTrue|anyTrue|allFalse|anyFalse|subsetOf|supersetOf|count|distinct|isDistinct)\\b(\\s*)(\\()"
+        },
+        {
+          "name": "keyword.control.fhirpath.filtering",
+          "match": "\\b(where|select|repeat|ofType)\\b(\\s*)(\\()"
+        },
+        {
+          "name": "keyword.control.fhirpath.subsetting",
+          "match": "\\b(single|first|last|tail|skip|take|intersect|exclude)\\b(\\s*)(\\()"
+        },
+        {
+          "name": "keyword.control.fhirpath.combining",
+          "match": "\\b(iif|toBoolean|convertsToBoolean|toInteger|convertsToInteger|toDate|convertsToDate|toDateTime|convertsToDateTime|toDecimal|convertsToDecimal|toQuantity|convertsToQuantity|toString|convertsToString|toTime|convertsToTime)\\b(\\s*)(\\()"
+        },
+        {
+          "name": "keyword.control.fhirpath.strings",
+          "match": "\\b(indexOf|substring|startsWith|endsWith|contains|upper|lower|replace|matches|replaceMatches|length|toChars|split|join|encode|decode)\\b(\\s*)(\\()"
+        },
+        {
+          "name": "keyword.control.fhirpath.math",
+          "match": "\\b(abs|ceiling|exp|floor|ln|log|power|round|sqrt|truncate)\\b(\\s*)(\\()"
+        },
+        {
+          "name": "keyword.control.fhirpath.treenav",
+          "match": "\\b(children|descendants)\\b(\\s*)(\\()"
+        },
+        {
+          "name": "keyword.control.fhirpath.utility",
+          "match": "\\b(trace|now|timeOfDay|today|not)\\b(\\s*)(\\()"
+        },
+        {
+          "name": "keyword.control.fhirpath.types",
+          "match": "\\b(as|is)\\b(\\s*)(\\()"
+        },
+        {
+          "name": "keyword.control.fhirpath.fhir_keyword",
+          "match": "\\b(as|is|in|contains|and|or|xor|implies)\\b"
+        },
+        {
+          "name": "keyword.control.fhirpath.fhir_keyword.this",
+          "match": "(\\$this)\\b"
+        },
+        {
+          "name": "keyword.control.fhirpath.fhir_keyword.index",
+          "match": "(\\$index)\\b"
+        },
+        {
+          "name": "keyword.control.fhirpath.fhir_keyword.total",
+          "match": "(\\$total)\\b"
+        },
+        {
+          "name": "keyword.control.fhirpath.fhir_keyword.math",
+          "match": "\\b(div|mod)\\b"
+        },
+        {
+          "name": "keyword.control.fhirpath.fhir_function.aggregated",
+          "match": "aggregate"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.single.fhirpath",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.fhirpath",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "variables": {
+      "name": "variable.language",
+      "patterns": [
+        {
+          "name": "variable.language.fhirpath.fhir_variable",
+          "match": "(%\\w+)\\b"
+        },
+        {
+          "name": "variable.language.fhirpath.fhir_variable",
+          "match": "(%\\w+)\\b|(%`)\\b"
+        },
+        {
+          "name": "variable.language.fhirpath.fhir_nav",
+          "match": "\\."
+        }
+      ]
+    },
+    "constants": {
+      "name": "constant.language",
+      "patterns": [
+        {
+          "name": "constant.language.boolean",
+          "match": "\\b(?:true|false)\\b"
+        },
+        {
+          "name": "constant.numeric.hex",
+          "match": "0[xX][0-9a-fA-F]+\\b"
+        },
+        {
+          "name": "constant.numeric.float",
+          "match": "\\b\\d+(?:(?:\\.\\d*)?(?:[eE][+-]?\\d+)?)?\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.fhirpath"
+}

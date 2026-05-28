@@ -1,9 +1,3 @@
-export interface FormattedFhirPath {
-  formatted: string
-  markers: string[]
-  collapseRange: string | null
-}
-
 const INDENT = '  '
 
 function findMatchingClose(s: string, openParenIdx: number): number {
@@ -82,6 +76,37 @@ function splitTopLevelLogical(body: string): Array<{ arg: string, op?: 'and' | '
   return out
 }
 
+function splitTopLevelCommas(body: string): string[] {
+  const out: string[] = []
+  let depth = 0
+  let inStr: string | null = null
+  let last = 0
+  for (let i = 0; i < body.length; i++) {
+    const c = body[i]
+    if (inStr) {
+      if (c === inStr)
+        inStr = null
+      continue
+    }
+    if (c === '\'' || c === '"') {
+      inStr = c
+      continue
+    }
+    if (c === '(') {
+      depth++
+    }
+    else if (c === ')') {
+      depth--
+    }
+    else if (c === ',' && depth === 0) {
+      out.push(body.slice(last, i).trim())
+      last = i + 1
+    }
+  }
+  out.push(body.slice(last).trim())
+  return out
+}
+
 function formatWhereBody(body: string, bodyIndent: string): string {
   const parts = splitTopLevelLogical(body.trim())
   if (parts.length <= 1)
@@ -91,40 +116,18 @@ function formatWhereBody(body: string, bodyIndent: string): string {
     .join(`\n${bodyIndent}`)
 }
 
-function collectMarkers(raw: string): string[] {
-  const markers: string[] = []
-  const seen = new Set<string>()
-  const re = /'([^']+)'/g
-  let m: RegExpExecArray | null
-  while ((m = re.exec(raw)) !== null) {
-    const lit = m[1]
-    if (seen.has(lit))
-      continue
-    seen.add(lit)
-    // URLs get a neutral mark; non-URL literals (codes) get `ins` so they pop visually.
-    if (lit.startsWith('http://') || lit.startsWith('https://')) {
-      markers.push(`mark="${lit}"`)
-    }
-    else {
-      markers.push(`ins="${lit}"`)
-    }
-  }
-  return markers
+function indentBlock(s: string, indent: string): string {
+  return s
+    .split('\n')
+    .map(line => (line.length > 0 ? indent + line : line))
+    .join('\n')
 }
 
-export function formatFhirPath(raw: string): FormattedFhirPath {
-  const markers = collectMarkers(raw)
-
-  if (!raw.includes('.where(')) {
-    return { formatted: raw, markers, collapseRange: null }
-  }
-
+export function formatFhirPath(raw: string): string {
   let out = ''
   let i = 0
   let depth = 0
   let inStr: string | null = null
-  let firstBodyStartLine: number | null = null
-  let firstBodyEndLine: number | null = null
 
   while (i < raw.length) {
     const c = raw[i]
@@ -142,30 +145,30 @@ export function formatFhirPath(raw: string): FormattedFhirPath {
       continue
     }
 
+    if (depth === 0 && raw.startsWith('iif(', i)) {
+      const open = i + 'iif'.length
+      const close = findMatchingClose(raw, open)
+      if (close !== -1) {
+        const body = raw.slice(open + 1, close)
+        const args = splitTopLevelCommas(body)
+        const formattedArgs = args.map(arg => indentBlock(formatFhirPath(arg), INDENT))
+        out += `iif(\n${formattedArgs.join(',\n')}\n)`
+        i = close + 1
+        continue
+      }
+    }
+
     if (depth === 0 && raw.startsWith('.where(', i)) {
       const open = i + '.where'.length
       const close = findMatchingClose(raw, open)
-      if (close === -1) {
-        out += c
-        i++
+      if (close !== -1) {
+        const body = raw.slice(open + 1, close)
+        const bodyIndent = INDENT + INDENT
+        const formattedBody = formatWhereBody(body, bodyIndent)
+        out += `\n${INDENT}.where(\n${bodyIndent}${formattedBody}\n${INDENT})`
+        i = close + 1
         continue
       }
-      const body = raw.slice(open + 1, close)
-      const bodyIndent = INDENT + INDENT
-      const formattedBody = formatWhereBody(body, bodyIndent)
-
-      out += `\n${INDENT}.where(\n${bodyIndent}`
-      const startLine = out.split('\n').length
-      out += formattedBody
-      const endLine = out.split('\n').length
-      out += `\n${INDENT})`
-
-      if (firstBodyStartLine === null) {
-        firstBodyStartLine = startLine
-        firstBodyEndLine = endLine
-      }
-      i = close + 1
-      continue
     }
 
     if (c === '(')
@@ -176,10 +179,5 @@ export function formatFhirPath(raw: string): FormattedFhirPath {
     i++
   }
 
-  const collapseRange
-    = firstBodyStartLine !== null && firstBodyEndLine !== null
-      ? `${firstBodyStartLine}-${firstBodyEndLine}`
-      : null
-
-  return { formatted: out, markers, collapseRange }
+  return out
 }
