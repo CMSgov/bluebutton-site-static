@@ -8,6 +8,7 @@ import type { CollectionEntry } from 'astro:content'
 import { Code } from 'astro-expressive-code/components'
 import IconArrowBack from '@uswds/uswds/img/usa-icons/arrow_back.svg'
 import Icon from '#components/icon.astro'
+import { formatFhirPath } from '#utils/format-fhir-path'
 
 export const Route = createRoute({
   routeId: '/data-dictionary/[...slug]',
@@ -29,6 +30,8 @@ const { post } = Astro.props
 const d = post.data
 
 const description = d.description ?? ''
+
+const fhirPath = d.fhirPath ? formatFhirPath(d.fhirPath) : null
 ---
 
 <BaseLayout title={d.fieldName} description={description}>
@@ -44,97 +47,123 @@ const description = d.description ?? ''
       {
         d.sourceColumn && (
           <div class="usa-prose">
-            <code class="font-mono-md" data-pagefind-meta="sourceColumn">
-              {d.sourceColumn}
-            </code>
+            <code data-pagefind-meta="sourceColumn" data-pagefind-weight="7">{d.sourceColumn}</code>
           </div>
         )
       }
 
       {
         description && (
-          <p class="font-sans-md" data-pagefind-meta="description">
+          <p class="font-sans-md" data-pagefind-meta="description" data-pagefind-weight="3">
             {description}
           </p>
         )
       }
 
       <div class="usa-prose margin-top-5">
-        <h2 class="font-sans-lg">Field Metadata</h2>
+        <h2 class="font-sans-lg" data-pagefind-ignore>Field Metadata</h2>
         <dl class="grid-row grid-gap margin-y-3">
-          {d.fhirResource && (
-            <div class="tablet:grid-col-12 margin-bottom-2">
-              <dt class="font-sans-md text-bold">FHIR Resource</dt>
-              <dd class="margin-left-0">{d.fhirResource}</dd>
-            </div>
-          )}
-          {d.fhirPath && (
-            <div class="tablet:grid-col-12 margin-bottom-2">
-              <dt class="font-sans-md text-bold">FHIR Path</dt>
-              <dd class="margin-left-0">
-                <Code code={d.fhirPath} wrap={true} />
-              </dd>
-            </div>
-          )}
-          {d.coverageType && d.coverageType.length > 0 && (
-            <div class="tablet:grid-col-12 margin-bottom-2">
-              <dt class="font-sans-md text-bold">Coverage / Claim Type</dt>
-              <dd class="margin-left-0">
-                <ul class="usa-list">
-                  {d.coverageType.map((v) => (<li>{v}</li>))}
-                </ul>
-              </dd>
-            </div>
-          )}
-          {d.sourceView && (
-            <div class="tablet:grid-col-12 margin-bottom-2">
-              <dt class="font-sans-md text-bold">Source View</dt>
-              <dd class="margin-left-0">{d.sourceView}</dd>
-            </div>
-          )}
-          {d.sourceColumn && (
-            <div class="tablet:grid-col-12 margin-bottom-2">
-              <dt class="font-sans-md text-bold">Source Column</dt>
-              <dd class="margin-left-0"><code>{d.sourceColumn}</code></dd>
-            </div>
-          )}
-          {d.referenceTable && (
-            <div class="tablet:grid-col-12 margin-bottom-2">
-              <dt class="font-sans-md text-bold">Reference Table</dt>
-              <dd class="margin-left-0">{d.referenceTable}</dd>
-            </div>
-          )}
-          {d.sources && d.sources.length > 0 && (
-            <div class="tablet:grid-col-12 margin-bottom-2">
-              <dt class="font-sans-md text-bold">Sources</dt>
-              <dd class="margin-left-0">
-                <ul class="usa-list">
-                  {d.sources.map((v) => (<li>{v}</li>))}
-                </ul>
-              </dd>
-            </div>
-          )}
-          {d.bfdDerived && (
-            <div class="tablet:grid-col-12 margin-bottom-2">
-              <dt class="font-sans-md text-bold">Derived</dt>
-              <dd class="margin-left-0">{d.bfdDerived}</dd>
-            </div>
-          )}
-          {d.profiles && d.profiles.length > 0 && (
-            <div class="tablet:grid-col-12 margin-bottom-2">
-              <dt class="font-sans-md text-bold">Profiles</dt>
-              <dd class="margin-left-0">
-                <ul class="usa-list">
-                  {d.profiles.map((v) => (<li>{v}</li>))}
-                </ul>
-              </dd>
-            </div>
-          )}
+          {
+            d.fhirResource && (
+              <div class="tablet:grid-col-12 margin-bottom-2">
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>FHIR Resource</dt>
+                <dd class="margin-left-0">{d.fhirResource}</dd>
+              </div>
+            )
+          }
+          {
+            fhirPath && (
+              <div class="tablet:grid-col-12 margin-bottom-2">
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>FHIR Path</dt>
+                <dd class="margin-left-0">
+                  <Code code={fhirPath.formatted} lang="js" />
+                </dd>
+              </div>
+            )
+          }
+          {
+            d.coverageType && d.coverageType.length > 0 && (
+              <div class="tablet:grid-col-12 margin-bottom-2">
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>Coverage / Claim Type</dt>
+                <dd class="margin-left-0">
+                  <ul class="usa-list">
+                    {d.coverageType.map((v) => (
+                      <li>{v}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            )
+          }
+          {
+            d.sourceView && (
+              <div class="tablet:grid-col-12 margin-bottom-2">
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>Source View</dt>
+                <dd class="margin-left-0">
+                  <code>{d.sourceView}</code>
+                </dd>
+              </div>
+            )
+          }
+          {
+            d.sourceColumn && (
+              <div class="tablet:grid-col-12 margin-bottom-2">
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>Source Column</dt>
+                <dd class="margin-left-0">
+                  <code>{d.sourceColumn}</code>
+                </dd>
+              </div>
+            )
+          }
+          {
+            d.referenceTable && (
+              <div class="tablet:grid-col-12 margin-bottom-2">
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>Reference Table</dt>
+                <dd class="margin-left-0">{d.referenceTable}</dd>
+              </div>
+            )
+          }
+          {
+            d.sources && d.sources.length > 0 && (
+              <div class="tablet:grid-col-12 margin-bottom-2">
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>Sources</dt>
+                <dd class="margin-left-0">
+                  <ul class="usa-list">
+                    {d.sources.map((v) => (
+                      <li>{v}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            )
+          }
+          {
+            d.bfdDerived && (
+              <div class="tablet:grid-col-12 margin-bottom-2">
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>Derived</dt>
+                <dd class="margin-left-0">{d.bfdDerived}</dd>
+              </div>
+            )
+          }
+          {
+            d.profiles && d.profiles.length > 0 && (
+              <div class="tablet:grid-col-12 margin-bottom-2">
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>Profiles</dt>
+                <dd class="margin-left-0">
+                  <ul class="usa-list">
+                    {d.profiles.map((v) => (
+                      <li>{v}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            )
+          }
         </dl>
         {
           d.example && (
             <section class="margin-y-3">
-              <h2 class="font-sans-lg">Example</h2>
+              <h2 class="font-sans-lg" data-pagefind-ignore>Example</h2>
               <Code code={d.example} lang="json" />
             </section>
           )
@@ -142,24 +171,24 @@ const description = d.description ?? ''
         {
           d.notes && (
             <section class="margin-y-3">
-              <h2 class="font-sans-lg">Notes</h2>
-              <p>{d.notes}</p>
+              <h2 class="font-sans-lg" data-pagefind-ignore>Notes</h2>
+              <p data-pagefind-weight="2">{d.notes}</p>
             </section>
           )
         }
         {
           ((d.cclfMapping && d.cclfMapping.length > 0) || (d.ccwMapping && d.ccwMapping.length > 0)) && (
             <section class="margin-y-3">
-              <h2 class="font-sans-lg">Mappings</h2>
+              <h2 class="font-sans-lg" data-pagefind-ignore>Mappings</h2>
               <dl>
                 {d.cclfMapping && d.cclfMapping.length > 0 && (
                   <>
-                    <dt class="font-sans-md text-bold">CCLF</dt>
+                    <dt class="font-sans-md text-bold" data-pagefind-ignore>CCLF</dt>
                     <dd class="margin-left-0 margin-bottom-2">
                       <ul class="usa-list">
                         {d.cclfMapping.map((m) => (
                           <li>
-                            <code>{m}</code>
+                            <code data-pagefind-weight="5">{m}</code>
                           </li>
                         ))}
                       </ul>
@@ -168,12 +197,12 @@ const description = d.description ?? ''
                 )}
                 {d.ccwMapping && d.ccwMapping.length > 0 && (
                   <>
-                    <dt class="font-sans-md text-bold">CCW</dt>
+                    <dt class="font-sans-md text-bold" data-pagefind-ignore>CCW</dt>
                     <dd class="margin-left-0">
                       <ul class="usa-list">
                         {d.ccwMapping.map((m) => (
                           <li>
-                            <code>{m}</code>
+                            <code data-pagefind-weight="5">{m}</code>
                           </li>
                         ))}
                       </ul>
