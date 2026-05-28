@@ -31,7 +31,7 @@ const d = post.data
 
 const description = d.description ?? ''
 
-const fhirPath = d.fhirPath ? formatFhirPath(d.fhirPath) : null
+const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
 
 ---
 
