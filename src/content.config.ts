@@ -2,6 +2,7 @@ import { codeSystemSchema, structureDefinitionSchema } from '#utils/collections'
 import { loadCodebooks } from '#utils/loaders/load-codebooks'
 import { loadCsvResources } from '#utils/loaders/load-csv-resources'
 import { dataDictionaryLoader } from '#utils/loaders/load-data-dictionary'
+import { loadDataDictionaryCsv } from '#utils/loaders/load-data-dictionary-csv'
 import { glob } from 'astro/loaders'
 import { z } from 'astro/zod'
 import { defineCollection } from 'astro:content'
@@ -157,6 +158,32 @@ const dataDictionaryCollection = defineCollection({
   }),
 })
 
+const dataDictionaryV3Collection = defineCollection({
+  loader: async () => await loadDataDictionaryCsv({
+    pattern: '**/*.csv',
+    base: './src/content/data-dictionary/',
+  }),
+  schema: z.object({
+    id: z.string(),
+    index: z.number(),
+    fieldName: z.string(),
+    description: z.string().nullable(),
+    fhirResource: z.string().nullable(),
+    coverageType: z.array(z.string()).nullable(),
+    fhirPath: z.string().nullable(),
+    example: z.string().nullable(),
+    notes: z.string().nullable(),
+    sourceView: z.string().nullable(),
+    sourceColumn: z.string().nullable(),
+    bfdDerived: z.string().nullable(),
+    sources: z.array(z.string()).nullable(),
+    referenceTable: z.string().nullable(),
+    cclfMapping: z.array(z.string()).nullable(),
+    ccwMapping: z.array(z.string()).nullable(),
+    profiles: z.array(z.string()).nullable(),
+  }),
+})
+
 export const collections = {
   pages: pageCollection,
   resources: resourcesCollection,
@@ -167,4 +194,5 @@ export const collections = {
   terms: termsCollection,
   fhir: fhirJsonCollection,
   dataDictionary: dataDictionaryCollection,
+  dataDictionaryV3: dataDictionaryV3Collection,
 }

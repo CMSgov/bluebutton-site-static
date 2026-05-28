@@ -5,51 +5,137 @@ import DocsLayout from '#layouts/docs-layout.astro'
 import { $path } from 'astro-typesafe-routes/path'
 import { getCollection } from 'astro:content'
 
-const fields = (await getCollection('dataDictionary')).splice(0, 100).map((field) => {
-  const slug = field.data.bfdColumnName.replace(/_/g, '-')
-  return {
-    id: field.id,
-    name: field.data.name,
-    description: field.data.description,
-    claimType: field.data.appliesTo,
-    slug: slug || field.id,
-  }
-})
+const fields = (await getCollection('dataDictionaryV3'))
+  .sort((a, b) => a.data.fieldName.localeCompare(b.data.fieldName))
+  .slice(0, 10)
+
+const resultTemplate = `
+  <li class="usa-card__container focus-ring-within margin-0 maxw-none">
+    <div class="usa-card__body padding-105">
+      <h3>
+        <a href="{{ url | safeUrl }}" class="stretched-link">
+          {{ meta.title }}
+        </a>
+      </h3>
+      <code>{{ meta.sourceColumn }}</code>
+      <p>{{+ meta.description +}}</p>
+    </div>
+  </li>
+`
+
+const placeholderTemplate = `
+  <li aria-hidden="true">
+    <div class="skeleton"></div>
+  </li>
+  <li aria-hidden="true">
+    <div class="skeleton"></div>
+  </li>
+  <li aria-hidden="true">
+    <div class="skeleton"></div>
+  </li>
+  <li aria-hidden="true">
+    <div class="skeleton"></div>
+  </li>
+  <li aria-hidden="true">
+    <div class="skeleton"></div>
+  </li>
+  <li aria-hidden="true">
+    <div class="skeleton"></div>
+  </li>
+  <li aria-hidden="true">
+    <div class="skeleton"></div>
+  </li>
+`
 ---
 
-<BaseLayout title={''} description={''}>
+<BaseLayout title="Data Dictionary" description="A data dictionary describing the fields in the Blue Button API v3">
   <DocsLayout showSideNav={false}>
-    <h1>Search</h1>
-    <!-- <p>Search for a field in the data dictionary.</p> -->
+    <h1>Data Dictionary</h1>
 
-    <div>
-      <!-- <pagefind-config bundle-path="/data-dictionary/pagefind/"></pagefind-config> -->
+    <div class="margin-top-4">
       <pagefind-input></pagefind-input>
-      <pagefind-results></pagefind-results>
-    </div>
-    <!-- <div>
-      <h2>Data Dictionary Fields</h2>
-      <ul>
+
+      <ul id="default-list" class="padding-0 display-flex flex-column" style="gap: 1rem;">
         {
           fields.map((field) => (
-            <li>
-              <a
-                href={$path({
-                  to: '/data-dictionary/[...slug]',
-                  params: { slug: field.slug },
-                })}
-              >
-                {field.claimType}
-              </a>
-              <div>{field.description}</div>
+            <li class="usa-card__container focus-ring-within margin-0 maxw-none">
+              <div class="usa-card__body padding-105 position-relative">
+                <h3>
+                  <a
+                    href={$path({ to: '/data-dictionary/[...slug]', params: { slug: field.id } })}
+                    class="stretched-link"
+                    style="outline: 0;"
+                  >
+                    {field.data.fieldName}
+                  </a>
+                </h3>
+                <div class="usa-prose margin-top-1">
+                  <code>{field.data.sourceColumn}</code>
+                </div>
+                <p>{field.data.description}</p>
+              </div>
             </li>
           ))
         }
       </ul>
-    </div> -->
+
+      <div id="search-list" hidden>
+        <pagefind-results max-results="10">
+          <script is:inline type="text/pagefind-template" set:html={resultTemplate} />
+          <script is:inline type="text/pagefind-template" data-template="placeholder" set:html={placeholderTemplate} />
+        </pagefind-results>
+      </div>
+    </div>
   </DocsLayout>
 </BaseLayout>
 
 <script>
-  import '@pagefind/component-ui'
+  import { getInstanceManager } from '@pagefind/component-ui'
+
+  const instance = getInstanceManager().getInstance('default')
+  const defaultList = document.getElementById('default-list')!
+  const searchList = document.getElementById('search-list')!
+
+  instance.on('search', (...args) => {
+    const term = String(args[0] ?? '').trim()
+    const searching = term.length > 0
+    defaultList.hidden = searching
+    searchList.hidden = !searching
+  })
 </script>
+
+<style is:global>
+  :root {
+    --pf-input-height: 40px;
+  }
+
+  :is(*, #\#):is(*, #\#):is(*, #\#) .pf-input {
+    border-width: 1px;
+    border-color: #5c5c5c;
+    border-style: solid;
+    border-radius: 0;
+    color: #1b1b1b;
+    display: block;
+    height: 2.5rem;
+    margin-top: 0.5rem;
+    padding: 0 0.5rem 0 2rem;
+    width: 100%;
+  }
+  :is(*, #\#):is(*, #\#):is(*, #\#) .pf-input:focus {
+    outline: 0.25rem solid #00bde3;
+    outline-offset: 0;
+  }
+
+  :is(*, #\#):is(*, #\#):is(*, #\#) .pf-results {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pf-results mark {
+    background-color: #a8f2ff;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+</style>

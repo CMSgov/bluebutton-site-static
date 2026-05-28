@@ -5,38 +5,186 @@ import { createRoute } from 'astro-typesafe-routes/create-route'
 import { $path } from 'astro-typesafe-routes/path'
 import { getCollection } from 'astro:content'
 import type { CollectionEntry } from 'astro:content'
+import { Code } from 'astro-expressive-code/components'
+import IconArrowBack from '@uswds/uswds/img/usa-icons/arrow_back.svg'
+import Icon from '#components/icon.astro'
 
 export const Route = createRoute({
   routeId: '/data-dictionary/[...slug]',
 })
 
 export type Props = {
-  post: CollectionEntry<'dataDictionary'>
+  post: CollectionEntry<'dataDictionaryV3'>
 }
 
 export const getStaticPaths = Route.createGetStaticPaths<Props>(async () => {
-  const fields = await getCollection('dataDictionary')
-  return fields
-    .filter((field) => field.data.suppliedIn.includes('BB2'))
-    .map((field) => ({
-      params: { slug: field.id },
-      props: { post: field },
-    }))
+  const fields = await getCollection('dataDictionaryV3')
+  return fields.map((field) => ({
+    params: { slug: field.id },
+    props: { post: field },
+  }))
 })
 
 const { post } = Astro.props
+const d = post.data
+
+const description = d.description ?? ''
 ---
 
-<BaseLayout title={post.data.name} description={post.data.description}>
+<BaseLayout title={d.fieldName} description={description}>
   <DocsLayout showSideNav={false}>
-    <nav class="mb-4 text-sm">
-      <a href={$path({ to: '/data-dictionary' })} class="text-blue-600 hover:underline">← All Fields</a>
+    <nav class="margin-bottom-2 font-sans-sm">
+      <a href={$path({ to: '/data-dictionary' })}>
+        <Icon icon={IconArrowBack} size={2} /> Back to Search
+      </a>
     </nav>
 
-    <div data-pagefind-body>
-      <pre>
-        {JSON.stringify(post, null, 2)}
-      </pre>
-    </div>
+    <article data-pagefind-body>
+      <h1 class="margin-bottom-1" data-pagefind-meta="title">{d.fieldName}</h1>
+      {
+        d.sourceColumn && (
+          <div class="usa-prose">
+            <code class="font-mono-md" data-pagefind-meta="sourceColumn">
+              {d.sourceColumn}
+            </code>
+          </div>
+        )
+      }
+
+      {
+        description && (
+          <p class="font-sans-md" data-pagefind-meta="description">
+            {description}
+          </p>
+        )
+      }
+
+      <div class="usa-prose margin-top-5">
+        <h2 class="font-sans-lg">Field Metadata</h2>
+        <dl class="grid-row grid-gap margin-y-3">
+          {d.fhirResource && (
+            <div class="tablet:grid-col-12 margin-bottom-2">
+              <dt class="font-sans-md text-bold">FHIR Resource</dt>
+              <dd class="margin-left-0">{d.fhirResource}</dd>
+            </div>
+          )}
+          {d.fhirPath && (
+            <div class="tablet:grid-col-12 margin-bottom-2">
+              <dt class="font-sans-md text-bold">FHIR Path</dt>
+              <dd class="margin-left-0">
+                <Code code={d.fhirPath} wrap={true} />
+              </dd>
+            </div>
+          )}
+          {d.coverageType && d.coverageType.length > 0 && (
+            <div class="tablet:grid-col-12 margin-bottom-2">
+              <dt class="font-sans-md text-bold">Coverage / Claim Type</dt>
+              <dd class="margin-left-0">
+                <ul class="usa-list">
+                  {d.coverageType.map((v) => (<li>{v}</li>))}
+                </ul>
+              </dd>
+            </div>
+          )}
+          {d.sourceView && (
+            <div class="tablet:grid-col-12 margin-bottom-2">
+              <dt class="font-sans-md text-bold">Source View</dt>
+              <dd class="margin-left-0">{d.sourceView}</dd>
+            </div>
+          )}
+          {d.sourceColumn && (
+            <div class="tablet:grid-col-12 margin-bottom-2">
+              <dt class="font-sans-md text-bold">Source Column</dt>
+              <dd class="margin-left-0"><code>{d.sourceColumn}</code></dd>
+            </div>
+          )}
+          {d.referenceTable && (
+            <div class="tablet:grid-col-12 margin-bottom-2">
+              <dt class="font-sans-md text-bold">Reference Table</dt>
+              <dd class="margin-left-0">{d.referenceTable}</dd>
+            </div>
+          )}
+          {d.sources && d.sources.length > 0 && (
+            <div class="tablet:grid-col-12 margin-bottom-2">
+              <dt class="font-sans-md text-bold">Sources</dt>
+              <dd class="margin-left-0">
+                <ul class="usa-list">
+                  {d.sources.map((v) => (<li>{v}</li>))}
+                </ul>
+              </dd>
+            </div>
+          )}
+          {d.bfdDerived && (
+            <div class="tablet:grid-col-12 margin-bottom-2">
+              <dt class="font-sans-md text-bold">Derived</dt>
+              <dd class="margin-left-0">{d.bfdDerived}</dd>
+            </div>
+          )}
+          {d.profiles && d.profiles.length > 0 && (
+            <div class="tablet:grid-col-12 margin-bottom-2">
+              <dt class="font-sans-md text-bold">Profiles</dt>
+              <dd class="margin-left-0">
+                <ul class="usa-list">
+                  {d.profiles.map((v) => (<li>{v}</li>))}
+                </ul>
+              </dd>
+            </div>
+          )}
+        </dl>
+        {
+          d.example && (
+            <section class="margin-y-3">
+              <h2 class="font-sans-lg">Example</h2>
+              <Code code={d.example} lang="json" />
+            </section>
+          )
+        }
+        {
+          d.notes && (
+            <section class="margin-y-3">
+              <h2 class="font-sans-lg">Notes</h2>
+              <p>{d.notes}</p>
+            </section>
+          )
+        }
+        {
+          ((d.cclfMapping && d.cclfMapping.length > 0) || (d.ccwMapping && d.ccwMapping.length > 0)) && (
+            <section class="margin-y-3">
+              <h2 class="font-sans-lg">Mappings</h2>
+              <dl>
+                {d.cclfMapping && d.cclfMapping.length > 0 && (
+                  <>
+                    <dt class="font-sans-md text-bold">CCLF</dt>
+                    <dd class="margin-left-0 margin-bottom-2">
+                      <ul class="usa-list">
+                        {d.cclfMapping.map((m) => (
+                          <li>
+                            <code>{m}</code>
+                          </li>
+                        ))}
+                      </ul>
+                    </dd>
+                  </>
+                )}
+                {d.ccwMapping && d.ccwMapping.length > 0 && (
+                  <>
+                    <dt class="font-sans-md text-bold">CCW</dt>
+                    <dd class="margin-left-0">
+                      <ul class="usa-list">
+                        {d.ccwMapping.map((m) => (
+                          <li>
+                            <code>{m}</code>
+                          </li>
+                        ))}
+                      </ul>
+                    </dd>
+                  </>
+                )}
+              </dl>
+            </section>
+          )
+        }
+      </div>
+    </article>
   </DocsLayout>
 </BaseLayout>
