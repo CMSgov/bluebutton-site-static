@@ -4,6 +4,8 @@ import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 import { $path } from 'astro-typesafe-routes/path'
 import { getCollection } from 'astro:content'
+import Icon from '#components/icon.astro'
+import FileDownload from '@uswds/uswds/img/usa-icons/file_download.svg'
 
 const fields = (await getCollection('dataDictionary'))
   .sort((a, b) => a.data.fieldName.localeCompare(b.data.fieldName))
@@ -52,7 +54,15 @@ const placeholderTemplate = Array(10)
   <DocsLayout showSideNav={false}>
     <h1>Data Dictionary</h1>
 
-    <div class="margin-top-2">
+    <p>Download the full data dictionary as a CSV file for offline use:</p>
+    <p>
+      <a href="/assets/files/v3-data-dictionary-2.247.0.csv" class="usa-button" download
+        >v3 Data Dictionary (2.2247.0) <Icon icon={FileDownload} size={2} /></a
+      >
+    </p>
+
+    <div class="margin-top-5">
+      <h2>Search all fields</h2>
       <pagefind-input></pagefind-input>
       <ul id="default-list" class="padding-0 display-flex flex-column" style="gap: 1rem;">
         {

@@ -80,6 +80,15 @@ const isActive = (path: string) => path === pathname
               </li>
             ))
           }
+          <li class="usa-sidenav__item">
+            <Link
+              to="/data-dictionary"
+              class={isActive($path({ to: '/data-dictionary' })) ? 'usa-current' : null}
+              data-tealium="left-rail"
+            >
+              Data Dictionary
+            </Link>
+          </li>
         </ul>
         <li class="usa-sidenav__item">
           <Link href="https://github.com/CMSgov/bluebutton-web-server" showIcon={false} data-tealium="left-rail">
