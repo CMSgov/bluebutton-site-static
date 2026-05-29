@@ -15,11 +15,11 @@ export const Route = createRoute({
 })
 
 export type Props = {
-  post: CollectionEntry<'dataDictionaryV3'>
+  post: CollectionEntry<'dataDictionary'>
 }
 
 export const getStaticPaths = Route.createGetStaticPaths<Props>(async () => {
-  const fields = await getCollection('dataDictionaryV3')
+  const fields = await getCollection('dataDictionary')
   return fields.map((field) => ({
     params: { slug: field.id },
     props: { post: field },
@@ -32,7 +32,6 @@ const d = post.data
 const description = d.description ?? ''
 
 const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
-
 ---
 
 <BaseLayout title={d.fieldName} description={description}>
@@ -48,7 +47,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
       {
         d.sourceColumn && (
           <div class="usa-prose">
-            <code data-pagefind-meta="sourceColumn" data-pagefind-weight="7">{d.sourceColumn}</code>
+            <code data-pagefind-meta="sourceColumn" data-pagefind-weight="7">
+              {d.sourceColumn}
+            </code>
           </div>
         )
       }
@@ -67,7 +68,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
           {
             d.fhirResource && (
               <div class="tablet:grid-col-12 margin-bottom-2">
-                <dt class="font-sans-md text-bold" data-pagefind-ignore>FHIR Resource</dt>
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                  FHIR Resource
+                </dt>
                 <dd class="margin-left-0">{d.fhirResource}</dd>
               </div>
             )
@@ -75,7 +78,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
           {
             fhirPath && (
               <div class="tablet:grid-col-12 margin-bottom-2">
-                <dt class="font-sans-md text-bold" data-pagefind-ignore>FHIR Path</dt>
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                  FHIR Path
+                </dt>
                 <dd class="margin-left-0">
                   <Code code={fhirPath} lang="fhirpath" />
                 </dd>
@@ -85,7 +90,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
           {
             d.coverageType && d.coverageType.length > 0 && (
               <div class="tablet:grid-col-12 margin-bottom-2">
-                <dt class="font-sans-md text-bold" data-pagefind-ignore>Coverage / Claim Type</dt>
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                  Coverage / Claim Type
+                </dt>
                 <dd class="margin-left-0">
                   <ul class="usa-list">
                     {d.coverageType.map((v) => (
@@ -99,7 +106,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
           {
             d.sourceView && (
               <div class="tablet:grid-col-12 margin-bottom-2">
-                <dt class="font-sans-md text-bold" data-pagefind-ignore>Source View</dt>
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                  Source View
+                </dt>
                 <dd class="margin-left-0">
                   <code>{d.sourceView}</code>
                 </dd>
@@ -109,7 +118,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
           {
             d.sourceColumn && (
               <div class="tablet:grid-col-12 margin-bottom-2">
-                <dt class="font-sans-md text-bold" data-pagefind-ignore>Source Column</dt>
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                  Source Column
+                </dt>
                 <dd class="margin-left-0">
                   <code>{d.sourceColumn}</code>
                 </dd>
@@ -119,7 +130,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
           {
             d.referenceTable && (
               <div class="tablet:grid-col-12 margin-bottom-2">
-                <dt class="font-sans-md text-bold" data-pagefind-ignore>Reference Table</dt>
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                  Reference Table
+                </dt>
                 <dd class="margin-left-0">{d.referenceTable}</dd>
               </div>
             )
@@ -127,7 +140,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
           {
             d.sources && d.sources.length > 0 && (
               <div class="tablet:grid-col-12 margin-bottom-2">
-                <dt class="font-sans-md text-bold" data-pagefind-ignore>Sources</dt>
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                  Sources
+                </dt>
                 <dd class="margin-left-0">
                   <ul class="usa-list">
                     {d.sources.map((v) => (
@@ -141,7 +156,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
           {
             d.bfdDerived && (
               <div class="tablet:grid-col-12 margin-bottom-2">
-                <dt class="font-sans-md text-bold" data-pagefind-ignore>Derived</dt>
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                  Derived
+                </dt>
                 <dd class="margin-left-0">{d.bfdDerived}</dd>
               </div>
             )
@@ -149,7 +166,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
           {
             d.profiles && d.profiles.length > 0 && (
               <div class="tablet:grid-col-12 margin-bottom-2">
-                <dt class="font-sans-md text-bold" data-pagefind-ignore>Profiles</dt>
+                <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                  Profiles
+                </dt>
                 <dd class="margin-left-0">
                   <ul class="usa-list">
                     {d.profiles.map((v) => (
@@ -164,7 +183,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
         {
           d.example && (
             <section class="margin-y-3">
-              <h2 class="font-sans-lg" data-pagefind-ignore>Example</h2>
+              <h2 class="font-sans-lg" data-pagefind-ignore>
+                Example
+              </h2>
               <Code code={d.example} lang="js" />
             </section>
           )
@@ -172,7 +193,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
         {
           d.notes && (
             <section class="margin-y-3">
-              <h2 class="font-sans-lg" data-pagefind-ignore>Notes</h2>
+              <h2 class="font-sans-lg" data-pagefind-ignore>
+                Notes
+              </h2>
               <p data-pagefind-weight="2">{d.notes}</p>
             </section>
           )
@@ -180,11 +203,15 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
         {
           ((d.cclfMapping && d.cclfMapping.length > 0) || (d.ccwMapping && d.ccwMapping.length > 0)) && (
             <section class="margin-y-3">
-              <h2 class="font-sans-lg" data-pagefind-ignore>Mappings</h2>
+              <h2 class="font-sans-lg" data-pagefind-ignore>
+                Mappings
+              </h2>
               <dl>
                 {d.cclfMapping && d.cclfMapping.length > 0 && (
                   <>
-                    <dt class="font-sans-md text-bold" data-pagefind-ignore>CCLF</dt>
+                    <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                      CCLF
+                    </dt>
                     <dd class="margin-left-0 margin-bottom-2">
                       <ul class="usa-list">
                         {d.cclfMapping.map((m) => (
@@ -198,7 +225,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
                 )}
                 {d.ccwMapping && d.ccwMapping.length > 0 && (
                   <>
-                    <dt class="font-sans-md text-bold" data-pagefind-ignore>CCW</dt>
+                    <dt class="font-sans-md text-bold" data-pagefind-ignore>
+                      CCW
+                    </dt>
                     <dd class="margin-left-0">
                       <ul class="usa-list">
                         {d.ccwMapping.map((m) => (

@@ -5,7 +5,7 @@ import DocsLayout from '#layouts/docs-layout.astro'
 import { $path } from 'astro-typesafe-routes/path'
 import { getCollection } from 'astro:content'
 
-const fields = (await getCollection('dataDictionaryV3'))
+const fields = (await getCollection('dataDictionary'))
   .sort((a, b) => a.data.fieldName.localeCompare(b.data.fieldName))
   .slice(0, 10)
 
@@ -104,7 +104,8 @@ const placeholderTemplate = Array(10)
 
   function fillPlaceholder() {
     const container = searchList.querySelector<HTMLElement>('.pf-results')
-    if (container) container.innerHTML = placeholderHtml
+    if (container)
+container.innerHTML = placeholderHtml
   }
 
   instance.on('search', (...args) => {

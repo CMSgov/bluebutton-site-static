@@ -23,25 +23,29 @@ const HEADER_MAP: Record<string, string> = {
   'profiles': 'profiles',
 }
 
-const emptyToNull = (v: string | undefined | null) => (v && v.length > 0 ? v : null)
+const emptyToNull = (v: any) => (v && v.length > 0 ? v : null)
 
-function parsePyList(v: string | undefined | null): string[] | null {
-  if (v == null) return null
+function parsePyList(v: any): any[] | null {
+  if (v == null)
+    return null
   const trimmed = v.trim()
-  if (!trimmed) return null
-  if (!trimmed.startsWith('[') || !trimmed.endsWith(']')) return null
+  if (!trimmed)
+    return null
+  if (!trimmed.startsWith('[') || !trimmed.endsWith(']'))
+    return null
   const inner = trimmed.slice(1, -1).trim()
-  if (!inner) return null
+  if (!inner)
+    return null
   const items = inner
     .split(',')
-    .map(s => s.trim().replace(/^['"]|['"]$/g, '').trim())
-    .filter(s => s.length > 0)
+    .map((s: any) => s.trim().replace(/^['"]|['"]$/g, '').trim())
+    .filter((s: any) => s.length > 0)
   return items.length > 0 ? items : null
 }
 
 const pyList = z.string().optional().transform(parsePyList)
 
-const rowSchema = z.object({
+const csvSchema = z.array(z.object({
   index: z.coerce.number(),
   fieldName: z.string().min(1),
   description: z.string().optional().transform(emptyToNull),
@@ -58,15 +62,13 @@ const rowSchema = z.object({
   cclfMapping: pyList,
   ccwMapping: pyList,
   profiles: pyList,
-})
+}))
 
-const csvSchema = z.array(rowSchema)
-
-function slugify(value: string): string {
+function slugify(value: string) {
   return value.toLowerCase().replace(/_/g, '-')
 }
 
-export async function loadDataDictionaryCsv({ pattern, base }: { pattern: string | string[], base: string }) {
+export async function loadCsvDataDictionary({ pattern, base }: { pattern: string | string[], base: string }) {
   const csvFiles = await tinyglobby(pattern, {
     cwd: base,
     expandDirectories: false,
