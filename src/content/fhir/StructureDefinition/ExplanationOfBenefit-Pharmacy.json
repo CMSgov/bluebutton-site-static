@@ -152,8 +152,8 @@
       {
         "id": "ExplanationOfBenefit-Pharmacy.META_SRC_SK",
         "path": "ExplanationOfBenefit-Pharmacy.META_SRC_SK",
-        "short": "Meta Source SK",
-        "definition": "Meta Source SK",
+        "short": "Source ID",
+        "definition": "Identifies the source system of the ExplanationOfBenefit data.",
         "min": 1,
         "max": "1",
         "type": [
@@ -532,6 +532,97 @@
         "type": [
           {
             "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Pharmacy.CLM_CMS_PROC_DT",
+        "path": "ExplanationOfBenefit-Pharmacy.CLM_CMS_PROC_DT",
+        "short": "Claim Process Date",
+        "definition": "DATE A CLAIM OR PRESCRIPTION DRUG EVENT WAS PROCESSED BY A CMS FRONT END SYSTEM, SUCH AS THE DDPS OPERATIONAL DATA STORE.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Pharmacy.CLM_SBMT_FRMT_CD",
+        "path": "ExplanationOfBenefit-Pharmacy.CLM_SBMT_FRMT_CD",
+        "short": "Claim Submission Format Code",
+        "definition": "A code identifying the format of the claim as submitted.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Pharmacy.CLM_SBMTR_CNTRCT_NUM",
+        "path": "ExplanationOfBenefit-Pharmacy.CLM_SBMTR_CNTRCT_NUM",
+        "short": "Submitter Contract Number",
+        "definition": "The contract number of the plan that submitted the claim.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Pharmacy.CLM_SBMTR_CNTRCT_PBP_NUM",
+        "path": "ExplanationOfBenefit-Pharmacy.CLM_SBMTR_CNTRCT_PBP_NUM",
+        "short": "Submitter PBP Number",
+        "definition": "The Plan Benefit Package (PBP) number of the plan that submitted the claim.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Pharmacy.CLM_ADJSTMT_TYPE_CD",
+        "path": "ExplanationOfBenefit-Pharmacy.CLM_ADJSTMT_TYPE_CD",
+        "short": "Claim Adjustment Type Code",
+        "definition": "A CODE IDENTIFYING THE TYPE OF ADJUSTMENT RECORD REPRESENTED ON A CLAIM OR ENCOUNTER.    REFERENCE TABLE: CLM_ADJSTMT_TYPE_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Pharmacy.CLM_DISP_CD",
+        "path": "ExplanationOfBenefit-Pharmacy.CLM_DISP_CD",
+        "short": "Claim Disposition Code",
+        "definition": "A CODE INDICATING THE DISPOSITION OR OUTCOME OF A PROCESSED CLAIM RECORD.    REFERENCE TABLE: CLM_DISP_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Pharmacy.CLM_IDR_LD_DT",
+        "path": "ExplanationOfBenefit-Pharmacy.CLM_IDR_LD_DT",
+        "short": "Claim IDR Load Date",
+        "definition": "A DATE IDENTIFYING WHEN PART A AND PART B DATA ARE LOADED INTO THE INTEGRATED DATA REPOSITORY (IDR).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
           }
         ]
       },

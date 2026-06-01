@@ -29,6 +29,26 @@
       "display": "No charge or units associated with this revenue center code. (For multiple HCPCS per single revenue center code) For revenue center code 0001, the following MSP override values may be present:"
     },
     {
+      "code": "5",
+      "display": "RHC or CORF psychiatric"
+    },
+    {
+      "code": "A",
+      "display": "voluntary agreement"
+    },
+    {
+      "code": "H",
+      "display": "JMO cell rate (55555)"
+    },
+    {
+      "code": "I",
+      "display": "IRS/SSA/CMS Data Match project (77777)"
+    },
+    {
+      "code": "L",
+      "display": "litigation"
+    },
+    {
       "code": "M",
       "display": "Override code; EGHP (employer group health plan) services involved"
     },
@@ -37,9 +57,17 @@
       "display": "Override code; non-EGHP services involved"
     },
     {
+      "code": "Q",
+      "display": "initial enrollment questionnaire (IEQ 99999)"
+    },
+    {
       "code": "X",
       "display": "Override code: MSP (Medicare is secondary payer) cost avoided"
+    },
+    {
+      "code": "Y",
+      "display": "MSP cost avoided"
     }
   ],
-  "count": 8
+  "count": 15
 }

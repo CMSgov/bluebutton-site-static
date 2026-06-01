@@ -1,0 +1,104 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BFDAuditLog",
+  "url": "http://hl7.org/fhir/StructureDefinition/BFDAuditLog",
+  "name": "BFDAuditLog",
+  "title": "IDR BFDAuditLog Base. Ignore in DD Generation",
+  "status": "draft",
+  "description": "IDR BFDAuditLog Base. Ignore in DD Generation",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "BFDAuditLog",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "BFDAuditLog",
+        "path": "BFDAuditLog",
+        "label": "IDR BFDAuditLog Base. Ignore in DD Generation",
+        "short": "IDR BFDAuditLog Base. Ignore in DD Generation",
+        "definition": "IDR BFDAuditLog Base. Ignore in DD Generation"
+      },
+      {
+        "id": "BFDAuditLog.matchedBeneSk",
+        "path": "BFDAuditLog.matchedBeneSk",
+        "short": "Matched Beneficiary FHIR ID",
+        "definition": "The FHIR ID of the beneficiary that was matched.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "BFDAuditLog.purposeOfEvent",
+        "path": "BFDAuditLog.purposeOfEvent",
+        "short": "Purpose of Event",
+        "definition": "The purpose of the audit event (e.g., PATRQT).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "BFDAuditLog.timeStamp",
+        "path": "BFDAuditLog.timeStamp",
+        "short": "Timestamp",
+        "definition": "The time the audit event occurred.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "BFDAuditLog.clientIp",
+        "path": "BFDAuditLog.clientIp",
+        "short": "Client IP",
+        "definition": "The IP address of the client.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "BFDAuditLog.clientName",
+        "path": "BFDAuditLog.clientName",
+        "short": "Client Name",
+        "definition": "The name of the client application.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "BFDAuditLog.finalDetermination",
+        "path": "BFDAuditLog.finalDetermination",
+        "short": "Final Determination",
+        "definition": "The combination used to determine the unique match.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

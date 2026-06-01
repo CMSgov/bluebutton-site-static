@@ -15,7 +15,19 @@
     {
       "code": "1",
       "display": "Service Not Subject to Deductible"
+    },
+    {
+      "code": "D",
+      "display": "Special Durable Medical Equipment"
+    },
+    {
+      "code": "P",
+      "display": "100% - Durable Medical Equipment"
+    },
+    {
+      "code": "S",
+      "display": "Suppress Deductible, but calculate Coinsurance"
     }
   ],
-  "count": 2
+  "count": 5
 }

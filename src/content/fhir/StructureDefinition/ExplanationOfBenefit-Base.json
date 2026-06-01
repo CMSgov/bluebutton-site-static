@@ -150,6 +150,240 @@
         ]
       },
       {
+        "id": "ExplanationOfBenefit-Base.CLM_ACTV_CARE_FROM_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_ACTV_CARE_FROM_DT",
+        "short": "Claim Active Care From Date",
+        "definition": "THE DATE THE BENEFICIARYS FROM-DATE OF ACTIVE CARE BEGINS.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_DSCHRG_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_DSCHRG_DT",
+        "short": "Beneficiary Discharge Date",
+        "definition": "THE DATE THE BENEFICIARY WAS DISCHARGED FROM THE FACILITY (HOSPITAL, SKILLED NURSING FACILITY, HOME HEALTH AGENCY, OR HOSPICE). [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_MDCR_EXHSTD_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_MDCR_EXHSTD_DT",
+        "short": "Medicare Benefits Exhausted Date",
+        "definition": "THE DATE THE BENEFICIARYS MEDICARE BENEFITS WERE EXHAUSTED. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_SUBMSN_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_SUBMSN_DT",
+        "short": "Claim Submission Date",
+        "definition": "(1) THE DATE THE FISCAL INTERMEDIARY RECEIVED THE INSTITUTIONAL CLAIM FROM THE PROVIDER.[NCH]  (2) THE DATE THE CARRIER RECEIVES THE NON-INSTITUTIONAL CLAIM.[NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_NCH_WKLY_PROC_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_NCH_WKLY_PROC_DT",
+        "short": "Weekly Process Date",
+        "definition": "THE DATE THE WEEKLY NCH DATABASE LOAD PROCESS CYCLE BEGINS, DURING WHICH THE CLAIM RECORDS ARE LOADED INTO THE NEARLINE FILE.  THIS DATE WILL ALWAYS BE A FRIDAY, ALTHOUGH THE CLAIMS WILL ACTUALLY BE APPENDED TO THE DATABASE SUBSEQUENT TO THE DATE. (NCH)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_ACTV_CARE_THRU_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_ACTV_CARE_THRU_DT",
+        "short": "Covered Care Through Date",
+        "definition": "THE DATE ON A CLAIM FOR WHICH THE COVERED LEVEL OF CARE ENDED IN A GENERAL HOSPITAL OR THE ACTIVE CARE ENDED IN A PSYCHIATRIC/TB HOSPITAL.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_NCVRD_FROM_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_NCVRD_FROM_DT",
+        "short": "Noncovered Stay From Date",
+        "definition": "EFFECTIVE WITH NCH VERSION H, THE BEGINNING DATE OF THE BENEFICIARYS NONCOVERED STAY (USED FOR INTERNAL CWFMQA EDITING PURPOSES.)  NOTE:  DURING THE VERSION H CONVERSION THIS FIELD WAS POPULATED WITH DATA THROUGHOUT HISTORY (BACK TO SERVICE YEAR 1991) [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_NCVRD_THRU_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_NCVRD_THRU_DT",
+        "short": "Noncovered Stay Through Date",
+        "definition": "EFFECTIVE WITH NCH  VERSION H, THE ENDING DATE OF THE BENEFICIARYS NONCOVERED STAY (USED FOR INTERNAL CWFMQA EDITING PURPOSES.)  NOTE:  DURING THE NCH VERSION H CONVERSION THIS FIELD WAS POPULATED WITH DATA THROUGHOUT HISTORY (BACK TO SERVICE YEAR 1991). [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_QLFY_STAY_FROM_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_QLFY_STAY_FROM_DT",
+        "short": "Qualified Stay From Date",
+        "definition": "THE BEGINNING DATE OF THE BENEFICIARYS QUALIFYING STAY  USED FOR INTERNAL CWFMQA EDITING PURPOSES). FOR INPATIENT CLAIMS, THE DATE RELATES TO THE PPS PORTION OF THE INLIER FOR WHICH THERE IS NO UTILIZATION TO BENEFITS. FOR SNF CLAIMS, THE DATE RELATES TO A QUALIFYING STAY FROM A HOSPITAL THAT IS AT LEAST TWO DAYS IN A ROW IF THE SOURCE OF ADMISSION IS AN A, OR AT LEAST THREE DAYS IN A ROW IF THE SOURCE OF ADMISSION IS OTHER THAN A. [HRMZ]    NOTE:  DURING THE NCH VERSION H CONVERSION THIS FIELD WAS POPULATED WITH DATA THROUGHOUT HISTORY (BACK TO SERVICE YEAR 1991).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_QLFY_STAY_THRU_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_QLFY_STAY_THRU_DT",
+        "short": "Qualified Stay Through Date",
+        "definition": "THE ENDING DATE OF THE BENEFICIARYS QUALIFYING STAY  USED FOR INTERNAL CWFMQA EDITING PURPOSES.) FOR INPATIENT CLAIMS, THE DATE RELATES TO THE PPS PORTION OF THE INLIER FOR WHICH THERE IS NO UTILIZATION TO BENEFITS. FOR SNF CLAIMS, THE DATE RELATES TO A QUALIFYING STAY FROM A HOSPITAL THAT IS AT LEAST TWO DAYS IN A ROW IF THE SOURCE OF ADMISSION IS AN A, OR AT LEAST THREE DAYS IN A ROW IF THE SOURCE OF ADMISSION IS OTHER THAN A. [HRMZ]    NOTE:  DURING THE NCH VERSION H, CONVERSION THIS FIELD WAS POPULATED WITH DATA THROUGHOUT HISTORY (BACK TO SERVICE YEAR 1991). [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_CMS_PROC_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_CMS_PROC_DT",
+        "short": "Claim Process Date",
+        "definition": "DATE A CLAIM OR PRESCRIPTION DRUG EVENT WAS PROCESSED BY A CMS FRONT END SYSTEM, SUCH AS THE DDPS OPERATIONAL DATA STORE.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_BLOOD_PT_FRNSH_QTY",
+        "path": "ExplanationOfBenefit-Base.CLM_BLOOD_PT_FRNSH_QTY",
+        "short": "Blood Pints Furnished Quantity",
+        "definition": "A QUANTITY INDICATING THE  WHOLE PINTS OF BLOODS FURNISHED TO A BENEFICIARY.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_NCH_PRMRY_PYR_CD",
+        "path": "ExplanationOfBenefit-Base.CLM_NCH_PRMRY_PYR_CD",
+        "short": "The code outlining the primary payer.",
+        "definition": "A CODE IDENTIFYING THE COVERAGE TYPE OF THE PRIMARY PAYER WHEN MEDICARE IS THE SECONDARY PAYER AS DEFINED BY THE COMMON WORKING FILE (CWF).REFERENCE TABLE: CLM_NCH_PRMRY_PYR_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_QUERY_CD",
+        "path": "ExplanationOfBenefit-Base.CLM_QUERY_CD",
+        "short": "Claim Query Code",
+        "definition": "INDICATION OF  THE TYPE OF CLAIM RECORD BEING PROCESSED WITH RESPECT TO PAYMENT (DEBIT/CREDIT INDICATOR - ORIGINAL, FULL, REPLACEMENT; INTERIM/FINAL INDICATOR). [HRMZ]        CODE INDICATING THE TYPE OF CLAIM RECORD BEING PROCESSED WITH RESPECT TO PAYMENT (DEBIT/CREDIT INDICATOR; INTERIM/FINAL INDICATOR). [NCH]",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_IDR_LD_DT",
+        "path": "ExplanationOfBenefit-Base.CLM_IDR_LD_DT",
+        "short": "Claim IDR Load Date",
+        "definition": "A DATE IDENTIFYING WHEN PART A AND PART B DATA ARE LOADED INTO THE INTEGRATED DATA REPOSITORY (IDR).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_CNTRCTR_NUM",
+        "path": "ExplanationOfBenefit-Base.CLM_CNTRCTR_NUM",
+        "short": "FI Number",
+        "definition": "A NUMBER ASSIGNED BY CENTERS FOR MEDICARE AND MEDICAID SERVICES (CMS) IDENTIFYING A MEDICARE ADMINISTRATIVE CONTRACTOR (MAC) AUTHORIZED TO PROCESS MEDICARE CLAIMS.    REFERENCE TABLE: CLM_CNTRCTR_NUM",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_ADJSTMT_TYPE_CD",
+        "path": "ExplanationOfBenefit-Base.CLM_ADJSTMT_TYPE_CD",
+        "short": "Claim Adjustment Type Code",
+        "definition": "A CODE IDENTIFYING THE TYPE OF ADJUSTMENT RECORD REPRESENTED ON A CLAIM OR ENCOUNTER.    REFERENCE TABLE: CLM_ADJSTMT_TYPE_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_DISP_CD",
+        "path": "ExplanationOfBenefit-Base.CLM_DISP_CD",
+        "short": "Claim Disposition Code",
+        "definition": "A CODE INDICATING THE DISPOSITION OR OUTCOME OF A PROCESSED CLAIM RECORD.    REFERENCE TABLE: CLM_DISP_CD",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
         "id": "ExplanationOfBenefit-Base.CLM_EFCTV_DT",
         "path": "ExplanationOfBenefit-Base.CLM_EFCTV_DT",
         "short": "Claim Effective Date",
@@ -732,8 +966,8 @@
       {
         "id": "ExplanationOfBenefit-Base.META_SRC_SK",
         "path": "ExplanationOfBenefit-Base.META_SRC_SK",
-        "short": "Meta Source SK",
-        "definition": "Meta Source SK",
+        "short": "Source ID",
+        "definition": "Identifies the source system of the ExplanationOfBenefit data.",
         "min": 0,
         "max": "1",
         "type": [
@@ -929,6 +1163,19 @@
         "path": "ExplanationOfBenefit-Base.GEO_BLG_SSA_STATE_CD",
         "short": "State FIPS Code",
         "definition": "Identifies the state where the facility providing services is located.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Base.CLM_RLT_COND_SGNTR_SK",
+        "path": "ExplanationOfBenefit-Base.CLM_RLT_COND_SGNTR_SK",
+        "short": "Claim Related Condition Code",
+        "definition": "A RELATED CONDITION THAT HAS WITHIN SOME SET OF CLAIMS.",
         "min": 0,
         "max": "1",
         "type": [

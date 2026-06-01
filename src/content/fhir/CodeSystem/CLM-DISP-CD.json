@@ -9,19 +9,19 @@
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-DISP-CD",
   "concept": [
     {
-      "code": "1",
+      "code": "01",
       "display": "DEBIT ACCEPTED"
     },
     {
-      "code": "2",
+      "code": "02",
       "display": "DEBIT ACCEPTED (AUTOMATIC ADJUSTMENT) APPLICABLE THROUGH 4/4/93"
     },
     {
-      "code": "3",
+      "code": "03",
       "display": "CANCEL ACCEPTED"
     },
     {
-      "code": "4",
+      "code": "04",
       "display": "OUTPATIENT HISTORY ONLY ACCEPTED"
     },
     {

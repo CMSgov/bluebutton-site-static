@@ -57,6 +57,45 @@
             "code": "string"
           }
         ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Professional-Base.CLM_CARR_PMT_DNL_CD",
+        "path": "ExplanationOfBenefit-Professional-Base.CLM_CARR_PMT_DNL_CD",
+        "short": "Claim Payment Denial Code",
+        "definition": "REASONS FOR DENYING PAYMENT TO CARRIERS.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Professional-Base.CLM_MDCR_PRFNL_PRVDR_ASGNMT_SW",
+        "path": "ExplanationOfBenefit-Professional-Base.CLM_MDCR_PRFNL_PRVDR_ASGNMT_SW",
+        "short": "Provider Assignement Indicator",
+        "definition": "A SWITCH INDICATING WHETHER OR NOT THE PROVIDER ACCEPTS ASSIGNMENT FOR THE NONINSTITUTIONAL CLAIM. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Professional-Base.CLM_CLNCL_TRIL_NUM",
+        "path": "ExplanationOfBenefit-Professional-Base.CLM_CLNCL_TRIL_NUM",
+        "short": "Clinical Trial Number",
+        "definition": "EFFECTIVE SEPTEMBER 1, 2008 WITH THE IMPLEMENTATION OF CR#3, THE NUMBER USED TO IDENTIFY ALL ITEMS AND SERVICES PROVIDED TO A BENEFICIARY DURING THEIR PARTICIPATION IN A CLINICAL TRIAL. (FROM NCH CLAIM CLINICAL TRIAL NUMBER)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
       }
     ]
   }
