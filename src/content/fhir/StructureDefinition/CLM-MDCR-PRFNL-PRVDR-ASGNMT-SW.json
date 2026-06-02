@@ -3,7 +3,7 @@
   "id": "CLM-MDCR-PRFNL-PRVDR-ASGNMT-SW",
   "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-MDCR-PRFNL-PRVDR-ASGNMT-SW",
   "name": "CLM_MDCR_PRFNL_PRVDR_ASGNMT_SW",
-  "title": "Provider Assignement Indicator",
+  "title": "Provider Assignment Indicator",
   "status": "draft",
   "description": "Deprecated 2026-01-14. Variable indicates whether or not the provider accepts assignment for the noninstitutional claim.",
   "fhirVersion": "4.0.1",
@@ -23,7 +23,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Provider Assignement Indicator",
+        "short": "Provider Assignment Indicator",
         "definition": "Deprecated 2026-01-14. Variable indicates whether or not the provider accepts assignment for the noninstitutional claim."
       },
       {

@@ -1500,6 +1500,214 @@
             "code": "string"
           }
         ]
+      },
+      {
+        "id": "LineItemComponent.CLM_BRND_GNRC_CD",
+        "path": "LineItemComponent.CLM_BRND_GNRC_CD",
+        "short": "Brand/Generic Code",
+        "definition": "Code indicating if a drug is brand or generic.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_CMPND_CD",
+        "path": "LineItemComponent.CLM_CMPND_CD",
+        "short": "Compound Code",
+        "definition": "Code indicating if a drug is a compound.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_CTSTRPHC_CVRG_IND_CD",
+        "path": "LineItemComponent.CLM_CTSTRPHC_CVRG_IND_CD",
+        "short": "Catastrophic Coverage Indicator Code",
+        "definition": "Code indicating if the claim is catastrophic coverage.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_DAW_PROD_SLCTN_CD",
+        "path": "LineItemComponent.CLM_DAW_PROD_SLCTN_CD",
+        "short": "DAW Product Selection Code",
+        "definition": "Dispense As Written (DAW) / Product Selection Code.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_DRUG_CVRG_STUS_CD",
+        "path": "LineItemComponent.CLM_DRUG_CVRG_STUS_CD",
+        "short": "Drug Coverage Status Code",
+        "definition": "Code indicating the drug coverage status.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_DSPNSNG_STUS_CD",
+        "path": "LineItemComponent.CLM_DSPNSNG_STUS_CD",
+        "short": "Dispensing Status Code",
+        "definition": "Code indicating the dispensing status.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_LINE_AUTHRZD_FILL_NUM",
+        "path": "LineItemComponent.CLM_LINE_AUTHRZD_FILL_NUM",
+        "short": "Authorized Fill Number",
+        "definition": "The number of refills authorized for the prescription.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_LINE_DAYS_SUPLY_QTY",
+        "path": "LineItemComponent.CLM_LINE_DAYS_SUPLY_QTY",
+        "short": "Days Supply Quantity",
+        "definition": "The number of days supply for the prescription.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_LINE_RX_FILL_NUM",
+        "path": "LineItemComponent.CLM_LINE_RX_FILL_NUM",
+        "short": "RX Fill Number",
+        "definition": "The fill number for the prescription.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_LINE_RX_ORGN_CD",
+        "path": "LineItemComponent.CLM_LINE_RX_ORGN_CD",
+        "short": "RX Origin Code",
+        "definition": "Code indicating the origin of the prescription.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_LTC_DSPNSNG_MTHD_CD",
+        "path": "LineItemComponent.CLM_LTC_DSPNSNG_MTHD_CD",
+        "short": "LTC Dispensing Method Code",
+        "definition": "Long Term Care (LTC) dispensing method code.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_PHRMCY_SRVC_TYPE_CD",
+        "path": "LineItemComponent.CLM_PHRMCY_SRVC_TYPE_CD",
+        "short": "Pharmacy Service Type Code",
+        "definition": "Code indicating the type of pharmacy service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_PTNT_RSDNC_CD",
+        "path": "LineItemComponent.CLM_PTNT_RSDNC_CD",
+        "short": "Patient Residence Code",
+        "definition": "Code indicating the patient's residence at the time of service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_LINE_HCT_HGB_RSLT_NUM",
+        "path": "LineItemComponent.CLM_LINE_HCT_HGB_RSLT_NUM",
+        "short": "Hematocrit/Hemoglobin Result Number",
+        "definition": "The hematocrit or hemoglobin result value for the claim line.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_LINE_HCT_HGB_TYPE_CD",
+        "path": "LineItemComponent.CLM_LINE_HCT_HGB_TYPE_CD",
+        "short": "Hematocrit/Hemoglobin Type Code",
+        "definition": "Code indicating if the result is for hematocrit or hemoglobin.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_LINE_CARR_CLNCL_LAB_NUM",
+        "path": "LineItemComponent.CLM_LINE_CARR_CLNCL_LAB_NUM",
+        "short": "Carrier Clinical Lab Number",
+        "definition": "The clinical laboratory identifier for the carrier claim line.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
       }
     ]
   }

@@ -473,6 +473,162 @@
             "code": "string"
           }
         ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.DGNS_DRG_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.DGNS_DRG_CD",
+        "short": "Claim Diagnosis Related Group Code",
+        "definition": "ON AN INSTITUTIONAL CLAIM, THE CODE THAT IDENTIFIES THE DIAGNOSIS RELATED GROUP TO WHICH A BENEFICIARY STAY IS CLASSIFIED FOR PAYMENT PURPOSES. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.CLM_ADMSN_SRC_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.CLM_ADMSN_SRC_CD",
+        "short": "Source Admission Code",
+        "definition": "THE CODE INDICATING THE MEANS BY WHICH THE BENEFICIARY WAS ADMITTED TO THE INPATIENT HEALTH CARE FACILITY OR SNF IF THE TYPE OF ADMISSION IS (1) EMERGENCY, (2) URGENT, OR (3) ELECTIVE. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.BENE_PTNT_STUS_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.BENE_PTNT_STUS_CD",
+        "short": "Patient Discharge Status Code",
+        "definition": "THE CODE USED TO IDENTIFY THE STATUS OF THE PATIENT AS OF THE CLAIM THROUGH DATE [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.CLM_ADMSN_TYPE_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.CLM_ADMSN_TYPE_CD",
+        "short": "Claim Admission Type Code",
+        "definition": "THE CODE INDICATING THE TYPE AND PRIORITY OF AN INPATIENT ADMISSION ASSOCIATED WITH THE SERVICE ON AN INTERMEDIARY SUBMITTED CLAIM. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.CLM_MDCR_INSTNL_MCO_PD_SW",
+        "path": "ExplanationOfBenefit-Institutional-Base.CLM_MDCR_INSTNL_MCO_PD_SW",
+        "short": "MCO Paid Switch",
+        "definition": "A SWITCH INDICATING WHETHER OR NOT A MANAGED CARE ORGANIZATION (MCO) HAS PAID THE PROVIDER FOR AN INSTITUTIONAL CLAIM. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.CLM_MDCR_NCH_PTNT_STUS_IND_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.CLM_MDCR_NCH_PTNT_STUS_IND_CD",
+        "short": "Patient Status Code",
+        "definition": "EFFECTIVE WITH NCH VERSION H, THE CODE ON AN INPATIENT/SNF AND HOSPICE CLAIM, INDICATING WHETHER THE BENEFICIARY WAS DISCHARGED, DIED OR STILL A PATIENT (USED FOR INTERNAL CWFMQA EDITING PURPOSES.)  NOTE:  DURING THE NCH VERSION H CONVERSION THIS FIELD WAS POPULATED THROUGHOUT HISTORY (BACK TO SERVICE YEAR 1991). [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.CLM_PPS_IND_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.CLM_PPS_IND_CD",
+        "short": "Claim PPS Indicator Code",
+        "definition": "EFFECTIVE WITH NCH VERSION H, THE CODE INDICATING WHETHER OR NOT THE (1) CLAIM IS PPS AND/OR (2) THE BENEFICIARY IS A DEEMED INSURED MEDICARE QUALIFIED GOVERNMENT EMPLOYEE (MQGE).  NOTE:  BEGINNING WITH NCH WEEKLY PROCESS DATE 10/3/97 THROUGH 5/29/98, THIS FIELD WAS POPULATED WITH ONLY THE PPS INDICATOR.  BEGINNING WITH NCH WEEKLY PROCESS DATE 6/5/98, THIS FIELD WAS ADDITIONALLY POPULATED WITH THE DEEMED MQGE INDICATOR. CLAIMS PROCESSED PRIOR TO 10/3/97 WILL CONTAIN SPACES. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.CLM_HHA_LUP_IND_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.CLM_HHA_LUP_IND_CD",
+        "short": "Claim LUPA Indicator Code",
+        "definition": "EFFECTIVE WITH NCH VERSION I, THE CODE USED TO IDENTIFY THOSE HOME HEALTH PPS CLAIMS THAT HAVE 4 VISITS OR LESS IN A 60-DAY EPISODE. IF AN HHA PROVIDES 4 VISITS OR LESS, THEY WILL BE REIMBURSED BASED ON A NATIONAL STANDARDIZED PER VISIT RATE INSTEAD OF HHRGS.    NOTE:  BEGINNING 10/1/00, THIS FIELD WILL BE POPULATED WITH DATA.  CLAIMS PROCESSED PRIOR TO 10/1/00 WILL CONTAIN SPACES. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.CLM_HHA_RFRL_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.CLM_HHA_RFRL_CD",
+        "short": "Claim Referral Code",
+        "definition": "EFFECTIVE WITH NCH VERSION I, THE CODE USED TO IDENTIFY THE MEANS BY WHICH THE BENEFICIARY WAS REFERRED FOR HOME HEALTH SERVICES.    NOTE:  BEGINNING 10/1/00, THIS FIELD WILL BE POPULATED WITH DATA.  CLAIMS PROCESSED PRIOR TO 10/1/00 WILL CONTAIN SPACES IN THIS FIELD. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.CLM_MDCR_NPMT_RSN_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.CLM_MDCR_NPMT_RSN_CD",
+        "short": "Claim Non Payment Reason Code",
+        "definition": "THE REASON THAT NO MEDICARE PAYMENT IS MADE FOR SERVICES ON AN INSTITUTIONAL CLAIM.  NOTE:  EFFECTIVE WITH NCH VERSION I, THIS FIELD WAS PUT ON ALL INSTITUTIONAL CLAIM TYPES.  NOTE1:  THIS FIELD WAS PUT ON ALL INSTITUTIONAL CLAIM TYPES BUT DATA DID NOT START COMING IN ON OP/HHA/HOSPICE UNTIL 4/1/02.  PRIOR TO 4/1/02, DATA ONLY CAME IN INPATIENT/SNF CLAIMS.  NOTE2:  EFFECTIVE 4/1/02, THIS FIELD WAS ALSO EXPANDED TO TWO BYTES TO ACCOMMODATE NEW VALUES. THE NCH NEARLINE FILE DID NOT EXPAND THE CURRENT 1-BYTE FIELD BUT INSTITUTED A CROSSWALK OF THE 2-BYTE FIELD TO THE 1-BYTE CHARACTER VALUE. SEE TABLE OF CODE FOR THE CROSSWALK. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.CLM_FI_ACTN_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.CLM_FI_ACTN_CD",
+        "short": "FI Claim Action Code",
+        "definition": "THE TYPE OF ACTION REQUESTED BY THE INTERMEDIARY TO BE TAKEN ON AN INSTITUTIONAL CLAIM.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-Institutional-Base.CLM_OP_SRVC_TYPE_CD",
+        "path": "ExplanationOfBenefit-Institutional-Base.CLM_OP_SRVC_TYPE_CD",
+        "short": "Claim Outpatient Service Type Code",
+        "definition": "CODE INDICATING TYPE AND PRIORITY OF OUTPATIENT  SERVICE. [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
       }
     ]
   }

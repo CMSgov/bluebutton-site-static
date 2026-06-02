@@ -165,7 +165,7 @@
     },
     {
       "code": "CLM_MDCR_PRFNL_PRVDR_ASGNMT_SW",
-      "display": "Provider Assignement Indicator",
+      "display": "Provider Assignment Indicator",
       "definition": "Variable indicates whether or not the provider accepts assignment for the noninstitutional claim."
     },
     {

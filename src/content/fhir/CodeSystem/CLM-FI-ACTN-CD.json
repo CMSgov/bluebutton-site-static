@@ -13,13 +13,37 @@
       "display": "Original debit action (always a 1 for all regular bills)"
     },
     {
+      "code": "2",
+      "display": "Cancel by credit adjustment"
+    },
+    {
+      "code": "3",
+      "display": "Secondary debit adjustment"
+    },
+    {
+      "code": "4",
+      "display": "Cancel only adjustment"
+    },
+    {
       "code": "5",
       "display": "Force action code 3 (secondary debit adjustment)"
     },
     {
+      "code": "6",
+      "display": "Force action code 2"
+    },
+    {
+      "code": "7",
+      "display": "Outpatient history only"
+    },
+    {
       "code": "8",
       "display": "Benefits refused"
+    },
+    {
+      "code": "9",
+      "display": "Payment requested"
     }
   ],
-  "count": 3
+  "count": 9
 }

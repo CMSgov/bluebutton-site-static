@@ -9,6 +9,10 @@
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-PTNT-STUS-CD",
   "concept": [
     {
+      "code": "00",
+      "display": "UNKNOWN"
+    },
+    {
       "code": "01",
       "display": "DISCHARGED TO HOME OR SELF CARE (ROUTINE DISCHARGE)"
     },
@@ -409,5 +413,5 @@
       "display": "NO DESCRIPTION AVAILABLE"
     }
   ],
-  "count": 100
+  "count": 101
 }

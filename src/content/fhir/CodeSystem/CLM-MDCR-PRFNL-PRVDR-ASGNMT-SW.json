@@ -9,6 +9,22 @@
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-MDCR-PRFNL-PRVDR-ASGNMT-SW",
   "concept": [
     {
+      "code": "A",
+      "display": "Assigned Claim"
+    },
+    {
+      "code": "B",
+      "display": "Clinical Lab Split"
+    },
+    {
+      "code": "G",
+      "display": "Group"
+    },
+    {
+      "code": "H",
+      "display": "HBP Claim"
+    },
+    {
       "code": "L",
       "display": "Assigned Claim"
     },
@@ -17,5 +33,5 @@
       "display": "Non-assigned claim"
     }
   ],
-  "count": 2
+  "count": 6
 }

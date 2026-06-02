@@ -9,39 +9,43 @@
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-PRCNG-LCLTY-CD",
   "concept": [
     {
-      "code": "1",
+      "code": "00",
+      "display": "UNKNOWN"
+    },
+    {
+      "code": "01",
       "display": "ALABAMA"
     },
     {
-      "code": "2",
+      "code": "02",
       "display": "ALASKA"
     },
     {
-      "code": "3",
+      "code": "03",
       "display": "ARIZONA"
     },
     {
-      "code": "4",
+      "code": "04",
       "display": "ARKANSAS"
     },
     {
-      "code": "5",
+      "code": "05",
       "display": "ANAHEIM/SANTA ANA, CA"
     },
     {
-      "code": "6",
+      "code": "06",
       "display": "LOS ANGELES, CA"
     },
     {
-      "code": "7",
+      "code": "07",
       "display": "MARIN/NAPA/SOLANO, CA"
     },
     {
-      "code": "8",
+      "code": "08",
       "display": "OAKLAND/BERKELEY, CA"
     },
     {
-      "code": "9",
+      "code": "09",
       "display": "REST OF CALIFORNIA"
     },
     {
@@ -361,5 +365,5 @@
       "display": "WISCONSIN 89 WYOMING"
     }
   ],
-  "count": 88
+  "count": 89
 }
