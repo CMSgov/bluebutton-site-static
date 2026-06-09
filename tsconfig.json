@@ -18,6 +18,8 @@
     },
     "allowJs": true,
     "strictNullChecks": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"

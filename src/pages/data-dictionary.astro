@@ -1,53 +1,21 @@
 ---
-import '@pagefind/component-ui/css'
 import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 import { $path } from 'astro-typesafe-routes/path'
 import { getCollection } from 'astro:content'
 import Icon from '#components/icon.astro'
+import DataDictionarySearch from '#components/data-dictionary-search'
 import FileDownload from '@uswds/uswds/img/usa-icons/file_download.svg'
 
-const fields = (await getCollection('dataDictionary'))
+const defaultFields = (await getCollection('dataDictionary'))
   .sort((a, b) => a.data.fieldName.localeCompare(b.data.fieldName))
   .slice(0, 10)
-
-const resultTemplate = `
-  <li class="usa-card__container focus-ring-within margin-0 maxw-none" role="group">
-    <div class="usa-card__body padding-105">
-      <h3>
-        <a
-          href="{{ url | safeUrl }}"
-          id="{{ aria.result_id }}"
-          role="option"
-          aria-selected="false"
-          class="stretched-link"
-          style="outline: 0;"
-        >
-          {{ meta.title }}
-        </a>
-      </h3>
-      <div class="usa-prose margin-top-1">
-        <code>{{ meta.sourceColumn }}</code>
-      </div>
-      <p>{{+ excerpt +}}</p>
-    </div>
-  </li>
-`
-
-const placeholderTemplate = Array(10)
-  .fill(
-    `<li class="usa-card__container focus-ring-within margin-0 maxw-none">
-  <div class="usa-card__body padding-105 position-relative">
-    <div class="height-4 width-mobile bg-primary-lighter opacity-50"></div>
-    <div class="margin-top-2">
-      <div class="height-2 width-tablet bg-primary-lighter opacity-50 margin-top-1"></div>
-      <div class="height-2 width-tablet bg-primary-lighter opacity-50 margin-top-1"></div>
-      <div class="height-2 width-mobile-lg bg-primary-lighter opacity-50 margin-top-1"></div>
-    </div>
-  </div>
-</li>`,
-  )
-  .join('')
+  .map((field) => ({
+    url: $path({ to: '/data-dictionary/[...slug]', params: { slug: field.id } }),
+    fieldName: field.data.fieldName,
+    sourceColumn: field.data.sourceColumn ?? null,
+    description: field.data.description ?? null,
+  }))
 ---
 
 <BaseLayout
@@ -64,85 +32,15 @@ const placeholderTemplate = Array(10)
       >
     </p>
 
-    <div class="margin-top-5">
+    <div class="margin-top-5" id="data-dictionary-search">
       <h2>Search all fields</h2>
-      <pagefind-input></pagefind-input>
-      <ul id="default-list" class="padding-0 display-flex flex-column" style="gap: 1rem;">
-        {
-          fields.map((field) => (
-            <li class="usa-card__container focus-ring-within margin-0 maxw-none">
-              <div class="usa-card__body padding-105 position-relative">
-                <h3>
-                  <a
-                    href={$path({ to: '/data-dictionary/[...slug]', params: { slug: field.id } })}
-                    class="stretched-link"
-                    style="outline: 0;"
-                  >
-                    {field.data.fieldName}
-                  </a>
-                </h3>
-                {field.data.sourceColumn && (
-                  <div class="usa-prose margin-top-1">
-                    <code>{field.data.sourceColumn}</code>
-                  </div>
-                )}
-                <p>{field.data.description}</p>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
-
-      <div id="search-list" hidden>
-        <pagefind-results max-results="10">
-          <script is:inline type="text/pagefind-template" set:html={resultTemplate} />
-          <script is:inline type="text/pagefind-template" data-template="placeholder" set:html={placeholderTemplate} />
-        </pagefind-results>
-      </div>
+      <DataDictionarySearch defaultFields={defaultFields} client:load />
     </div>
   </DocsLayout>
 </BaseLayout>
 
-<script>
-  import '#utils/data-dictionary-search'
-</script>
-
 <style is:global>
-  :root {
-    --pf-input-height: 40px;
-  }
-
-  :is(*, #\#):is(*, #\#):is(*, #\#) .pf-input {
-    border-width: 1px;
-    border-color: #5c5c5c;
-    border-style: solid;
-    border-radius: 0;
-    color: #1b1b1b;
-    display: block;
-    height: 2.5rem;
-    margin-top: 0.5rem;
-    padding: 0 0.5rem 0 2rem;
-    width: 100%;
-  }
-  :is(*, #\#):is(*, #\#):is(*, #\#) .pf-input:focus {
-    outline: 0.25rem solid #00bde3;
-    outline-offset: 0;
-  }
-
-  :is(*, #\#):is(*, #\#):is(*, #\#) .pf-results {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .pf-results mark {
+  #data-dictionary-search mark {
     background-color: #a8f2ff;
-  }
-
-  .pf-results .usa-prose:has(code:empty) {
-    display: none;
-  }
-
-  [hidden] {
-    display: none !important;
   }
 </style>

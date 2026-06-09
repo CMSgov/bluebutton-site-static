@@ -1,4 +1,5 @@
 import mdx from '@astrojs/mdx'
+import preact from '@astrojs/preact'
 import sitemap from '@astrojs/sitemap'
 import expressiveCode from 'astro-expressive-code'
 import typesafeRoutes from 'astro-typesafe-routes'
@@ -67,7 +68,7 @@ export default defineConfig({
       codeFontSize: '1rem',
     },
 
-  }), mdx(), sitemap(), typesafeRoutes()],
+  }), mdx(), sitemap(), typesafeRoutes(), preact()],
 
   redirects: {
     '/developers': '/api-documentation/',
