@@ -41,24 +41,30 @@ const title = post.collection === 'codebooks' ? `Variable: ${post.data.title}` :
             <p>{post.data.comment || 'n/a'}</p>
 
             <h2>Values</h2>
-            {post.data.values && post.data.values.length > 0 ? (
+            {post.data.valuesets && post.data.valuesets.length > 0 ? (
               <>
                 <p>This variable is coded, and will contain one of the following values.</p>
-                <table>
-                  <caption>Values for</caption>
-                  <thead>
-                    <th>Value</th>
-                    <th>Description</th>
-                  </thead>
-                  <tbody>
-                    {post.data.values.map((val) => (
-                      <tr>
-                        <td>{val.code}</td>
-                        <td>{val.text}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                {post.data.valuesets.filter(valueset => valueset.values && valueset.values.length > 0).map((valueset) => (
+                  valueset.values && valueset.values.length > 0 ? (
+                    <>
+                      <table>
+                        <caption>{valueset.description || 'Values for'}</caption>
+                        <thead>
+                          <th>Value</th>
+                          <th>Description</th>
+                        </thead>
+                        <tbody>
+                          {valueset.values.map((val) => (
+                            <tr>
+                              <td>{val.code}</td>
+                              <td>{val.text}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </>
+                  ) : null
+                ))}
               </>
             ) : (
               <p>n/a</p>
