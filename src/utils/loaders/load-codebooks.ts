@@ -69,7 +69,7 @@ export async function loadCodebooks({ pattern, base }: { pattern: string | [stri
         valueFormat: val['@_valueFormat'],
         description: val.description.p.join(' '),
         comment: val.comment?.p.join(' '),
-        valuesets: val.valueGroups?.valueGroup.map(vg => ({
+        valuegroups: val.valueGroups?.valueGroup.map(vg => ({
           description: vg.description?.p.join(' '),
           values: vg.value.map(v => ({
             code: v['@_code'],
