@@ -143,7 +143,7 @@ const dataDictionaryCollection = defineCollection({
     sourceColumn: z.string().nullable(),
     bfdDerived: z.string().nullable(),
     sources: z.array(z.string()).nullable(),
-    referenceTable: z.string().nullable(),
+    referenceTable: z.url().nullable(),
     cclfMapping: z.array(z.string()).nullable(),
     ccwMapping: z.array(z.string()).nullable(),
     profiles: z.array(z.string()).nullable(),

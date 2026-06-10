@@ -18,7 +18,7 @@ export async function getTermsCollection() {
 export const structureDefinitionSchema = z.object({
   resourceType: z.literal('StructureDefinition'),
   id: z.string(),
-  url: z.string().url(),
+  url: z.url(),
   name: z.string(),
   title: z.string().optional(),
   status: z.string(),
@@ -40,11 +40,11 @@ export const structureDefinitionSchema = z.object({
       short: z.string().optional(),
       definition: z.string().optional(),
       max: z.string().optional(),
-      fixedUri: z.string().url().optional(),
+      fixedUri: z.url().optional(),
       type: z.array(z.object({
         code: z.string(),
       })).optional(),
-      patternUri: z.string().url().optional(),
+      patternUri: z.url().optional(),
     })),
   }),
 })
@@ -57,7 +57,7 @@ export const codeSystemSchema = z.object({
   id: z.string(),
   title: z.string(),
   description: z.string(),
-  url: z.string().url(),
+  url: z.url(),
   concept: z.array(z.object({
     code: z.string(),
     display: z.string().optional(),
