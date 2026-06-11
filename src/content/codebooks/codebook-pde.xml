@@ -677,9 +677,6 @@
         </description>
         <valueGroups>
             <valueGroup>
-                <description>
-                    <p>Null</p>
-                </description>
                 <value code="1-4">The maximum step on the plan's formulary associated with the drug on the PDE.</value>
             </valueGroup>
         </valueGroups>
@@ -753,9 +750,6 @@
         </description>
         <valueGroups>
             <valueGroup>
-                <description>
-                    <p>Null</p>
-                </description>
                 <value code="1-6">The tier on the plan's formulary associated with the drug on the PDE (Note: if the plan is not required to submit a formulary then TIER_ID is assigned a value of '1')</value>
             </valueGroup>
         </valueGroups>

@@ -2888,7 +2888,12 @@
                 <value code="C">Readmission to Same Home Health Agency – The patient was readmitted to this home health agency within the same home health episode period. (Discontinued July 1, 2010)</value>
                 <value code="D">Transfer from hospital inpatient in the same facility resulting in a separate claim to the payer – The patient was admitted to this facility as a transfer from hospital inpatient within this facility resulting in a separate claim to the payer.</value>
                 <value code="E">Transfer from Ambulatory Surgical Center</value>
-                <value code="F">Transfer from hospice and is under a hospice plan of care or enrolled in hospice program For Newborn Type of Admission</value>
+                <value code="F">Transfer from hospice and is under a hospice plan of care or enrolled in hospice program</value>
+            </valueGroup>
+            <valueGroup>
+                <description>
+                    <p>For Newborn Type of Admission:</p>
+                </description>
                 <value code="1">Normal delivery – A baby delivered without complications.</value>
                 <value code="2">Premature delivery – A baby delivered with time and/or weight factors qualifying it for premature status.</value>
                 <value code="3">Sick baby – A baby delivered with medical complications, other than those relating to premature status.</value>
@@ -2920,14 +2925,24 @@
                 <value code="5">Intermediate care - level I</value>
                 <value code="6">Intermediate care - level II</value>
                 <value code="7">Subacute Inpatient (revenue code 019X required) (formerly Intermediate care -level III)</value>
-                <value code="8">Swing bed For facility type code 7 (clinics):</value>
+                <value code="8">Swing bed</value>
+            </valueGroup>
+            <valueGroup>
+                <description>
+                    <p>For facility type code 7 (clinics):</p>
+                </description>
                 <value code="1">Rural Health Clinic (RHC)</value>
                 <value code="2">Hospital based or independent renal dialysis facility</value>
                 <value code="3">Free-standing provider based federally qualified health center (FQHC)</value>
                 <value code="4">Other Rehabilitation Facility (ORF)</value>
                 <value code="5">Comprehensive Rehabilitation Center (CORF)</value>
                 <value code="6">Community Mental Health Center (CMHC)</value>
-                <value code="7">Federally Qualified Health Center (FQHC) For facility type code 8 (special facility):</value>
+                <value code="7">Federally Qualified Health Center (FQHC)</value>
+            </valueGroup>
+            <valueGroup>
+                <description>
+                    <p>For facility type code 8 (special facility):</p>
+                </description>
                 <value code="1">Hospice (non-hospital based)</value>
                 <value code="2">Hospice (hospital based)</value>
                 <value code="3">Ambulatory surgical center (ASC) in hospital outpatient department</value>

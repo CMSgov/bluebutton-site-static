@@ -79,9 +79,12 @@ const codeBooksCollection = defineCollection({
     valueFormat: z.string().optional(),
     description: z.string().optional(),
     comment: z.string().optional(),
-    values: z.object({
-      code: z.string().optional(),
-      text: z.string().optional(),
+    valuegroups: z.object({
+      description: z.string().optional(),
+      values: z.object({
+        code: z.string().optional(),
+        text: z.string().optional(),
+      }).array().optional(),
     }).array().optional(),
   }),
 })
