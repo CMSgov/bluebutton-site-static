@@ -1,0 +1,48 @@
+---
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+import { $path } from 'astro-typesafe-routes/path'
+import { getCollection } from 'astro:content'
+import Icon from '#components/icon.astro'
+import DataDictionarySearch from '#components/data-dictionary-search'
+import FileDownload from '@uswds/uswds/img/usa-icons/file_download.svg'
+
+const defaultFields = (await getCollection('dataDictionary'))
+  .sort((a, b) => a.data.fieldName.localeCompare(b.data.fieldName))
+  .slice(0, 10)
+  .map((field) => ({
+    url: $path({ to: '/data-dictionary/[...slug]', params: { slug: field.id } }),
+    fieldName: field.data.fieldName,
+    sourceColumn: field.data.sourceColumn ?? null,
+    description: field.data.description ?? null,
+  }))
+---
+
+<BaseLayout
+  title="Data Dictionary"
+  description="Look up the FHIR fields returned by the Blue Button API v3 covering Patient, Coverage, and Explanation of Benefit data with FHIRPaths, examples, and mappings to underlying Medicare claims data."
+>
+  <DocsLayout showSideNav={false}>
+    <h1>Data Dictionary</h1>
+
+    <p>Download the full data dictionary as a CSV file for offline use:</p>
+    <p>
+      <a
+        href="/assets/files/v3-data-dictionary-2.248.0.csv"
+        class="usa-button"
+        download="v3-data-dictionary-2.248.0.csv">v3 Data Dictionary (2.248.0) <Icon icon={FileDownload} size={2} /></a
+      >
+    </p>
+
+    <div class="margin-top-5" id="data-dictionary-search">
+      <h2>Search all fields</h2>
+      <DataDictionarySearch defaultFields={defaultFields} client:load />
+    </div>
+  </DocsLayout>
+</BaseLayout>
+
+<style is:global>
+  #data-dictionary-search mark {
+    background-color: #a8f2ff;
+  }
+</style>

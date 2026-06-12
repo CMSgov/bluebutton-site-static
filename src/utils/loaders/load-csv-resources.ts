@@ -43,7 +43,7 @@ export async function loadCsvResources({ pattern, base }: { pattern: string | [s
     const parsed = csvSchema.safeParse(data)
 
     if (!parsed.success) {
-      console.error(parsed.error.errors)
+      console.error(parsed.error.issues)
       throw new Error(`Failed to parse: ${filePath} `)
     }
 

@@ -1,8 +1,10 @@
 import { codeSystemSchema, structureDefinitionSchema } from '#utils/collections'
 import { loadCodebooks } from '#utils/loaders/load-codebooks'
+import { loadCsvDataDictionary } from '#utils/loaders/load-csv-data-dictionary'
 import { loadCsvResources } from '#utils/loaders/load-csv-resources'
 import { glob } from 'astro/loaders'
-import { defineCollection, z } from 'astro:content'
+import { z } from 'astro/zod'
+import { defineCollection } from 'astro:content'
 
 const pageCollection = defineCollection({
   loader: glob({
@@ -125,6 +127,32 @@ const fhirJsonCollection = defineCollection({
   schema: z.discriminatedUnion('resourceType', [structureDefinitionSchema, codeSystemSchema]),
 })
 
+const dataDictionaryCollection = defineCollection({
+  loader: async () => await loadCsvDataDictionary({
+    pattern: '**/*.csv',
+    base: './src/content/data-dictionary/',
+  }),
+  schema: z.object({
+    id: z.string(),
+    index: z.number(),
+    fieldName: z.string(),
+    description: z.string().nullable(),
+    fhirResource: z.string().nullable(),
+    coverageType: z.array(z.string()).nullable(),
+    fhirPath: z.string().nullable(),
+    example: z.string().nullable(),
+    notes: z.string().nullable(),
+    sourceView: z.string().nullable(),
+    sourceColumn: z.string().nullable(),
+    bfdDerived: z.string().nullable(),
+    sources: z.array(z.string()).nullable(),
+    referenceTable: z.url().nullable(),
+    cclfMapping: z.array(z.string()).nullable(),
+    ccwMapping: z.array(z.string()).nullable(),
+    profiles: z.array(z.string()).nullable(),
+  }),
+})
+
 export const collections = {
   pages: pageCollection,
   resources: resourcesCollection,
@@ -134,4 +162,5 @@ export const collections = {
   csvVariables: csvVariablesCollection,
   terms: termsCollection,
   fhir: fhirJsonCollection,
+  dataDictionary: dataDictionaryCollection,
 }

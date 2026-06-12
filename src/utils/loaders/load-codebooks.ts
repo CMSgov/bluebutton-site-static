@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { glob as tinyglobby } from 'tinyglobby'
 
-function coerceToArray<T extends z.ZodTypeAny>(schema: T): z.ZodEffects<z.ZodArray<T>, z.infer<T>[], unknown> {
+function coerceToArray<T extends z.ZodTypeAny>(schema: T) {
   return z.preprocess(v => Array.isArray(v) ? v : [v], z.array(schema))
 }
 
@@ -53,7 +53,7 @@ export async function loadCodebooks({ pattern, base }: { pattern: string | [stri
     const parsed = codeBookSchema.safeParse(data.codebook.variable)
 
     if (!parsed.success) {
-      console.error(parsed.error.errors)
+      console.error(parsed.error.issues)
       throw new Error(`Failed to parse: ${filePath} `)
     }
     else {
