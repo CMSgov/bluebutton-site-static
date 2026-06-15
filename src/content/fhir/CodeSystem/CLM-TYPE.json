@@ -1,0 +1,37 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CLM_TYPE",
+  "id": "CLM-TYPE",
+  "title": "Claim Type - Prior Auth",
+  "description": "Prior Authorization Claim Types",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-TYPE",
+  "concept": [
+    {
+      "code": "B",
+      "display": "Part B"
+    },
+    {
+      "code": "C",
+      "display": "Hospice"
+    },
+    {
+      "code": "D",
+      "display": "Durable Medical Equipment"
+    },
+    {
+      "code": "H",
+      "display": "Home Health"
+    },
+    {
+      "code": "I",
+      "display": "Inpatient"
+    },
+    {
+      "code": "O",
+      "display": "Outpatient"
+    }
+  ],
+  "count": 6
+}

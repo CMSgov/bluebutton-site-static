@@ -672,8 +672,255 @@
       {
         "id": "LineItemComponent.providerSequence",
         "path": "LineItemComponent.providerSequence",
-        "short": "Provider sequence - derived, not to be populated in production",
-        "definition": "Provider sequence - derived, not to be populated in production",
+        "short": "Provider Sequence",
+        "definition": "The provider sequence.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CURRENT_SEGMENT",
+        "path": "LineItemComponent.CURRENT_SEGMENT",
+        "short": "Current Segment",
+        "definition": "Current Segment",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.HCPCS_OR_CPT_OR_HIPPS",
+        "path": "LineItemComponent.HCPCS_OR_CPT_OR_HIPPS",
+        "short": "HCPCS/CPT/HIPPS",
+        "definition": "HCPCS/CPT/HIPPS code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.PRICE_MOD1",
+        "path": "LineItemComponent.PRICE_MOD1",
+        "short": "Price Modifier 1",
+        "definition": "Price Modifier 1",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.PRICE_MOD2",
+        "path": "LineItemComponent.PRICE_MOD2",
+        "short": "Price Modifier 2",
+        "definition": "Price Modifier 2",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.PLACE_OF_SERV",
+        "path": "LineItemComponent.PLACE_OF_SERV",
+        "short": "Place of Service",
+        "definition": "Place of Service",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.REV_CODE_1",
+        "path": "LineItemComponent.REV_CODE_1",
+        "short": "Revenue Code 1",
+        "definition": "Revenue Code 1",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.PA_DT_ADDED",
+        "path": "LineItemComponent.PA_DT_ADDED",
+        "short": "PA Date Added",
+        "definition": "PA Date Added",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.PA_DT_UPDATED",
+        "path": "LineItemComponent.PA_DT_UPDATED",
+        "short": "PA Date Updated",
+        "definition": "PA Date Updated",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.PA_DECISION",
+        "path": "LineItemComponent.PA_DECISION",
+        "short": "PA Decision",
+        "definition": "PA Decision",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.PA_REQ_SUB_DT",
+        "path": "LineItemComponent.PA_REQ_SUB_DT",
+        "short": "PA Request Submitted Date",
+        "definition": "PA Request Submitted Date",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.PA_REQ_REC_DT",
+        "path": "LineItemComponent.PA_REQ_REC_DT",
+        "short": "PA Request Received Date",
+        "definition": "PA Request Received Date",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.PA_DECISION_DT",
+        "path": "LineItemComponent.PA_DECISION_DT",
+        "short": "PA Decision Date",
+        "definition": "PA Decision Date",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.PA_DECISION_EXP_DT",
+        "path": "LineItemComponent.PA_DECISION_EXP_DT",
+        "short": "PA Decision Expiration Date",
+        "definition": "PA Decision Expiration Date",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.SERVICE_CNTS",
+        "path": "LineItemComponent.SERVICE_CNTS",
+        "short": "Service Counts",
+        "definition": "Service Counts",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.SVC_RENDER_ST",
+        "path": "LineItemComponent.SVC_RENDER_ST",
+        "short": "Service Rendering State",
+        "definition": "Service Rendering State",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.MR_COUNT_IND",
+        "path": "LineItemComponent.MR_COUNT_IND",
+        "short": "MR Count Indicator",
+        "definition": "MR Count Indicator",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.MR_COUNT_ST_DT",
+        "path": "LineItemComponent.MR_COUNT_ST_DT",
+        "short": "MR Count Start Date",
+        "definition": "MR Count Start Date",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.MR_COUNT_END_DT",
+        "path": "LineItemComponent.MR_COUNT_END_DT",
+        "short": "MR Count End Date",
+        "definition": "MR Count End Date",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.RRB_EXCL_IND",
+        "path": "LineItemComponent.RRB_EXCL_IND",
+        "short": "RRB Exclusion Indicator",
+        "definition": "RRB Exclusion Indicator",
         "min": 0,
         "max": "1",
         "type": [

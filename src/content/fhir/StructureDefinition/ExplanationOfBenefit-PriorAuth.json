@@ -1,0 +1,238 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ExplanationOfBenefit-PriorAuth",
+  "url": "https://bfd.cms.gov/fhir/StructureDefinition/ExplanationOfBenefit-PriorAuth",
+  "name": "ExplanationOfBenefit-PriorAuth",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "ExplanationOfBenefit-PriorAuth",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ExplanationOfBenefit-PriorAuth",
+        "path": "ExplanationOfBenefit-PriorAuth",
+        "label": "Explanation of Benefit Prior Authorization Resource for IDR. Ignore in DD Generation",
+        "short": "ExplanationOfBenefit-PriorAuth",
+        "definition": "ExplanationOfBenefit-PriorAuth"
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.lastUpdated",
+        "path": "ExplanationOfBenefit-PriorAuth.lastUpdated",
+        "short": "Last Updated Time",
+        "definition": "This field represents the last time that an ExplanationOfBenefit was updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.createdDate",
+        "path": "ExplanationOfBenefit-PriorAuth.createdDate",
+        "short": "Created Date",
+        "definition": "EOB created date.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.beneficiarySk",
+        "path": "ExplanationOfBenefit-PriorAuth.beneficiarySk",
+        "short": "Beneficiary Source Key",
+        "definition": "Beneficiary Source Key",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.derivedOutcome",
+        "path": "ExplanationOfBenefit-PriorAuth.derivedOutcome",
+        "short": "Derived Outcome",
+        "definition": "Derived outcome code.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.CLM_TYPE",
+        "path": "ExplanationOfBenefit-PriorAuth.CLM_TYPE",
+        "short": "Claim Type",
+        "definition": "Claim Type",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.UTN",
+        "path": "ExplanationOfBenefit-PriorAuth.UTN",
+        "short": "Unique Tracking Number",
+        "definition": "Unique Tracking Number",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.ICN_DCN",
+        "path": "ExplanationOfBenefit-PriorAuth.ICN_DCN",
+        "short": "Internal Control Number / DCN",
+        "definition": "Internal Control Number / DCN",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.UTN_VALID_ST_DT",
+        "path": "ExplanationOfBenefit-PriorAuth.UTN_VALID_ST_DT",
+        "short": "UTN Valid Start Date",
+        "definition": "UTN Valid Start Date",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.UTN_VALID_EN_DT",
+        "path": "ExplanationOfBenefit-PriorAuth.UTN_VALID_EN_DT",
+        "short": "UTN Valid End Date",
+        "definition": "UTN Valid End Date",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.MAC_ID",
+        "path": "ExplanationOfBenefit-PriorAuth.MAC_ID",
+        "short": "MAC ID",
+        "definition": "MAC ID",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.TOB",
+        "path": "ExplanationOfBenefit-PriorAuth.TOB",
+        "short": "Type of Bill",
+        "definition": "Type of Bill",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.NPI",
+        "path": "ExplanationOfBenefit-PriorAuth.NPI",
+        "short": "NPI",
+        "definition": "NPI",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.NAME",
+        "path": "ExplanationOfBenefit-PriorAuth.NAME",
+        "short": "Name",
+        "definition": "Name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.CMS_CERT",
+        "path": "ExplanationOfBenefit-PriorAuth.CMS_CERT",
+        "short": "CMS Certification Number",
+        "definition": "CMS Certification Number",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.providerList",
+        "path": "ExplanationOfBenefit-PriorAuth.providerList",
+        "short": "Provider List",
+        "definition": "Provider List",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "https://bluebutton.cms.gov/fhir/StructureDefinition/Provider",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Provider"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit-PriorAuth.priorAuthItem",
+        "path": "ExplanationOfBenefit-PriorAuth.priorAuthItem",
+        "short": "Prior Auth Item List",
+        "definition": "Prior Auth Item List",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "https://bluebutton.cms.gov/fhir/StructureDefinition/LineItemComponent",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/LineItemComponent"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

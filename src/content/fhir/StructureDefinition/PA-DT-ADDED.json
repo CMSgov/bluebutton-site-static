@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PA-DT-ADDED",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/PA-DT-ADDED",
+  "name": "PA_DT_ADDED",
+  "title": "Prior Authorization Date Added",
+  "status": "draft",
+  "description": "Date the prior authorization was added.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Prior Authorization Date Added",
+        "definition": "Date the prior authorization was added."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/PA-DT-ADDED"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      }
+    ]
+  }
+}

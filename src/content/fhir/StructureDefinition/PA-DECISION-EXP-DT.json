@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PA-DECISION-EXP-DT",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/PA-DECISION-EXP-DT",
+  "name": "PA_DECISION_EXP_DT",
+  "title": "Prior Authorization Decision Expiration Date",
+  "status": "draft",
+  "description": "Expiration date of the prior authorization decision.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Prior Authorization Decision Expiration Date",
+        "definition": "Expiration date of the prior authorization decision."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/PA-DECISION-EXP-DT"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      }
+    ]
+  }
+}
