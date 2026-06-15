@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MR-COUNT-ST-DT",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/MR-COUNT-ST-DT",
+  "name": "MR_COUNT_ST_DT",
+  "title": "Medical Review Count Start Date",
+  "status": "draft",
+  "description": "Medical review count start date.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Medical Review Count Start Date",
+        "definition": "Medical review count start date."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/MR-COUNT-ST-DT"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      }
+    ]
+  }
+}

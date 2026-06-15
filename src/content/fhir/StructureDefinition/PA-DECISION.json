@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PA-DECISION",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/PA-DECISION",
+  "name": "PA_DECISION",
+  "title": "Prior Authorization Decision Code",
+  "status": "draft",
+  "description": "Prior authorization decision code.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Prior Authorization Decision Code",
+        "definition": "Prior authorization decision code."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/PA-DECISION"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/PA-DECISION"
+      }
+    ]
+  }
+}

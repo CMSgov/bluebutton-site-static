@@ -1,0 +1,25 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "PA_DECISION",
+  "id": "PA-DECISION",
+  "title": "Prior Authorization Decision Code",
+  "description": "The domain of prior authorization decision codes.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/PA-DECISION",
+  "concept": [
+    {
+      "code": "A",
+      "display": "Affirmed"
+    },
+    {
+      "code": "P",
+      "display": "Pending"
+    },
+    {
+      "code": "N",
+      "display": "Non-affirmed"
+    }
+  ],
+  "count": 3
+}

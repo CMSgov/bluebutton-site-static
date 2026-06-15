@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SERVICE-CNTS",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/SERVICE-CNTS",
+  "name": "SERVICE_CNTS",
+  "title": "Number of Services",
+  "status": "draft",
+  "description": "Number of services for the segment.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ExplanationOfBenefit.item"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Number of Services",
+        "definition": "Number of services for the segment."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/SERVICE-CNTS"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ]
+      }
+    ]
+  }
+}
