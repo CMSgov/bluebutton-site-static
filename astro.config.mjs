@@ -31,16 +31,18 @@ export default defineConfig({
     },
   },
 
-  markdown: unified({
-    remarkRehype: {
-      footnoteLabelProperties: {
-        class: 'usa-sr-only',
+  markdown: {
+    processor: unified({
+      remarkRehype: {
+        footnoteLabelProperties: {
+          class: 'usa-sr-only',
+        },
       },
-    },
+    }),
     shikiConfig: {
       theme: 'github-light',
     },
-  }),
+  },
 
   vite: {
     css: {
