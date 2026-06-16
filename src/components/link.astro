@@ -7,6 +7,7 @@ import type { VariantProps } from 'cva'
 import type { HrefOrTo } from '#utils/types'
 import Icon from './icon.astro'
 import FileDownload from '@uswds/uswds/img/usa-icons/file_download.svg'
+import { SITE_METADATA } from '#utils/constants'
 
 type Props<T extends RouteId> = Omit<HTMLAttributes<'a'>, 'href'> &
   VariantProps<typeof button> & {
@@ -48,10 +49,13 @@ if (isExternal === false && downloadExtsRegex.test(computedHref)) {
 }
 
 const { variant = 'link', size, showIcon = true, class: className, ...restProps } = props
+
+computedHref = computedHref.replace(/\/+$/g, '/') // Normalize trailing slashes
+computedHref = computedHref.startsWith(SITE_METADATA.url) ? computedHref.replace(SITE_METADATA.url, '') : computedHref // Remove base URL if present
 ---
 
 <a
-  href={computedHref.replace(/\/+$/g, '/')}
+  href={computedHref}
   target={isExternal || isDownload ? '_blank' : undefined}
   rel={isExternal && !computedHref?.includes('cms.gov') ? 'noreferrer' : undefined}
   class:list={[button({ variant, size }), isExternal && showIcon ? 'usa-link--external' : '', className]}
