@@ -1,10 +1,11 @@
+import { glob } from 'astro/loaders'
+import { z } from 'astro/zod'
+import { defineCollection } from 'astro:content'
+
 import { codeSystemSchema, structureDefinitionSchema } from '#utils/collections'
 import { loadCodebooks } from '#utils/loaders/load-codebooks'
 import { loadCsvDataDictionary } from '#utils/loaders/load-csv-data-dictionary'
 import { loadCsvResources } from '#utils/loaders/load-csv-resources'
-import { glob } from 'astro/loaders'
-import { z } from 'astro/zod'
-import { defineCollection } from 'astro:content'
 
 const pageCollection = defineCollection({
   loader: glob({
