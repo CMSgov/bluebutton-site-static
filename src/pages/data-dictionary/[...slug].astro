@@ -9,6 +9,7 @@ import { Code } from 'astro-expressive-code/components'
 import IconArrowBack from '@uswds/uswds/img/usa-icons/arrow_back.svg'
 import Icon from '#components/icon.astro'
 import { formatFhirPath } from '#utils/format-fhir-path'
+import Link from '#components/link.astro'
 
 export const Route = createRoute({
   routeId: '/data-dictionary/[...slug]',
@@ -134,9 +135,9 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
                   Reference Table
                 </dt>
                 <dd class="margin-left-0">
-                  <a href={d.referenceTable} target="_blank">
+                  <Link href={d.referenceTable} target="_blank">
                     {d.referenceTable}
-                  </a>
+                  </Link>
                 </dd>
               </div>
             )
