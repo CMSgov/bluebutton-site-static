@@ -9,6 +9,7 @@ import type { HrefOrTo } from '#utils/types'
 import Icon from './icon.astro'
 import FileDownload from '@uswds/uswds/img/usa-icons/file_download.svg'
 import { internalToRelativeUrl } from '#utils/internal-to-relative-url'
+import { SITE_METADATA } from '#utils/constants'
 
 type Props<T extends RouteId> = Omit<HTMLAttributes<'a'>, 'href'> &
   VariantProps<typeof button> & {
@@ -31,16 +32,9 @@ if ('to' in props && props.to) {
 } else if ('href' in props && props.href) {
   // Handle href - could be external or internal (from MDX)
   const hrefString = props.href.toString()
-
+  computedHref = hrefString
   // Check if it's an external URL
-  if (hrefString.startsWith('http')) {
-    isExternal = true
-    computedHref = hrefString
-  } else {
-    // Internal link (from MDX)
-    isExternal = false
-    computedHref = hrefString
-  }
+  isExternal = hrefString.startsWith(SITE_METADATA.url) ? true : false
 } else {
   throw new Error('Link component requires either "href" or "to" prop')
 }
@@ -52,7 +46,7 @@ if (isExternal === false && downloadExtsRegex.test(computedHref)) {
 const { variant = 'link', size, showIcon = true, class: className, ...restProps } = props
 
 computedHref = internalToRelativeUrl(computedHref) // Convert internal, absolute URLs to relative
-computedHref = withTrailingSlash(computedHref) // Normalize trailing slashes
+computedHref = withTrailingSlash(computedHref) // Normalize trailing slashes based on global config
 ---
 
 <a
