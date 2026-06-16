@@ -1,12 +1,23 @@
 ---
+import type { CollectionEntry } from 'astro:content'
 import Alert from '#components/alert.astro'
 import Link from '#components/link.astro'
+import { createRoute } from 'astro-typesafe-routes/create-route'
 import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 import { getTermsCollection } from '#utils/collections'
 import { render } from 'astro:content'
 
-export async function getStaticPaths() {
+export const Route = createRoute({
+  routeId: '/terms/[...slug]',
+})
+
+export type Props = {
+  post: CollectionEntry<'terms'>
+  isCurrent?: boolean
+}
+
+export const getStaticPaths = Route.createGetStaticPaths<Props>(async () => {
   const allTerms = await getTermsCollection()
 
   const currentTerms = allTerms[0]
@@ -17,12 +28,12 @@ export async function getStaticPaths() {
 
   return [
     {
-      params: { slug: undefined },
+      params: { slug: '' }, // empty slug serves the current version at /terms/
       props: { post: currentTerms, isCurrent: true },
     },
     ...restTerms,
   ]
-}
+})
 
 const { post, isCurrent } = Astro.props
 const { Content, headings } = await render(post)

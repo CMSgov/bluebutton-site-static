@@ -1,9 +1,19 @@
 ---
+import type { CollectionEntry } from 'astro:content'
+import { createRoute } from 'astro-typesafe-routes/create-route'
 import { getCollection } from 'astro:content'
 import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 
-export async function getStaticPaths() {
+export const Route = createRoute({
+  routeId: '/resources/variables/[...slug]',
+})
+
+export type Props = {
+  post: CollectionEntry<'codebooks'> | CollectionEntry<'csvVariables'>
+}
+
+export const getStaticPaths = Route.createGetStaticPaths<Props>(async () => {
   const codebookResources = await getCollection('codebooks')
   const csvResources = await getCollection('csvVariables')
 
@@ -18,7 +28,7 @@ export async function getStaticPaths() {
   }))
 
   return [...codebooksVars, ...csvVars]
-}
+})
 
 const { post } = Astro.props
 

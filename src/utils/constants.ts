@@ -103,8 +103,8 @@ export const IDENTIFIER_LINKS: IdentifierLinks = [
     label: 'Performance Reports',
   },
   {
-    to: '/terms',
-    // params: null,
+    to: '/terms/[...slug]',
+    params: { slug: '' }, // '' targets the current terms version at /terms/
     label: 'Terms of Service',
   },
 ]

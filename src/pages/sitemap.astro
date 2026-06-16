@@ -1,16 +1,9 @@
 ---
 import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
-import { $path, type RouteId, type RouteOptions } from 'astro-typesafe-routes/path'
+import { $path } from 'astro-typesafe-routes/path'
 import Link from '#components/link.astro'
 import { getApiCollection, getDataCollection } from '#utils/collections'
-
-type SitemapLink<T extends RouteId> = RouteOptions<T> & {
-  label: string
-  children?: (RouteOptions<T> & { label: string })[]
-}
-
-type SitemapLinks = SitemapLink<RouteId>[]
 
 const docsnavLinks = (await getApiCollection()).map((doc) => ({
   href: $path({ to: '/api-documentation/[...slug]', params: { slug: doc.id } }),
