@@ -1,6 +1,7 @@
 ---
 import DocsLayout from '#layouts/docs-layout.astro'
 import BaseLayout from '#layouts/base-layout.astro'
+import Link from '#components/link.astro'
 ---
 
 <BaseLayout title="Page Not Found" description="The page you are looking for can't be found or does not exist.">
@@ -25,12 +26,14 @@ import BaseLayout from '#layouts/base-layout.astro'
         or visit our sitemap to find the page you're looking for.
       </p>
       <div class="margin-y-5">
-        <ul class="usa-button-group">
-          <li class="usa-button-group__item">
-            <a href="" class="usa-button">Visit sitemap</a>
+        <ul class="usa-button-group display-flex margin-0">
+          <li class="usa-button-group__item margin-0">
+            <Link to="/sitemap" class="usa-button">Visit sitemap</Link>
           </li>
           <li class="usa-button-group__item">
-            <a class="usa-button usa-button--outline" href="mailto:BlueButtonAPI@cms.hhs.gov">Email us</a>
+            <li class="usa-button-group__item margin-0">
+              <a class="usa-button usa-button--outline" href="mailto:BlueButtonAPI@cms.hhs.gov">Email us</a>
+            </li>
           </li>
         </ul>
       </div>
