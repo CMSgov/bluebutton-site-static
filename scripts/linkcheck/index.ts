@@ -11,6 +11,7 @@ import { TargetExists } from './lib/linkcheck/checks/target-exists'
 import { getPagePathnamesFromSitemap, parsePages } from './lib/linkcheck/steps/build-index'
 import { addSourceFileAnnotations, findLinkIssues } from './lib/linkcheck/steps/find-issues'
 import { handlePossibleAutofix } from './lib/linkcheck/steps/optional-autofix'
+import { outputAnnotationsForGitHub } from './lib/linkcheck/steps/output-issues'
 
 /**
  * Contains all link checking logic.
@@ -57,9 +58,9 @@ class LinkChecker {
     }
 
     // // If we're being run by a CI workflow, output annotations in GitHub format
-    // if (process.env.CI) {
-    //   outputAnnotationsForGitHub(linkIssues)
-    // }
+    if (process.env.CI) {
+      outputAnnotationsForGitHub(linkIssues)
+    }
   }
 }
 
