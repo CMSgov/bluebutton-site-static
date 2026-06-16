@@ -46,7 +46,9 @@ if (isExternal === false && downloadExtsRegex.test(computedHref)) {
 const { variant = 'link', size, showIcon = true, class: className, ...restProps } = props
 
 computedHref = internalToRelativeUrl(computedHref) // Convert internal, absolute URLs to relative
-computedHref = withTrailingSlash(computedHref) // Normalize trailing slashes based on global config
+if (!isExternal && !isDownload) {
+  computedHref = withTrailingSlash(computedHref) // Normalize trailing slashes for internal download links
+}
 ---
 
 <a
