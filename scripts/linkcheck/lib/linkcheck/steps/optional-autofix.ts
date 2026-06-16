@@ -51,7 +51,7 @@ export function handlePossibleAutofix(
       outputAutofixMessage(
         'Autofix available',
         dedentMd`${formatCount(autofixCount, 'issue(s)')}
-					can be fixed automatically with "--autofix".`,
+          can be fixed automatically with "--autofix".`,
       )
     }
     return false
@@ -78,7 +78,7 @@ export function handlePossibleAutofix(
   outputAutofixMessage(
     'Starting autofix',
     dedentMd`Autofixing ${formatCount(autofixCount, 'issue(s)')}
-			in ${formatCount(sourceFilesWithAutofixes.size, 'source file(s)')}...`,
+      in ${formatCount(sourceFilesWithAutofixes.size, 'source file(s)')}...`,
   )
 
   sourceFilesWithAutofixes.forEach((sourceFilePath) => {
