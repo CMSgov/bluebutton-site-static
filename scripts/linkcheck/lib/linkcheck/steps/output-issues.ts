@@ -1,4 +1,4 @@
-import core from '@actions/core'
+import * as core from '@actions/core'
 import kleur from 'kleur'
 import process from 'node:process'
 
@@ -71,12 +71,12 @@ export function outputIssues(linkIssues: LinkIssue[], state: LinkCheckerState) {
 
   if (issuesNotFoundInSource > 0) {
     const warningText = dedentMd`*** Warning:
-			${formatCount(issuesNotFoundInSource, 'issue was|issues were')}
-			found in the build output, but not the Markdown source.
-			
-			If you just changed or autofixed the source, please perform a fresh build.
+      ${formatCount(issuesNotFoundInSource, 'issue was|issues were')}
+      found in the build output, but not the Markdown source.
+      
+      If you just changed or autofixed the source, please perform a fresh build.
 
-			If not, search for issues in non-Markdown sources (e.g. components, HTML).`
+      If not, search for issues in non-Markdown sources (e.g. components, HTML).`
     console.log(kleur.yellow().bold(warningText.split('\n\n').join('\n    ')))
     console.log()
   }
@@ -102,8 +102,8 @@ export function outputAnnotationsForGitHub(linkIssues: LinkIssue[]) {
     // Also output an error if no annotations were found for a link issue
     if (!linkIssue.sourceFileAnnotations.length) {
       let message = dedentMd`${linkIssue.type.formatTitle()} in HTML page
-				at "${linkIssue.page.pathname}", unknown source location:
-				${linkIssue.annotationText || linkIssue.linkHref}`
+        at "${linkIssue.page.pathname}", unknown source location:
+        ${linkIssue.annotationText || linkIssue.linkHref}`
       if (linkIssue.autofixHref) {
         message += ` Suggested fix: ${linkIssue.autofixHref}`
       }

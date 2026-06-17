@@ -1,5 +1,7 @@
 ---
-import { $path, type RouteId, type RouteOptions } from 'astro-typesafe-routes/path'
+import { $path } from 'astro-typesafe-routes/path'
+
+import type { RoutesArray } from '#utils/types'
 
 import Swagger from '#assets/images/swagger.svg'
 import Github from '@uswds/uswds/img/usa-icons/github.svg'
@@ -7,10 +9,6 @@ import Github from '@uswds/uswds/img/usa-icons/github.svg'
 import Icon from './icon.astro'
 import Link from './link.astro'
 import { getApiCollection, getDataCollection } from '#utils/collections'
-
-type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]
-
-const { pathname } = Astro.url
 
 const docsnavLinks = (await getApiCollection()).map((doc) => ({
   to: '/api-documentation/[...slug]',
@@ -27,7 +25,7 @@ const datanavLinks = (await getDataCollection()).map((doc) => ({
   label: doc.data.title,
 })) satisfies RoutesArray<'/data/[...slug]'>
 
-const isActive = (path: string) => path === pathname
+const isActive = (path: string) => path === Astro.url.pathname
 ---
 
 <div
