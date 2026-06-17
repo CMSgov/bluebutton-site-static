@@ -4,11 +4,10 @@ import { button } from '#utils/cva/button'
 import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
 import type { HTMLAttributes } from 'astro/types'
 import type { VariantProps } from 'cva'
-import { withTrailingSlash } from '#utils/trailing-slash'
 import type { HrefOrTo } from '#utils/types'
 import Icon from './icon.astro'
 import FileDownload from '@uswds/uswds/img/usa-icons/file_download.svg'
-import { internalToRelativeUrl } from '#utils/internal-to-relative-url'
+import { formatInternalHref } from '#utils/format-internal-href'
 import { SITE_METADATA } from '#utils/constants'
 
 type Props<T extends RouteId> = Omit<HTMLAttributes<'a'>, 'href'> &
@@ -34,7 +33,7 @@ if ('to' in props && props.to) {
   const hrefString = props.href.toString()
   computedHref = hrefString
   // Check if it's an external URL
-  isExternal = hrefString.startsWith(SITE_METADATA.url) ? true : false
+  isExternal = !hrefString.startsWith(SITE_METADATA.url)
 } else {
   throw new Error('Link component requires either "href" or "to" prop')
 }
@@ -45,9 +44,8 @@ if (isExternal === false && downloadExtsRegex.test(computedHref)) {
 
 const { variant = 'link', size, showIcon = true, class: className, ...restProps } = props
 
-computedHref = internalToRelativeUrl(computedHref) // Convert internal, absolute URLs to relative
 if (!isExternal && !isDownload) {
-  computedHref = withTrailingSlash(computedHref) // Normalize trailing slashes for internal download links
+  computedHref = formatInternalHref(computedHref)
 }
 ---
 
