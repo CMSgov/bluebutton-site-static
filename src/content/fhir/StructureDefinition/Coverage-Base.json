@@ -36,7 +36,7 @@
         "id": "Coverage-Base.BENE_MBI_ID",
         "path": "Coverage-Base.BENE_MBI_ID",
         "short": "Beneficiary MBI ID",
-        "definition": "AN IDENTIFIER THAT UNIQUELY IDENTIFIES A BENEFICIARY AND REPLACES THE HEALTH INSURANCE CLAIM NUMBER (HICN) ON MEDICARE CARDS. THE FORMAT OF THE MEDICARE BENEFICIARY IDENTIFIER (MBI) IS 11-POSITIONS IN LENGTH AND CONTAINS THE FOLLOWING VALUES:  POSITION 1 Ö NUMERIC VALUES: 1 - 9  POSITION 2 Ö ALPHABETIC VALUES: A - Z (MINUS S, L, O, I, B, Z)  POSITION 3 Ö ALPHANUMERIC VALUES: 0 - 9 AND A - Z (MINUS S, L, O, I, B, Z)  POSITION 4 Ö NUMERIC VALUES: 0 - 9  POSITION 5 Ö ALPHABETIC VALUES: A - Z (MINUS S, L, O, I, B, Z)  POSITION 6 Ö ALPHANUMERIC VALUES: 0 - 9 AND A - Z (MINUS S, L, O, I, B, Z)  POSITION 7 Ö NUMERIC VALUES: 0 - 9  POSITION 8 Ö ALPHABETIC VALUES: A - Z (MINUS S, L, O, I, B, Z)  POSITION 9 Ö ALPHABETIC VALUES: A - Z (MINUS S, L, O, I, B, Z)  POSITION 10 Ö NUMERIC VALUES: 0 - 9  POSITION 11 Ö NUMERIC VALUES: 0 - 9",
+        "definition": "An identifier that uniquely identifies a beneficiary and replaces the Health Insurance Claim Number (HICN) on Medicare cards. The format of the Medicare Beneficiary Identifier (MBI) is 11-positions in length and contains the following values:  position 1 numeric values: 1 - 9  position 2 alphabetic values: A - Z (minus S, L, O, I, B, Z  position 3 alphanumeric values: 0 - 9 and A - Z (minus S, L, O, I, B, Z)  position 4 numeric values: 0 - 9  position 5 alphabetic values: A - Z (minus S, L, O, I, B, Z)  position 6 alphanumeric values: 0 - 9 and a - z (minus S, L, O, I, B, Z)  position 7 numeric values: 0 - 9  position 8 alphabetic values: A - Z (minus S, L, O, I, B, Z)  position 9 alphabetic values: A - Z (minus S, L, O, I, B, Z)  position 10 numeric values: 0 - 9  position 11 numeric values: 0 - 9",
         "min": 0,
         "max": "1",
         "type": [
@@ -49,7 +49,7 @@
         "id": "Coverage-Base.XREF_EFCTV_BENE_SK",
         "path": "Coverage-Base.XREF_EFCTV_BENE_SK",
         "short": "Beneficiary FHIR ID",
-        "definition": "A UNIQUE NUMBER ASSIGNED BY THE ENROLLMENT DATA BASE (EDB) TO EACH EDB RECORD TO IDENTIFY A BENEFICIARY.",
+        "definition": "A unique number assigned by the Enrollment Database (EDB) to each EDB record to identify a beneficiary.",
         "min": 0,
         "max": "1",
         "type": [
@@ -62,7 +62,7 @@
         "id": "Coverage-Base.BENE_MDCR_ENTLMT_STUS_CD",
         "path": "Coverage-Base.BENE_MDCR_ENTLMT_STUS_CD",
         "short": "Medicare Entitlement Status Code",
-        "definition": "THE REASON FOR ENTITLEMENT OR TERMINATION OF A BENEFICIARYS BENEFITS DURING A PERIOD OF COVERAGE.",
+        "definition": "The reason for entitlement or termination of a beneficiary's benefits during a period of coverage.",
         "min": 0,
         "max": "1",
         "type": [
@@ -75,7 +75,7 @@
         "id": "Coverage-Base.BENE_DUAL_STUS_CD",
         "path": "Coverage-Base.BENE_DUAL_STUS_CD",
         "short": "Beneficiary Dual Status Code",
-        "definition": "A CODE IDENTIFYING THE ENTITLEMENT STATUS FOR A DUAL ELIGIBLE BENEFICIARY.",
+        "definition": "A code identifying the entitlement status for a dual eligible beneficiary.",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,7 +88,7 @@
         "id": "Coverage-Base.BENE_DUAL_TYPE_CD",
         "path": "Coverage-Base.BENE_DUAL_TYPE_CD",
         "short": "Medicare/Medicaid Dual Type Code",
-        "definition": "A CODE IDENTIFYING A BENEFICIARYÒ² DUAL MEDICAID DESIGNATION, WHETHER A BENEFICIARY IS Ð¦ULLÒ¬ Ð€ARTIALÒ OR Ð®ONEÒ DUAL MEDICARE.",
+        "definition": "A code identifying a beneficiary's dual Medicaid designation, whether a beneficiary is partial or dual Medicare.",
         "min": 0,
         "max": "1",
         "type": [
@@ -101,7 +101,7 @@
         "id": "Coverage-Base.BENE_BUYIN_CD",
         "path": "Coverage-Base.BENE_BUYIN_CD",
         "short": "Buy-in Code",
-        "definition": "A CODE THAT INDICATES THE REASON FOR PART A/PART B STATE BUY-IN ELIGIBILITY.",
+        "definition": "A code that indicates the reason for part a/part b state buy-in eligibility.",
         "min": 0,
         "max": "1",
         "type": [
@@ -114,7 +114,7 @@
         "id": "Coverage-Base.BENE_MDCR_STUS_CD",
         "path": "Coverage-Base.BENE_MDCR_STUS_CD",
         "short": "Medicare Status Code",
-        "definition": "A CODE IDENTIFYING THE REASON FOR A BENEFICIARYS ENTITLEMENT TO MEDICARE BENEFITS.    REFERENCE TABLE: BENE_MDCR_STUS_CD",
+        "definition": "A code identifying the reason for a beneficiary's entitlement to Medicare benefits.    Reference table: BENE_MDCR_STUS_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -127,7 +127,7 @@
         "id": "Coverage-Base.BENE_RNG_BGN_DT",
         "path": "Coverage-Base.BENE_RNG_BGN_DT",
         "short": "Beneficiary Range Begin Date",
-        "definition": "THE PRIMARY BEGIN DATE FOR A BENEFICIARY DATE RANGE.",
+        "definition": "The primary begin date for a beneficiary date range.",
         "min": 0,
         "max": "1",
         "type": [
@@ -140,7 +140,7 @@
         "id": "Coverage-Base.BENE_RNG_END_DT",
         "path": "Coverage-Base.BENE_RNG_END_DT",
         "short": "Beneficiary Range End Date",
-        "definition": "THE PRIMARY END DATE FOR A BENEFICIARY DATE RANGE.",
+        "definition": "The primary end date for a beneficiary date range.",
         "min": 0,
         "max": "1",
         "type": [
@@ -179,7 +179,7 @@
         "id": "Coverage-Base.BENE_MDCR_ENRLMT_RSN_CD",
         "path": "Coverage-Base.BENE_MDCR_ENRLMT_RSN_CD",
         "short": "Beneficiary Enrollment Reason Code",
-        "definition": "THE REASON FOR A BENEFICIARYS ENROLMENT TO PART A/PART B BENEFITS.",
+        "definition": "The reason for a beneficiary's enrolment to Part A/Part B benefits.",
         "min": 0,
         "max": "1",
         "type": [
@@ -192,7 +192,7 @@
         "id": "Coverage-Base.BENE_MDCR_ENTLMT_RSN_CD",
         "path": "Coverage-Base.BENE_MDCR_ENTLMT_RSN_CD",
         "short": "Beneficiary Entitlement Reason Code",
-        "definition": "A CODE IDENTIFYING THE BASIS IN DETERMINING A BENEFICIARYS ENTITLEMENT TO MEDICARE BENEFITS.",
+        "definition": "A code identifying the basis in determining a beneficiary's entitlement to Medicare benefits.",
         "min": 0,
         "max": "1",
         "type": [
@@ -205,7 +205,7 @@
         "id": "Coverage-Base.BENE_MDCD_ELGBLTY_BGN_DT",
         "path": "Coverage-Base.BENE_MDCD_ELGBLTY_BGN_DT",
         "short": "Medicaid Eligibility Begin Date",
-        "definition": "A DATE THAT INDICATES THE BEGINNING OF A BENEFICIARYÒ² MEDICAID ELIGIBILITY PERIOD. IT IS THE EFFECTIVE START DATE OF THE MEDICAID PERIOD CALCULATED ACCORDING TO MEDICARE ADVANTAGE PRESCRIPTION DRUG (MARX) REQUIREMENTS. THE DATE WILL ALWAYS BE THE FIRST OF A MONTH.",
+        "definition": "A date that indicates the beginning of a beneficiary's Medicaid eligibility period. It is the effective start date of the Medicaid period calculated according to Medicare Advantage Prescription Drug (MARX) requirements. The date will always be the first of a month.",
         "min": 0,
         "max": "1",
         "type": [
@@ -218,7 +218,7 @@
         "id": "Coverage-Base.BENE_MDCD_ELGBLTY_END_DT",
         "path": "Coverage-Base.BENE_MDCD_ELGBLTY_END_DT",
         "short": "Medicaid Eligibility End Date",
-        "definition": "A DATE THAT INDICATES THE END OF A BENEFICIARYÒ² MEDICAID ELIGIBILITY PERIOD. IT IS THE EFFECTIVE END DATE OF THE MEDICAID PERIOD CALCULATED ACCORDING TO MEDICARE ADVANTAGE PRESCRIPTION DRUG (MARX) REQUIREMENTS. THE DATE WILL ALWAYS BE THE END OF A MONTH OR 12/31/9999.",
+        "definition": "A date that indicates the end of a beneficiary's Medicaid eligibility period. It is the effective end date of the Medicaid period calculated according to Medicare Advantage Prescription Drug (MARX) requirements. The date will always be the end of a month or 12/31/9999.",
         "min": 0,
         "max": "1",
         "type": [
@@ -231,7 +231,7 @@
         "id": "Coverage-Base.GEO_USPS_STATE_CD",
         "path": "Coverage-Base.GEO_USPS_STATE_CD",
         "short": "Medicaid State Code",
-        "definition": "A CODE IDENTIFYING THE TWO-CHARACTER ALPHABETIC ABBREVIATION FOR A STATE IN THE UNITED STATES AS DEFINED BY THE UNITED STATES POSTAL SERVICE (USPS) ASSOCIATED WITH A BENEFICIARY, PROVIDER, OR CLAIM ADDRESS AND USED IN THE GEOCODING PROCESS.    REFERENCE TABLE: GEO_USPS_STATE_CD",
+        "definition": "A code identifying the two-character alphabetic abbreviation for a state in the United States as defined by the United States Postal Service (USPS) associated with a beneficiary, provider, or claim address and used in the geocoding process.",
         "min": 0,
         "max": "1",
         "type": [
@@ -244,7 +244,7 @@
         "id": "Coverage-Base.BENE_ENRLMT_BGN_DT",
         "path": "Coverage-Base.BENE_ENRLMT_BGN_DT",
         "short": "Beneficiary Enrollment Begin Date",
-        "definition": "THE DATE THAT THE BENEFICIARY ENROLLED IN THE SERVICE ELECTION.[SOURCE: PLAN TRANSACTION, AUTOMATIC ENROLLMENT]",
+        "definition": "The date that the beneficiary enrolled in the service election. [Source: plan transaction, automatic enrollment]",
         "min": 0,
         "max": "1",
         "type": [
@@ -257,7 +257,7 @@
         "id": "Coverage-Base.BENE_ENRLMT_END_DT",
         "path": "Coverage-Base.BENE_ENRLMT_END_DT",
         "short": "Beneficiary Enrollment End Date",
-        "definition": "THE DATE THAT THE BENEFICIARY DISENROLLED IN THE SERVICE ELECTIONS .",
+        "definition": "The date that the beneficiary disenrolled in the service elections.",
         "min": 0,
         "max": "1",
         "type": [
@@ -270,7 +270,7 @@
         "id": "Coverage-Base.BENE_CNTRCT_NUM",
         "path": "Coverage-Base.BENE_CNTRCT_NUM",
         "short": "Beneficiary Contract Number",
-        "definition": "UNIQUE IDENTIFIER ENABLING AN ENTITY TO PROVIDE COVERAGE TO ELIGIBLE MEDICARE BENEFICIARIES",
+        "definition": "Unique identifier enabling an entity to provide coverage to eligible Medicare beneficiaries.",
         "min": 0,
         "max": "1",
         "type": [
@@ -283,7 +283,7 @@
         "id": "Coverage-Base.BENE_PBP_NUM",
         "path": "Coverage-Base.BENE_PBP_NUM",
         "short": "Beneficiary PBP Number",
-        "definition": "A UNIQUE IDENTIFIER FOR THE PLAN BENEFIT PACKAGE OFFERED UNDER THE CONTRACT. FOR PART D THIS NUMBER IS A UNIQUE IDENTIFICATION FOR AN AGREEMENT BETWEEN CMS AND A PART D PROVIDER ENABLING THE PART D PROVIDER TO PROVIDE DRUG COVERAGE TO ELIGIBLE BENEFICIARIES. MARX DEFINITION: A 3-POSITION NUMERIC IDENTIFIER ASSIGNED TO A PLAN BENEFIT PACKAGE (PBP) OFFERED WITHIN A MANAGED CARE OR PRESCRIPTION DRUG CONTRACT. VALUES BEGINNING WITH 8 ARE RESERVED FOR EMPLOYER GROUP PLANS. A VALUE OF 999 IS RESERVED FOR COST CONTRACTORS WHO DO NOT CHOOSE TO OFFER A PRESCRIPTION DRUG BENEFIT",
+        "definition": "A unique identifier for the plan benefit package offered under the contract. For Part D this number is a unique identification for an agreement between CMS and a Part D provider enabling the Part D provider to provide drug coverage to eligible beneficiaries. MARX definition: a 3-position numeric identifier assigned to a Plan Benefit Package (PBP) offered within a managed care or prescription drug contract. Values beginning with 8 are reserved for employer group plans. A value of 999 is reserved for cost contractors who do not choose to offer a prescription drug benefit",
         "min": 0,
         "max": "1",
         "type": [
@@ -296,7 +296,7 @@
         "id": "Coverage-Base.BENE_CVRG_TYPE_CD",
         "path": "Coverage-Base.BENE_CVRG_TYPE_CD",
         "short": "Beneficiary Coverage Type Code",
-        "definition": "A CODE IDENTIFYING THE TYPE OF COVERAGE IN WHICH THE BENEFICIARY IS ENROLLED.    REFERENCE TABLE: BENE_CVRG_TYPE_CD",
+        "definition": "A code identifying the type of coverage in which the beneficiary is enrolled.    Reference table: BENE_CVRG_TYPE_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -309,7 +309,7 @@
         "id": "Coverage-Base.CNTRCT_PBP_NAME",
         "path": "Coverage-Base.CNTRCT_PBP_NAME",
         "short": "Contract PBP Name",
-        "definition": "TEXT LABEL DESCRIBING THE PBP, USUALLY THE PRODUCT NAME.",
+        "definition": "Text label describing the PBP, usually the product name.",
         "min": 0,
         "max": "1",
         "type": [
@@ -322,7 +322,7 @@
         "id": "Coverage-Base.CNTRCT_PLAN_CNTCT_TEL_NUM",
         "path": "Coverage-Base.CNTRCT_PLAN_CNTCT_TEL_NUM",
         "short": "Contract Plan Contact Telephone Number",
-        "definition": "A SEQUENCE OF NUMBERS THAT IDENTIFIES A PARTICULAR TELEPHONE AND THAT MUST BE DIALED FOR THE CALLER TO CONNECT TO THE TELEPHONE OF THE CONTACT.",
+        "definition": "A sequence of numbers that identifies a particular telephone and that must be dialed for the caller to connect to the telephone of the contact.",
         "min": 0,
         "max": "1",
         "type": [
@@ -348,7 +348,7 @@
         "id": "Coverage-Base.BENE_PDP_ENRLMT_MMBR_ID_NUM",
         "path": "Coverage-Base.BENE_PDP_ENRLMT_MMBR_ID_NUM",
         "short": "Beneficiary PDP Enrollment Member ID Number",
-        "definition": "MEMBER ID ASSIGNED TO THE BENEFICIARY.",
+        "definition": "Member ID assigned to the beneficiary.",
         "min": 0,
         "max": "1",
         "type": [
@@ -361,7 +361,7 @@
         "id": "Coverage-Base.BENE_PDP_ENRLMT_GRP_NUM",
         "path": "Coverage-Base.BENE_PDP_ENRLMT_GRP_NUM",
         "short": "Beneficiary PDP Enrollment Group Number",
-        "definition": "IDENTIFYING NUMBER ASSIGNED TO THE CARDHOLDER GROUP OR EMPLOYER GROUP.",
+        "definition": "Identifying number assigned to the cardholder group or employer group.",
         "min": 0,
         "max": "1",
         "type": [
@@ -374,7 +374,7 @@
         "id": "Coverage-Base.BENE_PDP_ENRLMT_PRCSR_NUM",
         "path": "Coverage-Base.BENE_PDP_ENRLMT_PRCSR_NUM",
         "short": "Beneficiary PDP Enrollment Processor Number",
-        "definition": "NUMBER ASSIGNED BY THE PROCESSOR.",
+        "definition": "Number assigned by the processor.",
         "min": 0,
         "max": "1",
         "type": [
@@ -387,7 +387,7 @@
         "id": "Coverage-Base.BENE_PDP_ENRLMT_BANK_ID_NUM",
         "path": "Coverage-Base.BENE_PDP_ENRLMT_BANK_ID_NUM",
         "short": "Beneficiary PDP Enrollment Bank ID Number",
-        "definition": "A CARD ISSUER IDENTIFIER OR A BANK IDENTIFYING NUMBER USED FOR NETWORK ROUTING.",
+        "definition": "A card issuer identifier or a bank identifying number used for network routing.",
         "min": 0,
         "max": "1",
         "type": [
@@ -400,7 +400,7 @@
         "id": "Coverage-Base.BENE_LIS_EFCTV_CD",
         "path": "Coverage-Base.BENE_LIS_EFCTV_CD",
         "short": "Beneficiary LIS Effective Code",
-        "definition": "SWITCH INDICATING THAT THIS RECORD IS THE CURRENT EFFECTIVE LOW INCOME SUBSIDY (LIS) DETERMINATION RECORD.",
+        "definition": "Switch indicating that this record is the current effective Low Income Subsidy (LIS) determination record.",
         "min": 0,
         "max": "1",
         "type": [
@@ -413,7 +413,7 @@
         "id": "Coverage-Base.BENE_LIS_COPMT_LVL_CD",
         "path": "Coverage-Base.BENE_LIS_COPMT_LVL_CD",
         "short": "Beneficiary LIS Copayment Level Code",
-        "definition": "A CODE IDENTIFYING THE GENERIC LEVEL USED TO COMPUTE THE LOW INCOME SUBSIDY (LIS) CO-PAYMENT AMOUNT. THIS GENERIC LEVEL TRANSLATES TO A SPECIFIC NUMERIC VALUE THAT WILL BE USED IN THE COMPUTATION.    REFERENCE TABLE: BENE_LIS_COPMT_LVL_CD",
+        "definition": "A code identifying the generic level used to compute the Low Income Subsidy (LIS) co-payment amount. This generic level translates to a specific numeric value that will be used in the computation.    Reference table: BENE_LIS_COPMT_LVL_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -426,7 +426,7 @@
         "id": "Coverage-Base.BENE_LIS_PTD_PRM_PCT",
         "path": "Coverage-Base.BENE_LIS_PTD_PRM_PCT",
         "short": "Beneficiary LIS Part D Premium Percentage",
-        "definition": "IDENTIFIES THE PORTION OF THE PART D PREMIUM SUBSIDIZED, BASED ON A SLIDING SCALE LINKED TO THE FEDERAL POVERTY LEVEL (FPL) PERCENTAGE. IF THE PERSON IS UNDER 135% FPL THE PREMIUM SUBSIDY PERCENT WILL BE 100%.  IF THE PERSON IS 136-140% FPL THE PREMIUM SUBSIDY PERCENT WILL BE 75%.    IF THE PERSON IS 141-145% FPL THE PREMIUM SUBSIDY WILL BE 50%.  IF THE PERSON IS 146-149% FPL THE PREMIUM SUBSIDY WILL BE 25%.",
+        "definition": "Identifies the portion of the Part D premium subsidized, based on a sliding scale linked to the Federal Poverty Level (FPL) percentage. If the person is under 135% FPL the premium subsidy percent will be 100%.  If the person is 136-140% FPL the premium subsidy percent will be 75%.    If the person is 141-145% FPL the premium subsidy will be 50%.  If the person is 146-149% FPL the premium subsidy will be 25%.",
         "min": 0,
         "max": "1",
         "type": [
@@ -439,7 +439,7 @@
         "id": "Coverage-Base.CNTRCT_PBP_SGMT_NUM",
         "path": "Coverage-Base.CNTRCT_PBP_SGMT_NUM",
         "short": "Contract PBP Segment Number",
-        "definition": "IDENTIFICATION NUMBER FOR A PORTION OF THE PBP DESIGNATED AS A SEGMENT.  MUST BE PRESENT.",
+        "definition": "Identification number for a portion of the PBP designated as a Segment.  Must be present.",
         "min": 0,
         "max": "1",
         "type": [
@@ -452,7 +452,7 @@
         "id": "Coverage-Base.BENE_ENRLMT_EMPLR_SBSDY_SW",
         "path": "Coverage-Base.BENE_ENRLMT_EMPLR_SBSDY_SW",
         "short": "Retiree Drug Subsidy Switch",
-        "definition": "A SWITCH INDICATING THAT ENROLLMENT IN PART D WAS REQUESTED BY THE BENEFICIARY WHO HAS EMPLOYER SUBSIDY ENROLLMENT.",
+        "definition": "A switch indicating that enrollment in Part D was requested by the beneficiary who has employer subsidy enrollment.",
         "min": 0,
         "max": "1",
         "type": [
