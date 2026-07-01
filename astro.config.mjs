@@ -1,3 +1,4 @@
+import { unified } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import preact from '@astrojs/preact'
 import sitemap from '@astrojs/sitemap'
@@ -28,7 +29,7 @@ export default defineConfig({
     },
   },
 
-  markdown: {
+  markdown: unified({
     remarkRehype: {
       footnoteLabelProperties: {
         class: 'usa-sr-only',
@@ -37,7 +38,7 @@ export default defineConfig({
     shikiConfig: {
       theme: 'github-light',
     },
-  },
+  }),
 
   vite: {
     css: {
@@ -52,21 +53,21 @@ export default defineConfig({
   },
 
   integrations: [expressiveCode({
-    themes: ['github-light'],
-    shiki: {
-      langs: [fhirpathGrammar],
-      langAlias: { fhirpath: 'Fhirpath' },
-    },
-    styleOverrides: {
-      frames: {
-        editorBackground: '#f7f9fa',
-        terminalBackground: '#f7f9fa',
-        frameBoxShadowCssValue: '0',
+      themes: ['github-light'],
+      shiki: {
+        langs: [fhirpathGrammar],
+        langAlias: { fhirpath: 'Fhirpath' },
       },
-      codeBackground: '#f7f9fa',
-      uiFontSize: '0.85rem',
-      codeFontSize: '1rem',
-    },
+      styleOverrides: {
+        frames: {
+          editorBackground: '#f7f9fa',
+          terminalBackground: '#f7f9fa',
+          frameBoxShadowCssValue: '0',
+        },
+        codeBackground: '#f7f9fa',
+        uiFontSize: '0.85rem',
+        codeFontSize: '1rem',
+      },
 
   }), mdx(), sitemap(), typesafeRoutes(), preact()],
 
