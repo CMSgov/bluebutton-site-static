@@ -52,7 +52,8 @@ export default defineConfig({
     },
   },
 
-  integrations: [expressiveCode({
+  integrations: [
+    expressiveCode({
       themes: ['github-light'],
       shiki: {
         langs: [fhirpathGrammar],
@@ -68,8 +69,12 @@ export default defineConfig({
         uiFontSize: '0.85rem',
         codeFontSize: '1rem',
       },
-
-  }), mdx(), sitemap(), typesafeRoutes(), preact()],
+    }),
+    mdx(),
+    sitemap(),
+    typesafeRoutes(),
+    preact(),
+  ],
 
   redirects: {
     '/developers': '/api-documentation/',
