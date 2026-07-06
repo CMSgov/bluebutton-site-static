@@ -23,7 +23,7 @@
         "id": "LineItemComponent.CLM_LINE_NUM",
         "path": "LineItemComponent.CLM_LINE_NUM",
         "short": "Line Item Sequence Number",
-        "definition": "A NUMBER IDENTIFYING THE POSITION OF THE SERVICE OR ITEM ON THE CLAIM. THIS IS A COMPONENT OF THE 5-PART KEY USED FOR JOINING CLAIMS.",
+        "definition": "A number identifying the position of the service or item on the claim. This is a component of the 5-part key used for joining claims.",
         "min": 0,
         "max": "1",
         "type": [
@@ -36,7 +36,7 @@
         "id": "LineItemComponent.CLM_LINE_HCPCS_CD",
         "path": "LineItemComponent.CLM_LINE_HCPCS_CD",
         "short": "Line Item HCPCS Code",
-        "definition": "A CODE IDENTIFYING A HEALTHCARE COMMON PROCEDURE CODING SYSTEM (HCPCS) PROCEDURE, SUPPLY, PRODUCT, OR SERVICE PROVIDED TO A MEDICARE BENEFICIARY OR AN INDIVIDUAL ENROLLED IN PRIVATE HEALTH INSURANCE PROGRAMS.      REFERENCE TABLE: HCPCS_CD",
+        "definition": "A code identifying a Healthcare Common Procedure Coding System (HCPCS) procedure, supply, product, or service provided to a Medicare beneficiary or an individual enrolled in private health insurance programs. Reference table: HCPCS_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -49,7 +49,7 @@
         "id": "LineItemComponent.CLM_REV_APC_HIPPS_CD",
         "path": "LineItemComponent.CLM_REV_APC_HIPPS_CD",
         "short": "Line Item APC / HIPPS Code",
-        "definition": "THE AMBULATORY PAYMENT CLASSIFICATION (APC) CODE AND THE HIPPS CODE.  THE APC IS USED TO IDENTIFY GROUPINGS OF OUTPATIENT SERVICES. APC CODES ARE USED TO CALCULATE PAYMENT FOR SERVICES UNDER  OPPS.  THE APC IS A FOUR BYTE FIELD.  THE HIPPS CODES ARE USED",
+        "definition": "The Ambulatory Payment Classification (APC) code and the HIPPS code. The APC is used to identify groupings of outpatient services. APC codes are used to calculate payment for services under OPPS. The APC is a four byte field. The HIPPS codes are used.",
         "min": 0,
         "max": "1",
         "type": [
@@ -62,7 +62,7 @@
         "id": "LineItemComponent.CLM_LINE_NDC_CD",
         "path": "LineItemComponent.CLM_LINE_NDC_CD",
         "short": "National Drug Code",
-        "definition": "THE NATIONAL DRUG CODE THAT IDENTIFIES SPECIFIC DRUGS.",
+        "definition": "The National Drug Code that identifies specific drugs.",
         "min": 0,
         "max": "1",
         "type": [
@@ -75,7 +75,7 @@
         "id": "LineItemComponent.CLM_LINE_NDC_QTY",
         "path": "LineItemComponent.CLM_LINE_NDC_QTY",
         "short": "Line Item NDC Quantity",
-        "definition": "THE QUANTITY OF AN NDC APPLICABLE TO INSTITUTIONAL CLAIMS.",
+        "definition": "The quantity of an NDC applicable to institutional claims.",
         "min": 0,
         "max": "1",
         "type": [
@@ -88,7 +88,7 @@
         "id": "LineItemComponent.CLM_LINE_NDC_QTY_QLFYR_CD",
         "path": "LineItemComponent.CLM_LINE_NDC_QTY_QLFYR_CD",
         "short": "Line Item NDC Quantity Qualifier Code",
-        "definition": "QUALIFIES THE TYPE OF QUANTITY APPLICABLE TO AN NDC PRESENT ON ALL INSTITUTIONAL CLAIM TYPES (INPATIENT/SNF, OUTPATIENT, HOME HEALTH AND HOSPICE.",
+        "definition": "Qualifies the type of quantity applicable to an NDC present on all institutional claim types (inpatient/SNF, outpatient, home health, and hospice).",
         "min": 0,
         "max": "1",
         "type": [
@@ -101,7 +101,7 @@
         "id": "LineItemComponent.CLM_LINE_SRVC_UNIT_QTY",
         "path": "LineItemComponent.CLM_LINE_SRVC_UNIT_QTY",
         "short": "Line Item Service Unit Quantity",
-        "definition": "THE TOTAL UNITS BILLED FOR A CLAIM LINE.",
+        "definition": "The total units billed for a claim line.",
         "min": 0,
         "max": "1",
         "type": [
@@ -114,7 +114,7 @@
         "id": "LineItemComponent.CLM_LINE_REV_CTR_CD",
         "path": "LineItemComponent.CLM_LINE_REV_CTR_CD",
         "short": "Line Item Revenue Center Code",
-        "definition": "A UNIQUE IDENTIFIER OF A UNIFORM BILLING REVENUE TYPE,     THE PROVIDER-ASSIGNED REVENUE CODE FOR EACH COST CENTER FOR WHICH A SEPARATE CHARGE IS BILLED (TYPE OF ACCOMMODATION OR ANCILLARY). A COST CENTER IS A DIVISION OR UNIT WITHIN A HOSPITAL (E.G., RADIOLOGY, EMERGENCY ROOM, PATHOLOGY).  EXCEPTION: REVENUE CENTER CODE 0001 REPRESENTS THE TOTAL OF ALL REVENUE CENTERS INCLUDED ON THE CLAIM. (NCH)    EXAMPLE: 0123 = SEMI-PRIVATE 2 BED (MEDICAL OR GENERAL)-PEDIATRIC",
+        "definition": "A unique identifier of a uniform billing revenue type. The provider-assigned revenue code for each cost center for which a separate charge is billed (type of accommodation or ancillary). A cost center is a division or unit within a hospital (e.g., radiology, emergency room, pathology). Exception: Revenue center code 0001 represents the total of all revenue centers included on the claim. (NCH) Example: 0123 = Semi-private 2 bed (medical or general) - pediatric",
         "min": 0,
         "max": "1",
         "type": [
@@ -127,7 +127,7 @@
         "id": "LineItemComponent.CLM_DDCTBL_COINSRNC_CD",
         "path": "LineItemComponent.CLM_DDCTBL_COINSRNC_CD",
         "short": "Line Item Revenue Center Code",
-        "definition": "CODE INDICATING WHETHER THE REVENUE CENTER CHARGES ARE SUBJECT TO DEDUCTIBLE AND/OR COINSURANCE. [NCH]",
+        "definition": "Code indicating whether the revenue center charges are subject to deductible and/or coinsurance. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -140,7 +140,7 @@
         "id": "LineItemComponent.HCPCS_1_MDFR_CD",
         "path": "LineItemComponent.HCPCS_1_MDFR_CD",
         "short": "HCPCS Modifier Code 1",
-        "definition": "(1) A FIRST MODIFIER TO THE PROCEDURE CODE TO ENABLE A MORE SPECIFIC PROCEDURE IDENTIFICATION FOR THE CLAIM [NCH]    (2) A FIRST MODIFIER TO THE HCPCS PROCEDURE CODE TO ENABLE A MORE SPECIFIC PROCEDURE IDENTIFICATION FOR THE LINE ITEM SERVICE ON THE NONINSTITUTIONAL CLAIM. [NCH]",
+        "definition": "(1) A first modifier to the procedure code to enable a more specific procedure identification for the claim. [NCH] (2) A first modifier to the HCPCS procedure code to enable a more specific procedure identification for the line item service on the noninstitutional claim. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -153,7 +153,7 @@
         "id": "LineItemComponent.HCPCS_2_MDFR_CD",
         "path": "LineItemComponent.HCPCS_2_MDFR_CD",
         "short": "HCPCS Modifier Code 2",
-        "definition": "(1) A SECOND MODIFIER TO THE PROCEDURE CODE TO MAKE IT MORE SPECIFIC THAN THE FIRST MODIFIER CODE TO IDENTIFY THE PROCEDURES PERFORMED ON THE BENEFICIARY FOR THE CLAIM [NCH]  (2) A SECOND MODIFIER TO THE HCPCS PROCEDURE CODE TO MAKE IT MORE SPECIFIC THAN THE FIRST MODIFIER CODE TO IDENTIFY THE LINE ITEM PROCEDURES FOR THIS CLAIM. [NCH]",
+        "definition": "(1) A second modifier to the procedure code to make it more specific than the first modifier code to identify the procedures performed on the beneficiary for the claim. [NCH] (2) A second modifier to the HCPCS procedure code to make it more specific than the first modifier code to identify the line item procedures for this claim. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -166,7 +166,7 @@
         "id": "LineItemComponent.HCPCS_3_MDFR_CD",
         "path": "LineItemComponent.HCPCS_3_MDFR_CD",
         "short": "HCPCS Modifier Code 3",
-        "definition": "(1) EFFECTIVE WITH NCH VERSION I, A THIRD MODIFIER TO THE PROCEDURE CODE TO MAKE  IT MORE SPECIFIC THAN THE SECOND MODIFIER CODE TO IDENTIFY THE PROCEDURES PERFORMED ON THE BENEFICIARY FOR THE CLAIM. [NCH]  (2) PRIOR TO NCH VERSION H THIS FIELD WAS NAMED: HCPCS_3RD_MDFR_CD. [NCH]",
+        "definition": "(1) Effective with NCH version I, a third modifier to the procedure code to make it more specific than the second modifier code to identify the procedures performed on the beneficiary for the claim. [NCH] (2) Prior to NCH version H this field was named: HCPCS_3RD_MDFR_CD. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -179,7 +179,7 @@
         "id": "LineItemComponent.HCPCS_4_MDFR_CD",
         "path": "LineItemComponent.HCPCS_4_MDFR_CD",
         "short": "HCPCS Modifier Code 4",
-        "definition": "(1) EFFECTIVE WITH VERSION I, A FOURTH MODIFIER TO THE PROCEDURE CODE TO MAKE IT MORE SPECIFIC THAN THE THIRD MODIFIER CODE TO IDENTIFY THE PROCEDURES PERFORMED ON THE BENEFICIARY FOR THE CLAIM. [NCH]  (2) PRIOR TO VERSION H THIS FIELD WAS NAMED: HCPCS_4TH_MDFR_CD. [NCH]",
+        "definition": "(1) Effective with version I, a fourth modifier to the procedure code to make it more specific than the third modifier code to identify the procedures performed on the beneficiary for the claim. [NCH] (2) Prior to version H this field was named: HCPCS_4TH_MDFR_CD. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -192,7 +192,7 @@
         "id": "LineItemComponent.HCPCS_5_MDFR_CD",
         "path": "LineItemComponent.HCPCS_5_MDFR_CD",
         "short": "HCPCS Modifier Code 5",
-        "definition": "EFFECTIVE WITH NCH VERSION I, A FIFTH MODIFIER TO THE PROCEDURE CODE TO MAKE IT MORE SPECIFIC THAN THE FOURTH MODIFIER CODE TO IDENTIFY THE PROCEDURES PERFORMED ON THE BENEFICIARY FOR THE CLAIM. [NCH]",
+        "definition": "Effective with NCH version I, a fifth modifier to the procedure code to make it more specific than the fourth modifier code to identify the procedures performed on the beneficiary for the claim. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -205,7 +205,7 @@
         "id": "LineItemComponent.CLM_LINE_INSTNL_RATE_AMT",
         "path": "LineItemComponent.CLM_LINE_INSTNL_RATE_AMT",
         "short": "Claim Line Institutional Rate Amount",
-        "definition": "CHARGES RELATING TO UNIT COST ASSOCIATED WITH THE REVENUE CENTER CODE.  EXCEPTION (ENCOUNTER DATA ONLY):  IF PLAN (E.G. MCO) DOES NOT KNOW THE ACTUAL RATE FOR THE ACCOMMODATIONS, $1 WILL BE REPORTED IN THE FIELD.  NOTE1:  FOR SNF PPS CLAIMS (WHEN REVENUE CENTER CODE EQUALS 0022), CMS HAS DEVELOPED A SNF PRICER TO COMPUTE THE RATE BASED ON THE PROVIDER SUPPLIED CODING FOR THE MDS RUGS III GROUP AND ASSESSMENT TYPE (HIPPS CODE, STORED IN REVENUE CENTER HCPCS CODE FIELD).  NOTE2:  FOR OP PPS CLAIMS, CMS HAS DEVELOPED A PRICER TO COMPUTE THE RATE BASED ON THE AMBULATORY PAYMENT CLASSIFICATION (APC), DISCOUNT FACTOR, UNITS OF SERVICE AND THE WAGE INDEX.  NOTE3:  UNDER HH PPS (WHEN REVENUE CENTER CODE EQUALS 0023), CMS HAS DEVELOPED A HHA PRICER TO COMPUTE THE RATE.  ON THE RAP, THE RATE IS DETERMINED USING THE CASE MIX WEIGHT ASSOCIATED WITH THE HIPPS CODE, ADJUSTING IT FOR THE WAGE INDEX FOR THE BENEFICIARYS SITE OF SERVICE, THEN MULTIPLYING THE RESULT BY 60% OR 50%, DEPENDING ON WHETHER OR NOT THE RAP IS FOR A FIRST EPISODE.  ON THE FINAL CLAIM, THE HIPPS CODE COULD CHANGE THE PAYMENT IF THE THERAPY THRESHOLD IS NOT MET, OR PARTIAL EPISODE PAYMENT (PEP) ADJUSTMENT OR A SIGNIFICANT CHANGE IN CONDITION (SCIC) ADJUSTMENT. IN CASES OF SCICS, THERE WILL BE MORE THAN ONE 0023 REVENUE CENTER LINE, EACH REPRESENTING THE PAYMENT MADE AT EACH CASE-MIX LEVEL.  NOTE4:  FOR IRF PPS CLAIMS (WHEN REVENUE CENTER CODE EQUALS 0024), CMS HAS DEVELOPED A PRICER TO COMPUTE THE RATE BASED ON THE HIPPS/CMG (HIPPS CODE, STORED IN REVENUE CENTER HCPCS CODE FIELD). [NCH]",
+        "definition": "Charges relating to unit cost associated with the revenue center code. Exception (encounter data only): if the plan (e.g., MCO) does not know the actual rate for the accommodations, $1 will be reported in the field. Note 1: For SNF PPS claims (when revenue center code equals 0022), CMS has developed a SNF Pricer to compute the rate based on the provider supplied coding for the MDS RUGS III group and assessment type (HIPPS code, stored in revenue center HCPCS code field). Note 2: For OP PPS claims, CMS has developed a Pricer to compute the rate based on the Ambulatory Payment Classification (APC), discount factor, units of service, and the wage index. Note 3: Under HH PPS (when revenue center code equals 0023), CMS has developed a HHA Pricer to compute the rate. On the RAP, the rate is determined using the case mix weight associated with the HIPPS code, adjusting it for the wage index for the beneficiary's site of service, then multiplying the result by 60% or 50%, depending on whether or not the RAP is for a first episode. On the final claim, the HIPPS code could change the payment if the therapy threshold is not met, or a partial episode payment (PEP) adjustment or a significant change in condition (SCIC) adjustment occurs. In cases of SCICs, there will be more than one 0023 revenue center line, each representing the payment made at each case-mix level. Note 4: For IRF PPS claims (when revenue center code equals 0024), CMS has developed a Pricer to compute the rate based on the HIPPS/CMG (HIPPS code, stored in revenue center HCPCS code field). [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -218,7 +218,7 @@
         "id": "LineItemComponent.CLM_1_REV_CNTR_ANSI_RSN_CD",
         "path": "LineItemComponent.CLM_1_REV_CNTR_ANSI_RSN_CD",
         "short": "Claim Line Adjustment Reason Code 1",
-        "definition": "AN AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) CLAIM ADJUSTMENT REASON CODE (CARC) IDENTIFYING THE REASON FOR AN ADJUSTMENT TO A CLAIM OR SERVICE LINE THAT RESULTED IN A DIFFERENCE BETWEEN THE ORIGINAL BILLED AMOUNT AND THE FINAL PAID AMOUNT. AN ADJUSTMENT CAN RESULT IN A DENIAL, REDUCTION, OR INCREASE  IN PAYMENT.  FOR EXAMPLE:  1 = DEDUCTIBLE AMOUNT  B1 = NON-COVERED VISITS",
+        "definition": "An American National Standards Institute (ANSI) Claim Adjustment Reason Code (CARC) identifying the reason for an adjustment to a claim or service line that resulted in a difference between the original billed amount and the final paid amount. An adjustment can result in a denial, reduction, or increase in payment. For example: 1 = Deductible amount. B1 = Non-covered visits.",
         "min": 0,
         "max": "1",
         "type": [
@@ -231,7 +231,7 @@
         "id": "LineItemComponent.CLM_2_REV_CNTR_ANSI_RSN_CD",
         "path": "LineItemComponent.CLM_2_REV_CNTR_ANSI_RSN_CD",
         "short": "Claim Line Adjustment Reason Code 2",
-        "definition": "AN AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) CLAIM ADJUSTMENT REASON CODE (CARC) IDENTIFYING THE REASON FOR AN ADJUSTMENT TO A CLAIM OR SERVICE LINE THAT RESULTED IN A DIFFERENCE BETWEEN THE ORIGINAL BILLED AMOUNT AND THE FINAL PAID AMOUNT. AN ADJUSTMENT CAN RESULT IN A DENIAL, REDUCTION, OR INCREASE  IN PAYMENT.  FOR EXAMPLE:  1 = DEDUCTIBLE AMOUNT  B1 = NON-COVERED VISITS",
+        "definition": "An American National Standards Institute (ANSI) Claim Adjustment Reason Code (CARC) identifying the reason for an adjustment to a claim or service line that resulted in a difference between the original billed amount and the final paid amount. An adjustment can result in a denial, reduction, or increase in payment. For example: 1 = Deductible amount. B1 = Non-covered visits.",
         "min": 0,
         "max": "1",
         "type": [
@@ -244,7 +244,7 @@
         "id": "LineItemComponent.CLM_3_REV_CNTR_ANSI_RSN_CD",
         "path": "LineItemComponent.CLM_3_REV_CNTR_ANSI_RSN_CD",
         "short": "Claim Line Adjustment Reason Code 3",
-        "definition": "AN AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) CLAIM ADJUSTMENT REASON CODE (CARC) IDENTIFYING THE REASON FOR AN ADJUSTMENT TO A CLAIM OR SERVICE LINE THAT RESULTED IN A DIFFERENCE BETWEEN THE ORIGINAL BILLED AMOUNT AND THE FINAL PAID AMOUNT. AN ADJUSTMENT CAN RESULT IN A DENIAL, REDUCTION, OR INCREASE  IN PAYMENT.  FOR EXAMPLE:  1 = DEDUCTIBLE AMOUNT  B1 = NON-COVERED VISITS",
+        "definition": "An American National Standards Institute (ANSI) Claim Adjustment Reason Code (CARC) identifying the reason for an adjustment to a claim or service line that resulted in a difference between the original billed amount and the final paid amount. An adjustment can result in a denial, reduction, or increase in payment. For example: 1 = Deductible amount. B1 = Non-covered visits.",
         "min": 0,
         "max": "1",
         "type": [
@@ -257,7 +257,7 @@
         "id": "LineItemComponent.CLM_4_REV_CNTR_ANSI_RSN_CD",
         "path": "LineItemComponent.CLM_4_REV_CNTR_ANSI_RSN_CD",
         "short": "Claim Line Adjustment Reason Code 4",
-        "definition": "AN AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) CLAIM ADJUSTMENT REASON CODE (CARC) IDENTIFYING THE REASON FOR AN ADJUSTMENT TO A CLAIM OR SERVICE LINE THAT RESULTED IN A DIFFERENCE BETWEEN THE ORIGINAL BILLED AMOUNT AND THE FINAL PAID AMOUNT. AN ADJUSTMENT CAN RESULT IN A DENIAL, REDUCTION, OR INCREASE  IN PAYMENT.  FOR EXAMPLE:  1 = DEDUCTIBLE AMOUNT  B1 = NON-COVERED VISITS",
+        "definition": "An American National Standards Institute (ANSI) Claim Adjustment Reason Code (CARC) identifying the reason for an adjustment to a claim or service line that resulted in a difference between the original billed amount and the final paid amount. An adjustment can result in a denial, reduction, or increase in payment. For example: 1 = Deductible amount. B1 = Non-covered visits.",
         "min": 0,
         "max": "1",
         "type": [
@@ -270,7 +270,7 @@
         "id": "LineItemComponent.CLM_1_REV_CNTR_ANSI_GRP_CD",
         "path": "LineItemComponent.CLM_1_REV_CNTR_ANSI_GRP_CD",
         "short": "Claim Line Adjustment Group Code 1",
-        "definition": "AN AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) GROUP CODE IDENTIFYING WHO HAS FINANCIAL RESPONSIBILITY FOR AN ADJUSTMENT TO A CLAIM OR SERVICE LINE  THAT RESULTED IN IT BEING PAID DIFFERENTLY THAN IT WAS BILLED. THIS GROUP CODE WORKS IN CONJUNCTION WITH A CLAIM ADJUSTMENT REASON CODE (CARC).  FOR EXAMPLE:  PR = PATIENT RESPONSIBILITY (PATIENT IS FINANCIALLY LIABLE)  CO = CONTRACTUAL OBLIGATIONS (PROVIDER IS FINANCIALLY LIABLE)",
+        "definition": "An American National Standards Institute (ANSI) group code identifying who has financial responsibility for an adjustment to a claim or service line that resulted in it being paid differently than it was billed. This group code works in conjunction with a Claim Adjustment Reason Code (CARC). For example: PR = Patient responsibility (patient is financially liable). CO = Contractual obligations (provider is financially liable).",
         "min": 0,
         "max": "1",
         "type": [
@@ -283,7 +283,7 @@
         "id": "LineItemComponent.CLM_2_REV_CNTR_ANSI_GRP_CD",
         "path": "LineItemComponent.CLM_2_REV_CNTR_ANSI_GRP_CD",
         "short": "Claim Line Adjustment Group Code 2",
-        "definition": "AN AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) GROUP CODE IDENTIFYING WHO HAS FINANCIAL RESPONSIBILITY FOR AN ADJUSTMENT TO A CLAIM OR SERVICE LINE  THAT RESULTED IN IT BEING PAID DIFFERENTLY THAN IT WAS BILLED. THIS GROUP CODE WORKS IN CONJUNCTION WITH A CLAIM ADJUSTMENT REASON CODE (CARC).  FOR EXAMPLE:  PR = PATIENT RESPONSIBILITY (PATIENT IS FINANCIALLY LIABLE)  CO = CONTRACTUAL OBLIGATIONS (PROVIDER IS FINANCIALLY LIABLE)",
+        "definition": "An American National Standards Institute (ANSI) group code identifying who has financial responsibility for an adjustment to a claim or service line that resulted in it being paid differently than it was billed. This group code works in conjunction with a Claim Adjustment Reason Code (CARC). For example: PR = Patient responsibility (patient is financially liable). CO = Contractual obligations (provider is financially liable).",
         "min": 0,
         "max": "1",
         "type": [
@@ -296,7 +296,7 @@
         "id": "LineItemComponent.CLM_3_REV_CNTR_ANSI_GRP_CD",
         "path": "LineItemComponent.CLM_3_REV_CNTR_ANSI_GRP_CD",
         "short": "Claim Line Adjustment Group Code 3",
-        "definition": "AN AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) GROUP CODE IDENTIFYING WHO HAS FINANCIAL RESPONSIBILITY FOR AN ADJUSTMENT TO A CLAIM OR SERVICE LINE  THAT RESULTED IN IT BEING PAID DIFFERENTLY THAN IT WAS BILLED. THIS GROUP CODE WORKS IN CONJUNCTION WITH A CLAIM ADJUSTMENT REASON CODE (CARC).  FOR EXAMPLE:  PR = PATIENT RESPONSIBILITY (PATIENT IS FINANCIALLY LIABLE)  CO = CONTRACTUAL OBLIGATIONS (PROVIDER IS FINANCIALLY LIABLE)",
+        "definition": "An American National Standards Institute (ANSI) group code identifying who has financial responsibility for an adjustment to a claim or service line that resulted in it being paid differently than it was billed. This group code works in conjunction with a Claim Adjustment Reason Code (CARC). For example: PR = Patient responsibility (patient is financially liable). CO = Contractual obligations (provider is financially liable).",
         "min": 0,
         "max": "1",
         "type": [
@@ -309,7 +309,7 @@
         "id": "LineItemComponent.CLM_4_REV_CNTR_ANSI_GRP_CD",
         "path": "LineItemComponent.CLM_4_REV_CNTR_ANSI_GRP_CD",
         "short": "Claim Line Adjustment Group Code 4",
-        "definition": "AN AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) GROUP CODE IDENTIFYING WHO HAS FINANCIAL RESPONSIBILITY FOR AN ADJUSTMENT TO A CLAIM OR SERVICE LINE  THAT RESULTED IN IT BEING PAID DIFFERENTLY THAN IT WAS BILLED. THIS GROUP CODE WORKS IN CONJUNCTION WITH A CLAIM ADJUSTMENT REASON CODE (CARC).  FOR EXAMPLE:  PR = PATIENT RESPONSIBILITY (PATIENT IS FINANCIALLY LIABLE)  CO = CONTRACTUAL OBLIGATIONS (PROVIDER IS FINANCIALLY LIABLE)",
+        "definition": "An American National Standards Institute (ANSI) group code identifying who has financial responsibility for an adjustment to a claim or service line that resulted in it being paid differently than it was billed. This group code works in conjunction with a Claim Adjustment Reason Code (CARC). For example: PR = Patient responsibility (patient is financially liable). CO = Contractual obligations (provider is financially liable).",
         "min": 0,
         "max": "1",
         "type": [
@@ -322,7 +322,7 @@
         "id": "LineItemComponent.CLM_LINE_NCVRD_CHRG_AMT",
         "path": "LineItemComponent.CLM_LINE_NCVRD_CHRG_AMT",
         "short": "Non-Covered Charge Amount",
-        "definition": "THE CHARGE AMOUNT RELATED TO A REVENUE CENTER CODE FOR SERVICES THAT ARE NOT COVERED BY MEDICARE.    NOTE:  PRIOR TO NCH VERSION H THE FIELD SIZE WAS S9(7)V99 AND THE ELEMENT WAS ONLY PRESENT ON THE INPATIENT/SNF FORMAT. AS OF NCH WEEKLY PROCESS DATE 10/3/97 THIS FIELD WAS ADDED TO ALL INSTITUTIONAL CLAIM TYPES. [NCH]",
+        "definition": "The charge amount related to a revenue center code for services that are not covered by Medicare. Note: Prior to NCH version H the field size was S9(7)V99 and the element was only present on the inpatient/SNF format. As of NCH weekly process date 10/3/97 this field was added to all institutional claim types. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -335,7 +335,7 @@
         "id": "LineItemComponent.CLM_LINE_PRVDR_PMT_AMT",
         "path": "LineItemComponent.CLM_LINE_PRVDR_PMT_AMT",
         "short": "Provider Payment Amount",
-        "definition": "(1) EFFECTIVE WITH NCH VERSION H, THE PAYMENT MADE TO THE PROVIDER FOR THE LINE ITEM SERVICE ON THE NONINSTITUTIONAL CLAIM.  NOTE:  BEGINNING WITH NCH WEEKLY PROCESS DATE 10/3/97 THIS FIELD WAS POPULATED WITH DATA. CLAIMS PROCESSED PRIOR TO 10/3/97 WILL CONTAIN ZEROES IN THIS FIELD.[NCH]  (2) EFFECTIVE WITH VERSION I, THE AMOUNT PAID TO THE PROVIDER FOR THE SERVICES REPORTED ON THE LINE ITEM.  NOTE1:  THIS FIELD IS POPULATED FOR THOSE CLAIMS THAT ARE REQUIRED TO PROCESS THROUGH OUTPATIENT PPS PRICER.  THE TYPE OF BILLS (TOB) REQUIRED TO PROCESS THROUGH ARE: 12X, 13X, 14X (EXCEPT MARYLAND PROVIDERS, INDIAN HEALTH PROVIDERS, HOSPITALS LOCATED IN AMERICAN SAMOA, GUAM AND SAIPAN AND CRITICAL ACCESS HOSPITALS (CAH)); 76X; 75X AND 34X IF CERTAIN HCPCS ARE ON THE BILL; AND ANY OUTPATIENT TYPE OF BILL WITH A CONDITION CODE 07 AND CERTAIN HCPCS.  THESE CLAIM TYPES COULD HAVE LINES THAT ARE NOT REQUIRED TO PRICE UNDER OPPS RULES SO THOSE LINES WOULD NOT HAVE DATA IN THIS FIELD.  ADDITIONAL EXCEPTION:  VIRGIN ISLAND HOSPITALS AND HOSPITALS THAT FURNISH ONLY INPATIENT PART B SERVICES WITH DATES OF SERVICE 1/1/02 AND FORWARD.   ANAMOLY: FOR DATES OF SERVICE AUGUST 1, 2000 TO THE PRESENT, THE OPPS REVENUE CENTER FIELDS ARE BEING PROCESSED DIFFERENTLY BY FISS AND APASS (STANDARD SYSTEMS). FOR MORE INFORMATION ON OPPS DATA PROBLEMS FOR THIS TIME PERIOD SEE LIMITATIONS APPENDIX.  THE FOLLOWING IS HOW EACH SYSTEM HANDLES THIS FIELD:  FISS:  POPULATED CORRECTLY WITH PROVIDER PAYMENT AMOUNT  APASS: PROVIDER PAYMENT AMOUNT PLUS INTEREST ON 1ST REVENUE CENTER LINE (CMM WILL INSTRUCT APASS NOT TO INCLUDE INTEREST)  CURRENTLY, THE FOLLOWING FI NUMBERS ARE UNDER THE APASS SYSTEM AND ALL OTHER FI NUMBERS ARE UNDER FISS.  SEE FI_NUM TABLE OF CODES FOR ALL FI NUMBERS.  52280 -- MUTUAL OF OMAHA (UNTIL 6/1/2003)  00430 -- WASHINGTON/ALASKA (UNTIL 11/1/2003)  00310 -- NORTH CAROLINA BC (UNTIL 12/1/2003)  00370 -- RHODE ISLAND (UNTIL 2/1/2004)  00270 -- NEW HAMPSHIRE/VERMONT (UNTIL 3/1/2004)  00181 -- MAINE/MASSACHUSETTS (UNTIL 5/1/2004)  NOTE2:  IT HAS BEEN DISCOVERED THAT THIS FIELD MAY BE POPULATED WITH DATA ON CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 (IMPLEMENTATION OF CLAIM LINE EXPANSION OPPS/HHPPS).  THE ORIGINAL UNDERSTANDING OF THE NEW REVENUE CENTER FIELDS WAS THAT DATA WOULD BE POPULATED ON CLAIMS WITH DATES OF SERVICE 7/00 AND FORWARD.  DATA HAS BEEN FOUND IN CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 BECAUSE THE STANDARD SYSTEMS HAVE PROCESSED ANY CLAIM COMING IN 7/00 AND AFTER, MEETING THE ABOVE CRITERIA, THROUGH THE OUTPATIENT CODE EDITOR (OCE) REGARDLESS OF THE DATES OF SERVICE. [NCH]",
+        "definition": "(1) Effective with NCH version H, the payment made to the provider for the line item service on the noninstitutional claim. Note: Beginning with NCH weekly process date 10/3/97 this field was populated with data. Claims processed prior to 10/3/97 will contain zeroes in this field. [NCH] (2) Effective with version I, the amount paid to the provider for the services reported on the line item. Note 1: This field is populated for those claims that are required to process through outpatient PPS Pricer. The types of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian health providers, hospitals located in American Samoa, Guam, and Saipan, and critical access hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code 07 and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field. Additional exception: Virgin Island hospitals and hospitals that furnish only inpatient Part B services with dates of service 1/1/02 and forward. Anomaly: For dates of service August 1, 2000 to the present, the OPPS revenue center fields are being processed differently by FISS and APASS (standard systems). For more information on OPPS data problems for this time period see the Limitations Appendix. The following is how each system handles this field: FISS: Populated correctly with provider payment amount. APASS: Provider payment amount plus interest on 1st revenue center line (CMM will instruct APASS not to include interest). Currently, the following FI numbers are under the APASS system and all other FI numbers are under FISS. See FI_NUM table of codes for all FI numbers. 52280 -- Mutual of Omaha (until 6/1/2003). 00430 -- Washington/Alaska (until 11/1/2003). 00310 -- North Carolina BC (until 12/1/2003). 00370 -- Rhode Island (until 2/1/2004). 00270 -- New Hampshire/Vermont (until 3/1/2004). 00181 -- Maine/Massachusetts (until 5/1/2004). Note 2: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of claim line expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the standard systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -348,7 +348,7 @@
         "id": "LineItemComponent.CLM_LINE_BENE_PMT_AMT",
         "path": "LineItemComponent.CLM_LINE_BENE_PMT_AMT",
         "short": "Patient Responsibility Payment Amount",
-        "definition": "AN AMOUNT IDENTIFYING THE PAYMENT MADE BY A BENEFICIARY FOR A DETAIL LINE OF SERVICE ON A CLAIM.  NOTE: FOR PART D, THIS AMOUNT COUNT TOWARDS A BENEFICIARYS TRUE-OUT-OF-POCKET (TROOP) COST.",
+        "definition": "An amount identifying the payment made by a beneficiary for a detail line of service on a claim. Note: For Part D, this amount counts towards a beneficiary's true-out-of-pocket (TROOP) cost.",
         "min": 0,
         "max": "1",
         "type": [
@@ -361,7 +361,7 @@
         "id": "LineItemComponent.CLM_LINE_BENE_PD_AMT",
         "path": "LineItemComponent.CLM_LINE_BENE_PD_AMT",
         "short": "Beneficiary Paid Amount",
-        "definition": "AN AMOUNT IDENTIFYING THE PAYMENT MADE TO A BENEFICIARY FOR A DETAIL LINE OF SERVICE.",
+        "definition": "An amount identifying the payment made to a beneficiary for a detail line of service.",
         "min": 0,
         "max": "1",
         "type": [
@@ -374,7 +374,7 @@
         "id": "LineItemComponent.CLM_LINE_CVRD_PD_AMT",
         "path": "LineItemComponent.CLM_LINE_CVRD_PD_AMT",
         "short": "Claim Line Covered Paid Amount",
-        "definition": "AN AMOUNT IDENTIFYING THE MEDICARE PAYMENT FOR A LINE ITEM SERVICE.",
+        "definition": "An amount identifying the Medicare payment for a line item service.",
         "min": 0,
         "max": "1",
         "type": [
@@ -387,7 +387,7 @@
         "id": "LineItemComponent.CLM_LINE_BLOOD_DDCTBL_AMT",
         "path": "LineItemComponent.CLM_LINE_BLOOD_DDCTBL_AMT",
         "short": "Claim Line Blood Deductible Amount",
-        "definition": "AN AMOUNT IDENTIFYING THE BLOOD DEDUCTIBLE A BENEFICIARY IS RESPONSIBLE FOR ON A DETAIL LINE OF SERVICE.",
+        "definition": "An amount identifying the blood deductible a beneficiary is responsible for on a detail line of service.",
         "min": 0,
         "max": "1",
         "type": [
@@ -400,7 +400,7 @@
         "id": "LineItemComponent.CLM_LINE_MDCR_DDCTBL_AMT",
         "path": "LineItemComponent.CLM_LINE_MDCR_DDCTBL_AMT",
         "short": "Part B Deductible Amount",
-        "definition": "(1) EFFECTIVE WITH NCH VERSION I THE AMOUNT OF CASH DEDUCTIBLE THE BENEFICIARY PAID FOR THE LINE ITEM SERVICE.  NOTE1:  THIS FIELD IS POPULATED FOR THOSE CLAIMS THAT ARE REQUIRED TO PROCESS THROUGH OUTPATIENT PPS PRICER.  THE TYPE OF BILLS (TOB) REQUIRED TO PROCESS THROUGH ARE: 12X, 13X, 14X (EXCEPT MARYLAND PROVIDERS, INDIAN HEALTH PROVIDERS, HOSPITALS LOCATED IN AMERICAN SAMOA, GUAM AND SAIPAN AND CRITICAL ACCESS HOSPITALS (CAH)); 76X; 75X AND 34X IF CERTAIN HCPCS ARE ON THE BILL; AND ANY OUTPATIENT TYPE OF BILL WITH A CONDITION CODE 07 AND CERTAIN HCPCS.  THESE CLAIM TYPES COULD HAVE LINES THAT ARE NOT REQUIRED TO PRICE UNDER OPPS RULES SO THOSE LINES WOULD NOT HAVE DATA IN THIS FIELD.  ADDITIONAL EXCEPTION:  VIRGIN ISLAND HOSPITALS AND HOSPITALS THAT FURNISH ONLY INPATIENT PART B SERVICES WITH DATES OF SERVICE 1/1/02 AND FORWARD.  NOTE2:  IT HAS BEEN DISCOVERED THAT THIS FIELD MAY BE POPULATED WITH DATA ON CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 (IMPLEMENTATION OF CLAIM LINE EXPANSION OPPS/HHPPS).  THE ORIGINAL UNDERSTANDING OF THE NEW REVENUE CENTER FIELDS WAS THAT DATA WOULD BE POPULATED ON CLAIMS WITH DATES OF SERVICE 7/00 AND FORWARD.  DATA HAS BEEN FOUND IN CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 BECAUSE THE STANDARD SYSTEMS HAVE PROCESSED ANY CLAIM COMING IN 7/00 AND AFTER, MEETING THE ABOVE CRITERIA, THROUGH THE OUTPATIENT CODE EDITOR (OCE) REGARDLESS OF THE DATES OF SERVICE. [NCH]  (2) THE AMOUNT OF MONEY FOR WHICH THE CARRIER HAS DETERMINED THAT THE BENEFICIARY IS LIABLE FOR THE PART B CASH DEDUCTIBLE FOR THE LINE ITEM SERVICE ON THE NONINSTITUTIONAL CLAIM. [NCH]",
+        "definition": "(1) Effective with NCH version I, the amount of cash deductible the beneficiary paid for the line item service. Note 1: This field is populated for those claims that are required to process through outpatient PPS Pricer. The types of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian health providers, hospitals located in American Samoa, Guam, and Saipan, and critical access hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code 07 and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field. Additional exception: Virgin Island hospitals and hospitals that furnish only inpatient Part B services with dates of service 1/1/02 and forward. Note 2: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of claim line expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the standard systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service. [NCH] (2) The amount of money for which the carrier has determined that the beneficiary is liable for the Part B cash deductible for the line item service on the noninstitutional claim. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -413,7 +413,7 @@
         "id": "LineItemComponent.CLM_LINE_INSTNL_ADJSTD_AMT",
         "path": "LineItemComponent.CLM_LINE_INSTNL_ADJSTD_AMT",
         "short": "Revenue Center Coinsurance/Wage Adjusted Coinsurance Amount",
-        "definition": "EFFECTIVE WITH NCH VERSION I, THE AMOUNT OF COINSURANCE APPLICABLE TO THE LINE ITEM SERVICE DEFINED BY THE REVENUE CENTER AND HCPCS CODES.  FOR THOSE SERVICES SUBJECT TO OUTPATIENT PPS, THE APPLICABLE COINSURANCE IS WAGE ADJUSTED.  NOTE1:  THIS FIELD IS POPULATED FOR THOSE CLAIMS THAT ARE REQUIRED TO PROCESS THROUGH OUTPATIENT PPS PRICER.  THE TYPE OF BILLS (TOB) REQUIRED TO PROCESS THROUGH ARE: 12X, 13X, 14X (EXCEPT MARYLAND PROVIDERS, INDIAN HEALTH PROVIDERS AND CRITICAL ACCESS HOSPITALS (CAH)); 76X; 75X AND 34X IF CERTAIN HCPCS ARE ON THE BILL; AND ANY OUTPATIENT TYPE OF BILL WITH A CONDITION CODE 07 AND CERTAIN HCPCS.  THE ABOVE CLAIM TYPES COULD HAVE LINES THAT ARE NOT REQUIRED TO PRICE UNDER OPPS RULES SO THOSE LINES WOULD NOT HAVE DATA IN THIS FIELD.  NOTE2:  THIS FIELD WILL HAVE EITHER A ZERO (FOR SERVICES FOR WHICH COINSURANCE IS NOT APPLICABLE), A REGULAR COINSURANCE AMOUNT (CALCULATED ON EITHER CHARGES OR A FEE SCHEDULE) OR IF SUBJECT TO OP PPS THE NATIONAL COINSURANCE AMOUNT WILL BE WAGE ADJUSTED. THE WAGE ADJUSTED COINSURANCE IS BASED ON THE MSA WHERE THE PROVIDER IS LOCATED OR ASSIGNED AS A RESULT OF A RECLASSIFICATION.  NOTE3:  IT HAS BEEN DISCOVERED THAT THIS FIELD MAY BE POPULATED WITH DATA ON CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 (IMPLEMENTATION OF CLAIM LINE EXPANSION OPPS/HHPPS).  THE ORIGINAL UNDERSTANDING OF THE NEW REVENUE CENTER FIELDS WAS THAT DATA WOULD BE POPULATED ON CLAIMS WITH DATES OF SERVICE 7/00 AND FORWARD.  DATA HAS BEEN FOUND IN CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 BECAUSE THE STANDARD SYSTEMS HAVE PROCESSED ANY CLAIM COMING IN 7/00 AND AFTER, MEETING THE ABOVE CRITERIA, THROUGH THE OUTPATIENT CODE EDITOR (OCE) REGARDLESS OF THE DATES OF SERVICE [NCH]",
+        "definition": "Effective with NCH version I, the amount of coinsurance applicable to the line item service defined by the revenue center and HCPCS codes. For those services subject to outpatient PPS, the applicable coinsurance is wage adjusted. Note 1: This field is populated for those claims that are required to process through outpatient PPS Pricer. The types of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian health providers, and critical access hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code 07 and certain HCPCS. The above claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field. Note 2: This field will have either a zero (for services for which coinsurance is not applicable), a regular coinsurance amount (calculated on either charges or a fee schedule), or if subject to OP PPS the national coinsurance amount will be wage adjusted. The wage adjusted coinsurance is based on the MSA where the provider is located or assigned as a result of a reclassification. Note 3: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of claim line expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the standard systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -426,7 +426,7 @@
         "id": "LineItemComponent.CLM_LINE_INSTNL_RDCD_AMT",
         "path": "LineItemComponent.CLM_LINE_INSTNL_RDCD_AMT",
         "short": "Revenue Center Reduced Coinsurance Amount",
-        "definition": "EFFECTIVE WITH NCH VERSION I, FOR ALL SERVICES SUBJECT TO OUTPATIENT PPS, THE AMOUNT OF COINSURANCE APPLICABLE TO THE LINE FOR A PARTICULAR SERVICE (HCPCS) FOR WHICH THE PROVIDER HAS ELECTED TO REDUCE THE COINSURANCE AMOUNT.  NOTE1:  THIS FIELD IS POPULATED FOR THOSE CLAIMS THAT ARE REQUIRED TO PROCESS THROUGH OUTPATIENT PPS PRICER.  THE TYPE OF BILLS (TOB) REQUIRED TO PROCESS THROUGH ARE: 12X, 13X, 14X (EXCEPT MARYLAND PROVIDERS, INDIAN HEALTH PROVIDERS, HOSPITALS LOCATED IN AMERICAN SAMOA, GUAM AND SAIPAN AND CRITICAL ACCESS HOSPITALS (CAH)); 76X; 75X AND 34X IF CERTAIN HCPCS ARE ON THE BILL; AND ANY OUTPATIENT TYPE OF BILL WITH A CONDITION CODE 07 AND CERTAIN HCPCS.  THESE CLAIM TYPES COULD HAVE LINES THAT ARE NOT REQUIRED TO PRICE UNDER OPPS RULES SO THOSE LINES WOULD NOT HAVE DATA IN THIS FIELD.  ADDITIONAL EXCEPTION:  VIRGIN ISLAND HOSPITALS AND HOSPITALS THAT FURNISH ONLY INPATIENT PART B SERVICES WITH DATES OF SERVICE 1/1/02 AND FORWARD.  NOTE2:  THE REDUCED COINSURANCE AMOUNT CANNOT BE LOWER THAN 20% OF THE PAYMENT RATE FOR THE APC LINE.  NOTE3:  IT HAS BEEN DISCOVERED THAT THIS FIELD MAY BE POPULATED WITH DATA ON CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 (IMPLEMENTATION OF CLAIM LINE EXPANSION OPPS/HHPPS).  THE ORIGINAL UNDERSTANDING OF THE NEW REVENUE CENTER FIELDS WAS THAT DATA WOULD BE POPULATED ON CLAIMS WITH DATES OF SERVICE 7/00 AND FORWARD.  DATA HAS BEEN FOUND IN CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 BECAUSE THE STANDARD SYSTEMS HAVE PROCESSED ANY CLAIM COMING IN 7/00 AND AFTER, MEETING THE ABOVE CRITERIA, THROUGH THE OUTPATIENT CODE EDITOR (OCE) REGARDLESS OF THE DATES OF SERVICE. [NCH]",
+        "definition": "Effective with NCH version I, for all services subject to outpatient PPS, the amount of coinsurance applicable to the line for a particular service (HCPCS) for which the provider has elected to reduce the coinsurance amount. Note 1: This field is populated for those claims that are required to process through outpatient PPS Pricer. The types of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian health providers, hospitals located in American Samoa, Guam, and Saipan, and critical access hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code 07 and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field. Additional exception: Virgin Island hospitals and hospitals that furnish only inpatient Part B services with dates of service 1/1/02 and forward. Note 2: The reduced coinsurance amount cannot be lower than 20% of the payment rate for the APC line. Note 3: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of claim line expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the standard systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -439,7 +439,7 @@
         "id": "LineItemComponent.CLM_LINE_INSTNL_MSP1_PD_AMT",
         "path": "LineItemComponent.CLM_LINE_INSTNL_MSP1_PD_AMT",
         "short": "Revenue Center 1st Medicare Secondary Payer Paid Amount",
-        "definition": "EFFECTIVE WITH NCH VERSION I, THE AMOUNT PAID BY THE PRIMARY PAYER WHEN THE PAYER IS PRIMARY TO MEDICARE (MEDICARE IS SECONDARY).  NOTE1:  THIS FIELD IS POPULATED FOR THOSE CLAIMS THAT ARE REQUIRED TO PROCESS THROUGH OUTPATIENT PPS PRICER.  THE TYPE OF BILLS (TOB) REQUIRED TO PROCESS THROUGH ARE: 12X, 13X, 14X (EXCEPT MARYLAND PROVIDERS, INDIAN HEALTH PROVIDERS, HOSPITALS LOCATED IN AMERICAN SAMOA, GUAM AND SAIPAN AND CRITICAL ACCESS HOSPITALS (CAH)); 76X; 75X AND 34X IF CERTAIN HCPCS ARE ON THE BILL; AND ANY OUTPATIENT TYPE OF BILL WITH A CONDITION CODE 07 AND CERTAIN HCPCS.  THESE CLAIM TYPES COULD HAVE LINES THAT ARE NOT REQUIRED TO PRICE UNDER OPPS RULES SO THOSE LINES WOULD NOT HAVE DATA IN THIS FIELD.  ADDITIONAL EXCEPTION:  VIRGIN ISLAND HOSPITALS AND HOSPITALS THAT FURNISH ONLY INPATIENT PART B SERVICES WITH DATES OF SERVICE 1/1/02 AND FORWARD.  NOTE2:  IT HAS BEEN DISCOVERED THAT THIS FIELD MAY BE POPULATED WITH DATA ON CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 (IMPLEMENTATION OF CLAIM LINE EXPANSION OPPS/HHPPS).  THE ORIGINAL UNDERSTANDING OF THE NEW REVENUE CENTER FIELDS WAS THAT DATA WOULD BE POPULATED ON CLAIMS WITH DATES OF SERVICE 7/00 AND FORWARD.  DATA HAS BEEN FOUND IN CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 BECAUSE THE STANDARD SYSTEMS HAVE PROCESSED ANY CLAIM COMING IN 7/00 AND AFTER, MEETING THE ABOVE CRITERIA, THROUGH THE OUTPATIENT CODE EDITOR (OCE) REGARDLESS OF THE DATES OF SERVICE. [NCH]",
+        "definition": "Effective with NCH version I, the amount paid by the primary payer when the payer is primary to Medicare (Medicare is secondary). Note 1: This field is populated for those claims that are required to process through outpatient PPS Pricer. The types of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian health providers, hospitals located in American Samoa, Guam, and Saipan, and critical access hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code 07 and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field. Additional exception: Virgin Island hospitals and hospitals that furnish only inpatient Part B services with dates of service 1/1/02 and forward. Note 2: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of claim line expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the standard systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -452,7 +452,7 @@
         "id": "LineItemComponent.CLM_LINE_INSTNL_MSP2_PD_AMT",
         "path": "LineItemComponent.CLM_LINE_INSTNL_MSP2_PD_AMT",
         "short": "Revenue Center 2nd Medicare Secondary Payer Paid Amount",
-        "definition": "EFFECTIVE WITH NCH VERSION I, THE AMOUNT PAID BY THE SECONDARY PAYER WHEN TWO PAYERS ARE PRIMARY TO MEDICARE (MEDICARE IS THE TERTIARY PAYER).  NOTE1:  THIS FIELD IS POPULATED FOR THOSE CLAIMS THAT ARE REQUIRED TO PROCESS THROUGH OUTPATIENT PPS PRICER.  THE TYPE OF BILLS (TOB) REQUIRED TO PROCESS THROUGH ARE: 12X, 13X, 14X (EXCEPT MARYLAND PROVIDERS, INDIAN HEALTH PROVIDERS, HOSPITALS LOCATED IN AMERICAN SAMOA, GUAM AND SAIPAN AND CRITICAL ACCESS HOSPITALS (CAH)); 76X; 75X AND 34X IF CERTAIN HCPCS ARE ON THE BILL; AND ANY OUTPATIENT TYPE OF BILL WITH A CONDITION CODE 07 AND CERTAIN HCPCS.  THESE CLAIM TYPES COULD HAVE LINES THAT ARE NOT REQUIRED TO PRICE UNDER OPPS RULES SO THOSE LINES WOULD NOT HAVE DATA IN THIS FIELD.  ADDITIONAL EXCEPTION:  VIRGIN ISLAND HOSPITALS AND HOSPITALS THAT FURNISH ONLY INPATIENT PART B SERVICES WITH DATES OF SERVICE 1/1/02 AND FORWARD.  NOTE2:  IT HAS BEEN DISCOVERED THAT THIS FIELD MAY BE POPULATED WITH DATA ON CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 (IMPLEMENTATION OF CLAIM LINE EXPANSION OPPS/HHPPS).  THE ORIGINAL UNDERSTANDING OF THE NEW REVENUE CENTER FIELDS WAS THAT DATA WOULD BE POPULATED ON CLAIMS WITH DATES OF SERVICE 7/00 AND FORWARD.  DATA HAS BEEN FOUND IN CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 BECAUSE THE STANDARD SYSTEMS HAVE PROCESSED ANY CLAIM COMING IN 7/00 AND AFTER, MEETING THE ABOVE CRITERIA, THROUGH THE OUTPATIENT CODE EDITOR (OCE) REGARDLESS OF THE DATES OF SERVICE. [NCH]",
+        "definition": "Effective with NCH version I, the amount paid by the secondary payer when two payers are primary to Medicare (Medicare is the tertiary payer). Note 1: This field is populated for those claims that are required to process through outpatient PPS Pricer. The types of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian health providers, hospitals located in American Samoa, Guam, and Saipan, and critical access hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code 07 and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field. Additional exception: Virgin Island hospitals and hospitals that furnish only inpatient Part B services with dates of service 1/1/02 and forward. Note 2: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of claim line expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the standard systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -465,7 +465,7 @@
         "id": "LineItemComponent.CLM_LINE_INSTNL_REV_CTR_DT",
         "path": "LineItemComponent.CLM_LINE_INSTNL_REV_CTR_DT",
         "short": "Revenue Center Date",
-        "definition": "REVENUE CENTER DATE FOR THE INSTITUTIONAL LINE ITEM.",
+        "definition": "Revenue center date for the institutional line item.",
         "min": 0,
         "max": "1",
         "type": [
@@ -478,7 +478,7 @@
         "id": "LineItemComponent.CLM_LINE_FROM_DT",
         "path": "LineItemComponent.CLM_LINE_FROM_DT",
         "short": "Line Item From Date",
-        "definition": "A DATE INDICATING THE FIRST DAY OF SERVICE FOR A LINE ITEM.",
+        "definition": "A date indicating the first day of service for a line item.",
         "min": 0,
         "max": "1",
         "type": [
@@ -491,7 +491,7 @@
         "id": "LineItemComponent.CLM_LINE_ALOWD_CHRG_AMT",
         "path": "LineItemComponent.CLM_LINE_ALOWD_CHRG_AMT",
         "short": "Line Item Allowed Charge Amount",
-        "definition": "THE MAXIMUM AMOUNT ALLOWED BY THE PLAN FOR PAYMENT. THE AMOUNT ELIGIBLE FOR PAYMENT AFTER APPLYING PRICING GUIDELINES/DISCOUNTS. USUALLY  INCLUDES COPAYMENT, COINSURANCE, DEDUCTIBLE, PENALTY, AND 3RD PARTY SAVINGS AMTS. FOR ENCTRS, MAY BE FFS EQUIVALENTS.",
+        "definition": "The maximum amount allowed by the plan for payment. The amount eligible for payment after applying pricing guidelines/discounts. Usually includes copayment, coinsurance, deductible, penalty, and third party savings amounts. For encounters, may be fee-for-service equivalents.",
         "min": 0,
         "max": "1",
         "type": [
@@ -504,7 +504,7 @@
         "id": "LineItemComponent.CLM_LINE_SBMT_CHRG_AMT",
         "path": "LineItemComponent.CLM_LINE_SBMT_CHRG_AMT",
         "short": "Submitted Charge Amount",
-        "definition": "THE AMOUNT OF SUBMITTED CHARGES FOR THE LINE ITEM SERVICE ON THE NONINSTITUTIONAL CLAIM. [NCH]",
+        "definition": "The amount of submitted charges for the line item service on the noninstitutional claim. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -517,7 +517,7 @@
         "id": "LineItemComponent.CLM_REV_DSCNT_IND_CD",
         "path": "LineItemComponent.CLM_REV_DSCNT_IND_CD",
         "short": "Revenue Center Discount Indicator Code",
-        "definition": "EFFECTIVE WITH NCH VERSION I, THIS CODE REPRESENTS A FACTOR THAT SPECIFIES THE AMOUNT OF ANY APC DISCOUNT.  THE DISCOUNTING FACTOR IS APPLIED TO A LINE ITEM WITH A SERVICE INDICATOR (PART OF THE REV_CNTR_PMT_MTHD_IND_CD) OF T.  THE FLAG IS APPLICABLE WHEN MORE THAN ONE SIGNIFICANT PROCEDURE IS PERFORMED. **IF THERE IS NO DISCOUNTING THE FACTOR WILL BE 1.0.** [NCH]  NOTE1:  THIS FIELD IS POPULATED FOR THOSE CLAIMS THAT ARE REQUIRED TO PROCESS THROUGH OUTPATIENT PPS PRICER.  THE TYPE OF BILLS (TOB) REQUIRED TO PROCESS THROUGH ARE: 12X, 13X, 14X (EXCEPT MARYLAND PROVIDERS, INDIAN HEALTH PROVIDERS, HOSPITALS LOCATED IN AMERICAN SAMOA, GUAM AND SAIPAN AND CRITICAL ACCESS HOSPITALS (CAH)); 76X; 75X AND 34X IF CERTAIN HCPCS ARE ON THE BILL; AND ANY OUTPATIENT TYPE OF BILL WITH A CONDITION CODE 07 AND CERTAIN HCPCS.  THESE CLAIM TYPES COULD HAVE LINES THAT ARE NOT REQUIRED TO PRICE UNDER OPPS RULES SO THOSE LINES WOULD NOT HAVE DATA IN THIS FIELD.  ADDITIONAL EXCEPTION:  VIRGIN ISLAND HOSPITALS AND HOSPITALS THAT FURNISH ONLY INPATIENT PART B SERVICES WITH DATES OF SERVICE 1/1/02 AND FORWARD.  NOTE2:  IT HAS BEEN DISCOVERED THAT THIS FIELD MAY BE POPULATED WITH DATA ON CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 (IMPLEMENTATION OF CLAIM LINE EXPANSION OPPS/HHPPS).  THE ORIGINAL UNDERSTANDING OF THE NEW REVENUE CENTER FIELDS WAS THAT DATA WOULD BE POPULATED ON CLAIMS WITH DATES OF SERVICE 7/00 AND FORWARD.  DATA HAS BEEN FOUND IN CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 BECAUSE THE STANDARD SYSTEMS HAVE PROCESSED ANY CLAIM COMING IN 7/00 AND AFTER, MEETING THE ABOVE CRITERIA, THROUGH THE OUTPATIENT CODE EDITOR (OCE) REGARDLESS OF THE DATES OF SERVICE.  NOTE3:  VALUES D, U & T REPRESENT THE FOLLOWING:  D = DISCOUNTING FRACTION (CURRENTLY 0.5)  U = NUMBER OF UNITS  T = TERMINATED PROCEDURE DISCOUNT (CURRENTLY 0.5)",
+        "definition": "Effective with NCH version I, this code represents a factor that specifies the amount of any APC discount. The discounting factor is applied to a line item with a service indicator (part of the REV_CNTR_PMT_MTHD_IND_CD) of T. The flag is applicable when more than one significant procedure is performed. If there is no discounting the factor will be 1.0. [NCH] Note 1: This field is populated for those claims that are required to process through outpatient PPS Pricer. The types of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian health providers, hospitals located in American Samoa, Guam, and Saipan, and critical access hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code 07 and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field. Additional exception: Virgin Island hospitals and hospitals that furnish only inpatient Part B services with dates of service 1/1/02 and forward. Note 2: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of claim line expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the standard systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service. Note 3: Values D, U, and T represent the following: D = Discounting fraction (currently 0.5). U = Number of units. T = Terminated procedure discount (currently 0.5).",
         "min": 0,
         "max": "1",
         "type": [
@@ -530,7 +530,7 @@
         "id": "LineItemComponent.CLM_OTAF_ONE_IND_CD",
         "path": "LineItemComponent.CLM_OTAF_ONE_IND_CD",
         "short": "Revenue Center Obligation to Accept As Full Payment Code",
-        "definition": "EFFECTIVE WITH VERSION I, INDICATION THAT THE PROVIDER WAS OBLIGATED TO ACCEPT AS FULL PAYMENT THE AMOUNT RECEIVED FROM THE PRIMARY (OR SECONDARY) PAYER.",
+        "definition": "Effective with version I, indication that the provider was obligated to accept as full payment the amount received from the primary (or secondary) payer.",
         "min": 0,
         "max": "1",
         "type": [
@@ -543,7 +543,7 @@
         "id": "LineItemComponent.CLM_REV_PACKG_IND_CD",
         "path": "LineItemComponent.CLM_REV_PACKG_IND_CD",
         "short": "Revenue Center Packaging Indicator Code",
-        "definition": "EFFECTIVE WITH NCH VERSION I, THE CODE USED TO IDENTIFY THOSE SERVICES THAT ARE PACKAGED/BUNDLED WITH ANOTHER SERVICE.  NOTE1:  THIS FIELD IS POPULATED FOR THOSE CLAIMS THAT ARE REQUIRED TO PROCESS THROUGH OUTPATIENT PPS PRICER.  THE TYPE OF BILLS (TOB) REQUIRED TO PROCESS THROUGH ARE: 12X, 13X, 14X (EXCEPT MARYLAND PROVIDERS, INDIAN HEALTH PROVIDERS, HOSPITALS LOCATED IN AMERICAN SAMOA, GUAM AND SAIPAN AND CRITICAL ACCESS HOSPITALS (CAH)); 76X; 75X AND 34X IF CERTAIN HCPCS ARE ON THE BILL; AND ANY OUTPATIENT TYPE OF BILL WITH A CONDITION CODE 07 AND CERTAIN HCPCS.  THESE CLAIM TYPES COULD HAVE LINES THAT ARE NOT REQUIRED TO PRICE UNDER OPPS RULES SO THOSE LINES WOULD NOT HAVE DATA IN THIS FIELD.  ADDITIONAL EXCEPTION:  VIRGIN ISLAND HOSPITALS AND HOSPITALS THAT FURNISH ONLY INPATIENT PART B SERVICES WITH DATES OF SERVICE 1/1/02 AND FORWARD.  NOTE2:  IT HAS BEEN DISCOVERED THAT THIS FIELD MAY BE POPULATED WITH DATA ON CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 (IMPLEMENTATION OF CLAIM LINE EXPANSION OPPS/HHPPS).  THE ORIGINAL UNDERSTANDING OF THE NEW REVENUE CENTER FIELDS WAS THAT DATA WOULD BE POPULATED ON CLAIMS WITH DATES OF SERVICE 7/00 AND FORWARD.  DATA HAS BEEN FOUND IN CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 BECAUSE THE STANDARD SYSTEMS HAVE PROCESSED ANY CLAIM COMING IN 7/00 AND AFTER, MEETING THE ABOVE CRITERIA, THROUGH THE OUTPATIENT CODE EDITOR (OCE) REGARDLESS OF THE DATES OF SERVICE. [NCH]",
+        "definition": "Effective with NCH version I, the code used to identify those services that are packaged/bundled with another service. Note 1: This field is populated for those claims that are required to process through outpatient PPS Pricer. The types of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian health providers, hospitals located in American Samoa, Guam, and Saipan, and critical access hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code 07 and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field. Additional exception: Virgin Island hospitals and hospitals that furnish only inpatient Part B services with dates of service 1/1/02 and forward. Note 2: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of claim line expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the standard systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -556,7 +556,7 @@
         "id": "LineItemComponent.CLM_REV_PMT_MTHD_CD",
         "path": "LineItemComponent.CLM_REV_PMT_MTHD_CD",
         "short": "Revenue Center Payment Method Indicator Code",
-        "definition": "EFFECTIVE WITH NCH VERSION I, THE CODE USED TO IDENTIFY HOW THE SERVICE IS PRICED FOR PAYMENT.  THIS FIELD IS MADE UP OF TWO PIECES OF DATA, 1ST POSITION BEING THE SERVICE INDICATOR AND THE 2ND POSITION BEING THE PAYMENT INDICATOR.    NOTE1:  THIS FIELD IS POPULATED FOR THOSE CLAIMS THAT ARE REQUIRED TO PROCESS THROUGH OUTPATIENT PPS PRICER.  THE TYPE OF BILLS (TOB) REQUIRED TO PROCESS THROUGH ARE: 12X, 13X, 14X (EXCEPT MARYLAND PROVIDERS, INDIAN HEALTH PROVIDERS, HOSPITALS LOCATED IN AMERICAN SAMOA, GUAM AND SAIPAN AND CRITICAL ACCESS HOSPITALS (CAH)); 76X; 75X AND 34X IF CERTAIN HCPCS ARE ON THE BILL; AND ANY OUTPATIENT TYPE OF BILL WITH A CONDITION CODE 07 AND CERTAIN HCPCS.  THESE CLAIM TYPES COULD HAVE LINES THAT ARE NOT REQUIRED TO PRICE UNDER OPPS RULES SO THOSE LINES WOULD NOT HAVE DATA IN THIS FIELD.    ADDITIONAL EXCEPTION:  VIRGIN ISLAND HOSPITALS AND HOSPITALS THAT FURNISH ONLY INPATIENT PART B SERVICES WITH DATES OF SERVICE 1/1/02 AND FORWARD.    NOTE2:  IT HAS BEEN DISCOVERED THAT THIS FIELD MAY BE POPULATED WITH DATA ON CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 (IMPLEMENTATION OF CLAIM LINE EXPANSION OPPS/HHPPS).  THE ORIGINAL UNDERSTANDING OF THE NEW REVENUE CENTER FIELDS WAS THAT DATA WOULD BE POPULATED ON CLAIMS WITH DATES OF SERVICE 7/00 AND FORWARD.  DATA HAS BEEN FOUND IN CLAIMS WITH DATES OF SERVICE PRIOR TO 7/00 BECAUSE THE STANDARD SYSTEMS HAVE PROCESSED ANY CLAIM COMING IN 7/00 AND AFTER, MEETING THE ABOVE CRITERIA, THROUGH THE OUTPATIENT CODE EDITOR (OCE) REGARDLESS OF THE DATES OF SERVICE.    NOTE3:  EFFECTIVE 10/2005, THIS FIELD WILL NO LONGER REPRESENT THE SERVICE INDICATOR AND THE PAYMENT INDICATOR. THIS FIELD WILL NOW HOUSE THE 2-BYTE PAYMENT INDICATOR.  THE STATUS INDICATOR WILL BE HOUSED IN A NEW FIELD NAMED: REV_CNTR_STUS_IND_CD. [NCH]",
+        "definition": "Effective with NCH version I, the code used to identify how the service is priced for payment. This field is made up of two pieces of data, the 1st position being the service indicator and the 2nd position being the payment indicator. Note 1: This field is populated for those claims that are required to process through outpatient PPS Pricer. The types of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian health providers, hospitals located in American Samoa, Guam, and Saipan, and critical access hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code 07 and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field. Additional exception: Virgin Island hospitals and hospitals that furnish only inpatient Part B services with dates of service 1/1/02 and forward. Note 2: It has been discovered that this field may be populated with data on claims with dates of service prior to 7/00 (implementation of claim line expansion OPPS/HHPPS). The original understanding of the new revenue center fields was that data would be populated on claims with dates of service 7/00 and forward. Data has been found in claims with dates of service prior to 7/00 because the standard systems have processed any claim coming in 7/00 and after, meeting the above criteria, through the Outpatient Code Editor (OCE) regardless of the dates of service. Note 3: Effective 10/2005, this field will no longer represent the service indicator and the payment indicator. This field will now house the 2-byte payment indicator. The status indicator will be housed in a new field named: REV_CNTR_STUS_IND_CD. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -569,7 +569,7 @@
         "id": "LineItemComponent.CLM_REV_CNTR_STUS_CD",
         "path": "LineItemComponent.CLM_REV_CNTR_STUS_CD",
         "short": "Revenue Center Status Indicator Code",
-        "definition": "EFFECTIVE 10/3/2005 WITH THE IMPLEMENTATION OF NCH/NMUD CR#2, THE CODE USED TO IDENTIFY THE STATUS OF THE LINE ITEM SERVICE.  THIS FIELD ALONG WITH THE PAYMENT METHOD INDICATOR FIELD IS USED TO IDENTIFY HOW THE SERVICE WAS PRICED FOR PAYMENT.  NOTE1:  THIS 2-BYTE INDICATOR IS BEING ADDED DUE TO AN EXPANSION OF A FIELD THAT CURRENTLY EXIST ON THE REVENUE CENTER TRAILER.  THE STATUS INDICATOR IS CURRENTLY THE 1ST POSITION OF THE REVENUE CENTER PAYMENT METHOD INDICATOR CODE.  THE PAYMENT METHOD INDICATOR CODE IS BEING SPLIT INTO TWO 2-BYTE FIELDS (PAYMENT INDICATOR AND STATUS INDICATOR). THE EXPANDED PAYMENT INDICATOR WILL CONTINUE TO BE STORED IN THE EXISTING PAYMENT METHOD INDICATOR FIELD. THE SPLIT OF THE CURRENT PAYMENT METHOD INDICATOR FIELD IS DUE TO THE EXPANSION OF BOTH PIECES OF DATE FROM1-BYTE TO 2-BYTES.  NOTE2:  THIS FIELD IS POPULATED FOR THOSE CLAIMS THAT ARE REQUIRED TO PROCESS THROUGH OUTPATIENT PPS PRICER.  THE TYPE OF BILLS (TOB) REQUIRED TO PROCESS THROUGH ARE: 12X, 13X, 14X (EXCEPT MARYLAND PROVIDERS, INDIAN HEALTH PROVIDERS, HOSPITALS LOCATED IN AMERICAN SAMOA, GUAM AND SAIPAN AND CRITICAL ACCESS HOSPITALS (CAH)); 76X; 75X AND 34X IF CERTAIN HCPCS ARE ON THE BILL; AND ANY OUTPATIENT TYPE OF BILL WITH A CONDITION CODE 07 AND CERTAIN HCPCS.  THESE CLAIM TYPES COULD HAVE LINES THAT ARE NOT REQUIRED TO PRICE UNDER OPPS RULES SO THOSE LINES WOULD NOT HAVE DATA IN THIS FIELD.  ADDITIONAL EXCEPTION:  VIRGIN ISLAND HOSPITALS AND HOSPITALS THAT FURNISH ONLY INPATIENT PART B SERVICES. [NCH]",
+        "definition": "Effective 10/3/2005 with the implementation of NCH/NMUD CR#2, the code used to identify the status of the line item service. This field along with the payment method indicator field is used to identify how the service was priced for payment. Note 1: This 2-byte indicator is being added due to an expansion of a field that currently exists on the revenue center trailer. The status indicator is currently the 1st position of the revenue center payment method indicator code. The payment method indicator code is being split into two 2-byte fields (payment indicator and status indicator). The expanded payment indicator will continue to be stored in the existing payment method indicator field. The split of the current payment method indicator field is due to the expansion of both pieces of data from 1-byte to 2-bytes. Note 2: This field is populated for those claims that are required to process through outpatient PPS Pricer. The types of bills (TOB) required to process through are: 12X, 13X, 14X (except Maryland providers, Indian health providers, hospitals located in American Samoa, Guam, and Saipan, and critical access hospitals (CAH)); 76X; 75X and 34X if certain HCPCS are on the bill; and any outpatient type of bill with a condition code 07 and certain HCPCS. These claim types could have lines that are not required to price under OPPS rules so those lines would not have data in this field. Additional exception: Virgin Island hospitals and hospitals that furnish only inpatient Part B services. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -595,7 +595,7 @@
         "id": "LineItemComponent.CLM_LINE_ANSTHSA_UNIT_CNT",
         "path": "LineItemComponent.CLM_LINE_ANSTHSA_UNIT_CNT",
         "short": "Anesthesia Unit Count",
-        "definition": "A QUANTITY IDENTIFYING THE NUMBER OF SERVICES BILLED FOR AN ANESTHESIA SERVICE ON A CLAIM LINE OF SERVICE.",
+        "definition": "A quantity identifying the number of services billed for an anesthesia service on a claim line of service.",
         "min": 0,
         "max": "1",
         "type": [
@@ -621,7 +621,7 @@
         "id": "LineItemComponent.CLM_RNDRG_PRVDR_TAX_NUM",
         "path": "LineItemComponent.CLM_RNDRG_PRVDR_TAX_NUM",
         "short": "Provider Tax Number",
-        "definition": "LINE PROVIDER TAX NUMBER",
+        "definition": "Line provider tax number.",
         "min": 0,
         "max": "1",
         "type": [
@@ -647,7 +647,7 @@
         "id": "LineItemComponent.PRVDR_RNDRNG_PRVDR_NPI_NUM",
         "path": "LineItemComponent.PRVDR_RNDRNG_PRVDR_NPI_NUM",
         "short": "Rendering Provider NPI Number - Line Level",
-        "definition": "A NUMBER IDENTIFYING THE NATIONAL PROVIDER IDENTIFIER (NPI) OF THE PROVIDER WHO RENDERED THE SERVICE, AS SOURCED FROM THE NATIONAL PLAN AND PROVIDER ENUMERATION SYSTEM (NPPES).    NOTE: THIS COLUMN IS POPULATED IF THE RENDERING PROVIDER NPI ON THE CLAIM, AS PROVIDED BY THE SOURCE SYSTEM, CAN BE FOUND IN THE INTEGRATED DEPOSIT REPOSITORY (IDR) PROVIDER DATA AS SOURCED FROM NPPES.",
+        "definition": "A number identifying the National Provider Identifier (NPI) of the provider who rendered the service, as sourced from the National Plan and Provider Enumeration System (NPPES). Note: This column is populated if the rendering provider NPI on the claim, as provided by the source system, can be found in the Integrated Deposit Repository (IDR) provider data as sourced from NPPES.",
         "min": 0,
         "max": "1",
         "type": [
@@ -672,8 +672,8 @@
       {
         "id": "LineItemComponent.providerSequence",
         "path": "LineItemComponent.providerSequence",
-        "short": "Provider Sequence",
-        "definition": "The provider sequence.",
+        "short": "Provider sequence - derived, not to be populated in production",
+        "definition": "Provider sequence - derived, not to be populated in production",
         "min": 0,
         "max": "1",
         "type": [
@@ -946,7 +946,7 @@
         "id": "LineItemComponent.CLM_LINE_RX_NUM",
         "path": "LineItemComponent.CLM_LINE_RX_NUM",
         "short": "RX Number",
-        "definition": "THE PHARMACYS INTERNAL INVOICE NUMBER ON PHARMACEUTICAL CLAIMS.",
+        "definition": "The pharmacy's internal invoice number on pharmaceutical claims.",
         "min": 0,
         "max": "1",
         "type": [
@@ -985,7 +985,7 @@
         "id": "LineItemComponent.CLM_LINE_MDCR_COINSRNC_AMT",
         "path": "LineItemComponent.CLM_LINE_MDCR_COINSRNC_AMT",
         "short": "Coinsurance Amount",
-        "definition": "EFFECTIVE WITH NCH VERSION H, THE BENEFICIARY COINSURANCE LIABILITY AMOUNT FOR THIS LINE ITEM SERVICE ON THE NONINSTITUTIONAL CLAIM.  NOTE:  BEGINNING WITH NCH WEEKLY PROCESS DATE 10/3/97 THIS FIELD WAS POPULATED WITH DATA. CLAIMS PROCESSED PRIOR TO 10/3/97 WILL CONTAIN ZEROES IN THIS FIELD. [NCH]",
+        "definition": "Effective with NCH version H, the beneficiary coinsurance liability amount for this line item service on the noninstitutional claim. Note: Beginning with NCH weekly process date 10/3/97 this field was populated with data. Claims processed prior to 10/3/97 will contain zeroes in this field. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -1011,7 +1011,7 @@
         "id": "LineItemComponent.CLM_LINE_DGNS_CD",
         "path": "LineItemComponent.CLM_LINE_DGNS_CD",
         "short": "Line Item Diagnosis Code",
-        "definition": "A CODE IDENTIFYING AN INTERNATIONAL CLASSIFICATION OF DISEASE CLINICAL MODIFICATION, NINTH OR TENTH REVISION (ICD-9/10-CM) DIAGNOSIS.    REFERENCE TABLE: DGNS_CD",
+        "definition": "A code identifying an International Classification of Disease Clinical Modification, ninth or tenth revision (ICD-9/10-CM) diagnosis. Reference table: DGNS_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -1050,7 +1050,7 @@
         "id": "LineItemComponent.CLM_LINE_THRU_DT",
         "path": "LineItemComponent.CLM_LINE_THRU_DT",
         "short": "Last Expense Date",
-        "definition": "THE ENDING DATE OF SERVICE FOR THE CLAIM LINE.",
+        "definition": "The ending date of service for the claim line.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1076,7 +1076,7 @@
         "id": "LineItemComponent.CLM_POS_CD",
         "path": "LineItemComponent.CLM_POS_CD",
         "short": "Place Of Service Code",
-        "definition": "INDICATION OF WHERE THE SERVICE WAS PERFORMED.",
+        "definition": "Indication of where the service was performed.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1102,7 +1102,7 @@
         "id": "LineItemComponent.CLM_RNDRG_PRVDR_PRTCPTG_CD",
         "path": "LineItemComponent.CLM_RNDRG_PRVDR_PRTCPTG_CD",
         "short": "Provider Participating Indicator Code",
-        "definition": "INDICATION A PROVIDER IS PARTICIPATING OR ACCEPTING ASSIGNMENT FOR THIS CLAIM. [HRMZ]    CODE INDICATING WHETHER OR NOT A PROVIDER IS PARTICIPATING OR ACCEPTING ASSIGNMENT FOR THIS LINE ITEM SERVICE ON THE NONINSTITUTIONAL CLAIM. [NCH]",
+        "definition": "Indication that a provider is participating or accepting assignment for this claim. [HRMZ] Code indicating whether or not a provider is participating or accepting assignment for this line item service on the noninstitutional claim. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -1115,7 +1115,7 @@
         "id": "LineItemComponent.CLM_BENE_PRMRY_PYR_PD_AMT",
         "path": "LineItemComponent.CLM_BENE_PRMRY_PYR_PD_AMT",
         "short": "Line Primary Payer Paid Amount",
-        "definition": "LINE BENEFICIARY PRIMARY PAYER PAID AMOUNT",
+        "definition": "Line beneficiary primary payer paid amount.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1128,7 +1128,7 @@
         "id": "LineItemComponent.CLM_MTUS_IND_CD",
         "path": "LineItemComponent.CLM_MTUS_IND_CD",
         "short": "Carrier MTUS Indicator Code",
-        "definition": "1) CODE INDICATING THE UNITS ASSOCIATED WITH SERVICES NEEDING UNIT REPORTING ON THE LINE ITEM FOR THE CARRIER CLAIM (NON-DMERC). [NCH]    2) PRIOR TO VERSION H THIS FIELD WAS NAMED: CWFB_DME_MTUS_IND_CD. [NCH]",
+        "definition": "(1) Code indicating the units associated with services needing unit reporting on the line item for the carrier claim (non-DMERC). [NCH] (2) Prior to version H this field was named: CWFB_DME_MTUS_IND_CD. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -1141,7 +1141,7 @@
         "id": "LineItemComponent.CLM_LINE_PRFNL_MTUS_CNT",
         "path": "LineItemComponent.CLM_LINE_PRFNL_MTUS_CNT",
         "short": "Carrier MTUS Count",
-        "definition": "(1) THE COUNT OF THE TOTAL UNITS ASSOCIATED WITH SERVICES NEEDING UNIT REPORTING SUCH AS TRANSPORTATION, MILES, ANESTHESIA TIME UNITS, NUMBER OF SERVICES, VOLUME OF OXYGEN OR BLOOD UNITS.  THIS IS A LINE ITEM FIELD ON THE CARRIER CLAIM (NON-DMERC) AND IS USED FOR BOTH ALLOWED AND DENIED SERVICES.  NOTE:  FOR ANESTHESIA (MTUS INDICATOR = 2) THIS FIELD SHOULD BE REPORTED IN TIME UNIT INTERVALS, I.E. 15 MINUTE INTERALS OR FRACTION THEREOF. IT APPEARS THAT SOME CARRIERS ARE REPORTING MINUTES INSTEAD OF TIME UNITS.[NCH]  (2) EFFECTIVE WITH NCH VERSION G, THE COUNT OF THE TOTAL UNITS ASSOCIATED WITH THE DMERC LINE ITEM SERVICE NEEDING UNIT REPORTING, INCLUDING NUMBER OF SERVICES, VOLUME OF OXYGEN AND DRUG DOSE. [NCH]",
+        "definition": "(1) The count of the total units associated with services needing unit reporting such as transportation, miles, anesthesia time units, number of services, volume of oxygen, or blood units. This is a line item field on the carrier claim (non-DMERC) and is used for both allowed and denied services. Note: For anesthesia (MTUS indicator = 2) this field should be reported in time unit intervals, i.e., 15-minute intervals or fraction thereof. It appears that some carriers are reporting minutes instead of time units. [NCH] (2) Effective with NCH version G, the count of the total units associated with the DMERC line item service needing unit reporting, including number of services, volume of oxygen, and drug dose. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -1154,7 +1154,7 @@
         "id": "LineItemComponent.CLM_PRCNG_LCLTY_CD",
         "path": "LineItemComponent.CLM_PRCNG_LCLTY_CD",
         "short": "Line Pricing Locality Code",
-        "definition": "CODE DENOTING THE CARRIER-SPECIFIC LOCALITY USED FOR PRICING THE SERVICE FOR THIS LINE ITEM ON THE CARRIER CLAIM (NON-DMERC). [NCH]",
+        "definition": "Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -1167,7 +1167,7 @@
         "id": "LineItemComponent.CLM_PHYSN_ASTNT_CD",
         "path": "LineItemComponent.CLM_PHYSN_ASTNT_CD",
         "short": "Reduced Payment Physician Assistant Code",
-        "definition": "EFFECTIVE 1/92, IDENTIFICATION OF CLAIMS THAT HAVE BEEN PAID A REDUCED FEE SCHEDULE AMOUNT (65%, 75% OR 85%) BECAUSE A PHYSICIANS ASSISTANT PERFORMED THE SERVICES.",
+        "definition": "Effective 1/92, identification of claims that have been paid a reduced fee schedule amount (65%, 75%, or 85%) because a physician's assistant performed the services.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1180,7 +1180,7 @@
         "id": "LineItemComponent.CLM_LINE_CARR_HPSA_SCRCTY_CD",
         "path": "LineItemComponent.CLM_LINE_CARR_HPSA_SCRCTY_CD",
         "short": "HPSA Scarcity Code",
-        "definition": "A CODE USED TO TRACK THE HEALTH PROFESSIONAL SHORTAGE AREA (HPSA) AND PHYSICIAN SCARCITY (PSA) RELATED BONUS PAYMENTS ON PART B PROFESSIONAL CLAIMS.    REFERENCE TABLE: CLM_CARR_HPSA_SCRCTY_CD",
+        "definition": "A code used to track the Health Professional Shortage Area (HPSA) and Physician Scarcity Area (PSA) related bonus payments on Part B professional claims. Reference table: CLM_CARR_HPSA_SCRCTY_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -1193,7 +1193,7 @@
         "id": "LineItemComponent.CLM_PRMRY_PYR_CD",
         "path": "LineItemComponent.CLM_PRMRY_PYR_CD",
         "short": "Line Primary Payer Code",
-        "definition": "A CODE IDENTIFYING THE COVERAGE TYPE OF THE PRIMARY PAYER WHEN MEDICARE IS THE SECONDARY PAYER AT THE CLAIM LINE AS DEFINED BY THE COMMON WORKING FILE (CWF).    REFERENCE TABLE: CLM_PRMRY_PYR_CD",
+        "definition": "A code identifying the coverage type of the primary payer when Medicare is the secondary payer at the claim line as defined by the Common Working File (CWF). Reference table: CLM_PRMRY_PYR_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -1206,7 +1206,7 @@
         "id": "LineItemComponent.CLM_FED_TYPE_SRVC_CD",
         "path": "LineItemComponent.CLM_FED_TYPE_SRVC_CD",
         "short": "CMS Service Type Code",
-        "definition": "TYPE OF SERVICE AS DEFINED IN THE HCFA MEDICARE CARRIER MANUAL, FOR THIS LINE ITEM ON THE NON-INSTITUTIONAL CLAIM. (NCH)",
+        "definition": "Type of service as defined in the HCFA Medicare Carrier Manual, for this line item on the non-institutional claim. (NCH)",
         "min": 0,
         "max": "1",
         "type": [
@@ -1219,7 +1219,7 @@
         "id": "LineItemComponent.CLM_PMT_80_100_CD",
         "path": "LineItemComponent.CLM_PMT_80_100_CD",
         "short": "Payment Code",
-        "definition": "THE CODE INDICATING THAT THE AMOUNT SHOWN IN THE PAYMENT FIELD ON THE NON-INSTITUTIONAL LINE ITEM REPRESENTS EITHER 80% OR 100% OF THE ALLOWED CHARGES LESS ANY DEDUCTIBLE, OR 100% LIMITATION OF LIABILITY ONLY.",
+        "definition": "The code indicating that the amount shown in the payment field on the non-institutional line item represents either 80% or 100% of the allowed charges less any deductible, or 100% limitation of liability only.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1232,7 +1232,7 @@
         "id": "LineItemComponent.CLM_PRCSG_IND_CD",
         "path": "LineItemComponent.CLM_PRCSG_IND_CD",
         "short": "Processing Indicator Code",
-        "definition": "THE CODE INDICATING THE REASON A LINE ITEM ON THE NONINSTITUTIONAL CLAIM WAS ALLOWED OR DENIED.  NOTE2:  EFFECTIVE 4/1/02, THIS FIELD WAS EXPANDED TO TWO BYTES TO ACCOMMODATE NEW VALUES. THE NCH NEARLINE FILE DID NOT EXPAND THE CURRENT 1-BYTE FIELD BUT INSTITUTED A CROSSWALK OF THE 2-BYTE FIELD TO THE 1-BYTE CHARACTER VALUE. SEE TABLE OF CODE FOR THE CROSSWALK. [NCH]",
+        "definition": "The code indicating the reason a line item on the noninstitutional claim was allowed or denied. Note 2: Effective 4/1/02, this field was expanded to two bytes to accommodate new values. The NCH nearline file did not expand the current 1-byte field but instituted a crosswalk of the 2-byte field to the 1-byte character value. See table of codes for the crosswalk. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -1245,7 +1245,7 @@
         "id": "LineItemComponent.CLM_SRVC_DDCTBL_SW",
         "path": "LineItemComponent.CLM_SRVC_DDCTBL_SW",
         "short": "Service Deductible Code",
-        "definition": "A VALUE IDENTIFYING WHETHER A SERVICE LINE IS SUBJECT TO THE DEDUCTIBLE.    REFERENCE TABLE: CLM_SRVC_DDCTBL_SW",
+        "definition": "A value identifying whether a service line is subject to the deductible. Reference table: CLM_SRVC_DDCTBL_SW",
         "min": 0,
         "max": "1",
         "type": [
@@ -1258,7 +1258,7 @@
         "id": "LineItemComponent.CLM_PRVDR_SPCLTY_CD",
         "path": "LineItemComponent.CLM_PRVDR_SPCLTY_CD",
         "short": "Provider Speciality Code",
-        "definition": "A CODE IDENTIFYING THE CENTERS FOR MEDICARE AND MEDICAID SERVICES (CMS) SPECIALTY OF A PROVIDER OR SUPPLIER.  FOR EXAMPLE:  11 = INTERNAL MEDICINE  49 = AMBULATORY SURGICAL CENTER    REFERENCE TABLE: CLM_PRVDR_SPCLTY_CD",
+        "definition": "A code identifying the Centers for Medicare and Medicaid Services (CMS) specialty of a provider or supplier. For example: 11 = Internal medicine. 49 = Ambulatory surgical center. Reference table: CLM_PRVDR_SPCLTY_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -1271,7 +1271,7 @@
         "id": "LineItemComponent.CLM_LINE_DMERC_SCRN_SVGS_AMT",
         "path": "LineItemComponent.CLM_LINE_DMERC_SCRN_SVGS_AMT",
         "short": "Screen Savings Amount",
-        "definition": "PRIOR TO NCH VERSION H THIS FIELD WAS NAMED: CWFB_DME_SCRN_SVGS_AMT AND THE FIELD SIZE WAS S9(5)V99. [NCH]",
+        "definition": "Prior to NCH version H this field was named: CWFB_DME_SCRN_SVGS_AMT and the field size was S9(5)V99. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -1284,7 +1284,7 @@
         "id": "LineItemComponent.CLM_SUPLR_TYPE_CD",
         "path": "LineItemComponent.CLM_SUPLR_TYPE_CD",
         "short": "Supplier Type Code",
-        "definition": "THE TYPE OF SUPPLIER.",
+        "definition": "The type of supplier.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1297,7 +1297,7 @@
         "id": "LineItemComponent.CLM_LINE_PRFNL_DME_PRICE_AMT",
         "path": "LineItemComponent.CLM_LINE_PRFNL_DME_PRICE_AMT",
         "short": "Purchase Price Amount",
-        "definition": "EFFECTIVE 5/92, THE AMOUNT REPRESENTING THE LOWER OF FEE SCHEDULE FOR PURCHASE OF NEW OR USED DME, OR ACTUAL CHARGE.  IN CASE OF RENTAL DME, THIS AMOUNT REPRESENTS THE PURCHASE CAP; RENTAL PAYMENTS CAN ONLY BE MADE UNTIL THE CAP IS MET.  THIS LINE ITEM FIELD IS APPLICABLE TO NON-INSTITUTIONAL CLAIMS INVOLVING DME, PROSTHETIC, ORTHOTIC AND SUPPLY ITEMS, IMMUNOSUPPRESSIVE DRUGS, PEN, ESRD AND OXYGEN ITEMS REFERRED TO AS DMEPOS. [NCH]",
+        "definition": "Effective 5/92, the amount representing the lower of fee schedule for purchase of new or used DME, or actual charge. In case of rental DME, this amount represents the purchase cap; rental payments can only be made until the cap is met. This line item field is applicable to non-institutional claims involving DME, prosthetic, orthotic and supply items, immunosuppressive drugs, PEN, ESRD, and oxygen items referred to as DMEPOS. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -1310,7 +1310,7 @@
         "id": "LineItemComponent.CLM_RNDRG_PRVDR_TYPE_CD",
         "path": "LineItemComponent.CLM_RNDRG_PRVDR_TYPE_CD",
         "short": "Claim Rendering Provider Type Code",
-        "definition": "THE TYPE OF PROVIDER  FURNISHING THE SERVICE FOR THIS LINE ITEM ON THE CARRIER CLAIM (NON-DMERC).",
+        "definition": "The type of provider furnishing the service for this line item on the carrier claim (non-DMERC).",
         "min": 0,
         "max": "1",
         "type": [
@@ -1323,7 +1323,7 @@
         "id": "LineItemComponent.CLM_LINE_OTAF_AMT",
         "path": "LineItemComponent.CLM_LINE_OTAF_AMT",
         "short": "Provider Obligation To Accept as Full Amount",
-        "definition": "AN AMOUNT IDENTIFYING A PROVIDER'S OBLIGATED TO ACCEPT IN FULL (OTAF) FROM MEDICARE AS PAYMENT. A BENEFICIARY CANNOT BE CHARGED FOR ANY AMOUNT EXCEEDING THE OTAF TOTAL.",
+        "definition": "An amount identifying a provider's obligation to accept in full (OTAF) from Medicare as payment. A beneficiary cannot be charged for any amount exceeding the OTAF total.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1336,7 +1336,7 @@
         "id": "LineItemComponent.CLM_LINE_OTHR_TP_PD_AMT",
         "path": "LineItemComponent.CLM_LINE_OTHR_TP_PD_AMT",
         "short": "Other Third Party Paid Amount",
-        "definition": "CLAIMIP- THE TOTAL AMOUNT PAID BY ALL SOURCES OTHER THAN MEDICAID, MEDICARE, AND THE RECIPIENTS PERSONAL FUNDS.",
+        "definition": "The total amount paid by all sources other than Medicaid, Medicare, and the recipient's personal funds.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1349,7 +1349,7 @@
         "id": "LineItemComponent.CLM_LINE_NCVRD_PD_AMT",
         "path": "LineItemComponent.CLM_LINE_NCVRD_PD_AMT",
         "short": "Noncovered Paid Amount",
-        "definition": "THE NET AMOUNT PAID BY A PLAN FOR A NONCOVERED PRODUCT OR SERVICE, SUCH AS A NONCOVERED DRUG FOR PART D.",
+        "definition": "The net amount paid by a plan for a noncovered product or service, such as a noncovered drug for Part D.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1362,7 +1362,7 @@
         "id": "LineItemComponent.CLM_LINE_ADD_ON_PYMT_AMT",
         "path": "LineItemComponent.CLM_LINE_ADD_ON_PYMT_AMT",
         "short": "Add On Payment Amount",
-        "definition": "THE NEW PATIENT OR INITIAL MEDICARE VISIT ADD-ON PAYMENT AMOUNT OF THE FEDERALLY QUALIFIED HEALTH CENTER (FQHC) CLAIM.",
+        "definition": "The new patient or initial Medicare visit add-on payment amount of the Federally Qualified Health Center (FQHC) claim.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1375,7 +1375,7 @@
         "id": "LineItemComponent.CLM_LINE_NON_EHR_RDCTN_AMT",
         "path": "LineItemComponent.CLM_LINE_NON_EHR_RDCTN_AMT",
         "short": "Non-EHR Reduction Amount",
-        "definition": "THIS FIELD IDENTIFIES THE PAYMENT REDUCTION AMOUNT FOR HOSPITALS THAT ARE NOT MEANINGFUL USERS OF CERTIFIED ELECTRONIC HEALTH RECORD (EHR) TECHNOLOGY.",
+        "definition": "This field identifies the payment reduction amount for hospitals that are not meaningful users of certified Electronic Health Record (EHR) technology.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1388,7 +1388,7 @@
         "id": "LineItemComponent.CLM_REV_CNTR_TDAPA_AMT",
         "path": "LineItemComponent.CLM_REV_CNTR_TDAPA_AMT",
         "short": "Transitional Drug Add-On Payment Adjustment",
-        "definition": "A MONETARY AMOUNT SIGNIFYING THE TRANSITIONAL DRUG ADD-ON PAYMENT ADJUSTMENT (TDAPA) FOR END STAGE RENAL DISEASE (ESRD) CLAIMS FOR INJECTABLE, INTRAVENOUS, AND ORAL CALCIMIMETICS WHEN REPORTED WITH AN AX MODIFIER.",
+        "definition": "A monetary amount signifying the Transitional Drug Add-On Payment Adjustment (TDAPA) for End Stage Renal Disease (ESRD) claims for injectable, intravenous, and oral calcimimetics when reported with an AX modifier.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1401,7 +1401,7 @@
         "id": "LineItemComponent.CLM_LINE_CARR_CLNCL_CHRG_AMT",
         "path": "LineItemComponent.CLM_LINE_CARR_CLNCL_CHRG_AMT",
         "short": "Carrier Clinical Charge Amount",
-        "definition": "FEE SCHEDULE CHARGE AMOUNT APPLIED FOR THE LINE ITEM CLINICAL LABORATORY SERVICE ON THE CARRIER CLAIM (NON-DMERC).",
+        "definition": "Fee schedule charge amount applied for the line item clinical laboratory service on the carrier claim (non-DMERC).",
         "min": 0,
         "max": "1",
         "type": [
@@ -1414,7 +1414,7 @@
         "id": "LineItemComponent.CLM_LINE_CARR_PSYCH_OT_LMT_AMT",
         "path": "LineItemComponent.CLM_LINE_CARR_PSYCH_OT_LMT_AMT",
         "short": "Therapy Amount Applied to Limit",
-        "definition": "FOR TYPE OF SERVICE PSYCHIATRIC, OCCUPATIONAL THERAPY OR PHYSICAL THERAPY, THE AMOUNT OF ALLOWED CHARGES APPLIED TOWARD THE LIMIT CAP FOR THIS LINE ITEM SERVICE ON THE NONINSTITUTIONAL CLAIM. [NCH]",
+        "definition": "For type of service psychiatric, occupational therapy, or physical therapy, the amount of allowed charges applied toward the limit cap for this line item service on the noninstitutional claim. [NCH]",
         "min": 0,
         "max": "1",
         "type": [
@@ -1427,7 +1427,7 @@
         "id": "LineItemComponent.CLM_LINE_PRFNL_INTRST_AMT",
         "path": "LineItemComponent.CLM_LINE_PRFNL_INTRST_AMT",
         "short": "Professional Interest Amount",
-        "definition": "AMOUNT OF INTEREST TO BE PAID FOR THIS LINE ITEM SERVICE ON THE NON-INSTITUTIONAL CLAIM.  **NOTE: THIS IS NOT INCLUDED IN THE LINE ITEM NCH PAYMENT (REIMBURSEMENT) AMOUNT.",
+        "definition": "Amount of interest to be paid for this line item service on the non-institutional claim. Note: This is not included in the line item NCH payment (reimbursement) amount.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1440,7 +1440,7 @@
         "id": "LineItemComponent.CLM_MDCR_PRMRY_PYR_ALOWD_AMT",
         "path": "LineItemComponent.CLM_MDCR_PRMRY_PYR_ALOWD_AMT",
         "short": "Line Primary Payer Allowed Amount",
-        "definition": "LINE PRIMARY PAYER ALLOWED CHARGE AMOUNT",
+        "definition": "Line primary payer allowed charge amount.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1544,7 +1544,7 @@
         "id": "LineItemComponent.CLM_LINE_PA_UNIQ_TRKNG_NUM",
         "path": "LineItemComponent.CLM_LINE_PA_UNIQ_TRKNG_NUM",
         "short": "Claim Line Prior Authorization Unique Tracking Number (Partially Adjudicated)",
-        "definition": "A NUMBER IDENTIFYING A UNIQUE TRACKING NUMBER (UTN) FOR A PRIOR AUTHORIZATION (PA).",
+        "definition": "A number identifying a unique tracking number (UTN) for a prior authorization (PA).",
         "min": 0,
         "max": "1",
         "type": [
@@ -1596,7 +1596,7 @@
         "id": "LineItemComponent.CLM_LINE_BNFT_ENHNCMT_1_CD",
         "path": "LineItemComponent.CLM_LINE_BNFT_ENHNCMT_1_CD",
         "short": "Claim Line Benefit Enhancement 1 Code",
-        "definition": "A CODE IDENTIFYING THE FIRST APPLICABLE ACCOUNTABLE CARE ORGANIZATION (ACO) BENEFIT ENHANCEMENT INDICATOR (BEI) THAT APPLIED TO THE CLAIM LINE.    REFERENCE TABLE:  CLM_BNFT_ENHNCMT_CD",
+        "definition": "A code identifying the first applicable Accountable Care Organization (ACO) Benefit Enhancement Indicator (BEI) that applied to the claim line. Reference table: CLM_BNFT_ENHNCMT_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -1609,7 +1609,7 @@
         "id": "LineItemComponent.CLM_LINE_BNFT_ENHNCMT_2_CD",
         "path": "LineItemComponent.CLM_LINE_BNFT_ENHNCMT_2_CD",
         "short": "Claim Line Benefit Enhancement 2 Code",
-        "definition": "A CODE IDENTIFYING THE SECOND APPLICABLE ACCOUNTABLE CARE ORGANIZATION (ACO) BENEFIT ENHANCEMENT INDICATOR (BEI) THAT APPLIED TO THE CLAIM LINE.    REFERENCE TABLE:  CLM_BNFT_ENHNCMT_CD",
+        "definition": "A code identifying the second applicable Accountable Care Organization (ACO) Benefit Enhancement Indicator (BEI) that applied to the claim line. Reference table: CLM_BNFT_ENHNCMT_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -1622,7 +1622,7 @@
         "id": "LineItemComponent.CLM_LINE_BNFT_ENHNCMT_3_CD",
         "path": "LineItemComponent.CLM_LINE_BNFT_ENHNCMT_3_CD",
         "short": "Claim Line Benefit Enhancement 3 Code",
-        "definition": "A CODE IDENTIFYING THE THIRD APPLICABLE ACCOUNTABLE CARE ORGANIZATION (ACO) BENEFIT ENHANCEMENT INDICATOR (BEI) THAT APPLIED TO THE CLAIM LINE.    REFERENCE TABLE:  CLM_BNFT_ENHNCMT_CD",
+        "definition": "A code identifying the third applicable Accountable Care Organization (ACO) Benefit Enhancement Indicator (BEI) that applied to the claim line. Reference table: CLM_BNFT_ENHNCMT_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -1635,7 +1635,7 @@
         "id": "LineItemComponent.CLM_LINE_BNFT_ENHNCMT_4_CD",
         "path": "LineItemComponent.CLM_LINE_BNFT_ENHNCMT_4_CD",
         "short": "Claim Line Benefit Enhancement 4 Code",
-        "definition": "A CODE IDENTIFYING THE FOURTH APPLICABLE ACCOUNTABLE CARE ORGANIZATION (ACO) BENEFIT ENHANCEMENT INDICATOR (BEI) THAT APPLIED TO THE CLAIM LINE.    REFERENCE TABLE:  CLM_BNFT_ENHNCMT_CD",
+        "definition": "A code identifying the fourth applicable Accountable Care Organization (ACO) Benefit Enhancement Indicator (BEI) that applied to the claim line. Reference table: CLM_BNFT_ENHNCMT_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -1648,7 +1648,7 @@
         "id": "LineItemComponent.CLM_LINE_BNFT_ENHNCMT_5_CD",
         "path": "LineItemComponent.CLM_LINE_BNFT_ENHNCMT_5_CD",
         "short": "Claim Line Benefit Enhancement 5 Code",
-        "definition": "A CODE IDENTIFYING THE FIFTH APPLICABLE ACCOUNTABLE CARE ORGANIZATION (ACO) BENEFIT ENHANCEMENT INDICATOR (BEI) THAT APPLIED TO THE CLAIM LINE.    REFERENCE TABLE:  CLM_BNFT_ENHNCMT_CD",
+        "definition": "A code identifying the fifth applicable Accountable Care Organization (ACO) Benefit Enhancement Indicator (BEI) that applied to the claim line. Reference table: CLM_BNFT_ENHNCMT_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -1661,7 +1661,7 @@
         "id": "LineItemComponent.CLM_LINE_NGACO_PBPMT_SW",
         "path": "LineItemComponent.CLM_LINE_NGACO_PBPMT_SW",
         "short": "Claim Line NGACO PBPMT Switch",
-        "definition": "AN INTEGRATED DATA REPOSITORY (IDR) DERIVED INDICATOR BASED ON THE CLAIM LINE NEXT GENERATION (NG) ACCOUNTABLE CARE ORGANIZATION (ACO) INDICATOR CODE FROM CWF (COMMON WORKING FILE), WHICH IDENTIFIES THE BENEFIT ENHANCEMENT INDICATOR THAT IDENTIFIES CLAIMS THAT QUALIFY FOR SPECIFIC CLAIM PROCESSING EDITS.  VALID VALUES:  Y = IF ANY OF THE FIVE CLAIM NG ACO INDICATOR CODES CONTAINS Ñ°Ò (POPULATION BASED PAYMENTS (PBP)).  N = IF Ñ¶4Ò OR Ñ¸9Ò IS FOUND IN ANY OF THE CLM_DCMTN.CLM_DEMO_1ST_NUM THROUGH CLM_DCMTN.CLM_DEMO_5TH_NUM COLUMNS AND NONE OF THE FIVE NG ACO INDICATOR CODES CONTAINS Ñ°Ò®  NULL = DEFAULT",
+        "definition": "An Integrated Data Repository (IDR) derived indicator based on the claim line Next Generation (NG) Accountable Care Organization (ACO) indicator code from CWF (Common Working File), which identifies claims that qualify for specific claim processing edits. Valid values: Y = If any of the five claim NG ACO indicator codes contains population-based payments (PBP). N = If applicable codes are found and none of the five NG ACO indicator codes contains PBP. Null = Default",
         "min": 0,
         "max": "1",
         "type": [
@@ -1674,7 +1674,7 @@
         "id": "LineItemComponent.CLM_LINE_NGACO_PDSCHRG_HCBS_SW",
         "path": "LineItemComponent.CLM_LINE_NGACO_PDSCHRG_HCBS_SW",
         "short": "Claim Line NGACO Post Discharge HCBS Switch",
-        "definition": "AN INTEGRATED DATA REPOSITORY (IDR) DERIVED INDICATOR BASED ON THE CLAIM LINE NEXT GENERATION (NG) ACCOUNTABLE CARE ORGANIZATION (ACO) INDICATOR CODE FROM CWF (COMMON WORKING FILE), WHICH IDENTIFIES THE BENEFIT ENHANCEMENT INDICATOR THAT IDENTIFIES CLAIMS THAT QUALIFY FOR SPECIFIC CLAIM PROCESSING EDITS.  VALID VALUES:  Y = IF ANY OF THE FIVE CLAIM NG ACO INDICATOR CODES CONTAINS Ñ²Ò (POST DISCHARGE HOME VISITS).  N = IF Ñ¶4Ò OR Ñ¸9Ò IS FOUND IN ANY OF THE CLM_DCMTN.CLM_DEMO_1ST_NUM THROUGH CLM_DCMTN.CLM_DEMO_5TH_NUM COLUMNS AND NONE OF THE FIVE NG ACO INDICATOR CODES CONTAINS Ñ²Ò®  NULL = DEFAULT",
+        "definition": "An Integrated Data Repository (IDR) derived indicator based on the claim line Next Generation (NG) Accountable Care Organization (ACO) indicator code from CWF (Common Working File), which identifies claims that qualify for specific claim processing edits. Valid values: Y = If any of the five claim NG ACO indicator codes contains post-discharge home visits. N = If applicable codes are found and none of the five NG ACO indicator codes contains post-discharge home visits. Null = Default",
         "min": 0,
         "max": "1",
         "type": [
@@ -1687,7 +1687,7 @@
         "id": "LineItemComponent.CLM_LINE_NGACO_SNF_WVR_SW",
         "path": "LineItemComponent.CLM_LINE_NGACO_SNF_WVR_SW",
         "short": "Claim Line NGACO SNF Waiver Switch",
-        "definition": "AN INTEGRATED DATA REPOSITORY (IDR) DERIVED INDICATOR BASED ON THE CLAIM LINE NEXT GENERATION (NG) ACCOUNTABLE CARE ORGANIZATION (ACO) INDICATOR CODE FROM CWF (COMMON WORKING FILE), WHICH IDENTIFIES THE BENEFIT ENHANCEMENT INDICATOR THAT IDENTIFIES CLAIMS THAT QUALIFY FOR SPECIFIC CLAIM PROCESSING EDITS.  VALID VALUES:  Y = IF ANY OF THE FIVE CLAIM NG ACO INDICATOR CODES CONTAINS Ñ´Ò (3-DAY SNF WAIVER).  N = IF Ñ¶4Ò OR Ñ¸9Ò IS FOUND IN ANY OF THE CLM_DCMTN.CLM_DEMO_1ST_NUM THROUGH CLM_DCMTN.CLM_DEMO_5TH_NUM COLUMNS AND NONE OF THE FIVE NG ACO INDICATOR CODES CONTAINS Ñ´Ò®  NULL = DEFAULT",
+        "definition": "An Integrated Data Repository (IDR) derived indicator based on the claim line Next Generation (NG) Accountable Care Organization (ACO) indicator code from CWF (Common Working File), which identifies claims that qualify for specific claim processing edits. Valid values: Y = If any of the five claim NG ACO indicator codes contains 3-day SNF waiver. N = If applicable codes are found and none of the five NG ACO indicator codes contains 3-day SNF waiver. Null = Default",
         "min": 0,
         "max": "1",
         "type": [
@@ -1700,7 +1700,7 @@
         "id": "LineItemComponent.CLM_LINE_NGACO_TLHLTH_SW",
         "path": "LineItemComponent.CLM_LINE_NGACO_TLHLTH_SW",
         "short": "Claim Line NGACO Telehealth Switch",
-        "definition": "AN INTEGRATED DATA REPOSITORY (IDR) DERIVED INDICATOR BASED ON THE CLAIM LINE NEXT GENERATION (NG) ACCOUNTABLE CARE ORGANIZATION (ACO) INDICATOR CODE FROM CWF (COMMON WORKING FILE), WHICH IDENTIFIES THE BENEFIT ENHANCEMENT INDICATOR THAT IDENTIFIES CLAIMS THAT QUALIFY FOR SPECIFIC CLAIM PROCESSING EDITS.  VALID VALUES:  Y = IF ANY OF THE FIVE CLAIM NG ACO INDICATOR CODES CONTAINS Ñ²Ò (TELEHEALTH).  N = IF Ñ¶4Ò OR Ñ¸9Ò IS FOUND IN ANY OF THE CLM_DCMTN.CLM_DEMO_1ST_NUM THROUGH CLM_DCMTN.CLM_DEMO_5TH_NUM COLUMNS AND NONE OF THE FIVE NG ACO INDICATOR CODES CONTAINS Ñ²Ò®  NULL = DEFAULT",
+        "definition": "An Integrated Data Repository (IDR) derived indicator based on the claim line Next Generation (NG) Accountable Care Organization (ACO) indicator code from CWF (Common Working File), which identifies claims that qualify for specific claim processing edits. Valid values: Y = If any of the five claim NG ACO indicator codes contains telehealth. N = If applicable codes are found and none of the five NG ACO indicator codes contains telehealth. Null = Default",
         "min": 0,
         "max": "1",
         "type": [
@@ -1713,7 +1713,7 @@
         "id": "LineItemComponent.CLM_LINE_NGACO_CPTATN_SW",
         "path": "LineItemComponent.CLM_LINE_NGACO_CPTATN_SW",
         "short": "Claim Line NGACO Capitation Switch",
-        "definition": "AN INTEGRATED DATA REPOSITORY (IDR) DERIVED INDICATOR BASED ON THE CLAIM LINE NEXT GENERATION (NG) ACCOUNTABLE CARE ORGANIZATION (ACO) INDICATOR CODE FROM CWF (COMMON WORKING FILE), WHICH IDENTIFIES THE BENEFIT ENHANCEMENT INDICATOR THAT IDENTIFIES CLAIMS THAT QUALIFY FOR SPECIFIC CLAIM PROCESSING EDITS.  VALID VALUES:  Y = IF ANY OF THE FIVE CLAIM NG ACO INDICATOR CODES CONTAINS Ñ´Ò (CAPITATION).  N = IF Ñ¶4Ò OR Ñ¸9Ò IS FOUND IN ANY OF THE CLM_DCMTN.CLM_DEMO_1ST_NUM THROUGH CLM_DCMTN.CLM_DEMO_5TH_NUM COLUMNS AND NONE OF THE FIVE NG ACO INDICATOR CODES CONTAINS Ñ´Ò®  NULL = DEFAULT",
+        "definition": "An Integrated Data Repository (IDR) derived indicator based on the claim line Next Generation (NG) Accountable Care Organization (ACO) indicator code from CWF (Common Working File), which identifies claims that qualify for specific claim processing edits. Valid values: Y = If any of the five claim NG ACO indicator codes contains capitation. N = If applicable codes are found and none of the five NG ACO indicator codes contains capitation. Null = Default",
         "min": 0,
         "max": "1",
         "type": [
@@ -1726,7 +1726,7 @@
         "id": "LineItemComponent.CLM_LINE_ACO_CARE_MGMT_HCBS_SW",
         "path": "LineItemComponent.CLM_LINE_ACO_CARE_MGMT_HCBS_SW",
         "short": "Claim Line ACO Care Management HCBS Switch",
-        "definition": "AN INTEGRATED DATA REPOSITORY (IDR) DERIVED INDICATOR BASED ON THE CLAIM LINE NEXT GENERATION (NG) ACCOUNTABLE CARE ORGANIZATION (ACO) INDICATOR CODE FROM CWF (COMMON WORKING FILE), WHICH IDENTIFIES THE BENEFIT ENHANCEMENT INDICATOR THAT IDENTIFIES CLAIMS THAT QUALIFY FOR SPECIFIC CLAIM PROCESSING EDITS.  VALID VALUES:  Y = IF ANY OF THE FIVE CLAIM LINE NG ACO INDICATOR CODES CONTAINS Ñ¶Ò (CARE MANAGEMENT HOME VISITS).  N = IF Ñ¶4Ò OR Ñ¸9Ò IS FOUND IN ANY OF THE CLM_DCMTN.CLM_DEMO_1ST_NUM THROUGH CLM_DCMTN.CLM_DEMO_5TH_NUM COLUMNS AND NONE OF THE FIVE NG ACO INDICATOR CODES CONTAINS Ñ¶Ò®  NULL = DEFAULT",
+        "definition": "An Integrated Data Repository (IDR) derived indicator based on the claim line Next Generation (NG) Accountable Care Organization (ACO) indicator code from CWF (Common Working File), which identifies claims that qualify for specific claim processing edits. Valid values: Y = If any of the five claim line NG ACO indicator codes contains care management home visits. N = If applicable codes are found and none of the five NG ACO indicator codes contains care management home visits. Null = Default",
         "min": 0,
         "max": "1",
         "type": [
@@ -1739,7 +1739,7 @@
         "id": "LineItemComponent.GEO_RNDRG_SSA_STATE_CD",
         "path": "LineItemComponent.GEO_RNDRG_SSA_STATE_CD",
         "short": "State FIPS Code",
-        "definition": "Identifies the state that the provider providing the service is located in",
+        "definition": "Identifies the state that the provider providing the service is located in.",
         "min": 0,
         "max": "1",
         "type": [

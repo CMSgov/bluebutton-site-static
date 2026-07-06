@@ -25,7 +25,7 @@
         "id": "Beneficiary.BENE_1ST_NAME",
         "path": "Beneficiary.BENE_1ST_NAME",
         "short": "Beneficiary First Name",
-        "definition": "A FIRST NAME FOR A MEDICARE BENEFICIARY.",
+        "definition": "A first name for a Medicare beneficiary.",
         "min": 1,
         "max": "1",
         "type": [
@@ -38,7 +38,7 @@
         "id": "Beneficiary.BENE_LAST_NAME",
         "path": "Beneficiary.BENE_LAST_NAME",
         "short": "Beneficiary Last Name",
-        "definition": "A LAST NAME OR SURNAME, INCLUDING ANY FOLLOWING TITLES OR SUFFIXES, FOR A MEDICARE BENEFICIARY.",
+        "definition": "A last name or surname, including any following titles or suffixes, for a Medicare beneficiary.",
         "min": 1,
         "max": "1",
         "type": [
@@ -51,7 +51,7 @@
         "id": "Beneficiary.BENE_MIDL_NAME",
         "path": "Beneficiary.BENE_MIDL_NAME",
         "short": "Beneficiary Middle Name",
-        "definition": "THE FIRST INITIAL OF THE MEDICARE BENEFICIARYS MIDDLE NAME.",
+        "definition": "The first initial of the Medicare beneficiarys middle name.",
         "min": 0,
         "max": "1",
         "type": [
@@ -64,7 +64,7 @@
         "id": "Beneficiary.BENE_BRTH_DT",
         "path": "Beneficiary.BENE_BRTH_DT",
         "short": "Beneficiary Date of Birth",
-        "definition": "A DATE IDENTIFYING WHEN A BENEFICIARY IS BORN.",
+        "definition": "A date identifying when a beneficiary is born.",
         "min": 1,
         "max": "1",
         "type": [
@@ -77,7 +77,7 @@
         "id": "Beneficiary.BENE_DEATH_DT",
         "path": "Beneficiary.BENE_DEATH_DT",
         "short": "Beneficiary Date of Death",
-        "definition": "A DATE IDENTIFYING WHEN A BENEFICIARY DIED.",
+        "definition": "A date identifying when a beneficiary died.",
         "min": 0,
         "max": "1",
         "type": [
@@ -90,7 +90,7 @@
         "id": "Beneficiary.BENE_VRFY_DEATH_DAY_SW",
         "path": "Beneficiary.BENE_VRFY_DEATH_DAY_SW",
         "short": "Beneficiary Date of Death Verification Switch",
-        "definition": "AN INDICATION IF THE EXACT DATE OF DEATH FOR A MEDICARE BENEFICIARY WAS VERIFIED.  VALID VALUES:  Y = YES, DATE OF DEATH HAS BEEN VERIFIED.  N = NO, DATE OF DEATH HAS NOT BEEN VERIFIED.",
+        "definition": "An indication if the exact date of death for a Medicare beneficiary was verified.  Valid values:  Y = Yes, date of death has been verified.  N = No, date of death has not been verified.",
         "min": 0,
         "max": "1",
         "type": [
@@ -116,7 +116,7 @@
         "id": "Beneficiary.BENE_XREF_EFCTV_SK",
         "path": "Beneficiary.BENE_XREF_EFCTV_SK",
         "short": "Current Patient FHIR ID",
-        "definition": "AN INTEGRATED DATA REPOSITORY (IDR) DERIVED EFFECTIVE SURROGATE KEY THAT UNIQUELY IDENTIFIES A BENEFICIARY.  NOTE: BENE_XREF_EFCTV_SK REPRESENTS THE MOST CURRENT BENE_SK THAT IS IN EFFECT FOR THE BENEFICIARY. BENE_XREF_EFCTV_SK IS MORE CURRENT THAN BENE_SK AND BENE_XREF_SK ON THE BENE TABLE.",
+        "definition": "The current Patient ID for the beneficary.",
         "min": 1,
         "max": "1",
         "type": [
@@ -129,7 +129,7 @@
         "id": "Beneficiary.BENE_SK",
         "path": "Beneficiary.BENE_SK",
         "short": "Patient FHIR ID",
-        "definition": "A UNIQUE NUMBER ASSIGNED BY THE ENROLLMENT DATA BASE (EDB) TO EACH EDB RECORD TO IDENTIFY A BENEFICIARY.",
+        "definition": "A unique number assigned by the enrollment database (EDB) to each EDB record to identify a beneficiary.",
         "min": 1,
         "max": "1",
         "type": [
@@ -168,7 +168,7 @@
         "id": "Beneficiary.GEO_USPS_STATE_CD",
         "path": "Beneficiary.GEO_USPS_STATE_CD",
         "short": "USPS State Code",
-        "definition": "A CODE IDENTIFYING THE TWO-CHARACTER ALPHABETIC ABBREVIATION FOR A STATE IN THE UNITED STATES AS DEFINED BY THE UNITED STATES POSTAL SERVICE (USPS).    REFERENCE TABLE: GEO_USPS_STATE_CD",
+        "definition": "A code identifying the two-character alphabetic abbreviation for a state in the United States as defined by the United States Postal Service (USPS).    Reference table: GEO_USPS_STATE_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -181,7 +181,7 @@
         "id": "Beneficiary.GEO_ZIP5_CD",
         "path": "Beneficiary.GEO_ZIP5_CD",
         "short": "Beneficiary Zip Code - First 5",
-        "definition": "A FIVE-DIGIT ZIP CODE DEFINED BY THE UNITED STATES POSTAL SERVICE (USPS) THAT IDENTIFIES THE DESTINATION POST OFFICE OR DELIVERY AREA.     REFERENCE TABLE: GEO_ZIP5_CD",
+        "definition": "A five-digit ZIP code defined by the United States Postal Service (USPS) that identifies the destination post office or delivery area.     Reference table: GEO_ZIP5_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -272,7 +272,7 @@
         "id": "Beneficiary.GEO_ZIP_PLC_NAME",
         "path": "Beneficiary.GEO_ZIP_PLC_NAME",
         "short": "City Name",
-        "definition": "A NAME OF THE CITY FOR A GIVEN ZIP CODE OF A MEDICARE BENEFICIARYS MAILING ADDRESS.    REFERENCE TABLE: GEO_ZIP5_CD",
+        "definition": "A name of the city for a given ZIP code of a Medicare beneficiary's mailing address.    Reference table: GEO_ZIP5_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -285,7 +285,7 @@
         "id": "Beneficiary.CNTCT_LANG_CD",
         "path": "Beneficiary.CNTCT_LANG_CD",
         "short": "Contact Language Code",
-        "definition": "A CODE IDENTIFYING THE LANGUAGE THAT THE BENEFICIARY REQUESTED CENTERS FOR MEDICARE AND MEDICAID SERVICES (CMS) USE WHEN SENDING THE MEDICARE HANDBOOK.  ENGLISH AND SPANISH ARE THE ONLY LANGUAGE CHOICES THAT CMS SUPPORTS.  THIS LANGUAGE PREFERENCE CODE IS USED EXCLUSIVELY FOR THE MEDICARE HANDBOOK.  IT IS NOT USED FOR ANY OTHER TYPE OF MAIL SENT TO BENEFICIARIES.    REFERENCE TABLE: CNTCT_LANG_CD",
+        "definition": "A code identifying the language that the beneficiary requested Centers for Medicare and Medicaid Services (CMS) use when sending the Medicare handbook.  English and Spanish are the only language choices that CMS supports.  This language preference code is used exclusively for the Medicare handbook.  It is not used for any other type of mail sent to beneficiaries.    Reference table: CNTCT_LANG_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -298,7 +298,7 @@
         "id": "Beneficiary.BENE_SEX_CD",
         "path": "Beneficiary.BENE_SEX_CD",
         "short": "Beneficiary Sex Code",
-        "definition": "A CODE IDENTIFYING THE SEX OF A MEDICARE BENEFICIARY.     REFERENCE TABLE: BENE_SEX_CD",
+        "definition": "A code identifying the sex of a Medicare beneficiary.     Reference table: BENE_SEX_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -311,7 +311,7 @@
         "id": "Beneficiary.BENE_RACE_CD",
         "path": "Beneficiary.BENE_RACE_CD",
         "short": "Beneficiary Race Code",
-        "definition": "A CODE IDENTIFYING A BENEFICIARYS RACE.  REFERENCE TABLE: BENE_RACE_CD",
+        "definition": "A code identifying a beneficiary's race.  Reference table: BENE_RACE_CD",
         "min": 0,
         "max": "1",
         "type": [

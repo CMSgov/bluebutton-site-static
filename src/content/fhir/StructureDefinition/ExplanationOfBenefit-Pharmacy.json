@@ -49,7 +49,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_TYPE_CD",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_TYPE_CD",
         "short": "Claim Type Code",
-        "definition": "A CODE IDENTIFYING THE SOURCE AND TYPE OF CLAIM SUBMITTED THROUGH THE MEDICARE OR MEDICAID PROGRAM.  FOR EXAMPLE:  60 = MEDICARE  NATIONAL CLAIMS HISTORY (NCH) INPATIENT CLAIM   8900 = MEDICAID FEE FOR SERVICE DENTAL     REFERENCE TABLE: CLM_TYPE_CD",
+        "definition": "A code identifying the source and type of claim submitted through the Medicare or Medicaid program. For example: 60 = Medicare National Claims History (NCH) inpatient claim. 8900 = Medicaid fee for service dental. Reference table: CLM_TYPE_CD",
         "min": 1,
         "max": "1",
         "type": [
@@ -62,7 +62,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_UNIQ_ID",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_UNIQ_ID",
         "short": "Claim Unique ID",
-        "definition": "AN INTEGRATED DATA REPOSITORY (IDR) ASSIGNED SURROGATE KEY USED TO IDENTIFY A CLAIM.",
+        "definition": "An Integrated Data Repository (IDR) assigned surrogate key used to identify a claim.",
         "min": 1,
         "max": "1",
         "type": [
@@ -101,7 +101,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_FROM_DT",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_FROM_DT",
         "short": "Claim From Date",
-        "definition": "A DATE IDENTIFYING THE FIRST DAY SERVICES ARE PROVIDED TO A BENEFICIARY.",
+        "definition": "A date identifying the first day services are provided to a beneficiary.",
         "min": 1,
         "max": "1",
         "type": [
@@ -114,7 +114,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_THRU_DT",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_THRU_DT",
         "short": "Claim Thru Date",
-        "definition": "A DATE IDENTIFYING THE LAST DAY SERVICES ARE PROVIDED TO A BENEFICIARY.  NOTE: FOR DRUG CLAIMS, THIS DATE IS WHEN THE PRESCRIPTION WAS FILLED.",
+        "definition": "A date identifying the last day services are provided to a beneficiary. Note: For drug claims, this date is when the prescription was filled.",
         "min": 1,
         "max": "1",
         "type": [
@@ -127,7 +127,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_EFCTV_DT",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_EFCTV_DT",
         "short": "Claim Effective Date",
-        "definition": "A DATE CORRESPONDING TO THE NATIONAL CLAIM HISTORY (NCH) WEEKLY PROCESSING DATE AND USED IN FINAL ACTION PROCESSING TO IDENTIFY A VERSION OF A CLAIM. IT WILL ALWAYS BE A FRIDAY DATE.",
+        "definition": "A date corresponding to the National Claim History (NCH) weekly processing date and used in final action processing to identify a version of a claim. It will always be a Friday date.",
         "min": 1,
         "max": "1",
         "type": [
@@ -140,7 +140,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_SRC_ID",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_SRC_ID",
         "short": "Claim Source ID",
-        "definition": "AN IDENTIFIER INDICATING WHERE THE SOURCE OF THE CLAIM DATA IN THE INTEGRATED DATA REPOSITORY (IDR) ORIGINATED FROM.   VALID VALUES:  20000 = NATIONAL CLAIMS HISTORY (NCH)  21000 = FISCAL INTERMEDIARY SHARED SYSTEM (FISS)  22000 = MULTI-CARRIER SYSTEM (MCS)  23000 = VIABLE INFORMATION PROCESSING SYSTEMS (VIPS) MEDICARE SYSTEM (VMS)  24000 = ENCOUNTER DATA PROCESSING SYSTEM (EDPS)  25000 = ENCOUNTER MEDICAID DUALS 837 CLAIMS  AND DUALS MEDICAID DRUG CLAIMS (DMDC)  N/A = MEDICAID",
+        "definition": "An identifier indicating where the source of the claim data in the Integrated Data Repository (IDR) originated from. Valid values: 20000 = National Claims History (NCH). 21000 = Fiscal Intermediary Shared System (FISS). 22000 = Multi-Carrier System (MCS). 23000 = Viable Information Processing Systems (VIPS) Medicare System (VMS). 24000 = Encounter Data Processing System (EDPS). 25000 = Encounter Medicaid Duals 837 claims and Duals Medicaid Drug Claims (DMDC). N/A = Medicaid",
         "min": 1,
         "max": "1",
         "type": [
@@ -166,7 +166,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.PRVDR_SRVC_PRVDR_NPI_NUM",
         "path": "ExplanationOfBenefit-Pharmacy.PRVDR_SRVC_PRVDR_NPI_NUM",
         "short": "Service Provider NPI Number",
-        "definition": "A NUMBER IDENTIFYING THE NATIONAL PROVIDER IDENTIFIER (NPI) OF A SERVICE PROVIDER AS SOURCED FROM THE NPI CROSSWALK REFERENCE INFORMATION PROVIDED BY THE NATIONAL PLAN AND PROVIDER ENUMERATION SYSTEM (NPPES).",
+        "definition": "A number identifying the National Provider Identifier (NPI) of a service provider as sourced from the NPI crosswalk reference information provided by the National Plan and Provider Enumeration System (NPPES).",
         "min": 0,
         "max": "1",
         "type": [
@@ -179,7 +179,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_PD_DT",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_PD_DT",
         "short": "Payment Date",
-        "definition": "A DATE INDICATING WHEN A CLAIM WAS PAID.",
+        "definition": "A date indicating when a claim was paid.",
         "min": 0,
         "max": "1",
         "type": [
@@ -192,7 +192,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.PRVDR_PRSCRBNG_PRVDR_NPI_NUM",
         "path": "ExplanationOfBenefit-Pharmacy.PRVDR_PRSCRBNG_PRVDR_NPI_NUM",
         "short": "Prescribing Provider NPI Number",
-        "definition": "A NUMBER IDENTIFYING THE NATIONAL PROVIDER IDENTIFIER (NPI) OF A PRESCRIBING PROVIDER AS SOURCED FROM THE NPI CROSSWALK REFERENCE INFORMATION PROVIDED BY THE NATIONAL PLAN AND PROVIDER ENUMERATION SYSTEM (NPPES).",
+        "definition": "A number identifying the National Provider Identifier (NPI) of a prescribing provider as sourced from the NPI crosswalk reference information provided by the National Plan and Provider Enumeration System (NPPES).",
         "min": 0,
         "max": "1",
         "type": [
@@ -445,7 +445,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_BENE_PMT_AMT",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_BENE_PMT_AMT",
         "short": "Beneficiary Payment Amount",
-        "definition": "AN AMOUNT PAID BY A BENEFICIARY FOR SERVICES RENDERED ON A CLAIM.",
+        "definition": "An amount paid by a beneficiary for services rendered on a claim.",
         "min": 0,
         "max": "1",
         "type": [
@@ -458,7 +458,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_OTHR_TP_PD_AMT",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_OTHR_TP_PD_AMT",
         "short": "Other Third Party Paid Amount",
-        "definition": "AN AMOUNT IDENTIFYING HOW MUCH WAS PAID BY A THIRD PARTY PAYER.",
+        "definition": "An amount identifying how much was paid by a third party payer.",
         "min": 0,
         "max": "1",
         "type": [
@@ -500,7 +500,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.PRVDR_SRVC_ID_QLFYR_CD",
         "path": "ExplanationOfBenefit-Pharmacy.PRVDR_SRVC_ID_QLFYR_CD",
         "short": "Provider Service Identifier Qualifier Code",
-        "definition": "A CODE INDICATING THE TYPE OF NUMBER USED TO IDENTIFY A SERVICE PROVIDER ON A CLAIM.  FOR EXAMPLE:  01 = NPI  07 = NCPDP NUMBER  08 = STATE LICENSE NUMBER    REFERENCE TABLE: CLM_PRVDR_ID_QLFYR_CD",
+        "definition": "A code indicating the type of number used to identify a service provider on a claim. For example: 01 = NPI. 07 = NCPDP number. 08 = State license number. Reference table: CLM_PRVDR_ID_QLFYR_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -513,7 +513,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_SRVC_PRVDR_GNRC_ID_NUM",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_SRVC_PRVDR_GNRC_ID_NUM",
         "short": "Service Provider Generic ID Number",
-        "definition": "A NUMBER USED TO IDENTIFY A SERVICE PROVIDER.",
+        "definition": "A number used to identify a service provider.",
         "min": 0,
         "max": "1",
         "type": [
@@ -526,7 +526,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_PRSBNG_PRVDR_GNRC_ID_NUM",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_PRSBNG_PRVDR_GNRC_ID_NUM",
         "short": "Prescribing Provider Generic ID Number",
-        "definition": "A NUMBER IDENTIFYING A GENERIC IDENTIFIER OF A PRESCRIBING PROVIDER SUBMITTED ON A DRUG CLAIM.",
+        "definition": "A number identifying a generic identifier of a prescribing provider submitted on a drug claim.",
         "min": 0,
         "max": "1",
         "type": [
@@ -539,7 +539,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_CMS_PROC_DT",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_CMS_PROC_DT",
         "short": "Claim Process Date",
-        "definition": "DATE A CLAIM OR PRESCRIPTION DRUG EVENT WAS PROCESSED BY A CMS FRONT END SYSTEM, SUCH AS THE DDPS OPERATIONAL DATA STORE.",
+        "definition": "Date a claim or prescription drug event was processed by a CMS front end system, such as the DDPS operational data store.",
         "min": 0,
         "max": "1",
         "type": [
@@ -591,7 +591,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_ADJSTMT_TYPE_CD",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_ADJSTMT_TYPE_CD",
         "short": "Claim Adjustment Type Code",
-        "definition": "A CODE IDENTIFYING THE TYPE OF ADJUSTMENT RECORD REPRESENTED ON A CLAIM OR ENCOUNTER.    REFERENCE TABLE: CLM_ADJSTMT_TYPE_CD",
+        "definition": "A code identifying the type of adjustment record represented on a claim or encounter. Reference table: CLM_ADJSTMT_TYPE_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -604,7 +604,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_DISP_CD",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_DISP_CD",
         "short": "Claim Disposition Code",
-        "definition": "A CODE INDICATING THE DISPOSITION OR OUTCOME OF A PROCESSED CLAIM RECORD.    REFERENCE TABLE: CLM_DISP_CD",
+        "definition": "A code indicating the disposition or outcome of a processed claim record. Reference table: CLM_DISP_CD",
         "min": 0,
         "max": "1",
         "type": [
@@ -617,7 +617,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.CLM_IDR_LD_DT",
         "path": "ExplanationOfBenefit-Pharmacy.CLM_IDR_LD_DT",
         "short": "Claim IDR Load Date",
-        "definition": "A DATE IDENTIFYING WHEN PART A AND PART B DATA ARE LOADED INTO THE INTEGRATED DATA REPOSITORY (IDR).",
+        "definition": "A date identifying when Part A and Part B data are loaded into the Integrated Data Repository (IDR).",
         "min": 1,
         "max": "1",
         "type": [
@@ -630,7 +630,7 @@
         "id": "ExplanationOfBenefit-Pharmacy.PRVDR_PRSBNG_ID_QLFYR_CD",
         "path": "ExplanationOfBenefit-Pharmacy.PRVDR_PRSBNG_ID_QLFYR_CD",
         "short": "Provider Prescribing Identifier Qualifier Code",
-        "definition": "A CODE INDICATING THE TYPE OF NUMBER USED TO IDENTIFY A PRESCRIBING PROVIDER ON A CLAIM.  FOR EXAMPLE:  01 = NPI  07 = NCPDP NUMBER  08 = STATE LICENSE NUMBER    REFERENCE TABLE: CLM_PRVDR_ID_QLFYR_CD",
+        "definition": "A code indicating the type of number used to identify a prescribing provider on a claim. For example: 01 = NPI. 07 = NCPDP number. 08 = State license number. Reference table: CLM_PRVDR_ID_QLFYR_CD",
         "min": 0,
         "max": "1",
         "type": [
