@@ -96,7 +96,7 @@
                 {
                   "key": "resource_id",
                   "value": "",
-                  "description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+                  "description": "(Required) Patient FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
                 }
               ]
             }

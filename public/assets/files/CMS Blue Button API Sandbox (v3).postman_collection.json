@@ -98,7 +98,7 @@
 								{
 									"key": "resource_id",
 									"value": "",
-									"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+									"description": "(Required) Patient FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
 								}
 							]
 						}
@@ -344,6 +344,69 @@
 									"key": "resource_id",
 									"value": "",
 									"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Audit Event",
+			"item": [
+				{
+					"name": "Search Audit Event",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v3/fhir/AuditEvent/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v3",
+								"fhir",
+								"AuditEvent",
+								""
+							],
+							"query": []
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Audit Event",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v3/fhir/AuditEvent/:resource_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v3",
+								"fhir",
+								"AuditEvent",
+								":resource_id"
+							],
+							"variable": [
+								{
+									"key": "resource_id",
+									"value": "",
+									"description": "(Required) AuditEvent FHIR resource id, e.g. part-a--20140000000001"
 								}
 							]
 						}
