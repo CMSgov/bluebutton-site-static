@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "SERVICE-CNTS",
-  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/SERVICE-CNTS",
-  "name": "SERVICE_CNTS",
-  "title": "Number of Services",
+  "id": "RRB-EXCL-IND",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/RRB-EXCL-IND",
+  "name": "RRB_EXCL_IND",
+  "title": "Railroad Retirement Board Exclusion Indicator",
   "status": "draft",
-  "description": "Number of services for the segment.",
+  "description": "Railroad Retirement Board Exclusion Indicator.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -23,8 +23,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Number of Services",
-        "definition": "Number of services for the segment."
+        "short": "Railroad Retirement Board Exclusion Indicator",
+        "definition": "Railroad Retirement Board Exclusion Indicator."
       },
       {
         "id": "Extension.extension",
@@ -34,14 +34,14 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/SERVICE-CNTS"
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/RRB-EXCL-IND"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "unsignedInt"
+            "code": "boolean"
           }
         ]
       }
