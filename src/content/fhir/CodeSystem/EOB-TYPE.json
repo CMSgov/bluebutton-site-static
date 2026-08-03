@@ -1,0 +1,45 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "EOB-TYPE",
+  "id": "EOB-TYPE",
+  "title": "Blue Button EOB Type",
+  "description": "This is the EOB type code for Blue Button.",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/EOB-TYPE",
+  "concept": [
+    {
+      "code": "CARRIER",
+      "display": "Professional Physician/Supplier Claim"
+    },
+    {
+      "code": "DME",
+      "display": "Durable Medical Equipment Claim"
+    },
+    {
+      "code": "HHA",
+      "display": "Home Health Services"
+    },
+    {
+      "code": "HOSPICE",
+      "display": "Hospice Care"
+    },
+    {
+      "code": "INPATIENT",
+      "display": "Inpatient Hospital Care"
+    },
+    {
+      "code": "OUTPATIENT",
+      "display": "Outpatient Hospital Care"
+    },
+    {
+      "code": "PDE",
+      "display": "Drug Plan Event"
+    },
+    {
+      "code": "SNF",
+      "display": "Skilled Nursing Facility Care"
+    }
+  ],
+  "count": 8
+}
