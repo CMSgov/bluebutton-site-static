@@ -14,11 +14,23 @@
       "display": "High"
     },
     {
+      "code": "2",
+      "display": "Low"
+    },
+    {
+      "code": "3",
+      "display": "0 (no copay)"
+    },
+    {
       "code": "4",
       "display": "15% Copayment"
+    },
+    {
+      "code": "5",
+      "display": "Unknown"
     }
   ],
   "experimental": false,
   "caseSensitive": true,
-  "count": 2
+  "count": 5
 }
