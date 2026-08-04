@@ -1,0 +1,1444 @@
+{
+  "info": {
+    "_postman_id": "eff8fef8-4e46-4348-84cc-6db694adb3ac",
+    "name": "CMS BlueButton API",
+    "description": "To use the Postman collection, you will need a Client Id and Client Secret. These can be obtained by creating a user account and registering an application in the Blue Button Sandbox, located at h[ttps://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov).\n\nOnce you have setup and verified a user account, log in, click “Add an Application” and complete the \"App Details\" form. For the Callback URL, use [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) or [https://oauth.pstmn.io/v1/browser-callback](https://oauth.pstmn.io/v1/browser-callback) if you are using web based Postman. Also be sure to choose \"Yes\" to the beneficiary demographic data question.\n\nIn Postman, in the \"CMS Blue Button Sandbox\" collection editor, select the \"Variables\" tab. Copy the Client Id and Client Secret generated during the app registration into respective value fields for clientId and clientSecret. Note the Client Id and Client Secret must exactly match the values from the app registration. After entering the Client Id and Client Secret, be sure to Save the collection\n\nWithin the Collection Editor, switch to the \"Authorization\" tab and click \"Get New Access Token\". Authorize via the Medicare login screens using the synthetic user accounts available in the sandbox (e.g. user=BBUser00000 and pwd=PW00000!). Upon return to Postman, click \"Use Token\" and then use any desired API calls under the V1, V2, and V3 folders.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47628619",
+    "_collection_link": "https://connorlewellyn-1609585.postman.co/workspace/d8c39ece-60b1-4f97-823d-c5ecb6259406/collection/47628619-eff8fef8-4e46-4348-84cc-6db694adb3ac?action=share&source=collection_link&creator=47628619"
+  },
+  "item": [
+    {
+      "name": "v1",
+      "auth": {
+        "type": "oauth2",
+        "oauth2": [
+          {
+            "key": "accessTokenUrl",
+            "value": "{{baseUrl}}/v1/o/token/",
+            "type": "string"
+          },
+          {
+            "key": "authUrl",
+            "value": "{{baseUrl}}/v1/o/authorize/",
+            "type": "string"
+          },
+          {
+            "key": "state",
+            "value": "1234567890abcdefghijklmnopqrstuvwxyz",
+            "type": "string"
+          },
+          {
+            "key": "grant_type",
+            "value": "authorization_code_with_pkce",
+            "type": "string"
+          },
+          {
+            "key": "redirect_uri",
+            "value": "https://oauth.pstmn.io/v1/callback",
+            "type": "string"
+          },
+          {
+            "key": "scope",
+            "value": "patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs profile",
+            "type": "string"
+          },
+          {
+            "key": "tokenName",
+            "value": "Token-BBUser",
+            "type": "string"
+          },
+          {
+            "key": "client_authentication",
+            "value": "body",
+            "type": "string"
+          },
+          {
+            "key": "tokenType",
+            "value": "Bearer",
+            "type": "string"
+          },
+          {
+            "key": "challengeAlgorithm",
+            "value": "S256",
+            "type": "string"
+          },
+          {
+            "key": "clientSecret",
+            "value": "{{clientSecret}}",
+            "type": "string"
+          },
+          {
+            "key": "clientId",
+            "value": "{{clientId}}",
+            "type": "string"
+          },
+          {
+            "key": "addTokenTo",
+            "value": "header",
+            "type": "string"
+          }
+        ]
+      },
+      "item": [
+        {
+          "name": "Patient",
+          "item": [
+            {
+              "name": "Search Patient",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v1/fhir/Patient/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "fhir",
+                    "Patient",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "identifier",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_lastUpdated",
+                      "value": "",
+                      "description": "Include resources last updated in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "",
+                      "description": "The offset used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_has:Coverage",
+                      "value": "",
+                      "description": "Part D coverage type/year",
+                      "disabled": true
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "",
+                      "description": "The cursor used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_id",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Read Patient",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v1/fhir/Patient/:resource_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "fhir",
+                    "Patient",
+                    ":resource_id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "resource_id",
+                      "value": "",
+                      "description": "(Required) Patient FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Explanation Of Benefit",
+          "item": [
+            {
+              "name": "Search Explanation Of Benefits",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "fhir",
+                    "ExplanationOfBenefit",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "patient",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_lastUpdated",
+                      "value": "",
+                      "description": "Include resources last updated in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "excludeSAMHSA",
+                      "value": "",
+                      "description": "If true, exclude all SAMHSA-related resources",
+                      "disabled": true
+                    },
+                    {
+                      "key": "service-date",
+                      "value": "",
+                      "description": "Include resources that completed in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "",
+                      "description": "The offset used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "",
+                      "description": "A list of claim types to include",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Read Explanation Of Benefits",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/:resource_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "fhir",
+                    "ExplanationOfBenefit",
+                    ":resource_id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "resource_id",
+                      "value": "",
+                      "description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Coverage",
+          "item": [
+            {
+              "name": "Search Coverage",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v1/fhir/Coverage/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "fhir",
+                    "Coverage",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "beneficiary",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_lastUpdated",
+                      "value": "",
+                      "description": "Include resources last updated in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "",
+                      "description": "The offset used for result pagination",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Read Coverage",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v1/fhir/Coverage/:resource_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v2",
+                    "fhir",
+                    "Coverage",
+                    ":resource_id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "resource_id",
+                      "value": "",
+                      "description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "FHIR Metadata",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/fhir/metadata",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "fhir",
+                "metadata"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "OpenID Configuration",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/.well-known/openid-configuration",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ".well-known",
+                "openid-configuration"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "OpenID Connect UserInfo",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/connect/userinfo",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "connect",
+                "userinfo"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "v2",
+      "auth": {
+        "type": "oauth2",
+        "oauth2": [
+          {
+            "key": "accessTokenUrl",
+            "value": "{{baseUrl}}/v2/o/token/",
+            "type": "string"
+          },
+          {
+            "key": "authUrl",
+            "value": "{{baseUrl}}/v2/o/authorize/",
+            "type": "string"
+          },
+          {
+            "key": "state",
+            "value": "1234567890abcdefghijklmnopqrstuvwxyz",
+            "type": "string"
+          },
+          {
+            "key": "grant_type",
+            "value": "authorization_code_with_pkce",
+            "type": "string"
+          },
+          {
+            "key": "redirect_uri",
+            "value": "https://oauth.pstmn.io/v1/callback",
+            "type": "string"
+          },
+          {
+            "key": "scope",
+            "value": "patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs profile",
+            "type": "string"
+          },
+          {
+            "key": "tokenName",
+            "value": "Token-BBUser",
+            "type": "string"
+          },
+          {
+            "key": "client_authentication",
+            "value": "body",
+            "type": "string"
+          },
+          {
+            "key": "tokenType",
+            "value": "Bearer",
+            "type": "string"
+          },
+          {
+            "key": "challengeAlgorithm",
+            "value": "S256",
+            "type": "string"
+          },
+          {
+            "key": "clientSecret",
+            "value": "{{clientSecret}}",
+            "type": "string"
+          },
+          {
+            "key": "clientId",
+            "value": "{{clientId}}",
+            "type": "string"
+          },
+          {
+            "key": "addTokenTo",
+            "value": "header",
+            "type": "string"
+          }
+        ]
+      },
+      "item": [
+        {
+          "name": "Patient",
+          "item": [
+            {
+              "name": "Search Patient",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v2/fhir/Patient/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v2",
+                    "fhir",
+                    "Patient",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "identifier",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_lastUpdated",
+                      "value": "",
+                      "description": "Include resources last updated in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "",
+                      "description": "The offset used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_has:Coverage",
+                      "value": "",
+                      "description": "Part D coverage type/year",
+                      "disabled": true
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "",
+                      "description": "The cursor used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_id",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Read Patient",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v2/fhir/Patient/:resource_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v2",
+                    "fhir",
+                    "Patient",
+                    ":resource_id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "resource_id",
+                      "value": "",
+                      "description": "(Required) Patient FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Explanation Of Benefit",
+          "item": [
+            {
+              "name": "Search Explanation Of Benefits",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v2",
+                    "fhir",
+                    "ExplanationOfBenefit",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "patient",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_lastUpdated",
+                      "value": "",
+                      "description": "Include resources last updated in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "excludeSAMHSA",
+                      "value": "",
+                      "description": "If true, exclude all SAMHSA-related resources",
+                      "disabled": true
+                    },
+                    {
+                      "key": "service-date",
+                      "value": "",
+                      "description": "Include resources that completed in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "",
+                      "description": "The offset used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "",
+                      "description": "A list of claim types to include",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Read Explanation Of Benefits",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/:resource_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v2",
+                    "fhir",
+                    "ExplanationOfBenefit",
+                    ":resource_id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "resource_id",
+                      "value": "",
+                      "description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Coverage",
+          "item": [
+            {
+              "name": "Search Coverage",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v2/fhir/Coverage/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v2",
+                    "fhir",
+                    "Coverage",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "beneficiary",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_lastUpdated",
+                      "value": "",
+                      "description": "Include resources last updated in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "",
+                      "description": "The offset used for result pagination",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Read Coverage",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v2/fhir/Coverage/:resource_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v2",
+                    "fhir",
+                    "Coverage",
+                    ":resource_id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "resource_id",
+                      "value": "",
+                      "description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "FHIR Metadata",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v2/fhir/metadata",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v2",
+                "fhir",
+                "metadata"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "OpenID Configuration",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/.well-known/openid-configuration-v2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ".well-known",
+                "openid-configuration-v2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "OpenID Connect UserInfo",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v2/connect/userinfo",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v2",
+                "connect",
+                "userinfo"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "v3",
+      "auth": {
+        "type": "oauth2",
+        "oauth2": [
+          {
+            "key": "accessTokenUrl",
+            "value": "{{baseUrl}}/v3/o/token/",
+            "type": "string"
+          },
+          {
+            "key": "authUrl",
+            "value": "{{baseUrl}}/v3/o/authorize/",
+            "type": "string"
+          },
+          {
+            "key": "state",
+            "value": "1234567890abcdefghijklmnopqrstuvwxyz",
+            "type": "string"
+          },
+          {
+            "key": "grant_type",
+            "value": "authorization_code_with_pkce",
+            "type": "string"
+          },
+          {
+            "key": "redirect_uri",
+            "value": "https://oauth.pstmn.io/v1/callback",
+            "type": "string"
+          },
+          {
+            "key": "scope",
+            "value": "patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs profile",
+            "type": "string"
+          },
+          {
+            "key": "tokenName",
+            "value": "Token-BBUser",
+            "type": "string"
+          },
+          {
+            "key": "client_authentication",
+            "value": "body",
+            "type": "string"
+          },
+          {
+            "key": "tokenType",
+            "value": "Bearer",
+            "type": "string"
+          },
+          {
+            "key": "challengeAlgorithm",
+            "value": "S256",
+            "type": "string"
+          },
+          {
+            "key": "clientSecret",
+            "value": "{{clientSecret}}",
+            "type": "string"
+          },
+          {
+            "key": "clientId",
+            "value": "{{clientId}}",
+            "type": "string"
+          },
+          {
+            "key": "addTokenTo",
+            "value": "header",
+            "type": "string"
+          }
+        ]
+      },
+      "item": [
+        {
+          "name": "Patient",
+          "item": [
+            {
+              "name": "Search Patient",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v3/fhir/Patient/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v3",
+                    "fhir",
+                    "Patient",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "identifier",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_lastUpdated",
+                      "value": "",
+                      "description": "Include resources last updated in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "",
+                      "description": "The offset used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_has:Coverage",
+                      "value": "",
+                      "description": "Part D coverage type/year",
+                      "disabled": true
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "",
+                      "description": "The cursor used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_id",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Read Patient",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v3/fhir/Patient/:resource_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v3",
+                    "fhir",
+                    "Patient",
+                    ":resource_id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "resource_id",
+                      "value": "",
+                      "description": "(Required) Patient FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Digital Insurance Card",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v3/fhir/Patient/$generate-insurance-card",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v3",
+                    "fhir",
+                    "Patient",
+                    "$generate-insurance-card"
+                  ],
+                  "query": [
+                    {
+                      "key": "identifier",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_lastUpdated",
+                      "value": "",
+                      "description": "Include resources last updated in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "",
+                      "description": "The offset used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_has:Coverage",
+                      "value": "",
+                      "description": "Part D coverage type/year",
+                      "disabled": true
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "",
+                      "description": "The cursor used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_id",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Explanation Of Benefit",
+          "item": [
+            {
+              "name": "Search Explanation Of Benefits",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v3/fhir/ExplanationOfBenefit/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v3",
+                    "fhir",
+                    "ExplanationOfBenefit",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "patient",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_lastUpdated",
+                      "value": "",
+                      "description": "Include resources last updated in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "excludeSAMHSA",
+                      "value": "",
+                      "description": "If true, exclude all SAMHSA-related resources",
+                      "disabled": true
+                    },
+                    {
+                      "key": "service-date",
+                      "value": "",
+                      "description": "Include resources that completed in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "",
+                      "description": "The offset used for result pagination",
+                      "disabled": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "",
+                      "description": "A list of claim types to include",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Read Explanation Of Benefits",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v3/fhir/ExplanationOfBenefit/:resource_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v3",
+                    "fhir",
+                    "ExplanationOfBenefit",
+                    ":resource_id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "resource_id",
+                      "value": "",
+                      "description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Coverage",
+          "item": [
+            {
+              "name": "Search Coverage",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v3/fhir/Coverage/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v3",
+                    "fhir",
+                    "Coverage",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "beneficiary",
+                      "value": "",
+                      "description": "The patient identifier to search for",
+                      "disabled": true
+                    },
+                    {
+                      "key": "_lastUpdated",
+                      "value": "",
+                      "description": "Include resources last updated in the given range",
+                      "disabled": true
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "",
+                      "description": "The offset used for result pagination",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Read Coverage",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v3/fhir/Coverage/:resource_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v3",
+                    "fhir",
+                    "Coverage",
+                    ":resource_id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "resource_id",
+                      "value": "",
+                      "description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Audit Event",
+          "item": [
+            {
+              "name": "Search Audit Event",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v3/fhir/AuditEvent/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v3",
+                    "fhir",
+                    "AuditEvent",
+                    ""
+                  ],
+                  "query": []
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Read Audit Event",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v3/fhir/AuditEvent/:resource_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v3",
+                    "fhir",
+                    "AuditEvent",
+                    ":resource_id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "resource_id",
+                      "value": "",
+                      "description": "(Required) AuditEvent FHIR resource id, e.g. part-a--20140000000001"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "FHIR Metadata",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v3/fhir/metadata",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v3",
+                "fhir",
+                "metadata"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "OpenID Configuration",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/.well-known/openid-configuration-v3",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ".well-known",
+                "openid-configuration-v3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "OpenID Connect UserInfo",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v3/connect/userinfo",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v3",
+                "connect",
+                "userinfo"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+     }
+    ],
+    "event": [
+      {
+        "listen": "prerequest",
+        "script": {
+          "type": "text/javascript",
+          "requests": {},
+          "exec": [
+            ""
+          ]
+        }
+      },
+      {
+        "listen": "test",
+        "script": {
+          "type": "text/javascript",
+          "requests": {},
+          "exec": [
+            ""
+          ]
+        }
+      }
+    ]
+}
