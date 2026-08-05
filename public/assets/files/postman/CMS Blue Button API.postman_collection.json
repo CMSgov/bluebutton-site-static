@@ -3,9 +3,7 @@
     "_postman_id": "eff8fef8-4e46-4348-84cc-6db694adb3ac",
     "name": "CMS BlueButton API",
     "description": "To use the Postman collection, you will need a Client Id and Client Secret. These can be obtained by creating a user account and registering an application in the Blue Button Sandbox, located at h[ttps://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov).\n\nOnce you have setup and verified a user account, log in, click “Add an Application” and complete the \"App Details\" form. For the Callback URL, use [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) or [https://oauth.pstmn.io/v1/browser-callback](https://oauth.pstmn.io/v1/browser-callback) if you are using web based Postman. Also be sure to choose \"Yes\" to the beneficiary demographic data question.\n\nIn Postman, in the \"CMS Blue Button Sandbox\" collection editor, select the \"Variables\" tab. Copy the Client Id and Client Secret generated during the app registration into respective value fields for clientId and clientSecret. Note the Client Id and Client Secret must exactly match the values from the app registration. After entering the Client Id and Client Secret, be sure to Save the collection\n\nWithin the Collection Editor, switch to the \"Authorization\" tab and click \"Get New Access Token\". Authorize via the Medicare login screens using the synthetic user accounts available in the sandbox (e.g. user=BBUser00000 and pwd=PW00000!). Upon return to Postman, click \"Use Token\" and then use any desired API calls under the V1, V2, and V3 folders.",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "47628619",
-    "_collection_link": "https://connorlewellyn-1609585.postman.co/workspace/d8c39ece-60b1-4f97-823d-c5ecb6259406/collection/47628619-eff8fef8-4e46-4348-84cc-6db694adb3ac?action=share&source=collection_link&creator=47628619"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
@@ -25,7 +23,7 @@
           },
           {
             "key": "state",
-            "value": "1234567890abcdefghijklmnopqrstuvwxyz",
+            "value": "{{$randomUUID}}",
             "type": "string"
           },
           {
@@ -453,7 +451,7 @@
           },
           {
             "key": "state",
-            "value": "1234567890abcdefghijklmnopqrstuvwxyz",
+            "value": "{{$randomUUID}}",
             "type": "string"
           },
           {
@@ -881,7 +879,7 @@
           },
           {
             "key": "state",
-            "value": "1234567890abcdefghijklmnopqrstuvwxyz",
+            "value": "{{$randomUUID}}",
             "type": "string"
           },
           {
