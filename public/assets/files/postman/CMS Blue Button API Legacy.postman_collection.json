@@ -4278,11 +4278,11 @@
 	"variable": [
 		{
 			"key": "clientId",
-			"value": "test-client-id"
+			"value": ""
 		},
 		{
 			"key": "clientSecret",
-			"value": "test-client-secret"
+			"value": ""
 		},
 		{
 			"key": "baseUrl",
