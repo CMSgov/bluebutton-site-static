@@ -43,7 +43,7 @@
           },
           {
             "key": "tokenName",
-            "value": "Token-BBUser",
+            "value": "Token-BBUser-v1",
             "type": "string"
           },
           {
@@ -471,7 +471,7 @@
           },
           {
             "key": "tokenName",
-            "value": "Token-BBUser",
+            "value": "Token-BBUser-v2",
             "type": "string"
           },
           {
@@ -899,7 +899,7 @@
           },
           {
             "key": "tokenName",
-            "value": "Token-BBUser",
+            "value": "Token-BBUser-v3",
             "type": "string"
           },
           {
