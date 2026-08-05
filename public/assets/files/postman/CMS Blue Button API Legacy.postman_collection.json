@@ -4207,13 +4207,8 @@
 				"type": "string"
 			},
 			{
-				"key": "accessToken",
-				"value": "4nGzmTX0WkKgKL2De8ZfbShm6UKW8D",
-				"type": "string"
-			},
-			{
 				"key": "state",
-				"value": "",
+				"value": "{{$randomUUID}}",
 				"type": "string"
 			},
 			{
