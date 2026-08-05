@@ -1,0 +1,4290 @@
+{
+	"info": {
+		"_postman_id": "eff8fef8-4e46-4348-84cc-6db694adb3ac",
+		"name": "CMS BlueButton API Legacy (Not Being Used)",
+		"description": "THIS IS ONLY FOR REFERENCE OF WHAT IT WOULD LOOK LIKE WITH RESPONSE CODES. To use the Postman collection, you will need a Client Id and Client Secret. These can be obtained by creating a user account and registering an application in the Blue Button Sandbox, located at h[ttps://sandbox.bluebutton.cms.gov](https://sandbox.bluebutton.cms.gov).\n\nOnce you have setup and verified a user account, log in, click “Add an Application” and complete the \"App Details\" form. For the Callback URL, use [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) or [https://oauth.pstmn.io/v1/browser-callback](https://oauth.pstmn.io/v1/browser-callback) if you are using web based Postman. Also be sure to choose \"Yes\" to the beneficiary demographic data question.\n\nIn Postman, in the \"CMS Blue Button Sandbox\" collection editor, select the \"Variables\" tab. Copy the Client Id and Client Secret generated during the app registration into respective cells for both Initial Value and Current Value. Note the Client Id and Client Secret must exactly match the values from the app registration. After entering the Client Id and Client Secret, be sure to Save the collection\n\nWithin the Collection Editor, switch to the \"Authorization\" tab and click \"Get New Access Token\". Authorize via the Medicare login screens using the synthetic user accounts available in the sandbox (e.g. user=BBUser00000 and pwd=PW00000!). Upon return to Postman, click \"Use Token\" and then use any desired API calls under the V1 and V2 folders.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": ".well-known",
+			"item": [
+				{
+					"name": "open Id Config",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/.well-known/openid-configuration",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								".well-known",
+								"openid-configuration"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OIDC Discovery: listing of the OpenID/OAuth endpoints, supported scopes and claims",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/.well-known/openid-configuration",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										".well-known",
+										"openid-configuration"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "open Id Config v2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/.well-known/openid-configuration-v2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								".well-known",
+								"openid-configuration-v2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OIDC Discovery: listing of the OpenID/OAuth endpoints, supported scopes and claims",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/.well-known/openid-configuration-v2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										".well-known",
+										"openid-configuration-v2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "fhir",
+					"item": [
+						{
+							"name": "Patient",
+							"item": [
+								{
+									"name": "list Search View Patients",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/fhir/Patient/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"fhir",
+												"Patient",
+												""
+											],
+											"query": [
+												{
+													"key": "identifier",
+													"value": "",
+													"description": "The patient identifier to search for",
+													"disabled": true
+												},
+												{
+													"key": "_lastUpdated",
+													"value": "",
+													"description": "Include resources last updated in the given range",
+													"disabled": true
+												},
+												{
+													"key": "startIndex",
+													"value": "",
+													"description": "The offset used for result pagination",
+													"disabled": true
+												},
+												{
+													"key": "_has:Coverage",
+													"value": "",
+													"description": "Part D coverage type/year",
+													"disabled": true
+												},
+												{
+													"key": "cursor",
+													"value": "",
+													"description": "The cursor used for result pagination",
+													"disabled": true
+												},
+												{
+													"key": "_id",
+													"value": "",
+													"description": "The patient identifier to search for",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Patient FHIR resources bundle",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Request, e.g. the _lastUpdated operator is not valid.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Forbidden, e.g. beneficiary does not grant access to PII.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								},
+								{
+									"name": "list Read View Patients",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/fhir/Patient/:resource_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"fhir",
+												"Patient",
+												":resource_id"
+											],
+											"variable": [
+												{
+													"key": "resource_id",
+													"value": "",
+													"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Patient FHIR resource",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Patient/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Patient",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Patient/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Patient",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Forbidden, e.g. beneficiary does not grant access to PII.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Patient/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Patient",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Not Found, e.g. The requested resource does not exist.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Patient/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Patient",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Patient/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Patient",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Coverage",
+							"item": [
+								{
+									"name": "list Search View Coverages",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/fhir/Coverage/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"fhir",
+												"Coverage",
+												""
+											],
+											"query": [
+												{
+													"key": "beneficiary",
+													"value": "",
+													"description": "The patient identifier to search for",
+													"disabled": true
+												},
+												{
+													"key": "_lastUpdated",
+													"value": "",
+													"description": "Include resources last updated in the given range",
+													"disabled": true
+												},
+												{
+													"key": "startIndex",
+													"value": "",
+													"description": "The offset used for result pagination",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Coverage FHIR resources bundle",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Coverage/?beneficiary=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Coverage",
+														""
+													],
+													"query": [
+														{
+															"key": "beneficiary",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Request, e.g. the _lastUpdated operator is not valid.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Coverage/?beneficiary=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Coverage",
+														""
+													],
+													"query": [
+														{
+															"key": "beneficiary",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Coverage/?beneficiary=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Coverage",
+														""
+													],
+													"query": [
+														{
+															"key": "beneficiary",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Coverage/?beneficiary=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Coverage",
+														""
+													],
+													"query": [
+														{
+															"key": "beneficiary",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								},
+								{
+									"name": "list Read View Coverages",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/fhir/Coverage/:resource_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"fhir",
+												"Coverage",
+												":resource_id"
+											],
+											"variable": [
+												{
+													"key": "resource_id",
+													"value": "",
+													"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Coverage FHIR resource",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Coverage/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Coverage",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Request, e.g. Unsupported ID pattern: partd-889999ddddddddddddddddddddd.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Coverage/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Coverage",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Coverage/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Coverage",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Not Found, e.g. The requested resource does not exist.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Coverage/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Coverage",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/Coverage/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"Coverage",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Explanation Of Benefit",
+							"item": [
+								{
+									"name": "list Search View Explanation Of Benefits",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"fhir",
+												"ExplanationOfBenefit",
+												""
+											],
+											"query": [
+												{
+													"key": "patient",
+													"value": "",
+													"description": "The patient identifier to search for",
+													"disabled": true
+												},
+												{
+													"key": "_lastUpdated",
+													"value": "",
+													"description": "Include resources last updated in the given range",
+													"disabled": true
+												},
+												{
+													"key": "excludeSAMHSA",
+													"value": "",
+													"description": "If true, exclude all SAMHSA-related resources",
+													"disabled": true
+												},
+												{
+													"key": "service-date",
+													"value": "",
+													"description": "Include resources that completed in the given range",
+													"disabled": true
+												},
+												{
+													"key": "startIndex",
+													"value": null,
+													"description": "The offset used for result pagination",
+													"disabled": true
+												},
+												{
+													"key": "type",
+													"value": "",
+													"description": "A list of claim types to include",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "ExplanationOfBenefit FHIR resources bundle",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/?patient=occaecat id&_lastUpdated=occaecat id&excludeSAMHSA=occaecat id&service-date=occaecat id&startIndex=occaecat id&type=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"ExplanationOfBenefit",
+														""
+													],
+													"query": [
+														{
+															"key": "patient",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "excludeSAMHSA",
+															"value": "occaecat id"
+														},
+														{
+															"key": "service-date",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "type",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Request, e.g. the _lastUpdated operator is not valid.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/?patient=occaecat id&_lastUpdated=occaecat id&excludeSAMHSA=occaecat id&service-date=occaecat id&startIndex=occaecat id&type=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"ExplanationOfBenefit",
+														""
+													],
+													"query": [
+														{
+															"key": "patient",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "excludeSAMHSA",
+															"value": "occaecat id"
+														},
+														{
+															"key": "service-date",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "type",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/?patient=occaecat id&_lastUpdated=occaecat id&excludeSAMHSA=occaecat id&service-date=occaecat id&startIndex=occaecat id&type=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"ExplanationOfBenefit",
+														""
+													],
+													"query": [
+														{
+															"key": "patient",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "excludeSAMHSA",
+															"value": "occaecat id"
+														},
+														{
+															"key": "service-date",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "type",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/?patient=occaecat id&_lastUpdated=occaecat id&excludeSAMHSA=occaecat id&service-date=occaecat id&startIndex=occaecat id&type=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"ExplanationOfBenefit",
+														""
+													],
+													"query": [
+														{
+															"key": "patient",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "excludeSAMHSA",
+															"value": "occaecat id"
+														},
+														{
+															"key": "service-date",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "type",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								},
+								{
+									"name": "list Read View Explanation Of Benefits",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/:resource_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"fhir",
+												"ExplanationOfBenefit",
+												":resource_id"
+											],
+											"variable": [
+												{
+													"key": "resource_id",
+													"value": "",
+													"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "ExplanationOfBenefit FHIR resource",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"ExplanationOfBenefit",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Request, e.g. Unsupported ID pattern: partd238900099.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"ExplanationOfBenefit",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"ExplanationOfBenefit",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Not Found, e.g. The requested resource does not exist.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"ExplanationOfBenefit",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/fhir/ExplanationOfBenefit/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"fhir",
+														"ExplanationOfBenefit",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "fhir Meta Data",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/fhir/metadata",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"fhir",
+										"metadata"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "FHIR CapabilityStatement resource",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/fhir/metadata",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"fhir",
+												"metadata"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[]"
+								},
+								{
+									"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/fhir/metadata",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"fhir",
+												"metadata"
+											]
+										}
+									},
+									"status": "Bad Gateway",
+									"code": 502,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "listopenidconnect userinfos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v1/connect/userinfo",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"connect",
+								"userinfo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OIDC userinfo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/connect/userinfo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"connect",
+										"userinfo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/connect/userinfo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"connect",
+										"userinfo"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "Error: Forbidden, e.g. beneficiary does not grant access to PII.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/connect/userinfo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"connect",
+										"userinfo"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/connect/userinfo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"connect",
+										"userinfo"
+									]
+								}
+							},
+							"status": "Bad Gateway",
+							"code": 502,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "v2",
+			"item": [
+				{
+					"name": "fhir",
+					"item": [
+						{
+							"name": "Patient",
+							"item": [
+								{
+									"name": "list Search View Patients v2",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/fhir/Patient/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"fhir",
+												"Patient",
+												""
+											],
+											"query": [
+												{
+													"key": "identifier",
+													"value": "",
+													"description": "The patient identifier to search for",
+													"disabled": true
+												},
+												{
+													"key": "_lastUpdated",
+													"value": "",
+													"description": "Include resources last updated in the given range",
+													"disabled": true
+												},
+												{
+													"key": "startIndex",
+													"value": "",
+													"description": "The offset used for result pagination",
+													"disabled": true
+												},
+												{
+													"key": "_has:Coverage",
+													"value": "",
+													"description": "Part D coverage type/year",
+													"disabled": true
+												},
+												{
+													"key": "cursor",
+													"value": "",
+													"description": "The cursor used for result pagination",
+													"disabled": true
+												},
+												{
+													"key": "_id",
+													"value": "",
+													"description": "The patient identifier to search for",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Patient FHIR resources bundle",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Request, e.g. the _lastUpdated operator is not valid.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Forbidden, e.g. beneficiary does not grant access to PII.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Not Found, e.g. bfd_v2_flag not active.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/?identifier=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id&_has:Coverage=occaecat id&cursor=occaecat id&_id=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														""
+													],
+													"query": [
+														{
+															"key": "identifier",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_has:Coverage",
+															"value": "occaecat id"
+														},
+														{
+															"key": "cursor",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_id",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								},
+								{
+									"name": "list Read View Patients v2",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/fhir/Patient/:resource_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"fhir",
+												"Patient",
+												":resource_id"
+											],
+											"variable": [
+												{
+													"key": "resource_id",
+													"value": "",
+													"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Patient FHIR resource",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Forbidden, e.g. beneficiary does not grant access to PII.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Not Found, e.g. The requested resource does not exist.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Patient/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Patient",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Pateint FHIR resource id, e.g. -20140000000001 (synthetic beneficiary)"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Coverage",
+							"item": [
+								{
+									"name": "list Search View Coverages v2",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/fhir/Coverage/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"fhir",
+												"Coverage",
+												""
+											],
+											"query": [
+												{
+													"key": "beneficiary",
+													"value": "",
+													"description": "The patient identifier to search for",
+													"disabled": true
+												},
+												{
+													"key": "_lastUpdated",
+													"value": "",
+													"description": "Include resources last updated in the given range",
+													"disabled": true
+												},
+												{
+													"key": "startIndex",
+													"value": "",
+													"description": "The offset used for result pagination",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Coverage FHIR resources bundle",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Coverage/?beneficiary=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Coverage",
+														""
+													],
+													"query": [
+														{
+															"key": "beneficiary",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Request, e.g. the _lastUpdated operator is not valid.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Coverage/?beneficiary=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Coverage",
+														""
+													],
+													"query": [
+														{
+															"key": "beneficiary",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Coverage/?beneficiary=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Coverage",
+														""
+													],
+													"query": [
+														{
+															"key": "beneficiary",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Not Found, e.g. bfd_v2_flag not active.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Coverage/?beneficiary=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Coverage",
+														""
+													],
+													"query": [
+														{
+															"key": "beneficiary",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Coverage/?beneficiary=occaecat id&_lastUpdated=occaecat id&startIndex=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Coverage",
+														""
+													],
+													"query": [
+														{
+															"key": "beneficiary",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								},
+								{
+									"name": "list Read View Coverages v2",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/fhir/Coverage/:resource_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"fhir",
+												"Coverage",
+												":resource_id"
+											],
+											"variable": [
+												{
+													"key": "resource_id",
+													"value": "",
+													"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Coverage FHIR resource",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Coverage/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Coverage",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Request, e.g. Unsupported ID pattern: partparta_20140000000001.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Coverage/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Coverage",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Coverage/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Coverage",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Not Found, e.g. The requested resource does not exist.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Coverage/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Coverage",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/Coverage/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"Coverage",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) Coverage FHIR resource id, e.g. part-a--20140000000001"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Explanation Of Benefit",
+							"item": [
+								{
+									"name": "list Search View Explanation Of Benefits v2",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"fhir",
+												"ExplanationOfBenefit",
+												""
+											],
+											"query": [
+												{
+													"key": "patient",
+													"value": "",
+													"description": "The patient identifier to search for",
+													"disabled": true
+												},
+												{
+													"key": "_lastUpdated",
+													"value": "",
+													"description": "Include resources last updated in the given range",
+													"disabled": true
+												},
+												{
+													"key": "excludeSAMHSA",
+													"value": "",
+													"description": "If true, exclude all SAMHSA-related resources",
+													"disabled": true
+												},
+												{
+													"key": "service-date",
+													"value": "",
+													"description": "Include resources that completed in the given range",
+													"disabled": true
+												},
+												{
+													"key": "startIndex",
+													"value": "",
+													"description": "The offset used for result pagination",
+													"disabled": true
+												},
+												{
+													"key": "type",
+													"value": "",
+													"description": "A list of claim types to include",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "ExplanationOfBenefit FHIR resources bundle",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/?patient=occaecat id&_lastUpdated=occaecat id&excludeSAMHSA=occaecat id&service-date=occaecat id&startIndex=occaecat id&type=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"ExplanationOfBenefit",
+														""
+													],
+													"query": [
+														{
+															"key": "patient",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "excludeSAMHSA",
+															"value": "occaecat id"
+														},
+														{
+															"key": "service-date",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "type",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Request, e.g. the _lastUpdated operator is not valid.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/?patient=occaecat id&_lastUpdated=occaecat id&excludeSAMHSA=occaecat id&service-date=occaecat id&startIndex=occaecat id&type=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"ExplanationOfBenefit",
+														""
+													],
+													"query": [
+														{
+															"key": "patient",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "excludeSAMHSA",
+															"value": "occaecat id"
+														},
+														{
+															"key": "service-date",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "type",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/?patient=occaecat id&_lastUpdated=occaecat id&excludeSAMHSA=occaecat id&service-date=occaecat id&startIndex=occaecat id&type=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"ExplanationOfBenefit",
+														""
+													],
+													"query": [
+														{
+															"key": "patient",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "excludeSAMHSA",
+															"value": "occaecat id"
+														},
+														{
+															"key": "service-date",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "type",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Not Found, e.g. bfd_v2_flag not active.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/?patient=occaecat id&_lastUpdated=occaecat id&excludeSAMHSA=occaecat id&service-date=occaecat id&startIndex=occaecat id&type=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"ExplanationOfBenefit",
+														""
+													],
+													"query": [
+														{
+															"key": "patient",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "excludeSAMHSA",
+															"value": "occaecat id"
+														},
+														{
+															"key": "service-date",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "type",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/?patient=occaecat id&_lastUpdated=occaecat id&excludeSAMHSA=occaecat id&service-date=occaecat id&startIndex=occaecat id&type=occaecat id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"ExplanationOfBenefit",
+														""
+													],
+													"query": [
+														{
+															"key": "patient",
+															"value": "occaecat id"
+														},
+														{
+															"key": "_lastUpdated",
+															"value": "occaecat id"
+														},
+														{
+															"key": "excludeSAMHSA",
+															"value": "occaecat id"
+														},
+														{
+															"key": "service-date",
+															"value": "occaecat id"
+														},
+														{
+															"key": "startIndex",
+															"value": "occaecat id"
+														},
+														{
+															"key": "type",
+															"value": "occaecat id"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								},
+								{
+									"name": "list Read View Explanation Of Benefits v2",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/:resource_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"fhir",
+												"ExplanationOfBenefit",
+												":resource_id"
+											],
+											"variable": [
+												{
+													"key": "resource_id",
+													"value": "",
+													"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "ExplanationOfBenefit FHIR resource",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"ExplanationOfBenefit",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"ExplanationOfBenefit",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Not Found, e.g. The requested resource does not exist.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"ExplanationOfBenefit",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/fhir/ExplanationOfBenefit/:resource_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"fhir",
+														"ExplanationOfBenefit",
+														":resource_id"
+													],
+													"variable": [
+														{
+															"key": "resource_id",
+															"value": "occaecat id",
+															"description": "(Required) ExplanationOfBenefit FHIR resource id, e.g. pde--105966977"
+														}
+													]
+												}
+											},
+											"status": "Bad Gateway",
+											"code": 502,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "fhir Meta Data v2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v2/fhir/metadata",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v2",
+										"fhir",
+										"metadata"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "FHIR CapabilityStatement resource",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/fhir/metadata",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"fhir",
+												"metadata"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[]"
+								},
+								{
+									"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/fhir/metadata",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"fhir",
+												"metadata"
+											]
+										}
+									},
+									"status": "Bad Gateway",
+									"code": 502,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "listopenidconnect userinfos v2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v2/connect/userinfo",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"connect",
+								"userinfo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OIDC userinfo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v2/connect/userinfo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v2",
+										"connect",
+										"userinfo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "Error: Unauthorized, e.g. Authentication credentials were not provided.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v2/connect/userinfo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v2",
+										"connect",
+										"userinfo"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "Error: Forbidden, e.g. beneficiary does not grant access to PII.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v2/connect/userinfo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v2",
+										"connect",
+										"userinfo"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "Error: Bad Gateway, e.g. An error occurred contacting the FHIR server",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v2/connect/userinfo",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v2",
+										"connect",
+										"userinfo"
+									]
+								}
+							},
+							"status": "Bad Gateway",
+							"code": 502,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenName",
+				"value": "Token-BBUser",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://oauth.pstmn.io/v1/callback",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			},
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "state",
+				"value": "{{$randomUUID}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{baseUrl}}/v2/o/authorize/",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "patient/Patient.read patient/Coverage.read patient/ExplanationOfBenefit.read profile",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{clientSecret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{clientId}}",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{baseUrl}}/v2/o/token/",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "clientId",
+			"value": ""
+		},
+		{
+			"key": "clientSecret",
+			"value": ""
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8000"
+		}
+	]
+}

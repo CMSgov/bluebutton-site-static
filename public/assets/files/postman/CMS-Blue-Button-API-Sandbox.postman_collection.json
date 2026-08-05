@@ -374,7 +374,7 @@
       },
       {
         "key": "state",
-        "value": "1234567890abcdefghijklmnopqrstuvwxyz",
+        "value": "{{$randomUUID}}",
         "type": "string"
       },
       {
@@ -405,11 +405,6 @@
       {
         "key": "tokenType",
         "value": "Bearer",
-        "type": "string"
-      },
-      {
-        "key": "accessToken",
-        "value": "4nGzmTX0WkKgKL2De8ZfbShm6UKW8D",
         "type": "string"
       },
       {
