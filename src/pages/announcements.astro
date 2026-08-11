@@ -1,0 +1,57 @@
+---
+import Icon from '#components/icon.astro'
+import Link from '#components/link.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+import { getAnnouncementsCollection } from '#utils/collections'
+import IconArrowForward from '@uswds/uswds/img/usa-icons/arrow_forward.svg'
+
+const announcements = await getAnnouncementsCollection()
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  })
+---
+
+<BaseLayout title="Announcements" description="News and updates about the Blue Button API.">
+  <DocsLayout showSideNav={false} showToc={false}>
+    <h1>Announcements</h1>
+    <p class="usa-intro">News and updates about the Blue Button API</p>
+
+    <div class="grid-row">
+      <div class="desktop:grid-col-8 grid-col-12">
+        <div class="padding-top-4">
+          {
+            announcements.map((post) => (
+              <article class="padding-y-5 border-top position-relative">
+                <h2 class="margin-bottom-05 font-sans-lg">
+                  <Link
+                    to="/announcements/[slug]"
+                    params={{ slug: post.id }}
+                    class="stretched-link text-no-underline"
+                    style="color: black;"
+                  >
+                    {post.data.title}
+                  </Link>
+                </h2>
+                <p class="margin-top-1 text-base">{formatDate(post.data.published_date)}</p>
+                {post.data.lead_paragraph ? <p>{post.data.lead_paragraph}</p> : null}
+
+                <div class="margin-top-4">
+                  <div class="usa-button usa-button--outline">
+                    <span>Read announcement</span>
+                    <Icon icon={IconArrowForward} size={2} />
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </DocsLayout>
+</BaseLayout>

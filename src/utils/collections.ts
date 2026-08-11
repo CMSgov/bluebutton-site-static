@@ -29,6 +29,13 @@ export async function getProductionCollection() {
   })
 }
 
+export async function getAnnouncementsCollection() {
+  return (await getCollection('announcements')).sort((a, b) => {
+    // Newest to oldest
+    return b.data.published_date.valueOf() - a.data.published_date.valueOf()
+  })
+}
+
 export async function getTermsCollection() {
   return (await getCollection('terms')).sort((a, b) => {
     // Newest to oldest

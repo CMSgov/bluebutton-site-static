@@ -1,0 +1,65 @@
+---
+import Icon from '#components/icon.astro'
+import Link from '#components/link.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+import DocsLayout from '#layouts/docs-layout.astro'
+import { getAnnouncementsCollection } from '#utils/collections'
+import IconArrowBack from '@uswds/uswds/img/usa-icons/arrow_back.svg'
+import { createRoute } from 'astro-typesafe-routes/create-route'
+import { render } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+
+export const Route = createRoute({
+  routeId: '/announcements/[slug]',
+})
+
+export type Props = {
+  post: CollectionEntry<'announcements'>
+}
+
+export const getStaticPaths = Route.createGetStaticPaths<Props>(async () => {
+  const announcements = await getAnnouncementsCollection()
+  return announcements.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
+})
+
+const { post } = Astro.props
+const { Content, headings } = await render(post)
+
+// Dates are authored as YYYY-MM-DD, so format in UTC to avoid shifting a day
+const publishedDate = post.data.published_date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+})
+---
+
+<BaseLayout
+  title={post.data.seo.title || post.data.title}
+  description={post.data.seo.description || post.data.lead_paragraph || ''}
+>
+  <DocsLayout showSideNav={false} headings={headings}>
+    <Link to="/announcements" class="display-inline-flex flex-align-center">
+      <Icon icon={IconArrowBack} size={2} />
+      <span class="padding-left-05">Back to announcements</span>
+    </Link>
+
+    <div>
+      <h1 class="margin-top-3">{post.data.title}</h1>
+      <p class="margin-top-105 text-base">{publishedDate}</p>
+      {post.data.lead_paragraph && <p class="usa-intro">{post.data.lead_paragraph}</p>}
+    </div>
+
+    <div class="usa-prose margin-top-5">
+      <Content
+        components={{
+          a: Link,
+          Link,
+        }}
+      />
+    </div>
+  </DocsLayout>
+</BaseLayout>
