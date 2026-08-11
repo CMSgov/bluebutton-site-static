@@ -64,6 +64,22 @@ const resourcesCollection = defineCollection({
   }),
 })
 
+const announcementsCollection = defineCollection({
+  loader: glob({
+    pattern: '**\/[^_]*.(md|mdx)',
+    base: './src/content/announcements',
+  }),
+  schema: z.object({
+    title: z.string(),
+    seo: z.object({
+      title: z.string(),
+      description: z.string(),
+    }).partial().default({}),
+    published_date: z.coerce.date(),
+    lead_paragraph: z.string().optional(),
+  }),
+})
+
 const codeBooksCollection = defineCollection({
   loader: async () => await loadCodebooks({
     pattern: '**\/[^_]*.xml',
@@ -157,6 +173,7 @@ export const collections = {
   pages: pageCollection,
   resources: resourcesCollection,
   apiDocs: apiDocsCollection,
+  announcements: announcementsCollection,
   dataDocs: dataDocsCollection,
   codebooks: codeBooksCollection,
   csvVariables: csvVariablesCollection,
