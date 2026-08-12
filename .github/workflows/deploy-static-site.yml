@@ -14,13 +14,14 @@ on:
           - staging
           - prod
       release_tag:
-        description: Release tag to deploy (e.g. r33) — required for all manual deploys
+        description: Which release tag should we deploy? (e.g., r33). Required for Prod! Leave this blank if you just want to deploy your branch to Test or Staging.
         required: false
         type: string
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   DEPLOY_ENV: ${{ inputs.environment || 'test' }}
+  DEPLOY_SOURCE_LABEL: ${{ inputs.release_tag != '' && format('TAG:{0}', inputs.release_tag) || format('BRANCH:{0}', github.ref_name) }}
 
 permissions:
   id-token: write
@@ -33,22 +34,38 @@ jobs:
       - codebuild-bb-test-site-static-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
-      - name: Require release tag for manual deploys
-        if: github.event_name == 'workflow_dispatch' && inputs.release_tag == ''
+      - name: Ensure Prod deployments only come from the master branch
+        if: github.event_name == 'workflow_dispatch' && inputs.environment == 'prod' && github.ref_name != 'master'
         run: |
-          echo "::error::Release tag is required for all manual deployments"
+          echo "::error::Wait! Production deployments must originate from the 'master' branch. Please select 'master' in the branch dropdown above and try again."
           exit 1
 
-      - uses: actions/checkout@v4
+      - name: Ensure a Release Tag is provided for Prod
+        if: github.event_name == 'workflow_dispatch' && inputs.environment == 'prod' && inputs.release_tag == ''
+        run: |
+          echo "::error::Wait! You forgot to provide a release tag (like r33). We strictly require this for production deployments!"
+          exit 1
+
+      - uses: actions/checkout@v7
+
+      - name: Verify the provided Release Tag actually exists
+        if: github.event_name == 'workflow_dispatch' && inputs.release_tag != ''
+        env:
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: |
+          if ! git ls-remote --exit-code --tags origin "refs/tags/$RELEASE_TAG" >/dev/null; then
+            echo "::error::Hmm, we couldn't find the release tag '$RELEASE_TAG' in the repository. Please double-check for typos!"
+            exit 1
+          fi
 
       - name: Checkout release tag
-        if: inputs.release_tag != ''
+        if: github.event_name == 'workflow_dispatch' && inputs.release_tag != ''
         run: |
           git fetch --tags
           git -c advice.detachedHead=false checkout tags/${{ inputs.release_tag }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 24
 
@@ -61,7 +78,7 @@ jobs:
           SITE_ENV: ${{ env.DEPLOY_ENV }}
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: site-dist
           path: dist/
@@ -80,7 +97,7 @@ jobs:
               \"attachments\": [
                 {
                   \"color\": \"danger\",
-                  \"text\": \"failure - Build failed ENV:${{ env.DEPLOY_ENV }} TAG:${{ inputs.release_tag || github.ref_name }}\n${RUN_URL}\"
+                  \"text\": \":x: *Build Failed!* We tried building the static site for `${{ env.DEPLOY_ENV }}` using `${{ env.DEPLOY_SOURCE_LABEL }}`, but something went wrong.\n<${RUN_URL}|View GitHub Actions Run>\"
                 }
               ]
             }"
@@ -95,7 +112,7 @@ jobs:
 
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: site-dist
           path: dist/
@@ -160,7 +177,7 @@ jobs:
         if: always()
         run: |
           TIMESTAMP=$(date +%s000)
-          MESSAGE="DEPLOY ${{ job.status }} | repo=${{ github.repository }} env=${{ env.DEPLOY_ENV }} tag=${{ inputs.release_tag || github.ref_name }} target=${{ steps.akamai-path.outputs.path }} run=${{ github.run_id }} actor=${{ github.actor }}"
+          MESSAGE="DEPLOY ${{ job.status }} | repo=${{ github.repository }} env=${{ env.DEPLOY_ENV }} source=${{ env.DEPLOY_SOURCE_LABEL }} target=${{ steps.akamai-path.outputs.path }} run=${{ github.run_id }} actor=${{ github.actor }}"
           aws logs put-log-events \
             --log-group-name "$LOG_GROUP" \
             --log-stream-name "$LOG_STREAM" \
@@ -179,8 +196,12 @@ jobs:
 
           if [[ "${{ job.status }}" == "success" ]]; then
             COLOR="good"
+            STATUS_EMOJI=":white_check_mark:"
+            STATUS_TEXT="Successfully deployed"
           else
             COLOR="danger"
+            STATUS_EMOJI=":x:"
+            STATUS_TEXT="Failed to deploy"
           fi
 
           curl -s -X POST "$SLACK_WEBHOOK_URL" \
@@ -189,7 +210,7 @@ jobs:
               \"attachments\": [
                 {
                   \"color\": \"${COLOR}\",
-                  \"text\": \"${{ job.status }} - Deploy Akamai ENV:${{ env.DEPLOY_ENV }} TAG:${{ inputs.release_tag || github.ref_name }}\n${RUN_URL}\"
+                  \"text\": \"${STATUS_EMOJI} *${STATUS_TEXT}* the static site to `${{ env.DEPLOY_ENV }}` using `${{ env.DEPLOY_SOURCE_LABEL }}`.\n<${RUN_URL}|View GitHub Actions Run>\"
                 }
               ]
             }"
