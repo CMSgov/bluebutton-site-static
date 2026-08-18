@@ -12,4 +12,4 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
 1. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. 
 
 Iaculis massa nisl malesuada lacinia integer nunc posuere. 
-Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+Ut hendrerit semper vel class aptent [taciti](/api-documentation/authorization#web-applications) sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
