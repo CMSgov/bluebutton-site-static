@@ -111,6 +111,37 @@ Bundle navigation example:
 }
 ```
 
+In v3, you will navigate through a bundle in a similar manner, with some differences:
+
+- No "first" attribute will ever be within the URLs provided by `Bundle.link`
+- Rather than seeing startIndex within the different URLs, you will see `_offset`
+
+v3 Bundle navigation example:
+
+
+```json
+{
+  "resourceType": "Bundle",
+  "id": "b97d4bf9-bb41-492c-b853-5933a7cb8bf7",
+  // ...
+  "total": 10,
+  "link": [
+    {
+      "relation": "next",
+      "url": "{host}/v3/fhir/ExplanationOfBenefit/?_count=10&_offset=15&patient=..."
+    },
+    {
+      "relation": "previous",
+      "url": "{host}/v3/fhir/ExplanationOfBenefit/?_count=10&&patient=..."
+    },
+    {
+      "relation": "self",
+      "url": "{host}/v3/fhir/ExplanationOfBenefit/?_count=10&_offset=5&patient=..."
+    }
+  ],
+}
+```
+
 ## Working with identifiers
 
 In FHIR, the difference between the `Resource.id` (resource ID) and `identifier` attributes within a resource can be confusing. 
