@@ -244,8 +244,21 @@
       {
         "id": "SupportingInfoComponent.CLM_PPS_IND_CD",
         "path": "SupportingInfoComponent.CLM_PPS_IND_CD",
-        "short": "Claim PPS Indicator Code",
-        "definition": "Claim PPS Indicator Code",
+        "short": "Claim PPS Indicator Code NCH",
+        "definition": "Claim PPS Indicator Code NCH",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "SupportingInfoComponent.CLM_PPS_IND",
+        "path": "SupportingInfoComponent.CLM_PPS_IND",
+        "short": "Claim PPS Indicator Code FISS",
+        "definition": "Claim PPS Indicator Code FISS",
         "min": 0,
         "max": "1",
         "type": [
