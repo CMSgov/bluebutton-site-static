@@ -1,0 +1,20 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "BENE_CMBND_DEEMD_IND",
+  "id": "BENE-CMBND-DEEMD-IND",
+  "title": "Beneficiary LIS Effective Code",
+  "description": "Codes indicating whether a beneficiary is deemed a Low Income Subsidy (LIS)",
+  "version": "1.0.0",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-CMBND-DEEMD-IND",
+  "concept": [
+    {
+      "code": "Y",
+      "display": "Yes"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true,
+  "count": 1
+}
