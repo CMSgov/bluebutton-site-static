@@ -75,8 +75,8 @@ jobs:
     # appropriate location in the bluebutton-site-static repo
     - name: Rename and copy BFD JSON CodeSystem and StructureDefinition files into BB Static Site Repo
       run:  |
-        # Remove contents of the CodeSystem and StructureDefinition folders in the bluebutton-site-static repo 
-        # before copying over the new files
+        # Remove contents of the CodeSystem and StructureDefinition folders in the 
+        # bluebutton-site-static repo before copying over the new files
         rm -f bluebutton-site-static/src/content/fhir/CodeSystem/*.json
         rm -f bluebutton-site-static/src/content/fhir/StructureDefinition/*.json
         for file in beneficiary-fhir-data/apps/bfd-model-idr/sushi/fsh-generated/resources/*.json; do
