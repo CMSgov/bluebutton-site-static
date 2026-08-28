@@ -1,7 +1,8 @@
-import Pagination from '#components/pagination'
-import { useDebouncedCallback } from '#utils/use-debounced-callback'
 import SearchIcon from '@uswds/uswds/img/usa-icons/search.svg?raw'
 import { useRef, useState } from 'preact/hooks'
+
+import Pagination from '#components/pagination'
+import { useDebouncedCallback } from '#utils/use-debounced-callback'
 
 export interface DefaultField {
   url: string

@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link_type: 'link_other',
         link_url: currentTarget.href,
         navigation_type,
-        text: currentTarget.innerText,
+        text: currentTarget.textContent,
       })
     })
   })

@@ -1,12 +1,14 @@
 ---
 import { $path } from 'astro-typesafe-routes/path'
 import { button } from '#utils/cva/button'
-import type { RouteId } from 'astro-typesafe-routes/path'
+import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
 import type { HTMLAttributes } from 'astro/types'
 import type { VariantProps } from 'cva'
 import type { HrefOrTo } from '#utils/types'
 import Icon from './icon.astro'
 import FileDownload from '@uswds/uswds/img/usa-icons/file_download.svg'
+import { formatInternalHref } from '#utils/format-internal-href'
+import { SITE_METADATA } from '#utils/constants'
 
 type Props<T extends RouteId> = Omit<HTMLAttributes<'a'>, 'href'> &
   VariantProps<typeof button> & {
@@ -25,20 +27,13 @@ let computedHref: string
 if ('to' in props && props.to) {
   // Explicit internal link using "to" prop (preferred for Astro templates)
   isExternal = false
-  computedHref = $path(props)
+  computedHref = $path(props as unknown as RouteOptions<RouteId>) // Type assertion needed to satisfy both RouteOptions and HrefOrTo
 } else if ('href' in props && props.href) {
   // Handle href - could be external or internal (from MDX)
   const hrefString = props.href.toString()
-
+  computedHref = hrefString
   // Check if it's an external URL
-  if (hrefString.startsWith('http')) {
-    isExternal = true
-    computedHref = hrefString
-  } else {
-    // Internal link (from MDX)
-    isExternal = false
-    computedHref = hrefString
-  }
+  isExternal = !hrefString.startsWith(SITE_METADATA.url)
 } else {
   throw new Error('Link component requires either "href" or "to" prop')
 }
@@ -48,10 +43,14 @@ if (isExternal === false && downloadExtsRegex.test(computedHref)) {
 }
 
 const { variant = 'link', size, showIcon = true, class: className, ...restProps } = props
+
+if (!isExternal && !isDownload) {
+  computedHref = formatInternalHref(computedHref)
+}
 ---
 
 <a
-  href={computedHref.replace(/\/+$/g, '/')}
+  href={computedHref}
   target={isExternal || isDownload ? '_blank' : undefined}
   rel={isExternal && !computedHref?.includes('cms.gov') ? 'noreferrer' : undefined}
   class:list={[button({ variant, size }), isExternal && showIcon ? 'usa-link--external' : '', className]}

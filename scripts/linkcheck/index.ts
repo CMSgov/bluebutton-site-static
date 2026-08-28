@@ -48,9 +48,6 @@ class LinkChecker {
     // Try to annotate all found issues with their Markdown source code locations
     addSourceFileAnnotations(linkIssues, options)
 
-    // Output all found issues to the console
-    outputIssues(linkIssues, state)
-
     // Run autofix logic
     const performedAutofix = handlePossibleAutofix(linkIssues, options, state)
     if (performedAutofix) {
@@ -61,9 +58,13 @@ class LinkChecker {
     }
 
     // // If we're being run by a CI workflow, output annotations in GitHub format
-    // if (process.env.CI) {
-    //   outputAnnotationsForGitHub(linkIssues)
-    // }
+    if (process.env.CI) {
+      outputAnnotationsForGitHub(linkIssues)
+    }
+    else {
+      // Output all found issues to the console
+      outputIssues(linkIssues, state)
+    }
   }
 }
 

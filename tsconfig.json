@@ -3,19 +3,18 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
-    "baseUrl": "src",
     "paths": {
       "#assets/*": [
-        "assets/*"
+        "./src/assets/*"
       ],
       "#components/*": [
-        "components/*"
+        "./src/components/*"
       ],
       "#layouts/*": [
-        "layouts/*"
+        "./src/layouts/*"
       ],
       "#utils/*": [
-        "utils/*"
+        "./src/utils/*"
       ]
     },
     "allowJs": true,

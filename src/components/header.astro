@@ -1,12 +1,10 @@
 ---
-import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
+import type { RoutesArray } from '#utils/types'
 
 import LogoBlueButton from '#assets/images/logo-bluebutton.svg'
 import IconClose from '@uswds/uswds/img/usa-icons/close.svg'
 import Link from './link.astro'
 import { getApiCollection, getDataCollection } from '#utils/collections'
-
-type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]
 
 const docsnavLinks = (await getApiCollection()).map((doc) => ({
   to: '/api-documentation/[...slug]',
