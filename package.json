@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^6.0.3",
-    "@astrojs/preact": "^5.1.5",
+    "@astrojs/preact": "^6.0.4",
     "@astrojs/sitemap": "^3.7.3",
     "@fontsource-variable/open-sans": "^5.2.7",
     "@uswds/uswds": "3.12.0",
