@@ -1,0 +1,122 @@
+---
+title: "JWT References"
+seo: 
+  description: "The complete specification of all JWT fields required for CMS Aligned Networks authentication"
+sortOrder: "4"
+---
+
+This page is a complete specification of all JWT fields required for CAN authentication. Use it alongside [How to integrate with CMS Aligned Networks](how-to-integrate-with-can.mdx) as a reference while you build and debug your integration.
+
+# JWT Header Elements
+
+| Element | Optionality | Requirement |
+| :---- | :---- | :---- |
+| `alg` | Required | Must be `RS384` or `ES384` |
+| `kid` | Required | Must be a `kid` present in the CSP's JWKS endpoint |
+| `typ` | Required | Fixed value: "`JWT`" |
+
+# JWT Claims
+
+| Element | Optionality | Requirement |
+| :---- | :---- | :---- |
+| `iss` | Required | Must be the application's client ID |
+| `sub` | Required | Must be the application's client ID |
+| `aud` | Required | Must be the Blue Button token endpoint URL |
+| `jti` | Required | A unique identifier (JWT ID) for this token request. Must not be reused. |
+| `exp` | Required | Must not be more than 300 seconds from now (SMART requirement) |
+| `extensions` | Required | The `cms_smart` extension is required. Defined below. |
+
+# cms\_smart Extension Fields
+
+The `cms_smart` extension is modeled on the `tefca_smart` extension from the [2024 Facilitated FHIR Implementation Guide.](https://rce.sequoiaproject.org/wp-content/uploads/2024/07/SOP-Facilitated-FHIR-Implementation_508-1.pdf)
+
+| Element | Optionality | Requirement |
+| :---- | :---- | :---- |
+| `version` | Required | Fixed string value: "`1`" |
+| `purpose_of_use` | Required | Fixed value: "`PATRQT`" |
+| `consent_policy` | Optional | Not defined for initial implementation |
+| `consent_reference` | Optional | Not used for initial implementation |
+| `id_token` | Required | CSP-issued ID token containing identity assertions. Must meet IAL2. |
+
+# ID Token JWT Header Elements
+
+| Element | Optionality | Requirement |
+| :---- | :---- | :---- |
+| `alg` | Required | Must be `RS256` |
+| `kid` | Required | Must be a `kid` present in the CSP's JWKS endpoint |
+| `typ` | Required | Fixed value: "`JWT`" |
+
+# ID Token JWT Claims
+
+***Note:** Contact your Credential Service Provider (CSP) to confirm that `identity_assurance_level` and `ssn_itin_short` are present on your application before you go to production.*
+
+| Element | Optionality | Requirement |
+| :---- | :---- | :---- |
+| `iss` | Required | **Production:** Must be `https://api.id.me/oidc` or `https://verified.clearme.com/integrations`  **Lower environments:** Must be `https://api.idmelabs.com/oidc` or `https://verified.clearme.com/integrations` |
+| `sub` | Required | CSP client-specific ID for the beneficiary. Currently not used for matching. |
+| `aud` | Required | Must be the Blue Button API client ID |
+| `jti` | Required | A unique identifier (JWT ID) for this token. Must not be reused. |
+| `exp` | Required | Standard JWT expiration |
+| `iat` | Required | Time the token was issued |
+| `identity_assurance_level` | Required | Must be `IAL2` |
+| `auth_time` | Required | Time the enrollee authenticated with the CSP |
+| `family_name` | Required | Enrollee's last name |
+| `given_name` | Required | Enrollee's first name |
+| `birthdate` | Required | Enrollee's date of birth |
+| `gender` | Optional | Enrollee's gender |
+| `address` | Optional | Enrollee's street address. Required for patient matching Option A. |
+| `ssn_itin_short` | Optional | Last 4 digits of the enrollee's SSN or ITIN. Required for patient matching Option B. |
+| `phone_number` | Optional | Enrollee's phone number |
+| `email` | Optional | Enrollee's email address |
+
+# Supported Credential Service Providers (CSPs)
+
+The Blue Button API accepts ID tokens from these CSPs only:
+
+| CSP | Production issuer (iss) | Lower environment issuer (iss) |
+| :---- | :---- | :---- |
+| ID.me | `https://api.id.me/oidc` | `https://api.idmelabs.com/oidc` |
+| CLEAR | `https://verified.clearme.com/integrations` | `https://verified.clearme.com/integrations` |
+
+# Example Decoded JWT
+
+The example below shows a decoded JWT that includes the cms\_smart extension. Values shown are illustrative.
+
+## Header:
+
+`{`  
+   `"alg": "RS384",`  
+   `"kid": "your-key-id",`  
+   `"typ": "JWT"`  
+ `}`
+
+## Claims:
+
+`{`  
+   `"iss": "your-client-id",`  
+   `"sub": "your-client-id",`  
+   `"aud": "https://sandbox.bluebutton.cms.gov/v3/o/token",`  
+   `"jti": "a-unique-token-id",`  
+   `"exp": 1234567890,`  
+   `"extensions": {`  
+     `"cms_smart": {`  
+       `"version": "1",`  
+       `"purpose_of_use": "PATRQT",`  
+       `"id_token": "<CSP-issued IAL2 ID token>"`  
+     `}`  
+   `}`  
+ `}`
+
+# Patient Matching Field Combinations
+
+The Blue Button API uses the following field combinations to match an enrollee to a Medicare record. Your ID token must include the fields for at least one combination.
+
+| Combination | Field 1 | Field 2 | Field 3 | Field 4 |
+| :---- | :---- | :---- | :---- | :---- |
+| Option A | `given_name` | `family_name` | `birthdate` | `address (street)` |
+| Option B | `given_name` | `family_name` | `birthdate` | `ssn_itin_short` |
+| Option C | `given_name` | `birthdate` | MBI | N/A |
+
+***Note:** MBI (Medicare Beneficiary Identifier) must be present in the ID token for Option C. Confirm with your CSP that MBI is available as a claim on your application.*
+
+*To learn about CAN registration or access, read through [How to integrate with CMS Aligned Networks](?tab=t.9etzj01h36u).*
