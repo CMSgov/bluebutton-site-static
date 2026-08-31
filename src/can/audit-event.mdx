@@ -1,0 +1,36 @@
+---
+title: "AuditEvent Endpoint"
+seo: 
+  description: "Overview of the CMS Aligned Systems AuditEvent Endpoint "
+---
+
+# What an AuditEvent represents
+
+An AuditEvent resource records a single successful patient identity match from the CAN flow interaction. It provides a transparent, auditable trail of when and by which organization a Medicare enrollee's identity was matched across the network.
+
+### 
+
+# What an AuditEvent includes
+
+* **Who** accessed or received the data (at minimum, organization-level identification)  
+* **When** the access occurred (timestamp of the successful patient match)  
+* **What purpose of use** was declared at the time of the match
+
+# What an AuditEvent does not include
+
+| What is excluded | Explanation |
+| :---- | :---- |
+| Unsuccessful patient match attempts | Only **successful** patient matches generate an AuditEvent record |
+| Every data pull for a matched enrollee | An AuditEvent is created at match time only, not on every subsequent data retrieval |
+
+***Note:** The AuditEvent endpoint returns records for all apps in the network that have successfully matched that enrollee, not only your app. For example, if an enrollee was previously connected to three other apps, the response will include audit records for all three apps plus the requesting app.*
+
+# Scopes
+
+## Scope Behavior on CAN Tokens
+
+The Blue Button API processes AuditEvent scopes differently from other FHIR resource scopes. The following rules apply automatically when a CAN token is issued:
+
+1. **Auto-injection:** If `patient/AuditEvent.rs` is not included in the authorization request, the Blue Button API automatically adds it to the token.  
+2. **Scope upgrade:** If `patient/AuditEvent.r` or `patient/AuditEvent.s` is requested individually, the Blue Button API replaces it with `patient/AuditEvent.rs` on the issued token.  
+3. **v1/v2 flows return an error:** If you include any AuditEvent scope in a v1 or v2 authorization request, the Blue Button API returns an `invalid_scope` error. 
