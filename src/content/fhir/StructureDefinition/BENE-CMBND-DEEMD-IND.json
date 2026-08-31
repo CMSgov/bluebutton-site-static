@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "BENE-LIS-EFCTV-CD",
-  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-LIS-EFCTV-CD",
+  "id": "BENE-CMBND-DEEMD-IND",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-CMBND-DEEMD-IND",
   "version": "1.0.0",
-  "name": "BENE_LIS_EFCTV_CD",
-  "title": "Beneficiary LIS Effective Code",
+  "name": "BENE_CMBND_DEEMD_IND",
+  "title": "Beneficiary LIS Deemed Code",
   "status": "active",
-  "description": "Indicates whether the beneficiary has effective Low Income Subsidy (LIS) coverage",
+  "description": "Indicates whether the beneficiary has been deemed for Low Income Subsidy (LIS) coverage",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -24,8 +24,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Beneficiary LIS Effective Code",
-        "definition": "Indicates whether the beneficiary has effective Low Income Subsidy (LIS) coverage"
+        "short": "Beneficiary LIS Deemed Code",
+        "definition": "Indicates whether the beneficiary has been deemed for Low Income Subsidy (LIS) coverage"
       },
       {
         "id": "Extension.extension",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-LIS-EFCTV-CD"
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-CMBND-DEEMD-IND"
       },
       {
         "id": "Extension.value[x]",
@@ -50,7 +50,7 @@
       {
         "id": "Extension.value[x].system",
         "path": "Extension.value[x].system",
-        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-LIS-EFCTV-CD"
+        "patternUri": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-CMBND-DEEMD-IND"
       }
     ]
   }
