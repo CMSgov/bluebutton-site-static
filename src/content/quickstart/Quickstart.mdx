@@ -114,18 +114,9 @@ https://oauth.pstmn.io/v1/browser-callback
 
 You can also call the Blue Button sandbox with [cURL](https://curl.se/) , a popular command-line HTTP client.
 
-First, get an access token. Get a sample authorization token from the Blue Button Test Client:
+First, obtain an access token. To test using your sandbox application, you can use [Postman](https://bluebutton.cms.gov/api-documentation/developer-sandbox/#postman) to retrieve a token with your client ID and secret, as shown in the previous section.
 
-1. Navigate to the [Blue Button API Test Client](https://sandbox.bluebutton.cms.gov/testclient/).  
-2. If logged into the Blue Button sandbox, click **Log Out to Continue**.  
- 
-3. Click **Get a Sample Authorization Token (v3)**.   
-
-4. Click **Authorize as a Beneficiary**. 
-5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](https://bluebutton.cms.gov/data/understanding-the-data/#authenticating-as-a-synthetic-user) (LINK: [https://bluebutton.cms.gov/data/understanding-the-data/\#authenticating-as-a-synthetic-user](https://bluebutton.cms.gov/data/understanding-the-data/#authenticating-as-a-synthetic-user)). For example, user \= BBUser00000 and password \= PW00000\!. Click **Log in.**     
-     
-6. Click **Share**.   
-7. A new page will open. Copy the access token from the JSON shown under **Step 1: Sample Authorization** for use in your cURL command.   
+A new page will open. Copy the access token from the JSON shown under **Step 1: Sample Authorization** for use in your cURL command.   
 
 Once you have a token, you can make API calls with cURL. For example, the command below fetches Explanation of Benefits information for the authenticated patient. Remember to replace `YOUR ACCESS TOKEN` with your actual token:
 
