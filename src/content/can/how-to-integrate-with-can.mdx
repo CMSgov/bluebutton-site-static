@@ -1,0 +1,196 @@
+---
+title: "How to integrate with the CMS Aligned Networks"
+seo: 
+  description: "Basics about integrating with CAN"
+sortOrder: "3"
+---
+
+## Before you begin
+
+Confirm that your application meets **both the below** prerequisites before following any implementation steps in this guide.
+
+* Your application is listed in the Medicare App Library.  
+* You have provided a JSON Web Key Set (JWK Set) URL to the Blue Button API team.
+
+If your application does not meet both prerequisites, complete Step 1 and Step 2 first. Any implementation you try below will not succeed until both are in place.
+
+### Step 1: Get Medicare App Library approval
+
+Submit your application to CMS for listing in the Medicare App Library.
+
+When CMS approves your listing, you will receive confirmation that you may proceed to Step 2\.
+
+**What to do if you are already listed:** If your application is already listed in the Medicare App Library, you may proceed to Step 2\.
+
+***Required before Step 2\.** You must complete Step 1 before you begin Step 2\. The Blue Button team cannot register your application until CMS confirms your Medicare App Library listing.*
+
+
+### Step 2: Register with the Blue Button team
+
+***Warning:** Your application must complete both Step 1 and Step 2 before it can access CAN data.* 
+An application that has not completed both steps will:
+
+* not receive the `patient/AuditEvent.rs` scope on its tokens  
+* receive a `403 Forbidden` response when it calls the AuditEvent endpoint
+
+After CMS confirms your Medicare App Library listing, contact the Blue Button team to register your application for CAN flow access.
+
+Registration grants your application:
+
+* Access to the CAN `client\_credentials` authentication flow  
+* The `patient/AuditEvent.rs` scope on its tokens  
+* Access to the AuditEvent endpoint
+
+The Blue Button team completes registration on their side. You do not need to make any configuration changes to your application at this stage.
+
+## After you have access
+
+### Sandbox test accounts
+
+Use the following test accounts to validate the CAN token flow in the sandbox environment. The Blue Button API team recommends starting with **Damon Mychart**.
+
+| Name | Email | Password |
+| :---- | :---- | :---- |
+| Damon Mychart *(recommended)* | dmychart@me.com | IDme2026\!\! |
+| Dog Beaker | dogbeaker@aol.com | IDme2026\!\! |
+| Barbara Testa | btesta@hotmail.com | IDme2026\!\! |
+| Tracy CraneTest | tcranetest@gmail.com | IDme2026\!\! |
+| Derrick Lin | knixontestemail2@epic.com | IDme2026\!\! |
+| Homer J Simpson | hsimpson@gmail.com | IDme2026\!\! |
+
+***Note:** These accounts are for Sandbox use only. Do not use them in the production environment.*
+
+### 
+
+### Obtain a CSP-issued ID token
+
+CAN requires a Credential Service Provider (CSP) ID token that meets Identity Assurance Level 2 (IAL2). The Blue Button API accepts ID tokens from two CSPs only:
+
+| Environment | Accepted CSPs |
+| :---- | :---- |
+| Sandbox | CLEAR (lower environment) or ID.me (lower environment) |
+| Production | CLEAR (production) or ID.me (production) |
+
+***Note:** Contact your CSP to confirm that the identity\_assurance\_level and ssn\_itin\_short claims are present on your application before you proceed.*
+
+To obtain an ID token:
+
+1. Integrate with your chosen CSP (CLEAR or ID.me) using their developer documentation.  
+2. When an enrollee authenticates through your app, your CSP issues an ID token.  
+3. Confirm the token includes all required claims. See [ID Token JWT Claims](?tab=t.drb9nhl5mvqi#heading=h.kpfa94j9l1oz) for the full list.
+
+### Construct the authentication JWT
+
+Your application sends a signed JWT to the Blue Button token endpoint to request an access token. This JWT must include the `cms\_smart` extension in its claims.
+
+#### 
+
+#### **Build the JWT header**
+
+Your JWT header must include the fields in the table below. See [JWT Header Elements](?tab=t.drb9nhl5mvqi#heading=h.h2dpb2bsv2to) for full requirements.
+
+| Field | Required value |
+| :---- | :---- |
+| `alg` | RS384 or ES384 |
+| `kid` | A kid present in your JWK Set endpoint |
+| `typ` | JWT |
+
+#### **Build the JWT claims**
+
+Your JWT claims must include the fields below. See [JWT Claims](?tab=t.drb9nhl5mvqi#heading=h.9zaxywvnhgd0) for full requirements.
+
+| Field | Notes |
+| :---- | :---- |
+| `iss` | Your application's client ID |
+| `sub` | Your application's client ID |
+| `aud` | Token endpoint URL: `/v3/o/token` |
+| `jti` | A unique identifier for this token request |
+| `exp` | No more than 300 seconds from now |
+| `extensions` | Must include the cms\_smart extension |
+
+#### 
+
+#### **Add the cms\_smart extension**
+
+The cms\_smart extension is required. The Blue Button API does not accept the `client\_credentials` grant type unless this extension is present in the JWT claims.  
+Your cms\_smart extension must include:
+
+| Field | Value |
+| :---- | :---- |
+| `version` | "1" (fixed string) |
+| `purpose\_of\_use` | "PATRQT" (fixed value) |
+| `id\_token` | The CSP-issued IAL2 ID token you obtained in Step 3 |
+
+#### 
+
+#### **Sign the JWT**
+
+Sign the JWT with the private key corresponding to the `kid` in your JWK Set. Use the algorithm you specified in the header (RS384 or ES384).
+
+### Request an access token
+
+Send a token request to the Blue Button API token endpoint.
+
+**Endpoint:** `/v3/o/token` 
+
+**Grant type:** `client_credentials`
+
+**Authentication:** Asymmetric authentication using the signed JWT from [Construct the authentication JWT](#construct-the-authentication-jwt).
+
+The Blue Button API validates the JWT, verifies the enrollee's identity against Medicare records, and if a match is found, issues an access token scoped to that enrollee.
+
+#### **Access token properties:**
+
+| Property | Value |
+| :---- | :---- |
+| Validity | 30 minutes |
+| Refresh window | Up to 24 hours |
+
+#### 
+
+#### **AuditEvent scope behavior on CAN tokens**
+
+You do not need to explicitly request `patient/AuditEvent.rs` in your authorization request. The Blue Button API automatically includes it on your CAN token.  
+The following rules apply automatically when the Blue Button API issues a CAN token:
+
+1. **Auto-injection:** If `patient/AuditEvent.rs` is not included in the authorization request, the Blue Button API automatically adds it to the token.  
+2. **Scope upgrade:** If `patient/AuditEvent.r` or `patient/AuditEvent.s` is requested individually, the Blue Button API replaces it with `patient/AuditEvent.rs` on the issued token.  
+3. **v1/v2 error:** If you include any AuditEvent scope in a v1 or v2 authorization request, the Blue Button API returns an invalid\_scope error.
+
+Explicitly requesting `patient/AuditEvent.rs` is valid and does not cause an error.  
+***Note:** For the full scope specification, see [AuditEvent Endpoint Reference Supported scopes](?tab=t.v1ruwvz49ymg#heading=h.jj8eocbnqr93).*
+
+### Call the FHIR endpoints
+
+Use the access token from Step 5 as a Bearer token in the Authorization header of your FHIR requests.
+
+The following endpoints are available to CAN-approved applications:
+
+| Endpoint | Description |
+| :---- | :---- |
+| GET /v3/fhir/Patient/ | Retrieve patient demographic data |
+| GET /v3/fhir/ExplanationOfBenefit/ | Retrieve claims history |
+| GET /v3/fhir/Coverage/ | Retrieve coverage details |
+| GET /v3/fhir/Patient/$generate-insurance-card | Generate an insurance card |
+
+### Verify patient matching
+
+The Blue Button API matches the enrollee in the ID token to a Medicare record using the fields below. Your CSP-issued ID token must include at least one of these approved field combinations.
+
+| Combination | Required fields |
+| :---- | :---- |
+| Option A | First name \+ Last name \+ Date of birth \+ Street address |
+| Option B | First name \+ Last name \+ Date of birth \+ SSN last 4 digits |
+| Option C | First name \+ Date of birth \+ Medicare Beneficiary Identifier (MBI) |
+
+If the API cannot match the enrollee using one of these combinations, it does not return data. Confirm with your CSP that the required fields are present in the ID token before you go to production.
+
+## Troubleshooting
+
+| Symptom | Likely cause | Action |
+| :---- | :---- | :---- |
+| `403 Forbidden` on AuditEvent endpoint | Application has not completed both approval steps | Complete Step 1 and Step 2 |
+| patient/AuditEvent.rs scope missing from token | Same as above | Complete Step 1 and Step 2 |
+| Token request fails | cms\_smart extension missing or malformed | Check your [`cms_smart` extension](#add-the-cms_smart-extension) |
+| Patient match fails | ID token missing required fields | Revisit [Verify patient matching](#verify-patient-matching) and contact your CSP |
+| ID token rejected | Token issued by unsupported CSP or wrong environment | Check your [CSP-issued ID token](#obtain-a-csp-issued-id-token): only CLEAR and ID.me are accepted |
