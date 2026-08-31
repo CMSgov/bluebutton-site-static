@@ -190,7 +190,7 @@ If the API cannot match the enrollee using one of these combinations, it does no
 | Symptom | Likely cause | Action |
 | :---- | :---- | :---- |
 | `403 Forbidden` on AuditEvent endpoint | Application has not completed both approval steps | Complete Step 1 and Step 2 |
-| patient/AuditEvent.rs scope missing from token | Same as above | Complete Step 1 and Step 2 |
+| `patient/AuditEvent.rs` scope missing from token | Same as above | Complete Step 1 and Step 2 |
 | Token request fails | `cms_smart` extension missing or malformed | Check your [`cms_smart` extension](#add-the-cms_smart-extension) |
 | Patient match fails | ID token missing required fields | Revisit [Verify patient matching](#verify-patient-matching) and contact your CSP |
 | ID token rejected | Token issued by unsupported CSP or wrong environment | Check your [CSP-issued ID token](#obtain-a-csp-issued-id-token): only CLEAR and ID.me are accepted |
