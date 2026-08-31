@@ -1,0 +1,146 @@
+---
+title: 'Quickstart'
+seo: 
+  description: "An introduction to Blue Button developers to onboard quickly"
+sortOrder: 1
+---
+## Try out the API without coding 
+
+Use the Blue Button API test client to explore data returned from API endpoints without coding.
+
+Log out of the sandbox if you are currently logged in. This ensures the test client functions correctly.
+
+1. Go to the [Blue Button API test client](https://sandbox.bluebutton.cms.gov/testclient/).  
+2. Click **Get a Sample Authorization Token** **(v3)**.  
+3. Authorize by clicking **Authorize as a Beneficiary** or **Authorize as a Beneficiary (Spanish)**.  
+4. Sign in to Medicare.gov using [synthetic user account credentials](https://bluebutton.cms.gov/data/understanding-the-data/#authenticating-as-a-synthetic-user).  
+5. Click **Share**.  
+6. Click any of the links in the **API Calls** section of the page to use the resulting access token to make various API calls.
+ ## Sample applications
+
+Use our sample applications to see how the API's basic features work.
+
+* [Node & React](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react%20)  
+* [Python & React](https://github.com/CMSgov/bluebutton-sample-client-python-react)  
+
+## SDKs 
+
+Our Node and Python SDKs provide methods for building API calls and managing token refreshes.
+
+* [Node SDK](https://www.npmjs.com/package/cms-bluebutton-sdk) 
+* [Python SDK](https://pypi.org/project/cms-bluebutton-sdk/) 
+
+## Working with Blue Button
+
+### **Create a Sandbox Account**
+
+Using sandbox credentials, develop and test your Blue Button application with the provided [synthetic data](https://bluebutton.cms.gov/data/understanding-the-data/#authenticating-as-a-synthetic-user). 
+
+Visit the [Sandbox](https://sandbox.bluebutton.cms.gov/v2/accounts/mfa/login).
+
+### **Get Production Access**
+Follow the steps on the [Production Access](https://bluebutton.cms.gov/production-access/) page to get access to live data in the production environment.
+
+## Register an application in the developer Sandbox 
+
+1. Go to the [Sandbox Dashboard](https://sandbox.bluebutton.cms.gov/home). Create an account if you don’t already have one.
+2. Click [Add an Application](https://sandbox.bluebutton.cms.gov/v3/o/applications/register/).
+   
+## Enter application details
+1. ### Application Name
+
+   1. The name of the Application you are connecting to the Blue Button API.
+
+2. ### Callback URLs / Redirect URIs
+
+   1. This is an API endpoint that receives the callback after a user successfully authorizes your application to access their Medicare data. To enter multiple URIs in the **Callback URLs / Redirect URIs** field, separate each entry with a space or a new line.
+
+      Sample format:
+```
+URIscheme://[sub-domain.]domain_name[:port]/path
+```
+
+3. ### **Save Application**.
+After you register your Sandbox application, you’ll get a Client ID and Client Secret.
+
+* **Client ID**: an alphanumeric string that identifies your application. Use this in your code when you call the Blue Button API.  
+* **Client Secret**: an alphanumeric string used by your application to authenticate with the Blue Button server.
+
+**Note**: Client credentials from the developer Sandbox only work in the Sandbox environment. To get production credentials, you must 
+
+## Test the API with Postman 
+
+Once you’ve created a Blue Button sandbox application, you can start making requests. The instructions in this section will get you up and running quickly with Postman or cURL.
+
+### Postman
+
+[Postman](https://www.postman.com/) is a widely used API client. To use Blue Button API sandbox calls in Postman:
+
+1. Configure your Sandbox application to work with Postman:  
+* Log in to the [Blue Button Sandbox](https://sandbox.bluebutton.cms.gov/) 
+* Click **View/Edit App** for the app you want to use with Postman.   
+* Click **Edit Application**.
+* Enter the following URLs into the **Callback URLs / Redirect URIs** field; separate each entry with a space or a new line (carriage return).
+
+```
+https://oauth.pstmn.io/v1/callback
+https://oauth.pstmn.io/v1/browser-callback
+```
+
+* Click **Save Application**.
+* 2. Download the [Blue Button API Sandbox Postman collection](%20https://bluebutton.cms.gov/assets/files/CMS-Blue-Button-API-Sandbox.postman_collection.json). Import it into the Postman desktop or web application.  
+* To import the collection, either click the **Import** button in Postman and select the collection file, or drag the file into the Postman window.  
+3. Select the top-level folder in the collection, **CMS BlueButton API Sandbox**.  
+4. Select the **Variables** tab.  
+5. Copy your application’s **Client ID** and **Client Secret** from your Sandbox account. Paste both into the **Value** field for the Postman variables `clientId` and `clientSecret`.  
+6. After copying and pasting your API credentials, log out of the Blue Button Sandbox in your browser.   
+   **NOTE**: Being logged in to the sandbox can cause authorization errors in Postman.   
+7. Select the **Authorization** tab.  
+8. Verify the following settings:  
+* **Grant type**: Authorization Code (With PKCE)  
+* **Code Challenge Method**: SHA-256  
+* **State**: any random alphanumeric string at least 16 characters long (`example_string_goes_here`)  
+9. At the bottom of the **Authorization** tab, click **Get New Access Token**.  
+10. A Medicare.gov login window will open. Enter the username and password for a [synthetic sandbox user account](https://bluebutton.cms.gov/data/understanding-the-data/#authenticating-as-a-synthetic-user). For example, user \= “BBUser00000” and password \= “PW00000\!”. Then, click **Log in**.     
+11. Click **Share**.   
+12. When the **Manage Access Tokens** window appears, click **Use Token**. You may also give your token a name.  
+13. Make any Blue Button API calls from the endpoints listed under the **Patient, Explanation of Benefit**, and **Coverage** folders.   
+    * For example, to retrieve Explanation of Benefits information for the authenticated patient:  
+      1. Select the **Explanation of Benefits** folder   
+      2. Select **GET Search Explanation of Benefits**.  
+      3. Click **Send**.  
+      4. The API returns a FHIR bundle with Explanation of Benefits information.
+### cURL
+
+You can also call the Blue Button sandbox with [cURL](https://curl.se/) , a popular command-line HTTP client.
+
+First, get an access token. Get a sample authorization token from the Blue Button Test Client:
+
+1. Navigate to the [Blue Button API Test Client](https://sandbox.bluebutton.cms.gov/testclient/).  
+2. If logged into the Blue Button sandbox, click **Log Out to Continue**.  
+ 
+3. Click **Get a Sample Authorization Token (v3)**.   
+
+4. Click **Authorize as a Beneficiary**. 
+5. A Medicare login screen will open. Enter the username and password for a [synthetic sandbox user account](https://bluebutton.cms.gov/data/understanding-the-data/#authenticating-as-a-synthetic-user) (LINK: [https://bluebutton.cms.gov/data/understanding-the-data/\#authenticating-as-a-synthetic-user](https://bluebutton.cms.gov/data/understanding-the-data/#authenticating-as-a-synthetic-user)). For example, user \= BBUser00000 and password \= PW00000\!. Click **Log in.**     
+     
+6. Click **Share**.   
+7. A new page will open. Copy the access token from the JSON shown under **Step 1: Sample Authorization** for use in your cURL command.   
+
+Once you have a token, you can make API calls with cURL. For example, the command below fetches Explanation of Benefits information for the authenticated patient. Remember to replace `YOUR ACCESS TOKEN` with your actual token:
+
+```
+curl --location "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit/" --header "Accept: application/json" --header "Authorization: Bearer <YOUR ACCESS TOKEN>"
+```
+
+## Technical specifications and standards
+
+The Blue Button API is a [RESTful API](https://restfulapi.net/), based on: 
+
+* [HL7 FHIR R4 Standard](http://www.hl7.org/fhir/index.html%20) 
+* [CARIN Consumer Directed Payer Data Exchange Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html%20) 
+
+The Blue Button API 
+
+* Supplies data in [JSON format](https://hl7.org/fhir/R4/json.html).  
+* Uses the [OAuth 2.0 protocol](https://oauth.net/) for authorization.
