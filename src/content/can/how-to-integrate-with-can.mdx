@@ -81,7 +81,7 @@ To obtain an ID token:
 
 ### Construct the authentication JWT
 
-Your application sends a signed JWT to the Blue Button token endpoint to request an access token. This JWT must include the `cms\_smart` extension in its claims.
+Your application sends a signed JWT to the Blue Button token endpoint to request an access token. This JWT must include the `cms_smart` extension in its claims.
 
 #### 
 
@@ -106,20 +106,20 @@ Your JWT claims must include the fields below. See [JWT Claims](jwt-reference.md
 | `aud` | Token endpoint URL: `/v3/o/token` |
 | `jti` | A unique identifier for this token request |
 | `exp` | No more than 300 seconds from now |
-| `extensions` | Must include the cms\_smart extension |
+| `extensions` | Must include the `cms_smart` extension |
 
 #### 
 
-#### **Add the cms\_smart extension**
+#### **Add the `cms_smart` extension**
 
-The cms\_smart extension is required. The Blue Button API does not accept the `client\_credentials` grant type unless this extension is present in the JWT claims.  
-Your cms\_smart extension must include:
+The `cms_smart` extension is required. The Blue Button API does not accept the `client\_credentials` grant type unless this extension is present in the JWT claims.  
+Your `cms_smart` extension must include:
 
 | Field | Value |
 | :---- | :---- |
 | `version` | "1" (fixed string) |
-| `purpose\_of\_use` | "PATRQT" (fixed value) |
-| `id\_token` | The CSP-issued IAL2 ID token you obtained in Step 3 |
+| `purpose_of_use` | "PATRQT" (fixed value) |
+| `id_token` | The CSP-issued IAL2 ID token you obtained in Step 3 |
 
 #### 
 
@@ -191,6 +191,6 @@ If the API cannot match the enrollee using one of these combinations, it does no
 | :---- | :---- | :---- |
 | `403 Forbidden` on AuditEvent endpoint | Application has not completed both approval steps | Complete Step 1 and Step 2 |
 | patient/AuditEvent.rs scope missing from token | Same as above | Complete Step 1 and Step 2 |
-| Token request fails | cms\_smart extension missing or malformed | Check your [`cms_smart` extension](#add-the-cms_smart-extension) |
+| Token request fails | `cms_smart` extension missing or malformed | Check your [`cms_smart` extension](#add-the-cms_smart-extension) |
 | Patient match fails | ID token missing required fields | Revisit [Verify patient matching](#verify-patient-matching) and contact your CSP |
 | ID token rejected | Token issued by unsupported CSP or wrong environment | Check your [CSP-issued ID token](#obtain-a-csp-issued-id-token): only CLEAR and ID.me are accepted |
