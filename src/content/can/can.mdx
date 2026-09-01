@@ -1,0 +1,91 @@
+---
+title: "CMS Aligned Networks Overview"
+seo: 
+  description: "Overview of the CMS Aligned Networks"
+sortOrder: "1"
+---
+
+# CMS Aligned Networks 
+
+CMS Aligned Networks (CAN) is a Blue Button program that allows approved third-party health applications to access a Medicare enrollee's health data without requiring the enrollee to log in through Medicare.gov.
+
+This page explains what CAN is, why it exists, and how it works. It does not walk you through the steps to integrate; for that, see [How to integrate with CMS Aligned Networks](how-to-integrate-with-can.mdx). It does not list every parameter; for that, see the [CAN JWT Reference](jwt-reference.mdx).
+
+## The problem CAN solves
+
+Standard Blue Button access uses the `authorization_code` grant. In that flow, an enrollee must log in through Medicare.gov to authorize your application. That login step is a friction point. 
+
+For enrollees who have already verified their identity with a trusted service, requiring a separate Medicare.gov login creates an unnecessary barrier.
+
+CAN removes that barrier for a specific set of circumstances:
+
+* An enrollee has already verified their identity through an approved Credential Service Provider (CSP) AND   
+* The CSP meets federal Identity Assurance Level 2 (IAL2) standards,   
+* Your application can retrieve that enrollee's Medicare data without an additional login step.
+
+## How CAN works
+
+CAN uses the OAuth 2.0 `client_credentials` grant combined with asymmetric authentication. Here is the sequence at a conceptual level.
+
+1. **The enrollee verifies their identity with a CSP.** The enrollee uses an approved CSP, outside your application, to verify their identity in accordance with IAL2 standards. This may have happened before your application was even involved.  
+2. **Your application obtains a CSP-issued ID token.** When the enrollee uses your application, you get a signed ID token from the CSP. This token asserts the enrollee's verified identity.  
+3. **Your application constructs an authentication JWT.** You build a signed JSON Web Token (JWT) that includes the CSP-issued ID token in a `cms_smart` extension field. This extension is what tells Blue Button that the request is a CAN flow request, not a standard `client_credentials` request.  
+4. **Your application requests an access token from Blue Button.** You POST the signed JWT to Blue Button's `/token` endpoint. Blue Button   
+   1. Validates the JWT,   
+   2. Verifies the enrollee's identity against Medicare records using patient-matching logic.   
+   3. If everything checks out, it issues an access token scoped to that enrollee.  
+5. **Your application calls the FHIR endpoints.** You use the access token to call the standard Blue Button FHIR endpoints and retrieve the enrollee's Medicare data. No action is required from the enrollee at this point.
+
+## The cms\_smart extension
+
+The `cms_smart` extension is the technical mechanism that distinguishes a CAN request from a standard `client_credentials` request. Blue Button accepts the `client_credentials` grant only when `cms_smart` is present in the authentication JWT claims.
+
+`cms_smart` is modeled on the `tefca_smart` extension from the [2024 Facilitated FHIR Implementation Guide](https://rce.sequoiaproject.org/wp-content/uploads/2024/07/SOP-Facilitated-FHIR-Implementation_508-1.pdf). It carries the CSP-issued ID token and the identity context that Blue Button needs to match the enrollee to a Medicare record.
+
+***Note:** Blue Button does not accept a bare `client_credentials` request without `cms_smart`. If `cms_smart` is absent, the request is rejected.*
+
+## Identity verification and patient matching
+
+CAN does not lower the bar for identity verification; it moves where that verification happens. The CSPs that CAN accepts meet federal IAL2 standards, the same level of assurance required for Medicare.gov login.
+
+When Blue Button receives a CAN request, it matches the identity asserted in the ID token against Medicare records. It uses a combination of fields from the token to do this. CAN supports three field combinations:
+
+* First name, last name, date of birth, and street address  
+* First name, last name, date of birth, and the last four digits of the Social Security Number (SSN)  
+* First name, date of birth, and Medicare Beneficiary Identifier (MBI)
+
+If the fields in the token do not match a Medicare record, Blue Button does not issue an access token. Your application receives a `403 Forbidden` response.
+
+## Audit and compliance
+
+Every CAN data access request is auditable. Blue Button records when and why data was accessed. Your application can retrieve that audit record using the `patient/AuditEvent.rs` scope. This scope is granted only to applications that have completed both CAN approval steps. It supports your organization's compliance obligations and gives enrollees a clear record of who accessed their data and when.
+
+## What CAN is not
+
+**CAN is not a way to access Medicare data without enrollee consent.** The enrollee's identity verification with the CSP is the consent mechanism. CAN moves the consent interaction; it does not remove it.
+
+**CAN is not available to all Blue Button applications.** Your application must complete the approval steps before it can use the CAN flow. See [How to integrate with CMS Aligned Networks](?tab=t.9etzj01h36u) for details.
+
+**CAN does not change the data you can access.** The same FHIR resources are available: `Patient`, `ExplanationOfBenefit`, `Coverage`, through the same endpoints. CAN changes how your application authenticates, not what it can retrieve.
+
+## Approved Credential Service Providers
+
+CAN currently supports two CSPs:
+
+* **CLEAR** a biometric identity verification service  
+* **ID.me** a digital identity network used across federal agencies
+
+Both meet federal IAL2 standards. Blue Button's sandbox environment accepts only ID tokens issued by CLEAR or ID.me's lower (non-production) environments. The production environment accepts only ID tokens issued by their production environments.  
+***Note:** The list of approved CSPs may change. Check back here for the current list before you begin integration.*
+
+## If your application is already integrated with Blue Button
+
+If your application already uses the standard Blue Button `authorization_code` flow, you do not need to rebuild your integration from scratch. CAN is an additional flow, not a replacement. 
+
+The changes required are incremental: 
+
+* adding support for the `client_credentials` grant,   
+* constructing the authentication JWT with the `cms_smart` extension,   
+* completing the CAN-specific approval steps.
+
+See [How to integrate with CMS Aligned Networks](?tab=t.9etzj01h36u) for the full list of changes.
