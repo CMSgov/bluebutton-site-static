@@ -1,0 +1,79 @@
+---
+title: "Revoke endpoint for the CMS Aligned Networks"
+seo: 
+  description: "How to revoke a token on the CMS Aligned Networks"
+sortOrder: "6"
+---
+
+# Revoking a token
+
+When a patient disconnects from your application, you must revoke their access token. Revoking a token invalidates the underlying authorization grant and all related access tokens for that patient. The patient must reauthorize your application to restore access.
+
+***Before you revoke:** Revoking a token ends all data access for that patient. Your application must handle the resulting 401 Unauthorized response on any subsequent data request for that patient.*
+
+## Endpoint
+
+| Environment | URL |
+| :---- | :---- |
+| Sandbox | `https://sandbox.bluebutton.cms.gov/v3/o/revoke_token/` |
+| Production | `https://api.bluebutton.cms.gov/v3/o/revoke_token/` |
+
+### Request
+
+Send a `POST` request to the `/revoke_token/` endpoint. Authenticate with HTTP Basic Authentication using your application's `client_id` and `client_secret`.
+
+#### **Required parameters**
+
+| Parameter | Description |
+| :---- | :---- |
+| `token` | The access token or refresh token you want to revoke. |
+| `token_type_hint` | An indication of what kind of token is being revoked; must be set to `refresh_token` for refresh tokens; can optionally be set to `access_token` for access tokens |
+
+#### **cURL example**
+
+```
+curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/revoke_token/" \
+  -u "<client_id>:<client_secret>" \
+  -d "token=<access_token>"
+```
+
+### Response
+
+#### **Success**
+
+A successful revocation returns `200 OK` with an empty body. This prevents token-fishing attacks.
+
+```
+
+HTTP/1.1 200 OK
+
+```
+
+#### **Error responses**
+
+| Status code | Meaning | What to do |
+| :---- | :---- | :---- |
+| `400 Bad Request` | The request is malformed, or the `token` parameter is missing. | Check that your request includes the `token` parameter and that your credentials are correct. |
+| `401 Unauthorized` | Your `client_id` or `client_secret` is invalid. | Verify your application credentials in the developer portal. |
+
+## What revocation does
+
+Revoking a token expires the patient's entire authorization grant, not just the single token you submitted. After revocation:
+
+* All access tokens issued under that grant become invalid.  
+* All refresh tokens issued under that grant become invalid.  
+* The patient must go through the full authorization flow again to reconnect your application.
+
+This is different from an access token expiring naturally. A natural expiration allows your application to use a refresh token to obtain a new access token without patient interaction. Revocation removes that ability entirely.
+
+## Handling revocation in your application     
+
+When a patient disconnects from your application, do the following:
+
+1. Call `POST /revoke_token/` with the patient's current access token or refresh token.  
+2. Delete the stored access token and refresh token from your application's database.  
+3. Update your application's UI to reflect that the patient has disconnected.
+
+## Testing revocation in the sandbox
+
+Use the sandbox to test your revocation flow before deploying to production. The [sandbox test accounts](?tab=t.9etzj01h36u#heading=h.89j415995ujj) are available for CAN flow testing.
