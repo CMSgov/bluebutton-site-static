@@ -1,0 +1,41 @@
+---
+title: 'Guides'
+seo: 
+  description: "Assist Blue Button developers in navigating the API"
+sortOrder: 3
+---
+Blue Button is a standards-based API that gives access to Medicare claims data. Medicare claims offer a timely record of diagnoses, visits, treatments, and prescriptions. Use Blue Button to build apps for people on Medicare and the organizations that support them 
+
+Blue Button uses [Fast Healthcare Interoperability Resources (FHIR)](https://hl7.org/fhir/R4/overview.html) to share claims data. You can use a variety of tools or client software programs to access the sandbox and production environments.
+
+These pages contain step-by-step guides for all stages of building with Blue Button. Covers everything from authentication to production readiness.
+
+* **Authentication & OAuth** Set up OAuth 2.0, get tokens, handle refresh and revocation  
+* **Fetching Patient Data** Make requests, read responses, work with identifiers and references  
+* **Working with Claims** Understand ExplanationOfBenefit responses and decode claims data  
+* **Handling Pagination** Navigate large result sets and build complete datasets  
+* **Building a Consent Flow** Meet CMS requirements for user authorization and data transparency  
+* **Optimizing your App for Production** Optimize queries, pass compliance checks, and prepare for launch
+
+## Environments
+
+### Sandbox vs. Production environments
+
+| Environment | Access | Base FHIR URL |
+| :---- | :---- | :---- |
+| Sandbox | Available to everyone via test credentials. Contains test claims data. | [https://sandbox.bluebutton.cms.gov/v3/fhir/](https://sandbox.bluebutton.cms.gov/v2/fhir/)  |
+| Production | Must complete steps for production credentials. Contains real Medicare enrollee data | [https://api.bluebutton.cms.gov/v3/fhir/](https://api.bluebutton.cms.gov/v2/fhir/)  |
+
+## Sample applications 
+
+Use our sample applications to see how the API's basic features work.
+
+* [Node & React](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react%20) 
+* [Python & React](https://github.com/CMSgov/bluebutton-sample-client-python-react) 
+
+## SDKs 
+
+Our Node and Python SDKs provide methods for building API calls and managing token refreshes.
+
+* [Node SDK](https://www.npmjs.com/package/cms-bluebutton-sdk) 
+* [Python SDK](https://pypi.org/project/cms-bluebutton-sdk/)
