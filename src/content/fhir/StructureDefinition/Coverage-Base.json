@@ -397,10 +397,10 @@
         ]
       },
       {
-        "id": "Coverage-Base.BENE_LIS_EFCTV_CD",
-        "path": "Coverage-Base.BENE_LIS_EFCTV_CD",
-        "short": "Beneficiary LIS Effective Code",
-        "definition": "Switch indicating that this record is the current effective Low Income Subsidy (LIS) determination record.",
+        "id": "Coverage-Base.BENE_CMBND_DEEMD_IND",
+        "path": "Coverage-Base.BENE_CMBND_DEEMD_IND",
+        "short": "Beneficiary LIS Deemed Code",
+        "definition": "Switch indicating that this record is the currently deemed a Low Income Subsidy (LIS).",
         "min": 0,
         "max": "1",
         "type": [
@@ -410,10 +410,10 @@
         ]
       },
       {
-        "id": "Coverage-Base.BENE_LIS_COPMT_LVL_CD",
-        "path": "Coverage-Base.BENE_LIS_COPMT_LVL_CD",
+        "id": "Coverage-Base.BENE_CMBND_DEEMD_COPMT_LVL_ID",
+        "path": "Coverage-Base.BENE_CMBND_DEEMD_COPMT_LVL_ID",
         "short": "Beneficiary LIS Copayment Level Code",
-        "definition": "A code identifying the generic level used to compute the Low Income Subsidy (LIS) co-payment amount. This generic level translates to a specific numeric value that will be used in the computation.    Reference table: BENE_LIS_COPMT_LVL_CD",
+        "definition": "A code identifying the generic level used to compute the Low Income Subsidy (LIS) co-payment amount. This generic level translates to a specific numeric value that will be used in the computation.    Reference table: BENE_CMBND_DEEMD_COPMT_LVL_ID",
         "min": 0,
         "max": "1",
         "type": [
@@ -423,8 +423,8 @@
         ]
       },
       {
-        "id": "Coverage-Base.BENE_LIS_PTD_PRM_PCT",
-        "path": "Coverage-Base.BENE_LIS_PTD_PRM_PCT",
+        "id": "Coverage-Base.BENE_CMBND_DEEMD_PRM_PCT",
+        "path": "Coverage-Base.BENE_CMBND_DEEMD_PRM_PCT",
         "short": "Beneficiary LIS Part D Premium Percentage",
         "definition": "Identifies the portion of the Part D premium subsidized, based on a sliding scale linked to the Federal Poverty Level (FPL) percentage. If the person is under 135% FPL the premium subsidy percent will be 100%.  If the person is 136-140% FPL the premium subsidy percent will be 75%.    If the person is 141-145% FPL the premium subsidy will be 50%.  If the person is 146-149% FPL the premium subsidy will be 25%.",
         "min": 0,
