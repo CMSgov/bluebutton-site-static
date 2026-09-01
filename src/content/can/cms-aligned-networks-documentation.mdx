@@ -1,208 +1,91 @@
 ---
-title: CMS Aligned Networks Developer Documentation
+title: "CMS Aligned Networks Overview"
 seo: 
-  description: A quick reference for application developers seeking to utilize CMS-aligned networks to query the Blue Button API without a beneficiary having to log in via a portal
+  description: "A quick reference for application developers seeking to utilize CMS-aligned networks to query the Blue Button API without a beneficiary having to log in via a portal"
+sortOrder: "1"
 ---
 
-import networkFlow from '#assets/images/cms-aligned-network-flow.png';
+# CMS Aligned Networks 
 
-## Prerequisites
+CMS Aligned Networks (CAN) is a Blue Button program that allows approved third-party health applications to access a Medicare enrollee's health data without requiring the enrollee to log in through Medicare.gov.
 
-* Application has met the requirements and has been listed in the Medicare App Library  
-* Application has provided a URL to **JWK Set** to the [Blue Button API team](mailto:bluebuttonapi@cms.hhs.gov)
+This page explains what CAN is, why it exists, and how it works. It does not walk you through the steps to integrate; for that, see [How to integrate with CMS Aligned Networks](how-to-integrate-with-can.mdx). It does not list every parameter; for that, see the [CAN JWT Reference](jwt-reference.mdx).
 
-## Approach
+## The problem CAN solves
 
-For applications that are approved as part of a CMS Aligned Network, Blue Button API will allow for the use of the `client_credentials` grant, in combination with [asymmetric authentication](https://hl7.org/fhir/smart-app-launch/STU2.2/client-confidential-asymmetric.html), to receive an access token. When using this flow, a beneficiary will not be required to log in via medicare.gov. A diagram of the flow is below. This is in contrast to the existing `authorization_code` + symmetric authentication flow requiring a portal login. 
+Standard Blue Button access uses the `authorization_code` grant. In that flow, an enrollee must log in through Medicare.gov to authorize your application. That login step is a friction point. 
 
-<Image class="width-full border-1px border-base-lighter padding-2" src={networkFlow} alt="Sequence diagram showing the CMS-Aligned Network authentication flow between Patient, Consumer App, CSP, Blue Button, and BFD, including AAL2 authentication, IAL2 identity verification, token exchange, patient matching, and FHIR data retrieval" />
+For enrollees who have already verified their identity with a trusted service, requiring a separate Medicare.gov login creates an unnecessary barrier.
 
-## Technical Requirements
+CAN removes that barrier for a specific set of circumstances:
 
-Blue Button API will only accept the `client_credentials` grant type when an extension, `cms_smart`, is present in the authentication JWT claims. 
+* An enrollee has already verified their identity through an approved Credential Service Provider (CSP) AND   
+* The CSP meets federal Identity Assurance Level 2 (IAL2) standards,   
+* Your application can retrieve that enrollee's Medicare data without an additional login step.
 
-`cms_smart` is modeled off the `tefca_smart` extension that was present in the [2024 Facilitated FHIR Implementation Guide](https://rce.sequoiaproject.org/wp-content/uploads/2024/07/SOP-Facilitated-FHIR-Implementation_508-1.pdf).
+## How CAN works
 
-<Alert size="slim" noIcon>**Note:** as projects such as SMART Permission Tickets evolve, this may change.</Alert>
+CAN uses the OAuth 2.0 `client_credentials` grant combined with asymmetric authentication. Here is the sequence at a conceptual level.
 
+1. **The enrollee verifies their identity with a CSP.** The enrollee uses an approved CSP, outside your application, to verify their identity in accordance with IAL2 standards. This may have happened before your application was even involved.  
+2. **Your application obtains a CSP-issued ID token.** When the enrollee uses your application, you get a signed ID token from the CSP. This token asserts the enrollee's verified identity.  
+3. **Your application constructs an authentication JWT.** You build a signed JSON Web Token (JWT) that includes the CSP-issued ID token in a `cms_smart` extension field. This extension is what tells Blue Button that the request is a CAN flow request, not a standard `client_credentials` request.  
+4. **Your application requests an access token from Blue Button.** You POST the signed JWT to Blue Button's `/token` endpoint. Blue Button   
+   1. Validates the JWT,   
+   2. Verifies the enrollee's identity against Medicare records using patient-matching logic.   
+   3. If everything checks out, it issues an access token scoped to that enrollee.  
+5. **Your application calls the FHIR endpoints.** You use the access token to call the standard Blue Button FHIR endpoints and retrieve the enrollee's Medicare data. No action is required from the enrollee at this point.
 
-### Parameters
+## The cms\_smart extension
 
-Parameters in `POST` request to Blue Button API's `/token` endpoint for CMS-aligned networks flow:
+The `cms_smart` extension is the technical mechanism that distinguishes a CAN request from a standard `client_credentials` request. Blue Button accepts the `client_credentials` grant only when `cms_smart` is present in the authentication JWT claims.
 
-| Element | Optionality | Requirement |
-| :---- | :---- | :---- |
-| `grant_type` | required | Must be: `client_credentials` |
-| `scope` | required | Any values from Blue Button API's `./well-known/smart-configuration` are valid. <br/><br/>**Example:** <ul><li>`patient/Patient.rs`</li><li>`patient/Coverage.rs`</li><li>`patient/ExplanationOfBenefit.rs`</li> <li>`launch/patient`</li> <li>`profile`</li></ul> |
-| `client_assertion_type` | required | `urn:ietf:params:oauth:client-assertion-type:jwt-bearer` |
-| `client_assertion` | required | Signed Authentication JWT value |
+`cms_smart` is modeled on the `tefca_smart` extension from the [2024 Facilitated FHIR Implementation Guide](https://rce.sequoiaproject.org/wp-content/uploads/2024/07/SOP-Facilitated-FHIR-Implementation_508-1.pdf). It carries the CSP-issued ID token and the identity context that Blue Button needs to match the enrollee to a Medicare record.
 
-### POST to Blue Button API `/token` endpoint:
+***Note:** Blue Button does not accept a bare `client_credentials` request without `cms_smart`. If `cms_smart` is absent, the request is rejected.*
 
-Header: `"Content-Type": "application/x-www-form-urlencoded"`
+## Identity verification and patient matching
 
-Example Parameters:
+CAN does not lower the bar for identity verification; it moves where that verification happens. The CSPs that CAN accepts meet federal IAL2 standards, the same level of assurance required for Medicare.gov login.
 
-```json
-{
-  "grant_type": "client_credentials",
-  "scope": "patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs launch/patient profile",
-  "client_assertion_type": "urn:ietf:params:oauth:client-assertion-type:jwt-bearer",
-  "client_assertion": "{YOUR_JWT_HERE}"
-}
-```
+When Blue Button receives a CAN request, it matches the identity asserted in the ID token against Medicare records. It uses a combination of fields from the token to do this. CAN supports three field combinations:
 
-### Authentication JWT Header
+* First name, last name, date of birth, and street address  
+* First name, last name, date of birth, and the last four digits of the Social Security Number (SSN)  
+* First name, date of birth, and Medicare Beneficiary Identifier (MBI)
 
-| Element | Optionality | Requirement |
-| :---- | :---- | :---- |
-| `alg` | required | Only RS384 and ES384 allowed |
-| `kid` | required | Must be a `kid` present in the **JWK Sets** available at the url registered with Blue Button. |
-| `typ` | required | Fixed value: "JWT" |
+If the fields in the token do not match a Medicare record, Blue Button does not issue an access token. Your application receives a `403 Forbidden` response.
 
-<Alert size="slim" noIcon>**Note:** `jku` will be ignored if provided</Alert>
+## Audit and compliance
 
-### Authentication JWT Claims
+Every CAN data access request is auditable. Blue Button records when and why data was accessed. Your application can retrieve that audit record using the `patient/AuditEvent.rs` scope. This scope is granted only to applications that have completed both CAN approval steps. It supports your organization's compliance obligations and gives enrollees a clear record of who accessed their data and when.
 
-| Element | Optionality | Requirement |
-| :---- | :---- | :---- |
-| `iss` | required | Your Blue Button API Client ID |
-| `sub` | required | Your Blue Button API Client ID |
-| `aud` | required | Blue Button API token endpoint. `https://{ENVIRONMENT}.bluebutton.cms.gov/v3/o/token` |
-| `jti` | required | unique  |
-| `exp` | required | JWTs must not be expired. Shall not be > 300 seconds from now (SMART requirement) |
-| `extensions` | required | `cms_smart` extension required. Defined below |
+## What CAN is not
 
+**CAN is not a way to access Medicare data without enrollee consent.** The enrollee's identity verification with the CSP is the consent mechanism. CAN moves the consent interaction; it does not remove it.
 
-### `cms_smart` Extension Definition
+**CAN is not available to all Blue Button applications.** Your application must complete the approval steps before it can use the CAN flow. See [How to integrate with CMS Aligned Networks](?tab=t.9etzj01h36u) for details.
 
-| Element | Optionality | Requirement |
-| :---- | :---- | :---- |
-| version | Required | Fixed string value: "1"   |
-| `purpose_of_use` | Required | Fixed value: "[PATRQT](https://terminology.hl7.org/en/CodeSystem-v3-ActReason.html#v3-ActReason-PATRQT)" 1   |
-| `consent_policy` | Optional | Not defined for initial implementation  |
-| `consent_reference` | Optional | Not used for initial implementation  |
-| `id_token` | Required | CSP-issued ID token containing identity assertions. **Must be IAL2** |
+**CAN does not change the data you can access.** The same FHIR resources are available: `Patient`, `ExplanationOfBenefit`, `Coverage`, through the same endpoints. CAN changes how your application authenticates, not what it can retrieve.
 
-#### Example decoded JWT containing the `cms_smart` extension:
+## Approved Credential Service Providers
 
-Example Header:
-```json
-{
-  "alg": "RS384",
-  "kid": "my-key-id-1",
-  "typ": "JWT"
-}
-```
+CAN currently supports two CSPs:
 
-Example Claims:
-```json
-{
-  "iss": "my-client-id-1",
-  "sub": "my-client-id-1",
-  "aud": "https://sandbox.bluebutton.cms.gov/v3/o/token",
-  "jti": "8b4b7fab-93ed-4e59-9935-f9244d90b516",
-  "exp": 1774651583,
-  "extensions": {
-    "cms_smart": {
-      "version": "1",
-      "purpose_of_use": "PATRQT",
-      "id_token": "{YOUR_ID_TOKEN_HERE}"
-    }
-  }
-}
-```
+* **CLEAR** a biometric identity verification service  
+* **ID.me** a digital identity network used across federal agencies
 
-## ID Token Requirements
+Both meet federal IAL2 standards. Blue Button's sandbox environment accepts only ID tokens issued by CLEAR or ID.me's lower (non-production) environments. The production environment accepts only ID tokens issued by their production environments.  
+***Note:** The list of approved CSPs may change. Check back here for the current list before you begin integration.*
 
-<Alert size="slim" noIcon>**Note:** These may require updates depending upon any late-breaking alignment from CSPs and workgroups.</Alert>
+## If your application is already integrated with Blue Button
 
-Blue Button API will perform patient matching based upon the presence of an IAL2 `id_token` provided by a registered client application. It will seek specific fields in the `id_token`'s claims.
+If your application already uses the standard Blue Button `authorization_code` flow, you do not need to rebuild your integration from scratch. CAN is an additional flow, not a replacement. 
 
-Only CLEAR and ID.me are supported at the outset. Blue Button API's sandbox environment will only accept ID tokens issued by CLEAR or ID.me's lower environments, and Blue Button API's production environment will only accept ID tokens issued by CLEAR or ID.me's production environments.
+The changes required are incremental: 
 
-### ID Token JWT Header
+* adding support for the `client_credentials` grant,   
+* constructing the authentication JWT with the `cms_smart` extension,   
+* completing the CAN-specific approval steps.
 
-| Element | Optionality | Requirement |
-| :---- | :---- | :---- |
-| `alg` | required | Must be RS256 |
-| `kid` | required | Must be a `kid` present in the CSP's jwks endpoint |
-| `typ` | required | Fixed value: "JWT" |
-
-### ID Token JWT Claims 
-
-<Alert size="slim" noIcon>**Note:** Contact your Credential Service Provider in order to confirm `identity_assurance_level` and `ssn_itin_short` are present on your application</Alert>
-
-| Element | Optionality | Requirement |
-| :---- | :---- | :---- |
-| `iss` | required | <ul><li>**Production**: Must be `https://api.id.me/oidc` or `https://verified.clearme.com/integrations`</li><li>**Lower environments**: Must be `https://api.idmelabs.com/oidc` or `https://verified.clearme.com/integrations`</li></ul>  |
-| `sub` | required | CSP client-specific ID for the beneficiary. Currently not used.  |
-| `aud` | required | MAY be an array  |
-| `jti` | required | unique  |
-| `exp` | required | JWTs must not be expired |
-| `iat` | required | JWTs must not be more than 5 minutes (300 seconds) old |
-| `identity_assurance_level` | **required** | **Must > = 2 in CSP-signed payload** |
-| `auth_time` | **required** | **must be < 24 hours old**  |
-| `family_name` | required | Expected Character Space: Latin/ASCII \+ Latin-1 Supp/Ext |
-| `given_name` | required | Expected Character Space: Latin/ASCII \+ Latin-1 Supp/Ext |
-| `birthdate` | required | YYYY-MM-DD |
-| `gender`/`sex_legal` | Optional |  |
-| `address` | Optional | See below for address format |
-| `historical_address` | Optional | See below for address format |
-| `mbi` | Optional | Not currently used |
-| `ssn_itin_short` | Optional | Last 4 of ssn/itin  |
-| `phone_number` | Optional | **Normalized to E.164.** Not currently used |
-| `email` | Optional | Not currently used |
-| `csp_uuid` | Optional (for now) | Not currently used |
-
-### Address Fields
-
-| Element | Optionality | Requirement |
-| :---- | :---- | :---- |
-| `street_address` | Optional | Street Address |
-| `address_line2` | Optional | Line 2 |
-| `locality` | Optional |  |
-| `region` | Optional |  |
-| `postal_code` | Optional |  |
-| `country` | Optional |  |
-| `formatted` | Optional |  |
-
-## Using the Blue Button API 
-
-After successfully POSTing a token to Blue Button API's `/token` endpoint, it will attempt to find a unique match using the approved CMS matching algorithms. If a unique match is found, then an access token will be issued, with a token validity of 30 minutes, and refresh capability of up to 24 hours. If no match is found, an error will be returned to that effect. 
-
-Access tokens issued using this flow have the same capabilities of access tokens issued using the portal login `authorization_code` flow. To query for claims, coverage, or patient data, utilize the `Patient`, `ExplanationOfBenefit`, and `Coverage` resource paths:
-
-- `/v3/fhir/ExplanationOfBenefit/`
-- `/v3/fhir/Patient/`
-- `/v3/fhir/Coverage/`
-
-In addition, a new operation exists to pull in digital insurance card elements per the C4DIC Implementation Guide: 
-
-- `/v3/fhir/Patient/$generate-insurance-card`
-
-## CLEAR and ID.me Test account information
-
-### CLEAR Test Patients
-  - [CLEAR Synthetic Test Identities & Patients](https://docs.clearme.com/docs/synthetic-test-patients)  
-
-### ID.me Test Patients
-
-| Name | Email | Password |
-| :---- | :---- | :---- |
-| Allison Hackett | ahackett@gmail.com | IDme2026!! |
-| Damon Mychart | dmychart@me.com | IDme2026!! |
-| Dog Beaker | dogbeaker@aol.com | IDme2026!! |
-| Barbara Testa | btesta@hotmail.com | IDme2026!! |
-| Tracy CraneTest | tcranetest@gmail.com | IDme2026!! |
-| Camila Maria Lopez | knixontestemail@epic.com | IDme2026!! |
-| Derrick Lin | knixontestemail2@epic.com | IDme2026!! |
-| Homer J Simpson | hsimpson@gmail.com | IDme2026!! |
-
-## Patient Matching Criteria
-
-Approved field combinations that Blue Button API currently supports:
-
-- First Name + Last Name + DOB + Street Line  
-- First Name + Last Name + DOB + SSN Last 4  
-- First Name + DOB + MBI
+See [How to integrate with CMS Aligned Networks](how-to-integrate-with-can.mdx) for the full list of changes.
