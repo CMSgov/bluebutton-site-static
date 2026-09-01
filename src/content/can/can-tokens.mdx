@@ -1,0 +1,75 @@
+---
+title: "CMS Aligned Networks Tokens"
+seo: 
+  description: "Overview of CMS Aligned Networks tokens"
+sortOrder: "3"
+---
+
+## Overview
+
+This page describes the token lifecycle for CMS Aligned Networks (CAN) flows. It covers:
+
+* How CAN access tokens work  
+* The rolling 90-day refresh window  
+* Token lifetime and expiration rules  
+* ID token age requirements
+
+For instructions on how to request and refresh a CAN token, see [How to Integrate with CMS Aligned Networks](how-to-integrate-with-can.mdx).
+
+For the JWT specification used to authenticate the initial token request, see [CAN JWT Reference](jwt-reference.mdx).
+
+## How CAN tokens work
+
+CAN tokens use the `client_credentials` grant with asymmetric authentication. The enrollee does not log in through [Medicare.gov](https://medicare.gov).
+
+The table below summarizes the key differences.
+
+|  | CAN flow |
+| :---- | :---- |
+| **Grant type** | `client_credentials` |
+| **Enrollee login required** | No |
+| **Access token lifetime** | 1 hour |
+| **Refresh token included** | Yes (rolling 90-day window) |
+| **Refresh window resets on use** | Yes |
+| **AuditEvent scope auto-injected** | Yes |
+| **Available on** | v3 only |
+
+## Token lifetime and the rolling 90-day window
+
+### Access token lifetime
+
+A CAN access token is valid for 1 hour from the time it is issued. After 1 hour, the token expires, and the Blue Button API rejects requests that use it. Use the refresh token to obtain a new access token without re-presenting an ID token to the Blue Button API.
+
+### Refresh window
+
+CAN tokens use a rolling 90-day refresh window. This means:
+
+* When the Blue Button API issues an access token, it also issues a refresh token. That refresh token is valid for 90 days from the time of issuance.  
+* When you use the refresh token to obtain a new access token, the Blue Button API issues a new refresh token. The new refresh token is valid for 90 days from the time of that refresh, not from the original issuance date.  
+* The window resets on every successful refresh. There is no fixed expiration date for the overall access grant as long as you refresh within each 90-day window.
+
+**Example:**
+
+| Event | Day | Refresh token valid until |
+| :---- | :---- | :---- |
+| Initial token issued | Day 0 | Day 90 |
+| First refresh | Day 45 | Day 135 (45 \+ 90\) |
+| Second refresh | Day 100 | Day 190 (100 \+ 90\) |
+| Refresh missed | Day 200 | N/A (window expired on Day 190\) |
+
+***Note:** The `access_grant_expiration` field in the token response reflects the current refresh window expiration: 90 days from the most recent token issuance or refresh. It updates on every refresh.*
+
+## ID token age requirement
+
+When your application presents an ID token to the Blue Button API to initiate a CAN flow, the ID token's `auth_time` claim must be less than 300 seconds (5 minutes) old at the time of the request.
+
+The Blue Button API rejects ID tokens with an `auth_time` older than 300 seconds. This requirement does not apply to token refresh requests. Refresh requests do not require a new ID token.
+
+## Token expiration and re-authentication
+
+| Scenario | What happens | What to do |
+| :---- | :---- | :---- |
+| Access token expires (after 1 hour) | FHIR API requests return `401 Unauthorized` | Use the refresh token to request a new access token |
+| Refresh token expires (after 90 days without a refresh) | Refresh requests return `400 Bad Request` | Re-initiate the full CAN flow with a new ID token from the CSP |
+| ID token `auth_time` is older than 300 seconds | Token request returns `400 Bad Request` | Obtain a fresh ID token from the CSP and retry |
+| Token replay detected (duplicate `issuer + jti`) | Token request returns `400 Bad Request` | Generate a new JWT with a unique `jti` value |
