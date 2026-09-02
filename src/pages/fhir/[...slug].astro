@@ -5,57 +5,133 @@ import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 import { getCollection } from 'astro:content'
 
-type CodeSystemPost = CollectionEntry<'fhir'> & { data: { resourceType: 'CodeSystem' } }
+type FhirPost = CollectionEntry<'fhir'>
+
+type StructureDefinitionElement = Extract<
+  CollectionEntry<'fhir'>['data'],
+  { resourceType: 'StructureDefinition' }
+>['differential']['element'][number]
 
 export const Route = createRoute({
   routeId: '/fhir/[...slug]',
 })
 
 export type Props = {
-  post: CodeSystemPost
+  post: FhirPost
 }
-
-export const getStaticPaths = Route.createGetStaticPaths<Props>(async () => {
+export const getStaticPaths = Route.createGetStaticPaths(async () => {
   const posts = await getCollection('fhir')
-  return posts
-    .filter((post): post is CodeSystemPost => post.data.resourceType === 'CodeSystem')
-    .map((post) => ({
-      // This preserves the correct casing for these files. Forcing them to lowercase, alhough preferred, could cause 404 errors on Cloudfront/Akamai
-      params: { slug: `/${post.data.resourceType}/${post.data.id}` },
-      props: { post },
-    }))
+  return posts.map((post) => ({
+    // This preserves the correct casing for these files. Forcing them to lowercase, alhough preferred, could cause 404 errors on Cloudfront/Akamai
+    params: { slug: `/${post.data.resourceType}/${post.data.id}` },
+    props: { post },
+  }))
 })
 
 const { post } = Astro.props
+
+// Helpers to simplify the rendering of StructureDefinition elements in a table. These are only used if the resourceType is StructureDefinition.
+const elements = post.data.resourceType === 'StructureDefinition' ? (post.data.differential?.element ?? []) : []
+
+function cardinality({ min, max }: StructureDefinitionElement) {
+  return `${min ?? 0}..${max ?? '*'}`
+}
+
+function isZeroedOut({ max }: StructureDefinitionElement) {
+  return max === '0'
+}
+
+function typeNames({ type }: StructureDefinitionElement) {
+  if (!type) return ''
+  return type.map((t) => t.code).join(' | ')
+}
+
+// Elements are named like "Patient.name.given" — indent based on depth
+function depth(path: string) {
+  return path.split('.').length - 1
+}
 ---
 
-<BaseLayout title={`Variable: ${post.data.title}`} description={post.data.description || ''}>
-  <DocsLayout showSideNav={false} showToc={true}>
-    <div class="usa-prose">
-      <h2>Variable: {post.data.name}</h2>
-      <p>{post.data.title}</p>
-      <h2>Description:</h2>
-      <p>{post.data.description}</p>
-      <h2>Values</h2>
-      <p>This variable is coded, and will contain one of the following values.</p>
-      <table>
-        <thead
-          ><tr>
-            <td>Value</td>
-            <td>Description</td>
-          </tr></thead
-        >
-        <tbody>
-          {
-            post.data.concept.map((item) => (
+{
+  post.data.resourceType === 'CodeSystem' && (
+    <BaseLayout title={`Variable: ${post.data.title}`} description={post.data.description || ''}>
+      <DocsLayout showSideNav={false} showToc={true}>
+        <div class="usa-prose">
+          <h2>Variable: {post.data.name}</h2>
+          <p>{post.data.title}</p>
+          <h2>Description:</h2>
+          <p>{post.data.description}</p>
+          <h2>Values</h2>
+          <p>This variable is coded, and will contain one of the following values.</p>
+          <table>
+            <thead>
               <tr>
-                <td>{item.code}</td>
-                <td>{item.display}</td>
+                <th>Value</th>
+                <th>Description</th>
               </tr>
-            ))
-          }
-        </tbody>
-      </table>
-    </div>
-  </DocsLayout>
-</BaseLayout>
+            </thead>
+            <tbody>
+              {post.data.concept.map((item) => (
+                <tr>
+                  <td>{item.code}</td>
+                  <td>{item.display}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </DocsLayout>
+    </BaseLayout>
+  )
+}
+
+{
+  post.data.resourceType === 'StructureDefinition' && (
+    <BaseLayout
+      title={`Structure Definition: ${post.data.title || post.data.name}`}
+      description={post.data.description || ''}
+    >
+      <DocsLayout showSideNav={false} showToc={true}>
+        <div class="usa-prose">
+          <h2>Structure Definition: {post.data.name}</h2>
+          <p>{post.data.title}</p>
+          <p>
+            Base Definition: <a href={post.data.baseDefinition}>{post.data.baseDefinition}</a>
+          </p>
+          <p>Status: {post.data.status}</p>
+          <p>Kind: {post.data.kind}</p>
+          <p>Type: {post.data.type}</p>
+          {post.data.description && (
+            <>
+              <h2>Description:</h2>
+              <p>{post.data.description}</p>
+            </>
+          )}
+          <h2>Elements (Differential)</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Path</th>
+                <th>Cardinality</th>
+                <th>Type</th>
+                <th>Short</th>
+              </tr>
+            </thead>
+            <tbody>
+              {elements.map((el) => (
+                <tr style={isZeroedOut(el) ? { textDecoration: 'line-through', opacity: 0.6 } : {}}>
+                  <td style={{ paddingLeft: `${depth(el.path) * 1.25}rem` }}>
+                    <code>{el.path}</code>
+                  </td>
+                  <td>{cardinality(el)}</td>
+                  <td>{typeNames(el)}</td>
+                  <td>{el.short ?? ''}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </DocsLayout>
+    </BaseLayout>
+  )
+}

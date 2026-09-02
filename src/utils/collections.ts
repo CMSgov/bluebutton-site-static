@@ -39,7 +39,8 @@ export const structureDefinitionSchema = z.object({
       path: z.string(),
       short: z.string().optional(),
       definition: z.string().optional(),
-      max: z.string().optional(),
+      min: z.coerce.string().optional(),
+      max: z.coerce.string().optional(),
       fixedUri: z.url().optional(),
       type: z.array(z.object({
         code: z.string(),
