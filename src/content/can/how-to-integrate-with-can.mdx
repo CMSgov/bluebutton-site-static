@@ -90,9 +90,7 @@ To obtain an ID token:
 
 Your application sends a signed JWT to the Blue Button token endpoint to request an access token. This JWT must include the `cms_smart` extension in its claims.
 
-#### 
-
-#### **Build the JWT header**
+#### Build the JWT header
 
 Your JWT header must include the fields in the table below. See [JWT Header Elements](jwt-reference.mdx#jwt-header-elements) for full requirements.
 
@@ -102,7 +100,7 @@ Your JWT header must include the fields in the table below. See [JWT Header Elem
 | `kid` | A kid present in your JWK Set endpoint |
 | `typ` | JWT |
 
-#### **Build the JWT claims**
+#### Build the JWT claims
 
 Your JWT claims must include the fields below. See [JWT Claims](jwt-reference.mdx#jwt-claims) for full requirements.
 
@@ -117,7 +115,7 @@ Your JWT claims must include the fields below. See [JWT Claims](jwt-reference.md
 
 #### 
 
-#### **Add the `cms_smart` extension**
+#### Add the `cms_smart` extension
 
 The `cms_smart` extension is required. The Blue Button API does not accept the `client\_credentials` grant type unless this extension is present in the JWT claims.  
 Your `cms_smart` extension must include:
@@ -130,7 +128,7 @@ Your `cms_smart` extension must include:
 
 #### 
 
-#### **Sign the JWT**
+#### Sign the JWT
 
 Sign the JWT with the private key corresponding to the `kid` in your JWK Set. Use the algorithm you specified in the header (RS384 or ES384).
 
@@ -146,7 +144,7 @@ Send a token request to the Blue Button API token endpoint.
 
 The Blue Button API validates the JWT, verifies the enrollee's identity against Medicare records, and if a match is found, issues an access token scoped to that enrollee.
 
-#### **Access token properties:**
+#### Access token properties:
 
 | Property | Value |
 | :---- | :---- |
@@ -155,7 +153,7 @@ The Blue Button API validates the JWT, verifies the enrollee's identity against 
 
 #### 
 
-#### **AuditEvent scope behavior on CAN tokens**
+#### AuditEvent scope behavior on CAN tokens
 
 You do not need to explicitly request `patient/AuditEvent.rs` in your authorization request. The Blue Button API automatically includes it on your CAN token.  
 The following rules apply automatically when the Blue Button API issues a CAN token:
