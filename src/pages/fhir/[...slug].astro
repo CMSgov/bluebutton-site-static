@@ -25,7 +25,7 @@ export const getStaticPaths = Route.createGetStaticPaths(async () => {
 
 const { post } = Astro.props
 
-// Differential only lists elements this profile adds/overrides relative to its base
+// Helpers to simplify the rendering of StructureDefinition elements in a table. These are only used if the resourceType is StructureDefinition.
 const elements = post.data.resourceType === 'StructureDefinition' ? (post.data.differential?.element ?? []) : [];
 
 function cardinality(el: any) {
@@ -81,17 +81,21 @@ function depth(path: string) {
 )}
 
 {post.data.resourceType === 'StructureDefinition' && (
-  <BaseLayout title={`Structure Definition: ${post.data.title}`} description={post.data.description || ''}>
+  <BaseLayout title={`Structure Definition: ${post.data.title || post.data.name}`} description={post.data.description || ''}>
     <DocsLayout showSideNav={false} showToc={true}>
       <div class="usa-prose">
         <h2>Structure Definition: {post.data.name}</h2>
         <p>{post.data.title}</p>
-        <p>Base Definition: {post.data.baseDefinition}</p>
+        <p>Base Definition: <a href={post.data.baseDefinition}>{post.data.baseDefinition}</a></p>
         <p>Status: {post.data.status}</p>
         <p>Kind: {post.data.kind}</p>
         <p>Type: {post.data.type}</p>
-        <h2>Description:</h2>
-        <p>{post.data.description}</p>
+        {post.data.description && (
+          <>
+            <h2>Description:</h2>
+            <p>{post.data.description}</p>
+          </>
+        )}
         <h2>Elements (Differential)</h2>
         <table>
           <thead>
