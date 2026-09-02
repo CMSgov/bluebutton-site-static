@@ -42,7 +42,7 @@ The `cms_smart` extension is the technical mechanism that distinguishes a CAN re
 
 `cms_smart` is modeled on the `tefca_smart` extension from the [2024 Facilitated FHIR Implementation Guide](https://rce.sequoiaproject.org/wp-content/uploads/2024/07/SOP-Facilitated-FHIR-Implementation_508-1.pdf). It carries the CSP-issued ID token and the identity context that Blue Button needs to match the enrollee to a Medicare record.
 
-***Note:** Blue Button does not accept a bare `client_credentials` request without `cms_smart`. If `cms_smart` is absent, the request is rejected.*
+<Alert heading="Note" headingAs="h2" variant="info" noIcon>Blue Button does not accept a bare `client_credentials` request without `cms_smart`. If `cms_smart` is absent, the request is rejected.</Alert>
 
 ## Identity verification and patient matching
 
