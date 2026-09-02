@@ -83,30 +83,30 @@ The Blue Button API accepts ID tokens from these CSPs only:
 The example below shows a decoded JWT that includes the cms\_smart extension. Values shown are illustrative.
 
 ## Header:
-
-`{`  
-   `"alg": "RS384",`  
-   `"kid": "your-key-id",`  
-   `"typ": "JWT"`  
- `}`
-
+```
+{  
+   "alg": "RS384",  
+   "kid": "your-key-id",  
+   "typ": "JWT"  
+ }
+```
 ## Claims:
-
-`{`  
-   `"iss": "your-client-id",`  
-   `"sub": "your-client-id",`  
-   `"aud": "https://sandbox.bluebutton.cms.gov/v3/o/token",`  
-   `"jti": "a-unique-token-id",`  
-   `"exp": 1234567890,`  
-   `"extensions": {`  
-     `"cms_smart": {`  
-       `"version": "1",`  
-       `"purpose_of_use": "PATRQT",`  
-       `"id_token": "<CSP-issued IAL2 ID token>"`  
-     `}`  
-   `}`  
- `}`
-
+```
+{  
+   "iss": "your-client-id",  
+   "sub": "your-client-id",
+   "aud": "https://sandbox.bluebutton.cms.gov/v3/o/token",
+   "jti": "a-unique-token-id",
+   "exp": 1234567890,
+   "extensions": {  
+     "cms_smart": {
+       "version": "1",
+       "purpose_of_use": "PATRQT",
+       "id_token": "<CSP-issued IAL2 ID token>"
+     }  
+   }  
+ }
+```
 # Patient Matching Field Combinations
 
 The Blue Button API uses the following field combinations to match an enrollee to a Medicare record. Your ID token must include the fields for at least one combination.
