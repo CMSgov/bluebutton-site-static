@@ -9,13 +9,13 @@ sortOrder: 5
 
 An AuditEvent resource records a single successful patient identity match from the CAN flow interaction. It provides a transparent, auditable trail of when and by which organization a Medicare enrollee's identity was matched across the network.
 
-# What an AuditEvent includes
+## What an AuditEvent includes
 
 * **Who** accessed or received the data (at minimum, organization-level identification)  
 * **When** the access occurred (timestamp of the successful patient match)  
 * **What purpose of use** was declared at the time of the match
 
-# What an AuditEvent does not include
+## What an AuditEvent does not include
 
 | What is excluded | Explanation |
 | :---- | :---- |
@@ -24,9 +24,9 @@ An AuditEvent resource records a single successful patient identity match from t
 
 ***Note:** The AuditEvent endpoint returns records for all apps in the network that have successfully matched that enrollee, not only your app. For example, if an enrollee was previously connected to three other apps, the response will include audit records for all three apps plus the requesting app.*
 
-# Scopes
+## Scopes
 
-## Scope Behavior on CAN Tokens
+### Scope Behavior on CAN Tokens
 
 The Blue Button API processes AuditEvent scopes differently from other FHIR resource scopes. The following rules apply automatically when a CAN token is issued:
 
