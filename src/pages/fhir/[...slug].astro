@@ -17,109 +17,116 @@ export type Props = {
 export const getStaticPaths = Route.createGetStaticPaths(async () => {
   const posts = await getCollection('fhir')
   return posts.map((post) => ({
-      // This preserves the correct casing for these files. Forcing them to lowercase, alhough preferred, could cause 404 errors on Cloudfront/Akamai
-      params: { slug: `/${post.data.resourceType}/${post.data.id}` },
-      props: { post },
-    }))
+    // This preserves the correct casing for these files. Forcing them to lowercase, alhough preferred, could cause 404 errors on Cloudfront/Akamai
+    params: { slug: `/${post.data.resourceType}/${post.data.id}` },
+    props: { post },
+  }))
 })
 
 const { post } = Astro.props
 
 // Helpers to simplify the rendering of StructureDefinition elements in a table. These are only used if the resourceType is StructureDefinition.
-const elements = post.data.resourceType === 'StructureDefinition' ? (post.data.differential?.element ?? []) : [];
+const elements = post.data.resourceType === 'StructureDefinition' ? (post.data.differential?.element ?? []) : []
 
 function cardinality(el: any) {
-  return `${el.min ?? 0}..${el.max ?? '*'}`;
+  return `${el.min ?? 0}..${el.max ?? '*'}`
 }
 
 function isZeroedOut(el: any) {
-  return el.max === '0';
+  return el.max === '0'
 }
 
 function typeNames(el: any) {
-  if (!el.type) return '';
-  return el.type.map((t: any) => t.code).join(' | ');
+  if (!el.type) return ''
+  return el.type.map((t: any) => t.code).join(' | ')
 }
 
 // Elements are named like "Patient.name.given" — indent based on depth
 function depth(path: string) {
-  return path.split('.').length - 1;
+  return path.split('.').length - 1
 }
 ---
 
-{post.data.resourceType === 'CodeSystem' && (
-  <BaseLayout title={`Variable: ${post.data.title}`} description={post.data.description || ''}>
-    <DocsLayout showSideNav={false} showToc={true}>
-      <div class="usa-prose">
-        <h2>Variable: {post.data.name}</h2>
-        <p>{post.data.title}</p>
-        <h2>Description:</h2>
-        <p>{post.data.description}</p>
-        <h2>Values</h2>
-        <p>This variable is coded, and will contain one of the following values.</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Value</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              post.data.concept.map((item) => (
+{
+  post.data.resourceType === 'CodeSystem' && (
+    <BaseLayout title={`Variable: ${post.data.title}`} description={post.data.description || ''}>
+      <DocsLayout showSideNav={false} showToc={true}>
+        <div class="usa-prose">
+          <h2>Variable: {post.data.name}</h2>
+          <p>{post.data.title}</p>
+          <h2>Description:</h2>
+          <p>{post.data.description}</p>
+          <h2>Values</h2>
+          <p>This variable is coded, and will contain one of the following values.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Value</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {post.data.concept.map((item) => (
                 <tr>
                   <td>{item.code}</td>
                   <td>{item.display}</td>
                 </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
-    </DocsLayout>
-  </BaseLayout>
-)}
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </DocsLayout>
+    </BaseLayout>
+  )
+}
 
-{post.data.resourceType === 'StructureDefinition' && (
-  <BaseLayout title={`Structure Definition: ${post.data.title || post.data.name}`} description={post.data.description || ''}>
-    <DocsLayout showSideNav={false} showToc={true}>
-      <div class="usa-prose">
-        <h2>Structure Definition: {post.data.name}</h2>
-        <p>{post.data.title}</p>
-        <p>Base Definition: <a href={post.data.baseDefinition}>{post.data.baseDefinition}</a></p>
-        <p>Status: {post.data.status}</p>
-        <p>Kind: {post.data.kind}</p>
-        <p>Type: {post.data.type}</p>
-        {post.data.description && (
-          <>
-            <h2>Description:</h2>
-            <p>{post.data.description}</p>
-          </>
-        )}
-        <h2>Elements (Differential)</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Path</th>
-              <th>Cardinality</th>
-              <th>Type</th>
-              <th>Short</th>
-            </tr>
-          </thead>
-          <tbody>
-            {elements.map((el: any) => (
-              <tr style={isZeroedOut(el) ? { textDecoration: 'line-through', opacity: 0.6 } : {}}>
-                <td style={{ paddingLeft: `${depth(el.path) * 1.25}rem` }}>
-                  <code>{el.path}</code>
-                </td>
-                <td>{cardinality(el)}</td>
-                <td>{typeNames(el)}</td>
-                <td>{el.short ?? ''}</td>
+{
+  post.data.resourceType === 'StructureDefinition' && (
+    <BaseLayout
+      title={`Structure Definition: ${post.data.title || post.data.name}`}
+      description={post.data.description || ''}
+    >
+      <DocsLayout showSideNav={false} showToc={true}>
+        <div class="usa-prose">
+          <h2>Structure Definition: {post.data.name}</h2>
+          <p>{post.data.title}</p>
+          <p>
+            Base Definition: <a href={post.data.baseDefinition}>{post.data.baseDefinition}</a>
+          </p>
+          <p>Status: {post.data.status}</p>
+          <p>Kind: {post.data.kind}</p>
+          <p>Type: {post.data.type}</p>
+          {post.data.description && (
+            <>
+              <h2>Description:</h2>
+              <p>{post.data.description}</p>
+            </>
+          )}
+          <h2>Elements (Differential)</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Path</th>
+                <th>Cardinality</th>
+                <th>Type</th>
+                <th>Short</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </DocsLayout>
-  </BaseLayout>
-)}
+            </thead>
+            <tbody>
+              {elements.map((el: any) => (
+                <tr style={isZeroedOut(el) ? { textDecoration: 'line-through', opacity: 0.6 } : {}}>
+                  <td style={{ paddingLeft: `${depth(el.path) * 1.25}rem` }}>
+                    <code>{el.path}</code>
+                  </td>
+                  <td>{cardinality(el)}</td>
+                  <td>{typeNames(el)}</td>
+                  <td>{el.short ?? ''}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </DocsLayout>
+    </BaseLayout>
+  )
+}
