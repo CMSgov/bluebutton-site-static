@@ -13,7 +13,7 @@ jobs:
     steps:
     # Setup Node w/ version 20
     - name: Setup Node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: 20
 
