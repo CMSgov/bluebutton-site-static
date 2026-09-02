@@ -31,7 +31,7 @@ jobs:
 
     # Checkout BFD Repo (public repo)
     - name: Checkout BFD Repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         repository: CMSgov/beneficiary-fhir-data
         path: beneficiary-fhir-data
@@ -51,7 +51,7 @@ jobs:
 
     # Checkout BB Static Site Repo (public repo)
     - name: Checkout BB Static Site Repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         path: bluebutton-site-static
         ref: master
