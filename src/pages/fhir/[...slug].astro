@@ -7,6 +7,11 @@ import { getCollection } from 'astro:content'
 
 type FhirPost = CollectionEntry<'fhir'>
 
+type StructureDefinitionElement = Extract<
+  CollectionEntry<'fhir'>['data'],
+  { resourceType: 'StructureDefinition' }
+>['differential']['element'][number]
+
 export const Route = createRoute({
   routeId: '/fhir/[...slug]',
 })
@@ -28,17 +33,17 @@ const { post } = Astro.props
 // Helpers to simplify the rendering of StructureDefinition elements in a table. These are only used if the resourceType is StructureDefinition.
 const elements = post.data.resourceType === 'StructureDefinition' ? (post.data.differential?.element ?? []) : []
 
-function cardinality(el: any) {
-  return `${el.min ?? 0}..${el.max ?? '*'}`
+function cardinality({ min, max }: StructureDefinitionElement) {
+  return `${min ?? 0}..${max ?? '*'}`
 }
 
-function isZeroedOut(el: any) {
-  return el.max === '0'
+function isZeroedOut({ max }: StructureDefinitionElement) {
+  return max === '0'
 }
 
-function typeNames(el: any) {
-  if (!el.type) return ''
-  return el.type.map((t: any) => t.code).join(' | ')
+function typeNames({ type }: StructureDefinitionElement) {
+  if (!type) return ''
+  return type.map((t) => t.code).join(' | ')
 }
 
 // Elements are named like "Patient.name.given" — indent based on depth
@@ -113,7 +118,7 @@ function depth(path: string) {
               </tr>
             </thead>
             <tbody>
-              {elements.map((el: any) => (
+              {elements.map((el) => (
                 <tr style={isZeroedOut(el) ? { textDecoration: 'line-through', opacity: 0.6 } : {}}>
                   <td style={{ paddingLeft: `${depth(el.path) * 1.25}rem` }}>
                     <code>{el.path}</code>
