@@ -5,8 +5,6 @@ seo:
 sortOrder: 6
 ---
 
-# Revoking a token
-
 When a patient disconnects from your application, you must revoke their access token. Revoking a token invalidates the underlying authorization grant and all related access tokens for that patient. The patient must reauthorize your application to restore access.
 
 ***Before you revoke:** Revoking a token ends all data access for that patient. Your application must handle the resulting 401 Unauthorized response on any subsequent data request for that patient.*
@@ -22,16 +20,16 @@ When a patient disconnects from your application, you must revoke their access t
 
 Send a `POST` request to the `/revoke_token/` endpoint. Authenticate with HTTP Basic Authentication using your application's `client_id` and `client_secret`.
 
-#### **Required parameters**
+#### Required parameters
 
 | Parameter | Description |
 | :---- | :---- |
 | `token` | The access token or refresh token you want to revoke. |
 | `token_type_hint` | An indication of what kind of token is being revoked; must be set to `refresh_token` for refresh tokens; can optionally be set to `access_token` for access tokens |
 
-#### **cURL example**
+#### cURL example
 
-```
+```bash title="Terminal"
 curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/revoke_token/" \
   -u "<client_id>:<client_secret>" \
   -d "token=<access_token>"
@@ -39,7 +37,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/revoke_token/" \
 
 ### Response
 
-#### **Success**
+#### Success
 
 A successful revocation returns `200 OK` with an empty body. This prevents token-fishing attacks.
 
@@ -49,7 +47,7 @@ HTTP/1.1 200 OK
 
 ```
 
-#### **Error responses**
+#### Error responses
 
 | Status code | Meaning | What to do |
 | :---- | :---- | :---- |
@@ -66,7 +64,7 @@ Revoking a token expires the patient's entire authorization grant, not just the 
 
 This is different from an access token expiring naturally. A natural expiration allows your application to use a refresh token to obtain a new access token without patient interaction. Revocation removes that ability entirely.
 
-## Handling revocation in your application     
+## Handling revocation in your application
 
 When a patient disconnects from your application, do the following:
 
@@ -76,4 +74,4 @@ When a patient disconnects from your application, do the following:
 
 ## Testing revocation in the Sandbox
 
-Use the Sandbox to test your revocation flow before deploying to production. The [Sandbox test accounts](how-to-integrate-with-can.mdx#sandbox-test-accounts) are available for CAN flow testing.
+Use the Sandbox to test your revocation flow before deploying to production. The [Sandbox test accounts](/can/how-to-integrate-with-can/#sandbox-test-accounts) are available for CAN flow testing.

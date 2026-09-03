@@ -28,6 +28,7 @@ When CMS approves your listing, you will receive confirmation that you may proce
 ### Step 2: Register with the Blue Button team
 
 ***Warning:** Your application must complete both Step 1 and Step 2 before it can access CAN data.* 
+
 An application that has not completed both steps will:
 
 * not receive the `patient/AuditEvent.rs` scope on its tokens  
@@ -37,7 +38,7 @@ After CMS confirms your Medicare App Library listing, contact the Blue Button te
 
 Registration grants your application:
 
-* Access to the CAN `client\_credentials` authentication flow  
+* Access to the CAN `client_credentials` authentication flow  
 * The `patient/AuditEvent.rs` scope on its tokens  
 * Access to the AuditEvent endpoint
 
@@ -49,10 +50,10 @@ The Blue Button team completes registration on their side. You do not need to ma
 
 Use the following test accounts to validate the CAN token flow in the sandbox environment. The Blue Button API team recommends starting with **Damon Mychart**.
 
-#### CLEAR Test Patients
+#### CLEAR test patients
   - [CLEAR Synthetic Test Identities & Patients](https://docs.clearme.com/docs/synthetic-test-patients)  
 
-#### ID.me Test Patients
+#### ID.me test patients
 
 | Name | Email | Password |
 | :---- | :---- | :---- |
@@ -66,8 +67,6 @@ Use the following test accounts to validate the CAN token flow in the sandbox en
 | Homer J Simpson | hsimpson@gmail.com | IDme2026!! |
 
 ***Note:** These accounts are for Sandbox use only. Do not use them in the production environment.*
-
-### 
 
 ### Obtain a CSP-issued ID token
 
@@ -84,7 +83,7 @@ To obtain an ID token:
 
 1. Integrate with your chosen CSP (CLEAR or ID.me) using their developer documentation.  
 2. When an enrollee authenticates through your app, your CSP issues an ID token.  
-3. Confirm the token includes all required claims. See [ID Token JWT Claims](jwt-reference.mdx#id-token-jwt-claims) for the full list.
+3. Confirm the token includes all required claims. See [ID Token JWT Claims](/can/jwt-reference/#id-token-jwt-claims) for the full list.
 
 ### Construct the authentication JWT
 
@@ -92,7 +91,7 @@ Your application sends a signed JWT to the Blue Button token endpoint to request
 
 #### Build the JWT header
 
-Your JWT header must include the fields in the table below. See [JWT Header Elements](jwt-reference.mdx#jwt-header-elements) for full requirements.
+Your JWT header must include the fields in the table below. See [JWT Header Elements](/can/jwt-reference/#jwt-header-elements) for full requirements.
 
 | Field | Required value |
 | :---- | :---- |
@@ -102,7 +101,7 @@ Your JWT header must include the fields in the table below. See [JWT Header Elem
 
 #### Build the JWT claims
 
-Your JWT claims must include the fields below. See [JWT Claims](jwt-reference.mdx#jwt-claims) for full requirements.
+Your JWT claims must include the fields below. See [JWT Claims](/can/jwt-reference/#jwt-claims) for full requirements.
 
 | Field | Notes |
 | :---- | :---- |
@@ -113,11 +112,9 @@ Your JWT claims must include the fields below. See [JWT Claims](jwt-reference.md
 | `exp` | No more than 300 seconds from now |
 | `extensions` | Must include the `cms_smart` extension |
 
-#### 
-
 #### Add the `cms_smart` extension
 
-The `cms_smart` extension is required. The Blue Button API does not accept the `client\_credentials` grant type unless this extension is present in the JWT claims.  
+The `cms_smart` extension is required. The Blue Button API does not accept the `client_credentials` grant type unless this extension is present in the JWT claims.  
 Your `cms_smart` extension must include:
 
 | Field | Value |
@@ -125,8 +122,6 @@ Your `cms_smart` extension must include:
 | `version` | "1" (fixed string) |
 | `purpose_of_use` | "PATRQT" (fixed value) |
 | `id_token` | The CSP-issued IAL2 ID token you obtained in Step 3 |
-
-#### 
 
 #### Sign the JWT
 
@@ -144,14 +139,12 @@ Send a token request to the Blue Button API token endpoint.
 
 The Blue Button API validates the JWT, verifies the enrollee's identity against Medicare records, and if a match is found, issues an access token scoped to that enrollee.
 
-#### Access token properties:
+#### Access token properties
 
 | Property | Value |
 | :---- | :---- |
 | Validity | 30 minutes |
 | Refresh window | Up to 24 hours |
-
-#### 
 
 #### AuditEvent scope behavior on CAN tokens
 
@@ -160,9 +153,9 @@ The following rules apply automatically when the Blue Button API issues a CAN to
 
 1. **Auto-injection:** If `patient/AuditEvent.rs` is not included in the authorization request, the Blue Button API automatically adds it to the token.  
 2. **Scope upgrade:** If `patient/AuditEvent.r` or `patient/AuditEvent.s` is requested individually, the Blue Button API replaces it with `patient/AuditEvent.rs` on the issued token.  
-3. **v1/v2 error:** If you include any AuditEvent scope in a v1 or v2 authorization request, the Blue Button API returns an invalid\_scope error.
+3. **v1/v2 error:** If you include any AuditEvent scope in a v1 or v2 authorization request, the Blue Button API returns an `invalid_scope` error.
 
-Explicitly requesting `patient/AuditEvent.rs` is valid and does not cause an error.  
+Explicitly requesting `patient/AuditEvent.rs` is valid and does not cause an error.
 ***Note:** For the full scope specification, see [AuditEvent Endpoint Reference Supported scopes](audit-event.mdx#scope-behavior-on-can-tokens).*
 
 ### Call the FHIR endpoints
