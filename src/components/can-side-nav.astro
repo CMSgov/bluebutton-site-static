@@ -1,0 +1,46 @@
+---
+import { $path } from 'astro-typesafe-routes/path'
+
+import type { RoutesArray } from '#utils/types'
+
+import Link from './link.astro'
+import { getCollection } from 'astro:content'
+
+const canNavLinks = (await getCollection('canDocs'))
+  .sort((a, b) => a.data.sortOrder - b.data.sortOrder)
+  .map((doc) => ({
+    to: '/can/[...slug]',
+    params: {
+      slug: doc.id,
+    },
+    label: doc.data.title,
+  })) satisfies RoutesArray<'/can/[...slug]'>
+
+const isActive = (path: string) => path === Astro.url.pathname
+---
+
+<div
+  class="display-none position-sticky tablet:display-block tablet:grid-col-auto overflow-y-auto overflow-x-hidden padding-top-5 desktop:padding-top-7 padding-bottom-6 padding-right-205 padding-left-05 margin-left-neg-05"
+  style="top: 4rem; max-height: calc(100vh - 4.5rem);"
+>
+  <div class="width-card-lg">
+    <nav aria-label="Side navigation">
+      <ul class="usa-sidenav">
+        {
+          canNavLinks.map((link) => (
+            <li class="usa-sidenav__item">
+              <Link
+                to={link.to}
+                params={link.params}
+                class={isActive($path({ to: link.to, params: link.params })) ? 'usa-current' : null}
+                data-tealium="left-rail"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</div>

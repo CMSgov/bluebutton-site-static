@@ -1,18 +1,19 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import Link from '#components/link.astro'
+import OverflowTable from '#components/overflow-table.astro'
 import Alert from '#components/alert.astro'
 import { createRoute } from 'astro-typesafe-routes/create-route'
 import { getCollection, render } from 'astro:content'
 import BaseLayout from '#layouts/base-layout.astro'
-import DocsLayout from '#layouts/docs-layout.astro'
+import CanLayout from '#layouts/can-layout.astro'
 
 export const Route = createRoute({
   routeId: '/can/[...slug]',
 })
 
 export type Props = {
-  post: CollectionEntry<'dataDocs'>
+  post: CollectionEntry<'canDocs'>
 }
 
 export const getStaticPaths = Route.createGetStaticPaths<Props>(async () => {
@@ -28,7 +29,7 @@ const { Content, headings } = await render(post)
 ---
 
 <BaseLayout title={post.data.seo.title || post.data.title} description={post.data.seo.description || ''}>
-  <DocsLayout headings={headings}>
+  <CanLayout headings={headings}>
     <div class="margin-bottom-4">
       <h1>{post.data.title}</h1>
     </div>
@@ -38,8 +39,9 @@ const { Content, headings } = await render(post)
           a: Link,
           Link,
           Alert,
+          table: OverflowTable,
         }}
       />
     </div>
-  </DocsLayout>
+  </CanLayout>
 </BaseLayout>
