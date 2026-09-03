@@ -1,0 +1,242 @@
+---
+title: 'Working with claims'
+seo: 
+  description: "Provide explanation to developers about claims data content and what adjudication means"
+sortOrder: 4
+---
+## What’s in an EOB 
+
+Each EOB represents one claim and contains:
+
+* **Who**: The patient, provider, and care team  
+* **What:** Diagnoses, procedures, and items/services provided  
+* **When:** The service period (billable period)  
+* **How much:** What was billed, what Medicare allowed, and what was paid  
+* **Type:** Whether it's inpatient, outpatient, carrier, pharmacy, etc.
+
+## Anatomy of an EOB response
+
+When you request /ExplanationOfBenefit, you get a Bundle of claims:
+
+```
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 89,
+  "link": [
+    { "relation": "next", "url": "...?startIndex=10&_count=10" }
+  ],
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "carrier--10045426206",
+        "type": { ... },
+        "patient": { "reference": "Patient/-20140000000001" },
+        "billablePeriod": {
+          "start": "2025-01-15",
+          "end": "2025-01-15"
+        },
+        "provider": { "reference": "#provider-org" },
+        "contained": [ ... ],
+        "careTeam": [ ... ],
+        "diagnosis": [ ... ],
+        "item": [ ... ],
+        "payment": { ... },
+        "benefitBalance": [ ... ]
+      }
+    }
+  ]
+}
+```
+
+The response is paginated: 10 claims per page by default. See Handling Pagination (LINK: TBD).
+
+## Reading line items 
+
+Each claim has an item array: one entry per service or product. A doctor visit might have one item; a hospital stay could have dozens.
+
+```
+{
+  "item": [
+    {
+      "sequence": 1,
+      "diagnosisSequence": [1],
+      "careTeamSequence": [3],
+      "category": {
+        "coding": [
+          {
+            "code": "1",
+            "display": "Medical care",
+            "system": "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd"
+          }
+        ]
+      },
+      "servicedPeriod": {
+        "start": "2025-01-15",
+        "end": "2025-01-15"
+      },
+      "adjudication": [ ... ]
+    }
+  ]
+}
+```
+
+### Linking items to diagnoses and providers
+
+Items reference other parts of the EOB using sequence numbers:
+
+* item.diagnosisSequence: \[1\] links to diagnosis\[\].sequence: 1  
+* item.careTeamSequence: \[3\] links to careTeam\[\].sequence: 3
+
+```
+{
+  "diagnosis": [
+    {
+      "sequence": 1,
+      "diagnosisCodeableConcept": {
+        "coding": [
+          {
+            "code": "Z0000",
+            "display": "ENCNTR FOR GENERAL ADULT MEDICAL EXAM W/O ABNORMAL FINDINGS"
+          }
+        ]
+      }
+    }
+  ],
+  "careTeam": [
+    {
+      "sequence": 3,
+      "provider": {
+        "identifier": {
+          "value": "1234567890"
+        }
+      },
+      "role": {
+        "coding": [
+          {
+            "code": "performing",
+            "display": "Performing provider"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+This tells you: item 1 was for diagnosis Z0000 (general medical exam), performed by provider 1234567890\.
+
+## Understanding adjudication
+
+Every line item has adjudication data showing the financial breakdown of the claim:
+
+```
+{
+  "adjudication": [
+    {
+      "category": {
+        "coding": [
+          {
+            "code": "https://bluebutton.cms.gov/resources/variables/line_sbmtd_chrg_amt",
+            "display": "Line Submitted Charge Amount"
+          }
+        ]
+      },
+      "amount": {
+        "value": 150.00,
+        "currency": "USD"
+      }
+    },
+    {
+      "category": {
+        "coding": [
+          {
+            "code": "https://bluebutton.cms.gov/resources/variables/line_alowd_chrg_amt",
+            "display": "Line Allowed Charge Amount"
+          }
+        ]
+      },
+      "amount": {
+        "value": 120.00,
+        "currency": "USD"
+      }
+    },
+    {
+      "category": {
+        "coding": [
+          {
+            "code": "https://bluebutton.cms.gov/resources/variables/line_bene_pmt_amt",
+            "display": "Line Payment Amount to Beneficiary"
+          }
+        ]
+      },
+      "amount": {
+        "value": 96.00,
+        "currency": "USD"
+      }
+    }
+  ]
+}
+```
+
+Key amounts to look for:
+
+| Adjudication code | What it means |
+| :---- | :---- |
+| `line_sbmtd_chrg_amt` | What the provider billed |
+| `line_alowd_chrg_amt` | What Medicare approved |
+| `line_bene_pmt_amt` | What was paid to the beneficiary |
+| `line_nch_pmt_amt` | What Medicare paid the provider |
+| `line_coinsrnc_amt` | Beneficiary's coinsurance |
+
+Look up all adjudication codes in the Code Systems (LINK: TBD).
+
+## Claim types 
+
+Every EOB has a type field that tells you what kind of claim it is:
+
+| Type | Description | Typical content |
+| :---- | :---- | :---- |
+| `CARRIER` | Physician/supplier | Office visits, lab work, outpatient procedures |
+| `INPATIENT` | Hospital inpatient | Hospital stays, surgeries |
+| `OUTPATIENT` | Hospital outpatient | ER visits, same-day procedures |
+| `PDE` | Prescription Drug Event | Pharmacy fills |
+| `DME` | Durable Medical Equipment | Wheelchairs, oxygen, prosthetics |
+| `HHA` | Home Health Agency | Home health visits |
+| `HOSPICE` | Hospice | End-of-life care |
+| `SNF` | Skilled Nursing Facility | Nursing home care |
+
+Check the eob-type coding system in EOB.type for these values:
+
+```
+{
+  "type": {
+    "coding": [
+      {
+        "code": "CARRIER",
+        "system": "https://bluebutton.cms.gov/resources/codesystem/eob-type"
+      }
+    ]
+  }
+}
+```
+
+Different claim types have different fields populated. Carrier claims emphasize line items and provider info. Inpatient claims have DRG codes and length-of-stay data. PDE claims have drug codes and pharmacy info.
+
+## Common fields you’ll actually see 
+
+Here are the fields most apps care about:
+
+| Field | Path | What it tells you |
+| :---- | :---- | :---- |
+| Claim type | `type.coding[system=eob-type].code` | What kind of claim |
+| Service date | `billablePeriod.start` | When the service happened |
+| Provider | `careTeam[].provider` | Who provided the service |
+| Diagnosis | `diagnosis[].diagnosisCodeableConcept` | ICD-10 diagnosis codes |
+| Amount billed | `item[].adjudication[submitted].amount` | What was charged |
+| Amount paid | `item[].adjudication[benefit].amount` | What Medicare paid |
+| Drug code | `item[].productOrService` (PDE claims) | NDC code for prescriptions |
+| Facility | `facility` | Where the service was provided |
+
+For the complete field reference, see the ExplanationOfBenefit endpoint page (LINK: TBD).
