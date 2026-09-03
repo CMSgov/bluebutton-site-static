@@ -51,6 +51,21 @@ const dataDocsCollection = defineCollection({
   }),
 })
 
+const canDocsCollection = defineCollection({
+  loader: glob({
+    pattern: '**\/[^_]*.(md|mdx)',
+    base: './src/content/can',
+  }),
+  schema: z.object({
+    title: z.string(),
+    seo: z.object({
+      title: z.string(),
+      description: z.string(),
+    }).partial(),
+    sortOrder: z.number(),
+  }),
+})
+
 const resourcesCollection = defineCollection({
   loader: glob({
     pattern: '**\/[^_]*.(md|mdx)',
@@ -159,6 +174,7 @@ export const collections = {
   resources: resourcesCollection,
   apiDocs: apiDocsCollection,
   dataDocs: dataDocsCollection,
+  canDocs: canDocsCollection,
   codebooks: codeBooksCollection,
   csvVariables: csvVariablesCollection,
   terms: termsCollection,

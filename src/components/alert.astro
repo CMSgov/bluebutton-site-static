@@ -50,7 +50,7 @@ type Props = (
   VariantProps<typeof infoBox> &
   HTMLAttributes<'div'>
 
-const { heading, class: className, headingAs = 'p', noIcon, role = 'alert', size, variant, ...props } = Astro.props
+const { heading, class: className, headingAs = 'p', noIcon, role = 'region', size, variant, ...props } = Astro.props
 
 const Element = headingAs
 const uniqueId = 'alert-' + Math.random().toString(36).substring(6)
