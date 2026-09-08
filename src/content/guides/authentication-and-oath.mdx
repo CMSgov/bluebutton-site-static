@@ -55,10 +55,10 @@ You can use a refresh token at any time in your application’s workflow, includ
 
 To retrieve a new refresh token, POST to the Blue Button API /token endpoint with the following parameters:
 
-* client\_id  
-* client\_secret  
-* grant\_type: refresh\_token  
-* refresh\_token
+* `client\_id`  
+* `client\_secret`  
+* `grant\_type: refresh\_token`  
+* `refresh\_token`
 
 #### **cURL command**
 
@@ -91,9 +91,9 @@ Developers can revoke an enrollee’s previously granted access via access token
 
 To revoke an access token, POST to the Blue Button API /revoke endpoint with the following parameters:
 
-* client\_id  
-* client\_secret  
-* token
+* `client\_id`  
+* `client\_secret`  
+* `token`
 
 #### **cURL command**
 
@@ -122,9 +122,9 @@ For testing in our sandbox, use the /expire\_authenticated\_user endpoint. This 
 
 POST to the Blue Button API /expire\_authenticated\_user endpoint with the following parameters:
 
-* client\_id  
-* client\_secret  
-* patient ID (patient ID “-20140000000001” is used in the cURL example below)
+* `client\_id`  
+* `client\_secret`  
+* `patient ID` (patient ID “-20140000000001” is used in the cURL example below)
 
 #### **cURL command**
 
@@ -175,25 +175,23 @@ Here's how it works:
 2. Compute the challenge: code\_challenge \= BASE64URL(SHA256(code\_verifier))  
 3. Send code\_challenge and code\_challenge\_method=S256 in the /authorize request  
 4. Send the original code\_verifier when exchanging the code for a token
-## Scopes (EXISTING UPDATED CONTENT)
-## Scopes (EXISTING UPDATED CONTENT) ✅
-
+## Scopes 
 Scopes define the API endpoints your application is allowed to access. The Blue Button API uses [HL7 FHIR Scopes](https://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html) to manage access to Medicare enrollee data. Scopes are required on the auth request. If they are not requested, then an error will be returned. 
 
 | Scope | Permission |
 | :---- | :---- |
-| patient/Patient.rs or patient/Patient.read patient/Patient.rs | Read and search my patient's general and demographic information |
-| patient/Patient.s | Search my general patient and demographic information. |
-| patient/Patient.r | Read my general patient and demographic information. |
-| patient/Coverage.rs or patient/Coverage.read | Read and search my Medicare and supplemental coverage information |
-| patient/Coverage.s | Search my Medicare and supplemental coverage information. |
-| patient/Coverage.r | Read my Medicare and supplemental coverage information. |
-| patient/ExplanationOfBenefit.rs or patient/ExplanationOfBenefit.read | Read and search my Medicare claim information |
-| patient/ExplanationOfBenefit.s | Search my Medicare claim information. |
-| patient/ExplanationOfBenefit.r | Read my Medicare claim information. |
-| launch/patient | Patient launch context |
-| openid | Retrieve information about the current logged-in user |
-| profile | Access the /UserInfo endpoint ([OpenID Connect](https://openid.net/developers/how-connect-works/)) |
+| `patient/Patient.rs` or `patient/Patient.read`| Read and search my patient's general and demographic information |
+| `patient/Patient.s` | Search my general patient and demographic information. |
+| `patient/Patient.r` | Read my general patient and demographic information. |
+| `patient/Coverage.rs` or `patient/Coverage.read` | Read and search my Medicare and supplemental coverage information |
+| `patient/Coverage.s` | Search my Medicare and supplemental coverage information. |
+| `patient/Coverage.r` | Read my Medicare and supplemental coverage information. |
+| `patient/ExplanationOfBenefit.rs` or `patient/ExplanationOfBenefit.read` | Read and search my Medicare claim information |
+| `patient/ExplanationOfBenefit.s` | Search my Medicare claim information. |
+| `patient/ExplanationOfBenefit.r` | Read my Medicare claim information. |
+| `launch/patient` | Patient launch context |
+| `openid` | Retrieve information about the current logged-in user |
+| `profile` | Access the /UserInfo endpoint ([OpenID Connect](https://openid.net/developers/how-connect-works/)) |
 ## Testing token expiration
 In the sandbox, you can force-expire a user's access grant for testing:
 
