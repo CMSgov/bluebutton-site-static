@@ -1,0 +1,67 @@
+---
+title: 'Code systems'
+seo: 
+  description: "Overview of standard code systems"
+sortOrder: 2
+---
+Code systems define the valid values for coded fields in Blue Button responses. When you see a `coding` object in a response, the `system` URI tells you which code system to look up.
+
+## What is a code system?
+
+In FHIR, a code system is a defined set of codes with meanings. For example, the eob-type code system defines codes like CARRIER, INPATIENT, and PDE that identify claim types. When you see:
+
+```
+{
+  "system": "https://bluebutton.cms.gov/fhir/CodeSystem/EOB-TYPE",
+  "code": "CARRIER"
+}
+```
+
+...you know this is a carrier (physician/supplier) claim.
+
+## How coding systems work
+
+FHIR uses coding systems to represent standardized values. A coded value has three parts:
+
+```
+{
+  "coding": [
+    {
+      "system": "https://bluebutton.cms.gov/resources/codesystem/eob-type",
+      "code": "CARRIER",
+      "display": "Carrier (professional) claim"
+    }
+  ]
+}
+```
+
+* **system** A URI identifying which coding system the code belongs to  
+* **code** The coded value  
+* **display** Human-readable description
+
+Blue Button uses coding systems from several sources:
+
+| Source | Examples |
+| :---- | :---- |
+| CMS/Blue Button | EOB type (LINK: TBD), adjudication codes (LINK: TBD), claim variables |
+| Industry standard | [ICD-10](https://www.cms.gov/Medicare/Coding/ICD10), [HCPCS](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo), [NDC](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory)
+
+For a complete listing: [Blue Button Code System Listing](https://bluebutton.cms.gov/assets/files/bluebutton_system_listing.csv) 
+## Industry-standard code systems
+
+The Blue Button API supplies codified data using several terminology and coding systems:
+
+| Code System | Used for |
+| :---- | :---- |
+| [ICD-10](https://www.cms.gov/Medicare/Coding/ICD10)  | Diagnosis codes |
+| [HCPCS](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo)  | Procedure and service codes |
+| [CPT](https://www.ama-assn.org/amaone/cpt-current-procedural-terminology)  | Procedure codes (subset of HCPCS) |
+| [NDC](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory)  | Drug codes (Part D claims) |
+| [NPI](https://npiregistry.cms.hhs.gov/)  | Provider identification |
+| [CMS claim type](https://bluebutton.cms.gov/resources/codesystem/eob-type/)  | Claim/Explanation of benefit type (e.g., CARRIER, INPATIENT, PDE) |
+
+## Using Code Systems with the Blue Button API
+
+Find details about coding systems in the [Blue Button Code System Listing](https://bluebutton.cms.gov/assets/files/bluebutton_system_listing.csv).
+
+The Blue Button API also provides data in [FHIR Extensions](http://www.hl7.org/fhir/extensibility.html) . FHIR extensions are custom data elements that are not found in the FHIR standard. Check the [data dictionary](LINK TBD) for further details.  
