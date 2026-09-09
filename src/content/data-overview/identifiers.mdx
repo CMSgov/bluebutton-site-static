@@ -1,0 +1,34 @@
+---
+title: 'Identifiers'
+seo: 
+  description: "Overview of identifiers"
+sortOrder: 3
+---
+Identifiers are business-level IDs that appear in Blue Button responses. Identifiers are different from FHIR resource IDs. FHIR IDs are internal system IDs. In contrast, identifiers show real-world numbers, like the Medicare Beneficiary ID found on a Medicare card.
+
+## How identifiers work
+
+An identifier in FHIR includes a system (which identifier scheme it belongs to) and a value:
+
+```
+{
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/sid/us-mbi",
+      "value": "1S00-E00-AA00"
+    }
+  ]
+}
+```
+
+The `system` URI tells you what kind of identifier you're looking at. The `value` is the actual ID.
+
+Read more about identifiers [from HL7](https://hl7.org/fhir/R4/datatypes.html#Identifier).
+
+## Medicare Beneficiary ID (MBI) 
+
+The MBI is the primary identifier for Medicare enrollees: it's the number on their Medicare card. In Blue Button responses, the MBI appears in the Patient resource's `identifier` array with the system `http://hl7.org/fhir/sid/us-mbi`.
+
+A patient may have multiple MBIs (current and historic). Use the `identifier-currency` extension to determine which is current. See [fetching patient data](#guides/fetching-patient-data.mdx) for details and code examples.
+
+MBI data is sourced from [CMS's Integrated Data Repository](https://www.cms.gov/about-cms/information-systems/idr) (IDR). 
