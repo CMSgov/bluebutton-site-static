@@ -1,5 +1,5 @@
 ---
-title: 'Building a consent flow'
+title: 'Authentication and OAth'
 seo: 
   description: "Explain the Blue Button authorization flow to developers"
 sortOrder: 2
@@ -14,7 +14,18 @@ Blue Button uses [OAuth 2.0](https://www.oauth.com/) with [Proof Key for Code Ex
 5. You use the access token to call the API
 
 To learn more about setting up your sandbox application, see [Quickstart](src/content/quickstart/Quickstart.mdx).
-## Get an authorization code (EXISTING UPDATED CONTENT) 
+## Get an authorization code
+To let a user authorize your app, send them to the Blue Button API /authorize endpoint with the right parameters.
+
+Example call:
+
+```
+https://sandbox.bluebutton.cms.gov/v3/o/authorize/?client_id=swBu7LWsCnIRfu530qnfPw1y5vMmER3lAM2L6rq2&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftestclient%2Fcallback
+&response_type=code&scope=openid%20profile%20patient%2FPatient.rs%20patient%2FCoverage.rs%20patient%2FExplanationOfBenefit.rs&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
+```
+
+
+Note: The authorization in the example is started by an HTTP GET operation. For [SMART App Launch](https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html) compliance, POST-style authorization is also supported.
 ### Authorization parameters
 
 | Parameter | Required | Description |
@@ -46,7 +57,59 @@ https://sandbox.bluebutton.cms.gov/v2/o/authorize/?lang=es
 * If the `lang` parameter is omitted or is set to a value other than `en` or `es`, the API server will next check the `Accept-Language` HTTP header in the `/authorize` request.  
   * If the language settings in a user’s web browser list Spanish higher in the preference list than English, the browser will automatically include the correct `Accept-Language` value to request the Spanish-language screens.  
 * If neither English nor Spanish is requested via the `lang` parameter or `Accept-Language` header, the API server will default to the English version of the authorization screens.
-## Exchange the code for a token (EXISTING UPDATED CONTENT)
+## Exchange the code for a token
+If the user authorizes your application, the Blue Button API redirects them back to the redirect\_uri you registered. It appends an authorization code and the state parameter sent by your application to the URL.
+
+For example, if the Redirect URI is `http://localhost:8080/testclient/callback`, the Blue Button API will redirect with this request:
+
+```
+GET http://localhost:8080/testclient/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2\&state=8e896a59f0744a8e93bf2f1f13230
+```
+
+Your application should verify that the state parameter returned in the redirect URI matches the state parameter you sent in the authorization request [to prevent CSRF](https://www.rfc-editor.org/info/rfc6749/#section-10.12).
+
+Your application can now exchange the code provided in the redirected request for an access token.
+
+To retrieve an access token, POST to the Blue Button /token endpoint providing the code with the following parameters:
+
+* client\_id  
+* client\_secret  
+* redirect\_uri  
+* grant\_type: authorization\_code  
+* code  
+* Code\_verifier
+
+**cURL command**
+
+```
+curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/token/"\
+ -u "<client_id>:<client_secret>"\
+ -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftestclient%2Fcallback
+&code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
+```
+
+#### **Token response**
+
+```
+{
+ "access_token":"oQlduHNr09GKCU506GOgp8OarrAy2q",
+ "expires_in":16768.523842,
+ "token_type":"Bearer",
+ "scope":"profile patient/Patient.rspatient/ExplanationOfBenefit.rs patient/Coverage.rs",
+"refresh_token":"wDimPGoA8vwXP51kie71vpsy9l17HN",
+ "access_grant_expiration":"2025-09-05 19:17:53Z"
+}
+```
+
+&nbsp;
+
+Applications in the “1 hour” access category do not receive a refresh token in the Blue Button token response.
+
+For applications in the “1 hour” or “13 months” access expiration groups, the response shows the user's access\_grant\_expiration date.
+
+See which [access category](guides/fetching-patient-data.mdx#duration-of-access) best fits your app.
+
+
 ## Exchange Refresh Token for New Access Token
 
 Access tokens expire after 1 hour. You can’t use an expired access token to access data. To access data after an access token expires, request a new access token using a refresh token. Refresh tokens are available to applications in the “13 months” and “Research” access duration categories.
@@ -112,15 +175,15 @@ Valid requests to the /revoke endpoint will always return a 200 response, regard
 
 ## Expire authenticated user for sandbox testing
 
-For testing in our sandbox, use the /expire\_authenticated\_user endpoint. This will expire the authorization given by a patient user.
+For testing in our sandbox, use the `/expire\_authenticated\_user` endpoint. This will expire the authorization given by a patient user.
 
-/expire\_authenticated\_user can be used to test your code for the following conditions that produce the same error responses via the API:
+`/expire\_authenticated\_user` can be used to test your code for the following conditions that produce the same error responses via the API:
 
 * When an access token expires, without needing to wait for the expiration in 1 hour  
 * When a patient revokes access to your application  
 * When access granted to a patient’s data has expired
 
-POST to the Blue Button API /expire\_authenticated\_user endpoint with the following parameters:
+POST to the Blue Button API `/expire\_authenticated\_user` endpoint with the following parameters:
 
 * `client\_id`  
 * `client\_secret`  
@@ -256,6 +319,6 @@ Response (unsuccessful with 400 status code):
 }
 ```
 
-To re-authorize, follow the same flow described under Get an authorization code.
+To re-authorize, follow the same flow described under [Get an authorization code](#guides/authentication-and-oath.mdx#get-an-authorization-code-existing-updated-content).
 
  
