@@ -115,9 +115,12 @@ https://oauth.pstmn.io/v1/browser-callback
 
 You can also call the Blue Button sandbox with [cURL](https://curl.se/) , a popular command-line HTTP client.
 
-- First, obtain an access token. To test using your sandbox application, you can use [Postman](https://bluebutton.cms.gov/api-documentation/developer-sandbox/#postman) to retrieve a token with your client ID and secret, as shown in the previous section.
-- A new page will open. Copy the access token from the JSON shown under **Step 1: Sample Authorization** for use in your cURL command.  
-- Once you have a token, you can make API calls with cURL. For example, the command below fetches Explanation of Benefits information for the authenticated patient. Remember to replace `YOUR ACCESS TOKEN` with your actual token:
+First, obtain an access token. To test using your sandbox application, you can use [Postman](https://bluebutton.cms.gov/api-documentation/developer-sandbox/#postman) to retrieve a token with your client ID and secret, as shown in the previous section.
+
+Alternately, you can get a sample authorization token from the Blue Button Test Client. To do this, follow steps 1-6 in [Try out the API without coding](https://github.com/CMSgov/bluebutton-site-static/edit/v3/src/content/quickstart/Quickstart.mdx) section . After completing step 6, a new page will open.&nbsp; 
+1. Copy the access token from the JSON shown under **Step 1: Sample Authorization** for use in your cURL command.  
+![Step 1: Sample Authorization](#assets/images/bb-postman-09.png)
+2. Once you have a token, you can make API calls with cURL. For example, the command below fetches Explanation of Benefits information for the authenticated patient. Remember to replace `YOUR ACCESS TOKEN` with your actual token:
 
 ```
 curl --location "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit/" --header "Accept: application/json" --header "Authorization: Bearer <YOUR ACCESS TOKEN>"
