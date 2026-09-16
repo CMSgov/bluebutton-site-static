@@ -1,0 +1,137 @@
+---
+title: 'Handling pagination'
+seo: 
+  description: "How developers can work with pagination"
+sortOrder: 5
+---
+  A single patient can have hundreds of claims. Blue Button paginates search results: 10 per page by default, 50 max. Here's how to work through them.
+
+## How pagination works 
+
+Search responses include a link array with URLs for navigating the result set:
+
+```
+{
+  "resourceType": "Bundle",
+  "total": 89,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit?startIndex=0&_count=10&patient=..."
+    },
+    {
+      "relation": "first",
+      "url": "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit?startIndex=0&_count=10&patient=..."
+    },
+    {
+      "relation": "next",
+      "url": "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit?startIndex=10&_count=10&patient=..."
+    },
+  ],
+  "entry": [ ... ]
+}
+```
+
+| Link relation | Description |
+| :---- | :---- |
+| `self` | The current page |
+| `first` | First page of results |
+| `next` | Next page (absent on the last page) |
+| `previous` | Previous page (absent on the first page) |
+
+### Follow the next link 
+
+To get the next page, fetch the URL from the next link:
+
+```
+curl "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit?_offset=10&_count=10&patient=..." \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
+
+WARNING
+
+Always use the full URL from Bundle.link. Don't construct pagination URLs yourself. The server may include parameters you're not aware of.
+
+## Control page size 
+
+Use \_count to control how many resources come back per page:
+
+```
+# Get 50 claims per page (maximum)
+curl "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit?_count=50" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
+
+| Parameter | Default | Maximum |
+| :---- | :---- | :---- |
+| `_count` | 10 | 50 |
+
+Larger pages mean fewer requests but bigger responses. If you're pulling all claims for a patient, `_count=50` reduces the number of round trips.
+
+## Build a complete dataset 
+
+To fetch all claims for a patient, follow the links below until there are no more. The following is some sample code that will help you get started:
+
+```
+import requests
+
+def fetch_all_claims(base_url, access_token):
+    claims = []
+    url = f"{base_url}/ExplanationOfBenefit?_count=50"
+    headers = {
+        "Accept": "application/json",
+        "Authorization": f"Bearer {access_token}"
+    }
+
+    while url:
+        response = requests.get(url, headers=headers)
+        bundle = response.json()
+
+        for entry in bundle.get("entry", []):
+            claims.append(entry["resource"])
+
+        # Find the next link, if any
+        url = None
+        for link in bundle.get("link", []):
+            if link["relation"] == "next":
+                url = link["url"]
+                break
+
+    return claims
+```
+
+For actual production usage, we recommend adding more robust error handling for cases such as disconnections and mid-loop token expirations. Also note that as claims progress through adjudication, they will appear several times, so deduplication is necessary.
+
+## Handle data changes during pagination 
+
+Claims data can be updated while you're paginating through results. For example, a claim on page 5 might have changed since you fetched page 1\.
+
+Strategies for handling this:
+
+* Accept eventual consistency. For most apps, small inconsistencies during pagination are fine. The next full sync will catch up.  
+* Use `\_lastUpdated` to detect changes. After your initial full fetch, use `\_lastUpdated=gtYOUR\_LAST\_SYNC\_DATE` in subsequent requests to get only what changed. See [Going to Production](https://bb-vitepress.jbhutch01.workers.dev/guides/going-to-production.html#optimize-your-queries).  
+* Compare totals. If Bundle.total changes between pages, data has shifted. You may want to restart.
+
+TIP
+
+For most apps, the simplest approach is: do a full fetch on first load, then use \_lastUpdated for incremental updates going forward.
+
+### **Handle data changes during pagination**
+
+Claims data can be updated while you're paginating through results. Because pagination is offset-based, a claim added or removed mid-walk shifts every record after it so you can skip a claim entirely or read the same one twice.
+
+Some strategies for handling this:
+
+* **Bound the window before you start.** Capture a timestamp, then cap every page with `_lastUpdated=le{timestamp}`. The result set stays stable no matter what changes upstream, and you resume the next sync with `gt{timestamp}`.  
+* **Use `_lastUpdated` to detect changes.** After your initial full fetch, use `_lastUpdated=gtYOUR_LAST_SYNC_DATE` in subsequent requests to get only what changed. The operator prefix is required: `lt`, `le`, `gt`, or `ge`. See \[Going to Production\](LINK: TBD).  
+* **Accept eventual consistency.** For apps that display claims rather than reconcile them, an occasional skipped or duplicated record is fine. The next full sync will catch up.
+
+**NOTE**
+
+`_lastUpdated` returns added and modified claims only: it can't tell you a claim was removed, so schedule a periodic full resync. On v3, pass `_source` or `_tag` alongside it; otherwise Blue Button applies `_source=NCH` and your sync will miss every update to partially adjudicated claims.
+
+**TIP**
+
+For most apps, the simplest approach is: do a full fetch on first load bounded with `le{timestamp}`, then use `_lastUpdated` for incremental updates going forward, with a periodic full resync to catch removals.

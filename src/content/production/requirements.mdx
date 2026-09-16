@@ -1,0 +1,74 @@
+---
+title: "Production Requirements"
+seo: 
+  description: "Steps to prepare your app for Blue Button API production access: sandbox testing, privacy policy, security requirements, branding rules, and CARIN accreditation."
+---
+
+We're pleased that you're considering applying for production access to the Blue Button API. Our production access process and [Terms of Service](/terms/) are designed to ensure that Medicare enrollee data is kept secure and that enrollees are given the information to make informed decisions when sharing their healthcare data with third-party applications.  
+
+## Read the Blue Button terms of service
+The [Blue Button API Terms of Service](/terms/) include all official policies governing the API's production use. It is essential that you read and understand the Terms of Service before developing your application and applying for production access.
+
+1. ## Complete Sandbox testing (
+
+   See our [Optimizing your App for Production](/api-documentation/optimizing-your-app.mdx) for tips to ensure your app is ready for production approval.  
+     
+   <Link variant="primary" href="https://sandbox.bluebutton.cms.gov">Visit the Sandbox</Link>
+   
+
+   ### Determine required scope requests
+
+   The permissions screen for enrollees is dynamic and depends on the scopes your app requires. Read more about [Blue Button’s Scopes](/api-documentation/authorization.mdx#scopes).
+
+2. ## Draft your privacy policy and terms of service 
+
+   All organizations applying for production access must submit their privacy policy and terms of service.   
+     
+   Not sure where to start with writing your [privacy policy](how-to-write-privacy-policy.mdx) or [terms of service](how-to-write-terms.mdx)? We have a page dedicated to each to help you be successful from the start.  
+     
+   **WARNING** 
+   You must submit any changes to your privacy policy or terms of service to [BlueButtonAPI@cms.hhs.gov](mailto:BlueButtonAPI@cms.hhs.gov) for review after production approval, before rolling them out. The Blue Button team reviews within 5 business days.
+
+3. ##  Meet security requirements 
+
+* Comply with all applicable laws and industry best practices for protecting PII and PHI  
+* If applicable, ensure HIPAA compliance  
+* Minimize risk of unauthorized access, use, or disclosure  
+  If your app uses AI for any features that interact with claims data, make sure to check out our [AI guidelines](ai.mdx).
+
+4. ## Follow the Blue Button and CMS reference guidelines 
+
+   ### What to call Blue Button data
+   If your app connects to many data sources and users pick from a list, use "Medicare" as the Blue Button data source name. NOTE: Don't use "Blue Button," "CMS Blue Button," “CMS Blue Button 2.0,” "Medicare.gov," or other variations. This is because there is some discrepancy between the data on [Medicare.gov](http://Medicare.gov) and what we provide via our API.
+
+   **Name of data source**: Medicare. For example, if you have “Medicare.gov (Blue Button)”, please use just “Medicare”. 
+   If you want to specify that it is Medicare data, you can also say “Medicare data”. We find that end users do not know what “Blue Button” means, and “Medicare” is more direct.
+
+   ### What logos to use
+   The logo to use should always be the [Medicare.gov](http://Medicare.gov) logo: [https://design.cms.gov/components/logos/medicare-logo/?theme=core](https://design.cms.gov/components/logos/medicare-logo/?theme=core) 
+
+   If you need this in a different format, let us know, and we can get that for you. 
+
+   
+
+5. ##  Sign the CARIN Alliance Code of Conduct
+
+   Many payers and health systems recognize CARIN, giving your app credibility and access across the broader health data ecosystem. There are many benefits to signing the [CARIN Alliance Code of Conduct](https://www.myhealthapplication.com/list-your-app) beyond being a Blue Button approval requirement. It:
+
+* Demonstrates your app's commitment to responsible health data practices.   
+* Builds trust with patients and sets your product apart in a competitive market.   
+* Aligns your work with the industry-wide movement toward patient data access.   
+* Makes your app more attractive to patient advocacy organizations, who are more likely to recommend apps that have made this commitment.
+
+  To sign the [CARIN Alliance Code of Conduct](https://www.myhealthapplication.com/list-your-app), fill in the form. Registration is free. 
+
+  After signing, confirm that [MyHealthApplication.com](http://MyHealthApplication.com) lists your app. This will show us that you attest to the [CARIN Alliance Code of Conduct](https://www.carinalliance.com/code-of-conduct). 
+
+  Before your demo, we will check the [CARIN Alliance listing](https://www.myhealthapplication.com/) to see whether your app is listed.
+
+  CARIN accreditation is a required step in the application process.
+
+
+6. ##  Next step 
+
+   Once you've met all requirements, [apply for production access](production-access.mdx) and schedule your demo.

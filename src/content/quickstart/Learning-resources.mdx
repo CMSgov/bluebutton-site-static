@@ -1,0 +1,129 @@
+---
+title: 'Learning Resources'
+seo: 
+  description: "Provide a list of links to help developers educate themselves on FHIR and the version history"
+sortOrder: 2
+---
+## Version resources 
+
+* V3 Migration Guide 
+
+* Migrating to v3 FAQ 
+
+* \[ADD\] v2 Deprecation timeline
+
+* [Migrating to v2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-v2-FAQ) 
+
+* [Version-specific extensions](https://www.hl7.org/fhir/versions.html#extensions) in [JSON](https://www.hl7.org/fhir/versions.html#extensions) 
+## Tutorials and Learning Resources 
+
+* [What is HL7?](https://info.hl7.org/learn-more) Learn about the organization behind FHIR, HL7.
+
+* [An Introduction to FHIR](https://www.youtube.com/watch?v=Px3564G-vw4) (YouTube). A video primer covering FHIR's core concepts for developers new to FHIR. It includes 
+
+  * Resources
+
+  * APIs
+
+  * how FHIR enables health data interoperability
+
+* [FHIR Training Calendar](https://www.hl7.org/training/calendar.cfm). HL7's schedule of upcoming online courses covering FHIR at varying levels. Courses cover 
+
+  * foundational and intermediate
+
+  * v2-to-FHIR mapping
+
+  * AI agent integration
+
+* [FHIR Confluence Home Page](https://confluence.hl7.org/spaces/FHIR/overview). HL7's official Confluence workspace for FHIR. This workspace has:
+
+  * housing workgroup documentation
+
+  * balloting materials
+
+  * implementation guide development resources
+
+  * community collaboration pages for active contributors to the standard.
+
+* [OAuth Simplified](https://www.oauth.com/). An Aaron Parecki reference guide to building an OAuth 2.0 server. It covers 
+
+  * the authorization framework SMART on FHIR and most health API authentication flows use
+
+  * high-level overviews 
+
+  * step-by-step instructions
+
+  * real-world examples
+
+* [FTC: Mobile Health App Interactive Tool](https://www.ftc.gov/business-guidance/resources/mobile-health-apps-interactive-tool). An interactive questionnaire that walks health app developers through a series of questions. It asks developers about their app's functions and data handling. The goal of the questionnaire is to identify which federal regulations apply. Federal regulations assessed: HIPAA, the FTC Health Breach Notification Rule, the FD\&C Act, and the 21st Century Cures Act information blocking rules.
+
+## CARIN Alliance 
+
+* [CARIN Alliance](https://www.carinalliance.com/). The governing industry coalition behind consumer-directed health data exchange standards, driving the policy and technical frameworks (including FHIR-based APIs) that enable patients to access and share their health records via third-party applications.
+
+* [CARIN Alliance Confluence Page](https://confluence.hl7.org/display/CAR). The HL7-hosted technical workspace. It contains 
+
+  * CARIN workgroup documentation,   
+  * implementation guide development resources,   
+  * ballot materials,   
+  * Connectathon details for FHIR IGs like CARIN Blue Button® and the Digital Insurance Card.
+
+* [CARIN UX Guide](https://carinuxguide.arcwebtech.com/). An open-source UX reference for developers building consumer-facing health apps. It provides design patterns and implementation guidance for surfacing
+
+  * data policies
+
+  * consent flows
+
+  * privacy disclosures in compliance with the CARIN Code of Conduct
+
+* [CARIN Code of Conduct](https://www.carinalliance.com/code-of-conduct). A set of guides for consumer-facing applications. It defines the privacy, security, and data-use requirements for non-HIPAA-covered applications. All applications must sign the code of conduct when handling personal health information (PHI) via FHIR APIs.
+
+* [CARIN Digital Insurance Card Implementation Guide](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/). This allows developers to surface digital proof of Medicare coverage to enrollees, providing details on types of coverage available. It returns a bundle that includes Patient and coverage resources that conform to the Digital insurance card profile.
+
+## FHIR learning links
+
+### HL7 FHIR Common Payer Consumer Data Set 
+
+Implementation Guide: Version 2.2.0, Date 2026-03-27 
+
+This implementation guide (IG) describes the CARIN Alliance Blue Button Framework and the Common Payer Consumer Data Set (CPCDS). It provides resources that payers can exchange with third parties to share with consumers via a FHIR-based API. This IG helps share adjudicated claims and encounter data via the Patient Access API for:
+
+* Medicare
+
+* Medicaid
+
+* CHIP
+
+* BHP standard health plans
+
+* QHP issuers
+
+It includes data elements and coding instructions that each payer can use to prepare and share the specified data.
+
+### HL7 FHIR CARIN-BlueButton GitHub IG 
+
+[Implementation Guide: Version](http://hl7.org/fhir/us/carin-bb/) 2.2.0, Date 2026-03-27 
+
+This IG outlines the artifacts released by CARIN for v2. The artifacts include explanations of the code and benefits for the different EOB Profiles.
+
+### HL7 FHIR CARIN-v2 Artifacts Summary
+
+[Implementation Guide](https://build.fhir.org/ig/HL7/carin-bb/artifacts.html): Version 2.2.0, Date 2026-03-27 
+
+This IG describes the CARIN Blue Button Framework and the Common Payer Consumer Data Set (CPCDS). It provides resources that payers can display to consumers via an FHIR API.
+
+## Other CMS APIs 
+
+[Beneficiary Claims Data API (BCDA)](https://bcda.cms.gov/). A FHIR-based API for Accountable Care Organizations (ACOs). Specific organizations:
+
+* Medicare Shared Savings Program ACOs,
+
+* ACO Realizing Equity, Access, and Community Health (REACH), and
+
+* other Alternative Payment Model participants.
+
+These entities can retrieve Medicare Parts A, B, and D claims data.
+
+* [Data at the Point of Care (DPC)](https://dpc.cms.gov/). A RESTful FHIR API that provides Medicare Parts A, B, and D claims data to providers. With DPC, providers can see claims data for active patient rosters without enrollee authorization. 
+
+* [Medicare Claims Data to Part D Sponsors (AB2D)](https://ab2d.cms.gov/). A FHIR-based API exclusively for stand-alone Medicare Part D Prescription Drug Plan sponsors. With AB2D, Drug Plan sponsors can get Medicare Parts A and B claims data for their active enrollees. 

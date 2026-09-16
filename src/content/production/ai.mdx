@@ -1,0 +1,45 @@
+---
+title: "Using AI Responsibly in Blue Button Apps"
+seo: 
+  description: "Guidelines for Blue Button apps using AI, ML, or LLMs — covering transparency, privacy, safety, and CMS's expectations for responsible AI design."
+sortOrder: 5
+---
+
+Blue Button apps that use Artificial Intelligence (AI), Machine Learning (ML), and Large Language Models (LLMs) should use these technologies responsibly. While AI/ML/LLMs are emerging technologies, they often operate quite differently than more traditional computer logic. This can lead to unexpected outcomes and application behaviors. Because of this, it is important that we follow the three pillars of AI governance in healthcare: Transparency, Privacy, and Safety. This matters especially when an app handles medical data, such as Protected Health Information (PHI) or Personally Identifiable Information (PII), like the data you may retrieve from the Blue Button API. Additionally, because this technology is so new, treat the recommendations below as a foundation to build on as new tools, models, and industry standards emerge.
+
+## 
+
+## UI/UX Recommendations
+
+These are the design practices we look for and expectations we have when reviewing app demos that use AI.
+
+* Give end users a clear, easy-to-understand notice when they're viewing AI-generated content.   
+* Follow [FTC rules and guidance on AI use, and avoid misleading claims about your app's capabilities, including presenting AI output as a substitute for medical professional](https://www.ftc.gov/ai) advice.  
+* Show a disclaimer wherever the app presents ANY advice (medical or otherwise), reminding users the content does NOT replace professional advice.  
+* Let users opt out of having their data sent to AI Service Providers or used for AI model training where possible. For example, include an opt-out checkbox during sign-up or when a user requests access to their data.
+
+## Technical Recommendations
+
+These are the technical practices we look for and expectations we have when reviewing app demos that use AI.
+
+* Only upload PHI or PII directly into an AI tool with a **processing agreement in place** to protect the data.  
+* Practice data minimization: only send the data a model needs for the query.  
+* Ensure users' data is isolated from one another and cannot be cross-contaminated (i.e., users cannot query data using AI/LLMs to retrieve data from another user's account without authorization).  
+* Encrypt any data **sent** to or **received** from AI tools, both in transit (i.e HTTPS and TLS) and at rest, as it may contain PII/PHI.  
+* Design your app to resist known attacks on AI, ML, and LLMs, especially those listed in the [OWASP Top 10 for LLMs](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/). For example, build in protections against prompt injection and firewall data between users.  
+* Remove a user's data once that user deletes their account or revokes access. Also remove any AI-produced responses.
+
+## Privacy Policy and Terms of Service Recommendations
+
+These are the best practices we look for and expectations we have for application privacy policies and terms of service when reviewing apps that use AI.
+
+* Name the specific AI/LLM your app uses, note whether it's proprietary, and link to any public documentation.  
+* Note any agreements you have with AI providers such as a Data Processing Agreement (DPA) or Business Associate Agreement (BAA).  
+* Explain [**in plain language**](https://www.opm.gov/information-management/plain-language/) how your app uses AI in the following scenarios:   
+  * How AI interacts with their data.   
+    * For example, "We use AI to summarize lab results. You can also ask general questions about your medical data in our application."  
+  * Communicate bias and limitation disclosures with users and patients.  
+* State any known bias or limitations of the current model you're using (i.e., LLMs may hallucinate or provide factually incorrect information; this model is not rated for medical advice).  
+* Describe what data IS shared with AI tools and what data is NOT shared with AI tools.  
+* Disclose whether user data is used to train or fine-tune models, and explain how users can give informed consent or opt out.  
+* Explain your responsible disclosure process for abnormal results. (i.e., tell users who to contact and how to report anything unusual with their AI responses). 
