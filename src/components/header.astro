@@ -4,24 +4,24 @@ import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
 import LogoBlueButton from '#assets/images/logo-bluebutton.svg'
 import IconClose from '@uswds/uswds/img/usa-icons/close.svg'
 import Link from './link.astro'
-import { getApiCollection, getDataCollection } from '#utils/collections'
+// import { getApiCollection, getDataCollection } from '#utils/collections'
 
 type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]
 
-const docsnavLinks = (await getApiCollection()).map((doc) => ({
-  to: '/api-documentation/[...slug]',
-  params: {
-    slug: doc.id,
-  },
-  label: doc.data.title,
-})) satisfies RoutesArray<'/api-documentation/[...slug]'>
-const datanavLinks = (await getDataCollection()).map((doc) => ({
-  to: '/data/[...slug]',
-  params: {
-    slug: doc.id,
-  },
-  label: doc.data.title,
-})) satisfies RoutesArray<'/data/[...slug]'>
+// const docsnavLinks = (await getApiCollection()).map((doc) => ({
+//   to: '/api-documentation/[...slug]',
+//   params: {
+//     slug: doc.id,
+//   },
+//   label: doc.data.title,
+// })) satisfies RoutesArray<'/api-documentation/[...slug]'>
+// const datanavLinks = (await getDataCollection()).map((doc) => ({
+//   to: '/data/[...slug]',
+//   params: {
+//     slug: doc.id,
+//   },
+//   label: doc.data.title,
+// })) satisfies RoutesArray<'/data/[...slug]'>
 
 const isActive = (path: string) => Astro.url.pathname.startsWith(path)
 ---
@@ -51,7 +51,8 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
         <ul class="usa-nav__primary usa-accordion">
           <li class="usa-nav__primary-item">
             <Link
-              to="/use-cases"
+              to="/[...slug]"
+              params={{ slug: 'use-cases' }}
               class:list={['usa-nav-link', isActive('/use-cases') ? 'usa-current' : null]}
               data-tealium="navigation"
             >
@@ -72,9 +73,9 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             </button>
             <ul id="basic-nav-section-one" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/api-documentation" data-tealium="main_nav">Get Started</Link>
+                <Link to="/[...slug]" params={{ slug: 'api-documentation' }} data-tealium="main_nav">Get Started</Link>
               </li>
-              {
+              <!-- {
                 docsnavLinks.map((link) => (
                   <li class="usa-nav__submenu-item">
                     <Link to={link.to} params={link.params} data-tealium="main_nav">
@@ -82,7 +83,7 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
                     </Link>
                   </li>
                 ))
-              }
+              } -->
             </ul>
           </li>
           <li class="usa-nav__primary-item">
@@ -96,9 +97,9 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             </button>
             <ul id="basic-nav-section-two" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/data" data-tealium="main_nav">Overview</Link>
+                <Link to="/[...slug]" params={{ slug: 'data' }} data-tealium="main_nav">Overview</Link>
               </li>
-              {
+              <!-- {
                 datanavLinks.map((link) => (
                   <li class="usa-nav__submenu-item">
                     <Link to={link.to} params={link.params} data-tealium="main_nav">
@@ -106,20 +107,11 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
                     </Link>
                   </li>
                 ))
-              }
+              } -->
               <li class="usa-nav__submenu-item">
                 <Link to="/data-dictionary" data-tealium="main_nav">Data Dictionary</Link>
               </li>
             </ul>
-          </li>
-          <li class="usa-nav__primary-item">
-            <Link
-              to="/production-access"
-              class:list={['usa-nav-link', isActive('/production-access') ? 'usa-current' : null]}
-              data-tealium="navigation"
-            >
-              <span>Production Access</span>
-            </Link>
           </li>
           <li class="usa-nav__primary-item">
             <Link

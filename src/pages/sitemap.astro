@@ -3,7 +3,7 @@ import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 import { $path, type RouteId, type RouteOptions } from 'astro-typesafe-routes/path'
 import Link from '#components/link.astro'
-import { getApiCollection, getDataCollection } from '#utils/collections'
+// import { getApiCollection, getDataCollection } from '#utils/collections'
 
 type SitemapLink<T extends RouteId> = RouteOptions<T> & {
   label: string
@@ -12,14 +12,14 @@ type SitemapLink<T extends RouteId> = RouteOptions<T> & {
 
 type SitemapLinks = SitemapLink<RouteId>[]
 
-const docsnavLinks = (await getApiCollection()).map((doc) => ({
-  href: $path({ to: '/api-documentation/[...slug]', params: { slug: doc.id } }),
-  label: doc.data.title,
-}))
-const datanavLinks = (await getDataCollection()).map((doc) => ({
-  href: $path({ to: '/data/[...slug]', params: { slug: doc.id } }),
-  label: doc.data.title,
-}))
+// const docsnavLinks = (await getApiCollection()).map((doc) => ({
+//   href: $path({ to: '/api-documentation/[...slug]', params: { slug: doc.id } }),
+//   label: doc.data.title,
+// }))
+// const datanavLinks = (await getDataCollection()).map((doc) => ({
+//   href: $path({ to: '/data/[...slug]', params: { slug: doc.id } }),
+//   label: doc.data.title,
+// }))
 
 const sitemapLinks = [
   {
@@ -28,22 +28,24 @@ const sitemapLinks = [
   },
   {
     label: 'Use Cases',
-    href: $path({ to: '/use-cases' }),
+    href: $path({ to: '/[...slug]', params: { slug: 'use-cases' } }),
   },
   {
     label: 'API Documentation',
-    href: $path({ to: '/api-documentation' }),
-    children: docsnavLinks,
+    href: $path({ to: '/[...slug]', params: { slug: 'api-documentation' } }),
+    // children: docsnavLinks,
+    children: [],
   },
   {
     label: 'Data Overview',
-    href: $path({ to: '/data' }),
-    children: datanavLinks,
+    href: $path({ to: '/[...slug]', params: { slug: 'data' } }),
+    // children: datanavLinks,
+    children: [],
   },
-  {
-    label: 'Production Access',
-    href: $path({ to: '/production-access' }),
-  },
+  // {
+  //   label: 'Production Access',
+  //   href: $path({ to: '/production-access' }),
+  // },
   {
     label: 'Support',
     href: $path({ to: '/support' }),
@@ -68,11 +70,11 @@ const sitemapLinks = [
 
               {link?.children ? (
                 <ul>
-                  {link.children.map((child) => (
+                  {/* {link.children.map((child) => (
                     <li>
                       <Link href={child.href}>{child.label}</Link>
                     </li>
-                  ))}
+                  ))} */}
                 </ul>
               ) : null}
             </li>

@@ -6,26 +6,26 @@ import Github from '@uswds/uswds/img/usa-icons/github.svg'
 
 import Icon from './icon.astro'
 import Link from './link.astro'
-import { getApiCollection, getDataCollection } from '#utils/collections'
+// import { getApiCollection, getDataCollection } from '#utils/collections'
 
 type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]
 
 const { pathname } = Astro.url
 
-const docsnavLinks = (await getApiCollection()).map((doc) => ({
-  to: '/api-documentation/[...slug]',
-  params: {
-    slug: doc.id,
-  },
-  label: doc.data.title,
-})) satisfies RoutesArray<'/api-documentation/[...slug]'>
-const datanavLinks = (await getDataCollection()).map((doc) => ({
-  to: '/data/[...slug]',
-  params: {
-    slug: doc.id,
-  },
-  label: doc.data.title,
-})) satisfies RoutesArray<'/data/[...slug]'>
+// const docsnavLinks = (await getApiCollection()).map((doc) => ({
+//   to: '/api-documentation/[...slug]',
+//   params: {
+//     slug: doc.id,
+//   },
+//   label: doc.data.title,
+// })) satisfies RoutesArray<'/api-documentation/[...slug]'>
+// const datanavLinks = (await getDataCollection()).map((doc) => ({
+//   to: '/data/[...slug]',
+//   params: {
+//     slug: doc.id,
+//   },
+//   label: doc.data.title,
+// })) satisfies RoutesArray<'/data/[...slug]'>
 
 const isActive = (path: string) => path === pathname
 ---
@@ -39,12 +39,13 @@ const isActive = (path: string) => path === pathname
       <ul class="usa-sidenav">
         <li class="usa-sidenav__item">
           <Link
-            to="/api-documentation"
-            class={isActive($path({ to: '/api-documentation' })) ? 'usa-current' : null}
+            to="/[...slug]"
+            params={{ slug: 'api-documentation' }}
+            class={isActive($path({ to: '/[...slug]', params: { slug: 'api-documentation' } })) ? 'usa-current' : null}
             data-tealium="left-rail">API Documentation</Link
           >
         </li>
-        <ul class="usa-sidenav__sublist">
+        <!-- <ul class="usa-sidenav__sublist">
           {
             docsnavLinks.map((link) => (
               <li class="usa-sidenav__item">
@@ -59,14 +60,17 @@ const isActive = (path: string) => path === pathname
               </li>
             ))
           }
-        </ul>
+        </ul> -->
         <li class="usa-sidenav__item">
-          <Link to="/data" class={isActive($path({ to: '/data' })) ? 'usa-current' : null} data-tealium="left-rail"
-            >Data Overview</Link
+          <Link
+            to="/[...slug]"
+            params={{ slug: 'data' }}
+            class={isActive($path({ to: '/[...slug]', params: { slug: 'data' } })) ? 'usa-current' : null}
+            data-tealium="left-rail">Data Overview</Link
           >
         </li>
         <ul class="usa-sidenav__sublist">
-          {
+          <!-- {
             datanavLinks.map((link) => (
               <li class="usa-sidenav__item">
                 <Link
@@ -79,7 +83,7 @@ const isActive = (path: string) => path === pathname
                 </Link>
               </li>
             ))
-          }
+          } -->
           <li class="usa-sidenav__item">
             <Link
               to="/data-dictionary"
