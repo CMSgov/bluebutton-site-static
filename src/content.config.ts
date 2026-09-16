@@ -19,6 +19,7 @@ const staticCollection = defineCollection({
       description: z.string(),
     }).partial().optional(),
     sortOrder: z.coerce.number().optional(),
+    publishedDate: z.coerce.date().optional(),
   }),
 })
 

@@ -1,18 +1,33 @@
 import { z } from 'astro/zod'
+import { getCollection } from 'astro:content'
 
-// export async function getDataCollection() {
-//   return (await getCollection('dataDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
-// }
-// export async function getApiCollection() {
-//   return (await getCollection('apiDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
-// }
+export async function getDataCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('data/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
+}
+export async function getApiCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('api/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
+}
+export async function getGuidesCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('guides/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
+}
+export async function getProductionCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('production/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
+}
 
-// export async function getTermsCollection() {
-//   return (await getCollection('terms')).sort((a, b) => {
-//     // Newest to oldest
-//     return b.id.localeCompare(a.id)
-//   })
-// }
+export async function getTermsCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('terms/'))).sort((a, b) => {
+    // Newest to oldest
+    return b.id.localeCompare(a.id)
+  })
+}
 
 export const structureDefinitionSchema = z.object({
   resourceType: z.literal('StructureDefinition'),

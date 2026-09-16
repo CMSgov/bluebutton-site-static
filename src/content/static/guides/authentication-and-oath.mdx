@@ -1,20 +1,23 @@
 ---
-title: 'Authentication and OAth'
-seo: 
+title: 'Authentication and OAuth'
+seo:
   description: "Explain the Blue Button authorization flow to developers"
 sortOrder: 2
 ---
 Blue Button uses [OAuth 2.0](https://www.oauth.com/) with [Proof Key for Code Exchange (PKCE)](https://tools.ietf.org/html/rfc7636). Your app redirects the user to Medicare.gov, they log in and grant consent, and you get an access token. Here's the full flow.
+
 ## How it works
 
-1. Your app redirects the user to the Blue Button /authorize endpoint  
-2. The user logs into [Medicare.gov](http://Medicare.gov) with [Login.gov](http://Login.gov), CLEAR, [ID.me](http://ID.me), or their [Medicare.gov](http://Medicare.gov) account and grants your app access  
-3. Blue Button redirects back to your app with an authorization code  
-4. Your app exchanges that code for an access token  
+1. Your app redirects the user to the Blue Button /authorize endpoint
+2. The user logs into [Medicare.gov](http://Medicare.gov) with [Login.gov](http://Login.gov), CLEAR, [ID.me](http://ID.me), or their [Medicare.gov](http://Medicare.gov) account and grants your app access
+3. Blue Button redirects back to your app with an authorization code
+4. Your app exchanges that code for an access token
 5. You use the access token to call the API
 
-To learn more about setting up your sandbox application, see [Quickstart](src/content/quickstart/Quickstart.mdx).
+To learn more about setting up your sandbox application, see [Quickstart](/quickstart/).
+
 ## Get an authorization code
+
 To let a user authorize your app, send them to the Blue Button API /authorize endpoint with the right parameters.
 
 Example call:
@@ -24,8 +27,8 @@ https://sandbox.bluebutton.cms.gov/v3/o/authorize/?client_id=swBu7LWsCnIRfu530qn
 &response_type=code&scope=openid%20profile%20patient%2FPatient.rs%20patient%2FCoverage.rs%20patient%2FExplanationOfBenefit.rs&state=8e896a59f0744a8e93bf2f1f13230be5&code_challenge=Ds-QWGn89NeT5jpmHLPA3z3oy59hOkbA03B1QS13_CY&code_challenge_method=S256
 ```
 
-
 Note: The authorization in the example is started by an HTTP GET operation. For [SMART App Launch](https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html) compliance, POST-style authorization is also supported.
+
 ### Authorization parameters
 
 | Parameter | Required | Description |
@@ -44,6 +47,7 @@ The user logs in at Medicare.gov and sees what data your app is requesting. If t
 ```
 http://localhost:8080/callback?code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&state=YOUR_STATE_VALUE
 ```
+
 ### Authorization screen language selection
 
 The Blue Button user authorization screens are available in both English (the default) and Spanish. Language selection for these screens works as follows:
@@ -54,10 +58,12 @@ The Blue Button user authorization screens are available in both English (the de
 https://sandbox.bluebutton.cms.gov/v2/o/authorize/?lang=es
 ```
 
-* If the `lang` parameter is omitted or is set to a value other than `en` or `es`, the API server will next check the `Accept-Language` HTTP header in the `/authorize` request.  
-  * If the language settings in a user’s web browser list Spanish higher in the preference list than English, the browser will automatically include the correct `Accept-Language` value to request the Spanish-language screens.  
+* If the `lang` parameter is omitted or is set to a value other than `en` or `es`, the API server will next check the `Accept-Language` HTTP header in the `/authorize` request.
+  * If the language settings in a user’s web browser list Spanish higher in the preference list than English, the browser will automatically include the correct `Accept-Language` value to request the Spanish-language screens.
 * If neither English nor Spanish is requested via the `lang` parameter or `Accept-Language` header, the API server will default to the English version of the authorization screens.
+
 ## Exchange the code for a token
+
 If the user authorizes your application, the Blue Button API redirects them back to the redirect\_uri you registered. It appends an authorization code and the state parameter sent by your application to the URL.
 
 For example, if the Redirect URI is `http://localhost:8080/testclient/callback`, the Blue Button API will redirect with this request:
@@ -72,11 +78,11 @@ Your application can now exchange the code provided in the redirected request fo
 
 To retrieve an access token, POST to the Blue Button /token endpoint providing the code with the following parameters:
 
-* client\_id  
-* client\_secret  
-* redirect\_uri  
-* grant\_type: authorization\_code  
-* code  
+* client\_id
+* client\_secret
+* redirect\_uri
+* grant\_type: authorization\_code
+* code
 * Code\_verifier
 
 **cURL command**
@@ -88,7 +94,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/token/"\
 &code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
 ```
 
-#### **Token response**
+### **Token response**
 
 ```
 {
@@ -101,14 +107,11 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/token/"\
 }
 ```
 
-&nbsp;
-
 Applications in the “1 hour” access category do not receive a refresh token in the Blue Button token response.
 
 For applications in the “1 hour” or “13 months” access expiration groups, the response shows the user's access\_grant\_expiration date.
 
-See which [access category](guides/fetching-patient-data.mdx#duration-of-access) best fits your app.
-
+See which [access category](/guides/fetching-patient-data/#duration-of-access) best fits your app.
 
 ## Exchange Refresh Token for New Access Token
 
@@ -118,12 +121,12 @@ You can use a refresh token at any time in your application’s workflow, includ
 
 To retrieve a new refresh token, POST to the Blue Button API /token endpoint with the following parameters:
 
-* `client\_id`  
-* `client\_secret`  
-* `grant\_type: refresh\_token`  
+* `client\_id`
+* `client\_secret`
+* `grant\_type: refresh\_token`
 * `refresh\_token`
 
-#### **cURL command**
+### **cURL command**
 
 Terminal
 
@@ -133,7 +136,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
  -d "grant_type=refresh_token&refresh_token=wDimPGoA8vwXP51kie71vpsy9l17HN"
 ```
 
-#### **Token response**
+### **Token response**
 
 (successful with 200 status code):
 
@@ -148,17 +151,18 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
  "access_grant_expiration":"2025-09-05 19:17:53Z"
 }
 ```
+
 ## Revoke a token
 
 Developers can revoke an enrollee’s previously granted access via access token and its data access grant. This action prevents the creation of new access tokens without authorization.
 
 To revoke an access token, POST to the Blue Button API `/revoke` endpoint with the following parameters:
 
-* `client\_id`  
-* `client\_secret`  
+* `client\_id`
+* `client\_secret`
 * `token`
 
-#### **cURL command**
+### **cURL command**
 
 Terminal
 
@@ -169,7 +173,7 @@ curl -X POST --url 'https://bluebutton.cms.gov/v2/o/revoke/'\
  -d 'token=oQlduHNr09GKCU506GOgp8OarrAy2q'
 ```
 
-#### **Response**
+### **Response**
 
 Valid requests to the `/revoke` endpoint will always return a 200 response, regardless of whether the requested token exists.
 
@@ -179,17 +183,17 @@ For testing in our sandbox, use the `/expire\_authenticated\_user` endpoint. Thi
 
 `/expire\_authenticated\_user` can be used to test your code for the following conditions that produce the same error responses via the API:
 
-* When an access token expires, without needing to wait for the expiration in 1 hour  
-* When a patient revokes access to your application  
+* When an access token expires, without needing to wait for the expiration in 1 hour
+* When a patient revokes access to your application
 * When access granted to a patient’s data has expired
 
 POST to the Blue Button API `/expire\_authenticated\_user` endpoint with the following parameters:
 
-* `client\_id`  
-* `client\_secret`  
+* `client\_id`
+* `client\_secret`
 * `patient ID` (patient ID “-20140000000001” is used in the cURL example below)
 
-#### **cURL command**
+### **cURL command**
 
 Terminal
 
@@ -199,7 +203,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/
  -H "Content-Length: 0"
 ```
 
-#### **Response**
+### **Response**
 
 Successful with 200 status code:
 
@@ -207,12 +211,13 @@ Successful with 200 status code:
 HTTP / 1.1 200 OK
 ```
 
-#### **Common error responses**
+### **Common error responses**
 
 | Error Code | Response | Reason |
 | ----- | ----- | ----- |
 | 404 | Data Access Grant was Not Found | Patient ID has not granted access |
 | 403 | FORBIDDEN | Issues with client credentials or permissions                |
+
 ## Native and mobile applications
 
 The Blue Button API supports the [OAuth 2.0 Authorization Framework](https://www.rfc-editor.org/info/rfc6749/#section-1.3.1) using the [authorization code grant](https://www.rfc-editor.org/rfc/rfc6749#section-1.3.1) with a [confidential client](https://www.rfc-editor.org/rfc/rfc6749#section-2.1) type flow. To keep Medicare enrollees’ data secure during authentication, we don’t support implicit grants or public client types.
@@ -220,26 +225,29 @@ The Blue Button API supports the [OAuth 2.0 Authorization Framework](https://www
 For best practices for the type of application you’re developing, review the [OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252.txt).
 
 Use a proxy middleware server to reduce security risks. Follow a Backend-for-Frontend (BFF) authentication pattern. In the BFF pattern, a backend server performs all authorization code and refresh token exchanges. For examples of this type of proxy middleware client/server implementation, check out our sample applications available in [Node](https://github.com/CMSgov/bluebutton-sample-client-nodejs-react) or [Python](https://github.com/CMSgov/bluebutton-sample-client-python-react).
-## Proof Key for Code Exchange (PKCE) extension usage 
+
+## Proof Key for Code Exchange (PKCE) extension usage
 
 To improve the security of your application, we require that you use the [Proof Key for Code Exchange (PKCE) extension](https://tools.ietf.org/html/rfc7636).
 
 There are several reasons to use the PKCE extension:
 
-* Ensures that the application that started the OAuth 2.0 flow is the same one that is finishing it.  
-* Mitigates the impact of a compromised Authorization Code by a malicious actor.  
+* Ensures that the application that started the OAuth 2.0 flow is the same one that is finishing it.
+* Mitigates the impact of a compromised Authorization Code by a malicious actor.
 * Follows the [OAuth 2.0 Security Best Current Practice](https://www.rfc-editor.org/info/rfc9700/\#section-2.1.1)
 
 PKCE uses a code challenge that is derived from a code-verifier.
 
 Here's how it works:
 
-1. Generate a random code\_verifier (43-128 characters, URL-safe)  
-2. Compute the challenge: code\_challenge \= BASE64URL(SHA256(code\_verifier))  
-3. Send code\_challenge and code\_challenge\_method=S256 in the /authorize request  
+1. Generate a random code\_verifier (43-128 characters, URL-safe)
+2. Compute the challenge: code\_challenge \= BASE64URL(SHA256(code\_verifier))
+3. Send code\_challenge and code\_challenge\_method=S256 in the /authorize request
 4. Send the original code\_verifier when exchanging the code for a token
-## Scopes 
-Scopes define the API endpoints your application is allowed to access. The Blue Button API uses [HL7 FHIR Scopes](https://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html) to manage access to Medicare enrollee data. Scopes are required on the auth request. If they are not requested, then an error will be returned. 
+
+## Scopes
+
+Scopes define the API endpoints your application is allowed to access. The Blue Button API uses [HL7 FHIR Scopes](https://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html) to manage access to Medicare enrollee data. Scopes are required on the auth request. If they are not requested, then an error will be returned.
 
 | Scope | Permission |
 | :---- | :---- |
@@ -255,7 +263,9 @@ Scopes define the API endpoints your application is allowed to access. The Blue 
 | `launch/patient` | Patient launch context |
 | `openid` | Retrieve information about the current logged-in user |
 | `profile` | Access the /UserInfo endpoint ([OpenID Connect](https://openid.net/developers/how-connect-works/)) |
+
 ## Testing token expiration
+
 In the sandbox, you can force-expire a user's access grant for testing:
 
 ```
@@ -266,6 +276,7 @@ curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/
 ```
 
 This simulates token expiration, access revocation, and grant expiration — all of which produce the same error responses.
+
 ## Web applications
 
 The Blue Button API supports the Authorization Code flow for web applications running on a server. Use the following settings when registering your application:
@@ -275,9 +286,10 @@ Settings:
 Client Type: Confidential
 
 Grant Type: Authorization code
+
 ## Common errors
 
-#### **Reused refresh token**
+### **Reused refresh token**
 
 A refresh token can only be used one time. The following is an example of an error response when attempting to reuse a refresh token:
 
@@ -291,7 +303,7 @@ Response (unsuccessful with 400 status code):
 
 If you receive this error, verify that your application sent the correct refresh token sent the correct value. If it’s already been used, the enrollee should be directed to re-authorize following the original authorization flow above.
 
-#### **Client credentials or permissions problems**
+### **Client credentials or permissions problems**
 
 If your request has any issues with client credentials or permissions, the following response will be received:
 
@@ -305,7 +317,7 @@ Response (unsuccessful with 401 status code):
 
 If you receive this message, double-check that the request looks correct. If everything looks correct, email  bluebuttonapi@cms.hhs.gov, and the Blue Button API team can help troubleshoot.
 
-#### **Expired Data Access Grant**
+### **Expired Data Access Grant**
 
 If your authorization for accessing user data has expired, the corresponding access token will not be refreshed. Attempts to refresh the token will result in the following error message:
 
@@ -319,6 +331,5 @@ Response (unsuccessful with 400 status code):
 }
 ```
 
-To re-authorize, follow the same flow described under [Get an authorization code](#guides/authentication-and-oath.mdx#get-an-authorization-code-existing-updated-content).
+To re-authorize, follow the same flow described under [Get an authorization code](#get-an-authorization-code).
 
- 

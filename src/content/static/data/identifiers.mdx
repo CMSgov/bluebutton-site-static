@@ -29,6 +29,6 @@ Read more about identifiers [from HL7](https://hl7.org/fhir/R4/datatypes.html#Id
 
 The MBI is the primary identifier for Medicare enrollees: it's the number on their Medicare card. In Blue Button responses, the MBI appears in the Patient resource's `identifier` array with the system `http://hl7.org/fhir/sid/us-mbi`.
 
-A patient may have multiple MBIs (current and historic). Use the `identifier-currency` extension to determine which is current. See [fetching patient data](#guides/fetching-patient-data.mdx) for details and code examples.
+A patient may have multiple MBIs (current and historic). Use the `identifier-currency` extension to determine which is current. See [fetching patient data](/guides/fetching-patient-data/) for details and code examples.
 
 MBI data is sourced from [CMS's Integrated Data Repository](https://www.cms.gov/about-cms/information-systems/idr) (IDR). 

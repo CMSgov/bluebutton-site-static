@@ -8,7 +8,7 @@ import { getCollection } from 'astro:content'
 import { render } from 'astro:content'
 
 export async function getStaticPaths() {
-  const allTerms = (await getCollection('static')).filter((post) => post.filePath?.startsWith('/terms/'))
+  const allTerms = await getCollection('static', ({ id }) => id.startsWith('terms/'))
 
   const currentTerms = allTerms[0]
   const restTerms = allTerms.slice(1).map((post) => ({
@@ -35,7 +35,7 @@ const { Content, headings } = await render(post)
       <h1>{post.data.title}</h1>
       <!-- <p class="usa-intro">
         {isCurrent ? 'Current Version' : 'Previous Version'}{' '}({post.id}), published {
-          post.data?.published_date.toLocaleDateString()
+          post.data?.publishedDate.toLocaleDateString()
         }
       </p> -->
     </div>

@@ -104,28 +104,14 @@ def fetch_all_claims(base_url, access_token):
 
 For actual production usage, we recommend adding more robust error handling for cases such as disconnections and mid-loop token expirations. Also note that as claims progress through adjudication, they will appear several times, so deduplication is necessary.
 
-## Handle data changes during pagination 
-
-Claims data can be updated while you're paginating through results. For example, a claim on page 5 might have changed since you fetched page 1\.
-
-Strategies for handling this:
-
-* Accept eventual consistency. For most apps, small inconsistencies during pagination are fine. The next full sync will catch up.  
-* Use `\_lastUpdated` to detect changes. After your initial full fetch, use `\_lastUpdated=gtYOUR\_LAST\_SYNC\_DATE` in subsequent requests to get only what changed. See [Going to Production](https://bb-vitepress.jbhutch01.workers.dev/guides/going-to-production.html#optimize-your-queries).  
-* Compare totals. If Bundle.total changes between pages, data has shifted. You may want to restart.
-
-TIP
-
-For most apps, the simplest approach is: do a full fetch on first load, then use \_lastUpdated for incremental updates going forward.
-
-### **Handle data changes during pagination**
+## Handle data changes during pagination
 
 Claims data can be updated while you're paginating through results. Because pagination is offset-based, a claim added or removed mid-walk shifts every record after it so you can skip a claim entirely or read the same one twice.
 
 Some strategies for handling this:
 
 * **Bound the window before you start.** Capture a timestamp, then cap every page with `_lastUpdated=le{timestamp}`. The result set stays stable no matter what changes upstream, and you resume the next sync with `gt{timestamp}`.  
-* **Use `_lastUpdated` to detect changes.** After your initial full fetch, use `_lastUpdated=gtYOUR_LAST_SYNC_DATE` in subsequent requests to get only what changed. The operator prefix is required: `lt`, `le`, `gt`, or `ge`. See \[Going to Production\](LINK: TBD).  
+* **Use `_lastUpdated` to detect changes.** After your initial full fetch, use `_lastUpdated=gtYOUR_LAST_SYNC_DATE` in subsequent requests to get only what changed. The operator prefix is required: `lt`, `le`, `gt`, or `ge`.  
 * **Accept eventual consistency.** For apps that display claims rather than reconcile them, an occasional skipped or duplicated record is fine. The next full sync will catch up.
 
 **NOTE**

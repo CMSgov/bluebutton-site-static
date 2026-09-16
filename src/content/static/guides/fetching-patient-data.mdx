@@ -4,11 +4,11 @@ seo:
   description: "Explain to developers how to connect to and work with patient data"
 sortOrder: 3
 ---
-### Scope of Access
+## Scope of Access
 
 Applications receive permission to access Medicare enrollee data on a per-user basis. The Integrated Data Repository (IDR) updates enrollee claims data nearly daily . Access starts when each enrollee approves it through the Blue Button API's authorization flow. 
 
-### Duration of Access
+## Duration of Access
 
 There are 3 categories for data access duration:
 
@@ -43,7 +43,7 @@ curl "https://sandbox.bluebutton.cms.gov/v2/fhir/ExplanationOfBenefit" \
 | Sandbox | `https://sandbox.bluebutton.cms.gov/v3/fhir/` |
 | Production | `https://api.bluebutton.cms.gov/v3/fhir/` |
 
-For the full list of endpoints and parameters, see the API Documentation (LINK: TBD) or the [Swagger docs](https://sandbox.bluebutton.cms.gov/docs/openapi).
+For the full list of endpoints and parameters, see the [API Documentation](/api-documentation/) or the [Swagger docs](https://sandbox.bluebutton.cms.gov/docs/openapi).
 
 ## Read the response
 
@@ -85,7 +85,7 @@ Note: ***you can only access data for the enrollee who authorized your applicati
 
 TIP
 
-EOB bundles can be large: some enrollees have hundreds of claims. See Handling Pagination (LINK: TBD) for how to retrieve all pages.
+EOB bundles can be large: some enrollees have hundreds of claims. See [Handling Pagination](/guides/handling-pagination/) for how to retrieve all pages.
 
 ## Working with identifiers 
 
@@ -506,11 +506,11 @@ Blue Button supports two tags, `System-Type` and `Final-Action`, which need to b
 
 | \_tag | What’s returned? |
 | :---- | :---- |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**|SharedSystem | A \+ B claims from the Shared Systems (FISS,MCS,VMS,MAP,CWF) |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**|NationalClaimsHistory | A \+ B claims from the National Claims History |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**|DDPS | Part D claims |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**Final-Action**|FinalAction | Claims marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**Final-Action**|NotFinalAction | Claims **not** marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
+| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**\|SharedSystem | A \+ B claims from the Shared Systems (FISS,MCS,VMS,MAP,CWF) |
+| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**\|NationalClaimsHistory | A \+ B claims from the National Claims History |
+| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**\|DDPS | Part D claims |
+| https://bluebutton.cms.gov/fhir/CodeSystem/**Final-Action**\|FinalAction | Claims marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
+| https://bluebutton.cms.gov/fhir/CodeSystem/**Final-Action**\|NotFinalAction | Claims **not** marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
 
 ### \_security
 
@@ -527,8 +527,6 @@ The default behavior is based on the API team certificate.
 
 | Note Blue Button should still pass in this parameter. |
 | :---- |
-
-### 
 
 ### How to use Shared Systems data
 
@@ -557,13 +555,10 @@ vs.
 
 ## Working with digital insurance card data 
 
-The endpoint, /v3/fhir/Patient/{patient}/$generate-insurance-card allows developers to surface digital proof of [Medicare](http://Medicare.gov) coverage to enrollees, providing details on the types of coverage available. 
+The endpoint, `/v3/fhir/Patient/{patient}/$generate-insurance-card` allows developers to surface digital proof of [Medicare](http://Medicare.gov) coverage to enrollees, providing details on the types of coverage available. 
 
 This endpoint references the [CARIN Digital Insurance Card Implementation Guide](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/) . It returns a bundle that includes /Patient (LINK: TBD) and /Coverage (LINK: TBD) resources conformant to the Digital Insurance Guide profile . You can find examples of this on the Digital Insurance Card page (LINK: TBD) and in the [Blue Button Swagger resource](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listDigitalInsuranceCard_v3). 
 
 ## Working with SAMHSA data
 
 Substance abuse data (also known as SAMHSA data) comes from the Substance Abuse and Mental Health Services Information. It may be included on a claim unless the enrollee opts out. 
-
-## Working with prescription data
-

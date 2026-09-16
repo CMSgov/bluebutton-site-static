@@ -1,170 +1,170 @@
 ---
 title: "V3 Migration Guide"
-seo: 
+seo:
   description: "Optimize your Blue Button API application with compression, claim type filtering, and lastUpdated queries to improve performance and efficiency"
 sortOrder: 8
 ---
 
 
-# Introduction
+## Introduction
 
-## Blue Button API Version 3 (v3) overview
+### Blue Button API Version 3 (v3) overview
 
 In the Blue Button API Version 3 (v3), the following improvements have been made:
 
-* Improved claims data timeliness  
-* Availability of [partially](https://github.com/CMSgov/beneficiary-fhir-data/wiki/V2-%E2%80%90-V3-Migration-Guide-%28Draft%29#partially-adjudicated-claims-data-in-bfd-v3) adjudicated claims  
-* [Additional Part D information](https://github.com/CMSgov/beneficiary-fhir-data/wiki/V2-%E2%80%90-V3-Migration-Guide-%28Draft%29#coverage)  
-* [Improved FHIR conformance](https://github.com/CMSgov/beneficiary-fhir-data/wiki/V2-%E2%80%90-V3-Migration-Guide-%28Draft%29#fhir-conformance) to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/)  
-* [Addition of StructureDefinition and CodeSystem resources](https://github.com/CMSgov/beneficiary-fhir-data/wiki/V2-%E2%80%90-V3-Migration-Guide-%28Draft%29#extensionterminology-changes-codesystemstructuredefinition-resources-sub-header-of-conformance)  
-* [Verified FHIRPath for each data element](https://github.com/CMSgov/beneficiary-fhir-data/wiki/V2-%E2%80%90-V3-Migration-Guide-%28Draft%29#extracting-data-elements-from-bfd-data)&nbsp;
+* Improved claims data timeliness
+* Availability of [partially](https://github.com/CMSgov/beneficiary-fhir-data/wiki/V2-%E2%80%90-V3-Migration-Guide-%28Draft%29#partially-adjudicated-claims-data-in-bfd-v3) adjudicated claims
+* [Additional Part D information](https://github.com/CMSgov/beneficiary-fhir-data/wiki/V2-%E2%80%90-V3-Migration-Guide-%28Draft%29#coverage)
+* [Improved FHIR conformance](https://github.com/CMSgov/beneficiary-fhir-data/wiki/V2-%E2%80%90-V3-Migration-Guide-%28Draft%29#fhir-conformance) to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/)
+* [Addition of StructureDefinition and CodeSystem resources](https://github.com/CMSgov/beneficiary-fhir-data/wiki/V2-%E2%80%90-V3-Migration-Guide-%28Draft%29#extensionterminology-changes-codesystemstructuredefinition-resources-sub-header-of-conformance)
+* [Verified FHIRPath for each data element](https://github.com/CMSgov/beneficiary-fhir-data/wiki/V2-%E2%80%90-V3-Migration-Guide-%28Draft%29#extracting-data-elements-from-bfd-data)
 
-## New data source in v3
+### New data source in v3
 
-### v1/v2: CCW
+#### v1/v2: CCW
 
 In v1/v2,  BFD leveraged the Chronic Conditions Warehouse (CCW).
 
-### v3:  IDR&nbsp;
+#### v3:  IDR
 
 v3 leverages CMS's Integrated Data Repository (IDR) as the primary upstream data source, replacing CCW.
 
-## Transition timeline&nbsp;
+### Transition timeline
 
 **We will continue to support v1/v2 while users transition to v3**. We encourage all users to roadmap their transition to v3; our timelines for deprecation and sunset of v1 and v2 are as follows:
 
-| Version | Removed from active maintenance&nbsp; | Sunset |
+| Version | Removed from active maintenance | Sunset |
 | :---- | :---- | :---- |
 | Blue Button v1 | June 30, 2026 | July 30, 2027 |
 | Blue Button v2 | June 30, 2026 | July 30, 2027 |
 
-# Migrating from Blue Button v1/v2 to v3
+## Migrating from Blue Button v1/v2 to v3
 
 If you are a Blue Button API user with an application that uses v1 or v2 of the API, this document will help you understand the changes coming your way.
 
-## Changes coming in v3
+### Changes coming in v3
 
 There are changes coming in v3, many of which were developed with input from Blue Button users.
 
-### 1. Endpoint structure
+#### 1. Endpoint structure
 
-As an application developer, the endpoints you use will remain consistent. The Blue Button v1/v2 endpoint structure is&nbsp;
+As an application developer, the endpoints you use will remain consistent. The Blue Button v1/v2 endpoint structure is
 
-* /v2/fhir/Patient  
-* /v2/fhir/Coverage  
-* /v2/fhir/ExplanationOfBenefit  
-* /v2/fhir/metadata  
+* /v2/fhir/Patient
+* /v2/fhir/Coverage
+* /v2/fhir/ExplanationOfBenefit
+* /v2/fhir/metadata
 * /v2/connect/userinfo
 
 The v3 endpoint *structure* is unchanged. That is, all v2 endpoints have a v3 analog:
 
-* /v3/fhir/Patient  
-* /v3/fhir/Coverage  
-* /v3/fhir/ExplanationOfBenefit  
-* /v3/fhir/metadata  
-* /v3/connect/userinfo  
-* ***NEW:*** /v3/fhir/Patient/{patient}/$generate-insurance-card
+* /v3/fhir/Patient
+* /v3/fhir/Coverage
+* /v3/fhir/ExplanationOfBenefit
+* /v3/fhir/metadata
+* /v3/connect/userinfo
+* ***NEW:*** `/v3/fhir/Patient/{patient}/$generate-insurance-card`
 
 In terms of structure, under v3, Blue Button adds a new endpoint that provides a [CARIN for Digital Insurance Card](https://hl7.org/fhir/us/insurance-card/STU1.1/) (C4DIC) bundle, described later in this document under **CARIN for Digital Insurance Card (C4DIC) data endpoint**. Note that the shape of the data returned from v3 endpoints changes in several critical ways, so even if the URLs look familiar, developers will need to address the differences in the shape of the FHIR data that is returned under v3.
 
-### 2. Token Usage Across v1/v2 and v3
+#### 2. Token Usage Across v1/v2 and v3
 
-#### v1/v2 tokens compatible with v3&nbsp;
+##### v1/v2 tokens compatible with v3
 
 Valid v1 and v2 tokens will continue to work when requesting v3 data, as long as the token's scopes match the data being requested. You do not need to generate new tokens solely for the purpose of accessing v3 endpoints.
 
-#### Existing tokens revoked when an enrollee completes a new authorization flow&nbsp;
+##### Existing tokens revoked when an enrollee completes a new authorization flow
 
 If an enrollee completes a new Blue Button authorization flow while a valid token already exists for your application, the previous token will be automatically revoked upon successful authorization.
 
-&nbsp;
+
 
 Examples of when this applies:
 
-* An enrollee who previously completed the v2 auth flow completes the v3 auth flow  
+* An enrollee who previously completed the v2 auth flow completes the v3 auth flow
 * An enrollee repeats the same auth flow (e.g., v3 to v3)
 
 **Why this change was made**: An enrollee’s data sharing preferences may change between authorization flows. For example, a user may grant broader permissions in v2 but restrict certain data in v3. Revoking the older token ensures your application always reflects the enrollee's most recent preferences.
 
-&nbsp;
+
 
 **What this means for your app**: If your application stores tokens, you should expect that a previously issued token may become invalid after a user re-authorizes. Handle token revocation errors gracefully and prompt re-authorization when needed.
 
-#### v2 Explanation of Benefits (EOB) requests are blocked for v3 tokens that suppress substance use data
+##### v2 Explanation of Benefits (EOB) requests are blocked for v3 tokens that suppress substance use data
 
 Any v3 token where the enrollee has opted out of sharing substance use data cannot be used to retrieve Explanation of Benefits (EOB) data via the v2 endpoint. Attempting to do so will return an error.
 
-&nbsp;
+
 
 **Why this change was made**: The v2 endpoint does not support substance use data suppression. To honor the enrollee’s most recent privacy preferences, BBAPI blocks EOB retrieval entirely in v2 when a v3 token has substance use data sharing disabled.
 
-&nbsp;
+
 
 **What this means for your app**: If your application uses v2 EOB endpoints with tokens obtained through the v3 auth flow, check whether the enrollee has opted out of substance use data sharing. If they have, EOB requests on v2 will fail. We recommend migrating EOB data retrieval to the v3 endpoint to fully support enrollee preferences.
 
-### 3. FHIR IDs in v2 and v3
+#### 3. FHIR IDs in v2 and v3
 
-FHIR IDs for Patient resources will differ between v2 and v3. In v2, the FHIR ID was a construct of the CMS Chronic Conditions Warehouse (CCW), the upstream data provider for v2. In v3, data is sourced from the Integrated Data Repository (IDR). Review the [New Patient Management](#vi.-new-patient-id-management) section for additional details.
+FHIR IDs for Patient resources will differ between v2 and v3. In v2, the FHIR ID was a construct of the CMS Chronic Conditions Warehouse (CCW), the upstream data provider for v2. In v3, data is sourced from the Integrated Data Repository (IDR). Review the [New Patient Management](#vi-new-patient-id-management) section for additional details.
 
 If your resource requests use the Patient `id` value, either in the path or as a query parameter, make sure you:
 
-1. Issue a token refresh using the v3 token endpoint (/v3/o/token/)  
-2. Grab the patient ID from the Patient resource’s `id` field in the token response  
+1. Issue a token refresh using the v3 token endpoint (/v3/o/token/)
+2. Grab the patient ID from the Patient resource’s `id` field in the token response
 3. Use that ID for all subsequent v3 resource requests
 
 Otherwise, you will get errors and be unable to pull data for the user.
 
-### 4. Scopes and how beneficiaries grant permissions
+#### 4. Scopes and how beneficiaries grant permissions
 
-In v2, we did not require apps to send scopes on authorize requests. When no scope parameter was provided, we would provide a default set of scopes on the resulting access token.&nbsp;
+In v2, we did not require apps to send scopes on authorize requests. When no scope parameter was provided, we would provide a default set of scopes on the resulting access token.
 
-In v3, scopes are now **required** on the auth request. If they are not requested, then an error will be returned.&nbsp;
+In v3, scopes are now **required** on the auth request. If they are not requested, then an error will be returned.
 
-In v3, there are changes to the permission screen, which allows enrollees more granular control of what is being shared.&nbsp;
+In v3, there are changes to the permission screen, which allows enrollees more granular control of what is being shared.
 
-v3 introduces a dynamic permission screen that represents a significant departure from the current experience. Today, all enrollees see the same static permission screen regardless of what data an app actually needs. With v3, the permission screen will **only** display the specific FHIR resources the app has explicitly requested via scopes, which may include Patient, Coverage, and/or ExplanationOfBenefit data. This means enrollees are only asked to consent to what is strictly necessary.&nbsp;
+v3 introduces a dynamic permission screen that represents a significant departure from the current experience. Today, all enrollees see the same static permission screen regardless of what data an app actually needs. With v3, the permission screen will **only** display the specific FHIR resources the app has explicitly requested via scopes, which may include Patient, Coverage, and/or ExplanationOfBenefit data. This means enrollees are only asked to consent to what is strictly necessary.
 
 The permission screen text has also been updated to be more user-friendly, and enrollees can expand each section to learn more about the specific data being shared before granting consent.
 
-If a user does not click “Share,” then the information will not be shared with the application.&nbsp;
+If a user does not click “Share,” then the information will not be shared with the application.
 
-Additionally, in v3, patients can opt in to share substance use information for applications requesting ExplanationOfBenefit FHIR resources. The default, however, will be set to not share.&nbsp;
+Additionally, in v3, patients can opt in to share substance use information for applications requesting ExplanationOfBenefit FHIR resources. The default, however, will be set to not share.
 
 ![New v3 Permissions Screen](#assets/images/v3-permissions-screen.png)
 
 *The permission screen above reflects an application that is requesting Patient, Coverage, ExplanationOfBenefit FHIR resources.*
 
-### 5. CARIN for Digital Insurance Card (C4DIC) data endpoint
+#### 5. CARIN for Digital Insurance Card (C4DIC) data endpoint
 
-*In v3, a new endpoint,* /v3/fhir/Patient/{patient}/$generate-insurance-card, will be available. This will allow developers to surface digital proof of [Medicare](http://Medicare.gov) coverage to enrollees, providing details on the types of coverage available.&nbsp;
+*In v3, a new endpoint,* `/v3/fhir/Patient/{patient}/$generate-insurance-card`, will be available. This will allow developers to surface digital proof of [Medicare](http://Medicare.gov) coverage to enrollees, providing details on the types of coverage available.
 
-This endpoint references the [CARIN Digital Insurance Card Implementation Guide](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/). It returns a bundle that includes patient and coverage resources conformant to the Digital Insurance Guide profile. An example of this may be found in the [Blue Button Swagger resource](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listDigitalInsuranceCard_v3)&nbsp;
+This endpoint references the [CARIN Digital Insurance Card Implementation Guide](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/). It returns a bundle that includes patient and coverage resources conformant to the Digital Insurance Guide profile. An example of this may be found in the [Blue Button Swagger resource](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listDigitalInsuranceCard_v3)
 
-### 6. New pagination parameter for v3 ExplanationOfBenefit
+#### 6. New pagination parameter for v3 ExplanationOfBenefit
 
 For v3 ExplanationOfBenefit search calls, the \_offset parameter will be used to paginate through an enrollee's claims data, rather than the startIndex parameter.
 
 In v3 ExplanationOfBenefit search calls, 10 records are returned by default. You can return more than 10 by passing in a \_count parameter (the value must be between 1 and 50). So, if an enrollee has 20 claims in v3, you could retrieve the first 10 without passing any parameters, and you could then retrieve the remaining 10 by passing \_offset=10. If you want all the claims data you can get in a single call, pass \_count=50. Further details are available in the [Blue Button Swagger resource.](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listSearchViewExplanationOfBenefits_v3)
 
-# v3 Resources
+## v3 Resources
 
-## v3 Data Dictionary
+### v3 Data Dictionary
 
 **The [Data Dictionary](https://bluebutton.cms.gov/data-dictionary/) is the authoritative source for mappings between the IDR and the FHIR representations of Blue Button v3.**
 
-The Data Dictionary also contains mappings from the CCW column (from the Blue Button API v1/v2 Data Dictionary) to the FHIR element in v3.&nbsp;
+The Data Dictionary also contains mappings from the CCW column (from the Blue Button API v1/v2 Data Dictionary) to the FHIR element in v3.
 
-## v3 synthetic data
+### v3 synthetic data
 
 In Blue Button API v2, synthetic data was generated using [Synthea](https://synthetichealth.github.io/synthea/#home) to approximate the mathematical and statistical properties of real data.
 
-In v3, synthetic data represents how individual fields may be populated. It does not necessarily reflect an individual's longitudinal progression through life. Future plans include generating synthetic data using Synthea.&nbsp;
+In v3, synthetic data represents how individual fields may be populated. It does not necessarily reflect an individual's longitudinal progression through life. Future plans include generating synthetic data using Synthea.
 
 If you find issues with the synthetic data in v3, please reach out to [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov). We want your feedback\!
 
-## Extracting Data Elements from BFD data
+### Extracting Data Elements from BFD data
 
-Blue Button recommends using FHIRPath expressions to extract discrete data elements. FHIRPath expressions are populated in the Data Dictionary. FHIRPath is a specification that provides path-based navigation and is uniquely suited to consistently recommend the isolation of specific elements with minimal code.&nbsp;
+Blue Button recommends using FHIRPath expressions to extract discrete data elements. FHIRPath expressions are populated in the Data Dictionary. FHIRPath is a specification that provides path-based navigation and is uniquely suited to consistently recommend the isolation of specific elements with minimal code.
 
 Review the specification at the [HL7 FHIRPath release](https://hl7.org/fhirpath/N1/).
 
@@ -172,9 +172,9 @@ To resolve references to contained resources, make sure your FHIRPath implementa
 
 ---
 
-# Details of Major Updates in v3
+## Details of Major Updates in v3
 
-## I. Data ingestion frequency in v3
+### I. Data ingestion frequency in v3
 
 In v1/v2, there can be several months' delay between the creation of an enrollee's information and when Blue Button’s upstream data provider, the Beneficiary FHIR Data (BFD) server, receives it. In v3,  we eliminated this lag time. An enrollee's information is now often available several months *before* Medicare coverage starts.
 
@@ -188,57 +188,57 @@ The following table shows the update frequency for data ingested across versions
 | ExplanationOfBenefit \- Part D | Weekly, on Friday | 5 times a week, Sunday to Thursday |
 | ExplanationOfBenefit \- Part A/B (Shared Systems) | N/A | 4 times a week, Sunday and Tuesday to Thursday |
 
-## II. Field mappings and data element changes
+### II. Field mappings and data element changes
 
-Changes include the element name, description, FHIRPath expressions, and other information, such as which Code Systems are applicable (for CMS-specific terminology). View the [Data Dictionary](https://bluebutton.cms.gov/data-dictionaryhttps://bluebutton.cms.gov/data-dictionary//) to explore changes to individual data elements.
+Changes include the element name, description, FHIRPath expressions, and other information, such as which Code Systems are applicable (for CMS-specific terminology). View the [Data Dictionary](https://bluebutton.cms.gov/data-dictionary/) to explore changes to individual data elements.
 
-### Changes to Resource Types
+#### Changes to Resource Types
 
-#### **Patient resource**
+##### **Patient resource**
 
-* Conformance to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/)  
-* Dual eligibility status extensions have been removed and are now available through the Coverage resource  
-* "Member Number" now refers to an individual's MBI  
+* Conformance to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/)
+* Dual eligibility status extensions have been removed and are now available through the Coverage resource
+* "Member Number" now refers to an individual's MBI
 * Patient merge implemented \- See dedicated section below
 
-#### **Coverage resource**
+##### **Coverage resource**
 
-* All extensions replaced with FHIR-conformant extensions \+ proper CodeSystems  
-* Now conform to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/) and US Core 6.1.0.  
-* Rx elements from Part D plans are included in the Part D Coverage resource  
-* Additional Coverage resource for Dual Medicare-Medicaid eligibility status  
-* Reference year \+ reference month concepts deprecated in favor of start and end dates for individual Coverage resources  
+* All extensions replaced with FHIR-conformant extensions \+ proper CodeSystems
+* Now conform to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/) and US Core 6.1.0.
+* Rx elements from Part D plans are included in the Part D Coverage resource
+* Additional Coverage resource for Dual Medicare-Medicaid eligibility status
+* Reference year \+ reference month concepts deprecated in favor of start and end dates for individual Coverage resources
 * Last Updated times are shared between Parts A \+ B and C \+ D. If it is important to determine which coverage changed, we recommend parsing the resource as if it were signed using static canonicalization ([https://build.fhir.org/signatures.html\#variants](https://build.fhir.org/signatures.html#variants))
 
-#### **ExplanationOfBenefit resource**
+##### **ExplanationOfBenefit resource**
 
-* All extensions replaced with FHIR-conformant extensions \+ proper code systems  
-* Claims are mapped to conform to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/)  
-* DME claims now correctly use the Professional profile  
-* Notice of hospice election is available in BFD v3, with claim types 1900 and 2900\. These claims do not receive an adjudicated version, but are almost always followed up with a submitted hospice claim several weeks after the notice of election is available  
-* A new metadata field, `source`, has been added to identify the CMS system from which the information originated:  
-  * `NCH` \= National Claims History (All adjudicated claims for Parts A \+ B)  
-  * `FISS` \= Fiscal Intermediary Shared System (Partially Adjudicated Institutional Claims)  
-  * `MCS` \= Multi-Carrier System (Partially Adjudicated Professional Claims)  
-  * `VMS` \= Viable Information Processing Systems (ViPS) Medicare Shared System (Partially Adjudicated DME claims)  
-  * `DDPS` \= Drug Data Processing System (All Part D claims)  
-  * MAP \= Medicare Adjudication Portal (some professional claims)  
-* A new metadata field, `tag`, groups A+B claims from FISS, MCS, VMS into a single tag, SharedSystem&nbsp;  
-* Includes metadata security labels. Our upstream data provider will return the security tag `42CFRPart2` if an item is determined to be sensitive under an inter-agency agreement with SAMHSA. Partially and fully adjudicated data will have tags to that effect  
-* Consolidation of adjudication-related information to ExplanationOfBenefit.item.adjudication and ExplanationOfBenefit.adjudication  
-* [Addition of claim control numbers to track prior versions of a claim](https://docs.google.com/document/d/1YPzMFMyet0vxnZnJ7dparJjMgnjNPucCL6mC0A_yx-A/edit#deduplicating-claims-and-identifying-duplicates)  
-* ExplanationOfBenefit.created is the effective date of the claim version, as recorded in the claim source (in v2, this field was the day the request to BFD was made)  
+* All extensions replaced with FHIR-conformant extensions \+ proper code systems
+* Claims are mapped to conform to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/)
+* DME claims now correctly use the Professional profile
+* Notice of hospice election is available in BFD v3, with claim types 1900 and 2900\. These claims do not receive an adjudicated version, but are almost always followed up with a submitted hospice claim several weeks after the notice of election is available
+* A new metadata field, `source`, has been added to identify the CMS system from which the information originated:
+  * `NCH` \= National Claims History (All adjudicated claims for Parts A \+ B)
+  * `FISS` \= Fiscal Intermediary Shared System (Partially Adjudicated Institutional Claims)
+  * `MCS` \= Multi-Carrier System (Partially Adjudicated Professional Claims)
+  * `VMS` \= Viable Information Processing Systems (ViPS) Medicare Shared System (Partially Adjudicated DME claims)
+  * `DDPS` \= Drug Data Processing System (All Part D claims)
+  * MAP \= Medicare Adjudication Portal (some professional claims)
+* A new metadata field, `tag`, groups A+B claims from FISS, MCS, VMS into a single tag, SharedSystem
+* Includes metadata security labels. Our upstream data provider will return the security tag `42CFRPart2` if an item is determined to be sensitive under an inter-agency agreement with SAMHSA. Partially and fully adjudicated data will have tags to that effect
+* Consolidation of adjudication-related information to ExplanationOfBenefit.item.adjudication and ExplanationOfBenefit.adjudication
+* [Addition of claim control numbers to track prior versions of a claim](https://docs.google.com/document/d/1YPzMFMyet0vxnZnJ7dparJjMgnjNPucCL6mC0A_yx-A/edit#deduplicating-claims-and-identifying-duplicates)
+* ExplanationOfBenefit.created is the effective date of the claim version, as recorded in the claim source (in v2, this field was the day the request to BFD was made)
 * ExplanationOfBenefit.meta.lastUpdated continues to represent the time the EOB was last updated in BFD. [Three new EOB \_profile search parameters](https://docs.google.com/document/d/1BvuQygz7qvXH8Eu7uF4VnfmA1ilx1PJyKcSKO2NGBr4/edit?tab=t.q4j7egtdkume#heading=h.pdarw3rk27hz)
 
 **Note: Earliest LastUpdated Value in v3**
 
 The earliest lastUpdated value is from March 2026, when the data was initially loaded into BFD.
 
-## III. Metadata filtering {#iii.-metadata-filtering}
+### III. Metadata filtering
 
 v3 exposes three search parameters to allow for filtering on the basis of metadata.
 
-### \_source
+#### \_source
 
 Filtering by \_source filters on the Meta.source key. Both AND and OR operations are supported. (Filtering by AND is useless, however, since its outcome would yield no results matching.)
 
@@ -251,22 +251,22 @@ The sources to filter on, and their constituent data, are below.
 | MCS | Carrier claims from Shared Systems |
 | VMS | DME claims from Shared Systems |
 | DDPS | Part D Data from DDPS |
-| MAP (Not yet implemented) | \[some\] Carrier claims from Shared Systems.&nbsp; |
-| CWF (Not yet implemented) | Prior Authorization data&nbsp; |
+| MAP (Not yet implemented) | \[some\] Carrier claims from Shared Systems. |
+| CWF (Not yet implemented) | Prior Authorization data |
 
-### \_tag
+#### \_tag
 
-v3 currently supports two tags, System-Type and Final-Action, which need to be sent in token format (e.g., system|code). Both AND and OR are supported.&nbsp;
+v3 currently supports two tags, System-Type and Final-Action, which need to be sent in token format (e.g., system|code). Both AND and OR are supported.
 
 | \_tag | What’s returned? |
 | :---- | :---- |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**|SharedSystem | A \+ B claims from the Shared Systems (FISS,MCS,VMS,MAP,CWF) |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**|NationalClaimsHistory | A \+ B claims from the National Claims History |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**|DDPS | Part D claims |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**Final-Action**|FinalAction | Claims that are marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**Final-Action**|NotFinalAction | Claims that are not marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
+| https://bluebutton.cms.gov/fhir/CodeSystem/System-Type \|SharedSystem | A \+ B claims from the Shared Systems (FISS,MCS,VMS,MAP,CWF) |
+| https://bluebutton.cms.gov/fhir/CodeSystem/System-Type \|NationalClaimsHistory | A \+ B claims from the National Claims History |
+| https://bluebutton.cms.gov/fhir/CodeSystem/System-Type \|DDPS | Part D claims |
+| https://bluebutton.cms.gov/fhir/CodeSystem/Final-Action \|FinalAction | Claims that are marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
+| https://bluebutton.cms.gov/fhir/CodeSystem/Final-Action \|NotFinalAction | Claims that are not marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
 
-### \_security
+#### \_security
 
 \_security allows for targeting of SAMHSA-related data. v3 populates a Meta.security token on data that is “sensitive” on the basis of the ACO-OS sensitive data list.
 
@@ -282,11 +282,11 @@ The default behavior is based on the API team certificate.
 | Note v3 should still pass in this parameter. |
 | :---- |
 
-## IV. EOB Profile Support in BFD v3
+### IV. EOB Profile Support in BFD v3
 
-v3's Explanation of Benefits (EOB) resources include several elements, many of which are CMS-specific and may not be needed by all consumers. To reduce payload size and improve interoperability, v3 will support three distinct EOB profiles, allowing API consumers to request only the data they need.&nbsp;
+v3's Explanation of Benefits (EOB) resources include several elements, many of which are CMS-specific and may not be needed by all consumers. To reduce payload size and improve interoperability, v3 will support three distinct EOB profiles, allowing API consumers to request only the data they need.
 
-| \_profile | What’s included? | Financial data included?&nbsp; |
+| \_profile | What’s included? | Financial data included? |
 | :---- | :---- | :---- |
 | CMS Blue Button Profile (default) | All data elements. This is the current default behavior. If no \_profile parameter is provided, the full profile will be returned. | Yes |
 | C4BB Full Profile (filtered) | Returns the full US Realm “core data set” for claims as defined by the [C4BB profiles](https://hl7.org/fhir/us/carin-bb/STU2.2/en/artifacts.html#structures-resource-profiles). | Yes |
@@ -294,61 +294,61 @@ v3's Explanation of Benefits (EOB) resources include several elements, many of w
 
 Profiles are represented in the ExplanationOfBenefit’s meta.profile element.
 
-For those with the “CMS Blue Button” profile, meta.profile will contain both the C4BB url (versioned) \+ a [bluebutton.cms.gov](http://bluebutton.cms.gov) profile. Actual profiles for CMS Blue Button will be published later this summer.&nbsp;
+For those with the “CMS Blue Button” profile, meta.profile will contain both the C4BB url (versioned) \+ a [bluebutton.cms.gov](http://bluebutton.cms.gov) profile. Actual profiles for CMS Blue Button will be published later this summer.
 
 Example: Meta.profiles for a Pharmacy EOB
 
 | “Profile” | Meta.profile |
 | :---- | :---- |
-| Basis | \[“http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-**Pharmacy-Basis|2.2.0**”\] |
-| Regular | \[“http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit**\-Pharmacy|2.2.0**”\] |
-| CMS | \[“http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit**\-Pharmacy|2.2.0**”,”https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-**Pharmacy**”\] |
+| Basis | \[“http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-**Pharmacy-Basis\|2.2.0**”\] |
+| Regular | \[“http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit**\-Pharmacy\|2.2.0**”\] |
+| CMS | \[“http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit**\-Pharmacy\|2.2.0**”,”https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-**Pharmacy**”\] |
 
-&nbsp;
+
 
 **Syntax for profile filtering**
 
-Filtering for profiles is done using the \_profile parameter. If no \_profile parameter is passed, the CMS profile will be returned. While AND and OR syntaxes are supported, using AND provides no value and is not advised.&nbsp;
+Filtering for profiles is done using the \_profile parameter. If no \_profile parameter is passed, the CMS profile will be returned. While AND and OR syntaxes are supported, using AND provides no value and is not advised.
 
-The profiles will **not** require canonicals (e.g., versions), but they *may* be passed. BFD recommends that documentation encourage the default behavior over specifying the CMS profile.&nbsp;
+The profiles will **not** require canonicals (e.g., versions), but they *may* be passed. BFD recommends that documentation encourage the default behavior over specifying the CMS profile.
 
 | Profile | Basis | Regular | CMS Profile |
 | :---- | :---- | :---- | :---- |
-| Pharmacy | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Pharmacy-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis|2.1.0) | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Pharmacy](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy|2.1.0) | [https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Pharmacy](https://bluebutton.cms.gov/fhir/StructureDefinition/Pharmacy-Maximus)&nbsp; |
-| Professional | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Professional-NonClinician-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician-Basis|2.1.0) | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Professional-NonClinician](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|2.1.0) | [https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Professional-NonClinician](https://bluebutton.cms.gov/fhir/StructureDefinition/Professional-Maximus)&nbsp; |
-| Institutional Inpatient | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Inpatient-Institutional-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis)&nbsp; | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Inpatient-Institutional](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|2.2.0) | [https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Institutional-Inpatient](https://bluebutton.cms.gov/fhir/StructureDefinition/Inpatient-Maximus)&nbsp; |
-| Institutional Outpatient | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Outpatient-Institutional-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis)&nbsp; | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Outpatient-Institutional](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis) | [https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Institutional-Outpatient](https://bluebutton.cms.gov/fhir/StructureDefinition/Institutional-Outpatient-Maximus)&nbsp; |
+| Pharmacy | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Pharmacy-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis\|2.1.0) | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Pharmacy](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy\|2.1.0) | [https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Pharmacy](https://bluebutton.cms.gov/fhir/StructureDefinition/Pharmacy-Maximus) |
+| Professional | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Professional-NonClinician-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician-Basis\|2.1.0) | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Professional-NonClinician](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician\|2.1.0) | [https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Professional-NonClinician](https://bluebutton.cms.gov/fhir/StructureDefinition/Professional-Maximus) |
+| Institutional Inpatient | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Inpatient-Institutional-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis) | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Inpatient-Institutional](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional\|2.2.0) | [https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Institutional-Inpatient](https://bluebutton.cms.gov/fhir/StructureDefinition/Inpatient-Maximus) |
+| Institutional Outpatient | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Outpatient-Institutional-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis) | [http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Outpatient-Institutional](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis) | [https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Institutional-Outpatient](https://bluebutton.cms.gov/fhir/StructureDefinition/Institutional-Outpatient-Maximus) |
 
 OR syntax in FHIR uses commas. To query for just CMS institutional inpatient profiled-resources \+ pharmacy basis profiled resources, one would use the following example query:
 
 **GET** ExplanationOfBenefit?\_profile=[https://bluebutton.cms.gov/fhir/StructureDefinition/CMS-ExplanationOfBenefit-Institutional-Inpatient](https://bluebutton.cms.gov/fhir/StructureDefinition/Inpatient-Maximus),[http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis|2.1.0)
 
-## V. Widespread availability of partially adjudicated claims (PAC) data&nbsp;
+### V. Widespread availability of partially adjudicated claims (PAC) data
 
 v3 enables greater availability of non-Final Action claim elements and greater interoperability with adjudicated claims than in v2. They are represented using the ExplanationOfBenefit resource and are profiled to the CARIN Blue Button 2.1.0 profiles. *Partially adjudicated claims data is located in the Shared Systems database. More information about how to query this data is below.*
 
 Disclaimers for non-Final Action claims:
 
-* Claims with outcome \= partial **may contain nonsensical values in coded elements**, such as invalid CPT/HCPCS codes and invalid diagnosis codes, due to their non-finalized nature. This is more likely in claims with a claim type code of 1XXX. ExplanationOfBenefit.outcome can be used to determine the processing stage of a claim.  
-* **Not all fields are available in non-Final Action claims**. Most of these relate to benefit balance information that isn't available until a claim has been fully adjudicated. There is ongoing work to improve parity between data from the Shared Systems and the National Claims History.&nbsp;
+* Claims with outcome \= partial **may contain nonsensical values in coded elements**, such as invalid CPT/HCPCS codes and invalid diagnosis codes, due to their non-finalized nature. This is more likely in claims with a claim type code of 1XXX. ExplanationOfBenefit.outcome can be used to determine the processing stage of a claim.
+* **Not all fields are available in non-Final Action claims**. Most of these relate to benefit balance information that isn't available until a claim has been fully adjudicated. There is ongoing work to improve parity between data from the Shared Systems and the National Claims History.
 
-### How to use Shared Systems data
+#### How to use Shared Systems data
 
-Without any filters applied, v3 will return Part A and Part B data from the National Claims History (NCH), as well as Part D data, by default.&nbsp;
+Without any filters applied, v3 will return Part A and Part B data from the National Claims History (NCH), as well as Part D data, by default.
 
 To access the Shared Systems data, use the \_source or the \_tag parameters as described below to specify the data you’d like to retrieve.
 
-The metadata filters described [in the Metadata Filtering section](#iii.-metadata-filtering) can be used to change this behavior, set API-specific defaults, etc.&nbsp;
+The metadata filters described [in the Metadata Filtering section](#iii-metadata-filtering) can be used to change this behavior, set API-specific defaults, etc.
 
-&nbsp;
 
-#### **Filtering Part A / B data using \_source and \_tag**
 
-Filtering data by a claim’s source system is possible using either the \_source or \_tag parameters.&nbsp;
+##### **Filtering Part A / B data using \_source and \_tag**
 
-&nbsp;
+Filtering data by a claim’s source system is possible using either the \_source or \_tag parameters.
 
-| \_source | Data retrieved&nbsp; |
+
+
+| \_source | Data retrieved |
 | :---- | :---- |
 | `NCH` | Claims for Part A \+ B from the National Claims History |
 | `VMS` | Claims for Part B from VMS |
@@ -357,46 +357,46 @@ Filtering data by a claim’s source system is possible using either the \_sourc
 | `MAP` | Claims for Part B (for now) from MAP |
 | `DDPS` | Part D claims from DDPS |
 
-vs.&nbsp;
+vs.
 
-| \_tag (don’t forget system\!) | Data retrieved&nbsp; |
+| \_tag (don’t forget system\!) | Data retrieved |
 | :---- | :---- |
 | `NationalClaimsHistory` | Claims for Part A \+ B from the National Claims History |
 | `SharedSystem` | Claims for Part A \+ B from VMS, FISS, MCS, and MAP |
-| `DDPS` | Part D claims from DDPS.&nbsp; |
+| `DDPS` | Part D claims from DDPS. |
 
-## VI. New patient ID management&nbsp; {#vi.-new-patient-id-management}
+### VI. New patient ID management
 
-There are two major updates to patient ID management in v3 that address many issues present in v2.&nbsp;
+There are two major updates to patient ID management in v3 that address many issues present in v2.
 
-1. New patient merge feature&nbsp;  
+1. New patient merge feature
 2. Removal of CCW-specific identifiers, such as [BENE\_ID](https://bluebutton.cms.gov/resources/variables/bene_id)
 
-### Issues in v2 solved in v3
+#### Issues in v2 solved in v3
 
-* Duplicative records for a single patient&nbsp;  
-* Some patients had \>1 [BENE\_ID](https://bluebutton.cms.gov/resources/variables/bene_id)&nbsp;  
-  * This field was generated by CCW  in v1/v2 as a unique patient identifier. However, in some edge cases, it was not always unique.&nbsp;  
-* Some patients had \>1 [MBI](https://build.fhir.org/ig/HL7/UTG/NamingSystem-cmsMBI.html)&nbsp;  
+* Duplicative records for a single patient
+* Some patients had \>1 [BENE\_ID](https://bluebutton.cms.gov/resources/variables/bene_id)
+  * This field was generated by CCW  in v1/v2 as a unique patient identifier. However, in some edge cases, it was not always unique.
+* Some patients had \>1 [MBI](https://build.fhir.org/ig/HL7/UTG/NamingSystem-cmsMBI.html)
 * Data not inserted until 5+ months after entitlement in some instances
 
 As a result of these technical problems, users reported that claims and patients that appeared in other data sources were “missing” in the DASG APIs. Users may also have received an excess of "Beneficiary not found" responses or were unable to compare to opt-out information.
 
-### New in v3: Patient merge
+#### New in v3: Patient merge
 
-In v3, there has been a largely reconciled/merge of patients who had duplicative records under more than one identifier. Patient merge is the back-end operation applied by the v3 upstream data provider, in which duplicate patients are “grouped”. Now, v3 will always direct to a single active patient record.&nbsp;
+In v3, there has been a largely reconciled/merge of patients who had duplicative records under more than one identifier. Patient merge is the back-end operation applied by the v3 upstream data provider, in which duplicate patients are “grouped”. Now, v3 will always direct to a single active patient record.
 
 To see which records have been merged, users can refer to the **Patient.link** element. This also describes whether a record "replaces" another or was "replaced-by" another.
 
 Possible ID-based searches in v3:
 
-| Search on past or present MBI | Resource returned contains: The most up-to-date data All MBIs (past \+ present)  Links to other merged MBIs under Patient.link “Replaces” or “replaced by”&nbsp; |
+| Search on past or present MBI | Resource returned contains: The most up-to-date data All MBIs (past \+ present)  Links to other merged MBIs under Patient.link “Replaces” or “replaced by” |
 | :---- | :---- |
 | **Query using BENE\_ID** | No data returned. This field is deprecated in v3. |
 
 *Note: While rare, it is possible that some grouped patients may be ungrouped if upstream systems identify a potential error. If this occurs, the updated record will appear as if it were never grouped.*
 
-### Example of a patient merge&nbsp;
+#### Example of a patient merge
 
 Below is an example of a **Patient.link** element of a surviving Patient resource. This illustrates how the current Patient resource replaces `Patient/234567891`
 
@@ -412,9 +412,9 @@ Below is an example of a **Patient.link** element of a surviving Patient resourc
     ]
 ```
 
-`On Patient/234567891, the following link would be present, indicating it was replaced by Patient/12345.`&nbsp;
+On `Patient/234567891`, the following link would be present, indicating it was replaced by `Patient/12345.`
 
-&nbsp;
+
 
 ```json
 "link": [
@@ -428,53 +428,53 @@ Below is an example of a **Patient.link** element of a surviving Patient resourc
     ]
 ```
 
-## VII. Improved FHIR conformance
+### VII. Improved FHIR conformance
 
 v3 resources conform with CARIN for Blue Button version 2.1.0, which itself builds upon US Core 6.1.0. BFD v3 supports FHIR R4.
 
-### \\Extension/Terminology changes to CodeSystem/StructureDefinition resources
+#### \\Extension/Terminology changes to CodeSystem/StructureDefinition resources
 
 v3 retires the usage of [http://bluebutton.cms.gov/resources/](http://bluebutton.cms.gov/resources/) to represent extensions and CodeSystems. Instead, these are properly represented in v3 using StructureDefinition and CodeSystem resources.
 
-#### **Example**
+##### **Example**
 
 | v1/v2 | v3 |
 | :---- | :---- |
-| The "Near Line Record Identification Code" uses an extension at [https://bluebutton.cms.gov/resources/variables/nch\_near\_line\_rec\_ident\_cd/](https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd/). This address references a code system with the same URL.&nbsp; | The extension has the URL [https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-NRLN-RIC-CD](https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-NRLN-RIC-CD), is represented as a StructureDefinition, and references the FHIR CodeSystem resource [https://bluebutton.cms.gov/fhir/CodeSystem/CLM-NRLN-RIC-CD](https://bluebutton.cms.gov/fhir/CodeSystem/CLM-NRLN-RIC-CD). |
+| The "Near Line Record Identification Code" uses an extension at [https://bluebutton.cms.gov/resources/variables/nch\_near\_line\_rec\_ident\_cd/](https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd/). This address references a code system with the same URL. | The extension has the URL [https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-NRLN-RIC-CD](https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-NRLN-RIC-CD), is represented as a StructureDefinition, and references the FHIR CodeSystem resource [https://bluebutton.cms.gov/fhir/CodeSystem/CLM-NRLN-RIC-CD](https://bluebutton.cms.gov/fhir/CodeSystem/CLM-NRLN-RIC-CD). |
 
-&nbsp;
+
 
 In the [Data Dictionary,](https://docs.google.com/document/d/1BvuQygz7qvXH8Eu7uF4VnfmA1ilx1PJyKcSKO2NGBr4/edit?tab=t.q4j7egtdkume#heading=h.eycxh5rhk13p) fields populated by a CMS code system have a link to the CodeSystem URL in the referenceTable column. FHIRPath expressions for extracting these fields also reference the extension URLs to target the extraction of individual resources.
 
-## VIII. Accessing Partially Adjudicated Claims via  Shared Systems&nbsp;
+### VIII. Accessing Partially Adjudicated Claims via  Shared Systems
 
-Blue Button v3 gives applications access to claims data from CMS's Shared Systems (FISS for institutional claims, MCS for professional claims, and VMS for DME claims) well before a claim finishes adjudication. Where fully adjudicated Part A/B data can take weeks to appear, Shared Systems data is typically available within days of a provider submitting a claim.&nbsp;
+Blue Button v3 gives applications access to claims data from CMS's Shared Systems (FISS for institutional claims, MCS for professional claims, and VMS for DME claims) well before a claim finishes adjudication. Where fully adjudicated Part A/B data can take weeks to appear, Shared Systems data is typically available within days of a provider submitting a claim.
 
-What this enables for your application:&nbsp;
+What this enables for your application:
 
-* Near real-time visibility into an enrollee's care. For example, surfacing a hospital discharge within days rather than weeks.&nbsp;  
-* Earlier detection of care events that may need follow-up (e.g., a procedure or ER visit that hasn't yet been fully processed).&nbsp;  
-* The ability to build dashboards or alerts driven by claim submission rather than final adjudication.&nbsp;
+* Near real-time visibility into an enrollee's care. For example, surfacing a hospital discharge within days rather than weeks.
+* Earlier detection of care events that may need follow-up (e.g., a procedure or ER visit that hasn't yet been fully processed).
+* The ability to build dashboards or alerts driven by claim submission rather than final adjudication.
 
-### How it works
+#### How it works
 
-1. A provider submits a claim to Medicare.&nbsp;  
-2. The claim is picked up by the relevant Shared System (FISS, MCS, or VMS) and becomes available in Blue Button v3, tagged SharedSystem, with outcome=partial or outcome=complete depending on processing status.&nbsp;  
-3. As the claim is adjusted or finalized, the Shared Systems record updates in place — your application should expect to see the same claim change over time (see Claim Control Numbers, Section XI, for how to track this).&nbsp;  
-4. Once the claim is fully adjudicated, it also appears in the National Claims History (NCH) source, tagged NationalClaimsHistory.&nbsp;
+1. A provider submits a claim to Medicare.
+2. The claim is picked up by the relevant Shared System (FISS, MCS, or VMS) and becomes available in Blue Button v3, tagged SharedSystem, with outcome=partial or outcome=complete depending on processing status.
+3. As the claim is adjusted or finalized, the Shared Systems record updates in place — your application should expect to see the same claim change over time (see Claim Control Numbers, Section XI, for how to track this).
+4. Once the claim is fully adjudicated, it also appears in the National Claims History (NCH) source, tagged NationalClaimsHistory.
 
-&nbsp;
 
-&nbsp;
+
+
 
 | Note:  Shared Systems data applies only to Part A/B claims. There is no partially adjudicated feed for Part D (prescription drug) claims. Part D claims, sourced from DDPS, are only available in Blue Button once fully adjudicated. Applications should not build logic that expects a "partial" state for Part D EOBs. For details on filtering by source/tag, see Section II. For deduplication guidance as a claim moves from partial to final, see Section XI. |
 | :---- |
 
-## IX. Claim Adjudication using ‘Outcome’, and ‘Final Action’
+### IX. Claim Adjudication using ‘Outcome’, and ‘Final Action’
 
-### Outcome
+#### Outcome
 
-v3 exposes all claims as ExplanationOfBenefit resources. The processing status of claims is enumerated in ExplanationOfBenefit.outcome ([https://hl7.org/fhir/R4/explanationofbenefit-definitions.html\#ExplanationOfBenefit.outcome](https://hl7.org/fhir/R4/explanationofbenefit-definitions.html#ExplanationOfBenefit.outcome))&nbsp;
+v3 exposes all claims as ExplanationOfBenefit resources. The processing status of claims is enumerated in ExplanationOfBenefit.outcome ([https://hl7.org/fhir/R4/explanationofbenefit-definitions.html\#ExplanationOfBenefit.outcome](https://hl7.org/fhir/R4/explanationofbenefit-definitions.html#ExplanationOfBenefit.outcome))
 
 The values for outcome are:
 
@@ -485,7 +485,7 @@ The values for outcome are:
 | queued | Received but not yet processed | Very rare to encounter |
 | error | An error in processing occurred | This status is mapped but should never show up in practice. |
 
-&nbsp;
+
 
 Outcome values by source:
 
@@ -496,9 +496,9 @@ Outcome values by source:
 | Shared Systems | CLM\_PD\_STUS\_CD IN ( P, 1, R, 2, D, Y) | complete |
 | Shared Systems | CLM\_PD\_STUS\_CD IN ('\~',I,S, T) | partial |
 
-&nbsp;
 
-v3 exposes a search parameter on the outcome element.&nbsp;
+
+v3 exposes a search parameter on the outcome element.
 
 Syntax (using OR):
 
@@ -508,102 +508,102 @@ Syntax (just one):
 
 `/ExplanationOfBenefit?outcome=complete`
 
-These can be combined with other search parameters.&nbsp;
+These can be combined with other search parameters.
 
-&nbsp;
 
-| Note:  Because NCH claims load only weekly, filtering for non-fully adjudicated claims may result in partial claims. It is a best practice to avoid searching using outcome=partial by itself to avoid missing claims.&nbsp; |
+
+| Note:  Because NCH claims load only weekly, filtering for non-fully adjudicated claims may result in partial claims. It is a best practice to avoid searching using outcome=partial by itself to avoid missing claims. |
 | :---- |
 
-### Final Action
+#### Final Action
 
 In the IDR, Final Action is “A VALUE INDICATING A FINAL ACTION CLAIM. VALID VALUES: Y \= FINAL ACTION CLAIM, NOT VOIDED. N \= NOT FINAL ACTION CLAIM.”
 
-&nbsp;
 
-| Note:  Final Action is not guaranteed to correlate to processing status. A queued claim can be “final action,” and a claim that has completed processing can be in a non-“final action” status. A claim marked as Final Action in NCH can be “not final action” in the Shared Systems. We expose Final Action as a tag, but do not recommend its usage.&nbsp; |
+
+| Note:  Final Action is not guaranteed to correlate to processing status. A queued claim can be “final action,” and a claim that has completed processing can be in a non-“final action” status. A claim marked as Final Action in NCH can be “not final action” in the Shared Systems. We expose Final Action as a tag, but do not recommend its usage. |
 | :---- |
 
-## X. Deduplicating claims and identifying duplicates
+### X. Deduplicating claims and identifying duplicates
 
-### v3 returns only the most recent version of a claim&nbsp;
+#### v3 returns only the most recent version of a claim
 
-In v2, when users call up a specific patient’s data, they will see all past claims –  potentially dozens. In v3, the system automatically handles claims deduplication **from the same source**. It will only surface the latest version of a claim as indicated by its upstream source. **The system does not de-duplicate between sources** of claims information.&nbsp;
+In v2, when users call up a specific patient’s data, they will see all past claims –  potentially dozens. In v3, the system automatically handles claims deduplication **from the same source**. It will only surface the latest version of a claim as indicated by its upstream source. **The system does not de-duplicate between sources** of claims information.
 
 This means that there are two possible scenarios:
 
 | Scenario | API behavior | Tags (\_tag) | Source (\_source) |
 | :---- | :---- | :---- | :---- |
 | A user calls up a claim that is still being adjudicated. The claim is volatile and updates often. | 1 EOB is returned | SharedSystem | FISS/MCS/VMS |
-| A user calls up an adjudicated claim. The claim has been processed and finalized. | 2 EOB resources are returned One from Shared Systems One from the National Claims History&nbsp; | 1 claim with \_tag= SharedSystem 1 claim with \_tag= NationalClaimsHistory&nbsp; | 1 claim from FISS/MCS/VMS 1 claim from NCH |
+| A user calls up an adjudicated claim. The claim has been processed and finalized. | 2 EOB resources are returned One from Shared Systems One from the National Claims History | 1 claim with \_tag= SharedSystem 1 claim with \_tag= NationalClaimsHistory | 1 claim from FISS/MCS/VMS 1 claim from NCH |
 
-### Claim Control Numbers in v3
+#### Claim Control Numbers in v3
 
-In CMS claims-processing systems, all institutional and professional claims are assigned a Claim Control Number. This is represented in three fields in the IDR:&nbsp;
+In CMS claims-processing systems, all institutional and professional claims are assigned a Claim Control Number. This is represented in three fields in the IDR:
 
-* CLM.CLM\_CNTL\_NUM  
-* CLM.CLM\_ORIG\_CNTL\_NUM  
-* CLM.CLM\_PRNT\_CNTL\_NUM&nbsp;
+* CLM.CLM\_CNTL\_NUM
+* CLM.CLM\_ORIG\_CNTL\_NUM
+* CLM.CLM\_PRNT\_CNTL\_NUM
 
 The claim control numbers uniquely identify a claim based on CLM\_CNTL\_NUM, BENE\_SK, and CLM\_FROM\_DT. This information can be used to deduplicate across different versions of the same claim within the same source \+ across claims from the Shared Systems \+ NCH.
 
-The claim control number can be extracted by executing the FHIRPath expression: `ExplanationOfBenefit.identifier.where('system'='https://bluebutton.cms.gov/fhir/CodeSystem/CLM-CNTL-NUM').value`&nbsp;
+The claim control number can be extracted by executing the FHIRPath expression: `ExplanationOfBenefit.identifier.where('system'='https://bluebutton.cms.gov/fhir/CodeSystem/CLM-CNTL-NUM').value`
 
 The original claim control number (if available) can be extracted by executing the FHIRPath expression: `ExplanationOfBenefit.related.where(relationship.coding.system = 'http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship').reference.where(system='https://bluebutton.cms.gov/identifiers/CLM-CNTL-NUM').value`
 
-### How to deduplicate claims with `CLM-CNTL-NUM`
+#### How to deduplicate claims with `CLM-CNTL-NUM`
 
-To identify duplicates using the claim control number, you can identify all claims for a given enrollee with the same ExplanationOfBenefit.billablePeriod.start that share the same CLM-CNTL-NUM (in either identifier or related). The latest version of the claim is currently accessible via BFD.&nbsp;
+To identify duplicates using the claim control number, you can identify all claims for a given enrollee with the same ExplanationOfBenefit.billablePeriod.start that share the same CLM-CNTL-NUM (in either identifier or related). The latest version of the claim is currently accessible via BFD.
 
 There may be some instances in which a claim can't be deduplicated via the `CLM-CNTL-NUM`. This happens infrequently, most often when a claim is submitted incorrectly or goes through a significant number of revisions. Additionally, there are slight differences in how the various CMS systems track claim control numbers.
 
-#### **Professional claims**
+##### **Professional claims**
 
 Professional claims should be deduplicated by the `CLM-CNTL-NUM` on a per-enrollee basis. One difference between professional claims from MCS and NCH is that NCH claims will never populate a new claim control number; they will have the original control number. Updated MCS claims with a new control number will populate both the new \+ parent control number.
 
-#### **Part D claims**
+##### **Part D claims**
 
 Part D claims are submitted to CMS by the Part D plan sponsors (both PDPs \+ MA). As a result, not all Part D claims have a claim control number, but those that do can be deduplicated using it. ExplanationOfBenefit.related will be populated with the claim’s original control number, if different than the current control number.
 
-#### **Institutional claims**
+##### **Institutional claims**
 
-Institutional claims can be deduplicated by using the claim control number on a per-enrollee basis. This is distinct from institutional claim ‘grouping’.&nbsp;
+Institutional claims can be deduplicated by using the claim control number on a per-enrollee basis. This is distinct from institutional claim ‘grouping’.
 
-&nbsp;
 
-| Note:  *Phase 1 (claim type code 1XXX) claims can contain many duplicates that may not be marked as related upstream of BFD. This means BFD cannot deduplicate them based on the claim that eventually gets processed. These claims are abandoned in claims processing.*&nbsp; |
+
+| Note:  *Phase 1 (claim type code 1XXX) claims can contain many duplicates that may not be marked as related upstream of BFD. This means BFD cannot deduplicate them based on the claim that eventually gets processed. These claims are abandoned in claims processing.* |
 | :---- |
 
 *To avoid duplicates, any Shared Systems claims with a 1XXX claim type code that have not received updates for 60 days will be deleted from v3. This is most common with institutional claims. It can generally be inferred by a significant number of fields that two resources are identical in everything except payment and `CLM-CNTL-NUM`.*
 
-FISS and NCH have slightly different logic for CLM-CNTL-NUMs. The EoB.related claim control number on an institutional claim will always be the original claim control number. However, in NCH, if an institutional claim receives multiple rounds of claim control numbers, only the parent will be populated in EoB.related.&nbsp;
+FISS and NCH have slightly different logic for CLM-CNTL-NUMs. The EoB.related claim control number on an institutional claim will always be the original claim control number. However, in NCH, if an institutional claim receives multiple rounds of claim control numbers, only the parent will be populated in EoB.related.
 
-#### DME-specific notes
+##### DME-specific notes
 
-When VMS processes a claim and releases it to the NCH, the leading digit (a 1\) is dropped from the CLM-CNTL-NUM due to a design decision made in preparation for Y2K.&nbsp;
+When VMS processes a claim and releases it to the NCH, the leading digit (a 1\) is dropped from the CLM-CNTL-NUM due to a design decision made in preparation for Y2K.
 
 **Example:**
 
-| VMS Claim Control Number | NCH Claim Control Number&nbsp; |
+| VMS Claim Control Number | NCH Claim Control Number |
 | :---- | :---- |
 | 1222222222222222 | 222222222222222 |
 
-## XI. Data for Medicare Advantage enrollees&nbsp;
+### XI. Data for Medicare Advantage enrollees
 
-### v2 limitations in Medicare Advantage enrollee data
+#### v2 limitations in Medicare Advantage enrollee data
 
-Like v2, v3 surfaces claims for enrollees covered by a Medicare Advantage (Part C) plan. Certain claims are limited in v2. For&nbsp;
+Like v2, v3 surfaces claims for enrollees covered by a Medicare Advantage (Part C) plan. Certain claims are limited in v2. For
 
-1. Medicare Advantage enrollees in research studies and&nbsp;  
-2. Those in a 30-month transition period for End-Stage Renal Disease (ESRD),&nbsp;
+1. Medicare Advantage enrollees in research studies and
+2. Those in a 30-month transition period for End-Stage Renal Disease (ESRD),
 
 claims are generally limited to certain SNF claims, hospice claims, and professional/carrier claims.
 
-### v3 additions to available data
+#### v3 additions to available data
 
 v3 makes information-only inpatient data available to organizations. If an enrollee enrolled in a Medicare Advantage plan has an inpatient stay at a facility using the [Inpatient Prospective Payment System (IPPS)](https://www.cms.gov/cms-guide-medical-technology-companies-and-other-interested-parties/payment/ipps), the facility will submit claims to:
 
-* The Medicare Advantage plan  
+* The Medicare Advantage plan
 * As a copy to the [Medicare Administrative Contractor (MAC)](https://www.cms.gov/medicare/coding-billing/medicare-administrative-contractors-macs/whats-mac) marked as "no bill"
 
 These claims have a `CLM_RLT_COND_CD` value of `04` (indicating information only). They generally have claim type codes of `61`, `62`, `63`, or `64`, but also appear for hospice and SNF claims

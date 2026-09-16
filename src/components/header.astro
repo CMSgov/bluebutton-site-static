@@ -1,27 +1,15 @@
 ---
-import type { RouteId, RouteOptions } from 'astro-typesafe-routes/path'
-
 import LogoBlueButton from '#assets/images/logo-bluebutton.svg'
 import IconClose from '@uswds/uswds/img/usa-icons/close.svg'
 import Link from './link.astro'
-// import { getApiCollection, getDataCollection } from '#utils/collections'
+import { getCollection } from 'astro:content'
+import { getProductionCollection } from '../utils/collections'
 
-type RoutesArray<T extends RouteId> = (RouteOptions<T> & Record<string, any>)[]
-
-// const docsnavLinks = (await getApiCollection()).map((doc) => ({
-//   to: '/api-documentation/[...slug]',
-//   params: {
-//     slug: doc.id,
-//   },
-//   label: doc.data.title,
-// })) satisfies RoutesArray<'/api-documentation/[...slug]'>
-// const datanavLinks = (await getDataCollection()).map((doc) => ({
-//   to: '/data/[...slug]',
-//   params: {
-//     slug: doc.id,
-//   },
-//   label: doc.data.title,
-// })) satisfies RoutesArray<'/data/[...slug]'>
+const docsnavLinks = await getCollection('static', ({ id }) => id.startsWith('api-documentation/'))
+const guidesnavLinks = await getCollection('static', ({ id }) => id.startsWith('guides/'))
+const datanavLinks = await getCollection('static', ({ id }) => id.startsWith('data/'))
+const quickStartLinks = await getCollection('static', ({ id }) => id.startsWith('quickstart/'))
+const productionLinks = await getProductionCollection()
 
 const isActive = (path: string) => Astro.url.pathname.startsWith(path)
 ---
@@ -50,14 +38,28 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
         </button>
         <ul class="usa-nav__primary usa-accordion">
           <li class="usa-nav__primary-item">
-            <Link
-              to="/[...slug]"
-              params={{ slug: 'use-cases' }}
-              class:list={['usa-nav-link', isActive('/use-cases') ? 'usa-current' : null]}
-              data-tealium="navigation"
+            <button
+              type="button"
+              class:list={['usa-accordion__button usa-nav__link', isActive('/quickstart') ? 'usa-current' : null]}
+              aria-expanded="false"
+              aria-controls="basic-nav-section-five"
             >
-              <span>Use Cases</span>
-            </Link>
+              <span>Quickstart</span>
+            </button>
+            <ul id="basic-nav-section-five" class="usa-nav__submenu" hidden>
+              <li class="usa-nav__submenu-item">
+                <Link to="/[...slug]" params={{ slug: 'quickstart' }} data-tealium="main_nav">Overview</Link>
+              </li>
+              {
+                quickStartLinks.map((link) => (
+                  <li class="usa-nav__submenu-item">
+                    <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
+                      {link.data.title}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
           </li>
           <li class="usa-nav__primary-item">
             <button
@@ -75,15 +77,39 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
               <li class="usa-nav__submenu-item">
                 <Link to="/[...slug]" params={{ slug: 'api-documentation' }} data-tealium="main_nav">Get Started</Link>
               </li>
-              <!-- {
+              {
                 docsnavLinks.map((link) => (
                   <li class="usa-nav__submenu-item">
-                    <Link to={link.to} params={link.params} data-tealium="main_nav">
-                      {link.label}
+                    <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
+                      {link.data.title}
                     </Link>
                   </li>
                 ))
-              } -->
+              }
+            </ul>
+          </li>
+          <li class="usa-nav__primary-item">
+            <button
+              type="button"
+              class:list={['usa-accordion__button usa-nav__link', isActive('/guides') ? 'usa-current' : null]}
+              aria-expanded="false"
+              aria-controls="basic-nav-section-three"
+            >
+              <span>Guides</span>
+            </button>
+            <ul id="basic-nav-section-three" class="usa-nav__submenu" hidden>
+              <li class="usa-nav__submenu-item">
+                <Link to="/[...slug]" params={{ slug: 'guides' }} data-tealium="main_nav">Get Started</Link>
+              </li>
+              {
+                guidesnavLinks.map((link) => (
+                  <li class="usa-nav__submenu-item">
+                    <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
+                      {link.data.title}
+                    </Link>
+                  </li>
+                ))
+              }
             </ul>
           </li>
           <li class="usa-nav__primary-item">
@@ -99,28 +125,43 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
               <li class="usa-nav__submenu-item">
                 <Link to="/[...slug]" params={{ slug: 'data' }} data-tealium="main_nav">Overview</Link>
               </li>
-              <!-- {
+              {
                 datanavLinks.map((link) => (
                   <li class="usa-nav__submenu-item">
-                    <Link to={link.to} params={link.params} data-tealium="main_nav">
-                      {link.label}
+                    <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
+                      {link.data.title}
                     </Link>
                   </li>
                 ))
-              } -->
+              }
               <li class="usa-nav__submenu-item">
                 <Link to="/data-dictionary" data-tealium="main_nav">Data Dictionary</Link>
               </li>
             </ul>
           </li>
           <li class="usa-nav__primary-item">
-            <Link
-              to="/support"
-              class:list={['usa-nav-link', isActive('/support') ? 'usa-current' : null]}
-              data-tealium="navigation"
+            <button
+              type="button"
+              class:list={['usa-accordion__button usa-nav__link', isActive('/production') ? 'usa-current' : null]}
+              aria-expanded="false"
+              aria-controls="basic-nav-section-four"
             >
-              <span>Support</span>
-            </Link>
+              <span>Production</span>
+            </button>
+            <ul id="basic-nav-section-four" class="usa-nav__submenu" hidden>
+              <li class="usa-nav__submenu-item">
+                <Link to="/[...slug]" params={{ slug: 'production' }} data-tealium="main_nav">Overview</Link>
+              </li>
+              {
+                productionLinks.map((link) => (
+                  <li class="usa-nav__submenu-item">
+                    <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
+                      {link.data.title}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
           </li>
         </ul>
         <div class="desktop:padding-left-1 margin-top-4 desktop:margin-top-0">
