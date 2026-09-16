@@ -28,7 +28,7 @@ const restTerms = allTerms.slice(1)
         <li>
           <Link to="/terms/[...slug]" params={{ slug: '' }}>
             Blue Button {currentTerms.data.title}. Published {currentTerms.data.publishedDate?.toLocaleDateString()}
-            {` `}({currentTerms.id} - Current Version)
+            {` `}({currentTerms.id.split('/').pop()} - Current Version)
           </Link>
         </li>
         {
@@ -36,7 +36,7 @@ const restTerms = allTerms.slice(1)
             <li>
               <Link to="/terms/[...slug]" params={{ slug: terms.id }}>
                 Blue Button {terms.data.title}. Published {terms.data.publishedDate?.toLocaleDateString()}
-                {` `}({terms.id})
+                {` `}({terms.id.split('/').pop()})
               </Link>
             </li>
           ))
