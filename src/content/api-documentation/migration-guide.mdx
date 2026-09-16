@@ -46,7 +46,7 @@ If you are a Blue Button API user with an application that uses v1 or v2 of the 
 
 There are changes coming in v3, many of which were developed with input from Blue Button users.
 
-1. ### Endpoint structure
+### 1. Endpoint structure
 
 As an application developer, the endpoints you use will remain consistent. The Blue Button v1/v2 endpoint structure is&nbsp;
 
@@ -67,7 +67,7 @@ The v3 endpoint *structure* is unchanged. That is, all v2 endpoints have a v3 an
 
 In terms of structure, under v3, Blue Button adds a new endpoint that provides a [CARIN for Digital Insurance Card](https://hl7.org/fhir/us/insurance-card/STU1.1/) (C4DIC) bundle, described later in this document under **CARIN for Digital Insurance Card (C4DIC) data endpoint**. Note that the shape of the data returned from v3 endpoints changes in several critical ways, so even if the URLs look familiar, developers will need to address the differences in the shape of the FHIR data that is returned under v3.
 
-2. ### Token Usage Across v1/v2 and v3
+### 2. Token Usage Across v1/v2 and v3
 
 #### v1/v2 tokens compatible with v3&nbsp;
 
@@ -102,7 +102,7 @@ Any v3 token where the enrollee has opted out of sharing substance use data cann
 
 **What this means for your app**: If your application uses v2 EOB endpoints with tokens obtained through the v3 auth flow, check whether the enrollee has opted out of substance use data sharing. If they have, EOB requests on v2 will fail. We recommend migrating EOB data retrieval to the v3 endpoint to fully support enrollee preferences.
 
-3. ### &nbsp;FHIR IDs in v2 and v3
+### 3. FHIR IDs in v2 and v3
 
 FHIR IDs for Patient resources will differ between v2 and v3. In v2, the FHIR ID was a construct of the CMS Chronic Conditions Warehouse (CCW), the upstream data provider for v2. In v3, data is sourced from the Integrated Data Repository (IDR). Review the [New Patient Management](#vi.-new-patient-id-management) section for additional details.
 
@@ -114,7 +114,7 @@ If your resource requests use the Patient `id` value, either in the path or as a
 
 Otherwise, you will get errors and be unable to pull data for the user.
 
-4. ### Scopes and how beneficiaries grant permissions
+### 4. Scopes and how beneficiaries grant permissions
 
 In v2, we did not require apps to send scopes on authorize requests. When no scope parameter was provided, we would provide a default set of scopes on the resulting access token.&nbsp;
 
@@ -134,13 +134,13 @@ Additionally, in v3, patients can opt in to share substance use information for 
 
 *The permission screen above reflects an application that is requesting Patient, Coverage, ExplanationOfBenefit FHIR resources.*
 
-5. ### CARIN for Digital Insurance Card (C4DIC) data endpoint
+### 5. CARIN for Digital Insurance Card (C4DIC) data endpoint
 
 *In v3, a new endpoint,* /v3/fhir/Patient/{patient}/$generate-insurance-card, will be available. This will allow developers to surface digital proof of [Medicare](http://Medicare.gov) coverage to enrollees, providing details on the types of coverage available.&nbsp;
 
 This endpoint references the [CARIN Digital Insurance Card Implementation Guide](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/). It returns a bundle that includes patient and coverage resources conformant to the Digital Insurance Guide profile. An example of this may be found in the [Blue Button Swagger resource](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listDigitalInsuranceCard_v3)&nbsp;
 
-6. ### New pagination parameter for v3 ExplanationOfBenefit
+### 6. New pagination parameter for v3 ExplanationOfBenefit
 
 For v3 ExplanationOfBenefit search calls, the \_offset parameter will be used to paginate through an enrollee's claims data, rather than the startIndex parameter.
 
