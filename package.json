@@ -16,7 +16,7 @@
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.0",
     "@astrojs/mdx": "^8.0.0",
-    "@astrojs/preact": "^6.0.4",
+    "@astrojs/preact": "^6.0.5",
     "@astrojs/sitemap": "^3.7.3",
     "@fontsource-variable/open-sans": "^5.3.0",
     "@uswds/uswds": "3.14.0",
