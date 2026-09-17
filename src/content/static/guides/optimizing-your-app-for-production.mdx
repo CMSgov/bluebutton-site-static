@@ -88,7 +88,7 @@ Before your production demo, test these scenarios:
 * **Multiple users** Test with several synthetic users (use the synthetic users CSV (LINK: TBD) to find users with different claim volumes)  
 * **Large datasets** Some synthetic users have hundreds of claims. Verify your pagination handles them  
 * **Missing demographics** Simulate a user who denies `patient/Patient.rs` scope access  
-* **Token expiration** Use the sandbox `/expireauthenticateduser` endpoint (see [Testing token expiration](/guides/authentication-and-oath/#testing-token-expiration)) to test expired tokens  
+* **Token expiration** Use the sandbox `/expireauthenticateduser` endpoint (see [Testing token expiration](/guides/authentication-and-oauth/#testing-token-expiration)) to test expired tokens  
 * **Revoked access** Test what happens when a user disconnects your app  
 * **All claim types** Verify your app handles carrier, inpatient, outpatient, PDE, DME, HHA, hospice, and SNF claims  
 * **Error handling** Test 401, 403, 404, and 429 responses
