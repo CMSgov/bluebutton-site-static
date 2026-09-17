@@ -21,7 +21,7 @@ There are 3 categories for data access duration:
 ## Make a request 
 Blue Button has three main FHIR resources. Here's how to fetch each one:
 
-```
+```bash title="Terminal"
 # Patient — demographics
 curl "https://sandbox.bluebutton.cms.gov/v2/fhir/Patient" \
   -H "Accept: application/json" \
@@ -49,7 +49,7 @@ For the full list of endpoints and parameters, see the [API Documentation](/api-
 
 Search operations (`/Patient`, /`ExplanationOfBenefit`) return a FHIR Bundle. A Bundle is a container that holds a list of matching resources.
 
-```
+```json
 {
   "resourceType": "Bundle",
   "type": "searchset",
@@ -79,13 +79,11 @@ Use the following fields to work with the response:
 
 Read operations with an ID (`/Patient`/-9985028219431) return a single resource directly, not wrapped in a Bundle.
 
-Note: ***you can only access data for the enrollee who authorized your application***
+<Alert size="slim">**Note:** you can only access data for the enrollee who authorized your application</Alert>
 
 *The FHIR ID in your request must match the enrollee who authorized your application. You cannot substitute another enrollee's FHIR ID and retrieve their data. If you request an unauthorized FHIR ID, the API returns an error, not another enrollee's records. Each enrollee authorizes access only to their own data.*
 
-TIP
-
-EOB bundles can be large: some enrollees have hundreds of claims. See [Handling Pagination](/guides/handling-pagination/) for how to retrieve all pages.
+<Alert size="slim" variant="success">**Tip:** EOB bundles can be large: some enrollees have hundreds of claims. See [Handling Pagination](/guides/handling-pagination/) for how to retrieve all pages.</Alert>
 
 ## Working with identifiers 
 
@@ -103,7 +101,7 @@ For example, you can use discriminators to pull the current MBI from a Patient r
 
 Patient identifier example:
 
-```
+```json
 {
   "identifier": [
     {
@@ -123,7 +121,7 @@ Patient identifier example:
           }
         ]
       },
-      "value": "<CURRENT MBI HERE>"
+      "value": "<CURRENT_MBI_HERE>"
     },
     {
       "system": "http://hl7.org/fhir/sid/us-mbi",
@@ -142,7 +140,7 @@ Patient identifier example:
           }
         ]
       },
-      "value": "<HISTORIC MBI HERE>"
+      "value": "<HISTORIC_MBI_HERE>"
     }
   ]
 }
@@ -152,22 +150,22 @@ Example [FHIRPath expression](https://hl7.org/fhir/fhirpath.html) for pulling th
 
 ```
 Patient.identifier
-.where(type.coding.extension('https://bluebutton.cms.gov/resources/codesystem/identifier-currency').valueCoding.code='current')
-.where(system='http://hl7.org/fhir/sid/us-mbi')
-.value
+  .where(type.coding.extension('https://bluebutton.cms.gov/resources/codesystem/identifier-currency').valueCoding.code='current')
+  .where(system='http://hl7.org/fhir/sid/us-mbi')
+  .value
 ```
 
 ## Working with references
 
 The Blue Button API uses both [literal](https://www.hl7.org/fhir/references.html#literal) and [logical](https://www.hl7.org/fhir/references.html#logical) (FHIR references to refer to other resources/data external to the resource.
 
-### **Literal references**
+### Literal references
 
 For literal references, relative URLs are provided. In the sample EOB resource below, the Eob.patient attribute contains a relative URL reference, Patient/123. Append this path to the base FHIR URL to perform a Patient read operation.
 
 Literal reference example:
 
-```
+```json
 {
   "resource": {
     "resourceType": "ExplanationOfBenefit",
@@ -180,13 +178,13 @@ Literal reference example:
 }
 ```
 
-### **Contained resources**
+### Contained resources
 
 The Blue Button API also uses fragments and [contained resources](https://www.hl7.org/fhir/references.html#contained). A resource that does not have independent existence is embedded inside another resource as a contained resource. For example, the Organization resource does not have its own endpoint. Instead, it is supplied as a contained resource with EOB. In the example EOB resource below, the Organization resource is within the Eob.contained attribute, and the Eob.provider attribute has a \# reference to contained.id (\#provider-org).  
 
 Contained resource example:
 
-```
+```json
 {
   "contained": [
     {
@@ -213,7 +211,7 @@ Contained resource example:
 },
 ```
 
-### **Logical references**
+### Logical references
 
 [Logical references](https://www.hl7.org/fhir/references.html#logical) usually provide a business identifier rather than a URL to an endpoint or a contained resource.
 
@@ -221,7 +219,7 @@ In the example below, the `Eob.careTeam.provider` attribute contains a reference
 
 Logical reference example:
 
-```
+```json
 {
   "careTeam": [
     {
@@ -255,11 +253,11 @@ In the example below, there are two extensions:
 * [NCH Near Line Record Identification Code](https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd/) provides the value as a valueCoding type  
 * [Carrier or MAC Number](https://bluebutton.cms.gov/resources/variables/carr_num/) 
 
-*Note: In the Blue Button API, the extension URL points to an underlying valueset rather than the standard FHIR practice of pointing to the [StructureDefinition](https://www.hl7.org/fhir/structuredefinition.html) *of the extension. This is due to historical reasons and will be revisited in future versions of Blue Button.*
+<Alert size="slim">**Note:** In the Blue Button API, the extension URL points to an underlying valueset rather than the standard FHIR practice of pointing to the [StructureDefinition](https://www.hl7.org/fhir/structuredefinition.html) of the extension. This is due to historical reasons and will be revisited in future versions of Blue Button.</Alert>
 
 Extension example:
 
-```
+```json
 {
   "extension": [
     {
@@ -281,11 +279,11 @@ Extension example:
 }
 ```
 
-### **SupportingInfo attribute**
+### SupportingInfo attribute
 
-The `supportingInfo` attribute is a standard element in the FHIR EOB resource. Similar to extensions, supportingInfo is like a key-value list. `supportingInfo.category` serves as the key and `supportingInfo.code` is the value. Other attributes in `supportingInfo` include timing\[x\], value\[x\], and reason.
+The `supportingInfo` attribute is a standard element in the FHIR EOB resource. Similar to extensions, supportingInfo is like a key-value list. `supportingInfo.category` serves as the key and `supportingInfo.code` is the value. Other attributes in `supportingInfo` include timing[x], value[x], and reason.
 
-*Note: The [CARIN Implementation Guide](https://www.hl7.org/fhir/us/carin-bb/index.html) *uses* *supportingInfo* *instead of extensions. The CARIN IG does not define any extensions. For historical and backward compatibility reasons, the Blue Button API provides data in both extensions and supportingInfo.*
+<Alert>**Note:** The [CARIN Implementation Guide](https://www.hl7.org/fhir/us/carin-bb/index.html) uses supportingInfo instead of extensions. The CARIN IG does not define any extensions. For historical and backward compatibility reasons, the Blue Button API provides data in both extensions and supportingInfo.</Alert>
 
 ## Determine claim type
 
@@ -297,7 +295,7 @@ Each entry is a code from a given codesystem or valueset with information about 
 
 Claim type example:
 
-```
+```json
 {
   "type": {
     "coding": [
@@ -330,7 +328,7 @@ For example, `Eob.item.diagnosisSequence` links to `Eob.diagnosis.sequence`, ind
 
 Linking item example:
 
-```
+```json
 {
   "item": [
     {
@@ -397,7 +395,7 @@ Read calls such as /Patient/123 return a single resource.
 
 FHIR Bundle example:
 
-```
+```json
 {
   "resourceType": "Bundle",
   "id": "123",
@@ -441,7 +439,7 @@ In the example below, the Bundle.total attribute shows that there are 89 records
 For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle](https://www.hl7.org/fhir/bundle.html) and [FHIR v4.3.0 Managing Returned Resources](https://www.hl7.org/fhir/search.html#return) 
 Bundle navigation example:
 
-```
+```json
 {
   "resourceType": "Bundle",
   "id": "5e5844c4-d3e2-44ca-8c87-77efccc5d60d",
@@ -506,11 +504,11 @@ Blue Button supports two tags, `System-Type` and `Final-Action`, which need to b
 
 | tag | What's returned? |
 | :---- | :---- |
-| `https://bluebutton.cms.gov/fhir/CodeSystem/System-Type|SharedSystem` | A + B claims from the Shared Systems (FISS,MCS,VMS,MAP,CWF) |
-| `https://bluebutton.cms.gov/fhir/CodeSystem/System-Type|NationalClaimsHistory` | A + B claims from the National Claims History |
-| `https://bluebutton.cms.gov/fhir/CodeSystem/System-Type|DDPS` | Part D claims |
-| `https://bluebutton.cms.gov/fhir/CodeSystem/Final-Action|FinalAction` | Claims marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
-| `https://bluebutton.cms.gov/fhir/CodeSystem/Final-Action|NotFinalAction` | Claims **not** marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
+| `https://bluebutton.cms.gov/fhir/CodeSystem/System-Type\|SharedSystem` | A + B claims from the Shared Systems (FISS,MCS,VMS,MAP,CWF) |
+| `https://bluebutton.cms.gov/fhir/CodeSystem/System-Type\|NationalClaimsHistory` | A + B claims from the National Claims History |
+| `https://bluebutton.cms.gov/fhir/CodeSystem/System-Type\|DDPS` | Part D claims |
+| `https://bluebutton.cms.gov/fhir/CodeSystem/Final-Action\|FinalAction` | Claims marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
+| `https://bluebutton.cms.gov/fhir/CodeSystem/Final-Action\|NotFinalAction` | Claims **not** marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
 
 ### security
 
@@ -518,21 +516,20 @@ Use `security` to allow for targeting of SAMHSA-related data. v3 populates a Met
 
 | security query | What does this do? |
 | :---- | :---- |
-| security:not=42CFRPart2 | Filters out claims that have a Meta.security element of 42CFRPart2 |
-| security=42CFRPart2 | Filters out claims without a Meta.security element of 42CFRPart2 |
+| `security:not=42CFRPart2` | Filters out claims that have a Meta.security element of 42CFRPart2 |
+| `security=42CFRPart2` | Filters out claims without a Meta.security element of 42CFRPart2 |
 
 The default behavior is based on the API team certificate.
 
-* BlueButton – Yes
+* BlueButton - Yes
 
-| Note Blue Button should still pass in this parameter. |
-| :---- |
+<Alert size="slim">**Note:** Blue Button should still pass in this parameter.</Alert>
 
 ### How to use Shared Systems data
 
 Without any filters applied, Blue Button returns Part A, B, and D data from both the Shared Systems and the National Claims History (NCH) by default. Use the metadata filters described above to change this behavior, set API-specific defaults, etc. 
 
-#### **Filtering Part A / B data using source and tag**
+#### Filtering Part A / B data using source and tag
 
 Filtering data by a claim's source system is possible using either the `source` or `tag parameter`. 
 
@@ -547,7 +544,7 @@ Filtering data by a claim's source system is possible using either the `source` 
 
 vs. 
 
-| tag (don’t forget system\!) | Data retrieved  |
+| tag (don't forget system!) | Data retrieved  |
 | :---- | :---- |
 | `NationalClaimsHistory` | Claims for Part A + B from the National Claims History |
 | `SharedSystem` | Claims for Part A + B from VMS, FISS, MCS, and MAP |
