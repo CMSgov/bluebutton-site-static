@@ -37,7 +37,7 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
 <BaseLayout title={d.fieldName} description={description}>
   <DocsLayout showSideNav={false}>
     <nav class="margin-bottom-2 font-sans-sm">
-      <a href={$path({ to: '/data-dictionary' })}>
+      <a href={$path({ to: '/data-dictionary', trailingSlash: true })}>
         <Icon icon={IconArrowBack} size={2} /> Back to Search
       </a>
     </nav>
@@ -134,7 +134,7 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
                   Reference Table
                 </dt>
                 <dd class="margin-left-0">
-                  <a href={d.referenceTable} target="_blank">
+                  <a href={d.referenceTable.endsWith('/') ? d.referenceTable : `${d.referenceTable}/`} target="_blank">
                     {d.referenceTable}
                   </a>
                 </dd>

@@ -7,31 +7,31 @@ import Link from '#components/link.astro'
 const sitemapLinks = [
   {
     label: 'Home',
-    href: $path({ to: '/' }),
+    href: $path({ to: '/', trailingSlash: true }),
   },
   {
     label: 'Use Cases',
-    href: $path({ to: '/[...slug]', params: { slug: 'use-cases' } }),
+    href: $path({ to: '/[...slug]', params: { slug: 'use-cases' }, trailingSlash: true }),
   },
   {
     label: 'API Documentation',
-    href: $path({ to: '/[...slug]', params: { slug: 'api-documentation' } }),
+    href: $path({ to: '/[...slug]', params: { slug: 'api-documentation' }, trailingSlash: true }),
     // children: docsnavLinks,
     children: [],
   },
   {
     label: 'Data Overview',
-    href: $path({ to: '/[...slug]', params: { slug: 'data' } }),
+    href: $path({ to: '/[...slug]', params: { slug: 'data' }, trailingSlash: true }),
     // children: datanavLinks,
     children: [],
   },
   // {
   //   label: 'Production Access',
-  //   href: $path({ to: '/production-access' }),
+  //   href: $path({ to: '/production-access', trailingSlash: true }),
   // },
   {
     label: 'Support',
-    href: $path({ to: '/support' }),
+    href: $path({ to: '/support', trailingSlash: true }),
   },
 ]
 ---
