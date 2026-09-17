@@ -18,7 +18,7 @@ Each EOB represents one claim and contains:
 
 When you request /ExplanationOfBenefit, you get a Bundle of claims:
 
-```
+```json
 {
   "resourceType": "Bundle",
   "type": "searchset",
@@ -56,7 +56,7 @@ The response is paginated: 10 claims per page by default. See [Handling Paginati
 
 Each claim has an item array: one entry per service or product. A doctor visit might have one item; a hospital stay could have dozens.
 
-```
+```json
 {
   "item": [
     {
@@ -86,10 +86,10 @@ Each claim has an item array: one entry per service or product. A doctor visit m
 
 Items reference other parts of the EOB using sequence numbers:
 
-* item.diagnosisSequence: \[1\] links to diagnosis\[\].sequence: 1  
-* item.careTeamSequence: \[3\] links to careTeam\[\].sequence: 3
+* item.diagnosisSequence: [1] links to diagnosis[].sequence: 1  
+* item.careTeamSequence: [3] links to careTeam[].sequence: 3
 
-```
+```json
 {
   "diagnosis": [
     {
@@ -131,7 +131,7 @@ This tells you: item 1 was for diagnosis Z0000 (general medical exam), performed
 
 Every line item has adjudication data showing the financial breakdown of the claim:
 
-```
+```json
 {
   "adjudication": [
     {
@@ -209,7 +209,7 @@ Every EOB has a type field that tells you what kind of claim it is:
 
 Check the eob-type coding system in EOB.type for these values:
 
-```
+```json
 {
   "type": {
     "coding": [
