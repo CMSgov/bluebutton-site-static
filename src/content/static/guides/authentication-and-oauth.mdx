@@ -88,22 +88,21 @@ To retrieve an access token, POST to the Blue Button /token endpoint providing t
 **cURL command**
 
 ```bash title="Terminal"
-curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/token/"\
- -u "<client_id>:<client_secret>"\
- -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftestclient%2Fcallback
-&code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
+curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/token/" \
+  -u "<client_id>:<client_secret>" \
+  -d "code=TSjqiZCdJwGyytGjz2GzziPfHTJ6z2&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftestclient%2Fcallback&code_verifier=zlGzSLRQz6HrTpd3TvEraYoVPW2cknzu4tUk6wHaPFw"
 ```
 
 ### Token response
 
-```
+```json
 {
- "access_token":"oQlduHNr09GKCU506GOgp8OarrAy2q",
- "expires_in":16768.523842,
- "token_type":"Bearer",
- "scope":"profile patient/Patient.rspatient/ExplanationOfBenefit.rs patient/Coverage.rs",
-"refresh_token":"wDimPGoA8vwXP51kie71vpsy9l17HN",
- "access_grant_expiration":"2025-09-05 19:17:53Z"
+  "access_token":"oQlduHNr09GKCU506GOgp8OarrAy2q",
+  "expires_in":16768.523842,
+  "token_type":"Bearer",
+  "scope":"profile patient/Patient.rspatient/ExplanationOfBenefit.rs patient/Coverage.rs",
+  "refresh_token":"wDimPGoA8vwXP51kie71vpsy9l17HN",
+  "access_grant_expiration":"2025-09-05 19:17:53Z"
 }
 ```
 
@@ -128,27 +127,25 @@ To retrieve a new refresh token, POST to the Blue Button API /token endpoint wit
 
 ### cURL command
 
-Terminal
-
-```
-curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/token/" \
- -u "<client_id>:<client_secret>"\
- -d "grant_type=refresh_token&refresh_token=wDimPGoA8vwXP51kie71vpsy9l17HN"
+```bash title="Terminal"
+curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/token/" \
+  -u "<client_id>:<client_secret>" \
+  -d "grant_type=refresh_token&refresh_token=wDimPGoA8vwXP51kie71vpsy9l17HN"
 ```
 
 ### Token response
 
-(successful with 200 status code):
+Successful with 200 status code:
 
-```
+```json
 {
- "access_token":"VD1VaT4IfjXAMlZTS9E4RVXZlkhYG7",
- "expires_in": 36000,
- "token_type": "Bearer",
- "scope" : "profile patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs",
- "refresh_token": "7x0VkRQlRU4fRNCQL2vh239nIyucgw",
- "patient": "-20140000000001",
- "access_grant_expiration":"2025-09-05 19:17:53Z"
+  "access_token":"VD1VaT4IfjXAMlZTS9E4RVXZlkhYG7",
+  "expires_in": 36000,
+  "token_type": "Bearer",
+  "scope" : "profile patient/Patient.rs patient/Coverage.rs patient/ExplanationOfBenefit.rs",
+  "refresh_token": "7x0VkRQlRU4fRNCQL2vh239nIyucgw",
+  "patient": "-20140000000001",
+  "access_grant_expiration":"2025-09-05 19:17:53Z"
 }
 ```
 
@@ -164,13 +161,11 @@ To revoke an access token, POST to the Blue Button API `/revoke` endpoint with t
 
 ### cURL command
 
-Terminal
-
-```
+```bash title="Terminal"
 curl -X POST --url 'https://bluebutton.cms.gov/v2/o/revoke/'\
- --header 'content-type: application/x-www-form-urlencoded'\
- -u <client_id>:<client_secret>\
- -d 'token=oQlduHNr09GKCU506GOgp8OarrAy2q'
+  --header 'content-type: application/x-www-form-urlencoded'\
+  -u <client_id>:<client_secret>\
+  -d 'token=oQlduHNr09GKCU506GOgp8OarrAy2q'
 ```
 
 ### Response
@@ -195,19 +190,17 @@ POST to the Blue Button API `/expireauthenticateduser` endpoint with the followi
 
 ### cURL command
 
-Terminal
-
-```
-curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/-20140000000001/"\
- -u "<client_id>:<client_secret>"\
- -H "Content-Length: 0"
+```bash title="Terminal"
+curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/-20140000000001/" \
+  -u "<client_id>:<client_secret>" \
+  -H "Content-Length: 0"
 ```
 
 ### Response
 
 Successful with 200 status code:
 
-```
+```http
 HTTP / 1.1 200 OK
 ```
 
@@ -268,10 +261,9 @@ Scopes define the API endpoints your application is allowed to access. The Blue 
 
 In the sandbox, you can force-expire a user's access grant for testing:
 
-```
-
+```bash title="Terminal"
 curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/-20140000000001/" \
-  -u "YOUR_CLIENT_ID:YOUR_CLIENT_SECRET" \
+  -u "<client_id>:<client_secret>" \
   -H "Content-Length: 0"
 ```
 
@@ -295,9 +287,9 @@ A refresh token can only be used one time. The following is an example of an err
 
 Response (unsuccessful with 400 status code):
 
-```
+```json
 {
- "error": "invalid_grant"
+  "error": "invalid_grant"
 }
 ```
 
@@ -309,9 +301,9 @@ If your request has any issues with client credentials or permissions, the follo
 
 Response (unsuccessful with 401 status code):
 
-```
+```json
 {
- "error": "invalid_client"
+  "error": "invalid_client"
 }
 ```
 
@@ -323,11 +315,11 @@ If your authorization for accessing user data has expired, the corresponding acc
 
 Response (unsuccessful with 400 status code):
 
-```
+```json
 {
- "status_code": 400,
- "error": "invalid_grant",
- "error_description": "The authorization for accessing user data has expired. To refresh Medicare data, the end user must re-authenticate and consent to data sharing."
+  "status_code": 400,
+  "error": "invalid_grant",
+  "error_description": "The authorization for accessing user data has expired. To refresh Medicare data, the end user must re-authenticate and consent to data sharing."
 }
 ```
 
