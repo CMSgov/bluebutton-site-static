@@ -159,7 +159,7 @@ Patient.identifier
 
 ## Working with references
 
-The Blue Button API uses both [literal](http://www.hl7.org/fhir/references.html#literal) and [logical](http://www.hl7.org/fhir/references.html#logical) (FHIR references to refer to other resources/data external to the resource.
+The Blue Button API uses both [literal](https://www.hl7.org/fhir/references.html#literal) and [logical](https://www.hl7.org/fhir/references.html#logical) (FHIR references to refer to other resources/data external to the resource.
 
 ### **Literal references**
 
@@ -215,7 +215,7 @@ Contained resource example:
 
 ### **Logical references**
 
-[Logical references](http://www.hl7.org/fhir/references.html#logical) usually provide a business identifier rather than a URL to an endpoint or a contained resource.
+[Logical references](https://www.hl7.org/fhir/references.html#logical) usually provide a business identifier rather than a URL to an endpoint or a contained resource.
 
 In the example below, the `Eob.careTeam.provider` attribute contains a reference to the [National Provider Identifier (NPI)](https://npiregistry.cms.hhs.gov/) for the practitioner. (Note: The Blue Button API does not support a `/Practitioner` endpoint.)
 
@@ -246,16 +246,16 @@ Logical reference example:
 
 ## Extensions and SupportingInfo 
 
-The Blue Button API supplies many data points using [FHIR extensions](http://www.hl7.org/fhir/extensibility.html). Extensions are information that is not part of the basic definition of the FHIR resource. They’re often very specific to a use case or situation. For example, the Blue Button API uses extensions to provide Medicare-specific data points not included in the standard FHIR specification.
+The Blue Button API supplies many data points using [FHIR extensions](https://www.hl7.org/fhir/extensibility.html). Extensions are information that is not part of the basic definition of the FHIR resource. They’re often very specific to a use case or situation. For example, the Blue Button API uses extensions to provide Medicare-specific data points not included in the standard FHIR specification.
 
-All Blue Button API resources include extensions. Extensions are like a key-value list, where the extension URL is the key. In an extension, the value attribute is defined as [a Choice of Types](http://www.hl7.org/fhir/formats.html#choice), and the data type depends on the extension's definition.
+All Blue Button API resources include extensions. Extensions are like a key-value list, where the extension URL is the key. In an extension, the value attribute is defined as [a Choice of Types](https://www.hl7.org/fhir/formats.html#choice), and the data type depends on the extension's definition.
 
 In the example below, there are two extensions:
 
 * [NCH Near Line Record Identification Code](https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd/) provides the value as a valueCoding type  
 * [Carrier or MAC Number](https://bluebutton.cms.gov/resources/variables/carr_num/) 
 
-*Note: In the Blue Button API, the extension URL points to an underlying valueset rather than the standard FHIR practice of pointing to the [StructureDefinition](http://www.hl7.org/fhir/structuredefinition.html) *of the extension. This is due to historical reasons and will be revisited in future versions of Blue Button.*
+*Note: In the Blue Button API, the extension URL points to an underlying valueset rather than the standard FHIR practice of pointing to the [StructureDefinition](https://www.hl7.org/fhir/structuredefinition.html) *of the extension. This is due to historical reasons and will be revisited in future versions of Blue Button.*
 
 Extension example:
 
@@ -285,11 +285,11 @@ Extension example:
 
 The `supportingInfo` attribute is a standard element in the FHIR EOB resource. Similar to extensions, supportingInfo is like a key-value list. `supportingInfo.category` serves as the key and `supportingInfo.code` is the value. Other attributes in `supportingInfo` include timing\[x\], value\[x\], and reason.
 
-*Note: The [CARIN Implementation Guide](http://www.hl7.org/fhir/us/carin-bb/index.html) *uses* *supportingInfo* *instead of extensions. The CARIN IG does not define any extensions. For historical and backward compatibility reasons, the Blue Button API provides data in both extensions and supportingInfo.*
+*Note: The [CARIN Implementation Guide](https://www.hl7.org/fhir/us/carin-bb/index.html) *uses* *supportingInfo* *instead of extensions. The CARIN IG does not define any extensions. For historical and backward compatibility reasons, the Blue Button API provides data in both extensions and supportingInfo.*
 
 ## Determine claim type
 
-The Blue Button API provides claims data in the [ExplanationOfBenefit resource](http://www.hl7.org/fhir/explanationofbenefit.html) for all claim types (e.g., Inpatient, Outpatient, Carrier, DME).
+The Blue Button API provides claims data in the [ExplanationOfBenefit resource](https://www.hl7.org/fhir/explanationofbenefit.html) for all claim types (e.g., Inpatient, Outpatient, Carrier, DME).
 
 To determine the type of a given claim, inspect the `Eob.type` attribute. `Eob.type` is a CodeableConcept, which provides data as a list of codings. There are multiple entries in the list.
 
@@ -320,7 +320,7 @@ For more information about determining claim types, see the following coding sys
 
 * [EOB type](https://bluebutton.cms.gov/resources/codesystem/eob-type/)   
 * [NCH Claim Type Code variable](https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd/)  
-* [FHIR Claim Type value set](http://hl7.org/fhir/STU3/valueset-claim-type.html) 
+* [FHIR Claim Type value set](https://hl7.org/fhir/STU3/valueset-claim-type.html) 
 
 ## Linking items
 
@@ -391,7 +391,7 @@ Linking item example:
 
 ## Understanding the payload 
 
-Blue Button API search operations such as  `/Patient`, `/ExplanationOfBenefit`, and `/ExplanationOfBenefit?patient=123`, return data in [FHIR Bundles](http://www.hl7.org/fhir/bundle.html) . A FHIR bundle is a container resource that includes a collection of FHIR resources. You can grab each resource by looping through the `Bundle.entry` list attribute.
+Blue Button API search operations such as  `/Patient`, `/ExplanationOfBenefit`, and `/ExplanationOfBenefit?patient=123`, return data in [FHIR Bundles](https://www.hl7.org/fhir/bundle.html) . A FHIR bundle is a container resource that includes a collection of FHIR resources. You can grab each resource by looping through the `Bundle.entry` list attribute.
 
 Read calls such as /Patient/123 return a single resource.
 
@@ -438,7 +438,7 @@ To navigate forward and backward through the bundle, use the URLs provided in `B
 
 In the example below, the Bundle.total attribute shows that there are 89 records in the results. However, only the first 10 records are delivered in the `Bundle.entry` array.
 
-For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle](http://www.hl7.org/fhir/bundle.html) and [FHIR v4.3.0 Managing Returned Resources](http://www.hl7.org/fhir/search.html#return) 
+For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle](https://www.hl7.org/fhir/bundle.html) and [FHIR v4.3.0 Managing Returned Resources](https://www.hl7.org/fhir/search.html#return) 
 Bundle navigation example:
 
 ```
@@ -555,7 +555,7 @@ vs.
 
 ## Working with digital insurance card data 
 
-The endpoint, `/v3/fhir/Patient/{patient}/$generate-insurance-card` allows developers to surface digital proof of [Medicare](http://Medicare.gov) coverage to enrollees, providing details on the types of coverage available. 
+The endpoint, `/v3/fhir/Patient/{patient}/$generate-insurance-card` allows developers to surface digital proof of [Medicare](https://Medicare.gov) coverage to enrollees, providing details on the types of coverage available. 
 
 This endpoint references the [CARIN Digital Insurance Card Implementation Guide](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/) . It returns a bundle that includes /Patient (LINK: TBD) and /Coverage (LINK: TBD) resources conformant to the Digital Insurance Guide profile . You can find examples of this on the Digital Insurance Card page (LINK: TBD) and in the [Blue Button Swagger resource](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listDigitalInsuranceCard_v3). 
 

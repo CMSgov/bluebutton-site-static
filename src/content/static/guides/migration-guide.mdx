@@ -133,7 +133,7 @@ Additionally, in v3, patients can opt in to share substance use information for 
 
 ### 5. CARIN for Digital Insurance Card (C4DIC) data endpoint
 
-*In v3, a new endpoint,* `/v3/fhir/Patient/{patient}/$generate-insurance-card`, will be available. This will allow developers to surface digital proof of [Medicare](http://Medicare.gov) coverage to enrollees, providing details on the types of coverage available.
+*In v3, a new endpoint,* `/v3/fhir/Patient/{patient}/$generate-insurance-card`, will be available. This will allow developers to surface digital proof of [Medicare](https://Medicare.gov) coverage to enrollees, providing details on the types of coverage available.
 
 This endpoint references the [CARIN Digital Insurance Card Implementation Guide](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/). It returns a bundle that includes patient and coverage resources conformant to the Digital Insurance Guide profile. An example of this may be found in the [Blue Button Swagger resource](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listDigitalInsuranceCard_v3)
 
@@ -288,15 +288,15 @@ v3's Explanation of Benefits (EOB) resources include several elements, many of w
 
 Profiles are represented in the ExplanationOfBenefit's meta.profile element.
 
-For those with the “CMS Blue Button” profile, meta.profile will contain both the C4BB url (versioned) + a [bluebutton.cms.gov](http://bluebutton.cms.gov) profile. Actual profiles for CMS Blue Button will be published later this summer.
+For those with the “CMS Blue Button” profile, meta.profile will contain both the C4BB url (versioned) + a [bluebutton.cms.gov](https://bluebutton.cms.gov) profile. Actual profiles for CMS Blue Button will be published later this summer.
 
 Example: Meta.profiles for a Pharmacy EOB
 
 | Profile | Meta.profile |
 | :---- | :---- |
-| Basis | `http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis\|2.2.0` |
-| Regular | `http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy\|2.2.0` |
-| CMS | `http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy\|2.2.0`, `https://bluebutton.cms.gov/fhir/StructureDefinition/CMS-ExplanationOfBenefit-Pharmacy` |
+| Basis | `https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis\|2.2.0` |
+| Regular | `https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy\|2.2.0` |
+| CMS | `https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy\|2.2.0`, `https://bluebutton.cms.gov/fhir/StructureDefinition/CMS-ExplanationOfBenefit-Pharmacy` |
 
 
 
@@ -308,10 +308,10 @@ The profiles will **not** require canonicals (e.g., versions), but they *may* be
 
 | Profile | Basis | Regular | CMS Profile |
 | :---- | :---- | :---- | :---- |
-| Pharmacy | `http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis\|2.1.0)` | `[http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Pharmacy](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy\|2.1.0)` | `[https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Pharmacy](https://bluebutton.cms.gov/fhir/StructureDefinition/Pharmacy-Maximus)` |
-| Professional | `[http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Professional-NonClinician-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician-Basis\|2.1.0)` | `[http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Professional-NonClinician](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician\|2.1.0)` | `[https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Professional-NonClinician](https://bluebutton.cms.gov/fhir/StructureDefinition/Professional-Maximus)` |
-| Institutional Inpatient | `[http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Inpatient-Institutional-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis)` | `[http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Inpatient-Institutional](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional\|2.2.0)` | `[https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Institutional-Inpatient](https://bluebutton.cms.gov/fhir/StructureDefinition/Inpatient-Maximus)` |
-| Institutional Outpatient | `[http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Outpatient-Institutional-**Basis**](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis)` | `[http://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Outpatient-Institutional](http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis)` | `[https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Institutional-Outpatient](https://bluebutton.cms.gov/fhir/StructureDefinition/Institutional-Outpatient-Maximus)` |
+| Pharmacy | `https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis](https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis\|2.1.0)` | `[https://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Pharmacy](https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy\|2.1.0)` | `[https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Pharmacy](https://bluebutton.cms.gov/fhir/StructureDefinition/Pharmacy-Maximus)` |
+| Professional | `[https://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Professional-NonClinician-**Basis**](https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician-Basis\|2.1.0)` | `[https://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Professional-NonClinician](https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician\|2.1.0)` | `[https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Professional-NonClinician](https://bluebutton.cms.gov/fhir/StructureDefinition/Professional-Maximus)` |
+| Institutional Inpatient | `[https://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Inpatient-Institutional-**Basis**](https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis)` | `[https://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Inpatient-Institutional](https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional\|2.2.0)` | `[https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Institutional-Inpatient](https://bluebutton.cms.gov/fhir/StructureDefinition/Inpatient-Maximus)` |
+| Institutional Outpatient | `[https://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Outpatient-Institutional-**Basis**](https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis)` | `[https://hl7.org/fhir/us/carin-bb/StructureDefinition/**C4BB**\-ExplanationOfBenefit-Outpatient-Institutional](https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis)` | `[https://bluebutton.cms.gov/fhir/StructureDefinition/**CMS**\-ExplanationOfBenefit-Institutional-Outpatient](https://bluebutton.cms.gov/fhir/StructureDefinition/Institutional-Outpatient-Maximus)` |
 
 OR syntax in FHIR uses commas. To query for just CMS institutional inpatient profiled-resources + pharmacy basis profiled resources, one would use the following example query:
 
@@ -542,7 +542,7 @@ ExplanationOfBenefit.identifier.where('system'='https://bluebutton.cms.gov/fhir/
 The original claim control number (if available) can be extracted by executing the FHIRPath expression: 
 
 ```fhir
-ExplanationOfBenefit.related.where(relationship.coding.system = 'http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship').reference.where(system='https://bluebutton.cms.gov/identifiers/CLM-CNTL-NUM').value
+ExplanationOfBenefit.related.where(relationship.coding.system = 'https://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship').reference.where(system='https://bluebutton.cms.gov/identifiers/CLM-CNTL-NUM').value
 ```
 
 #### How to deduplicate claims with `CLM-CNTL-NUM`
