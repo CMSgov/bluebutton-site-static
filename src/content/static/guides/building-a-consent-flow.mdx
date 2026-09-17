@@ -52,7 +52,7 @@ When access is revoked, your access and refresh tokens become invalid. Handle th
 
 ```bash title="Terminal"
 # Revoke a token programmatically
-curl -X POST "https://api.bluebutton.cms.gov/v2/o/revoke/" \
+curl -X POST "https://api.bluebutton.cms.gov/v3/o/revoke/" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -u "YOUR_CLIENT_ID:YOUR_CLIENT_SECRET" \
   -d "token=THE_ACCESS_TOKEN"
@@ -73,35 +73,31 @@ Good consent flows typically include:
 
 Before the OAuth redirect, show a screen that explains:
 
-**Connect your Medicare account**
-
-We'll request access to your Medicare claims data, including doctor visits, hospital stays, and prescriptions from the last 3 years.
-
-We use this data to \[your specific use case\]. We don't share your data with third parties.
-
-You can disconnect at any time from your [Medicare Connected Apps page](https://Medicare.gov/my/connected-apps).
-
-\[Connect to Medicare\] \[Learn more\]
+> **Connect your Medicare account** We'll request access to your Medicare claims data, including doctor visits, hospital stays, and prescriptions from the last 3 years.
+>
+> We use this data to [your specific use case]. We don't share your data with third parties.
+>
+> You can disconnect at any time from your [Medicare Connected Apps page](#). [Connect to Medicare] [Learn more]
 
 ### Post-authorization confirmation
 
 After the user returns from Medicare.gov:
 
-**Connected!**
-
-We're now loading your Medicare data. This may take a moment.
-
-You can manage or revoke this connection at any time in Settings.
+>**Connected!**
+>
+>We're now loading your Medicare data. This may take a moment.
+>
+>You can manage or revoke this connection at any time in Settings.
 
 ### Disconnect option
 
 In account settings, provide a clear disconnect button with an explanation of what happens:
 
-**Medicare connection: Active**
-
-Connected on January 15, 2026.
-
-[Disconnect] This will stop your app from accessing new Medicare data. Previously loaded data will be \[deleted / retained per your policy\].
+>**Medicare connection: Active**
+>
+>Connected on January 15, 2026.
+>
+>[Disconnect] This will stop your app from accessing new Medicare data. Previously loaded data will be \[deleted / retained per your policy\].
 
 ## Common mistakes
 
