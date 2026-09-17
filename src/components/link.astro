@@ -25,7 +25,7 @@ let computedHref: string
 if ('to' in props && props.to) {
   // Explicit internal link using "to" prop (preferred for Astro templates)
   isExternal = false
-  computedHref = $path(props)
+  computedHref = $path({ ...props, trailingSlash: true })
 } else if ('href' in props && props.href) {
   // Handle href - could be external or internal (from MDX)
   const hrefString = props.href.toString()
