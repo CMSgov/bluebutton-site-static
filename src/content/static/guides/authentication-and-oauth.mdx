@@ -55,7 +55,7 @@ The Blue Button user authorization screens are available in both English (the de
 * To specify the language for the Blue Button authorization screens clearly, add the optional `lang` parameter to your `/authorize` request. Valid values are `en` (English) and `es` (Spanish). For example:
 
 ```http
-https://sandbox.bluebutton.cms.gov/v2/o/authorize/?lang=es
+https://sandbox.bluebutton.cms.gov/v3/o/authorize/?lang=es
 ```
 
 * If the `lang` parameter is omitted or is set to a value other than `en` or `es`, the API server will next check the `Accept-Language` HTTP header in the `/authorize` request.
@@ -162,7 +162,7 @@ To revoke an access token, POST to the Blue Button API `/revoke` endpoint with t
 ### cURL command
 
 ```bash title="Terminal"
-curl -X POST --url 'https://bluebutton.cms.gov/v2/o/revoke/'\
+curl -X POST --url 'https://bluebutton.cms.gov/v3/o/revoke/'\
   --header 'content-type: application/x-www-form-urlencoded'\
   -u <client_id>:<client_secret>\
   -d 'token=oQlduHNr09GKCU506GOgp8OarrAy2q'
@@ -191,7 +191,7 @@ POST to the Blue Button API `/expireauthenticateduser` endpoint with the followi
 ### cURL command
 
 ```bash title="Terminal"
-curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/-20140000000001/" \
+curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/expire_authenticated_user/-20140000000001/" \
   -u "<client_id>:<client_secret>" \
   -H "Content-Length: 0"
 ```
@@ -262,7 +262,7 @@ Scopes define the API endpoints your application is allowed to access. The Blue 
 In the sandbox, you can force-expire a user's access grant for testing:
 
 ```bash title="Terminal"
-curl -X POST "https://sandbox.bluebutton.cms.gov/v2/o/expire_authenticated_user/-20140000000001/" \
+curl -X POST "https://sandbox.bluebutton.cms.gov/v3/o/expire_authenticated_user/-20140000000001/" \
   -u "<client_id>:<client_secret>" \
   -H "Content-Length: 0"
 ```
