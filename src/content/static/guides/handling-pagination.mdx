@@ -4,13 +4,14 @@ seo:
   description: "How developers can work with pagination"
 sortOrder: 5
 ---
-  A single patient can have hundreds of claims. Blue Button paginates search results: 10 per page by default, 50 max. Here's how to work through them.
+  
+A single patient can have hundreds of claims. Blue Button paginates search results: 10 per page by default, 50 max. Here's how to work through them.
 
 ## How pagination works 
 
 Search responses include a link array with URLs for navigating the result set:
 
-```
+```json
 {
   "resourceType": "Bundle",
   "total": 89,
@@ -43,7 +44,7 @@ Search responses include a link array with URLs for navigating the result set:
 
 To get the next page, fetch the URL from the next link:
 
-```
+```bash title="Terminal"
 curl "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit?_offset=10&_count=10&patient=..." \
   -H "Accept: application/json" \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
@@ -57,7 +58,7 @@ Always use the full URL from Bundle.link. Don't construct pagination URLs yourse
 
 Use count to control how many resources come back per page:
 
-```
+```bash title="Terminal"
 # Get 50 claims per page (maximum)
 curl "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit?_count=50" \
   -H "Accept: application/json" \
@@ -74,7 +75,7 @@ Larger pages mean fewer requests but bigger responses. If you're pulling all cla
 
 To fetch all claims for a patient, follow the links below until there are no more. The following is some sample code that will help you get started:
 
-```
+```python
 import requests
 
 def fetch_all_claims(base_url, access_token):
@@ -114,10 +115,6 @@ Some strategies for handling this:
 * **Use `_lastUpdated` to detect changes.** After your initial full fetch, use `_lastUpdated=gtYOUR_LAST_SYNC_DATE` in subsequent requests to get only what changed. The operator prefix is required: `lt`, `le`, `gt`, or `ge`.  
 * **Accept eventual consistency.** For apps that display claims rather than reconcile them, an occasional skipped or duplicated record is fine. The next full sync will catch up.
 
-**NOTE**
+<Alert>**Note:** `_lastUpdated` returns added and modified claims only: it can't tell you a claim was removed, so schedule a periodic full resync. On v3, pass `_source` or `_tag` alongside it; otherwise Blue Button applies `_source=NCH` and your sync will miss every update to partially adjudicated claims.</Alert>
 
-`_lastUpdated` returns added and modified claims only: it can't tell you a claim was removed, so schedule a periodic full resync. On v3, pass `_source` or `_tag` alongside it; otherwise Blue Button applies `_source=NCH` and your sync will miss every update to partially adjudicated claims.
-
-**TIP**
-
-For most apps, the simplest approach is: do a full fetch on first load bounded with `le{timestamp}`, then use `_lastUpdated` for incremental updates going forward, with a periodic full resync to catch removals.
+<Alert size="slim" variant="success">**Tip:** For most apps, the simplest approach is: do a full fetch on first load bounded with `le{timestamp}`, then use `_lastUpdated` for incremental updates going forward, with a periodic full resync to catch removals.</Alert>
