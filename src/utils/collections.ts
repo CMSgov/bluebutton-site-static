@@ -11,13 +11,20 @@ export async function getApiCollection() {
     return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
   })
 }
+
+export async function getQuickstartCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('quickstart/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
+}
+
 export async function getGuidesCollection() {
   return (await getCollection('static', ({ id }) => id.startsWith('guides/'))).sort((a, b) => {
     return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
   })
 }
 export async function getProductionCollection() {
-  return (await getCollection('static', ({ id }) => id.startsWith('production/'))).sort((a, b) => {
+  return (await getCollection('static', ({ id }) => id.startsWith('production-access/'))).sort((a, b) => {
     return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
   })
 }

@@ -1,7 +1,6 @@
 ---
 import Swagger from '#assets/images/swagger.svg'
 import ArrowForward from '@uswds/uswds/img/usa-icons/arrow_forward.svg'
-import Code from '@uswds/uswds/img/usa-icons/code.svg'
 
 import Icon from './icon.astro'
 import Link from './link.astro'
@@ -26,7 +25,13 @@ const { title, description } = Astro.props
     </p>
     <div class="grid-row grid-gap margin-top-2">
       <div class="tablet:grid-col-auto margin-top-2">
-        <Link to="/api-documentation" variant="inverse" class="hero-button width-full" showIcon={false}>
+        <Link
+          to="/[...slug]"
+          params={{ slug: 'quickstart' }}
+          variant="inverse"
+          class="hero-button width-full"
+          showIcon={false}
+        >
           Get started
           <Icon icon={ArrowForward} color="white" size={3} />
         </Link>

@@ -81,7 +81,7 @@ Read operations with an ID (`/Patient`/-9985028219431) return a single resource 
 
 Note: ***you can only access data for the enrollee who authorized your application***
 
-*The FHIR ID in your request must match the enrollee who authorized your application. You cannot substitute another enrollee’s FHIR ID and retrieve their data. If you request an unauthorized FHIR ID, the API returns an error, not another enrollee’s records. Each enrollee authorizes access only to their own data.*
+*The FHIR ID in your request must match the enrollee who authorized your application. You cannot substitute another enrollee's FHIR ID and retrieve their data. If you request an unauthorized FHIR ID, the API returns an error, not another enrollee's records. Each enrollee authorizes access only to their own data.*
 
 TIP
 
@@ -92,14 +92,14 @@ EOB bundles can be large: some enrollees have hundreds of claims. See [Handling 
 In FHIR, the difference between the `Resource.id` (resource ID) and identifier attributes within a resource can be confusing.
 
 * **Resource ID:** In the Blue Button API, the resource ID is an internal identifier from the source database, the Integrated Data Repository (IDR). The resource ID is a system-level resource, held outside the resource. The Resource ID is guaranteed to be unique to a particular resource and will always be a single value.  
-* **Identifier:** The identifier attribute typically provides business identifiers (or externally recognized identifiers). In the Blue Button API, the Patient.identifier attribute provides the [Medicare Beneficiary ID (MBI)](https://www.cms.gov/medicare/new-medicare-card). The MBI is the number on an enrollee’s Medicare card.
+* **Identifier:** The identifier attribute typically provides business identifiers (or externally recognized identifiers). In the Blue Button API, the Patient.identifier attribute provides the [Medicare Beneficiary ID (MBI)](https://www.cms.gov/medicare/new-medicare-card). The MBI is the number on an enrollee's Medicare card.
 
 In FHIR, the identifier attribute is a list element that could supply multiple identifiers. Use [discriminators](https://www.hl7.org/fhir/profiling.html#discriminator) to distinguish between the entries to pull your desired identifier.
 
 For example, you can use discriminators to pull the current MBI from a Patient resource. (Enrollees are sometimes given new or replacement MBIs in situations such as identity theft.) In the Patient resource snippet below, there are two identifiers in the list. Use the following discriminators to pull the current MBI:
 
-* identifier.system \= http://hl7.org/fhir/sid/us-mbi (ensures that the entry is an MBI)  
-* identifier.type.coding\[n\].extension.valueCoding.code \= “current”
+* identifier.system = http://hl7.org/fhir/sid/us-mbi (ensures that the entry is an MBI)  
+* identifier.type.coding\[n\].extension.valueCoding.code = “current”
 
 Patient identifier example:
 
@@ -293,7 +293,7 @@ The Blue Button API provides claims data in the [ExplanationOfBenefit resource](
 
 To determine the type of a given claim, inspect the `Eob.type` attribute. `Eob.type` is a CodeableConcept, which provides data as a list of codings. There are multiple entries in the list.
 
-Each entry is a code from a given codesystem or valueset with information about the type of claim. For example, the `NCH\_CLM\_TYPE\_CD` codesystem uses the code 71 for a carrier claim. The Blue Button API `eob-type` valueset uses a code of CARRIER for a carrier claim.
+Each entry is a code from a given codesystem or valueset with information about the type of claim. For example, the `NCHCLMTYPECD` codesystem uses the code 71 for a carrier claim. The Blue Button API `eob-type` valueset uses a code of CARRIER for a carrier claim.
 
 Claim type example:
 
@@ -425,9 +425,9 @@ FHIR Bundle example:
 
 ## Navigating through a bundle 
 
-FHIR search results are paginated with a default of 10 records per call. You can override the default of 10 with a \_count parameter in the request. The maximum number of records allowed is 50\.
+FHIR search results are paginated with a default of 10 records per call. You can override the default of 10 with a count parameter in the request. The maximum number of records allowed is 50\.
 
-To navigate forward and backward through the bundle, use the URLs provided in `Bundle.link`, as described in the table below. For instance, to get the next X records, use the URL provided in Bundle.link where relation \= next.
+To navigate forward and backward through the bundle, use the URLs provided in `Bundle.link`, as described in the table below. For instance, to get the next X records, use the URL provided in Bundle.link where relation = next.
 
 
 | Relation | Description |
@@ -470,29 +470,29 @@ Partially adjudicated claims are also called non-Final Action claims, and show t
 
 Disclaimers for non-Final Action claims:
 
-* Claims with outcome \= partial **may contain nonsensical values in coded elements**, such as invalid CPT/HCPCS codes and invalid diagnosis codes, due to their non-finalized nature. This is more likely in claims with a claim type code of 1XXX. Use `ExplanationOfBenefit.outcome` to determine the processing stage of a claim.  
+* Claims with outcome = partial **may contain nonsensical values in coded elements**, such as invalid CPT/HCPCS codes and invalid diagnosis codes, due to their non-finalized nature. This is more likely in claims with a claim type code of 1XXX. Use `ExplanationOfBenefit.outcome` to determine the processing stage of a claim.  
 * **Not all fields are available in non-Final Action claims**. Most of these relate to benefit balance information that isn't available until a claim has been fully adjudicated. There is ongoing work to improve parity between data from the Shared Systems and the National Claims History. 
 
 Blue Button exposes three search parameters for filtering metadata. 
 
 The metadata field, `source`, identifies the CMS system from which the information originated:
 
-* `NCH` \= National Claims History (All adjudicated claims for Parts A \+ B)  
-  * `FISS` \= Fiscal Intermediary Shared System (Partially Adjudicated Institutional Claims)  
-  * `MCS` \= Multi-Carrier System (Partially Adjudicated Professional Claims)  
-  * `VMS` \= Viable Information Processing Systems (ViPS) Medicare Shared System (Partially Adjudicated DME claims)  
-  * `DDPS` \= Drug Data Processing System (All Part D claims)  
-  * MAP \= Medicare Adjudication Portal (some professional claims)
+* `NCH` = National Claims History (All adjudicated claims for Parts A + B)  
+  * `FISS` = Fiscal Intermediary Shared System (Partially Adjudicated Institutional Claims)  
+  * `MCS` = Multi-Carrier System (Partially Adjudicated Professional Claims)  
+  * `VMS` = Viable Information Processing Systems (ViPS) Medicare Shared System (Partially Adjudicated DME claims)  
+  * `DDPS` = Drug Data Processing System (All Part D claims)  
+  * MAP = Medicare Adjudication Portal (some professional claims)
 
-### \_source
+### source
 
-Filtering by `\_source` filters on the `Meta.source key`. Blue Button supports both AND and OR operations. (Filtering by AND is useless, however.)
+Filtering by `source` filters on the `Meta.source key`. Blue Button supports both AND and OR operations. (Filtering by AND is useless, however.)
 
 The sources to filter on, and their constituent data, are below.
 
 | Meta.source | Data Explanation |
 | :---- | :---- |
-| NCH | National Claims History (All claims for Parts A \+ B) |
+| NCH | National Claims History (All claims for Parts A + B) |
 | FISS | Institutional claims from Shared Systems |
 | MCS | Carrier claims from Shared Systems |
 | VMS | DME claims from Shared Systems |
@@ -500,26 +500,26 @@ The sources to filter on, and their constituent data, are below.
 | MAP (Not yet implemented) | \[some\] Carrier claims from Shared Systems.  |
 | CWF (Not yet implemented) | Prior Authorization data  |
 
-### \_tag
+### tag
 
 Blue Button supports two tags, `System-Type` and `Final-Action`, which need to be sent in token format (e.g., system|code). Blue Button supports both AND and OR operations. 
 
-| \_tag | What’s returned? |
+| tag | What's returned? |
 | :---- | :---- |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**\|SharedSystem | A \+ B claims from the Shared Systems (FISS,MCS,VMS,MAP,CWF) |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**\|NationalClaimsHistory | A \+ B claims from the National Claims History |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**System-Type**\|DDPS | Part D claims |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**Final-Action**\|FinalAction | Claims marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
-| https://bluebutton.cms.gov/fhir/CodeSystem/**Final-Action**\|NotFinalAction | Claims **not** marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
+| `https://bluebutton.cms.gov/fhir/CodeSystem/System-Type|SharedSystem` | A + B claims from the Shared Systems (FISS,MCS,VMS,MAP,CWF) |
+| `https://bluebutton.cms.gov/fhir/CodeSystem/System-Type|NationalClaimsHistory` | A + B claims from the National Claims History |
+| `https://bluebutton.cms.gov/fhir/CodeSystem/System-Type|DDPS` | Part D claims |
+| `https://bluebutton.cms.gov/fhir/CodeSystem/Final-Action|FinalAction` | Claims marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
+| `https://bluebutton.cms.gov/fhir/CodeSystem/Final-Action|NotFinalAction` | Claims **not** marked Final Action. (Note: While this tag exists, it is not recommended for filtering claims by processing status) |
 
-### \_security
+### security
 
-Use `\_security` to allow for targeting of SAMHSA-related data. v3 populates a Meta.security token on data that is “sensitive” on the basis of the ACO-OS sensitive data list.
+Use `security` to allow for targeting of SAMHSA-related data. v3 populates a Meta.security token on data that is “sensitive” on the basis of the ACO-OS sensitive data list.
 
-| \_security query | What does this do? |
+| security query | What does this do? |
 | :---- | :---- |
-| \_security:not=42CFRPart2 | Filters out claims that have a Meta.security element of 42CFRPart2 |
-| \_security=42CFRPart2 | Filters out claims without a Meta.security element of 42CFRPart2 |
+| security:not=42CFRPart2 | Filters out claims that have a Meta.security element of 42CFRPart2 |
+| security=42CFRPart2 | Filters out claims without a Meta.security element of 42CFRPart2 |
 
 The default behavior is based on the API team certificate.
 
@@ -532,25 +532,25 @@ The default behavior is based on the API team certificate.
 
 Without any filters applied, Blue Button returns Part A, B, and D data from both the Shared Systems and the National Claims History (NCH) by default. Use the metadata filters described above to change this behavior, set API-specific defaults, etc. 
 
-#### **Filtering Part A / B data using \_source and \_tag**
+#### **Filtering Part A / B data using source and tag**
 
-Filtering data by a claim’s source system is possible using either the `\_source` or `\_tag parameter`. 
+Filtering data by a claim's source system is possible using either the `source` or `tag parameter`. 
 
-| \_source | Data retrieved  |
+| source | Data retrieved  |
 | :---- | :---- |
-| `NCH` | Claims for Part A \+ B from the National Claims History |
+| `NCH` | Claims for Part A + B from the National Claims History |
 | `VMS` | Claims for Part B from VMS |
-| `FISS` | Claims for Part A \+ B from FISS |
+| `FISS` | Claims for Part A + B from FISS |
 | `MCS` | Claims for Part B from MCS |
 | `MAP` | Claims for Part B (for now) from MAP |
 | `DDPS` | Part D claims from DDPS |
 
 vs. 
 
-| \_tag (don’t forget system\!) | Data retrieved  |
+| tag (don’t forget system\!) | Data retrieved  |
 | :---- | :---- |
-| `NationalClaimsHistory` | Claims for Part A \+ B from the National Claims History |
-| `SharedSystem` | Claims for Part A \+ B from VMS, FISS, MCS, and MAP |
+| `NationalClaimsHistory` | Claims for Part A + B from the National Claims History |
+| `SharedSystem` | Claims for Part A + B from VMS, FISS, MCS, and MAP |
 | `DDPS` | Part D claims from DDPS  |
 
 ## Working with digital insurance card data 
