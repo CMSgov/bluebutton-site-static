@@ -517,7 +517,7 @@
         "id": "ExplanationOfBenefit-Institutional-Base.CLM_ADMSN_TYPE_CD",
         "path": "ExplanationOfBenefit-Institutional-Base.CLM_ADMSN_TYPE_CD",
         "short": "Claim Admission Type Code",
-        "definition": "The code indicating the type and priority of an inpatient admission associated with the service on an intermediary submitted claim. [NCH]",
+        "definition": "The code indicating the type and priority of an inpatient or outpatient admission associated with the service on an intermediary submitted claim.",
         "min": 0,
         "max": "1",
         "type": [
