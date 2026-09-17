@@ -10,7 +10,7 @@ Code systems define the valid values for coded fields in Blue Button responses. 
 
 In FHIR, a code system is a defined set of codes with meanings. For example, the eob-type code system defines codes like CARRIER, INPATIENT, and PDE that identify claim types. When you see:
 
-```
+```json
 {
   "system": "https://bluebutton.cms.gov/fhir/CodeSystem/EOB-TYPE",
   "code": "CARRIER"
@@ -23,7 +23,7 @@ In FHIR, a code system is a defined set of codes with meanings. For example, the
 
 FHIR uses coding systems to represent standardized values. A coded value has three parts:
 
-```
+```json
 {
   "coding": [
     {
