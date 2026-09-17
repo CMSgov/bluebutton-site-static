@@ -213,7 +213,7 @@ HTTP / 1.1 200 OK
 
 ## Native and mobile applications
 
-The Blue Button API supports the [OAuth 2.0 Authorization Framework](https://www.rfc-editor.org/info/rfc6749/#section-1.3.1) using the [authorization code grant](https://www.rfc-editor.org/rfc/rfc6749#section-1.3.1) with a [confidential client](https://www.rfc-editor.org/rfc/rfc6749#section-2.1) type flow. To keep Medicare enrollees’ data secure during authentication, we don’t support implicit grants or public client types.
+The Blue Button API supports the [OAuth 2.0 Authorization Framework](https://www.rfc-editor.org/info/rfc6749/) using the [authorization code grant](https://www.rfc-editor.org/rfc/rfc6749#section-1.3.1) with a [confidential client](https://www.rfc-editor.org/rfc/rfc6749#section-2.1) type flow. To keep Medicare enrollees’ data secure during authentication, we don’t support implicit grants or public client types.
 
 For best practices for the type of application you’re developing, review the [OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252.txt).
 
@@ -227,7 +227,7 @@ There are several reasons to use the PKCE extension:
 
 * Ensures that the application that started the OAuth 2.0 flow is the same one that is finishing it.
 * Mitigates the impact of a compromised Authorization Code by a malicious actor.
-* Follows the [OAuth 2.0 Security Best Current Practice](https://www.rfc-editor.org/info/rfc9700/\#section-2.1.1)
+* Follows the [OAuth 2.0 Security Best Current Practice](https://www.rfc-editor.org/info/rfc9700/#section-2)
 
 PKCE uses a code challenge that is derived from a code-verifier.
 
