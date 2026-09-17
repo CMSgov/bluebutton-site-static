@@ -26,9 +26,7 @@ Before redirecting the user to Medicare.gov for authorization, we strongly recom
 * **How long you keep it** Your data retention policy  
 * **How to revoke access** That they can disconnect at any time
 
-TIP
-
-Short, contextual messages in your UI are far more effective than burying this information in a privacy policy. A quick "We're about to request your Medicare claims data so we can show you your health spending history" goes a long way.
+<Alert size="slim" variant="success">**Tip:** Short, contextual messages in your UI are far more effective than burying this information in a privacy policy. A quick "We're about to request your Medicare claims data so we can show you your health spending history" goes a long way.</Alert>
 
 ## The authorization redirect
 
@@ -52,7 +50,7 @@ Enrollees can revoke your app's access in two ways:
 
 When access is revoked, your access and refresh tokens become invalid. Handle this gracefully:
 
-```
+```bash title="Terminal"
 # Revoke a token programmatically
 curl -X POST "https://api.bluebutton.cms.gov/v2/o/revoke/" \
   -H "Content-Type: application/x-www-form-urlencoded" \
@@ -89,7 +87,7 @@ You can disconnect at any time from your [Medicare Connected Apps page](https://
 
 After the user returns from Medicare.gov:
 
-**Connected\!**
+**Connected!**
 
 We're now loading your Medicare data. This may take a moment.
 
@@ -101,9 +99,9 @@ In account settings, provide a clear disconnect button with an explanation of wh
 
 **Medicare connection: Active**
 
-Connected on January 15, 2026\.
+Connected on January 15, 2026.
 
-\[Disconnect\] This will stop your app from accessing new Medicare data. Previously loaded data will be \[deleted / retained per your policy\].
+[Disconnect] This will stop your app from accessing new Medicare data. Previously loaded data will be \[deleted / retained per your policy\].
 
 ## Common mistakes
 
