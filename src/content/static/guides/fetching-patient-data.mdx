@@ -96,8 +96,8 @@ In FHIR, the identifier attribute is a list element that could supply multiple i
 
 For example, you can use discriminators to pull the current MBI from a Patient resource. (Enrollees are sometimes given new or replacement MBIs in situations such as identity theft.) In the Patient resource snippet below, there are two identifiers in the list. Use the following discriminators to pull the current MBI:
 
-* identifier.system = http://hl7.org/fhir/sid/us-mbi (ensures that the entry is an MBI)  
-* identifier.type.coding\[n\].extension.valueCoding.code = “current”
+* `identifier.system = http://hl7.org/fhir/sid/us-mbi` (ensures that the entry is an MBI)  
+* `identifier.type.coding\[n\].extension.valueCoding.code` = “current”
 
 Patient identifier example:
 
@@ -436,7 +436,7 @@ To navigate forward and backward through the bundle, use the URLs provided in `B
 
 In the example below, the Bundle.total attribute shows that there are 89 records in the results. However, only the first 10 records are delivered in the `Bundle.entry` array.
 
-For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle](https://www.hl7.org/fhir/bundle.html) and [FHIR v4.3.0 Managing Returned Resources](https://www.hl7.org/fhir/search.html#return) 
+For more information on Bundles and FHIR search results, see [FHIR v4.3.0 Bundle](https://hl7.org/fhir/R4B/bundle.html) and [FHIR v4.3.0 Managing Returned Resources](https://www.hl7.org/fhir/search.html#return) 
 Bundle navigation example:
 
 ```json
