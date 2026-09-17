@@ -4,14 +4,14 @@ seo:
   description: "Guiding developers in building a CMS-compliant consent flow"
 sortOrder: 7
 ---
-* [ ] Tested against multiple synthetic users (not just one)
-* [ ] Handling pagination for large EOB bundles
-* [ ] Handling token refresh and expiration
-* [ ] Handling cases where the user denies demographic access
-* [ ] Using gzip compression
-* [ ] Filtering by claim type where possible
-* [ ] Consent flow meets CMS requirements
-* [ ] Privacy policy and terms of service finalized
+* Tested against multiple synthetic users (not just one)
+* Handling pagination for large EOB bundles
+* Handling token refresh and expiration
+* Handling cases where the user denies demographic access
+* Using gzip compression
+* Filtering by claim type where possible
+* Consent flow meets CMS requirements
+* Privacy policy and terms of service finalized
 
 ## Optimize your queries
 
@@ -21,19 +21,19 @@ The most effective optimization is to request less data. Blue Button supports se
 
 **Increase the page size.** Search results default to 10 per page, with a maximum of 50\. Setting `_count=50` cuts your round trips by a factor of five:
 
-/ExplanationOfBenefit?count=50
+`/ExplanationOfBenefit?count=50`
 
 Values above 50 are rejected with a validation error.
 
 **Filter by claim type.** Request only the claim types your app uses. Accepts one or more comma-separated values: `carrier`, `pde`, `dme`, `hha`, `hospice`, `inpatient`, `outpatient`, `snf`:
 
-/ExplanationOfBenefit?type=carrier,pde
+`/ExplanationOfBenefit?type=carrier,pde`
 
 You can also use fully qualified tokens, like `https://bluebutton.cms.gov/resources/codesystem/eob-type|carrier`. Values are case-insensitive.
 
 **Filter by date of service.** Use `service-date` to bound results by when care was delivered, rather than when the record changed. It supports the same operators as `_lastUpdated`:
 
-/ExplanationOfBenefit?service-date=ge2025-01-01\&service-date=lt2026-01-01
+`/ExplanationOfBenefit?service-date=ge2025-01-01\&service-date=lt2026-01-01`
 
 Use `service-date` when you care about the care period, and `_lastUpdated` when you care about what's changed since your last sync. They're independent and can be combined.
 
@@ -48,15 +48,15 @@ Turn on compression to improve performance when transferring large data resource
 
 To activate compression, add the following to the header:
 
-Accept-Encoding: gzip
+`Accept-Encoding: gzip`
 
 The minimum payload size we will gzip is 1 kilobyte. Check for the `Content-Encoding: gzip` response header before trying to decompress. 
 
 ### Query by lastUpdated field
 
-The HL7 FHIR specification provides a Meta section in each resource. The `lastUpdated field` represents the date and time of the last update and is supplied with a FHIR instant datatype: `YYYY-MM-DDThh:mm:ss.sss+zz:zz`.
+The HL7 FHIR specification provides a Meta section in each resource. The `lastUpdated` field represents the date and time of the last update and is supplied with a FHIR instant datatype: `YYYY-MM-DDThh:mm:ss.sss+zz:zz`.
 
-The HL7 FHIR specification also provides a `lastUpdated query` parameter for the search operations on the endpoints. By using the `lastUpdated` query parameter, you can request records that have changed before or after a specific date. If you keep track of the date of a previous request, you can request only the changes since that request. The format of this request would be: `/Patient?id=-20000000001112&lastUpdated=gt2020-02-13T08:00:00-05:00`
+The HL7 FHIR specification also provides a `lastUpdated` query parameter for the search operations on the endpoints. By using the `lastUpdated` query parameter, you can request records that have changed before or after a specific date. If you keep track of the date of a previous request, you can request only the changes since that request. The format of this request would be: `/Patient?id=-20000000001112&lastUpdated=gt2020-02-13T08:00:00-05:00`
 
 Do not use dates before 2020-02-12 with the `lastUpdated` parameter.
 
@@ -71,30 +71,27 @@ The Blue Button API aligns with the [CARIN Consumer Directed Payer Data Exchange
 Key things to know:
 
 * CARIN uses supportingInfo instead of extensions for many data points
-
 * Blue Button provides data in both formats for backward compatibility
-
 * CARIN defines standard code systems for adjudication, claim types, and supporting info categories
 
 If you're building for Blue Button only, you don't need to study the full IG, but awareness of it helps if you plan to integrate with other FHIR APIs.
 
 Reference:
 
-[CARIN IG](https://hl7.org/fhir/us/carin-bb/) 
-
-[HL7 FHIR CPCDS IG](https://hl7.org/fhir/us/carin-bb/STU2/) 
+- [CARIN IG](https://hl7.org/fhir/us/carin-bb/) 
+- [HL7 FHIR CPCDS IG](https://hl7.org/fhir/us/carin-bb/STU2/) 
 
 ## Testing checklist
 
 Before your production demo, test these scenarios:
 
-* \[ \] **Multiple users** Test with several synthetic users (use the synthetic users CSV (LINK: TBD) to find users with different claim volumes)  
-* \[ \] **Large datasets** Some synthetic users have hundreds of claims. Verify your pagination handles them  
-* \[ \] **Missing demographics** Simulate a user who denies patient/Patient.rs scope access  
-* \[ \] **Token expiration** Use the sandbox /expireauthenticateduser endpoint (see [Testing token expiration](/guides/authentication-and-oath/#testing-token-expiration)) to test expired tokens  
-* \[ \] **Revoked access** Test what happens when a user disconnects your app  
-* \[ \] **All claim types** Verify your app handles carrier, inpatient, outpatient, PDE, DME, HHA, hospice, and SNF claims  
-* \[ \] **Error handling** Test 401, 403, 404, and 429 responses
+* **Multiple users** Test with several synthetic users (use the synthetic users CSV (LINK: TBD) to find users with different claim volumes)  
+* **Large datasets** Some synthetic users have hundreds of claims. Verify your pagination handles them  
+* **Missing demographics** Simulate a user who denies `patient/Patient.rs` scope access  
+* **Token expiration** Use the sandbox `/expireauthenticateduser` endpoint (see [Testing token expiration](/guides/authentication-and-oath/#testing-token-expiration)) to test expired tokens  
+* **Revoked access** Test what happens when a user disconnects your app  
+* **All claim types** Verify your app handles carrier, inpatient, outpatient, PDE, DME, HHA, hospice, and SNF claims  
+* **Error handling** Test 401, 403, 404, and 429 responses
 
 ## Next steps 
 
