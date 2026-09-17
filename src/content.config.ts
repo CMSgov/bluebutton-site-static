@@ -7,6 +7,11 @@ import { loadCodebooks } from '#utils/loaders/load-codebooks'
 import { loadCsvDataDictionary } from '#utils/loaders/load-csv-data-dictionary'
 import { loadCsvResources } from '#utils/loaders/load-csv-resources'
 
+const seoSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+}).partial().optional()
+
 const staticCollection = defineCollection({
   loader: glob({
     pattern: '**\/[^_]*.(md|mdx)',
@@ -14,12 +19,20 @@ const staticCollection = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
-    seo: z.object({
-      title: z.string(),
-      description: z.string(),
-    }).partial().optional(),
+    seo: seoSchema,
     sortOrder: z.coerce.number().optional(),
-    publishedDate: z.coerce.date().optional(),
+  }),
+})
+
+const termsCollection = defineCollection({
+  loader: glob({
+    pattern: '**\/[^_]*.(md|mdx)',
+    base: './src/content/terms',
+  }),
+  schema: z.object({
+    title: z.string(),
+    seo: seoSchema,
+    publishedDate: z.coerce.date(),
   }),
 })
 
@@ -30,10 +43,7 @@ const resourcesCollection = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
-    seo: z.object({
-      title: z.string(),
-      description: z.string(),
-    }).partial(),
+    seo: seoSchema,
   }),
 })
 
@@ -121,5 +131,6 @@ export const collections = {
   codebooks: codeBooksCollection,
   csvVariables: csvVariablesCollection,
   fhir: fhirJsonCollection,
+  terms: termsCollection,
   dataDictionary: dataDictionaryCollection,
 }

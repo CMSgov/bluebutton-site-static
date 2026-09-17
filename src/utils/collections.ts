@@ -23,7 +23,7 @@ export async function getProductionCollection() {
 }
 
 export async function getTermsCollection() {
-  return (await getCollection('static', ({ id }) => id.startsWith('terms/'))).sort((a, b) => {
+  return (await getCollection('terms')).sort((a, b) => {
     // Newest to oldest
     return b.id.localeCompare(a.id)
   })
