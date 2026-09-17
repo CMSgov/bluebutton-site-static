@@ -114,8 +114,8 @@ const isActive = (path: string) => path === pathname
         <li class="usa-sidenav__item">
           <Link
             to="/[...slug]"
-            params={{ slug: 'production' }}
-            class={isActive($path({ to: '/[...slug]', params: { slug: 'production' } })) ? 'usa-current' : null}
+            params={{ slug: 'production-access' }}
+            class={isActive($path({ to: '/[...slug]', params: { slug: 'production-access' } })) ? 'usa-current' : null}
             data-tealium="left-rail">Production Access</Link
           >
         </li>

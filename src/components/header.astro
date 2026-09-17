@@ -119,7 +119,10 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
           <li class="usa-nav__primary-item">
             <button
               type="button"
-              class:list={['usa-accordion__button usa-nav__link', isActive('/production') ? 'usa-current' : null]}
+              class:list={[
+                'usa-accordion__button usa-nav__link',
+                isActive('/production-access') ? 'usa-current' : null,
+              ]}
               aria-expanded="false"
               aria-controls="basic-nav-section-four"
             >
@@ -127,7 +130,7 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             </button>
             <ul id="basic-nav-section-four" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/[...slug]" params={{ slug: 'production' }} data-tealium="main_nav">Overview</Link>
+                <Link to="/[...slug]" params={{ slug: 'production-access' }} data-tealium="main_nav">Overview</Link>
               </li>
               {
                 productionLinks.map((link) => (
