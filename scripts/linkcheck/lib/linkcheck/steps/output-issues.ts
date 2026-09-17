@@ -1,4 +1,3 @@
-import core from '@actions/core'
 import kleur from 'kleur'
 import process from 'node:process'
 
@@ -80,34 +79,4 @@ export function outputIssues(linkIssues: LinkIssue[], state: LinkCheckerState) {
     console.log(kleur.yellow().bold(warningText.split('\n\n').join('\n    ')))
     console.log()
   }
-}
-
-export function outputAnnotationsForGitHub(linkIssues: LinkIssue[]) {
-  // Instruct the user to check the logs if there are too many annotations
-  // (GitHub does not display more than 10)
-  const annotationCount = linkIssues.reduce(
-    (prev, linkIssue) => prev + (linkIssue.sourceFileAnnotations.length || 1),
-    0,
-  )
-  if (annotationCount > 10) {
-    core.error(`Found ${annotationCount} link issues, please check the log to see them all`)
-  }
-
-  // Now output all line annotations
-  linkIssues.forEach((linkIssue) => {
-    linkIssue.sourceFileAnnotations.forEach((annotation) => {
-      core.error(annotation.message, annotation.location)
-    })
-
-    // Also output an error if no annotations were found for a link issue
-    if (!linkIssue.sourceFileAnnotations.length) {
-      let message = dedentMd`${linkIssue.type.formatTitle()} in HTML page
-				at "${linkIssue.page.pathname}", unknown source location:
-				${linkIssue.annotationText || linkIssue.linkHref}`
-      if (linkIssue.autofixHref) {
-        message += ` Suggested fix: ${linkIssue.autofixHref}`
-      }
-      core.error(message)
-    }
-  })
 }

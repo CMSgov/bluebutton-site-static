@@ -31,7 +31,6 @@
     "tinyglobby": "^0.2.15"
   },
   "devDependencies": {
-    "@actions/core": "^1.11.1",
     "@antfu/eslint-config": "^5.4.1",
     "@astrojs/ts-plugin": "^1.10.8",
     "@eslint-react/eslint-plugin": "^1.53.1",
