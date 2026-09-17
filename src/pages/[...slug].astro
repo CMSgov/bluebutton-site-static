@@ -11,6 +11,7 @@ import ProcessList from '#components/process-list/process-list.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 import BaseLayout from '#layouts/base-layout.astro'
 import { createRoute } from 'astro-typesafe-routes/create-route'
+import OverflowTable from '#components/overflow-table.astro'
 
 export const Route = createRoute({
   routeId: '/[...slug]',
@@ -42,6 +43,7 @@ const { Content, headings } = await render(post)
       <Content
         components={{
           a: Link,
+          table: OverflowTable,
           Link,
           ProcessList,
           ProcessListItem,
