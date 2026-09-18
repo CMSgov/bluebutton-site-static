@@ -471,10 +471,10 @@ The values for outcome are:
 
 | Code | Meaning | Notes |
 | :---- | :---- | :---- |
-| complete | Processing complete | “Adjudicated” |
-| partial | Partially-processed | “Partially-Adjudicated” |
-| queued | Received but not yet processed | Very rare to encounter |
-| error | An error in processing occurred | This status is mapped but should never show up in practice. |
+| `complete` | Processing complete | “Adjudicated” |
+| `partial` | Partially-processed | “Partially-Adjudicated” |
+| `queued` | Received but not yet processed | Very rare to encounter |
+| `error` | An error in processing occurred | This status is mapped but should never show up in practice. |
 
 
 
@@ -482,10 +482,10 @@ Outcome values by source:
 
 | Source System | Source Field & Logic | ExplanationOfBenefit.outcome |
 | :---- | :---- | :---- |
-| NCH | All records | complete |
-| DDPS | All records | complete |
-| Shared Systems | CLMPDSTUSCD IN ( P, 1, R, 2, D, Y) | complete |
-| Shared Systems | CLMPDSTUSCD IN ('\~',I,S, T) | partial |
+| `NCH` | All records | complete |
+| `DDPS` | All records | complete |
+| `Shared Systems` | CLMPDSTUSCD IN ( P, 1, R, 2, D, Y) | complete |
+| `Shared Systems` | CLMPDSTUSCD IN ('\~',I,S, T) | partial |
 
 
 
