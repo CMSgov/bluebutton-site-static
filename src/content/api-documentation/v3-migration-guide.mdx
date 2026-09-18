@@ -459,7 +459,7 @@ What this enables for your application:
 4. Once the claim is fully adjudicated, it also appears in the National Claims History (NCH) source, tagged NationalClaimsHistory.
 
 
-<Alert size="slim" type="info">**Note:** Shared Systems data applies only to Part A/B claims. There is no partially adjudicated feed for Part D (prescription drug) claims. Part D claims, sourced from DDPS, are only available in Blue Button once fully adjudicated. Applications should not build logic that expects a "partial" state for Part D EOBs. For details on filtering by source/tag, see Section II. For deduplication guidance as a claim moves from partial to final, see Section XI.</Alert>
+<Alert size="slim" variant="info">**Note:** Shared Systems data applies only to Part A/B claims. There is no partially adjudicated feed for Part D (prescription drug) claims. Part D claims, sourced from DDPS, are only available in Blue Button once fully adjudicated. Applications should not build logic that expects a "partial" state for Part D EOBs. For details on filtering by source/tag, see Section II. For deduplication guidance as a claim moves from partial to final, see Section XI.</Alert>
 
 ### IX. Claim Adjudication using "Outcome", and "Final Action"
 
@@ -502,13 +502,13 @@ Syntax (just one):
 These can be combined with other search parameters.
 
 
-<Alert size="slim" type="info">**Note:** Because NCH claims load only weekly, filtering for non-fully adjudicated claims may result in partial claims. It is a best practice to avoid searching using outcome=partial by itself to avoid missing claims.</Alert>
+<Alert size="slim" variant="info">**Note:** Because NCH claims load only weekly, filtering for non-fully adjudicated claims may result in partial claims. It is a best practice to avoid searching using outcome=partial by itself to avoid missing claims.</Alert>
 
 #### Final Action
 
 In the IDR, Final Action is “A VALUE INDICATING A FINAL ACTION CLAIM. VALID VALUES: Y = FINAL ACTION CLAIM, NOT VOIDED. N = NOT FINAL ACTION CLAIM.”
 
-<Alert size="slim" type="info">**Note:** Final Action is not guaranteed to correlate to processing status. A queued claim can be “final action,” and a claim that has completed processing can be in a non-“final action” status. A claim marked as Final Action in NCH can be “not final action” in the Shared Systems. We expose Final Action as a tag, but do not recommend its usage.</Alert>
+<Alert size="slim" variant="info">**Note:** Final Action is not guaranteed to correlate to processing status. A queued claim can be “final action,” and a claim that has completed processing can be in a non-“final action” status. A claim marked as Final Action in NCH can be “not final action” in the Shared Systems. We expose Final Action as a tag, but do not recommend its usage.</Alert>
 
 ### X. Deduplicating claims and identifying duplicates
 
@@ -564,7 +564,7 @@ Part D claims are submitted to CMS by the Part D plan sponsors (both PDPs + MA).
 Institutional claims can be deduplicated by using the claim control number on a per-enrollee basis. This is distinct from institutional claim ‘grouping’.
 
 
-<Alert size="slim" type="info">**Note:** Phase 1 (claim type code 1XXX) claims can contain many duplicates that may not be marked as related upstream of BFD. This means BFD cannot deduplicate them based on the claim that eventually gets processed. These claims are abandoned in claims processing.</Alert>
+<Alert size="slim" variant="info">**Note:** Phase 1 (claim type code 1XXX) claims can contain many duplicates that may not be marked as related upstream of BFD. This means BFD cannot deduplicate them based on the claim that eventually gets processed. These claims are abandoned in claims processing.</Alert>
 
 _To avoid duplicates, any Shared Systems claims with a 1XXX claim type code that have not received updates for 60 days will be deleted from v3. This is most common with institutional claims. It can generally be inferred by a significant number of fields that two resources are identical in everything except payment and `CLM-CNTL-NUM`._
 
