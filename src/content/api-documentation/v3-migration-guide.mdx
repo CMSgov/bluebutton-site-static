@@ -426,7 +426,7 @@ On `Patient/234567891`, the following link would be present, indicating it was r
 
 ### VII. Improved FHIR conformance
 
-v3 resources conform with CARIN for Blue Button version 2.1.0, which itself builds upon US Core 6.1.0. BFD v3 supports FHIR R4.
+v3 resources conform to CARIN for Blue Button version 2.1.0, which itself builds upon US Core 6.1.0. BFD v3 supports FHIR R4.
 
 #### Extension/Terminology changes to CodeSystem/StructureDefinition resources
 
@@ -436,7 +436,7 @@ v3 retires the usage of `/resources` to represent extensions and `CodeSystems`. 
 
 | v1/v2 | v3 |
 | :---- | :---- |
-| The "Near Line Record Identification Code" uses an extension at [/resources/variables/nch_near_line_rec_ident_cd/](/resources/variables/nch_near_line_rec_ident_cd/). This address references a code system with the same URL. | The extension has the URL [https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-NRLN-RIC-CD](https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-NRLN-RIC-CD), is represented as a StructureDefinition, and references the FHIR CodeSystem resource [https://bluebutton.cms.gov/fhir/CodeSystem/CLM-NRLN-RIC-CD](https://bluebutton.cms.gov/fhir/CodeSystem/CLM-NRLN-RIC-CD). |
+| The "Near Line Record Identification Code" uses an extension at `/resources/variables/nch_near_line_rec_ident_cd/`. This address references a code system with the same URL. | The extension has the URL `https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-NRLN-RIC-CD`, is represented as a StructureDefinition, and references the FHIR CodeSystem resource `https://bluebutton.cms.gov/fhir/CodeSystem/CLM-NRLN-RIC-CD`. |
 
 
 In the [Data Dictionary](/data-dictionary/), fields populated by a CMS code system have a link to the CodeSystem URL in the referenceTable column. FHIRPath expressions for extracting these fields also reference the extension URLs to target the extraction of individual resources.
