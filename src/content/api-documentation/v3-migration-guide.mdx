@@ -535,13 +535,13 @@ The claim control numbers uniquely identify a claim based on CLMCNTLNUM, BENESK,
 
 The claim control number can be extracted by executing the FHIRPath expression: 
 
-```fhir
+```fhirpath
 ExplanationOfBenefit.identifier.where('system'='https://bluebutton.cms.gov/fhir/CodeSystem/CLM-CNTL-NUM').value
 ```
 
 The original claim control number (if available) can be extracted by executing the FHIRPath expression: 
 
-```fhir
+```fhirpath
 ExplanationOfBenefit.related.where(relationship.coding.system = 'https://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship').reference.where(system='https://bluebutton.cms.gov/identifiers/CLM-CNTL-NUM').value
 ```
 
