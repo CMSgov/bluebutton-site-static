@@ -218,7 +218,7 @@ Changes include the element name, description, FHIRPath expressions, and other i
   * `VMS` = Viable Information Processing Systems (ViPS) Medicare Shared System (Partially Adjudicated DME claims)
   * `DDPS` = Drug Data Processing System (All Part D claims)
   * `MAP` = Medicare Adjudication Portal (some professional claims)
-* A new metadata field, `tag`, groups A+B claims from FISS, MCS, VMS into a single tag, SharedSystem
+* A new metadata field, `tag`, groups A+B claims from FISS, MCS, VMS into a single tag, `SharedSystem`
 * Includes metadata security labels. Our upstream data provider will return the security tag `42CFRPart2` if an item is determined to be sensitive under an inter-agency agreement with SAMHSA. Partially and fully adjudicated data will have tags to that effect
 * Consolidation of adjudication-related information to `ExplanationOfBenefit.item.adjudication` and `ExplanationOfBenefit.adjudication`
 * [Addition of claim control numbers to track prior versions of a claim](https://docs.google.com/document/d/1YPzMFMyet0vxnZnJ7dparJjMgnjNPucCL6mC0A_yx-A/edit#deduplicating-claims-and-identifying-duplicates)
@@ -454,14 +454,14 @@ What this enables for your application:
 #### How it works
 
 1. A provider submits a claim to Medicare.
-2. The claim is picked up by the relevant Shared System (FISS, MCS, or VMS) and becomes available in Blue Button v3, tagged SharedSystem, with outcome=partial or outcome=complete depending on processing status.
+2. The claim is picked up by the relevant Shared System (FISS, MCS, or VMS) and becomes available in Blue Button v3, tagged `SharedSystem`, with `outcome=partial` or `outcome=complete`, depending on processing status.
 3. As the claim is adjusted or finalized, the Shared Systems record updates in place — your application should expect to see the same claim change over time (see Claim Control Numbers, Section XI, for how to track this).
 4. Once the claim is fully adjudicated, it also appears in the National Claims History (NCH) source, tagged NationalClaimsHistory.
 
 
-<Alert size="slim" variant="info">**Note:** Shared Systems data applies only to Part A/B claims. There is no partially adjudicated feed for Part D (prescription drug) claims. Part D claims, sourced from DDPS, are only available in Blue Button once fully adjudicated. Applications should not build logic that expects a "partial" state for Part D EOBs. For details on filtering by source/tag, see Section II. For deduplication guidance as a claim moves from partial to final, see Section XI.</Alert>
+<Alert size="slim" variant="info">**Note:** Shared Systems data applies only to Part A/B claims. No partially adjudicated feed exists for Part D (prescription drug) claims. Part D claims, sourced from DDPS, are only available in Blue Button once fully adjudicated. Applications should not build logic that expects a "partial" state for Part D EOBs. For details on filtering by source/tag, see Section II. For deduplication guidance as a claim moves from partial to final, see Section XI.</Alert>
 
-### IX. Claim Adjudication using "Outcome", and "Final Action"
+### IX. Claim Adjudication using "Outcome" and "Final Action"
 
 #### Outcome
 
