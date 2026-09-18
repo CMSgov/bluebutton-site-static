@@ -520,8 +520,8 @@ This means that there are two possible scenarios:
 
 | Scenario | API behavior | Tags (tag) | Source (source) |
 | :---- | :---- | :---- | :---- |
-| A user calls up a claim that is still being adjudicated. The claim is volatile and updates often. | 1 EOB is returned | SharedSystem | FISS/MCS/VMS |
-| A user calls up an adjudicated claim. The claim has been processed and finalized. | 2 EOB resources are returned One from Shared Systems One from the National Claims History | 1 claim with tag= SharedSystem 1 claim with tag= NationalClaimsHistory | 1 claim from FISS/MCS/VMS 1 claim from NCH |
+| A user calls up a claim that is still being adjudicated. The claim is volatile and updates often. | 1 EOB is returned | `SharedSystem` | FISS/MCS/VMS |
+| A user calls up an adjudicated claim. The claim has been processed and finalized. | 2 EOB resources are returned One from Shared Systems One from the National Claims History | 1 claim with tag `SharedSystem` 1 claim with tag `NationalClaimsHistory` | 1 claim from FISS/MCS/VMS 1 claim from NCH |
 
 #### Claim Control Numbers in v3
 
