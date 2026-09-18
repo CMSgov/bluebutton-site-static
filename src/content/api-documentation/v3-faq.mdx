@@ -32,51 +32,51 @@ There are a few key reference resources that will be helpful for the transition 
 
 ## Migrating from v1/v2 to v3
 
-### Is v3 backwards compatible?
+### Is v3 backward compatible?
 
-Blue Button v3 is backwards compatible on the API level: simply replace /v2/ with /v3/ in your requests to call v3 data. Your existing v1/v2 tokens will continue to work with v3 in most scenarios. Take a look at the migration guide section ‘FHIR IDs in v2 and v3’ for specific details about how tokens work across versions.
+Blue Button v3 is backward compatible at the API level: simply replace /v2/ with /v3/ in your requests to call v3 data. Your existing v1/v2 tokens will continue to work with v3 in most scenarios. Take a look at the migration guide section ‘FHIR IDs in v2 and v3’ for specific details about how tokens work across versions.
 
-The biggest change for applications migrating from v1/v2 to v3 is that the Patient resource IDs will not match across versions, but can be mapped via MBI which will remain the same. We recommend testing in the sandbox before migrating your production application.
+The biggest change for applications migrating from v1/v2 to v3 is that Patient resource IDs will not match across versions, but you can map them via MBI, which will remain the same. We recommend testing in the sandbox before migrating your production application.
 
 ### How does a v2 identifier map to a v3 identifier?
 
-The Medicare Beneficiary Identifier (MBI) is consistent between v2 and v3 Patient resources, however, other identifiers and the Patient resource ID are different between v2 and v3. When obtaining an access token from a grant code or a refresh token, the proper v2 or v3 Patient resource ID will be in the `patient` field of the resulting JSON depending on whether the v2 endpoint `https://sandbox.bluebutton.cms.gov/v2/o/token/` or the v3 endpoint `https://sandbox.bluebutton.cms.gov/v3/o/token/` is used.
+The Medicare Beneficiary Identifier (MBI) is consistent between v2 and v3 Patient resources; however, other identifiers and the Patient resource ID are different between v2 and v3. When obtaining an access token from a grant code or a refresh token, the proper v2 or v3 Patient resource ID will be in the `patient` field of the resulting JSON, depending on whether the v2 endpoint `https://sandbox.bluebutton.cms.gov/v2/o/token/` or the v3 endpoint `https://sandbox.bluebutton.cms.gov/v3/o/token/` is used.
 
 In rare cases, for example, if fraud is reported on an enrollee's account, a new identifier may be issued. When this happens, the latest token will contain the correct identifier, and Patient responses using that token will include a link to the previous identifier.
 
 ### In what scenarios will tokens not work across v1/v2 and v3?
 
-Note that going forward, a Blue Button a user will only ever have one active token per Blue Button application at a time. If a user goes through a Blue Button auth flow while they have an existing token already (e.g., going through v3 auth flow when they already went through v2), a successful auth will result in the old v2 token being deleted. This is to prevent an app from using a token that does not represent their most recent privacy preferences.
+Note that going forward, a Blue Button a user will only ever have one active token per Blue Button application at a time. If a user goes through a Blue Button auth flow while they already have an existing token (e.g., going through the v3 auth flow when they already went through v2), a successful auth will delete the old v2 token. This prevents an app from using a token that doesn't reflect their most recent privacy preferences.
 
-Additionally, any v3 token that does not include substance use data (enrollee left the box unchecked on the permissions screen) and is used to query EOB for v2 instead of v3 will result in an error. This is because we want to continue to respect the most recent privacy preferences for the enrollee, and we don’t support substance use data filtering on v2.
+Additionally, any v3 token that does not include substance use data (enrollee left the box unchecked on the consent screen) and is used to query EOB for v2 instead of v3 will result in an error. This is because we want to continue respecting the enrollee's most recent privacy preferences, and we don’t support substance use data filtering on v2.
 
 ## Claims Data & Adjudication
 
 ### What is Shared Systems data, and how can I use it in my application?
 
-Shared Systems data (FISS, MCS, VMS) gives your application access to Part A/B claims within days of submission, rather than waiting weeks for full adjudication. This is useful for applications that want to alert users to recent care events, such as a hospital discharge, sooner. These claims are tagged SharedSystem and will update as they move through processing.
+Shared Systems data (FISS, MCS, VMS) gives your application access to Part A/B claims within days of submission, rather than waiting weeks for full adjudication. This is useful for applications that want to alert users sooner to recent care events, such as a hospital discharge. These claims are tagged SharedSystem and will update as they move through processing.
 
 ### Which claim types are available in a partially adjudicated format?
 
-Only Part A/B claims processed through the Shared Systems (FISS for institutional claims, MCS for professional claims, and VMS for DME claims) are available in a partially adjudicated form. Part D (prescription drug) claims, sourced from the Drug Data Processing System (DDPS), are only available once fully adjudicated. There is no partially adjudicated data for Part D.
+Only Part A/B claims processed through the Shared Systems (FISS for institutional claims, MCS for professional claims, and VMS for DME claims) are available in a partially adjudicated form. Part D (prescription drug) claims, sourced from the Drug Data Processing System (DDPS), are only available once fully adjudicated. Part D has no partially adjudicated data.
 
 ### How can I determine the adjudication status of a claim?
 
-Check the `ExplanationOfBenefit.outcome` field (*complete* or *partial*) or filter by **tag** to see a claim's source system. Only Part A/B claims from Shared Systems can return partial, Part D claims are always fully adjudicated. For filtering syntax and tag values, see [metadata filtering](/guides/migration-guide/#iii-metadata-filtering).
+Check the `ExplanationOfBenefit.outcome` field (*complete* or *partial*) or filter by **tag** to see a claim's source system. Only Part A/B claims from Shared Systems can return partial; Part D claims are always fully adjudicated. For filtering syntax and tag values, see [metadata filtering](/guides/migration-guide/#iii-metadata-filtering).
 
-### How does Blue Button determine which scopes and permissions appear on my app's permission screen?
+### How does Blue Button determine which scopes and consent appear on my app's consent screen?
 
 The Blue Button API offers a full set of scopes that apps can request, such as claims data, patient demographics, and coverage information. Here's how the process works:
 
 1. **Your app requests scopes.** How you do this depends on your app's status:
    1. **New applications:** You'll discuss which scopes make sense for your use case during the demo and approval process.
    2. **Current applications:** Fill out \[this form \[Link TBD\]\] to identify the scopes you need. The Blue Button team will follow up with any questions.
-2. **The Blue Button team reviews and approves your request.** The team makes the final determination on which scopes your app receives and communicates that decision to your organization.
-3. **The permission screen is generated automatically.** Based on the approved scopes, Blue Button builds the permission screen that enrollees see, showing only the data categories relevant to your app.
+2. **The Blue Button team reviews and approves your request.** The team makes the final determination of which scopes your app can request.
+3. Based on the approved scopes and the scopes included in the request to the authorize endpoint, Blue Button builds the consent screen that enrollees see, showing only the data categories relevant to that request.
 
 ### If a claim has multiple in-flight (not yet fully adjudicated) versions, do you return a deduplicated result?
 
-Yes, within a single source. Only the latest version of an in-flight claim is returned per source. Older, superseded versions won't appear. However, deduplication does not happen across sources: once a claim finishes adjudication, you'll receive two EOB resources for it, one from Shared Systems, and one from the National Claims History (NCH), rather than the Shared Systems version disappearing.
+Yes, within a single source. We return only the latest version of an in-flight claim per source. Older, superseded versions won't appear. However, deduplication does not happen across sources: once a claim finishes adjudication, you'll receive two EOB resources for it, one from Shared Systems and one from the National Claims History (NCH), rather than the Shared Systems version disappearing.
 
 ## Working with the API
 
@@ -86,16 +86,16 @@ Yes, `_lastUpdated` is supported according to the [FHIR spec](https://build.fhir
 
 ### How can I see all of an Enrollee's claims data in v3?
 
-For v3 ExplanationOfBenefit search calls, the offset parameter will be used to paginate through an enrollee's claims data, rather than the startIndex parameter. In v3 ExplanationOfBenefit search calls, 10 records are returned by default. You can return more than 10 by passing in a count parameter (the value must be between 1 and 50). So, if an enrollee has 20 claims in v3, you could retrieve the first 10 without passing any parameters, and you could then retrieve the remaining 10 by passing offset=10. If you want all the claims data you can get in a single call, pass count=50. Further details are available in the [Blue Button Swagger resource.](https://sandbox.bluebutton.cms.gov/docs/openapi)
+For v3 ExplanationOfBenefit search calls, the offset parameter will be used to paginate through an enrollee's claims data, rather than the startIndex parameter. In v3 ExplanationOfBenefit search calls, the API returns 10 records by default. You can return more than 10 by passing in a count parameter (the value must be between 1 and 50). So, if an enrollee has 20 claims in v3, you could retrieve the first 10 without passing any parameters, and you could then retrieve the remaining 10 by passing offset=10. To get all claims data you can get in a single call, pass ` count=50` . Further details are available in the [Blue Button Swagger resource.](https://sandbox.bluebutton.cms.gov/docs/openapi)
 
 ## Permissions & Data Sharing
 
 ### On the permission screen, will optional fields only appear when requested?
 
-The optional field (alcohol and substance use data) is determined by the scopes requested. The substance use data sharing checkbox will only appear if the EOB scope is requested.
+The optional field (alcohol and substance use data) depends on the scopes requested. The substance use data sharing checkbox will only appear if the EOB scope is requested.
 
 ### What is the alcohol and substance use data and where does it come from?
 
-Alcohol and substance use data is a subset of the claims data. Certain claims are categorized based on a defined list tied to [42 CFR Part 2](https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/fact-sheet-42-cfr-part-2-final-rule/index.html), a federal rule protecting the confidentiality of substance use disorder treatment records. In v3, these claims are withheld unless the enrollee opts to share them with a third party application.
+Alcohol and substance use data is a subset of the claims data. Certain claims are categorized based on a defined list tied to [42 CFR Part 2](https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/fact-sheet-42-cfr-part-2-final-rule/index.html), a federal rule protecting the confidentiality of substance use disorder treatment records. In v3, these claims are withheld unless the enrollee opts to share them with a third-party application.
 
-Optional alcohol and substance use data will not be shared by default, however a user can select the checkbox on the permission form during the authorization flow to elect to share that data if they wish.
+Optional alcohol and substance use data will not be shared by default; however, a user can select the checkbox on the permission form during the authorization flow to elect to share that data if they wish.
