@@ -531,7 +531,7 @@ In CMS claims-processing systems, all institutional and professional claims are 
 * `CLM.CLMORIGCNTLNUM`
 * `CLM.CLMPRNTCNTLNUM`
 
-The claim control numbers uniquely identify a claim based on CLMCNTLNUM, BENESK, and CLMFROMDT. This information can be used to deduplicate across different versions of the same claim within the same source + across claims from the Shared Systems + NCH.
+The claim control numbers uniquely identify a claim based on `CLMCNTLNUM`, `BENESK`, and `CLMFROMDT`. Use this information to deduplicate across different versions of the same claim within the same source and across claims from the Shared Systems and NCH.
 
 The claim control number can be extracted by executing the FHIRPath expression: 
 
@@ -549,11 +549,11 @@ ExplanationOfBenefit.related.where(relationship.coding.system = 'https://termino
 
 To identify duplicates using the claim control number, you can identify all claims for a given enrollee with the same ExplanationOfBenefit.billablePeriod.start that share the same CLM-CNTL-NUM (in either identifier or related). The latest version of the claim is currently accessible via BFD.
 
-There may be some instances in which a claim can't be deduplicated via the `CLM-CNTL-NUM`. This happens infrequently, most often when a claim is submitted incorrectly or goes through a significant number of revisions. Additionally, there are slight differences in how the various CMS systems track claim control numbers.
+In some instances, a claim can't be deduplicated via the `CLM-CNTL-NUM`. This happens infrequently, most often when a claim is submitted incorrectly or goes through many revisions. Additionally, the various CMS systems track claim control numbers slightly differently.
 
 ##### Professional claims
 
-Professional claims should be deduplicated by the `CLM-CNTL-NUM` on a per-enrollee basis. One difference between professional claims from MCS and NCH is that NCH claims will never populate a new claim control number; they will have the original control number. Updated MCS claims with a new control number will populate both the new + parent control number.
+Deduplicate professional claims by `CLM-CNTL-NUM` on a per-enrollee basis. One difference between professional claims from MCS and NCH is that NCH claims will never populate a new claim control number; they will have the original control number. Updated MCS claims with a new control number will populate both the new + parent control numbers.
 
 ##### Part D claims
 
@@ -561,18 +561,18 @@ Part D claims are submitted to CMS by the Part D plan sponsors (both PDPs + MA).
 
 ##### Institutional claims
 
-Institutional claims can be deduplicated by using the claim control number on a per-enrollee basis. This is distinct from institutional claim ‘grouping’.
+You can deduplicate institutional claims using the claim control number on a per-enrollee basis. This is distinct from institutional claim ‘grouping’.
 
 
 <Alert size="slim" variant="info">**Note:** Phase 1 (claim type code 1XXX) claims can contain many duplicates that may not be marked as related upstream of BFD. This means BFD cannot deduplicate them based on the claim that eventually gets processed. These claims are abandoned in claims processing.</Alert>
 
 _To avoid duplicates, any Shared Systems claims with a 1XXX claim type code that have not received updates for 60 days will be deleted from v3. This is most common with institutional claims. It can generally be inferred by a significant number of fields that two resources are identical in everything except payment and `CLM-CNTL-NUM`._
 
-FISS and NCH have slightly different logic for CLM-CNTL-NUMs. The EoB.related claim control number on an institutional claim will always be the original claim control number. However, in NCH, if an institutional claim receives multiple rounds of claim control numbers, only the parent will be populated in EoB.related.
+FISS and NCH have slightly different logic for `CLM-CNTL-NUMs`. The EoB.related claim control number on an institutional claim will always be the original claim control number. However, in NCH, if an institutional claim receives multiple rounds of claim control numbers, only the parent will populate `EoB.related`.
 
 ##### DME-specific notes
 
-When VMS processes a claim and releases it to the NCH, the leading digit (a 1\) is dropped from the CLM-CNTL-NUM due to a design decision made in preparation for Y2K.
+When VMS processes a claim and releases it to the NCH, the leading digit (a 1\) is dropped from the `CLM-CNTL-NUM` due to a design decision made in preparation for Y2K.
 
 **Example:**
 
