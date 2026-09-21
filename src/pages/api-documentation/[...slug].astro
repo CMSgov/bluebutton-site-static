@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content'
 import Alert from '#components/alert.astro'
 import Link from '#components/link.astro'
+import OverflowTable from '#components/overflow-table.astro'
 import { createRoute } from 'astro-typesafe-routes/create-route'
 import { getCollection, render } from 'astro:content'
 import BaseLayout from '#layouts/base-layout.astro'
@@ -40,6 +41,7 @@ const { Content, headings } = await render(post)
           Link,
           Alert,
           Image,
+          table: OverflowTable,
         }}
       />
     </div>

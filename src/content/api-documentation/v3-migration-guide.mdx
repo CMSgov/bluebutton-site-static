@@ -224,7 +224,7 @@ Changes include the element name, description, FHIRPath expressions, and other i
 * [Addition of claim control numbers to track prior versions of a claim](https://docs.google.com/document/d/1YPzMFMyet0vxnZnJ7dparJjMgnjNPucCL6mC0A_yx-A/edit#deduplicating-claims-and-identifying-duplicates)
 * `ExplanationOfBenefit.created` is the effective date of the claim version, as recorded in the claim source (in v2, this field was the day the request to BFD was made)
 * `ExplanationOfBenefit.meta.lastUpdated` continues to represent the time the EOB was last updated in BFD. 
-<!--[Three new EOB profile search parameters](https://docs.google.com/document/d/1BvuQygz7qvXH8Eu7uF4VnfmA1ilx1PJyKcSKO2NGBr4/edit?tab=t.q4j7egtdkume#heading=h.pdarw3rk27hz)-->
+{/* [Three new EOB profile search parameters](https://docs.google.com/document/d/1BvuQygz7qvXH8Eu7uF4VnfmA1ilx1PJyKcSKO2NGBr4/edit?tab=t.q4j7egtdkume#heading=h.pdarw3rk27hz) */}
 
 <Alert size="slim">**Note:** Earliest LastUpdated Value in v3</Alert>
 
@@ -273,7 +273,7 @@ v3 currently supports two tags, System-Type and Final-Action, which need to be s
 
 The default behavior is based on the API team certificate.
 
-<!--### IV. EOB Profile Support in BFD v3
+{/* ### IV. EOB Profile Support in BFD v3
 
 v3's Explanation of Benefits (EOB) resources include several elements, many of which are CMS-specific and may not be needed by all consumers. To reduce payload size and improve interoperability, v3 will support three distinct EOB profiles, allowing API consumers to request only the data they need.
 
@@ -295,8 +295,6 @@ Example: Meta.profiles for a Pharmacy EOB
 | Regular | `https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy\|2.2.0` |
 | CMS | `https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy\|2.2.0`, `https://bluebutton.cms.gov/fhir/StructureDefinition/CMS-ExplanationOfBenefit-Pharmacy` |
 
-
-
 **Syntax for profile filtering**
 
 Filtering for profiles is done using the profile parameter. If no profile parameter is passed, the CMS profile will be returned. While AND and OR syntaxes are supported, using AND provides no value and is not advised.
@@ -315,7 +313,8 @@ OR syntax in FHIR uses commas. To query for just CMS institutional inpatient pro
 ```http
 GET ExplanationOfBenefit?profile=https://bluebutton.cms.gov/fhir/StructureDefinition/CMS-ExplanationOfBenefit-Institutional-Inpatient
 ```
--->
+*/}
+
 ### IV. Widespread availability of partially adjudicated claims (PAC) data
 
 v3 enables greater availability of non-Final Action claim elements and greater interoperability with adjudicated claims than in v2. They are represented using the `ExplanationOfBenefit` resource and are profiled to the CARIN Blue Button 2.1.0 profiles. *Partially adjudicated claims data is located in the Shared Systems database. More information about how to query this data is below.*
