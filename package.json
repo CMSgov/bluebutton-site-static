@@ -24,7 +24,7 @@
     "astro-expressive-code": "^0.44.1",
     "astro-seo": "^1.1.0",
     "astro-typesafe-routes": "^5.2.2",
-    "cva": "^1.0.0-beta.4",
+    "cva": "^1.0.0-beta.10",
     "fast-xml-parser": "^5.11.1",
     "papaparse": "^5.7.0",
     "preact": "^10.29.8",
