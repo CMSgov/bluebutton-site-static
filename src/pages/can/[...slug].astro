@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import Link from '#components/link.astro'
+import OverflowTable from '#components/overflow-table.astro'
+import Alert from '#components/alert.astro'
+import { createRoute } from 'astro-typesafe-routes/create-route'
+import { getCollection, render } from 'astro:content'
+import BaseLayout from '#layouts/base-layout.astro'
+import CanLayout from '#layouts/can-layout.astro'
+
+export const Route = createRoute({
+  routeId: '/can/[...slug]',
+})
+
+export type Props = {
+  post: CollectionEntry<'canDocs'>
+}
+
+export const getStaticPaths = Route.createGetStaticPaths<Props>(async () => {
+  const posts = await getCollection('canDocs')
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
+})
+
+const { post } = Astro.props
+const { Content, headings } = await render(post)
+---
+
+<BaseLayout title={post.data.seo.title || post.data.title} description={post.data.seo.description || ''}>
+  <CanLayout headings={headings}>
+    <div class="margin-bottom-4">
+      <h1>{post.data.title}</h1>
+    </div>
+    <div class="usa-prose">
+      <Content
+        components={{
+          a: Link,
+          Link,
+          Alert,
+          table: OverflowTable,
+        }}
+      />
+    </div>
+  </CanLayout>
+</BaseLayout>
