@@ -11,6 +11,12 @@ updates:
       interval: weekly
     cooldown:
       default-days: 7
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
 
   - package-ecosystem: npm
     directory: /
@@ -18,3 +24,9 @@ updates:
       interval: weekly
     cooldown:
       default-days: 7
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
