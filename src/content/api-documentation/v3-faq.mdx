@@ -26,9 +26,9 @@ sortOrder: 8
 
 There are a few key reference resources that will be helpful for the transition to and understanding of v3:
 
-- v3 Data Dictionary
-- v3 Migration Guide
-- v3 synthetic data
+- [v3 Data Dictionary](https://bluebutton.cms.gov/data-dictionary/)
+- [v3 Migration Guide](https://bluebutton.cms.gov/api-documentation/v3-migration-guide/)
+- v3 synthetic data (link coming soon)
 
 ## Migrating from v1/v2 to v3
 
@@ -40,7 +40,7 @@ The biggest change for applications migrating from v1/v2 to v3 is that Patient r
 
 ### How does a v2 identifier map to a v3 identifier?
 
-The Medicare Beneficiary Identifier (MBI) is consistent between v2 and v3 Patient resources; however, other identifiers and the Patient resource ID are different between v2 and v3. When obtaining an access token from a grant code or a refresh token, the proper v2 or v3 Patient resource ID will be in the `patient` field of the resulting JSON, depending on whether the v2 endpoint `https://sandbox.bluebutton.cms.gov/v2/o/token/` or the v3 endpoint `https://sandbox.bluebutton.cms.gov/v3/o/token/` is used.
+The Medicare Beneficiary Identifier (MBI) is consistent between v2 and v3 Patient resources; however, other identifiers and the Patient resource ID are different between v2 and v3. When obtaining an access token from a grant code or a refresh token, the proper v2 or v3 Patient resource ID will be in the `patient` field of the resulting JSON, depending on whether the v2 endpoint [`https://sandbox.bluebutton.cms.gov/v2/o/token/`](https://sandbox.bluebutton.cms.gov/v2/o/token/) or the v3 endpoint [`https://sandbox.bluebutton.cms.gov/v3/o/token/`](https://sandbox.bluebutton.cms.gov/v3/o/token/) is used.
 
 In rare cases, for example, if fraud is reported on an enrollee's account, a new identifier may be issued. When this happens, the latest token will contain the correct identifier, and Patient responses using that token will include a link to the previous identifier.
 
