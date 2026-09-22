@@ -13,14 +13,14 @@ In the Blue Button API Version 3 (v3), the following improvements have been made
 * Availability of partially adjudicated claims
 * Additional Part D information
 * Improved FHIR conformance to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/)
-* Addition of Structure Definition and CodeSystem resources
+* Addition of `StructureDefinition` and `CodeSystem` resources
 * Verified FHIR Path for each data element
 
 ## New data source in v3
 
 ### v1/v2: CCW
 
-In v1/v2,  BFD leveraged the Chronic Conditions Warehouse (CCW).
+In v1/v2, our upstream data provider leveraged the Chronic Conditions Warehouse (CCW).
 
 ### v3:  IDR
 
@@ -159,7 +159,7 @@ In v3, synthetic data represents how individual fields may be populated. It does
 
 If you find issues with the synthetic data in v3, please reach out to [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov). We want your feedback\!
 
-### Extracting Data Elements from BFD data
+### Extracting Data Elements 
 
 Blue Button recommends using FHIRPath expressions to extract discrete data elements. FHIRPath expressions are populated in the Data Dictionary. FHIRPath is a specification that provides path-based navigation and is uniquely suited to consistently recommend the isolation of specific elements with minimal code.
 
@@ -171,7 +171,7 @@ To resolve references to contained resources, make sure your FHIRPath implementa
 
 ### I. Data ingestion frequency in v3
 
-In v1/v2, there can be several months' delay between the creation of an enrollee's information and when Blue Button's upstream data provider, the Beneficiary FHIR Data (BFD) server, receives it. In v3,  we eliminated this lag time. An enrollee's information is now often available several months *before* Medicare coverage starts.
+In v1/v2, there can be several months' delay between the creation of an enrollee's information and when Blue Button's upstream data provider receives it. In v3,  we eliminated this lag time. An enrollee's information is now often available several months *before* Medicare coverage starts.
 
 The following table shows the update frequency for data ingested across versions.
 
@@ -210,7 +210,7 @@ Changes include the element name, description, FHIRPath expressions, and other i
 * All extensions replaced with FHIR-conformant extensions + proper code systems
 * Claims are mapped to conform to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/)
 * DME claims now correctly use the Professional profile
-* Notice of hospice election is available in BFD v3, with claim types 1900 and 2900\. These claims do not receive an adjudicated version, but are almost always followed up with a submitted hospice claim several weeks after the notice of election is available
+* Notice of hospice election is available in v3, with claim types 1900 and 2900\. These claims do not receive an adjudicated version, but are almost always followed up with a submitted hospice claim several weeks after the notice of election is available
 * A new metadata field, `source`, has been added to identify the CMS system from which the information originated:
   * `NCH` = National Claims History (All adjudicated claims for Parts A + B)
   * `FISS` = Fiscal Intermediary Shared System (Partially Adjudicated Institutional Claims)
@@ -222,13 +222,13 @@ Changes include the element name, description, FHIRPath expressions, and other i
 * Includes metadata security labels. Our upstream data provider will return the security tag `42CFRPart2` if an item is determined to be sensitive under an inter-agency agreement with SAMHSA. Partially and fully adjudicated data will have tags to that effect
 * Consolidation of adjudication-related information to `ExplanationOfBenefit.item.adjudication` and `ExplanationOfBenefit.adjudication`
 * [Addition of claim control numbers to track prior versions of a claim](https://docs.google.com/document/d/1YPzMFMyet0vxnZnJ7dparJjMgnjNPucCL6mC0A_yx-A/edit#deduplicating-claims-and-identifying-duplicates)
-* `ExplanationOfBenefit.created` is the effective date of the claim version, as recorded in the claim source (in v2, this field was the day the request to BFD was made)
-* `ExplanationOfBenefit.meta.lastUpdated` continues to represent the time the EOB was last updated in BFD. 
+* `ExplanationOfBenefit.created` is the effective date of the claim version, as recorded in the claim source (in v2, this field was the day the request to our upstream data provider was made)
+* `ExplanationOfBenefit.meta.lastUpdated` continues to represent the time the EOB was last updated in our upstream data provider. 
 {/* [Three new EOB profile search parameters](https://docs.google.com/document/d/1BvuQygz7qvXH8Eu7uF4VnfmA1ilx1PJyKcSKO2NGBr4/edit?tab=t.q4j7egtdkume#heading=h.pdarw3rk27hz) */}
 
 <Alert size="slim">**Note:** Earliest LastUpdated Value in v3</Alert>
 
-The earliest lastUpdated value is from March 2026, when the data was initially loaded into BFD.
+The earliest lastUpdated value is from March 2026, when our upstream data provider initially loaded in the data.
 
 ### III. Metadata filtering
 
@@ -264,7 +264,7 @@ v3 currently supports two tags, System-Type and Final-Action, which need to be s
 
 #### _security
 
-`_security` allows for targeting of SAMHSA-related data. v3 populates a Meta.security token on data that is “sensitive” on the basis of the ACO-OS sensitive data list.
+`_security` allows you to target SAMHSA-related data. v3 populates a `Meta.security` token on data that is “sensitive” on the basis of the ACO-OS sensitive data list.
 
 | _security query | What this matches | What this excludes |
 | :---- | :---- | :---- |
@@ -273,7 +273,7 @@ v3 currently supports two tags, System-Type and Final-Action, which need to be s
 
 The default behavior is based on the API team certificate.
 
-{/* ### IV. EOB Profile Support in BFD v3
+{/* ### IV. EOB Profile Support in  v3
 
 v3's Explanation of Benefits (EOB) resources include several elements, many of which are CMS-specific and may not be needed by all consumers. To reduce payload size and improve interoperability, v3 will support three distinct EOB profiles, allowing API consumers to request only the data they need.
 
@@ -287,9 +287,9 @@ Profiles are represented in the `ExplanationOfBenefit`'s `meta.profile` element.
 
 For those with the “CMS Blue Button” profile, meta.profile will contain both the C4BB url (versioned) + a [bluebutton.cms.gov](https://bluebutton.cms.gov) profile. Actual profiles for CMS Blue Button will be published later this summer.
 
-Example: Meta.profiles for a Pharmacy EOB
+Example: `Meta.profiles` for a Pharmacy EOB
 
-| Profile | Meta.profile |
+| Profile | `Meta.profile` |
 | :---- | :---- |
 | Basis | `https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis\|2.2.0` |
 | Regular | `https://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy\|2.2.0` |
@@ -297,9 +297,9 @@ Example: Meta.profiles for a Pharmacy EOB
 
 **Syntax for profile filtering**
 
-Filtering for profiles is done using the profile parameter. If no profile parameter is passed, the CMS profile will be returned. While AND and OR syntaxes are supported, using AND provides no value and is not advised.
+Use the profile parameter to filter profiles. If no profile parameter is passed, the CMS profile will be returned. While AND and OR syntax is supported, AND provides no value and is not advised.
 
-The profiles will **not** require canonicals (e.g., versions), but they *may* be passed. BFD recommends that documentation encourage the default behavior over specifying the CMS profile.
+The profiles will **not** require canonicals (e.g., versions), but they *may* be passed. We recommend the default behavior over specifying the CMS profile.
 
 | Profile | Basis | Regular | CMS Profile |
 | :---- | :---- | :---- | :---- |
@@ -422,7 +422,7 @@ On `Patient/234567891`, the following link would be present, indicating it was r
 
 ### VI. Improved FHIR conformance
 
-v3 resources conform to CARIN for Blue Button version 2.1.0, which itself builds upon US Core 6.1.0. BFD v3 supports FHIR R4.
+v3 resources conform to CARIN for Blue Button version 2.1.0, which itself builds upon US Core 6.1.0. v3 supports FHIR R4.
 
 #### Extension/Terminology changes to CodeSystem/StructureDefinition resources
 
@@ -543,7 +543,7 @@ ExplanationOfBenefit.related.where(relationship.coding.system = 'https://termino
 
 #### How to deduplicate claims with `CLM-CNTL-NUM`
 
-To identify duplicates using the claim control number, you can identify all claims for a given enrollee with the same `ExplanationOfBenefit.billablePeriod.start` that share the same `CLM-CNTL-NUM` (in either identifier or related). BFD currently provides the latest version of the claim.
+To identify duplicates using the claim control number, you can identify all claims for a given enrollee with the same `ExplanationOfBenefit.billablePeriod.start` that share the same `CLM-CNTL-NUM` (in either identifier or related). Our upstream data provider currently provides the latest claim version.
 
 In some instances, you can't deduplicate a claim via the `CLM-CNTL-NUM`. This happens infrequently, most often when a claim is submitted incorrectly or goes through many revisions. Additionally, the various CMS systems track claim control numbers slightly differently.
 
@@ -560,7 +560,7 @@ Part D claims are submitted to CMS by the Part D plan sponsors (both PDPs + MA).
 You can deduplicate institutional claims using the claim control number on a per-enrollee basis. This is distinct from institutional claim ‘grouping’.
 
 
-<Alert size="slim" variant="info">**Note:** Phase 1 (claim type code 1XXX) claims can contain many duplicates that may not be marked as related upstream of BFD. This means BFD cannot deduplicate them based on the claim that eventually gets processed. These claims are abandoned in claims processing.</Alert>
+<Alert size="slim" variant="info">**Note:** Phase 1 (claim type code 1XXX) claims can contain many duplicates that may not be marked as related upstream of our upstream data provider. This means our upstream data provider cannot deduplicate them based on the claim that eventually gets processed. These claims are abandoned in claims processing.</Alert>
 
 _To avoid duplicates, any Shared Systems claims with a 1XXX claim type code that have not received updates for 60 days will be deleted from v3. This is most common with institutional claims. It can generally be inferred by a significant number of fields that two resources are identical in everything except payment and `CLM-CNTL-NUM`._
 
