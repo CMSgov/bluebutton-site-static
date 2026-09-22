@@ -133,7 +133,7 @@ Additionally, in v3, patients can opt in to share substance use information for 
 
 ### 5. CARIN for Digital Insurance Card (C4DIC) data endpoint
 
-*In v3, a new endpoint,* `/v3/fhir/Patient/{patient}/$generate-insurance-card`, will be available. This will allow developers to surface digital proof of Medicare coverage to enrollees, providing details on the types of coverage available.
+In v3, a new endpoint, `/v3/fhir/Patient/{patient}/$generate-insurance-card`, will be available. This will allow developers to surface digital proof of Medicare coverage to enrollees, providing details on the types of coverage available.
 
 This endpoint references the [CARIN Digital Insurance Card Implementation Guide](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/). It returns a bundle that includes patient and coverage resources conformant to the Digital Insurance Guide profile. An example of this may be found in the [Blue Button Swagger resource](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listDigitalInsuranceCard_v3)
 
