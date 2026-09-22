@@ -226,7 +226,7 @@ Changes include the element name, description, FHIRPath expressions, and other i
 * [Addition of claim control numbers to track prior versions of a claim](#ix-deduplicating-claims-and-identifying-duplicates)
 * `ExplanationOfBenefit.created` is the effective date of the claim version, as recorded in the claim source (in v2, this field was the day the request to our upstream data provider was made)
 * `ExplanationOfBenefit.meta.lastUpdated` continues to represent the time the EOB was last updated in our upstream data provider. 
-{/* [Three new EOB profile search parameters](https://docs.google.com/document/d/1BvuQygz7qvXH8Eu7uF4VnfmA1ilx1PJyKcSKO2NGBr4/edit?tab=t.q4j7egtdkume#heading=h.pdarw3rk27hz) */}
+* [Three new EOB profile search parameters](#iv-eob-profile-support-in--v3)
 
 <Alert size="slim">**Note:** Earliest LastUpdated Value in v3</Alert>
 
@@ -275,7 +275,7 @@ v3 currently supports two tags, System-Type and Final-Action, which need to be s
 
 The default behavior is based on the API team certificate.
 
-{/* ### IV. EOB Profile Support in  v3
+### IV. EOB Profile Support in  v3
 
 v3's Explanation of Benefits (EOB) resources include several elements, many of which are CMS-specific and may not be needed by all consumers. To reduce payload size and improve interoperability, v3 will support three distinct EOB profiles, allowing API consumers to request only the data they need.
 
