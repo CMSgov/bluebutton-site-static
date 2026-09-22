@@ -221,7 +221,7 @@ Changes include the element name, description, FHIRPath expressions, and other i
 * A new metadata field, `tag`, groups A+B claims from FISS, MCS, VMS into a single tag, `SharedSystem`
 * Includes metadata security labels. Our upstream data provider will return the security tag `42CFRPart2` if an item is determined to be sensitive under an inter-agency agreement with SAMHSA. Partially and fully adjudicated data will have tags to that effect
 * Consolidation of adjudication-related information to `ExplanationOfBenefit.item.adjudication` and `ExplanationOfBenefit.adjudication`
-* [Addition of claim control numbers to track prior versions of a claim](https://docs.google.com/document/d/1YPzMFMyet0vxnZnJ7dparJjMgnjNPucCL6mC0A_yx-A/edit#deduplicating-claims-and-identifying-duplicates)
+* [Addition of claim control numbers to track prior versions of a claim](#ix-deduplicating-claims-and-identifying-duplicates)
 * `ExplanationOfBenefit.created` is the effective date of the claim version, as recorded in the claim source (in v2, this field was the day the request to our upstream data provider was made)
 * `ExplanationOfBenefit.meta.lastUpdated` continues to represent the time the EOB was last updated in our upstream data provider. 
 {/* [Three new EOB profile search parameters](https://docs.google.com/document/d/1BvuQygz7qvXH8Eu7uF4VnfmA1ilx1PJyKcSKO2NGBr4/edit?tab=t.q4j7egtdkume#heading=h.pdarw3rk27hz) */}
