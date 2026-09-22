@@ -20,7 +20,7 @@ sortOrder: 8
   - Updated, streamlined consent screen with user-friendly explanations of what data is being shared
   - Medicare enrollees can choose to withhold substance use disorder claims data when connecting to applications
 - **Improved FHIR Compliance and enhanced interoperability**
-  - Implements SMART App Launch v2.2 with granular consent at the resource level, corrects improper extension/CodeSystem representations, and provides FHIRPath navigation for easier data extraction —ensuring CMS meets 21st Century Cures Act requirements and industry standards
+  - Implements SMART App Launch v2.2 with granular consent at the resource level, corrects improper extension/CodeSystem representations, and provides FHIRPath navigation for easier data extraction
 
 ### What documentation exists for v3?
 
@@ -34,7 +34,7 @@ There are a few key reference resources that will be helpful for the transition 
 
 ### Is v3 backward compatible?
 
-Blue Button v3 is backward compatible at the API level: simply replace /v2/ with /v3/ in your requests to call v3 data. Your existing v1/v2 tokens will continue to work with v3 in most scenarios. Take a look at the migration guide section ‘FHIR IDs in v2 and v3’ for specific details about how tokens work across versions.
+Blue Button v3 is backward compatible at the API level with /v3/ in your requests to call v3 data. Your existing v1/v2 tokens will continue to work with v3 in most scenarios. Take a look at the migration guide section ‘FHIR IDs in v2 and v3’ for specific details about how tokens work across versions.
 
 The biggest change for applications migrating from v1/v2 to v3 is that Patient resource IDs will not match across versions, but you can map them via MBI, which will remain the same. We recommend testing in the sandbox before migrating your production application.
 
@@ -68,10 +68,10 @@ Check the `ExplanationOfBenefit.outcome` field (*complete* or *partial*) or filt
 
 The Blue Button API offers a full set of scopes that apps can request, such as claims data, patient demographics, and coverage information. Here's how the process works:
 
-1. **Your app requests scopes.** How you do this depends on your app's status:
-   1. **New applications:** You'll discuss which scopes make sense for your use case during the demo and approval process.
-   2. **Current applications:** Fill out \[this form \[Link TBD\]\] to identify the scopes you need. The Blue Button team will follow up with any questions.
-2. **The Blue Button team reviews and approves your request.** The team makes the final determination of which scopes your app can request.
+1. Your app requests scopes. How you do this depends on your app's status:
+   1. New applications: You'll discuss which scopes make sense for your use case during the demo and approval process.
+   2. Current applications: Fill out [this form](https://surveys.cms.gov/jfe/form/SV_e9X2j2Orad4o9HU) to identify the scopes you need. The Blue Button team will follow up with any questions.
+2. The Blue Button team reviews and approves your request. The team makes the final determination of which scopes your app can request.
 3. Based on the approved scopes and the scopes included in the request to the authorize endpoint, Blue Button builds the consent screen that enrollees see, showing only the data categories relevant to that request.
 
 ### If a claim has multiple in-flight (not yet fully adjudicated) versions, do you return a deduplicated result?
