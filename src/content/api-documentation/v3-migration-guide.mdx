@@ -562,7 +562,7 @@ You can deduplicate institutional claims using the claim control number on a per
 
 <Alert size="slim" variant="info">**Note:** Phase 1 (claim type code 1XXX) claims can contain many duplicates that may not be marked as related upstream of our upstream data provider. This means our upstream data provider cannot deduplicate them based on the claim that eventually gets processed. These claims are abandoned in claims processing.</Alert>
 
-_To avoid duplicates, any Shared Systems claims with a 1XXX claim type code that have not received updates for 60 days will be deleted from v3. This is most common with institutional claims. It can generally be inferred by a significant number of fields that two resources are identical in everything except payment and `CLM-CNTL-NUM`._
+To avoid duplicates, any Shared Systems claims with a 1XXX claim type code that have not received updates for 60 days will be deleted from v3. This is most common with institutional claims. It can generally be inferred by a significant number of fields that two resources are identical in everything except payment and `CLM-CNTL-NUM`.
 
 FISS and NCH have slightly different logic for `CLM-CNTL-NUMs`. The EoB.related claim control number on an institutional claim will always be the original claim control number. However, in NCH, if an institutional claim receives multiple rounds of claim control numbers, only the parent will populate `EoB.related`.
 
