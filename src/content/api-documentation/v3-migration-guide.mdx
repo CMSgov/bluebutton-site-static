@@ -238,7 +238,7 @@ v3 exposes three search parameters to allow for filtering on the basis of metada
 
 #### _source
 
-Filtering by `_source` filters on the Meta.source key. Both AND and OR operations are supported. (Filtering by AND is useless, however, since its outcome would yield no results matching.)
+Filtering by `_source` filters on the `Meta.source` key. It supports both AND and OR operations. (Filtering by AND is useless, however, since its outcome would yield no results matching.)
 
 The sources to filter on, and their constituent data, are below.
 
@@ -273,7 +273,7 @@ v3 currently supports two tags, System-Type and Final-Action, which need to be s
 | `_security:not=42CFRPart2` | All claims with a Meta.security element of anything *other than* 42CFRPart2 | All 42CFRPart2 claims |
 | `_security=42CFRPart2` | All claims with a Meta.security element of 42CFRPart2 | All other claims |
 
-The default behavior is based on the API team certificate.
+By default, the behavior includes all claims without any filtering.
 
 ### IV. EOB Profile Support in  v3
 
