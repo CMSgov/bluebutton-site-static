@@ -376,15 +376,20 @@ Because of these technical problems, users reported that claims and patients tha
 
 #### New in v3: Patient merge
 
-In v3, patients with duplicative records under more than one identifier have been largely reconciled/merged. Patient merge is the back-end operation applied by the v3 upstream data provider, in which duplicate patients are “grouped”. Now, v3 will always direct to a single active patient record.
+In v3, patients with duplicative records under more than one identifier have been largely reconciled/merged. Patient merge is the back-end operation applied by the v3 upstream data provider, where duplicate patients are “grouped”. Now, v3 will always direct to a single active patient record.
 
 To see which records have been merged, users can refer to the `Patient.link` element. This also describes whether a record "replaces" another or was "replaced-by" another.
 
 Possible ID-based searches in v3:
 
-| Search on past or present MBI | Resource returned contains: The most up-to-date data All MBIs (past + present)  Links to other merged MBIs under `Patient.link` “Replaces” or “replaced by” |
-| :---- | :---- |
-| Query using `BENE_ID` | No data returned. This field is deprecated in v3. |
+**Search on past or present MBI** 
+- Resource returned contains: 
+- The most up-to-date data All MBIs (past + present)
+- Links to other merged MBIs under `Patient.link` 
+  - “Replaces” or “replaced by”
+
+**Query using `BENE_ID`** 
+- No data returned. This field is deprecated in v3.
 
 <Alert size="slim">**Note:** While rare, it is possible that some grouped patients may be ungrouped if upstream systems identify a potential error. If this occurs, the updated record will appear as if it were never grouped.</Alert>
 
