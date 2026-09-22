@@ -62,7 +62,7 @@ The v3 endpoint *structure* is unchanged. That is, all v2 endpoints have a v3 an
 * `/v3/connect/userinfo`
 * **NEW:** `/v3/fhir/Patient/{patient}/$generate-insurance-card`
 
-In terms of structure, under v3, Blue Button adds a new endpoint that provides a [CARIN for Digital Insurance Card](https://hl7.org/fhir/us/insurance-card/STU1.1/) (C4DIC) bundle, described later in this document under **CARIN for Digital Insurance Card (C4DIC) data endpoint**. Note that the shape of the data returned from v3 endpoints changes in several critical ways, so even if the URLs look familiar, developers will need to address the differences in the shape of the FHIR data that is returned under v3.
+In terms of structure, under v3, Blue Button adds a new endpoint that provides a [CARIN for Digital Insurance Card](https://hl7.org/fhir/us/insurance-card/STU1.1/) (C4DIC) bundle, described later in this document under **CARIN for Digital Insurance Card (C4DIC) data endpoint**. Note that the shape of the data returned from v3 endpoints changes in several critical ways, so even if the URLs look familiar, developers will need to address differences in the FHIR data returned under v3.
 
 ### 2. Token Usage Across v1/v2 and v3
 
