@@ -106,7 +106,7 @@ FHIR IDs for Patient resources will differ between v2 and v3. In v2, the FHIR ID
 If your resource requests use the Patient `id` value, either in the path or as a query parameter, make sure you:
 
 1. Issue a token refresh using the v3 token endpoint (/v3/o/token/)
-2. Grab the patient ID from the Patient resource's `id` field in the token response
+2. Save the patient ID from the Patient resource's `id` field in the token response
 3. Use that ID for all subsequent v3 resource requests
 
 Otherwise, you will get errors and be unable to pull data for the user.
@@ -156,6 +156,8 @@ The Data Dictionary also contains mappings from the CCW column (from the Blue Bu
 In Blue Button API v2, synthetic data was generated using [Synthea](https://synthetichealth.github.io/synthea/#home) to approximate the mathematical and statistical properties of real data.
 
 In v3, synthetic data represents how individual fields may be populated. It does not necessarily reflect an individual's longitudinal progression through life. Future plans include generating synthetic data using Synthea.
+
+<Alert size="slim">**Note:** a synthetic user may have very different and incompatible data between v2 and v3.</Alert>
 
 If you find issues with the synthetic data in v3, please reach out to [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov). We want your feedback\!
 
