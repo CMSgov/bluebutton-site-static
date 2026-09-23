@@ -226,7 +226,7 @@ Changes include the element name, description, FHIRPath expressions, and other i
 * [Addition of claim control numbers to track prior versions of a claim](#deduplicating-claims-and-identifying-duplicates)
 * `ExplanationOfBenefit.created` is the effective date of the claim version, as recorded in the claim source (in v2, this field was the day the request to our upstream data provider was made)
 * `ExplanationOfBenefit.meta.lastUpdated` continues to represent the time the EOB was last updated in our upstream data provider. 
-* [Three new EOB profile search parameters](#eob-profile-support-in--v3)
+{/* * [Three new EOB profile search parameters](#eob-profile-support-in--v3) */}
 
 <Alert size="slim">**Note:** Earliest LastUpdated Value in v3</Alert>
 
@@ -275,7 +275,7 @@ v3 currently supports two tags, System-Type and Final-Action, which need to be s
 
 By default, the behavior includes all claims without any filtering.
 
-### EOB Profile Support in  v3
+{/* ### EOB Profile Support in  v3
 
 v3's Explanation of Benefits (EOB) resources include several elements, many of which are CMS-specific and may not be needed by all consumers. To reduce payload size and improve interoperability, v3 will support three distinct EOB profiles, allowing API consumers to request only the data they need.
 
@@ -315,6 +315,7 @@ OR syntax in FHIR uses commas. To query for just CMS institutional inpatient pro
 ```http
 GET ExplanationOfBenefit?profile=https://bluebutton.cms.gov/fhir/StructureDefinition/CMS-ExplanationOfBenefit-Institutional-Inpatient
 ```
+*/}
 
 ### Widespread availability of partially adjudicated claims (PAC) data
 
