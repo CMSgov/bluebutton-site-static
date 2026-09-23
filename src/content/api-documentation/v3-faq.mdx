@@ -33,7 +33,7 @@ There are a few key reference resources that will be helpful for the transition 
 
 ### Is v3 backward compatible?
 
-Blue Button v3 is backward compatible at the API level with /v3/ in your requests to call v3 data. Your existing v1/v2 tokens will continue to work with v3 in most scenarios. Take a look at the migration guide section ‘FHIR IDs in v2 and v3’ for specific details about how tokens work across versions.
+Blue Button v3 is backward compatible at the API level, just replace /v2/ with /v3/ in your requests to call v3 data. Your existing v1/v2 tokens will continue to work with v3 in most scenarios. Take a look at the migration guide section ‘FHIR IDs in v2 and v3’ for specific details about how tokens work across versions.
 
 The biggest change for applications migrating from v1/v2 to v3 is that Patient resource IDs will not match across versions, but you can map them via MBI, which will remain the same. We recommend testing in the sandbox before migrating your production application.
 
