@@ -81,7 +81,7 @@ The Blue Button API offers a full set of scopes that apps can request, such as c
 
 ### If a claim has multiple in-flight (not yet fully adjudicated) versions, do you return a deduplicated result?
 
-Yes, we return only the latest single version of an in-flight claim per source (see the [migration guide's metadata filtering section](https://github.com/CMSgov/bluebutton-site-static/blob/v3-migration-guide/src/content/api-documentation/v3-migration-guide.mdx#metadata-filtering) for more details on supported sources). We return only the latest version of an in-flight claim per source. Older, superseded versions won't appear. However, deduplication does not happen across sources: once a claim finishes adjudication, you can receive two EOB resources for it, one from Shared Systems and one from the National Claims History (NCH), for instance, rather than the Shared Systems version disappearing.
+Yes, we return only the latest single version of an in-flight claim per source (see the migration guide's [metadata filtering section](https://github.com/CMSgov/bluebutton-site-static/blob/v3-migration-guide/src/content/api-documentation/v3-migration-guide.mdx#metadata-filtering) for more details on supported sources). We return only the latest version of an in-flight claim per source. Older, superseded versions won't appear. However, deduplication does not happen across sources: once a claim finishes adjudication, you can receive two EOB resources for it, one from Shared Systems and one from the National Claims History (NCH), for instance, rather than the Shared Systems version disappearing.
 
 ## Working with the API
 
