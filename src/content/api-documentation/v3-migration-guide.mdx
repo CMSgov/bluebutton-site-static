@@ -101,7 +101,7 @@ Any v3 token where the enrollee has opted out of sharing substance use data cann
 
 ### 3. FHIR IDs in v2 and v3
 
-FHIR IDs for Patient resources will differ between v2 and v3. In v2, the FHIR ID was a construct of the CMS Chronic Conditions Warehouse (CCW), the upstream data provider for v2. In v3, data is sourced from the Integrated Data Repository (IDR). Review the [New Patient Management](#v-new-patient-id-management) section for additional details.
+FHIR IDs for Patient resources will differ between v2 and v3. In v2, the FHIR ID was a construct of the CMS Chronic Conditions Warehouse (CCW), the upstream data provider for v2. In v3, data is sourced from the Integrated Data Repository (IDR). Review the [New Patient Management](#new-patient-id-management) section for additional details.
 
 If your resource requests use the Patient `id` value, either in the path or as a query parameter, make sure you:
 
@@ -171,7 +171,7 @@ To resolve references to contained resources, make sure your FHIRPath implementa
 
 ## Details of Major Updates in v3
 
-### I. Data ingestion frequency in v3
+### Data ingestion frequency in v3
 
 In v1/v2, there can be several months' delay between the creation of an enrollee's information and when Blue Button's upstream data provider receives it. In v3,  we eliminated this lag time. An enrollee's information is now often available several months *before* Medicare coverage starts.
 
@@ -185,7 +185,7 @@ The following table shows the update frequency for data ingested across versions
 | `ExplanationOfBenefit` \- Part D | Weekly, on Friday | 5 times a week, Sunday to Thursday |
 | `ExplanationOfBenefit` \- Part A/B (Shared Systems) | N/A | 4 times a week, Sunday and Tuesday to Thursday |
 
-### II. Field mappings and data element changes
+### Field mappings and data element changes
 
 Changes include the element name, description, FHIRPath expressions, and other information, such as which Code Systems are applicable (for CMS-specific terminology). View the [Data Dictionary](/data-dictionary/) to explore changes to individual data elements.
 
@@ -223,16 +223,16 @@ Changes include the element name, description, FHIRPath expressions, and other i
 * A new metadata field, `tag`, groups A+B claims from FISS, MCS, VMS into a single tag, `SharedSystem`
 * Includes metadata security labels. Our upstream data provider will return the security tag `42CFRPart2` if an item is determined to be sensitive under an inter-agency agreement with SAMHSA. Partially and fully adjudicated data will have tags to that effect
 * Consolidation of adjudication-related information to `ExplanationOfBenefit.item.adjudication` and `ExplanationOfBenefit.adjudication`
-* [Addition of claim control numbers to track prior versions of a claim](#ix-deduplicating-claims-and-identifying-duplicates)
+* [Addition of claim control numbers to track prior versions of a claim](#deduplicating-claims-and-identifying-duplicates)
 * `ExplanationOfBenefit.created` is the effective date of the claim version, as recorded in the claim source (in v2, this field was the day the request to our upstream data provider was made)
 * `ExplanationOfBenefit.meta.lastUpdated` continues to represent the time the EOB was last updated in our upstream data provider. 
-* [Three new EOB profile search parameters](#iv-eob-profile-support-in--v3)
+* [Three new EOB profile search parameters](#eob-profile-support-in--v3)
 
 <Alert size="slim">**Note:** Earliest LastUpdated Value in v3</Alert>
 
 The earliest lastUpdated value is from March 2026, when our upstream data provider initially loaded in the data.
 
-### III. Metadata filtering
+### Metadata filtering
 
 v3 exposes three search parameters to allow for filtering on the basis of metadata.
 
@@ -275,7 +275,7 @@ v3 currently supports two tags, System-Type and Final-Action, which need to be s
 
 By default, the behavior includes all claims without any filtering.
 
-### IV. EOB Profile Support in  v3
+### EOB Profile Support in  v3
 
 v3's Explanation of Benefits (EOB) resources include several elements, many of which are CMS-specific and may not be needed by all consumers. To reduce payload size and improve interoperability, v3 will support three distinct EOB profiles, allowing API consumers to request only the data they need.
 
@@ -316,7 +316,7 @@ OR syntax in FHIR uses commas. To query for just CMS institutional inpatient pro
 GET ExplanationOfBenefit?profile=https://bluebutton.cms.gov/fhir/StructureDefinition/CMS-ExplanationOfBenefit-Institutional-Inpatient
 ```
 
-### IV. Widespread availability of partially adjudicated claims (PAC) data
+### Widespread availability of partially adjudicated claims (PAC) data
 
 v3 enables greater availability of non-Final Action claim elements and greater interoperability with adjudicated claims than in v2. They are represented using the `ExplanationOfBenefit` resource and are profiled to the CARIN Blue Button 2.1.0 profiles. Partially adjudicated claims data is located in the Shared Systems database. More information about [how to query this data](#how-to-use-shared-systems-data).
 
@@ -331,7 +331,7 @@ Without any filters applied, v3 will return Part A and Part B data from the Nati
 
 To access the Shared Systems data, use the source or the tag parameters as described below to specify the data you’d like to retrieve.
 
-The metadata filters described [in the Metadata Filtering section](#iii-metadata-filtering) can be used to change this behavior, set API-specific defaults, etc.
+The metadata filters described [in the Metadata Filtering section](#metadata-filtering) can be used to change this behavior, set API-specific defaults, etc.
 
 
 
@@ -358,7 +358,7 @@ vs.
 | `SharedSystem` | Claims for Part A + B from VMS, FISS, MCS, and MAP |
 | `DDPS` | Part D claims from DDPS. |
 
-### V. New patient ID management
+### New patient ID management
 
 v3 includes two major updates to patient ID management that address many issues in v2.
 
@@ -426,7 +426,7 @@ On `Patient/234567891`, the following link would be present, indicating it was r
 ]
 ```
 
-### VI. Improved FHIR conformance
+### Improved FHIR conformance
 
 v3 resources conform to CARIN for Blue Button version 2.1.0, which itself builds upon US Core 6.1.0. v3 supports FHIR R4.
 
@@ -443,7 +443,7 @@ v3 retires the usage of `/resources` to represent extensions and `CodeSystems`. 
 
 In the [Data Dictionary](/data-dictionary/), fields populated by a CMS code system have a link to the CodeSystem URL in the referenceTable column. FHIRPath expressions for extracting these fields also reference the extension URLs to target the extraction of individual resources.
 
-### VII. Accessing Partially Adjudicated Claims via  Shared Systems
+### Accessing Partially Adjudicated Claims via  Shared Systems
 
 Blue Button v3 gives applications access to claims data from CMS's Shared Systems (FISS for institutional claims, MCS for professional claims, and VMS for DME claims) well before a claim finishes adjudication. Where fully adjudicated Part A/B data can take weeks to appear, Shared Systems data is typically available within days of a provider submitting a claim.
 
@@ -461,9 +461,9 @@ What this enables for your application:
 4. Once the claim is fully adjudicated, it also appears in the National Claims History (NCH) source, tagged NationalClaimsHistory.
 
 
-<Alert size="slim" variant="info">**Note:** Shared Systems data applies only to Part A/B claims. No partially adjudicated feed exists for Part D (prescription drug) claims. Part D claims, sourced from DDPS, are only available in Blue Button once fully adjudicated. Applications should not build logic that expects a "partial" state for Part D EOBs. Read the details on [filtering by source/tag](#ii-field-mappings-and-data-element-changes). Check the [deduplication guidance](#ix-deduplicating-claims-and-identifying-duplicates) section as a claim moves from partial to final.</Alert>
+<Alert size="slim" variant="info">**Note:** Shared Systems data applies only to Part A/B claims. No partially adjudicated feed exists for Part D (prescription drug) claims. Part D claims, sourced from DDPS, are only available in Blue Button once fully adjudicated. Applications should not build logic that expects a "partial" state for Part D EOBs. Read the details on [filtering by source/tag](#field-mappings-and-data-element-changes). Check the [deduplication guidance](#deduplicating-claims-and-identifying-duplicates) section as a claim moves from partial to final.</Alert>
 
-### VIII. Claim Adjudication using "Outcome" and "Final Action"
+### Claim Adjudication using "Outcome" and "Final Action"
 
 #### Outcome
 
@@ -512,7 +512,7 @@ In the IDR, Final Action is “A value indicating a final action claim. Valid va
 
 <Alert size="slim" variant="info">**Note:** Final Action is not guaranteed to correlate to processing status. A queued claim can be “final action,” and a claim that has completed processing can be in a non-“final action” status. A claim marked as Final Action in NCH can be “not final action” in the Shared Systems. We expose Final Action as a tag, but do not recommend its usage.</Alert>
 
-### IX. Deduplicating claims and identifying duplicates
+### Deduplicating claims and identifying duplicates
 
 #### v3 returns only the most recent version of a claim
 
@@ -582,7 +582,7 @@ When VMS processes a claim and releases it to the NCH, the leading digit (a 1\) 
 | :---- | :---- |
 | 1222222222222222 | 222222222222222 |
 
-### X. Data for Medicare Advantage enrollees
+### Data for Medicare Advantage enrollees
 
 #### v2 limitations in Medicare Advantage enrollee data
 
