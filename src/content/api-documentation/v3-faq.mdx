@@ -89,7 +89,7 @@ Yes, we return only the latest single version of an in-flight claim per source (
 
 Yes, `_lastUpdated` is supported according to the [FHIR spec](https://build.fhir.org/search.html#_lastUpdated).
 
-### How can I see all of an Enrollee's claims data in v3?
+### How does pagination work in v3? Is it different from v1/v2? How can I see all of an Enrollee's claims data in v3?
 
 For v3 ExplanationOfBenefit search calls, the offset parameter will be used to paginate through an enrollee's claims data, rather than the startIndex parameter. In v3 ExplanationOfBenefit search calls, the API returns 10 records by default. You can return more than 10 by passing in a count parameter (the value must be between 1 and 50). So, if an enrollee has 20 claims in v3, you could retrieve the first 10 without passing any parameters, and you could then retrieve the remaining 10 by passing offset=10. To get all claims data you can get in a single call, pass ` count=50` . Further details are available in the [Blue Button Swagger resource.](https://sandbox.bluebutton.cms.gov/docs/openapi)
 
