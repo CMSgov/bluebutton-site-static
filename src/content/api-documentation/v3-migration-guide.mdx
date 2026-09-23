@@ -123,7 +123,7 @@ v3 introduces a dynamic consent screen that represents a significant departure f
 
 The consent screen text has also been updated to be more user-friendly, and enrollees can expand each section to learn more about the specific data being shared before granting consent.
 
-If a user does not click “Share,” then the information will not be shared with the application.
+If a user does not click "Share," then the information will not be shared with the application.
 
 Additionally, in v3, patients can opt in to share substance use information for applications requesting `ExplanationOfBenefit` FHIR resources. The default, however, will be set to not share.
 
@@ -266,7 +266,7 @@ v3 currently supports two tags, System-Type and Final-Action, which need to be s
 
 #### _security
 
-`_security` allows you to target sensitive substance use claims data. v3 populates a `Meta.security` token on data that is “sensitive” on the basis of the [ACO-OS sensitive data list](https://www.cms.gov/files/document/cclf-information-packet.pdf){:target="_blank"}(Appendix A).
+`_security` allows you to target sensitive substance use claims data. v3 populates a `Meta.security` token on data that is "sensitive" on the basis of the [ACO-OS sensitive data list](https://www.cms.gov/files/document/cclf-information-packet.pdf){:target="_blank"}(Appendix A).
 
 | _security query | What this matches | What this excludes |
 | :---- | :---- | :---- |
@@ -282,12 +282,12 @@ v3's Explanation of Benefits (EOB) resources include several elements, many of w
 | _profile | What's included? | Financial data included? |
 | :---- | :---- | :---- |
 | CMS Blue Button Profile (default) | All data elements. This is the current default behavior. If no profile parameter is provided, it returns the full profile. | Yes |
-| C4BB Full Profile (filtered) | Returns the full US Realm “core data set” for claims as defined by the [C4BB profiles](https://hl7.org/fhir/us/carin-bb/STU2.2/en/artifacts.html#structures-resource-profiles). | Yes |
+| C4BB Full Profile (filtered) | Returns the full US Realm "core data set" for claims as defined by the [C4BB profiles](https://hl7.org/fhir/us/carin-bb/STU2.2/en/artifacts.html#structures-resource-profiles). | Yes |
 | Basis Profile (filtered) | Returns only fields profiled in the [C4BB Basis Profiles.](https://hl7.org/fhir/us/carin-bb/STU2.2/en/artifacts.html#structures-explanation-of-benefits-basis-profiles) | No |
 
 Profiles are represented in the `ExplanationOfBenefit`'s `meta.profile` element.
 
-For those with the “CMS Blue Button” profile, meta.profile will contain both the C4BB url (versioned) + a [bluebutton.cms.gov](https://bluebutton.cms.gov) profile. Actual profiles for CMS Blue Button will be published later this summer.
+For those with the "CMS Blue Button" profile, meta.profile will contain both the C4BB url (versioned) + a [bluebutton.cms.gov](https://bluebutton.cms.gov) profile. Actual profiles for CMS Blue Button will be published later this summer.
 
 Example: `Meta.profiles` for a Pharmacy EOB
 
@@ -373,11 +373,11 @@ v3 includes two major updates to patient ID management that address many issues 
 * Some patients had \>1 [MBI](https://build.fhir.org/ig/HL7/UTG/NamingSystem-cmsMBI.html)
 * Data not inserted until 5+ months after entitlement in some instances
 
-Because of these technical problems, users reported that claims and patients that appeared in other data sources were “missing” in the Medicare claims data APIs. Users may also have received an excess of "Beneficiary not found" responses.
+Because of these technical problems, users reported that claims and patients that appeared in other data sources were "missing" in the Medicare claims data APIs. Users may also have received an excess of "Beneficiary not found" responses.
 
 #### New in v3: Patient merge
 
-In v3, patients with duplicative records under more than one identifier have been largely reconciled/merged. Patient merge is the back-end operation applied by the v3 upstream data provider, where duplicate patients are “grouped”. Now, v3 will always direct to a single active patient record.
+In v3, patients with duplicative records under more than one identifier have been largely reconciled/merged. Patient merge is the back-end operation applied by the v3 upstream data provider, where duplicate patients are "grouped". Now, v3 will always direct to a single active patient record.
 
 To see which records have been merged, users can refer to the `Patient.link` element. This also describes whether a record "replaces" another or was "replaced-by" another.
 
@@ -387,7 +387,7 @@ Possible ID-based searches in v3:
 - Resource returned contains: 
 - The most up-to-date data All MBIs (past + present)
 - Links to other merged MBIs under `Patient.link` 
-  - “Replaces” or “replaced by”
+  - "Replaces" or "replaced by"
 
 **Query using `BENE_ID`** 
 - No data returned. This field is deprecated in v3.
@@ -473,8 +473,8 @@ The values for outcome are:
 
 | Code | Meaning | Notes |
 | :---- | :---- | :---- |
-| `complete` | Processing complete | “Adjudicated” |
-| `partial` | Partially-processed | “Partially-Adjudicated” |
+| `complete` | Processing complete | "Adjudicated" |
+| `partial` | Partially-processed | "Partially-Adjudicated" |
 | `queued` | Received but not yet processed | Very rare to encounter |
 | `error` | An error in processing occurred | This status is mapped but should never show up in practice. |
 
@@ -508,9 +508,9 @@ You can combine these with other search parameters.
 
 #### Final Action
 
-In the IDR, Final Action is “A value indicating a final action claim. Valid values: Y = Final action claim, not voided. N = Not final action claim.”
+In the IDR, Final Action is "A value indicating a final action claim. Valid values: Y = Final action claim, not voided. N = Not final action claim."
 
-<Alert size="slim" variant="info">**Note:** Final Action is not guaranteed to correlate to processing status. A queued claim can be “final action,” and a claim that has completed processing can be in a non-“final action” status. A claim marked as Final Action in NCH can be “not final action” in the Shared Systems. We expose Final Action as a tag, but do not recommend its usage.</Alert>
+<Alert size="slim" variant="info">**Note:** Final Action is not guaranteed to correlate to processing status. A queued claim can be "final action," and a claim that has completed processing can be in a non-"final action" status. A claim marked as Final Action in NCH can be "not final action" in the Shared Systems. We expose Final Action as a tag, but do not recommend its usage.</Alert>
 
 ### Deduplicating claims and identifying duplicates
 
