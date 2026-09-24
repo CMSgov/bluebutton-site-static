@@ -37,6 +37,7 @@ main {
   h5,
   h6 {
     @include typeset-heading-base;
+    line-height: 1.3;
   }
 
   $elements: h1, h2, h3, h4, h5, h6, p, ul, ol;
@@ -183,6 +184,13 @@ main {
 
 .usa-prose > * + * {
   margin-bottom: 1rem;
+}
+
+.usa-prose {
+  & > h1, h2, h3, h4, h5, h6 {
+    // Update line height to accommodate inline code in headings
+    line-height: 1.3;
+  }
 }
 
 @media (min-width: 64em) {
