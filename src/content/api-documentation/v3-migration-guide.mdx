@@ -324,13 +324,13 @@ v3 enables greater availability of non-Final Action claim elements and greater i
 Disclaimers for non-Final Action claims:
 
 * Claims with outcome = partial **may contain nonsensical values in coded elements**, such as invalid CPT/HCPCS codes and invalid diagnosis codes, due to their non-finalized nature. This is more likely in claims with a claim type code of 1XXX. You can use `ExplanationOfBenefit.outcome` to determine a claim's processing stage.
-* **Not all fields are available in non-Final Action claims**. Most of these relate to benefit balance information that isn't available until a claim has been fully adjudicated. Ongoing work is improving parity between data from the Shared Systems and the National Claims History.
+* **Not all fields are available in non-Final Action claims**. Most of these relate to benefit balance information that isn't available until a claim has been fully adjudicated. Ongoing work is improving parity between Shared Systems data and the National Claims History.
 
 #### How to use Shared Systems data
 
 Without any filters applied, v3 will return Part A and Part B data from the National Claims History (NCH), as well as Part D data, by default.
 
-To access the Shared Systems data, use the source or the tag parameters as described below to specify the data you’d like to retrieve.
+To access Shared Systems data, use the source or tag parameters below to specify the data you’d like to retrieve.
 
 The metadata filters described [in the Metadata Filtering section](#metadata-filtering) can be used to change this behavior, set API-specific defaults, etc.
 
@@ -348,7 +348,7 @@ You can filter data by a claim's source system using either the source or tag pa
 | `VMS` | Claims for Part B from VMS |
 | `FISS` | Claims for Part A + B from FISS |
 | `MCS` | Claims for Part B from MCS |
-| `MAP` | Claims for Part B (for now) from MAP |
+| `MAP` | Claims for Part B (for now) from MAP (not yet implemented) |
 | `DDPS` | Part D claims from DDPS |
 
 vs.
