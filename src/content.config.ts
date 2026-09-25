@@ -5,7 +5,7 @@ import { defineCollection } from 'astro:content'
 import { codeSystemSchema, structureDefinitionSchema } from '#utils/collections'
 import { loadCodebooks } from '#utils/loaders/load-codebooks'
 import { loadCsvResources } from '#utils/loaders/load-csv-resources'
-import { parseDataDictionary } from '#utils/loaders/parse-data-dictionary'
+import { fieldSchema, parseDataDictionary } from '#utils/loaders/parse-data-dictionary'
 
 const pageCollection = defineCollection({
   loader: glob({
@@ -132,25 +132,7 @@ const dataDictionaryCollection = defineCollection({
   loader: file('./src/content/data-dictionary/data-dictionary.json', {
     parser: parseDataDictionary,
   }),
-  schema: z.object({
-    id: z.string(),
-    index: z.number(),
-    fieldName: z.string(),
-    description: z.string().nullable(),
-    fhirResource: z.string().nullable(),
-    coverageType: z.array(z.string()).nullable(),
-    fhirPath: z.string().nullable(),
-    example: z.string().nullable(),
-    notes: z.string().nullable(),
-    sourceView: z.string().nullable(),
-    sourceColumn: z.string().nullable(),
-    bfdDerived: z.string().nullable(),
-    sources: z.array(z.string()).nullable(),
-    referenceTable: z.url().nullable(),
-    cclfMapping: z.array(z.string()).nullable(),
-    ccwMapping: z.array(z.string()).nullable(),
-    profiles: z.array(z.string()).nullable(),
-  }),
+  schema: fieldSchema,
 })
 
 export const collections = {

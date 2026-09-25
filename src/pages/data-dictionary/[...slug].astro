@@ -19,15 +19,6 @@ export type Props = {
   post: CollectionEntry<'dataDictionary'>
 }
 
-function formatExample(value: unknown): string | null {
-  if (value == null) return null
-  if (typeof value === 'string') return value.trim().length > 0 ? value : null
-  if (typeof value === 'number' || typeof value === 'boolean') return String(value)
-  if (Array.isArray(value)) return value.length > 0 ? JSON.stringify(value) : null
-  if (typeof value === 'object') return JSON.stringify(value, null, 2)
-  return null
-}
-
 export const getStaticPaths = Route.createGetStaticPaths<Props>(async () => {
   const fields = await getCollection('dataDictionary')
   return fields.map((field) => ({
@@ -42,7 +33,6 @@ const d = post.data
 const description = d.description ?? ''
 
 const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
-const formattedExample = formatExample(d.example)
 ---
 
 <BaseLayout title={d.fieldName} description={description}>
@@ -196,12 +186,12 @@ const formattedExample = formatExample(d.example)
           }
         </dl>
         {
-          formattedExample && (
+          d.example && (
             <section class="margin-y-3">
               <h2 class="font-sans-lg" data-pagefind-ignore>
                 Example
               </h2>
-              <Code code={formattedExample} lang="js" />
+              <Code code={d.example} lang="js" />
             </section>
           )
         }
