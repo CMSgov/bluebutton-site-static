@@ -1,11 +1,11 @@
-import { glob } from 'astro/loaders'
+import { file, glob } from 'astro/loaders'
 import { z } from 'astro/zod'
 import { defineCollection } from 'astro:content'
 
 import { codeSystemSchema, structureDefinitionSchema } from '#utils/collections'
 import { loadCodebooks } from '#utils/loaders/load-codebooks'
-import { loadCsvDataDictionary } from '#utils/loaders/load-csv-data-dictionary'
 import { loadCsvResources } from '#utils/loaders/load-csv-resources'
+import { parseDataDictionary } from '#utils/loaders/parse-data-dictionary'
 
 const pageCollection = defineCollection({
   loader: glob({
@@ -129,9 +129,8 @@ const fhirJsonCollection = defineCollection({
 })
 
 const dataDictionaryCollection = defineCollection({
-  loader: async () => await loadCsvDataDictionary({
-    pattern: '**/*.csv',
-    base: './src/content/data-dictionary/',
+  loader: file('./src/content/data-dictionary/data-dictionary.json', {
+    parser: parseDataDictionary,
   }),
   schema: z.object({
     id: z.string(),
