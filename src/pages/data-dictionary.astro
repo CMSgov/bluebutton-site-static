@@ -6,6 +6,7 @@ import { getCollection } from 'astro:content'
 import Icon from '#components/icon.astro'
 import DataDictionarySearch from '#components/data-dictionary-search'
 import FileDownload from '@uswds/uswds/img/usa-icons/file_download.svg'
+import dataDictionary from '../content/data-dictionary/data-dictionary.json'
 
 const defaultFields = (await getCollection('dataDictionary'))
   .sort((a, b) => a.data.fieldName.localeCompare(b.data.fieldName))
@@ -28,9 +29,10 @@ const defaultFields = (await getCollection('dataDictionary'))
     <p>Download the full data dictionary as a CSV file for offline use:</p>
     <p>
       <a
-        href="/assets/files/v3-data-dictionary-2.269.0.csv"
+        href={`/v3-data-dictionary-${dataDictionary.version}.csv`}
         class="usa-button"
-        download="v3-data-dictionary-2.269.0.csv">v3 Data Dictionary (2.269.0) <Icon icon={FileDownload} size={2} /></a
+        download={`v3-data-dictionary-${dataDictionary.version}.csv`}
+        >v3 Data Dictionary ({dataDictionary.version}) <Icon icon={FileDownload} size={2} /></a
       >
     </p>
 
