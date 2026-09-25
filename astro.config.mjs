@@ -1,4 +1,3 @@
-import { unified } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import preact from '@astrojs/preact'
 import sitemap from '@astrojs/sitemap'
@@ -32,13 +31,6 @@ export default defineConfig({
   },
 
   markdown: {
-    processor: unified({
-      remarkRehype: {
-        footnoteLabelProperties: {
-          class: 'usa-sr-only',
-        },
-      },
-    }),
     shikiConfig: {
       theme: 'github-light',
     },
