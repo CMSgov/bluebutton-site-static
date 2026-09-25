@@ -1,20 +1,34 @@
 import { z } from 'astro/zod'
 
+function formatExample(value: unknown): string | null {
+  if (value == null)
+    return null
+  if (typeof value === 'string')
+    return value.trim().length > 0 ? value : null
+  if (typeof value === 'number' || typeof value === 'boolean')
+    return String(value)
+  if (Array.isArray(value))
+    return value.length > 0 ? JSON.stringify(value) : null
+  if (typeof value === 'object')
+    return JSON.stringify(value, null, 2)
+  return null
+}
+
 function slugify(value: string) {
   return value.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-').replaceAll(/^-|-$/g, '')
 }
 
-const fieldSchema = z.object({
+export const fieldSchema = z.object({
   'Field Name': z.string().min(1),
   'Description': z.string().nullish(),
   'FHIR Resource': z.string().nullish(),
   'Coverage / Claim Type': z.array(z.string()).nullish(),
   'fhirPath': z.string().nullish(),
-  'example': z.unknown(),
+  'example': z.unknown().transform(formatExample),
   'notes': z.string().nullish(),
   'sourceView': z.string().nullish(),
   'sourceColumn': z.string().nullish(),
-  'bfdDerived': z.boolean().nullish(),
+  'bfdDerived': z.coerce.boolean().nullish(),
   'sources': z.array(z.string()).nullish(),
   'referenceTable': z.string().nullish().transform(v => v && v.trim().length > 0 ? v : null),
   'cclfMapping': z.array(z.string()).nullish(),
@@ -40,7 +54,11 @@ const fieldSchema = z.object({
 
 const dictionarySchema = z.object({
   version: z.string(),
-  fields: z.array(fieldSchema),
+  fields: z.array(z.looseObject({
+    // Only checks what the parser needs to build ids
+    'Field Name': z.string().min(1),
+    'sourceColumn': z.string().nullish(),
+  })),
 })
 
 export function parseDataDictionary(fileContent: string) {
@@ -52,15 +70,11 @@ export function parseDataDictionary(fileContent: string) {
   }
 
   const seen = new Set<string>()
-  return parsed.data.fields.map((val, index) => {
-    const baseId = slugify(val.sourceColumn || val.fieldName)
+  return parsed.data.fields.map((field, index) => {
+    const baseId = slugify(field.sourceColumn || field['Field Name'])
     const id = seen.has(baseId) ? `${baseId}-${index}` : baseId
     seen.add(id)
 
-    return {
-      id,
-      index,
-      ...val,
-    }
+    return { id, ...field }
   })
 }
