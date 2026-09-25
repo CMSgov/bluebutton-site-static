@@ -1,0 +1,134 @@
+name: Sync v3 Data Dictionary from BFD
+
+on:
+  schedule:
+    # Run on day 1 and day 15 of the month at 8:00 AM UTC
+    - cron: '0 8 1,15 * *'
+  workflow_dispatch:
+
+jobs:
+  data-dictionary-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Look through the latest BFD releases for the latest v3 data dictionary JSON, not every release includes one
+    - name: Download the latest v3 data dictionary from BFD Repo
+      id: latest
+      run: |
+        RELEASE=$(gh api "repos/CMSgov/beneficiary-fhir-data/releases?per_page=5" --jq '
+          [.[] | select(.draft == false and .prerelease == false)
+               | {tag: .tag_name, asset: (.assets[] | select(.name | test("^v3-data-dictionary-.*\\.json$")))}
+          ][0] | select(.) | {tag, id: .asset.id}')
+
+        if [ -z "$RELEASE" ]; then
+          echo "::warning::No BFD release with a v3-data-dictionary JSON asset was found in the 5 most recent releases."
+          echo "found=false" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
+
+        TAG=$(jq -r .tag <<< "$RELEASE")
+
+        gh api -H "Accept: application/octet-stream" \
+          "repos/CMSgov/beneficiary-fhir-data/releases/assets/$(jq -r .id <<< "$RELEASE")" \
+          > "$RUNNER_TEMP/raw.json"
+
+        echo "found=true" >> "$GITHUB_OUTPUT"
+        echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # Confirm the download, so a truncated file or an HTML error page isn't committed
+    - name: Verify the downloaded v3 data dictionary from BFD Repo
+      if: steps.latest.outputs.found == 'true'
+      run: |
+        if ! jq -e 'type == "array" and length > 0' "$RUNNER_TEMP/raw.json" >/dev/null 2>&1; then
+          echo "::error::Downloaded data dictionary is not a non-empty JSON array. First 200 bytes:"
+          head -c 200 "$RUNNER_TEMP/raw.json"
+          exit 1
+        fi
+
+    # Checkout BB Static Site Repo (public repo)
+    - name: Checkout BB Static Site Repo
+      if: steps.latest.outputs.found == 'true'
+      uses: actions/checkout@v7
+      with:
+        path: bluebutton-site-static
+        ref: master
+
+    # Create a new branch name for the changes
+    - name: Generate a branch name
+      if: steps.latest.outputs.found == 'true'
+      id: branch
+      run: |
+        BRANCH_NAME="data-dictionary-update-$TAG"
+        echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+      env:
+        TAG: ${{ steps.latest.outputs.tag }}
+
+    - name: Copy the v3 data dictionary into BB Static Site Repo
+      if: steps.latest.outputs.found == 'true'
+      run: |
+        jq --arg version "$TAG" '{version: $version, fields: .}' "$RUNNER_TEMP/raw.json" \
+          > bluebutton-site-static/src/content/data-dictionary/data-dictionary.json
+      env:
+        TAG: ${{ steps.latest.outputs.tag }}
+
+    # Create a PR if there were changes. Won't run if no changes are detected.
+    - name: Check for changes in BB Static Site Repo
+      if: steps.latest.outputs.found == 'true'
+      id: check-for-changes
+      run: |
+        cd bluebutton-site-static
+        git add .
+        if git diff --cached --quiet; then
+          echo "changed=false" >> $GITHUB_OUTPUT
+          echo "No changes detected, skipping commit and push"
+        elif git ls-remote --exit-code --heads origin "$BRANCH_NAME" >/dev/null; then
+          echo "changed=false" >> $GITHUB_OUTPUT
+          echo "Branch $BRANCH_NAME already exists, so a PR for this version is already open, skipping"
+        else
+          echo "Changes detected, committing and pushing"
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
+      env:
+        BRANCH_NAME: ${{ steps.branch.outputs.branch_name }}
+
+    # Configure Git so that we can authenticate and push changes back to the BB Static Site repo
+    - name: Configure Git
+      if: steps.check-for-changes.outputs.changed == 'true'
+      run: |
+        cd bluebutton-site-static
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+    # Commit and push changes if there were any. Won't run if no changes are detected.
+    - name: Commit and Push Changes in BB Static Site Repo
+      if: steps.check-for-changes.outputs.changed == 'true'
+      run: |
+        cd bluebutton-site-static
+        git checkout -b "$BRANCH_NAME"
+        git commit -m "Update v3 data dictionary to $TAG ${{ steps.date.outputs.current_date }}"
+        git push --set-upstream origin "$BRANCH_NAME"
+      env:
+        TAG: ${{ steps.latest.outputs.tag }}
+        BRANCH_NAME: ${{ steps.branch.outputs.branch_name }}
+        # Need a github token with permissions to create branches and PRs in the BB Static Site repo.
+        # Using the default GITHUB_TOKEN provided by GitHub Actions, which should have the necessary permissions for this repo.
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # Create a PR if there were changes. Won't run if no changes are detected.
+    - name: Create Pull Request in BB Static Site Repo
+      if: steps.check-for-changes.outputs.changed == 'true'
+      run: |
+        cd bluebutton-site-static
+        gh pr create \
+          --title "Update v3 data dictionary to $TAG \
+          --body "This PR updates the v3 data dictionary inside the bluebutton-site-static repo from BFD release [$TAG](https://github.com/CMSgov/beneficiary-fhir-data/releases/tag/$TAG) on ${{ steps.date.outputs.current_date }}. Please review the field changes and merge if everything looks good." \
+          --base master \
+          --head "$BRANCH_NAME"
+      env:
+        TAG: ${{ steps.latest.outputs.tag }}
+        BRANCH_NAME: ${{ steps.branch.outputs.branch_name }}
+        # Need a github token with permissions to create branches and PRs in the BB Static Site repo.
+        # Using the default GITHUB_TOKEN provided by GitHub Actions, which should have the necessary permissions for this repo.
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
