@@ -8,6 +8,7 @@ in the form $setting: value,
 */
 
 @use "uswds-core" with (
+  $theme-image-path: "@uswds/uswds/img",
   $theme-show-notifications: false,
   $theme-color-secondary: "indigo-warm-60v",
   $theme-color-secondary-dark: "indigo-warm-70v",
