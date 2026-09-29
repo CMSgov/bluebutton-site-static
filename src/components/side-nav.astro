@@ -13,8 +13,6 @@ import {
 import Icon from './icon.astro'
 import Link from './link.astro'
 
-const { pathname } = Astro.url
-
 const guidesLinks = await getGuidesCollection()
 const dataLinks = await getDataCollection()
 const quickStartLinks = await getQuickstartCollection()
