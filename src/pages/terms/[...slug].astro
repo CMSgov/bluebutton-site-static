@@ -5,6 +5,7 @@ import Link from '#components/link.astro'
 import { createRoute } from 'astro-typesafe-routes/create-route'
 import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
+// import { getCollection } from 'astro:content'
 import { getTermsCollection } from '#utils/collections'
 import { render } from 'astro:content'
 
@@ -43,11 +44,11 @@ const { Content, headings } = await render(post)
   <DocsLayout showSideNav={false} headings={headings}>
     <div class="margin-bottom-4">
       <h1>{post.data.title}</h1>
-      <p class="usa-intro">
+      <!-- <p class="usa-intro">
         {isCurrent ? 'Current Version' : 'Previous Version'}{' '}({post.id}), published {
-          post.data.published_date.toLocaleDateString()
+          post.data?.publishedDate.toLocaleDateString()
         }
-      </p>
+      </p> -->
     </div>
     <div class="usa-prose">
       <Content

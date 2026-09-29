@@ -11,7 +11,7 @@ const defaultFields = (await getCollection('dataDictionary'))
   .sort((a, b) => a.data.fieldName.localeCompare(b.data.fieldName))
   .slice(0, 10)
   .map((field) => ({
-    url: $path({ to: '/data-dictionary/[...slug]', params: { slug: field.id } }),
+    url: $path({ to: '/data-dictionary/[...slug]', params: { slug: field.id }, trailingSlash: true }),
     fieldName: field.data.fieldName,
     sourceColumn: field.data.sourceColumn ?? null,
     description: field.data.description ?? null,
