@@ -107,7 +107,7 @@ jobs:
       run: |
         cd bluebutton-site-static
         git checkout -b "$BRANCH_NAME"
-        git commit -m "Update v3 data dictionary to $TAG ${{ steps.date.outputs.current_date }}"
+        git commit -m "Update v3 data dictionary to $TAG"
         git push --set-upstream origin "$BRANCH_NAME"
       env:
         TAG: ${{ steps.latest.outputs.tag }}
@@ -122,8 +122,8 @@ jobs:
       run: |
         cd bluebutton-site-static
         gh pr create \
-          --title "Update v3 data dictionary to $TAG \
-          --body "This PR updates the v3 data dictionary inside the bluebutton-site-static repo from BFD release [$TAG](https://github.com/CMSgov/beneficiary-fhir-data/releases/tag/$TAG) on ${{ steps.date.outputs.current_date }}. Please review the field changes and merge if everything looks good." \
+          --title "Update v3 data dictionary to $TAG" \
+          --body "This PR updates the v3 data dictionary inside the bluebutton-site-static repo from BFD release [$TAG](https://github.com/CMSgov/beneficiary-fhir-data/releases/tag/$TAG). Please review the field changes and merge if everything looks good." \
           --base master \
           --head "$BRANCH_NAME"
       env:
