@@ -2,8 +2,8 @@ name: Sync v3 Data Dictionary from BFD
 
 on:
   schedule:
-    # Run on day 1 and day 15 of the month at 8:00 AM UTC
-    - cron: '0 8 1,15 * *'
+    # Run on once a week at 8:00 AM UTC
+    - cron: '0 8 * * 1'
   workflow_dispatch:
 
 jobs:
