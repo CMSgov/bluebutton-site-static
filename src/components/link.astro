@@ -33,7 +33,7 @@ if ('to' in props && props.to) {
   const hrefString = props.href.toString()
   computedHref = hrefString
   // Check if it's an external URL
-  isExternal = !hrefString.startsWith(SITE_METADATA.url)
+  isExternal = new URL(hrefString, SITE_METADATA.url).origin !== new URL(SITE_METADATA.url).origin
 } else {
   throw new Error('Link component requires either "href" or "to" prop')
 }
@@ -42,7 +42,15 @@ if (isExternal === false && downloadExtsRegex.test(computedHref)) {
   isDownload = true
 }
 
-const { variant = 'link', size, showIcon = true, class: className, ...restProps } = props
+const {
+  variant = 'link',
+  size,
+  showIcon = true,
+  class: className,
+  href: _href, // Destructure to avoid passing down to <a> element
+  to: _to, // Destructure to avoid passing down to <a> element
+  ...restProps
+} = props
 
 if (!isExternal && !isDownload) {
   computedHref = formatInternalHref(computedHref)
