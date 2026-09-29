@@ -15,7 +15,9 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true,
   },
-  trailingSlash: 'ignore',
+  // 'always' makes $path/<Link> emit trailing slashes, matching canonical URLs + what prod serves, so lint:linkcheck passes CI.
+  // Trade-off is that [...].json.ts routes 404 when running local Vite server, because Vite expects slashes.
+  trailingSlash: 'always',
 
   env: {
     schema: {
@@ -29,16 +31,18 @@ export default defineConfig({
     },
   },
 
-  markdown: unified({
-    remarkRehype: {
-      footnoteLabelProperties: {
-        class: 'usa-sr-only',
+  markdown: {
+    processor: unified({
+      remarkRehype: {
+        footnoteLabelProperties: {
+          class: 'usa-sr-only',
+        },
       },
-    },
+    }),
     shikiConfig: {
       theme: 'github-light',
     },
-  }),
+  },
 
   vite: {
     css: {

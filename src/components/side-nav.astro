@@ -20,7 +20,7 @@ const dataLinks = await getDataCollection()
 const quickStartLinks = await getQuickstartCollection()
 const productionLinks = await getProductionCollection()
 
-const isActive = (path: string) => path === pathname
+const isActive = (path: string) => path === Astro.url.pathname
 ---
 
 <div

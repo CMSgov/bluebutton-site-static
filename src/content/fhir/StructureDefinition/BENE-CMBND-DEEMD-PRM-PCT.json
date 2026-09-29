@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "BENE-LIS-PTD-PRM-PCT",
-  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-LIS-PTD-PRM-PCT",
+  "id": "BENE-CMBND-DEEMD-PRM-PCT",
+  "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-CMBND-DEEMD-PRM-PCT",
   "version": "1.0.0",
-  "name": "BENE_LIS_PTD_PRM_PCT",
+  "name": "BENE_CMBND_DEEMD_PRM_PCT",
   "title": "Beneficiary LIS Part D Premium Percentage",
   "status": "active",
   "description": "Indicates the percentage of Part D premium covered by Low Income Subsidy (LIS)",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-LIS-PTD-PRM-PCT"
+        "fixedUri": "https://bluebutton.cms.gov/fhir/StructureDefinition/BENE-CMBND-DEEMD-PRM-PCT"
       },
       {
         "id": "Extension.value[x]",

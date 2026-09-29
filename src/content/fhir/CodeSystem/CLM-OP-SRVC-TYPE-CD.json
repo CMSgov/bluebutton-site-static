@@ -5,28 +5,32 @@
   "name": "CLM_OP_SRVC_TYPE_CD",
   "id": "CLM-OP-SRVC-TYPE-CD",
   "title": "Claim Outpatient Service Type Code",
-  "description": "A code reported by the provider that indicates the specific type of claim",
+  "description": "A code reported by the provider that indicates the specific type of claim.",
   "url": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-OP-SRVC-TYPE-CD",
   "concept": [
     {
       "code": "0",
-      "display": "Blank"
+      "display": "Unknown Value (but present in data)"
     },
     {
       "code": "1",
-      "display": "Emergency"
+      "display": "Emergency - The patient required immediate medical intervention as a result of severe, life threatening, or potentially disabling conditions. Generally, the patient was admitted through the emergency room."
     },
     {
       "code": "2",
-      "display": "Urgent"
+      "display": "Urgent - The patient required immediate attention for the care and treatment of a physical or mental disorder. Generally, the patient was admitted to the first available and suitable accommodation."
     },
     {
       "code": "3",
-      "display": "Elective"
+      "display": "Elective - The patient's condition permitted adequate time to schedule the availability of suitable accommodations."
+    },
+    {
+      "code": "4",
+      "display": "Newborn - Necessitates the use of special source of admission codes."
     },
     {
       "code": "5",
-      "display": "Reserved"
+      "display": "Trauma Center - visits to a trauma center/hospital as licensed or designated by the State or local government authority authorized to do so, or as verified by the American College of Surgeons and involving a trauma activation."
     },
     {
       "code": "6",
@@ -42,8 +46,8 @@
     },
     {
       "code": "9",
-      "display": "Unknown (Information not available)"
+      "display": "Unknown - Information not available."
     }
   ],
-  "count": 9
+  "count": 10
 }

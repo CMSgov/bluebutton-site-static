@@ -2,12 +2,12 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "BENE_LIS_COPMT_LVL_CD",
-  "id": "BENE-LIS-COPMT-LVL-CD",
+  "name": "BENE_CMBND_DEEMD_COPMT_LVL_ID",
+  "id": "BENE-CMBND-DEEMD-COPMT-LVL-ID",
   "title": "Beneficiary LIS Copayment Level Code",
   "description": "Codes indicating the copayment level for Low Income Subsidy (LIS) beneficiaries",
   "version": "1.0.0",
-  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-LIS-COPMT-LVL-CD",
+  "url": "https://bluebutton.cms.gov/fhir/CodeSystem/BENE-CMBND-DEEMD-COPMT-LVL-ID",
   "concept": [
     {
       "code": "1",
