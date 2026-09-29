@@ -3,43 +3,35 @@ import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 import { $path } from 'astro-typesafe-routes/path'
 import Link from '#components/link.astro'
-import { getApiCollection, getDataCollection } from '#utils/collections'
-
-const docsnavLinks = (await getApiCollection()).map((doc) => ({
-  href: $path({ to: '/api-documentation/[...slug]', params: { slug: doc.id } }),
-  label: doc.data.title,
-}))
-const datanavLinks = (await getDataCollection()).map((doc) => ({
-  href: $path({ to: '/data/[...slug]', params: { slug: doc.id } }),
-  label: doc.data.title,
-}))
 
 const sitemapLinks = [
   {
     label: 'Home',
-    href: $path({ to: '/' }),
+    href: $path({ to: '/', trailingSlash: true }),
   },
   {
     label: 'Use Cases',
-    href: $path({ to: '/use-cases' }),
+    href: $path({ to: '/[...slug]', params: { slug: 'quickstart/use-cases' }, trailingSlash: true }),
   },
   {
-    label: 'API Documentation',
-    href: $path({ to: '/api-documentation' }),
-    children: docsnavLinks,
+    label: 'Guides',
+    href: $path({ to: '/[...slug]', params: { slug: 'guides' }, trailingSlash: true }),
+    // children: docsnavLinks,
+    children: [],
   },
   {
     label: 'Data Overview',
-    href: $path({ to: '/data' }),
-    children: datanavLinks,
+    href: $path({ to: '/[...slug]', params: { slug: 'data' }, trailingSlash: true }),
+    // children: datanavLinks,
+    children: [],
   },
-  {
-    label: 'Production Access',
-    href: $path({ to: '/production-access' }),
-  },
+  // {
+  //   label: 'Production Access',
+  //   href: $path({ to: '/production-access', trailingSlash: true }),
+  // },
   {
     label: 'Support',
-    href: $path({ to: '/support' }),
+    href: $path({ to: '/support', trailingSlash: true }),
   },
 ]
 ---
@@ -61,11 +53,11 @@ const sitemapLinks = [
 
               {link?.children ? (
                 <ul>
-                  {link.children.map((child) => (
+                  {/* {link.children.map((child) => (
                     <li>
                       <Link href={child.href}>{child.label}</Link>
                     </li>
-                  ))}
+                  ))} */}
                 </ul>
               ) : null}
             </li>

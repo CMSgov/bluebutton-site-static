@@ -2,10 +2,31 @@ import { z } from 'astro/zod'
 import { getCollection } from 'astro:content'
 
 export async function getDataCollection() {
-  return (await getCollection('dataDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
+  return (await getCollection('static', ({ id }) => id.startsWith('data/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
 }
 export async function getApiCollection() {
-  return (await getCollection('apiDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
+  return (await getCollection('static', ({ id }) => id.startsWith('api/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
+}
+
+export async function getQuickstartCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('quickstart/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
+}
+
+export async function getGuidesCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('guides/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
+}
+export async function getProductionCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('production-access/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
 }
 
 export async function getTermsCollection() {
