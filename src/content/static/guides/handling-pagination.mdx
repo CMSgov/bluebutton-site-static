@@ -50,9 +50,9 @@ curl "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit?_offset=10
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
 ```
 
-WARNING
+<Alert size="slim"> **WARNING**
 
-Always use the full URL from Bundle.link. Don't construct pagination URLs yourself. The server may include parameters you're not aware of.
+Always use the full URL from `Bundle.link`. Don't construct pagination URLs yourself. The server may include parameters you're not aware of. </Alert>
 
 ## Control page size 
 
@@ -69,11 +69,11 @@ curl "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit?_count=50"
 | :---- | :---- | :---- |
 | `_count` | 10 | 50 |
 
-Larger pages mean fewer requests but bigger responses. If you're pulling all claims for a patient, `_count=50` reduces the number of round trips.
+Larger pages mean fewer requests but bigger responses. If you're pulling all claims for a patient, `_count=50` reduces round trips.
 
 ## Build a complete dataset 
 
-To fetch all claims for a patient, follow the links below until there are no more. The following is some sample code that will help you get started:
+To fetch all claims for a patient, follow the links below until there are no more. Below is some sample code that will help you get started:
 
 ```python
 import requests
