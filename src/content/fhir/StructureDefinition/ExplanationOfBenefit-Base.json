@@ -98,6 +98,19 @@
         ]
       },
       {
+        "id": "ExplanationOfBenefit-Base.CLM_PTNT_CNTL_NUM",
+        "path": "ExplanationOfBenefit-Base.CLM_PTNT_CNTL_NUM",
+        "short": "CMS Patient Control Number",
+        "definition": "A number used to identify the patient account or encounter associated with a claim.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
         "id": "ExplanationOfBenefit-Base.CLM_MDCR_COINSRNC_AMT",
         "path": "ExplanationOfBenefit-Base.CLM_MDCR_COINSRNC_AMT",
         "short": "Part A/B Coinsurance Liability Amount",
