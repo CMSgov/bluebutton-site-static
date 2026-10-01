@@ -555,7 +555,3 @@ vs.
 The endpoint, `/v3/fhir/Patient/{patient}/$generate-insurance-card` allows developers to surface digital proof of Medicare coverage to enrollees, providing details on the types of coverage available. 
 
 This endpoint references the [CARIN Digital Insurance Card Implementation Guide](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/). It returns a bundle that includes `/Patient` and `/Coverage` resources conformant to the [Digital Insurance Guide profile](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/). You can find examples of this in the [Blue Button Swagger resource](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listDigitalInsuranceCard_v3). 
-
-## Working with SAMHSA data
-
-Substance abuse data (also known as SAMHSA data) comes from the Substance Abuse and Mental Health Services Information. It may be included on a claim unless the enrollee opts out. 
