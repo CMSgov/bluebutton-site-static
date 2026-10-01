@@ -23,7 +23,7 @@ These are the technical practices we look for and expectations we have when revi
 * Only upload PHI or PII directly into an AI tool with a **processing agreement in place** to protect the data.  
 * Practice data minimization: only send the data a model needs for the query.  
 * Ensure users' data is isolated from one another and cannot be cross-contaminated (i.e., users cannot query data using AI/LLMs to retrieve data from another user's account without authorization).  
-* Encrypt any data **sent** to or **received** from AI tools, both in transit (i.e HTTPS and TLS) and at rest, as it may contain PII/PHI.  
+* Encrypt any data **sent** to or **received** from AI tools, both in transit (i.e., HTTPS and TLS) and at rest, as it may contain PII/PHI.  
 * Design your app to resist known attacks on AI, ML, and LLMs, especially those listed in the [OWASP Top 10 for LLMs](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/). For example, build in protections against prompt injection and firewall data between users.  
 * Remove a user's data once that user deletes their account or revokes access. Also remove any AI-produced responses.
 
