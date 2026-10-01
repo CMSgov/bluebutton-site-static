@@ -50,7 +50,7 @@ When you request `/ExplanationOfBenefit`, you get a Bundle of claims:
 }
 ```
 
-The response is paginated: 10 claims per page by default. See [Handling Pagination](/guides/handling-pagination/).
+The response is paginated: 10 claims per page by default. See [Handling pagination](/guides/handling-pagination/).
 
 ## Reading line items 
 
@@ -86,8 +86,8 @@ Each claim has an item array: one entry per service or product. A doctor visit m
 
 Items reference other parts of the EOB using sequence numbers:
 
-* item.diagnosisSequence: [1] links to diagnosis[].sequence: 1  
-* item.careTeamSequence: [3] links to careTeam[].sequence: 3
+* `item.diagnosisSequence: [1]` links to `diagnosis[].sequence: 1`  
+* `item.careTeamSequence: [3]` links to `careTeam[].sequence: 3`
 
 ```json
 {
@@ -125,7 +125,7 @@ Items reference other parts of the EOB using sequence numbers:
 }
 ```
 
-This tells you: item 1 was for diagnosis Z0000 (general medical exam), performed by provider 1234567890\.
+This tells you: item 1 was for diagnosis `Z0000` (general medical exam), performed by provider `1234567890`.
 
 ## Understanding adjudication
 
@@ -207,7 +207,7 @@ Every EOB has a type field that tells you what kind of claim it is:
 | `HOSPICE` | Hospice | End-of-life care |
 | `SNF` | Skilled Nursing Facility | Nursing home care |
 
-Check the eob-type coding system in EOB.type for these values:
+Check the `eob-type` coding system in `EOB.type` for these values:
 
 ```json
 {
@@ -239,4 +239,4 @@ Here are the fields most apps care about:
 | Drug code | `item[].productOrService` (PDE claims) | NDC code for prescriptions |
 | Facility | `facility` | Where the service was provided |
 
-For the complete field reference, see the [ExplanationOfBenefit endpoint](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listReadViewExplanationOfBenefits_v3) page.
+For the complete field reference, check the [ExplanationOfBenefit endpoint](https://sandbox.bluebutton.cms.gov/docs/openapi#/v3/listReadViewExplanationOfBenefits_v3).
