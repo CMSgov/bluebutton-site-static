@@ -34,6 +34,11 @@
       "definition": "The amount paid by the beneficiary to the provider for the line-item service."
     },
     {
+      "code": "CLM_LINE_MSP_COINSRNC_AMT",
+      "display": "Patient Responsibility Payment Amount",
+      "definition": "An amount identifying the payment made by a beneficiary for a detail line of service on a claim."
+    },
+    {
       "code": "CLM_LINE_BENE_PD_AMT",
       "display": "Payment Amount to Beneficiary",
       "definition": "The amount paid to the beneficiary for the services reported on the line item."
@@ -509,5 +514,5 @@
       "definition": "The total rx cost amount. This variable is the total cost of the prescription drug event and is taken directly from the original PDE. Sum of ingredient cost + dispensing fee + sales tax + vaccine administration fee, if any."
     }
   ],
-  "count": 100
+  "count": 101
 }
