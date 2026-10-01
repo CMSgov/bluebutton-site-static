@@ -1,22 +1,22 @@
 ---
 title: 'Working with claims'
 seo: 
-  description: "Provide explanation to developers about claims data content and what adjudication means"
+  description: "Provide an explanation to developers about claims data content and what adjudication means"
 sortOrder: 4
 ---
 ## What's in an EOB 
 
 Each EOB represents one claim and contains:
 
-* **Who**: The patient, provider, and care team  
-* **What:** Diagnoses, procedures, and items/services provided  
-* **When:** The service period (billable period)  
-* **How much:** What was billed, what Medicare allowed, and what was paid  
+* **Who**: The patient, provider, and care team.
+* **What:** Diagnoses, procedures, and items/services provided.
+* **When:** The service period (billable period).
+* **How much:** What was billed, what Medicare allowed, and what was paid.
 * **Type:** Whether it's inpatient, outpatient, carrier, pharmacy, etc.
 
 ## Anatomy of an EOB response
 
-When you request /ExplanationOfBenefit, you get a Bundle of claims:
+When you request `/ExplanationOfBenefit`, you get a Bundle of claims:
 
 ```json
 {
