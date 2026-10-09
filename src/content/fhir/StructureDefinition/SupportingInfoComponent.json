@@ -372,6 +372,45 @@
         ]
       },
       {
+        "id": "SupportingInfoComponent.CLM_LINE_HCT_LVL_NUM",
+        "path": "SupportingInfoComponent.CLM_LINE_HCT_LVL_NUM",
+        "short": "Hematocrit Level Number",
+        "definition": "The hematocrit result value for the claim line.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "SupportingInfoComponent.CLM_LINE_HGB_LVL_NUM",
+        "path": "SupportingInfoComponent.CLM_LINE_HGB_LVL_NUM",
+        "short": "Hemoglobin Level Number",
+        "definition": "The hemoglobin result value for the claim line.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "SupportingInfoComponent.CLM_LINE_RBNDLG_CRTFCTN_NUM",
+        "path": "SupportingInfoComponent.CLM_LINE_RBNDLG_CRTFCTN_NUM",
+        "short": "Rebundling Certification Number",
+        "definition": "The rebundling certification number for the claim line.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
         "id": "SupportingInfoComponent.CLM_LINE_RX_ORGN_CD",
         "path": "SupportingInfoComponent.CLM_LINE_RX_ORGN_CD",
         "short": "Prescription Origin Code",
