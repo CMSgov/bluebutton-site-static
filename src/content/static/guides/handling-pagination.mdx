@@ -50,9 +50,7 @@ curl "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit?_offset=10
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
 ```
 
-WARNING
-
-Always use the full URL from Bundle.link. Don't construct pagination URLs yourself. The server may include parameters you're not aware of.
+<Alert size="slim" variant="warning"> **WARNING** Always use the full URL from `Bundle.link`. Don't construct pagination URLs yourself. The server may include parameters you're not aware of. </Alert>
 
 ## Control page size 
 
@@ -69,11 +67,11 @@ curl "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit?_count=50"
 | :---- | :---- | :---- |
 | `_count` | 10 | 50 |
 
-Larger pages mean fewer requests but bigger responses. If you're pulling all claims for a patient, `_count=50` reduces the number of round trips.
+Larger pages mean fewer requests but bigger responses. If you're pulling all claims for a patient, `_count=50` reduces round trips.
 
 ## Build a complete dataset 
 
-To fetch all claims for a patient, follow the links below until there are no more. The following is some sample code that will help you get started:
+To fetch all claims for a patient, follow the links below until there are no more. Below is some sample code that will help you get started:
 
 ```python
 import requests
@@ -107,7 +105,7 @@ For actual production usage, we recommend adding more robust error handling for 
 
 ## Handle data changes during pagination
 
-Claims data can be updated while you're paginating through results. Because pagination is offset-based, a claim added or removed mid-walk shifts every record after it so you can skip a claim entirely or read the same one twice.
+Claims data can be updated while you're paginating through results. Because pagination is offset-based, a claim added or removed mid-walk shifts every record after it, so you can skip a claim entirely or read the same one twice.
 
 Some strategies for handling this:
 
@@ -117,4 +115,4 @@ Some strategies for handling this:
 
 <Alert>**Note:** `_lastUpdated` returns added and modified claims only: it can't tell you a claim was removed, so schedule a periodic full resync. On v3, pass `_source` or `_tag` alongside it; otherwise Blue Button applies `_source=NCH` and your sync will miss every update to partially adjudicated claims.</Alert>
 
-<Alert size="slim" variant="success">**Tip:** For most apps, the simplest approach is: do a full fetch on first load bounded with `le{timestamp}`, then use `_lastUpdated` for incremental updates going forward, with a periodic full resync to catch removals.</Alert>
+<Alert size="slim" variant="success">**Tip:** For most apps, the simplest approach is: do a full fetch on first load bounded by `le{timestamp}`, then use `_lastUpdated` for incremental updates going forward, with a periodic full resync to catch removals.</Alert>
