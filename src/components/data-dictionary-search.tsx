@@ -66,18 +66,31 @@ export default function DataDictionarySearch({ defaultFields }: { defaultFields:
       : `Showing ${(data.page - 1) * PAGE_SIZE + 1}-${(data.page - 1) * PAGE_SIZE + data.matches.length} of ${data.total} results`
 
   // Debounce the search until typing settles
-  const debouncedSearch = useDebouncedCallback(async (trimmed: string) => {
-    const results = await runSearch(trimmed)
-    if (latestTerm.current !== trimmed)
-      return
+  const debouncedSearch = useDebouncedCallback(async (searchText: string) => {
+    const results = await runSearch(searchText)
     const page = await loadPage(results, 1)
-    if (latestTerm.current === trimmed)
-      setData(page)
+    if (latestTerm.current !== searchText)
+      return
+    setData(page)
+
+    // Track the search text in analytics
+    if (typeof utag !== 'undefined') {
+      utag.link({
+        event_name: 'search_initiated',
+        internal_search_type: 'data_dictionary',
+        search_result_count: page.total,
+        search_term: searchText,
+        search_term_type: 'user_initiated',
+      })
+    }
   }, DEBOUNCE_MS)
 
   function handleInput(value: string) {
     setQuery(value)
     const trimmed = value.trim()
+    // Skip whitespace-only changes
+    if (trimmed === latestTerm.current)
+      return
     latestTerm.current = trimmed
 
     // Clear results immediately when input is empty
