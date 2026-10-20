@@ -7,7 +7,7 @@ sortOrder: 2
 
 ## Before you begin
 
-Confirm that your application meets **both the below** prerequisites before following any implementation steps in this guide.
+Confirm that your application meets ** both ** of the prerequisites below before following any implementation steps in this guide.
 
 * Your application is listed in the Medicare App Library.  
 * You have provided a JSON Web Key Set (JWK Set) URL to the Blue Button API team.
@@ -16,7 +16,7 @@ If your application does not meet both prerequisites, complete Step 1 and Step 2
 
 ### Step 1: Get Medicare App Library approval
 
-Submit your application to CMS for listing in the Medicare App Library.
+Submit your application to CMS to be listed in the Medicare App Library.
 
 When CMS approves your listing, you will receive confirmation that you may proceed to Step 2\.
 
@@ -27,7 +27,7 @@ When CMS approves your listing, you will receive confirmation that you may proce
 
 ### Step 2: Register with the Blue Button team
 
-***Warning:** Your application must complete both Step 1 and Step 2 before it can access CAN data.* 
+<Alert heading="Warning" headingAs="p" variant="warning" noIcon> Your application must complete both Step 1 and Step 2 before it can access CAN data.</Alert>
 
 An application that has not completed both steps will:
 
@@ -66,7 +66,7 @@ Use the following test accounts to validate the CAN token flow in the sandbox en
 | Derrick Lin | knixontestemail2@epic.com | IDme2026!! |
 | Homer J Simpson | hsimpson@gmail.com | IDme2026!! |
 
-***Note:** These accounts are for Sandbox use only. Do not use them in the production environment.*
+<Alert heading="Note" headingAs="p" variant="info" noIcon>These accounts are for Sandbox use only. Do not use them in the production environment.</Alert>
 
 ### Obtain a CSP-issued ID token
 
@@ -77,7 +77,7 @@ CAN requires a Credential Service Provider (CSP) ID token that meets Identity As
 | Sandbox | CLEAR (lower environment) or ID.me (lower environment) |
 | Production | CLEAR (production) or ID.me (production) |
 
-***Note:** Contact your CSP to confirm that the identity\_assurance\_level and ssn\_itin\_short claims are present on your application before you proceed.*
+<Alert heading="Note" headingAs="p" variant="info" noIcon> Contact your CSP to confirm that the identity\_assurance\_level and ssn\_itin\_short claims are present on your application before you proceed.</Alert>
 
 To obtain an ID token:
 
@@ -137,7 +137,7 @@ Send a token request to the Blue Button API token endpoint.
 
 **Authentication:** Asymmetric authentication using the signed JWT from [Construct the authentication JWT](#construct-the-authentication-jwt).
 
-The Blue Button API validates the JWT, verifies the enrollee's identity against Medicare records, and if a match is found, issues an access token scoped to that enrollee.
+The Blue Button API validates the JWT, verifies the enrollee's identity against Medicare records, and, if it matches, issues an access token scoped to that enrollee.
 
 #### Access token properties
 
@@ -156,7 +156,7 @@ The following rules apply automatically when the Blue Button API issues a CAN to
 3. **v1/v2 error:** If you include any AuditEvent scope in a v1 or v2 authorization request, the Blue Button API returns an `invalid_scope` error.
 
 Explicitly requesting `patient/AuditEvent.rs` is valid and does not cause an error.
-***Note:** For the full scope specification, see [AuditEvent Endpoint Reference Supported scopes](audit-event.mdx#scope-behavior-on-can-tokens).*
+<Alert heading="Note" headingAs="p" variant="info" noIcon> For the full scope specification, see [AuditEvent Endpoint Reference Supported scopes](audit-event.mdx#scope-behavior-on-can-tokens).</Alert>
 
 ### Call the FHIR endpoints
 
@@ -181,7 +181,7 @@ The Blue Button API matches the enrollee in the ID token to a Medicare record us
 | Option B | First name \+ Last name \+ Date of birth \+ SSN last 4 digits |
 | Option C | First name \+ Date of birth \+ Medicare Beneficiary Identifier (MBI) |
 
-If the API cannot match the enrollee using one of these combinations, it does not return data. Confirm with your CSP that the required fields are present in the ID token before you go to production.
+If the API cannot match the enrollee using one of these combinations, it returns no data. Confirm with your CSP that the ID token includes the required fields before you go to production.
 
 ## Troubleshooting
 
