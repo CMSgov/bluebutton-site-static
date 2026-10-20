@@ -5,6 +5,7 @@ on:
     # Run on once a week at 8:00 AM UTC
     - cron: '0 8 * * 1'
   workflow_dispatch:
+  pull_request:
 
 jobs:
   data-dictionary-sync:
