@@ -30,3 +30,11 @@ updates:
         update-types:
           - "minor"
           - "patch"
+      major:
+        applies-to: version-updates
+        update-types:
+          - "major"
+      security:
+        applies-to: security-updates
+        patterns:
+          - "*"
