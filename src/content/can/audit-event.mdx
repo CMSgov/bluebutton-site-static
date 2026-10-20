@@ -1,73 +1,35 @@
 ---
-title: "CMS Aligned Networks Tokens"
+title: "AuditEvent Endpoint"
 seo: 
-  description: "Overview of CMS Aligned Networks tokens"
-sortOrder: 3
+  description: "Overview of the CMS Aligned Systems AuditEvent Endpoint"
+sortOrder: 5
 ---
 
-This page describes the token lifecycle for CMS Aligned Networks (CAN) flows. It covers:
+## What an AuditEvent represents
 
-* How CAN access tokens work  
-* The rolling 90-day refresh window  
-* Token lifetime and expiration rules  
-* ID token age requirements
+An AuditEvent resource records a single successful patient identity match from the CAN flow interaction. It provides a transparent, auditable trail of when and which organization matched a Medicare enrollee's identity across the network.
 
-For instructions on how to request and refresh a CAN token, see [How to Integrate with CMS Aligned Networks](/can/how-to-integrate-with-can/).
+## What an AuditEvent includes
 
-For the JWT specification used to authenticate the initial token request, see [CAN JWT Reference](/can/jwt-reference/).
+* **Who** accessed or received the data (at minimum, organization-level identification)  
+* **When** the access occurred (timestamp of the successful patient match)  
+* **What purpose of use** was declared at the time of the match
 
-## How CAN tokens work
+## What an AuditEvent does not include
 
-CAN tokens use the `client_credentials` grant with asymmetric authentication. The enrollee does not log in through [Medicare.gov](https://medicare.gov).
-
-The table below summarizes the key differences.
-
-|  | CAN flow |
+| What is excluded | Explanation |
 | :---- | :---- |
-| **Grant type** | `client_credentials` |
-| **Enrollee login required** | No |
-| **Access token lifetime** | 1 hour |
-| **Refresh token included** | Yes (rolling 90-day window) |
-| **Refresh window resets on use** | Yes |
-| **AuditEvent scope auto-injected** | Yes |
-| **Available on** | v3 only |
+| Unsuccessful patient match attempts | Only **successful** patient matches generate an AuditEvent record |
+| Every data pull for a matched enrollee | An AuditEvent is created at match time only, not on every subsequent data retrieval |
 
-## Token lifetime and the rolling 90-day window
+<Alert heading="Note" headingAs="p" variant="info" noIcon>  The AuditEvent endpoint returns records for all apps in the network that have successfully matched that enrollee, not only your app. For example, if an enrollee was previously connected to three other apps, the response will include audit records for all three apps plus the requesting app.</Alert>
 
-### Access token lifetime
+## Scopes
 
-A CAN access token is valid for 1 hour from the time it is issued. After 1 hour, the token expires, and the Blue Button API rejects requests that use it. Use the refresh token to get a new access token without presenting an ID token to the Blue Button API again.
+### Scope behavior on CAN tokens
 
-### Refresh window
+The Blue Button API processes AuditEvent scopes differently from other FHIR resource scopes. The following rules apply automatically when a CAN token is issued:
 
-CAN tokens use a rolling 90-day refresh window. This means:
-
-* When the Blue Button API issues an access token, it also issues a refresh token. That refresh token is valid for 90 days from the time of issuance.  
-* When you use the refresh token to obtain a new access token, the Blue Button API issues a new refresh token. The new refresh token is valid for 90 days from the time of that refresh, not from the original issuance date.  
-* The window resets on every successful refresh. The overall access grant has no fixed expiration date as long as you refresh within each 90-day window.
-
-**Example:**
-
-| Event | Day | Refresh token valid until |
-| :---- | :---- | :---- |
-| Initial token issued | Day 0 | Day 90 |
-| First refresh | Day 45 | Day 135 (45 \+ 90\) |
-| Second refresh | Day 100 | Day 190 (100 \+ 90\) |
-| Refresh missed | Day 200 | N/A (window expired on Day 190\) |
-
-<Alert heading="Note" headingAs="p" variant="info" noIcon> The `access_grant_expiration` field in the token response reflects the current refresh window expiration: 90 days from the most recent token issuance or refresh. It updates on every refresh.</Alert>
-
-## ID token age requirement
-
-When your application presents an ID token to the Blue Button API to initiate a CAN flow, the ID token's `auth_time` claim must be less than 300 seconds (5 minutes) old at the time of the request.
-
-The Blue Button API rejects ID tokens with an `auth_time` older than 300 seconds. This requirement does not apply to token refresh requests. Refresh requests do not require a new ID token.
-
-## Token expiration and re-authentication
-
-| Scenario | What happens | What to do |
-| :---- | :---- | :---- |
-| Access token expires (after 1 hour) | FHIR API requests return `401 Unauthorized` | Use the refresh token to request a new access token |
-| Refresh token expires (after 90 days without a refresh) | Refresh requests return `400 Bad Request` | Re-initiate the full CAN flow with a new ID token from the CSP |
-| ID token `auth_time` is older than 300 seconds | Token request returns `400 Bad Request` | Obtain a fresh ID token from the CSP and retry |
-| Token replay detected (duplicate `issuer + jti`) | Token request returns `400 Bad Request` | Generate a new JWT with a unique `jti` value |
+1. **Auto-injection:** If `patient/AuditEvent.rs` is not included in the authorization request, the Blue Button API automatically adds it to the token.  
+2. **Scope upgrade:** If `patient/AuditEvent.r` or `patient/AuditEvent.s` is requested individually, the Blue Button API replaces it with `patient/AuditEvent.rs` on the issued token.  
+3. **v1/v2 flows return an error:** If you include any AuditEvent scope in a v1 or v2 authorization request, the Blue Button API returns an `invalid_scope` error. 
