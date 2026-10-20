@@ -7,7 +7,7 @@ sortOrder: 5
 
 ## What an AuditEvent represents
 
-An AuditEvent resource records a single successful patient identity match from the CAN flow interaction. It provides a transparent, auditable trail of when and by which organization a Medicare enrollee's identity was matched across the network.
+An AuditEvent resource records a single successful patient identity match from the CAN flow interaction. It provides a transparent, auditable trail of when and which organization matched a Medicare enrollee's identity across the network.
 
 ## What an AuditEvent includes
 
@@ -22,7 +22,7 @@ An AuditEvent resource records a single successful patient identity match from t
 | Unsuccessful patient match attempts | Only **successful** patient matches generate an AuditEvent record |
 | Every data pull for a matched enrollee | An AuditEvent is created at match time only, not on every subsequent data retrieval |
 
-***Note:** The AuditEvent endpoint returns records for all apps in the network that have successfully matched that enrollee, not only your app. For example, if an enrollee was previously connected to three other apps, the response will include audit records for all three apps plus the requesting app.*
+<Alert heading="Note" headingAs="p" variant="info" noIcon>  The AuditEvent endpoint returns records for all apps in the network that have successfully matched that enrollee, not only your app. For example, if an enrollee was previously connected to three other apps, the response will include audit records for all three apps plus the requesting app.</Alert>
 
 ## Scopes
 
