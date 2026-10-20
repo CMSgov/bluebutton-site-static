@@ -36,7 +36,7 @@ The table below summarizes the key differences.
 
 ### Access token lifetime
 
-A CAN access token is valid for 1 hour from the time it is issued. After 1 hour, the token expires, and the Blue Button API rejects requests that use it. Use the refresh token to obtain a new access token without re-presenting an ID token to the Blue Button API.
+A CAN access token is valid for 1 hour from the time it is issued. After 1 hour, the token expires, and the Blue Button API rejects requests that use it. Use the refresh token to get a new access token without presenting an ID token to the Blue Button API again.
 
 ### Refresh window
 
@@ -44,7 +44,7 @@ CAN tokens use a rolling 90-day refresh window. This means:
 
 * When the Blue Button API issues an access token, it also issues a refresh token. That refresh token is valid for 90 days from the time of issuance.  
 * When you use the refresh token to obtain a new access token, the Blue Button API issues a new refresh token. The new refresh token is valid for 90 days from the time of that refresh, not from the original issuance date.  
-* The window resets on every successful refresh. There is no fixed expiration date for the overall access grant as long as you refresh within each 90-day window.
+* The window resets on every successful refresh. The overall access grant has no fixed expiration date as long as you refresh within each 90-day window.
 
 **Example:**
 
@@ -55,7 +55,7 @@ CAN tokens use a rolling 90-day refresh window. This means:
 | Second refresh | Day 100 | Day 190 (100 \+ 90\) |
 | Refresh missed | Day 200 | N/A (window expired on Day 190\) |
 
-***Note:** The `access_grant_expiration` field in the token response reflects the current refresh window expiration: 90 days from the most recent token issuance or refresh. It updates on every refresh.*
+<Alert heading="Note" headingAs="p" variant="info" noIcon> The `access_grant_expiration` field in the token response reflects the current refresh window expiration: 90 days from the most recent token issuance or refresh. It updates on every refresh.</Alert>
 
 ## ID token age requirement
 
