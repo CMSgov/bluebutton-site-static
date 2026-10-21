@@ -65,10 +65,11 @@ jobs:
       env:
         TAG: ${{ steps.latest.outputs.tag }}
 
+    # Sort fields alphabetically (case-insensitive) by Field Name so diffs between releases stay readable
     - name: Copy the v3 data dictionary into BB Static Site Repo
       if: steps.latest.outputs.found == 'true'
       run: |
-        jq --arg version "$TAG" '{version: $version, fields: .}' "$RUNNER_TEMP/raw.json" \
+        jq --arg version "$TAG" '{version: $version, fields: sort_by(."Field Name" | ascii_downcase)}' "$RUNNER_TEMP/raw.json" \
           > bluebutton-site-static/src/content/data-dictionary/data-dictionary.json
       env:
         TAG: ${{ steps.latest.outputs.tag }}
