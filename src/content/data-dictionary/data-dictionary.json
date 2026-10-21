@@ -1,5 +1,5 @@
 {
-  "version": "2.267.0",
+  "version": "2.275.0",
   "fields": [
     {
       "Field Name": "Add On Payment Amount",
@@ -752,6 +752,33 @@
       "Description": "An amount paid by a beneficiary for services rendered on a claim.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
+        "Carrier",
+        "DME"
+      ],
+      "fhirPath": "ExplanationOfBenefit.total.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Adjudication').exists() and category.coding.where(code='CLM_BENE_PMT_AMT').exists() ).amount.value",
+      "example": 19.94,
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM",
+      "sourceColumn": "CLM_BENE_PMT_AMT",
+      "bfdDerived": null,
+      "sources": [
+        "MCS",
+        "NCH",
+        "VMS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": null,
+      "profiles": [
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Beneficiary Payment Amount",
+      "Description": "An amount paid by a beneficiary for services rendered on a claim.",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
         "Pharmacy"
       ],
       "fhirPath": "ExplanationOfBenefit.total.where(category.coding.where(system='http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication' and code='paidbypatient').exists() and category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Adjudication' and code='CLM_BENE_PMT_AMT').exists()).amount.value",
@@ -770,33 +797,6 @@
       "ccwMapping": [
         "PTNT_PAY_AMT"
       ],
-      "profiles": [
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Beneficiary Payment Amount",
-      "Description": "An amount paid by a beneficiary for services rendered on a claim.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
-        "Carrier",
-        "DME"
-      ],
-      "fhirPath": "ExplanationOfBenefit.total.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Adjudication').exists() and category.coding.where(code='CLM_BENE_PMT_AMT').exists() ).amount.value",
-      "example": 19.94,
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM",
-      "sourceColumn": "CLM_BENE_PMT_AMT",
-      "bfdDerived": null,
-      "sources": [
-        "MCS",
-        "NCH",
-        "VMS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": null,
       "profiles": [
         "Regular",
         "CMS"
@@ -1037,31 +1037,6 @@
     },
     {
       "Field Name": "Beneficiary Source Key - On Claim",
-      "Description": "Beneficiary Source Key - On Claim",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.patient.reference.substring(8)",
-      "example": "123456789",
-      "notes": null,
-      "sourceView": null,
-      "sourceColumn": null,
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": null,
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Beneficiary Source Key - On Claim",
       "Description": "A unique number assigned by the Enrollment Data Base (EDB) to each EDB record to identify a beneficiary.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
@@ -1084,6 +1059,31 @@
         "MCS",
         "NCH",
         "VMS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": null,
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Beneficiary Source Key - On Claim",
+      "Description": "Beneficiary Source Key - On Claim",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.patient.reference.substring(8)",
+      "example": "123456789",
+      "notes": null,
+      "sourceView": null,
+      "sourceColumn": null,
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
       ],
       "referenceTable": "",
       "cclfMapping": null,
@@ -1675,35 +1675,6 @@
       "Description": "A code identifying the type of adjustment record represented on a claim or encounter. Reference table: CLM_ADJSTMT_TYPE_CD",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_ADJSTMT_TYPE_CD').exists()).code.coding.code",
-      "example": "0",
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM",
-      "sourceColumn": "CLM_ADJSTMT_TYPE_CD",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-ADJSTMT-TYPE-CD",
-      "cclfMapping": [
-        "CCLF7.CLM_ADJSMT_TYPE_CD"
-      ],
-      "ccwMapping": [
-        "ADJSTMT_DLTN_CD"
-      ],
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Claim Adjustment Type Code",
-      "Description": "A code identifying the type of adjustment record represented on a claim or encounter. Reference table: CLM_ADJSTMT_TYPE_CD",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "Carrier",
         "DME",
         "HHA",
@@ -1731,6 +1702,35 @@
         "CCLF6.CLM_ADJSMT_TYPE_CD"
       ],
       "ccwMapping": null,
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Claim Adjustment Type Code",
+      "Description": "A code identifying the type of adjustment record represented on a claim or encounter. Reference table: CLM_ADJSTMT_TYPE_CD",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_ADJSTMT_TYPE_CD').exists()).code.coding.code",
+      "example": "0",
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM",
+      "sourceColumn": "CLM_ADJSTMT_TYPE_CD",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-ADJSTMT-TYPE-CD",
+      "cclfMapping": [
+        "CCLF7.CLM_ADJSMT_TYPE_CD"
+      ],
+      "ccwMapping": [
+        "ADJSTMT_DLTN_CD"
+      ],
       "profiles": [
         "Basis",
         "Regular",
@@ -2182,33 +2182,6 @@
       "Description": "A date corresponding to the National Claim History (NCH) weekly processing date and used in final action processing to identify a version of a claim. It will always be a Friday date.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.created",
-      "example": "2024-01-15",
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM",
-      "sourceColumn": "CLM_EFCTV_DT",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": [
-        "CCLF7.CLM_EFCTV_DT"
-      ],
-      "ccwMapping": null,
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Claim Effective Date",
-      "Description": "A date corresponding to the National Claim History (NCH) weekly processing date and used in final action processing to identify a version of a claim. It will always be a Friday date.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "Carrier",
         "DME",
         "HHA",
@@ -2243,23 +2216,25 @@
       ]
     },
     {
-      "Field Name": "Claim From Date",
-      "Description": "A date identifying the first day services are provided to a beneficiary.",
+      "Field Name": "Claim Effective Date",
+      "Description": "A date corresponding to the National Claim History (NCH) weekly processing date and used in final action processing to identify a version of a claim. It will always be a Friday date.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
         "Pharmacy"
       ],
-      "fhirPath": "ExplanationOfBenefit.billablePeriod.start",
+      "fhirPath": "ExplanationOfBenefit.created",
       "example": "2024-01-15",
       "notes": null,
       "sourceView": "V2_MDCR_CLM",
-      "sourceColumn": "CLM_FROM_DT",
+      "sourceColumn": "CLM_EFCTV_DT",
       "bfdDerived": null,
       "sources": [
         "DDPS"
       ],
       "referenceTable": "",
-      "cclfMapping": null,
+      "cclfMapping": [
+        "CCLF7.CLM_EFCTV_DT"
+      ],
       "ccwMapping": null,
       "profiles": [
         "Basis",
@@ -2311,27 +2286,27 @@
       ]
     },
     {
-      "Field Name": "Claim IDR Load Date",
-      "Description": "A date identifying when Part A and Part B data are loaded into the Integrated Data Repository (IDR).",
+      "Field Name": "Claim From Date",
+      "Description": "A date identifying the first day services are provided to a beneficiary.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
         "Pharmacy"
       ],
-      "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_IDR_LD_DT').exists()).timing",
-      "example": "2025-01-18",
+      "fhirPath": "ExplanationOfBenefit.billablePeriod.start",
+      "example": "2024-01-15",
       "notes": null,
       "sourceView": "V2_MDCR_CLM",
-      "sourceColumn": "CLM_IDR_LD_DT",
+      "sourceColumn": "CLM_FROM_DT",
       "bfdDerived": null,
       "sources": [
         "DDPS"
       ],
       "referenceTable": "",
-      "cclfMapping": [
-        "CCLF7.CLM_IDR_LD_DT"
-      ],
+      "cclfMapping": null,
       "ccwMapping": null,
       "profiles": [
+        "Basis",
+        "Regular",
         "CMS"
       ]
     },
@@ -2365,6 +2340,31 @@
         "CCLF1.CLM_IDR_LD_DT",
         "CCLF5.CLM_IDR_LD_DT",
         "CCLF6.CLM_IDR_LD_DT"
+      ],
+      "ccwMapping": null,
+      "profiles": [
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Claim IDR Load Date",
+      "Description": "A date identifying when Part A and Part B data are loaded into the Integrated Data Repository (IDR).",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_IDR_LD_DT').exists()).timing",
+      "example": "2025-01-18",
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM",
+      "sourceColumn": "CLM_IDR_LD_DT",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": [
+        "CCLF7.CLM_IDR_LD_DT"
       ],
       "ccwMapping": null,
       "profiles": [
@@ -2812,32 +2812,6 @@
       "Description": "An amount identifying the Medicare payment for a line item service.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.item.adjudication.where(category.coding.where(system='http://terminology.hl7.org/CodeSystem/adjudication' and code='benefit').exists()).amount.value",
-      "example": 45.5,
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM_LINE",
-      "sourceColumn": "CLM_LINE_CVRD_PD_AMT",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": [
-        "CVRD_D_PLAN_PD_AMT"
-      ],
-      "profiles": [
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Claim Line Covered Paid Amount",
-      "Description": "An amount identifying the Medicare payment for a line item service.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "Carrier",
         "DME",
         "HHA",
@@ -2866,6 +2840,32 @@
       "ccwMapping": [
         "LINE_NCH_PMT_AMT",
         "REV_CNTR_PMT_AMT_AMT"
+      ],
+      "profiles": [
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Claim Line Covered Paid Amount",
+      "Description": "An amount identifying the Medicare payment for a line item service.",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.item.adjudication.where(category.coding.where(system='http://terminology.hl7.org/CodeSystem/adjudication' and code='benefit').exists()).amount.value",
+      "example": 45.5,
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM_LINE",
+      "sourceColumn": "CLM_LINE_CVRD_PD_AMT",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": [
+        "CVRD_D_PLAN_PD_AMT"
       ],
       "profiles": [
         "Regular",
@@ -3780,29 +3780,6 @@
       "Description": "Date a claim or prescription drug event was processed by a CMS front end system, such as the DDPS operational data store.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_CMS_PROC_DT').exists()).timing",
-      "example": "2024-01-18",
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM_DT_SGNTR",
-      "sourceColumn": "CLM_CMS_PROC_DT",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": null,
-      "profiles": [
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Claim Process Date",
-      "Description": "Date a claim or prescription drug event was processed by a CMS front end system, such as the DDPS operational data store.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "HHA",
         "Hospice",
         "Inpatient",
@@ -3824,6 +3801,29 @@
       "ccwMapping": [
         "FI_CLM_PROC_DT"
       ],
+      "profiles": [
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Claim Process Date",
+      "Description": "Date a claim or prescription drug event was processed by a CMS front end system, such as the DDPS operational data store.",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_CMS_PROC_DT').exists()).timing",
+      "example": "2024-01-18",
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM_DT_SGNTR",
+      "sourceColumn": "CLM_CMS_PROC_DT",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": null,
       "profiles": [
         "CMS"
       ]
@@ -3950,31 +3950,6 @@
     },
     {
       "Field Name": "Claim Source ID",
-      "Description": "An identifier indicating where the source of the claim data in the Integrated Data Repository (IDR) originated from. Valid values: 20000 = National Claims History (NCH). 21000 = Fiscal Intermediary Shared System (FISS). 22000 = Multi-Carrier System (MCS). 23000 = Viable Information Processing Systems (VIPS) Medicare System (VMS). 24000 = Encounter Data Processing System (EDPS). 25000 = Encounter Medicaid Duals 837 claims and Duals Medicaid Drug Claims (DMDC). N/A = Medicaid",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.meta.source",
-      "example": "DDPS",
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM",
-      "sourceColumn": "CLM_SRC_ID",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-SRC-ID",
-      "cclfMapping": null,
-      "ccwMapping": null,
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Claim Source ID",
       "Description": "A unique numeric value assigned by the Integrated Data Repository (IDR) used to identify the specific source of the data when a row is loaded into the IDR. Reference table: V2_MDCR_META_DCTNRY_SRC",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
@@ -3999,6 +3974,31 @@
         "VMS"
       ],
       "referenceTable": "https://bluebutton.cms.gov/fhir/CodeSystem/System-Type",
+      "cclfMapping": null,
+      "ccwMapping": null,
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Claim Source ID",
+      "Description": "An identifier indicating where the source of the claim data in the Integrated Data Repository (IDR) originated from. Valid values: 20000 = National Claims History (NCH). 21000 = Fiscal Intermediary Shared System (FISS). 22000 = Multi-Carrier System (MCS). 23000 = Viable Information Processing Systems (VIPS) Medicare System (VMS). 24000 = Encounter Data Processing System (EDPS). 25000 = Encounter Medicaid Duals 837 claims and Duals Medicaid Drug Claims (DMDC). N/A = Medicaid",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.meta.source",
+      "example": "DDPS",
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM",
+      "sourceColumn": "CLM_SRC_ID",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-SRC-ID",
       "cclfMapping": null,
       "ccwMapping": null,
       "profiles": [
@@ -4043,31 +4043,6 @@
       "Description": "This field can be used to determine which CMS claim stream the claim was processed under.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.type.coding.where(system = 'https://bluebutton.cms.gov/fhir/CodeSystem/EOB-TYPE').code",
-      "example": "PDE",
-      "notes": null,
-      "sourceView": null,
-      "sourceColumn": null,
-      "bfdDerived": true,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": null,
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Claim Stream",
-      "Description": "This field can be used to determine which CMS claim stream the claim was processed under.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "Carrier",
         "DME",
         "HHA",
@@ -4087,6 +4062,31 @@
         "MCS",
         "NCH",
         "VMS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": null,
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Claim Stream",
+      "Description": "This field can be used to determine which CMS claim stream the claim was processed under.",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.type.coding.where(system = 'https://bluebutton.cms.gov/fhir/CodeSystem/EOB-TYPE').code",
+      "example": "PDE",
+      "notes": null,
+      "sourceView": null,
+      "sourceColumn": null,
+      "bfdDerived": true,
+      "sources": [
+        "DDPS"
       ],
       "referenceTable": "",
       "cclfMapping": null,
@@ -4162,31 +4162,6 @@
       "Description": "A date identifying the last day services are provided to a beneficiary. Note: For drug claims, this date is when the prescription was filled.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.billablePeriod.end",
-      "example": "2024-01-15",
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM",
-      "sourceColumn": "CLM_THRU_DT",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": null,
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Claim Thru Date",
-      "Description": "A date identifying the last day services are provided to a beneficiary. Note: For drug claims, this date is when the prescription was filled.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "Carrier",
         "DME",
         "HHA",
@@ -4219,6 +4194,31 @@
       "ccwMapping": [
         "CLM_THRU_DT"
       ],
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Claim Thru Date",
+      "Description": "A date identifying the last day services are provided to a beneficiary. Note: For drug claims, this date is when the prescription was filled.",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.billablePeriod.end",
+      "example": "2024-01-15",
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM",
+      "sourceColumn": "CLM_THRU_DT",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": null,
       "profiles": [
         "Basis",
         "Regular",
@@ -4304,33 +4304,6 @@
       "Description": "A code identifying the source and type of claim submitted through the Medicare or Medicaid program. For example: 60 = Medicare National Claims History (NCH) inpatient claim. 8900 = Medicaid fee for service dental. Reference table: CLM_TYPE_CD",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.type.coding.where(system = 'https://bluebutton.cms.gov/fhir/CodeSystem/CLM-TYPE-CD').code",
-      "example": "1",
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM",
-      "sourceColumn": "CLM_TYPE_CD",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-TYPE-CD",
-      "cclfMapping": [
-        "CCLF7.CLM_TYPE_CD"
-      ],
-      "ccwMapping": null,
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Claim Type Code",
-      "Description": "A code identifying the source and type of claim submitted through the Medicare or Medicaid program. For example: 60 = Medicare National Claims History (NCH) inpatient claim. 8900 = Medicaid fee for service dental. Reference table: CLM_TYPE_CD",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "Carrier",
         "DME",
         "HHA",
@@ -4365,6 +4338,33 @@
       "ccwMapping": [
         "NCH_CLM_TYPE_CD"
       ],
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Claim Type Code",
+      "Description": "A code identifying the source and type of claim submitted through the Medicare or Medicaid program. For example: 60 = Medicare National Claims History (NCH) inpatient claim. 8900 = Medicaid fee for service dental. Reference table: CLM_TYPE_CD",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.type.coding.where(system = 'https://bluebutton.cms.gov/fhir/CodeSystem/CLM-TYPE-CD').code",
+      "example": "1",
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM",
+      "sourceColumn": "CLM_TYPE_CD",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "https://bluebutton.cms.gov/fhir/CodeSystem/CLM-TYPE-CD",
+      "cclfMapping": [
+        "CCLF7.CLM_TYPE_CD"
+      ],
+      "ccwMapping": null,
       "profiles": [
         "Basis",
         "Regular",
@@ -4513,6 +4513,40 @@
       "profiles": null
     },
     {
+      "Field Name": "CMS Patient Control Number",
+      "Description": "A number used to identify the patient account or encounter associated with a claim.",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Carrier",
+        "DME",
+        "HHA",
+        "Hospice",
+        "Inpatient",
+        "Outpatient",
+        "SNF"
+      ],
+      "fhirPath": "ExplanationOfBenefit.identifier.where(system = 'https://bluebutton.cms.gov/identifiers/CLM-PTNT-CNTL-NUM').value",
+      "example": "",
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM_DCMTN",
+      "sourceColumn": "CLM_PTNT_CNTL_NUM",
+      "bfdDerived": null,
+      "sources": [
+        "FISS",
+        "MCS",
+        "NCH",
+        "VMS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": null,
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
       "Field Name": "CMS Service Type Code",
       "Description": "Type of service as defined in the HCFA Medicare Carrier Manual, for this line item on the non-institutional claim. (NCH)",
       "FHIR Resource": "ExplanationOfBenefit",
@@ -4617,26 +4651,6 @@
     },
     {
       "Field Name": "Contract PBP Name",
-      "Description": "Text label describing the PBP, usually the product name.",
-      "FHIR Resource": "Coverage",
-      "Coverage / Claim Type": [
-        "PartC",
-        "PartD"
-      ],
-      "fhirPath": "Coverage.contained.where(resourceType='Organization').name",
-      "example": "Sample Medicare Advantage Plan",
-      "notes": null,
-      "sourceView": "V2_MDCR_CNTRCT_PBP_NUM",
-      "sourceColumn": "CNTRCT_PBP_NAME",
-      "bfdDerived": null,
-      "sources": null,
-      "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": null,
-      "profiles": null
-    },
-    {
-      "Field Name": "Contract PBP Name",
       "Description": "This field contains the name of the plan benefit package (PBP) for the beneficiary's Part D plan of record for the year.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
@@ -4659,6 +4673,26 @@
         "Regular",
         "CMS"
       ]
+    },
+    {
+      "Field Name": "Contract PBP Name",
+      "Description": "Text label describing the PBP, usually the product name.",
+      "FHIR Resource": "Coverage",
+      "Coverage / Claim Type": [
+        "PartC",
+        "PartD"
+      ],
+      "fhirPath": "Coverage.contained.where(resourceType='Organization').name",
+      "example": "Sample Medicare Advantage Plan",
+      "notes": null,
+      "sourceView": "V2_MDCR_CNTRCT_PBP_NUM",
+      "sourceColumn": "CNTRCT_PBP_NAME",
+      "bfdDerived": null,
+      "sources": null,
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": null,
+      "profiles": null
     },
     {
       "Field Name": "Contract PBP Segment Number",
@@ -4768,7 +4802,7 @@
         "SNF"
       ],
       "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_ACTV_CARE_THRU_DT').exists()).timing",
-      "example": "2025-01-11",
+      "example": "2025-01-12",
       "notes": null,
       "sourceView": "V2_MDCR_CLM_DT_SGNTR",
       "sourceColumn": "CLM_ACTV_CARE_THRU_DT",
@@ -5650,7 +5684,12 @@
         "DME"
       ],
       "fhirPath": "ExplanationOfBenefit.contained.where(id = %root.supportingInfo.valueReference.reference.substring(1)).value",
-      "example": "1.11",
+      "example": {
+        "value": 1.11,
+        "unit": "g/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "g/dL"
+      },
       "notes": null,
       "sourceView": "V2_MDCR_CLM_LINE_PRFNL",
       "sourceColumn": "CLM_LINE_HCT_HGB_RSLT_NUM",
@@ -6086,35 +6125,6 @@
       "Description": "A date indicating the first day of service for a line item.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.item.serviced",
-      "example": "2024-01-15",
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM_LINE",
-      "sourceColumn": "CLM_LINE_FROM_DT",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": [
-        "CCLF7.CLM_LINE_FROM_DT"
-      ],
-      "ccwMapping": [
-        "SRVC_DT"
-      ],
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Line Item From Date",
-      "Description": "A date indicating the first day of service for a line item.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "Carrier",
         "DME",
         "HHA",
@@ -6143,6 +6153,35 @@
       ],
       "ccwMapping": [
         "LINE_1ST_EXPNS_DT"
+      ],
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Line Item From Date",
+      "Description": "A date indicating the first day of service for a line item.",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.item.serviced",
+      "example": "2024-01-15",
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM_LINE",
+      "sourceColumn": "CLM_LINE_FROM_DT",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": [
+        "CCLF7.CLM_LINE_FROM_DT"
+      ],
+      "ccwMapping": [
+        "SRVC_DT"
       ],
       "profiles": [
         "Basis",
@@ -6195,35 +6234,6 @@
       "Description": "The quantity of an NDC applicable to institutional claims.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "(ExplanationOfBenefit.item.quantity|ExplanationOfBenefit.item.detail.quantity).value",
-      "example": 60,
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM_LINE",
-      "sourceColumn": "CLM_LINE_NDC_QTY",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": [
-        "CCLF7.CLM_LINE_SRVC_UNIT_QTY"
-      ],
-      "ccwMapping": [
-        "QTY_DSPNSD_NUM"
-      ],
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Line Item NDC Quantity",
-      "Description": "The quantity of an NDC applicable to institutional claims.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "Carrier",
         "DME",
         "HHA",
@@ -6255,24 +6265,28 @@
       ]
     },
     {
-      "Field Name": "Line Item NDC Quantity Qualifier Code",
-      "Description": "Qualifies the type of quantity applicable to an NDC present on all institutional claim types (inpatient/SNF, outpatient, home health, and hospice).",
+      "Field Name": "Line Item NDC Quantity",
+      "Description": "The quantity of an NDC applicable to institutional claims.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
         "Pharmacy"
       ],
-      "fhirPath": "(ExplanationOfBenefit.item.quantity|ExplanationOfBenefit.item.detail.quantity).unit",
-      "example": "UN",
+      "fhirPath": "(ExplanationOfBenefit.item.quantity|ExplanationOfBenefit.item.detail.quantity).value",
+      "example": 60,
       "notes": null,
       "sourceView": "V2_MDCR_CLM_LINE",
-      "sourceColumn": "CLM_LINE_NDC_QTY_QLFYR_CD",
+      "sourceColumn": "CLM_LINE_NDC_QTY",
       "bfdDerived": null,
       "sources": [
         "DDPS"
       ],
       "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": null,
+      "cclfMapping": [
+        "CCLF7.CLM_LINE_SRVC_UNIT_QTY"
+      ],
+      "ccwMapping": [
+        "QTY_DSPNSD_NUM"
+      ],
       "profiles": [
         "Basis",
         "Regular",
@@ -6308,6 +6322,31 @@
       "ccwMapping": [
         "REV_CNTR_NDC_QTY_QLFR_CD"
       ],
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Line Item NDC Quantity Qualifier Code",
+      "Description": "Qualifies the type of quantity applicable to an NDC present on all institutional claim types (inpatient/SNF, outpatient, home health, and hospice).",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "(ExplanationOfBenefit.item.quantity|ExplanationOfBenefit.item.detail.quantity).unit",
+      "example": "UN",
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM_LINE",
+      "sourceColumn": "CLM_LINE_NDC_QTY_QLFYR_CD",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": null,
       "profiles": [
         "Basis",
         "Regular",
@@ -6383,31 +6422,6 @@
       "Description": "A number identifying the position of the service or item on the claim. This is a component of the 5-part key used for joining claims.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "ExplanationOfBenefit.item.sequence",
-      "example": 1,
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM_LINE",
-      "sourceColumn": "CLM_LINE_NUM",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": null,
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "Line Item Sequence Number",
-      "Description": "A number identifying the position of the service or item on the claim. This is a component of the 5-part key used for joining claims.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "Carrier",
         "DME",
         "HHA",
@@ -6437,6 +6451,31 @@
         "CLM_LINE_NUM",
         "LINE_NUM"
       ],
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "Line Item Sequence Number",
+      "Description": "A number identifying the position of the service or item on the claim. This is a component of the 5-part key used for joining claims.",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "ExplanationOfBenefit.item.sequence",
+      "example": 1,
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM_LINE",
+      "sourceColumn": "CLM_LINE_NUM",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": null,
       "profiles": [
         "Basis",
         "Regular",
@@ -6902,7 +6941,7 @@
         "SNF"
       ],
       "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_MDCR_EXHSTD_DT').exists()).timing",
-      "example": "2025-01-11",
+      "example": "2025-01-12",
       "notes": null,
       "sourceView": "V2_MDCR_CLM_DT_SGNTR",
       "sourceColumn": "CLM_MDCR_EXHSTD_DT",
@@ -7074,35 +7113,6 @@
       "Description": "The National Drug Code that identifies specific drugs.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
-        "Pharmacy"
-      ],
-      "fhirPath": "(ExplanationOfBenefit.item.productOrService.coding|ExplanationOfBenefit.item.detail.productOrService.coding).where(system = 'http://hl7.org/fhir/sid/ndc').code",
-      "example": "00071015523",
-      "notes": "For deleted PDE claims, this will have a data absent reason.",
-      "sourceView": "V2_MDCR_CLM_LINE",
-      "sourceColumn": "CLM_LINE_NDC_CD",
-      "bfdDerived": null,
-      "sources": [
-        "DDPS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": [
-        "CCLF7.CLM_LINE_NDC_CD"
-      ],
-      "ccwMapping": [
-        "PROD_SRVC_ID"
-      ],
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "National Drug Code",
-      "Description": "The National Drug Code that identifies specific drugs.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
         "Carrier",
         "DME",
         "HHA",
@@ -7128,6 +7138,35 @@
       "ccwMapping": [
         "LINE_NDC_CD",
         "REV_CNTR_IDE_NDC_UPC_NUM"
+      ],
+      "profiles": [
+        "Basis",
+        "Regular",
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "National Drug Code",
+      "Description": "The National Drug Code that identifies specific drugs.",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
+        "Pharmacy"
+      ],
+      "fhirPath": "(ExplanationOfBenefit.item.productOrService.coding|ExplanationOfBenefit.item.detail.productOrService.coding).where(system = 'http://hl7.org/fhir/sid/ndc').code",
+      "example": "00071015523",
+      "notes": "For deleted PDE claims, this will have a data absent reason.",
+      "sourceView": "V2_MDCR_CLM_LINE",
+      "sourceColumn": "CLM_LINE_NDC_CD",
+      "bfdDerived": null,
+      "sources": [
+        "DDPS"
+      ],
+      "referenceTable": "",
+      "cclfMapping": [
+        "CCLF7.CLM_LINE_NDC_CD"
+      ],
+      "ccwMapping": [
+        "PROD_SRVC_ID"
       ],
       "profiles": [
         "Basis",
@@ -7346,7 +7385,7 @@
         "SNF"
       ],
       "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_NCVRD_FROM_DT').exists()).timing",
-      "example": "2025-01-01",
+      "example": "2025-01-02",
       "notes": null,
       "sourceView": "V2_MDCR_CLM_DT_SGNTR",
       "sourceColumn": "CLM_NCVRD_FROM_DT",
@@ -7372,7 +7411,7 @@
         "SNF"
       ],
       "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_NCVRD_THRU_DT').exists()).timing",
-      "example": "2025-01-02",
+      "example": "2025-01-01",
       "notes": null,
       "sourceView": "V2_MDCR_CLM_DT_SGNTR",
       "sourceColumn": "CLM_NCVRD_THRU_DT",
@@ -9081,7 +9120,9 @@
       "ccwMapping": [
         "LINE_DME_PRCHS_PRICE_AMT"
       ],
-      "profiles": null
+      "profiles": [
+        "CMS"
+      ]
     },
     {
       "Field Name": "Purpose of Event",
@@ -9110,7 +9151,7 @@
         "SNF"
       ],
       "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_QLFY_STAY_FROM_DT').exists()).timing",
-      "example": "2025-01-02",
+      "example": "2025-01-01",
       "notes": null,
       "sourceView": "V2_MDCR_CLM_DT_SGNTR",
       "sourceColumn": "CLM_QLFY_STAY_FROM_DT",
@@ -9138,7 +9179,7 @@
         "SNF"
       ],
       "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information').exists() and category.coding.where(code='CLM_QLFY_STAY_THRU_DT').exists()).timing",
-      "example": "2025-01-01",
+      "example": "2025-01-02",
       "notes": null,
       "sourceView": "V2_MDCR_CLM_DT_SGNTR",
       "sourceColumn": "CLM_QLFY_STAY_THRU_DT",
@@ -9746,6 +9787,32 @@
       "Description": "The pharmacy's internal invoice number on pharmaceutical claims.",
       "FHIR Resource": "ExplanationOfBenefit",
       "Coverage / Claim Type": [
+        "Carrier"
+      ],
+      "fhirPath": "ExplanationOfBenefit.item.extension.where(url='https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-LINE-RX-NUM').value",
+      "example": "no rx num here!",
+      "notes": null,
+      "sourceView": "V2_MDCR_CLM_LINE",
+      "sourceColumn": "CLM_LINE_RX_NUM",
+      "bfdDerived": null,
+      "sources": [
+        "MCS",
+        "NCH"
+      ],
+      "referenceTable": "",
+      "cclfMapping": null,
+      "ccwMapping": [
+        "CARR_LINE_RX_NUM"
+      ],
+      "profiles": [
+        "CMS"
+      ]
+    },
+    {
+      "Field Name": "RX Number",
+      "Description": "The pharmacy's internal invoice number on pharmaceutical claims.",
+      "FHIR Resource": "ExplanationOfBenefit",
+      "Coverage / Claim Type": [
         "Pharmacy"
       ],
       "fhirPath": "ExplanationOfBenefit.supportingInfo.where(category.coding.where(system='https://bluebutton.cms.gov/fhir/CodeSystem/Supporting-Information' and code='CLM_LINE_RX_NUM').exists()).value",
@@ -9763,32 +9830,6 @@
       ],
       "ccwMapping": [
         "RX_SRVC_RFRNC_NUM"
-      ],
-      "profiles": [
-        "CMS"
-      ]
-    },
-    {
-      "Field Name": "RX Number",
-      "Description": "The pharmacy's internal invoice number on pharmaceutical claims.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
-        "Carrier"
-      ],
-      "fhirPath": "ExplanationOfBenefit.item.extension.where(url='https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-LINE-RX-NUM').value",
-      "example": "no rx num here!",
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM_LINE",
-      "sourceColumn": "CLM_LINE_RX_NUM",
-      "bfdDerived": null,
-      "sources": [
-        "MCS",
-        "NCH"
-      ],
-      "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": [
-        "CARR_LINE_RX_NUM"
       ],
       "profiles": [
         "CMS"
