@@ -13,7 +13,6 @@ import {
 const apiDocsLinks = await getApiDocsCollection()
 const datanavLinks = await getDataCollection()
 const quickStartLinks = await getQuickstartCollection()
-const productionLinks = await getProductionCollection()
 
 const isActive = (path: string) => Astro.url.pathname.startsWith(path)
 ---
