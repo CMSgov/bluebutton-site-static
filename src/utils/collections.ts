@@ -18,8 +18,8 @@ export async function getQuickstartCollection() {
   })
 }
 
-export async function getGuidesCollection() {
-  return (await getCollection('static', ({ id }) => id.startsWith('guides/'))).sort((a, b) => {
+export async function getApiDocsCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('api-documentation/'))).sort((a, b) => {
     return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
   })
 }

@@ -5,7 +5,7 @@ import Swagger from '#assets/images/swagger.svg'
 import Github from '@uswds/uswds/img/usa-icons/github.svg'
 import {
   getDataCollection,
-  getGuidesCollection,
+  getApiDocsCollection,
   getProductionCollection,
   getQuickstartCollection,
 } from '../utils/collections'
@@ -13,7 +13,7 @@ import {
 import Icon from './icon.astro'
 import Link from './link.astro'
 
-const guidesLinks = await getGuidesCollection()
+const apiDocsLinks = await getApiDocsCollection()
 const dataLinks = await getDataCollection()
 const quickStartLinks = await getQuickstartCollection()
 const productionLinks = await getProductionCollection()
@@ -33,56 +33,58 @@ const isActive = (path: string) => path === Astro.url.pathname
             to="/[...slug]"
             params={{ slug: 'quickstart' }}
             class={isActive($path({ to: '/[...slug]', params: { slug: 'quickstart' } })) ? 'usa-current' : null}
-            data-tealium="left-rail">Quickstart</Link
+            data-tealium="left-rail"
           >
+            Quickstart
+          </Link>
         </li>
         <ul class="usa-sidenav__sublist">
-          {
-            quickStartLinks.map((link) => (
-              <li class="usa-sidenav__item">
-                <Link
-                  to="/[...slug]"
-                  params={{ slug: link.id }}
-                  class={isActive($path({ to: '/[...slug]', params: { slug: link.id } })) ? 'usa-current' : null}
-                  data-tealium="left-rail"
-                >
-                  {link.data.title}
-                </Link>
-              </li>
-            ))
-          }
+          {quickStartLinks.map((link) => (
+            <li class="usa-sidenav__item">
+              <Link
+                to="/[...slug]"
+                params={{ slug: link.id }}
+                class={isActive($path({ to: '/[...slug]', params: { slug: link.id } })) ? 'usa-current' : null}
+                data-tealium="left-rail"
+              >
+                {link.data.title}
+              </Link>
+            </li>
+          ))}
         </ul>
         <li class="usa-sidenav__item">
           <Link
             to="/[...slug]"
-            params={{ slug: 'guides' }}
-            class={isActive($path({ to: '/[...slug]', params: { slug: 'guides' } })) ? 'usa-current' : null}
-            data-tealium="left-rail">Guides</Link
+            params={{ slug: 'api-documentation' }}
+            class={isActive($path({ to: '/[...slug]', params: { slug: 'api-documentation' } })) ? 'usa-current' : null}
+            data-tealium="left-rail"
           >
+            API Documentation
+          </Link>
         </li>
         <ul class="usa-sidenav__sublist">
-          {
-            guidesLinks.map((link) => (
-              <li class="usa-sidenav__item">
-                <Link
-                  to="/[...slug]"
-                  params={{ slug: link.id }}
-                  class={isActive($path({ to: '/[...slug]', params: { slug: link.id } })) ? 'usa-current' : null}
-                  data-tealium="left-rail"
-                >
-                  {link.data.title}
-                </Link>
-              </li>
-            ))
-          }
+          {apiDocsLinks.map((link) => (
+            <li class="usa-sidenav__item">
+              <Link
+                to="/[...slug]"
+                params={{ slug: link.id }}
+                class={isActive($path({ to: '/[...slug]', params: { slug: link.id } })) ? 'usa-current' : null}
+                data-tealium="left-rail"
+              >
+                {link.data.title}
+              </Link>
+            </li>
+          ))}
         </ul>
         <li class="usa-sidenav__item">
           <Link
             to="/[...slug]"
             params={{ slug: 'data' }}
             class={isActive($path({ to: '/[...slug]', params: { slug: 'data' } })) ? 'usa-current' : null}
-            data-tealium="left-rail">Data</Link
+            data-tealium="left-rail"
           >
+            Data
+          </Link>
         </li>
         <ul class="usa-sidenav__sublist">
           <li class="usa-sidenav__item">
@@ -94,44 +96,42 @@ const isActive = (path: string) => path === Astro.url.pathname
               Data Dictionary
             </Link>
           </li>
-          {
-            dataLinks.map((link) => (
-              <li class="usa-sidenav__item">
-                <Link
-                  to="/[...slug]"
-                  params={{ slug: link.id }}
-                  class={isActive($path({ to: '/[...slug]', params: { slug: link.id } })) ? 'usa-current' : null}
-                  data-tealium="left-rail"
-                >
-                  {link.data.title}
-                </Link>
-              </li>
-            ))
-          }
+          {dataLinks.map((link) => (
+            <li class="usa-sidenav__item">
+              <Link
+                to="/[...slug]"
+                params={{ slug: link.id }}
+                class={isActive($path({ to: '/[...slug]', params: { slug: link.id } })) ? 'usa-current' : null}
+                data-tealium="left-rail"
+              >
+                {link.data.title}
+              </Link>
+            </li>
+          ))}
         </ul>
         <li class="usa-sidenav__item">
           <Link
             to="/[...slug]"
             params={{ slug: 'production-access' }}
             class={isActive($path({ to: '/[...slug]', params: { slug: 'production-access' } })) ? 'usa-current' : null}
-            data-tealium="left-rail">Production Access</Link
+            data-tealium="left-rail"
           >
+            Production Access
+          </Link>
         </li>
         <ul class="usa-sidenav__sublist">
-          {
-            productionLinks.map((link) => (
-              <li class="usa-sidenav__item">
-                <Link
-                  to="/[...slug]"
-                  params={{ slug: link.id }}
-                  class={isActive($path({ to: '/[...slug]', params: { slug: link.id } })) ? 'usa-current' : null}
-                  data-tealium="left-rail"
-                >
-                  {link.data.title}
-                </Link>
-              </li>
-            ))
-          }
+          {productionLinks.map((link) => (
+            <li class="usa-sidenav__item">
+              <Link
+                to="/[...slug]"
+                params={{ slug: link.id }}
+                class={isActive($path({ to: '/[...slug]', params: { slug: link.id } })) ? 'usa-current' : null}
+                data-tealium="left-rail"
+              >
+                {link.data.title}
+              </Link>
+            </li>
+          ))}
         </ul>
         <li class="usa-sidenav__item">
           <Link href="https://github.com/CMSgov/bluebutton-web-server" showIcon={false} data-tealium="left-rail">

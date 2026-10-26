@@ -14,8 +14,8 @@ const sitemapLinks = [
     href: $path({ to: '/[...slug]', params: { slug: 'quickstart/use-cases' }, trailingSlash: true }),
   },
   {
-    label: 'Guides',
-    href: $path({ to: '/[...slug]', params: { slug: 'guides' }, trailingSlash: true }),
+    label: 'API Documentation',
+    href: $path({ to: '/[...slug]', params: { slug: 'api-documentation' }, trailingSlash: true }),
     // children: docsnavLinks,
     children: [],
   },
@@ -46,23 +46,21 @@ const sitemapLinks = [
     </div>
     <div class="usa-prose">
       <ul>
-        {
-          sitemapLinks.map((link) => (
-            <li>
-              <Link href={link.href}>{link.label}</Link>
+        {sitemapLinks.map((link) => (
+          <li>
+            <Link href={link.href}>{link.label}</Link>
 
-              {link?.children ? (
-                <ul>
-                  {/* {link.children.map((child) => (
+            {link?.children ? (
+              <ul>
+                {/* {link.children.map((child) => (
                     <li>
                       <Link href={child.href}>{child.label}</Link>
                     </li>
                   ))} */}
-                </ul>
-              ) : null}
-            </li>
-          ))
-        }
+              </ul>
+            ) : null}
+          </li>
+        ))}
       </ul>
     </div>
   </DocsLayout>

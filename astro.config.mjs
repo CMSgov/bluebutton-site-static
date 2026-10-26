@@ -73,7 +73,8 @@ export default defineConfig({
   ],
 
   redirects: {
-    '/api-documentation': '/quickstart',
+    // TODO: Remove comment when /quickstart comes back and /api-documentation goes away
+    // '/api-documentation/': '/quickstart/',
     '/developers': '/api-documentation/',
     '/guide': '/production-access/',
     '/resources': '/quickstart/learning-resources/',
