@@ -24,3 +24,7 @@ updates:
     groups:
       version-updates:
         applies-to: version-updates
+      security:
+        applies-to: security-updates
+        patterns:
+          - "*"

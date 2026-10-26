@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "CLM-PRVDR-PRTCPTG-CD",
+  "id": "CLM-PRVDR-TYPE-CD",
   "url": "https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PRVDR-TYPE-CD",
   "name": "CLM_PRVDR_TYPE_CD",
   "title": "Provider Type Code",

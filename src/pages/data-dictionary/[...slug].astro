@@ -128,7 +128,7 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
             )
           }
           {
-            d.referenceTable && (
+            d.referenceTable ? (
               <div class="tablet:grid-col-12 margin-bottom-2">
                 <dt class="font-sans-md text-bold" data-pagefind-ignore>
                   Reference Table
@@ -139,7 +139,7 @@ const fhirPath = d.fhirPath ? await formatFhirPath(d.fhirPath) : null
                   </a>
                 </dd>
               </div>
-            )
+            ) : null
           }
           {
             d.sources && d.sources.length > 0 && (

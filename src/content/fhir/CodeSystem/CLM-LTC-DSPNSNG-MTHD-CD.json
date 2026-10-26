@@ -13,8 +13,28 @@
       "display": "(Unknown value – rarely populated)"
     },
     {
+      "code": "01",
+      "display": "No Override"
+    },
+    {
+      "code": "02",
+      "display": "Other Override"
+    },
+    {
+      "code": "03",
+      "display": "Vacation Supply. The pharmacist is indicating that the cardholder has requested a vacation supply of the medicine."
+    },
+    {
+      "code": "04",
+      "display": "Lost/Damaged Prescription. The pharmacist is indicating that the a replacement of medication that has been damaged or lost."
+    },
+    {
       "code": "05",
       "display": "Therapy change. Physician determined that a change in therapy was required – either the medication was used faster than expected, or a different dosage form is needed."
+    },
+    {
+      "code": "06",
+      "display": "Continuation Dose After Starter Dose. The previous medication was a starter dose and now additional medication is needed to continue treatment."
     },
     {
       "code": "07",
@@ -25,8 +45,32 @@
       "display": "Process compound for approved ingredients"
     },
     {
+      "code": "09",
+      "display": "Encounters"
+    },
+    {
+      "code": "10",
+      "display": "Meets Plan Limitations. The pharmacy certifies that the transaction is in compliance with the program's policies and rules that are specific to the particular product being billed."
+    },
+    {
+      "code": "11",
+      "display": "Certification on File"
+    },
+    {
+      "code": "12",
+      "display": "DME Replacement Indicator"
+    },
+    {
+      "code": "13",
+      "display": "Payer-Recognized Emergency/Disaster Assistance Request"
+    },
+    {
       "code": "14",
       "display": "LTC leave of absence – short fill required for take-home use"
+    },
+    {
+      "code": "15",
+      "display": "Long Term Care Replacement Medication"
     },
     {
       "code": "16",
@@ -43,6 +87,10 @@
     {
       "code": "19",
       "display": "Split billing. The quantity dispensed is the remainder billed to a subsequent payer after Medicare Part A benefits expired (partial payment under Part A)."
+    },
+    {
+      "code": "20",
+      "display": "340B. Purchased pursuant to rights available under Section 340B of the Public Health Act of 1992."
     },
     {
       "code": "21",
@@ -123,7 +171,95 @@
     {
       "code": "45",
       "display": "For the prescriber ID submitted, the associated DEA number is a valid hospital DEA number with suffix (rarely populated)"
+    },
+    {
+      "code": "46",
+      "display": "Prescriber has prescriptive authority for this drug DEA Schedule."
+    },
+    {
+      "code": "47",
+      "display": "Shortened Days Supply. Request plan benefit allowances be applied to the shortened days supply not otherwise defined in a distinct shortened days supply value."
+    },
+    {
+      "code": "48",
+      "display": "Dispensed Subsequent to a Shortened Days Supply Dispensing."
+    },
+    {
+      "code": "49",
+      "display": "Prescriber does not currently have an active Type 1 NPI."
+    },
+    {
+      "code": "50",
+      "display": "Prescriber's active Medicare Fee For Service enrollment status has been validated."
+    },
+    {
+      "code": "51",
+      "display": "Pharmacy's active Medicare Fee For Service enrollment status has been validated."
+    },
+    {
+      "code": "52",
+      "display": "Prescriber's state license with prescriptive authority has been validated."
+    },
+    {
+      "code": "53",
+      "display": "Prescriber NPI active and valid."
+    },
+    {
+      "code": "54",
+      "display": "CMS Other Authorized Prescriber (OAP)."
+    },
+    {
+      "code": "55",
+      "display": "Prescriber Enrollment in State Medicaid Program has been validated."
+    },
+    {
+      "code": "56",
+      "display": "Pharmacy Enrollment in State Medicaid Program has been validated."
+    },
+    {
+      "code": "57",
+      "display": "Discharge Medication"
+    },
+    {
+      "code": "58",
+      "display": "Nominal Price."
+    },
+    {
+      "code": "59",
+      "display": "Federal Supply Schedule"
+    },
+    {
+      "code": "60",
+      "display": "Long Term Care Same Drug Strength and Dosage Form with Multiple Dosing Directions"
+    },
+    {
+      "code": "61",
+      "display": "Synchronization Fill - Shortened Days Supply"
+    },
+    {
+      "code": "62",
+      "display": "Shortened Days Supply of Same Drug, Strength and Dosage Form with Multiple NDCs Dispensed"
+    },
+    {
+      "code": "63",
+      "display": "Mail Order Delay - Shortened Days Supply"
+    },
+    {
+      "code": "64",
+      "display": "Trial Fill - Shortened Days Supply"
+    },
+    {
+      "code": "65",
+      "display": "Individual Patient Emergency RX Fill Request"
+    },
+    {
+      "code": "66",
+      "display": "Patient indicated Workers' Compensation Medicare Set-Aside Arrangement (WCMSA) benefit does not apply to this claim."
+    },
+    {
+      "code": "99",
+      "display": "Other(Unknown)"
     }
   ],
-  "count": 29
+  "count": 63
 }

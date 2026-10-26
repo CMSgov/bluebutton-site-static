@@ -358,6 +358,19 @@
         ]
       },
       {
+        "id": "LineItemComponent.CLM_LINE_MSP_COINSRNC_AMT",
+        "path": "LineItemComponent.CLM_LINE_MSP_COINSRNC_AMT",
+        "short": "Secondary Payment Coinsurance Amount",
+        "definition": "An amount identifying the payment amount of the secondary coinsurance.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
         "id": "LineItemComponent.CLM_LINE_BENE_PD_AMT",
         "path": "LineItemComponent.CLM_LINE_BENE_PD_AMT",
         "short": "Beneficiary Paid Amount",
@@ -1155,6 +1168,19 @@
         "path": "LineItemComponent.CLM_PRCNG_LCLTY_CD",
         "short": "Line Pricing Locality Code",
         "definition": "Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). [NCH]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "LineItemComponent.CLM_LINE_PRFRMG_PRVDR_LCLTY_CD",
+        "path": "LineItemComponent.CLM_LINE_PRFRMG_PRVDR_LCLTY_CD",
+        "short": "Line Pricing Locality Code",
+        "definition": "Code denoting the carrier-specific locality used for pricing the service for this line item on the carrier claim (non-DMERC). [MCS]",
         "min": 0,
         "max": "1",
         "type": [

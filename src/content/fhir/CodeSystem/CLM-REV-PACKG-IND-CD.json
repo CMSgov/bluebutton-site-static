@@ -21,6 +21,18 @@
       "display": "PACKAGED AS PART OF PARTIAL HOSPITALIZATION PER DIEM OR DAILY MENTAL HEALTH SERVICE PER DIEM"
     },
     {
+      "code": "4",
+      "display": "Drug Admin"
+    },
+    {
+      "code": "5",
+      "display": "Federally Qualified Health Centers (FQHC) DIEM"
+    },
+    {
+      "code": "6",
+      "display": "FQHC NOCOIN"
+    },
+    {
       "code": "0",
       "display": "NOT PACKAGED"
     },
@@ -29,5 +41,5 @@
       "display": "No Description Available"
     }
   ],
-  "count": 5
+  "count": 8
 }
