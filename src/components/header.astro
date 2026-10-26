@@ -127,7 +127,17 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
               class:list={['usa-nav-link', isActive('/production-access') ? 'usa-current' : null]}
               data-tealium="navigation"
             >
-              <span>Production Access</span>
+              Production Access
+            </Link>
+          </li>
+          <li class="usa-nav__primary-item">
+            <Link
+              to="/[...slug]"
+              params={{ slug: 'support' }}
+              class:list={['usa-nav-link', isActive('/support') ? 'usa-current' : null]}
+              data-tealium="navigation"
+            >
+              Support
             </Link>
           </li>
         </ul>
