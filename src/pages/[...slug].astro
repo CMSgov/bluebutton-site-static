@@ -2,18 +2,19 @@
 import type { CollectionEntry } from 'astro:content'
 import { getCollection, render } from 'astro:content'
 import { Image } from 'astro:assets'
+import { createRoute } from 'astro-typesafe-routes/create-route'
+
+import DocsLayout from '#layouts/docs-layout.astro'
+import BaseLayout from '#layouts/base-layout.astro'
+
+import OverflowTable from '#components/overflow-table.astro'
+import AccordionItem from '#components/accordion/accordion-item.astro'
+import AccordionList from '#components/accordion/accordion-list.astro'
 import Alert from '#components/alert.astro'
 import IconList from '#components/icon-list.astro'
 import Link from '#components/link.astro'
 import ProcessListItem from '#components/process-list/process-list-item.astro'
 import ProcessList from '#components/process-list/process-list.astro'
-
-import DocsLayout from '#layouts/docs-layout.astro'
-import BaseLayout from '#layouts/base-layout.astro'
-import { createRoute } from 'astro-typesafe-routes/create-route'
-import OverflowTable from '#components/overflow-table.astro'
-import AccordionItem from '#components/accordion/accordion-item.astro'
-import AccordionList from '#components/accordion/accordion-list.astro'
 
 export const Route = createRoute({
   routeId: '/[...slug]',

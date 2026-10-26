@@ -1,0 +1,44 @@
+---
+title: "Blue Button API version 3 is now available"
+published_date: 2026-05-01
+lead_paragraph: Blue Button API version 3 is here and available to test in Sandbox today! This is the biggest update to the Blue Button API since we launched in 2018, and we’re excited to see what new use cases this unlocks for you all. 
+seo:
+  description: Blue Button API version 3 is here and available to test in Sandbox today! This is the biggest update to the Blue Button API since we launched in 2018.
+---
+
+Blue Button API version 3 is here and **available to test in Sandbox today**! This is the biggest update to the Blue Button API since we launched in 2018, and we're excited to see what new use cases this unlocks for you all. 
+
+The biggest update is that we've switched our upstream data source at CMS, which has unlocked a whole set of new possibilities for v3 and beyond, including more data elements and increased our data ingestion frequency. v3 will enable you to build better experiences for the enrollees who trust you with their health information. 
+
+* **Get claims data faster.** v3 eliminates the 1-4 week data lag present in v1/v2 with both a shorter time between full processing (adjudication) and data availability, and with an increased frequency of updates. Enrollees using your application can even review some claim types as soon as one day after they're adjudicated, so your application can flag potential billing issues or fraud sooner. Additionally, v3 now supports partially adjudicated (not-yet-finalized) claims, allowing you to access those claims as soon as they are submitted.
+
+* **Build a complete Digital Medicare Card.** v3 provides the data elements your application needs to render a digital Medicare card, including Medicare Advantage plan details and Part D prescription coverage details - all in one place.   
+    
+* **Access more Part D data.** Expanded Part D information gives your users a more complete view of their prescription drug coverage, laying the groundwork for even more data types in future releases. 
+
+* **Provide a dynamic consent screen to support enrollee trust.** An updated, streamlined consent screen shows details specific to the scope of data that is being requested, making it clear what data is being shared and why. Enrollees can also choose to withhold substance use disorder claims data (per [42 CFR Part 2](https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/fact-sheet-42-cfr-part-2-final-rule/index.html)) when connecting to your application, enabling a higher level of enrollee privacy.  
+    
+* **Meet the latest FHIR and interoperability standards.** v3 improves FHIR conformance to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/), adds `StructureDefinition` and `CodeSystem` resources, and includes verified FHIRPath for every data element, making integration and data extraction more reliable. v3 also implements SMART App Launch v2.2 with resource-level consent.
+
+For more information about these benefits, check our [v3 Migration Guide](https://bluebutton.cms.gov/api-documentation/v3-migration-guide) and [FAQs](https://bluebutton.cms.gov/api-documentation/v3-faq/).
+
+## Compatibility with v1/v2
+
+Blue Button v3 is built to be largely compatible with v1 and v2. Replace `/v2/` or `/v1/` with `/v3/` in your requests to request v3 data. Your existing v1/v2 tokens will continue to work with v3 in most scenarios, and you can refresh v1/v2 tokens using the `/v3/o/token/` endpoint. Check the [FAQ section for specific details about tokens.](https://bluebutton.cms.gov/api-documentation/v3-faq/#in-what-scenarios-will-tokens-not-work-across-v1v2-and-v3) 
+
+While the request structure is largely the same, the response structure and the specific data available in the returned resources differ in v3, so you may need to update your application to properly process responses from the v3 endpoints.
+
+Note that the Patient resource IDs will not match across versions. An access token returned by the v3 token endpoint will have the v3 Patient ID in the `patient` field, while an access token returned by the v1 and v2 token endpoints will have the v1/v2 Patient ID. Although the Patient resource IDs differ, the MBI included in the Patient resource will remain the same across versions. We recommend testing in the Sandbox before migrating your production application.
+
+## How to Migrate
+
+If you're ready to migrate now, follow the instructions below; otherwise, we will reach out to you directly before the end of 2026 to discuss your v3 configurations. 
+
+1. Review the [v3 Migration Guide](https://bluebutton.cms.gov/api-documentation/v3-migration-guide) and [v3 FAQ](https://bluebutton.cms.gov/api-documentation/v3-faq/) to understand key changes and what to expect.  
+2. Sign the CARIN Code of Conduct. This is a new requirement for Blue Button applications; it is free and takes just a few minutes. Follow [this link](https://www.myhealthapplication.com/list-your-app) to access the application form.   
+3. Fill out this [form](https://surveys.cms.gov/jfe/form/SV_e9X2j2Orad4o9HU) to tell us about the scopes that your application requires   
+4. Once you submit the form, we will confirm the scopes and turn v3 on for your application in production. We'll notify you when this is complete. 
+
+<Alert variant="warning" heading="Migration Timeline">Please note that CMS will disable the v1/v2 endpoints on July 30, 2027. All applications using Blue Button must migrate to v3 by that date to continue accessing Blue Button data.</Alert>
+
+If you have questions or run into any issues, reach out through the [Google Group](https://groups.google.com/g/developer-group-for-cms-blue-button-api) or email us directly at [bluebuttonapi@cms.hhs.gov](mailto:bluebuttonapi@cms.hhs.gov).
