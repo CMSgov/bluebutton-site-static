@@ -12,9 +12,10 @@ updates:
     cooldown:
       default-days: 7
     groups:
-      minor-and-patch:
+      version-updates:
         applies-to: version-updates
         update-types:
+          - "major"
           - "minor"
           - "patch"
 
@@ -25,8 +26,9 @@ updates:
     cooldown:
       default-days: 7
     groups:
-      minor-and-patch:
+      version-updates:
         applies-to: version-updates
         update-types:
+          - "major"
           - "minor"
           - "patch"
