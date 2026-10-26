@@ -34,7 +34,9 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             <span class="font-sans-md text-bold text-black text-balance line-height-sans-2">CMS Blue Button API</span>
           </Link>
         </div>
-        <button type="button" class="usa-menu-btn">Menu</button>
+        <button type="button" class="usa-menu-btn">
+          Menu
+        </button>
       </div>
       <nav aria-label="Primary navigation" class="usa-nav">
         <button type="button" class="usa-nav__close">
@@ -52,17 +54,17 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             </button>
             <ul id="basic-nav-section-five" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/[...slug]" params={{ slug: 'quickstart' }} data-tealium="main_nav">Overview</Link>
+                <Link to="/[...slug]" params={{ slug: 'quickstart' }} data-tealium="main_nav">
+                  Overview
+                </Link>
               </li>
-              {
-                quickStartLinks.map((link) => (
-                  <li class="usa-nav__submenu-item">
-                    <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
-                      {link.data.title}
-                    </Link>
-                  </li>
-                ))
-              }
+              {quickStartLinks.map((link) => (
+                <li class="usa-nav__submenu-item">
+                  <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
+                    {link.data.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </li>
           <li class="usa-nav__primary-item">
@@ -76,17 +78,17 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             </button>
             <ul id="basic-nav-section-three" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/[...slug]" params={{ slug: 'guides' }} data-tealium="main_nav">Get Started</Link>
+                <Link to="/[...slug]" params={{ slug: 'guides' }} data-tealium="main_nav">
+                  Get Started
+                </Link>
               </li>
-              {
-                guidesnavLinks.map((link) => (
-                  <li class="usa-nav__submenu-item">
-                    <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
-                      {link.data.title}
-                    </Link>
-                  </li>
-                ))
-              }
+              {guidesnavLinks.map((link) => (
+                <li class="usa-nav__submenu-item">
+                  <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
+                    {link.data.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </li>
           <li class="usa-nav__primary-item">
@@ -100,48 +102,33 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             </button>
             <ul id="basic-nav-section-two" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/[...slug]" params={{ slug: 'data' }} data-tealium="main_nav">Overview</Link>
+                <Link to="/[...slug]" params={{ slug: 'data' }} data-tealium="main_nav">
+                  Overview
+                </Link>
               </li>
               <li class="usa-nav__submenu-item">
-                <Link to="/data-dictionary" data-tealium="main_nav">Data Dictionary</Link>
+                <Link to="/data-dictionary" data-tealium="main_nav">
+                  Data Dictionary
+                </Link>
               </li>
-              {
-                datanavLinks.map((link) => (
-                  <li class="usa-nav__submenu-item">
-                    <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
-                      {link.data.title}
-                    </Link>
-                  </li>
-                ))
-              }
+              {datanavLinks.map((link) => (
+                <li class="usa-nav__submenu-item">
+                  <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
+                    {link.data.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </li>
           <li class="usa-nav__primary-item">
-            <button
-              type="button"
-              class:list={[
-                'usa-accordion__button usa-nav__link',
-                isActive('/production-access') ? 'usa-current' : null,
-              ]}
-              aria-expanded="false"
-              aria-controls="basic-nav-section-four"
+            <Link
+              to="/[...slug]"
+              params={{ slug: 'production-access' }}
+              class:list={['usa-nav-link', isActive('/production-access') ? 'usa-current' : null]}
+              data-tealium="navigation"
             >
               <span>Production Access</span>
-            </button>
-            <ul id="basic-nav-section-four" class="usa-nav__submenu" hidden>
-              <li class="usa-nav__submenu-item">
-                <Link to="/[...slug]" params={{ slug: 'production-access' }} data-tealium="main_nav">Overview</Link>
-              </li>
-              {
-                productionLinks.map((link) => (
-                  <li class="usa-nav__submenu-item">
-                    <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
-                      {link.data.title}
-                    </Link>
-                  </li>
-                ))
-              }
-            </ul>
+            </Link>
           </li>
         </ul>
         <div class="desktop:padding-left-1 margin-top-4 desktop:margin-top-0">
@@ -149,8 +136,10 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             href="https://sandbox.bluebutton.cms.gov/v1/accounts/login"
             variant="primary"
             data-tealium="navigation"
-            class="width-full desktop:width-auto">Sandbox</Link
+            class="width-full desktop:width-auto"
           >
+            Sandbox
+          </Link>
         </div>
       </nav>
     </div>

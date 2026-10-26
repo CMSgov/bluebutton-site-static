@@ -12,6 +12,8 @@ import DocsLayout from '#layouts/docs-layout.astro'
 import BaseLayout from '#layouts/base-layout.astro'
 import { createRoute } from 'astro-typesafe-routes/create-route'
 import OverflowTable from '#components/overflow-table.astro'
+import AccordionItem from '#components/accordion/accordion-item.astro'
+import AccordionList from '#components/accordion/accordion-list.astro'
 
 export const Route = createRoute({
   routeId: '/[...slug]',
@@ -50,6 +52,8 @@ const { Content, headings } = await render(post)
           Alert,
           Image,
           IconList,
+          AccordionList,
+          AccordionItem,
         }}
       />
     </div>
