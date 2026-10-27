@@ -1,4 +1,3 @@
-import * as core from '@actions/core'
 import kleur from 'kleur'
 import process from 'node:process'
 
@@ -90,13 +89,13 @@ export function outputAnnotationsForGitHub(linkIssues: LinkIssue[]) {
     0,
   )
   if (annotationCount > 10) {
-    core.error(`Found ${annotationCount} link issues, please check the log to see them all`)
+    console.log(`::error::Found ${annotationCount} link issues, please check the log to see them all`)
   }
 
   // Now output all line annotations
   linkIssues.forEach((linkIssue) => {
     linkIssue.sourceFileAnnotations.forEach((annotation) => {
-      core.error(annotation.message, annotation.location)
+      console.log(`::error file=${annotation.location.file},line=${annotation.location.startLine},endLine=${annotation.location.endLine},col=${annotation.location.startColumn},endColumn=${annotation.location.endColumn},title=${annotation.location.title}::${annotation.message}`)
     })
 
     // Also output an error if no annotations were found for a link issue
@@ -107,7 +106,7 @@ export function outputAnnotationsForGitHub(linkIssues: LinkIssue[]) {
       if (linkIssue.autofixHref) {
         message += ` Suggested fix: ${linkIssue.autofixHref}`
       }
-      core.error(message)
+      console.log(`::error::${message}`)
     }
   })
 }
