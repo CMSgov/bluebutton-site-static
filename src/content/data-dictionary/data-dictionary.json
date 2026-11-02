@@ -1,5 +1,5 @@
 {
-  "version": "2.275.0",
+  "version": "2.278.0",
   "fields": [
     {
       "Field Name": "Add On Payment Amount",
@@ -4513,40 +4513,6 @@
       "profiles": null
     },
     {
-      "Field Name": "CMS Patient Control Number",
-      "Description": "A number used to identify the patient account or encounter associated with a claim.",
-      "FHIR Resource": "ExplanationOfBenefit",
-      "Coverage / Claim Type": [
-        "Carrier",
-        "DME",
-        "HHA",
-        "Hospice",
-        "Inpatient",
-        "Outpatient",
-        "SNF"
-      ],
-      "fhirPath": "ExplanationOfBenefit.identifier.where(system = 'https://bluebutton.cms.gov/identifiers/CLM-PTNT-CNTL-NUM').value",
-      "example": "",
-      "notes": null,
-      "sourceView": "V2_MDCR_CLM_DCMTN",
-      "sourceColumn": "CLM_PTNT_CNTL_NUM",
-      "bfdDerived": null,
-      "sources": [
-        "FISS",
-        "MCS",
-        "NCH",
-        "VMS"
-      ],
-      "referenceTable": "",
-      "cclfMapping": null,
-      "ccwMapping": null,
-      "profiles": [
-        "Basis",
-        "Regular",
-        "CMS"
-      ]
-    },
-    {
       "Field Name": "CMS Service Type Code",
       "Description": "Type of service as defined in the HCFA Medicare Carrier Manual, for this line item on the non-institutional claim. (NCH)",
       "FHIR Resource": "ExplanationOfBenefit",
@@ -9006,7 +8972,7 @@
       ],
       "fhirPath": "ExplanationOfBenefit.item.extension.where(url='https://bluebutton.cms.gov/fhir/StructureDefinition/CLM-PRVDR-SPCLTY-CD').value.code",
       "example": "11",
-      "notes": null,
+      "notes": "Represents the provider specialty for professional claim. To get the provider specialty for individuals involved on professional and institutional claims, use the following FHIR path: ExplanationOfBenfit.careTeam.qualification.",
       "sourceView": "V2_MDCR_CLM_LINE_PRFNL",
       "sourceColumn": "CLM_PRVDR_SPCLTY_CD",
       "bfdDerived": null,
