@@ -8,27 +8,42 @@ sortOrder: 2
 
 * [v3 Migration Guide](/guides/v3-migration-guide/)
 * [Migrating to v3 FAQ](/guides/v3-faq/)
-* [Migrating to v2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-v2-FAQ) 
 * [FHIR version-specific resources](https://www.hl7.org/fhir/versions.html#extensions)
+
+## Technical specifications and standards
+
+The Blue Button API is a [RESTful API](https://restfulapi.net/), based on:
+
+* [HL7 FHIR R4 Standard](https://www.hl7.org/fhir/index.html)
+* [CARIN Consumer Directed Payer Data Exchange Implementation Guide](https://www.hl7.org/fhir/us/carin-bb/index.html)
+
+The Blue Button API
+
+* Supplies data in [JSON format](https://hl7.org/fhir/R4/json.html).
+* Uses the [OAuth 2.0 protocol](https://oauth.net/) for authorization.
 
 ## Tutorials and Learning Resources 
 
 * [What is HL7?](https://info.hl7.org/learn-more) Learn about the organization behind FHIR, HL7.
+
 * [An Introduction to FHIR](https://www.youtube.com/watch?v=Px3564G-vw4) (YouTube). A video primer covering FHIR's core concepts for developers new to FHIR. It includes 
   * Resources
   * APIs
   * How FHIR enables health data interoperability
 * [FHIR Training Calendar](https://www.hl7.org/training/calendar.cfm). HL7's schedule of upcoming online courses covering FHIR at varying levels.
+
 * [FHIR Confluence Home Page](https://confluence.hl7.org/spaces/FHIR/overview). HL7's official Confluence workspace for FHIR. This workspace has:
   * Housing workgroup documentation
   * Balloting materials
   * Implementation guide development resources
   * Community collaboration pages for active contributors to the standard.
+
 * [OAuth Simplified](https://www.oauth.com/). A reference guide to building an OAuth 2.0 server. It covers:
   * The authorization framework SMART on FHIR and most health API authentication flows use
   * High-level overviews 
   * Step-by-step instructions
   * Real-world examples
+
 * [FTC: Mobile Health App Interactive Tool](https://www.ftc.gov/business-guidance/resources/mobile-health-apps-interactive-tool). An interactive questionnaire that walks health app developers through a series of questions. It asks developers about their app's functions and data handling. The goal of the questionnaire is to identify which federal regulations apply. Federal regulations assessed: HIPAA, the FTC Health Breach Notification Rule, the FD\&C Act, and the 21st Century Cures Act information blocking rules.
 
 ## CARIN Alliance 
@@ -44,9 +59,15 @@ sortOrder: 2
   * Consent flows
   * Privacy disclosures in compliance with the CARIN Code of Conduct
 * [CARIN Code of Conduct](https://www.carinalliance.com/code-of-conduct). A set of guides for consumer-facing applications. It defines the privacy, security, and data-use requirements for non-HIPAA-covered applications. **All applications must sign the code of conduct when handling personal health information (PHI) via FHIR APIs.**
-* [CARIN Digital Insurance Card Implementation Guide](https://build.fhir.org/ig/HL7/carin-digital-insurance-card/). This allows developers to surface digital proof of Medicare coverage to enrollees, providing details on types of coverage available. It returns a bundle that includes Patient and coverage resources that conform to the Digital insurance card profile.
+
 
 ## FHIR learning links
+
+### HL7 FHIR CARIN Digital Insurance Card
+
+[Implementation Guide:](http://hl7.org/fhir/us/insurance-card/)  Version 1.1.0, Date 2024-04-16
+
+This implementation guide focuses on standardizing how data elements from the physical insurance card can be transmitted in a FHIR-based exchange, leveraging the Coverage resource as well as Patient and Organization resources
 
 ### HL7 FHIR Common Payer Consumer Data Set 
 
