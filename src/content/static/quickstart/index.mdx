@@ -4,9 +4,9 @@ seo:
   description: "An introduction to Blue Button developers to onboard quickly"
 sortOrder: 1
 ---
-## Try out the API without coding
+## Use the test client
 
-Use the Blue Button API test client to explore data returned from API endpoints without coding.
+Use the Blue Button API test client to explore data returned from API endpoints without needing to build an app.
 
 Log out of the sandbox if you are currently logged in. This ensures the test client functions correctly.
 
@@ -15,7 +15,7 @@ Log out of the sandbox if you are currently logged in. This ensures the test cli
 3. Authorize by clicking **Authorize as a Beneficiary** or **Authorize as a Beneficiary (Spanish)**.
 4. Sign in to Medicare.gov using [synthetic user account credentials](https://bluebutton.cms.gov/data/#synthetic-data).
 5. Click **Share**.
-6. Click any of the links in the **API Calls** section of the page to use the resulting access token to make various API calls.
+6. Click any of the links in the **API Calls** section of the page to view response bundles with synthetic data.
 
 ## Sample applications
 
@@ -50,10 +50,10 @@ Follow the steps on the [Production Access](https://bluebutton.cms.gov/productio
 ## Enter application details
 ![register new application](#assets/images/register-new-application.png)
 ### 1. Application Name
-- The name of the Application you are connecting to the Blue Button API.
+The name of the Application you are connecting to the Blue Button API.
 
 ### 2. Callback URLs / Redirect URIs
-- This is an API endpoint that receives the callback after a user successfully authorizes your application to access their Medicare data. To enter multiple URIs in the **Callback URLs / Redirect URIs** field, separate each entry with a space or a new line.
+This is an API endpoint that receives the callback after a user successfully authorizes your application to access their Medicare data. To enter multiple URIs in the **Callback URLs / Redirect URIs** field, separate each entry with a space or a new line.
 
 Sample format:
 
@@ -61,7 +61,7 @@ Sample format:
 URIscheme://[sub-domain.]domain_name[:port]/path
 ```
 
-### 3. **Save Application**.
+### 3. **Save Application**
 After you register your Sandbox application, you’ll get a Client ID and Client Secret.
 
 * **Client ID**: an alphanumeric string that identifies your application. Use this in your code when you call the Blue Button API.
@@ -130,14 +130,4 @@ curl --location "https://sandbox.bluebutton.cms.gov/v3/fhir/ExplanationOfBenefit
     --header "Authorization: Bearer YOUR_ACCESS_TOKEN"
 ```
 
-## Technical specifications and standards
 
-The Blue Button API is a [RESTful API](https://restfulapi.net/), based on:
-
-* [HL7 FHIR R4 Standard](https://www.hl7.org/fhir/index.html)
-* [CARIN Consumer Directed Payer Data Exchange Implementation Guide](https://www.hl7.org/fhir/us/carin-bb/index.html)
-
-The Blue Button API
-
-* Supplies data in [JSON format](https://hl7.org/fhir/R4/json.html).
-* Uses the [OAuth 2.0 protocol](https://oauth.net/) for authorization.
