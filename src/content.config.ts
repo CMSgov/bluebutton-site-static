@@ -7,32 +7,47 @@ import { loadCodebooks } from '#utils/loaders/load-codebooks'
 import { loadCsvResources } from '#utils/loaders/load-csv-resources'
 import { fieldSchema, parseDataDictionary } from '#utils/loaders/parse-data-dictionary'
 
-const seoSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-}).partial().optional()
-
-const staticCollection = defineCollection({
+const pageCollection = defineCollection({
   loader: glob({
     pattern: '**\/[^_]*.(md|mdx)',
-    base: './src/content/static',
+    base: './src/content/pages',
   }),
   schema: z.object({
     title: z.string(),
-    seo: seoSchema,
-    sortOrder: z.coerce.number().optional(),
+    seo: z.object({
+      description: z.string(),
+      title: z.string(),
+    }).partial(),
   }),
 })
 
-const termsCollection = defineCollection({
+const apiDocsCollection = defineCollection({
   loader: glob({
     pattern: '**\/[^_]*.(md|mdx)',
-    base: './src/content/terms',
+    base: './src/content/api-documentation',
   }),
   schema: z.object({
     title: z.string(),
-    seo: seoSchema,
-    publishedDate: z.coerce.date(),
+    seo: z.object({
+      title: z.string(),
+      description: z.string(),
+    }).partial(),
+    sortOrder: z.number(),
+  }),
+})
+
+const dataDocsCollection = defineCollection({
+  loader: glob({
+    pattern: '**\/[^_]*.(md|mdx)',
+    base: './src/content/data',
+  }),
+  schema: z.object({
+    title: z.string(),
+    seo: z.object({
+      title: z.string(),
+      description: z.string(),
+    }).partial(),
+    sortOrder: z.number(),
   }),
 })
 
@@ -43,7 +58,10 @@ const resourcesCollection = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
-    seo: seoSchema,
+    seo: z.object({
+      title: z.string(),
+      description: z.string(),
+    }).partial(),
   }),
 })
 
@@ -91,6 +109,17 @@ const csvVariablesCollection = defineCollection({
   }),
 })
 
+const termsCollection = defineCollection({
+  loader: glob({
+    pattern: '**\/[^_]*.(md|mdx)',
+    base: './src/content/terms',
+  }),
+  schema: z.object({
+    title: z.string(),
+    published_date: z.coerce.date(),
+  }),
+})
+
 const fhirJsonCollection = defineCollection({
   loader: glob({
     pattern: '**/*.json',
@@ -107,11 +136,13 @@ const dataDictionaryCollection = defineCollection({
 })
 
 export const collections = {
-  static: staticCollection,
+  pages: pageCollection,
   resources: resourcesCollection,
+  apiDocs: apiDocsCollection,
+  dataDocs: dataDocsCollection,
   codebooks: codeBooksCollection,
   csvVariables: csvVariablesCollection,
-  fhir: fhirJsonCollection,
   terms: termsCollection,
+  fhir: fhirJsonCollection,
   dataDictionary: dataDictionaryCollection,
 }
