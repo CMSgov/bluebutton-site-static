@@ -169,7 +169,12 @@ Only CLEAR and ID.me are supported at the outset. Blue Button API's sandbox envi
 
 ## Using the Blue Button API 
 
-After successfully POSTing a token to Blue Button API's `/token` endpoint, it will attempt to find a unique match using the approved CMS matching algorithms. If a unique match is found, then an access token will be issued, with a token validity of 30 minutes, and refresh capability of up to 24 hours. If no match is found, an error will be returned to that effect. 
+After successfully POSTing a token to Blue Button API's `/token` endpoint, it will attempt to find a unique match using the approved CMS matching algorithms. If a unique match is found, then an access token will be issued, with a token validity of 1 hour, and refresh capability of up to 90 days.
+
+When you use the refresh token to obtain a new access token, the Blue Button API issues a new refresh token. The new refresh token is valid for 90 days from the time of that refresh, not from the original issuance date.
+The 90-day window resets on every successful refresh. There is no fixed expiration date for the overall access grant as long as you refresh within each 90-day window.
+
+If no match is found for the patient data, an error will be returned.
 
 Access tokens issued using this flow have the same capabilities of access tokens issued using the portal login `authorization_code` flow. To query for claims, coverage, or patient data, utilize the `Patient`, `ExplanationOfBenefit`, and `Coverage` resource paths:
 
