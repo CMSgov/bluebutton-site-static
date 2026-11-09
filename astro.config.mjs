@@ -73,12 +73,11 @@ export default defineConfig({
   ],
 
   redirects: {
-    '/api-documentation': '/quickstart',
     '/developers': '/api-documentation/',
     '/guide': '/production-access/',
-    '/resources': '/quickstart/learning-resources/',
+    '/resources': '/data/resources/',
     // legacy redirects
-    '/v2': '/quickstart/',
-    '/blog': '/quickstart/learning-resources/',
+    '/v2': '/api-documentation/',
+    '/blog': '/data/resources/',
   },
 })
