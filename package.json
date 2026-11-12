@@ -24,7 +24,7 @@
     "astro-seo": "^1.2.0",
     "astro-typesafe-routes": "^5.2.2",
     "cva": "^1.0.0-beta.12",
-    "fast-xml-parser": "^5.11.1",
+    "fast-xml-parser": "^5.12.0",
     "papaparse": "^5.7.0",
     "preact": "^11.0.1",
     "prettier-plugin-astro": "^1.0.1",
