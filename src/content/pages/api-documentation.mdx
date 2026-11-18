@@ -38,15 +38,32 @@ The Blue Button API is a RESTful API, based on the HL7 FHIR standard and the CAR
 
 ## Versions
 
-We currently support two Blue Button API versions:
+There are 3 versions of the Blue Button API.
 
-### Version 2 
+### Version 3
 
-Blue Button Version 2 (v2) is based on [FHIR release (R4)](http://hl7.org/fhir/R4/) and the [CARIN CDPDE Implementation Guide (Carin for Blue Button)](http://hl7.org/fhir/us/carin-bb/STU1.1/) and was released in July 2021. To learn about migrating to Blue Button v2, go to [Migrating to v2 FAQ](https://github.com/CMSgov/beneficiary-fhir-data/wiki/Migrating-to-v2-FAQ)
+Blue Button Version 3 (v3) is the latest version of the Blue Button API. It’s built on [FHIR Release 4 (R4)](https://hl7.org/fhir/R4/).
 
-### Version 1 
+v3 has the following improvements:
 
-Version 1 (v1) is the original Blue Button API, based on [FHIR release 3 (STU3)](http://hl7.org/fhir/STU3/). Development on v1 is limited to bug fixes and basic maintenance. If you're developing a new app, use v2. 
+* Improved claims data timeliness  
+* Availability of partially adjudicated claims  
+* Additional Part D information  
+* Improved FHIR conformance to [C4BB 2.1.0](https://build.fhir.org/ig/HL7/carin-bb/)  
+* Addition of `StructureDefinition` and `CodeSystem` resources  
+* Verified FHIR Path for each data element
+
+v3 leverages CMS’ Integrated Data Repository (IDR) as the primary upstream data source, which replaces the Chronic Conditions Warehouse (CCW)-based architecture of v1 and v2.
+
+<Alert size="slim" variant="info">**Note:** Organizations developing new applications should use v3. v1 and v2 will be deprecated on July 31, 2027. The API Documentation update is in progress and still references v2, but v3 is live in production and testable in sandbox. To read more about how to use v3 check out the [v3 FAQs](https://bluebutton.cms.gov/api-documentation/v3-faq/) and [migration guide](https://bluebutton.cms.gov/api-documentation/v3-migration-guide/).</Alert>
+
+### Older Versions
+
+Blue Button Version 2 (v2) is based on [FHIR Release 4 (R4)](https://hl7.org/fhir/R4/) and the [CARIN Consumer Directed Payer Data Exchange (CDPDE) Implementation Guide (CARIN for Blue Button)](https://hl7.org/fhir/us/carin-bb/STU1.1/).
+
+Blue Button Version 1 (v1) is the original Blue Button API, based on [FHIR Release 3 (STU3)](https://hl7.org/fhir/STU3/).
+
+<Alert size="slim" variant="info">**Note:** Support for v1 and v2 will be deprecated on July 31, 2027.</Alert>
 
 ## Environments
 
