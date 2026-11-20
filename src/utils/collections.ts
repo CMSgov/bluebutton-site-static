@@ -2,10 +2,14 @@ import { z } from 'astro/zod'
 import { getCollection } from 'astro:content'
 
 export async function getDataCollection() {
-  return (await getCollection('dataDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
+  return (await getCollection('static', ({ id }) => id.startsWith('data/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
 }
 export async function getApiCollection() {
-  return (await getCollection('apiDocs')).sort((a, b) => a.data.sortOrder - b.data.sortOrder)
+  return (await getCollection('static', ({ id }) => id.startsWith('api-documentation/'))).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
 }
 
 export async function getTermsCollection() {

@@ -15,17 +15,19 @@ const { title, description } = Astro.props
 
 <div class="bg-primary-gradient">
   <div class="grid-container padding-y-8">
-    <h1
-      class="hero-title text-white font-body-3xl measure-1 margin-bottom-0 line-height-sans-2 text-semibold text-balance"
-    >
+    <h1 class="hero-title text-white font-body-3xl measure-1 margin-bottom-0 line-height-sans-2 text-semibold text-balance">
       {title}
     </h1>
-    <p class="hero-paragraph line-height-sans-4 measure-5 text-white">
-      {description}
-    </p>
+    <p class="hero-paragraph line-height-sans-4 measure-5 text-white">{description}</p>
     <div class="grid-row grid-gap margin-top-2">
       <div class="tablet:grid-col-auto margin-top-2">
-        <Link to="/api-documentation" variant="inverse" class="hero-button width-full" showIcon={false}>
+        <Link
+          to="/[...slug]"
+          params={{ slug: 'quickstart' }}
+          variant="inverse"
+          class="hero-button width-full"
+          showIcon={false}
+        >
           Get started
           <Icon icon={ArrowForward} color="white" size={3} />
         </Link>
