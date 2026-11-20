@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef } from 'preact/hooks'
 
 export function useDebouncedCallback<A extends unknown[]>(fn: (...args: A) => void, delay: number) {
-  const timer = useRef<number>()
+  const timer = useRef<number>(0)
   const fnRef = useRef(fn)
 
   useLayoutEffect(() => {
