@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import Alert from '#components/alert.astro'
 import Link from '#components/link.astro'
 import { createRoute } from 'astro-typesafe-routes/create-route'
 import { getCollection, render } from 'astro:content'
@@ -35,6 +36,7 @@ const { Content, headings } = await render(post)
       <Content
         components={{
           a: Link,
+          Alert,
           Link,
         }}
       />
