@@ -31,17 +31,17 @@ const VALUE_FOR_ORGS = 'value-for-organizations'
           <CardItem>
             <CardHeader headingAs="h3" heading="For Developers" />
             <CardMedia src={Browsers} alt="" class="add-aspect-4x3" style="object-fit: contain;" />
-            <CardBody
-              >Explore the developer sandbox to build amazing tools and services with the Blue Button API.</CardBody
-            >
+            <CardBody>
+              Explore the developer sandbox to build amazing tools and services with the Blue Button API.
+            </CardBody>
             <CardFooter>
               <Link
                 variant="primary"
                 class="display-block"
                 href="https://sandbox.bluebutton.cms.gov/v1/accounts/create"
               >
-                Sign up for the sandbox</Link
-              >
+                Sign up for the sandbox
+              </Link>
             </CardFooter>
           </CardItem>
           <CardItem>
@@ -50,8 +50,8 @@ const VALUE_FOR_ORGS = 'value-for-organizations'
             <CardBody>Discover how your company or organization could use Blue Button.</CardBody>
             <CardFooter>
               <Link to="/" hash={VALUE_FOR_ORGS} class="display-block" variant="primary">
-                See the power of Blue Button</Link
-              >
+                See the power of Blue Button
+              </Link>
             </CardFooter>
           </CardItem>
           <CardItem>
@@ -64,8 +64,8 @@ const VALUE_FOR_ORGS = 'value-for-organizations'
                 class="display-block"
                 variant="primary"
               >
-                Get details on Medicare.gov</Link
-              >
+                Get details on Medicare.gov
+              </Link>
             </CardFooter>
           </CardItem>
         </CardGroup>
@@ -86,7 +86,9 @@ const VALUE_FOR_ORGS = 'value-for-organizations'
           Learn more about using Blue Button, or go ahead and create your Sandbox account to explore our sample data.
         </p>
         <p>
-          <Link to="/use-cases">Learn more about use cases</Link>
+          <Link to="/[...slug]" params={{ slug: 'use-cases' }}>
+            Learn more about use cases
+          </Link>
         </p>
       </TwoColumn>
       <TwoColumn image={Home} dir="rtl" class="padding-y-7">
@@ -101,10 +103,9 @@ const VALUE_FOR_ORGS = 'value-for-organizations'
         </p>
         <p>Follow the link below to learn about the third-party applications using Blue Button.</p>
         <p>
-          <Link
-            href="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps"
-            >View Blue Button apps</Link
-          >
+          <Link href="https://www.medicare.gov/providers-services/claims-appeals-complaints/claims/share-your-medicare-claims/connected-apps">
+            View Blue Button apps
+          </Link>
         </p>
       </TwoColumn>
     </div>
