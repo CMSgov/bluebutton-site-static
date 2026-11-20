@@ -41,7 +41,7 @@
     "astro-eslint-parser": "^3.1.0",
     "cspell-cli": "^10.2.0",
     "dedent-js": "^1.0.1",
-    "eslint": "^10.14.0",
+    "eslint": "^10.15.0",
     "eslint-plugin-astro": "^3.2.1",
     "eslint-plugin-format": "^2.0.1",
     "eslint-plugin-react-hooks": "^7.1.1",
