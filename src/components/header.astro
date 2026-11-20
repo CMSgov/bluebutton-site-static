@@ -40,7 +40,9 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             <span class="font-sans-md text-bold text-black text-balance line-height-sans-2">CMS Blue Button API</span>
           </Link>
         </div>
-        <button type="button" class="usa-menu-btn">Menu</button>
+        <button type="button" class="usa-menu-btn">
+          Menu
+        </button>
       </div>
       <nav aria-label="Primary navigation" class="usa-nav">
         <button type="button" class="usa-nav__close">
@@ -70,17 +72,17 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             </button>
             <ul id="basic-nav-section-one" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/api-documentation" data-tealium="main_nav">Get Started</Link>
+                <Link to="/api-documentation" data-tealium="main_nav">
+                  Get Started
+                </Link>
               </li>
-              {
-                docsnavLinks.map((link) => (
-                  <li class="usa-nav__submenu-item">
-                    <Link to={link.to} params={link.params} data-tealium="main_nav">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              }
+              {docsnavLinks.map((link) => (
+                <li class="usa-nav__submenu-item">
+                  <Link to={link.to} params={link.params} data-tealium="main_nav">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </li>
           <li class="usa-nav__primary-item">
@@ -94,19 +96,21 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             </button>
             <ul id="basic-nav-section-two" class="usa-nav__submenu" hidden>
               <li class="usa-nav__submenu-item">
-                <Link to="/data" data-tealium="main_nav">Overview</Link>
+                <Link to="/data/[...slug]" params={{ slug: '' }} data-tealium="main_nav">
+                  Overview
+                </Link>
               </li>
-              {
-                datanavLinks.map((link) => (
-                  <li class="usa-nav__submenu-item">
-                    <Link to={link.to} params={link.params} data-tealium="main_nav">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              }
+              {datanavLinks.map((link) => (
+                <li class="usa-nav__submenu-item">
+                  <Link to={link.to} params={link.params} data-tealium="main_nav">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
               <li class="usa-nav__submenu-item">
-                <Link to="/data-dictionary" data-tealium="main_nav">Data Dictionary</Link>
+                <Link to="/data-dictionary" data-tealium="main_nav">
+                  Data Dictionary
+                </Link>
               </li>
             </ul>
           </li>
@@ -134,8 +138,10 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             href="https://sandbox.bluebutton.cms.gov/v1/accounts/login"
             variant="primary"
             data-tealium="navigation"
-            class="width-full desktop:width-auto">Sandbox</Link
+            class="width-full desktop:width-auto"
           >
+            Sandbox
+          </Link>
         </div>
       </nav>
     </div>

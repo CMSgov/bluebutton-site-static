@@ -30,7 +30,7 @@ const sitemapLinks = [
   },
   {
     label: 'Data Overview',
-    href: $path({ to: '/data' }),
+    href: $path({ to: '/data/[...slug]', params: { slug: '' } }),
     children: datanavLinks,
   },
   {
@@ -54,23 +54,21 @@ const sitemapLinks = [
     </div>
     <div class="usa-prose">
       <ul>
-        {
-          sitemapLinks.map((link) => (
-            <li>
-              <Link href={link.href}>{link.label}</Link>
+        {sitemapLinks.map((link) => (
+          <li>
+            <Link href={link.href}>{link.label}</Link>
 
-              {link?.children ? (
-                <ul>
-                  {link.children.map((child) => (
-                    <li>
-                      <Link href={child.href}>{child.label}</Link>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </li>
-          ))
-        }
+            {link?.children ? (
+              <ul>
+                {link.children.map((child) => (
+                  <li>
+                    <Link href={child.href}>{child.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </li>
+        ))}
       </ul>
     </div>
   </DocsLayout>
