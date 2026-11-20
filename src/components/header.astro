@@ -3,6 +3,7 @@ import LogoBlueButton from '#assets/images/logo-bluebutton.svg'
 import IconClose from '@uswds/uswds/img/usa-icons/close.svg'
 import Link from './link.astro'
 import { getApiCollection, getDataCollection } from '../utils/collections'
+import { $path } from 'astro-typesafe-routes/path'
 
 const dataLinks = await getDataCollection()
 const apiDocsLinks = await getApiCollection()
@@ -35,6 +36,16 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
           <IconClose aria-label="close" />
         </button>
         <ul class="usa-nav__primary usa-accordion">
+          <li class="usa-nav__primary-item">
+            <Link
+              to="/[...slug]"
+              params={{ slug: 'use-cases' }}
+              class:list={['usa-nav__link', isActive('/use-cases') ? 'usa-current' : null]}
+              data-tealium="navigation"
+            >
+              <span>Use Cases</span>
+            </Link>
+          </li>
           <li class="usa-nav__primary-item">
             <button
               type="button"
@@ -92,31 +103,23 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
             </ul>
           </li>
           <li class="usa-nav__primary-item">
-            <button
-              type="button"
-              class:list={[
-                'usa-accordion__button usa-nav__link',
-                isActive('/production-access') ? 'usa-current' : null,
-              ]}
-              aria-expanded="false"
-              aria-controls="basic-nav-section-four"
+            <Link
+              to="/[...slug]"
+              params={{ slug: 'production-access' }}
+              class:list={['usa-nav__link', isActive('/production-access') ? 'usa-current' : null]}
+              data-tealium="navigation"
             >
               <span>Production Access</span>
-            </button>
-            <ul id="basic-nav-section-four" class="usa-nav__submenu" hidden>
-              <li class="usa-nav__submenu-item">
-                <Link to="/[...slug]" params={{ slug: 'production-access' }} data-tealium="main_nav">
-                  Overview
-                </Link>
-              </li>
-              {apiDocsLinks.map((link) => (
-                <li class="usa-nav__submenu-item">
-                  <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
-                    {link.data.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            </Link>
+          </li>
+          <li class="usa-nav__primary-item">
+            <Link
+              to="/support"
+              class:list={['usa-nav__link', isActive('/support') ? 'usa-current' : null]}
+              data-tealium="navigation"
+            >
+              <span>Support</span>
+            </Link>
           </li>
         </ul>
         <div class="desktop:padding-left-1 margin-top-4 desktop:margin-top-0">

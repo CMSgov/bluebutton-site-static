@@ -52,10 +52,19 @@ const isActive = (path: string) => path === Astro.url.pathname
             class={isActive($path({ to: '/[...slug]', params: { slug: 'data' } })) ? 'usa-current' : null}
             data-tealium="left-rail"
           >
-            Data
+            Data Overview
           </Link>
         </li>
         <ul class="usa-sidenav__sublist">
+          <li class="usa-sidenav__item">
+            <Link
+              to="/data-dictionary"
+              class={isActive($path({ to: '/data-dictionary' })) ? 'usa-current' : null}
+              data-tealium="left-rail"
+            >
+              Data Dictionary
+            </Link>
+          </li>
           {dataLinks.map((link) => (
             <li class="usa-sidenav__item">
               <Link
