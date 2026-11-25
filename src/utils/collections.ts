@@ -6,9 +6,21 @@ export async function getDataCollection() {
     return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
   })
 }
+export async function getQuickstartCollection() {
+  return (await getCollection('static', ({ id }) => id.startsWith('quickstart/') && id !== 'quickstart/support')).sort((a, b) => {
+    return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
+}
 export async function getApiCollection() {
   return (await getCollection('static', ({ id }) => id.startsWith('api-documentation/'))).sort((a, b) => {
     return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
+  })
+}
+
+export async function getAnnouncementsCollection() {
+  return (await getCollection('announcements')).sort((a, b) => {
+    // Newest to oldest
+    return b.data.published_date.valueOf() - a.data.published_date.valueOf()
   })
 }
 

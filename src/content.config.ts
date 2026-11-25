@@ -24,6 +24,22 @@ const staticCollection = defineCollection({
   }),
 })
 
+const announcementsCollection = defineCollection({
+  loader: glob({
+    pattern: '**\/[^_]*.(md|mdx)',
+    base: './src/content/announcements',
+  }),
+  schema: z.object({
+    title: z.string(),
+    seo: z.object({
+      title: z.string(),
+      description: z.string(),
+    }).partial().default({}),
+    published_date: z.coerce.date(),
+    lead_paragraph: z.string().optional(),
+  }),
+})
+
 const termsCollection = defineCollection({
   loader: glob({
     pattern: '**\/[^_]*.(md|mdx)',
@@ -108,6 +124,7 @@ const dataDictionaryCollection = defineCollection({
 
 export const collections = {
   static: staticCollection,
+  announcements: announcementsCollection,
   resources: resourcesCollection,
   codebooks: codeBooksCollection,
   csvVariables: csvVariablesCollection,

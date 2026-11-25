@@ -2,11 +2,12 @@
 import LogoBlueButton from '#assets/images/logo-bluebutton.svg'
 import IconClose from '@uswds/uswds/img/usa-icons/close.svg'
 import Link from './link.astro'
-import { getApiCollection, getDataCollection } from '../utils/collections'
+import { getApiCollection, getDataCollection, getQuickstartCollection } from '../utils/collections'
 import { $path } from 'astro-typesafe-routes/path'
 
 const dataLinks = await getDataCollection()
 const apiDocsLinks = await getApiCollection()
+const quickstartLinks = await getQuickstartCollection()
 
 const isActive = (path: string) => Astro.url.pathname.startsWith(path)
 ---
@@ -37,14 +38,33 @@ const isActive = (path: string) => Astro.url.pathname.startsWith(path)
         </button>
         <ul class="usa-nav__primary usa-accordion">
           <li class="usa-nav__primary-item">
-            <Link
-              to="/[...slug]"
-              params={{ slug: 'use-cases' }}
-              class:list={['usa-nav__link', isActive('/use-cases') ? 'usa-current' : null]}
-              data-tealium="navigation"
+            <button
+              type="button"
+              class:list={['usa-accordion__button usa-nav__link', isActive('/quickstart') || isActive('/announcements') ? 'usa-current' : null]}
+              aria-expanded="false"
+              aria-controls="basic-nav-section-quickstart"
             >
-              <span>Use Cases</span>
-            </Link>
+              <span>Quickstart</span>
+            </button>
+            <ul id="basic-nav-section-quickstart" class="usa-nav__submenu" hidden>
+              <li class="usa-nav__submenu-item">
+                <Link to="/[...slug]" params={{ slug: 'quickstart' }} data-tealium="main_nav">
+                  Overview
+                </Link>
+              </li>
+              {quickstartLinks.map((link) => (
+                <li class="usa-nav__submenu-item">
+                  <Link to="/[...slug]" params={{ slug: link.id }} data-tealium="main_nav">
+                    {link.data.title}
+                  </Link>
+                </li>
+              ))}
+              <li class="usa-nav__submenu-item">
+                <Link to="/announcements" data-tealium="main_nav">
+                  Announcements
+                </Link>
+              </li>
+            </ul>
           </li>
           <li class="usa-nav__primary-item">
             <button
