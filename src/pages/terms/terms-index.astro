@@ -27,20 +27,18 @@ const restTerms = allTerms.slice(1)
       <ul>
         <li>
           <Link to="/terms/[...slug]" params={{ slug: '' }}>
-            Blue Button {currentTerms.data.title}. Published {currentTerms.data.published_date.toLocaleDateString()}
+            Blue Button {currentTerms.data.title}. Published {currentTerms.data.publishedDate?.toLocaleDateString()}
             {` `}({currentTerms.id} - Current Version)
           </Link>
         </li>
-        {
-          restTerms.map((terms) => (
-            <li>
-              <Link to="/terms/[...slug]" params={{ slug: terms.id }}>
-                Blue Button {terms.data.title}. Published {terms.data.published_date.toLocaleDateString()}
-                {` `}({terms.id})
-              </Link>
-            </li>
-          ))
-        }
+        {restTerms.map((terms) => (
+          <li>
+            <Link to="/terms/[...slug]" params={{ slug: terms.id }}>
+              Blue Button {terms.data.title}. Published {terms.data.publishedDate?.toLocaleDateString()}
+              {` `}({terms.id})
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   </DocsLayout>

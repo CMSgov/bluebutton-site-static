@@ -3,43 +3,29 @@ import BaseLayout from '#layouts/base-layout.astro'
 import DocsLayout from '#layouts/docs-layout.astro'
 import { $path } from 'astro-typesafe-routes/path'
 import Link from '#components/link.astro'
-import { getApiCollection, getDataCollection } from '#utils/collections'
-
-const docsnavLinks = (await getApiCollection()).map((doc) => ({
-  href: $path({ to: '/api-documentation/[...slug]', params: { slug: doc.id } }),
-  label: doc.data.title,
-}))
-const datanavLinks = (await getDataCollection()).map((doc) => ({
-  href: $path({ to: '/data/[...slug]', params: { slug: doc.id } }),
-  label: doc.data.title,
-}))
 
 const sitemapLinks = [
   {
     label: 'Home',
-    href: $path({ to: '/' }),
+    href: $path({ to: '/', trailingSlash: true }),
   },
   {
-    label: 'Use Cases',
-    href: $path({ to: '/use-cases' }),
+    label: 'Use cases',
+    href: $path({ to: '/[...slug]', params: { slug: 'quickstart/use-cases' }, trailingSlash: true }),
   },
   {
     label: 'API Documentation',
-    href: $path({ to: '/api-documentation' }),
-    children: docsnavLinks,
+    href: $path({ to: '/[...slug]', params: { slug: 'api-documentation' }, trailingSlash: true }),
+    children: [],
   },
   {
     label: 'Data Overview',
-    href: $path({ to: '/data' }),
-    children: datanavLinks,
-  },
-  {
-    label: 'Production Access',
-    href: $path({ to: '/production-access' }),
+    href: $path({ to: '/[...slug]', params: { slug: 'data' }, trailingSlash: true }),
+    children: [],
   },
   {
     label: 'Support',
-    href: $path({ to: '/support' }),
+    href: $path({ to: '/support', trailingSlash: true }),
   },
 ]
 ---
@@ -54,23 +40,11 @@ const sitemapLinks = [
     </div>
     <div class="usa-prose">
       <ul>
-        {
-          sitemapLinks.map((link) => (
-            <li>
-              <Link href={link.href}>{link.label}</Link>
-
-              {link?.children ? (
-                <ul>
-                  {link.children.map((child) => (
-                    <li>
-                      <Link href={child.href}>{child.label}</Link>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </li>
-          ))
-        }
+        {sitemapLinks.map((link) => (
+          <li>
+            <Link href={link.href}>{link.label}</Link>
+          </li>
+        ))}
       </ul>
     </div>
   </DocsLayout>

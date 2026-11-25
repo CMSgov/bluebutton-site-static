@@ -44,9 +44,8 @@ const { Content, headings } = await render(post)
     <div class="margin-bottom-4">
       <h1>{post.data.title}</h1>
       <p class="usa-intro">
-        {isCurrent ? 'Current Version' : 'Previous Version'}{' '}({post.id}), published {
-          post.data.published_date.toLocaleDateString()
-        }
+        {isCurrent ? 'Current Version' : 'Previous Version'} ({post.id}), published{' '}
+        {post.data.publishedDate.toLocaleDateString()}
       </p>
     </div>
     <div class="usa-prose">

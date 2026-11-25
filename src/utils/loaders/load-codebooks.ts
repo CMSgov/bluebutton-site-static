@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { glob as tinyglobby } from 'tinyglobby'
 
-function coerceToArray<T extends z.ZodTypeAny>(schema: T) {
+function coerceToArray<T extends z.ZodType>(schema: T) {
   return z.preprocess(v => Array.isArray(v) ? v : [v], z.array(schema))
 }
 
