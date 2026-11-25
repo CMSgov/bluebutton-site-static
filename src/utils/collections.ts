@@ -7,7 +7,7 @@ export async function getDataCollection() {
   })
 }
 export async function getQuickstartCollection() {
-  return (await getCollection('static', ({ id }) => id.startsWith('quickstart/') && id !== 'quickstart/support')).sort((a, b) => {
+  return (await getCollection('static', ({ id }) => id.startsWith('quickstart/'))).sort((a, b) => {
     return (a.data.sortOrder || 0) - (b.data.sortOrder || 0)
   })
 }
